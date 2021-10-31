@@ -32,7 +32,7 @@ function SideBarInstructor() {
                 <li>
                     <a href="">
                         <img id="profile" src={manageProfile} alt="Manage Profile Image"/>
-                        Manage profiles
+                        Manage profile
                     </a>
                 </li>
             </ul>
