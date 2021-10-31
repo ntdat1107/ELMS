@@ -20,7 +20,7 @@ function SideBarInstructor() {
                 <li>
                     <a href="">
                         <img id="manageCourse" src={manageCourse}/>
-                        Manage course
+                        Manage courses
                     </a>
                 </li>
                 <li>
