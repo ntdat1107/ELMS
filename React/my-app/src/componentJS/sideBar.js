@@ -1,4 +1,5 @@
 import React from "react";
+import '../componentCSS/sideBar.css'
 import Logo from "../img/Logo.png";
 import annouce from "../img/annouce.png"
 import dashboard from "../img/dashboard.png"

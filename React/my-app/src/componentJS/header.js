@@ -1,5 +1,5 @@
 import React from "react";
-
+import '../componentCSS/header.css'
 
 function div() {
     return (

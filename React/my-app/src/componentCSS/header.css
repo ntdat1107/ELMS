@@ -1,0 +1,14 @@
+#Header {
+    display: flex;
+}
+
+#Searchbar #Input {
+    border-radius: 1;
+    border: 200px;
+    border-color: black;
+}
+
+#SearchBar{
+    position: absolute;
+}
+  

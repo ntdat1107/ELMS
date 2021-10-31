@@ -1,6 +1,6 @@
 import './App.css';
-import Header from './component/header';
-import SideBarInstructor from './component/sideBar';
+import Header from './componentJS/header';
+import SideBarInstructor from './componentJS/sideBar';
 
 
 
