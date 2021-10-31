@@ -1,12 +1,45 @@
 .App {
-  text-align: center;
+  display: flex;
+  size: 20;
+  text-align: left;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#Logo {
+  size: 170px 470px;
 }
 
+#Header {
+  display: flex;
+}
+
+#Searchbar #Input {
+  border-radius: 1;
+  border: 200px;
+  border-color: black;
+}
+
+#SearchBar{
+  position: absolute;
+}
+
+#SideBar li {  
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 32px;
+  display: block;
+  color: #160E4D;
+  text-decoration: none;
+}
+
+#SideBar {
+  width: 470px;
+  background-color: #f4f4f4;
+}
+
+
+
+/* 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -35,4 +68,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
