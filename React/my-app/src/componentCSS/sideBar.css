@@ -1,5 +1,4 @@
 /*_____________SideBar_____________*/
-
 #SideBar {
     position: fixed;
     margin-top: 120px;
@@ -9,56 +8,78 @@
 }
 
 
-#SubSideBar li button:hover #dashboard {
+.sbcomponent button:hover #dashboard {
     content: url("../img/dashboardHover.png")
 }
-#SubSideBar li button:hover #manageCourse {
+.sbcomponent button:hover #manageCourse {
     content: url("../img/manageCourseHover.png")
 }
-#SubSideBar li button:hover #annouce {
+.sbcomponent button:hover #annouce {
     content: url("../img/annouceHover.png")
 }
-#SubSideBar li button:hover #profile {
+.sbcomponent button:hover #profile {
     content: url("../img/profileHover.png")
 }
-#SubSideBar li button:hover {
+.sbcomponent button:hover {
     background-color: #160E4D;
     color: #f4f4f4;
-    border-radius: 20px;      
+    border-radius: 20px;
     width: 325px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-  
-#SubSideBar {
-    /* list-style-position: inside; */
-    padding-left: 0px;
+
+.sbcomponent-active button{
+    background-color: #160E4D;
+    color: #f4f4f4;
+    border-radius: 20px;    
+    font-size: 24px;
+    line-height: 45px;
+    width: 325px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-#SubSideBar li {
+li {
     /* display: box; */
     list-style-type: none;
 }
-#SubSideBar img {
+
+.sbcomponent-active #dashboard {
+    content: url("../img/dashboardHover.png")
+}
+.sbcomponent-active #manageCourse {
+    content: url("../img/manageCourseHover.png")
+}
+.sbcomponent-active #annouce {
+    content: url("../img/annouceHover.png")
+}
+.sbcomponent-active #profile {
+    content: url("../img/profileHover.png")
+}
+li img {
     display: inline-block;
     align-items: center;
     vertical-align: center;
-    /* position: absolute; */
+    position: absolute;
     margin-left: 15px;
 }
 #SubSideBar p {
-    margin-left: 30px;
+    margin-left: 80px;
 }
-#SubSideBar li button{
+#dashboard {
+    margin-top: 4px;
+}
+#profile {
+    margin-top: 3px;
+}
+button{
     display: flex;
-    text-align: left;
+    text-align: center;
     cursor: pointer;
     border: none;
     box-sizing: border-box;
     font-size: 24px;
     line-height: 45px;
-    background-color: #f4f4f4;
     font-style: normal;
     font-weight: bold;
-    color: #160E4D;
 }
 #footer {
     display: inline-block;

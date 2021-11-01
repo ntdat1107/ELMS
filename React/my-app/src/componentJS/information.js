@@ -19,7 +19,7 @@ function Information({
                 <il id="gmail"><p>{gmail}</p></il>
                 <il id="type"><p>{type}</p></il>
             </ul>
-            <img src={arrow} alt="Arrow Image" id="arrow" width="48" height="24"/>
+            <img src={arrow} alt="Arrow Image" id="arrow" width="30" height="15"/>
         </div>
     )
 }
