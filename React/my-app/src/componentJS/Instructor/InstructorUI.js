@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Link, Switch } from "react-router-dom"
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom"
 import Header from '../header';
 import SideBarInstructor from '../sideBar';
 import InsDashboardUI from "./InsDashboardUI";

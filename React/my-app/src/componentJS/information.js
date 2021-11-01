@@ -14,7 +14,7 @@ function Information({
         <div id={idName}>            
             <div id="avatar">
                 <Link to="/ins/manageprofile">
-                    <img src={srcImg} alt="Avatar Image" width="75" height="auto"/>
+                    <img src={srcImg} alt="Avatar Image" width="60" height="auto"/>
                 </Link>
             </div>
             <ul id="inform">

@@ -4,7 +4,7 @@ import Information from "./information";
 import '../componentCSS/header.css'
 import cheems from "../img/cheems.png"
 import Logo from "../img/Logo.png";
-import { Route, BrowserRouter as Router, Link, Switch } from "react-router-dom"
+import {Link } from "react-router-dom"
 
 
 function div() {
