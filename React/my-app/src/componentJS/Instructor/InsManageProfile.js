@@ -8,5 +8,4 @@ function InsManageProfile() {
         </div>
     )
 }
-
 export default InsManageProfile;

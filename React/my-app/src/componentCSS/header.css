@@ -2,10 +2,14 @@
     position: fixed;
     width: 100vw;
     height: 120px;
-    margin-left: 325px;
     display: flex;
 }
-
+#Logo {
+    background-color: #f4f4f4;
+    width: 325px;
+    height: 115px;
+    cursor: pointer;
+}
 
 /* SEARCH BAR */
 #SearchBar {
@@ -17,12 +21,13 @@
     width: 350px;
     height: 40px;
     border-radius: 45px;
+    -webkit-border-radius: 45px;
     padding-left: 15px;
 }
 #searchIcon {
     position: absolute;
     top: 73.5px;
-    left: 360px;
+    left: 675px;
     cursor: pointer;
 }
 
@@ -34,6 +39,7 @@
     margin-top: 25px;
     margin-bottom: 10px;
     border-radius: 45px;
+    -webkit-border-radius: 45px;
     display: flex;
     border: 1px solid black;
     padding: 5px;
@@ -58,7 +64,8 @@
     cursor: pointer;
 }
 #arrow {
-    margin-left: 15px;
+    margin-right: 10px;
+    margin-left: 20px;
     margin-top: 25px;
     cursor: pointer;
 }

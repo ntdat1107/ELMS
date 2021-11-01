@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import arrow from "../img/arrow.png"
 
 function Information({
@@ -10,9 +11,11 @@ function Information({
     callback = () => {},
 }) {
     return (
-        <div id={idName}>
+        <div id={idName}>            
             <div id="avatar">
-                <img src={srcImg} alt="Avatar Image" width="75" height="auto"/>
+                <Link to="/ins/manageprofile">
+                    <img src={srcImg} alt="Avatar Image" width="75" height="auto"/>
+                </Link>
             </div>
             <ul id="inform">
                 <il id="name"><h3>{name}</h3></il>

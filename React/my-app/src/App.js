@@ -1,19 +1,16 @@
 import './App.css';
-import { Route, BrowserRouter as Router, Link } from "react-router-dom"
+import { Route, BrowserRouter as Router, Link, Switch } from "react-router-dom"
 import Header from './componentJS/header';
-import SideBarInstructor from './componentJS/sideBar';
+import InstructorUI from './componentJS/Instructor/InstructorUI';
 
 
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <SideBarInstructor />
-        <Header />
-      </div>
-    </Router>
-  );
+  <div className="App">
+    <InstructorUI />
+  </div>  
+  )
 }
 
 export default App;
