@@ -1,14 +1,19 @@
 #Header {
     display: inline-block;
+    position: fixed;
     background-color: #f4f4f4;
     width: 100vw;
     height: 120px;
     display: flex;
 }
-
+#Logo {
+    width: 325px;
+    height: 115px;
+    cursor: pointer;
+}
 #SearchBar {
     margin-top: 65px;
-    margin-left: 40px;
+    margin-left: 50px;
 }
 #Input {
     size: 32;
@@ -22,22 +27,41 @@
 #searchIcon {
     position: absolute;
     top: 73.5px;
-    right: 55vw;
+    left: 675px;
     cursor: pointer;
 }
 
 #informationInstructor {
     list-style-position: inside;
-    margin-left: 100px;
+    margin-left: 450px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    border-radius: 45px;
     display: flex;
+    border: 1px solid black;
+    padding: 5px;
 }
 
-#avatar {
+#informationInstructor h3 {
+    cursor: pointer;
+    font-size: 20px;
+}
+#informationInstructor p {
+    font-size: 14px;
+}
+
+#avatar img {
     display: inline-block;
-    margin-top: 10px;
-    margin-right: 10px;
-    border-radius: 45px;
+    background-size: cover;
+    flex-wrap: wrap;
+    margin-right: 20px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    cursor: pointer;
 }
 #arrow {
-    margin-left: 45px;
+    margin-left: 25px;
+    margin-top: 25px;
+    cursor: pointer;
 }

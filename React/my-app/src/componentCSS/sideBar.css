@@ -1,14 +1,14 @@
 /*_____________SideBar_____________*/
-#Logo {
+
+#SideBar {
+    position: fixed;
+    margin-top: 120px;
     width: 325px;
-    height: 115px;
-    cursor: pointer;
+    height: 100vh;
+    background-color: #f4f4f4;
 }
-  
-#SubSideBar {
-    list-style-position: inside;
-    padding-left: 0px;
-}
+
+
 #SubSideBar li button:hover #dashboard {
     content: url("../img/dashboardHover.png")
 }
@@ -24,45 +24,41 @@
 #SubSideBar li button:hover {
     background-color: #160E4D;
     color: #f4f4f4;
-    border-radius: 20px;  
+    border-radius: 20px;      
+    width: 325px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
   
+#SubSideBar {
+    /* list-style-position: inside; */
+    padding-left: 0px;
+}
 #SubSideBar li {
-    display: box;
+    /* display: box; */
     list-style-type: none;
 }
 #SubSideBar img {
     display: inline-block;
     align-items: center;
     vertical-align: center;
-    position: absolute;
-    left: 30px;
+    /* position: absolute; */
+    margin-left: 15px;
 }
 #SubSideBar p {
-    margin-left: 70px;
+    margin-left: 30px;
 }
 #SubSideBar li button{
-    text-align: center;
+    display: flex;
+    text-align: left;
     cursor: pointer;
     border: none;
-    box-sizing: border-box;    
+    box-sizing: border-box;
     font-size: 24px;
-    line-height: 40px;
-    height: 40px;
-    width: 325px;
+    line-height: 45px;
     background-color: #f4f4f4;
     font-style: normal;
     font-weight: bold;
     color: #160E4D;
-}
-button p{
-    margin-left: 15px;
-    display: inline-block;
-}
-#SideBar {
-    width: 325px;
-    height: 100vh;
-    background-color: #f4f4f4;
 }
 #footer {
     display: inline-block;

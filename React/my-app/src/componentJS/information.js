@@ -12,7 +12,7 @@ function Information({
     return (
         <div id={idName}>
             <div id="avatar">
-                <img src={srcImg} alt="Avatar Image" width="100" height="auto"/>
+                <img src={srcImg} alt="Avatar Image" width="75" height="auto"/>
             </div>
             <ul id="inform">
                 <il id="name"><h3>{name}</h3></il>
