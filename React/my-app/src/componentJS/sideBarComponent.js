@@ -8,16 +8,15 @@ function SideBarComponent({
     cName,
     name,
     h,
-    m,
+    w,
     linkName,
-    componentName,
     func,
     callback = () => {},
 }) {
     return (
     <li className={cName}> <NavLink activeClassName="ActiveLink" className="insSideBarLink" to={linkName}>
         <button onClick={func}>
-            <img id={idName} src={srcImg} alt={altName} height={h} width={m}/>
+            <img id={idName} src={srcImg} alt={altName} height={h} width={w}/>
             <p>{name}</p>
         </button> </NavLink>
     </li>

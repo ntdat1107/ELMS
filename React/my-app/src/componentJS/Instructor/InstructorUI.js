@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom"
 import Header from '../header';
-import SideBarInstructor from '../sideBar';
+import SideBarInstructor from '../sideBarInstructor';
 import InsDashboardUI from "./InsDashboardUI";
 import InsManagerCourse from "./InsManageCourse";
 import InsAnnouncement from "./InsAnnouncement"

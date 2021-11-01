@@ -4,10 +4,10 @@ import Information from "./information";
 import '../componentCSS/header.css'
 import cheems from "../img/cheems.png"
 import Logo from "../img/Logo.png";
-import {Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
-function div() {
+function Header() {
   return (
       <div id="Header">    
         <Link to="/ins/dashboard">
@@ -19,4 +19,4 @@ function div() {
   )
 }
 
-export default div;
+export default Header;
