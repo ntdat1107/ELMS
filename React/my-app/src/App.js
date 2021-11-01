@@ -1,4 +1,5 @@
 import './App.css';
+import { Route, BrowserRouter as Router, Link } from "react-router-dom"
 import Header from './componentJS/header';
 import SideBarInstructor from './componentJS/sideBar';
 
@@ -6,10 +7,12 @@ import SideBarInstructor from './componentJS/sideBar';
 
 function App() {
   return (
-    <div className="App">
-      <SideBarInstructor />
-      <Header />
-    </div>
+    <Router>
+      <div className="App">
+        <SideBarInstructor />
+        <Header />
+      </div>
+    </Router>
   );
 }
 

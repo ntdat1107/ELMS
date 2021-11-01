@@ -1,26 +1,28 @@
 /*_____________SideBar_____________*/
 #SideBar {
     position: fixed;
-    margin-top: 120px;
     width: 325px;
     height: 100vh;
     background-color: #f4f4f4;
 }
-
-
-.sbcomponent button:hover #dashboard {
+#Logo {
+    width: 325px;
+    height: 115px;
+    cursor: pointer;
+}
+#SubSideBar button:hover #dashboard {
     content: url("../img/dashboardHover.png")
 }
-.sbcomponent button:hover #manageCourse {
+#SubSideBar button:hover #manageCourse {
     content: url("../img/manageCourseHover.png")
 }
-.sbcomponent button:hover #annouce {
+#SubSideBar button:hover #annouce {
     content: url("../img/annouceHover.png")
 }
-.sbcomponent button:hover #profile {
+#SubSideBar button:hover #profile {
     content: url("../img/profileHover.png")
 }
-.sbcomponent button:hover {
+#SubSideBar button:hover {
     background-color: #160E4D;
     color: #f4f4f4;
     border-radius: 20px;
@@ -28,33 +30,32 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.sbcomponent-active button{
+.ActiveLink #dashboard {
+    content: url("../img/dashboardHover.png")
+}
+.ActiveLink #manageCourse {
+    content: url("../img/manageCourseHover.png")
+}
+.ActiveLink #annouce {
+    content: url("../img/annouceHover.png")
+}
+.ActiveLink #profile {
+    content: url("../img/profileHover.png")
+}
+
+.ActiveLink button{    
     background-color: #160E4D;
     color: #f4f4f4;
-    border-radius: 20px;    
-    font-size: 24px;
-    line-height: 45px;
+    border-radius: 20px;
     width: 325px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+
 li {
     /* display: box; */
     list-style-type: none;
 }
-
-.sbcomponent-active #dashboard {
-    content: url("../img/dashboardHover.png")
-}
-.sbcomponent-active #manageCourse {
-    content: url("../img/manageCourseHover.png")
-}
-.sbcomponent-active #annouce {
-    content: url("../img/annouceHover.png")
-}
-.sbcomponent-active #profile {
-    content: url("../img/profileHover.png")
-}
-li img {
+#SubSideBar li img {
     display: inline-block;
     align-items: center;
     vertical-align: center;
@@ -64,13 +65,13 @@ li img {
 #SubSideBar p {
     margin-left: 80px;
 }
-#dashboard {
+#SubSideBar #dashboard {
     margin-top: 4px;
 }
-#profile {
+#SubSideBar #profile {
     margin-top: 3px;
 }
-button{
+#SideBar button{
     display: flex;
     text-align: center;
     cursor: pointer;
@@ -82,7 +83,9 @@ button{
     font-weight: bold;
 }
 #footer {
-    display: inline-block;
-    margin-top: 200px;
-    margin-left: 0px;
+    margin-top: 150px;
+    margin-left: 25px;
+}
+#SubSideBar .insSideBarLink {
+    text-decoration: none;
 }

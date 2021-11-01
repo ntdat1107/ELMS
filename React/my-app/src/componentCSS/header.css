@@ -1,16 +1,13 @@
 #Header {
-    display: inline-block;
     position: fixed;
-    background-color: #f4f4f4;
     width: 100vw;
     height: 120px;
+    margin-left: 325px;
     display: flex;
 }
-#Logo {
-    width: 325px;
-    height: 115px;
-    cursor: pointer;
-}
+
+
+/* SEARCH BAR */
 #SearchBar {
     margin-top: 65px;
     margin-left: 50px;
@@ -21,19 +18,19 @@
     height: 40px;
     border-radius: 45px;
     padding-left: 15px;
-    /* background: white url(../img/search.png) right no-repeat; */
-    /* background-position-x: 315px; */
 }
 #searchIcon {
     position: absolute;
     top: 73.5px;
-    left: 675px;
+    left: 360px;
     cursor: pointer;
 }
 
+
+/* INFORMATION USER */
 #informationInstructor {
     list-style-position: inside;
-    margin-left: 450px;
+    margin-left: 475px;
     margin-top: 25px;
     margin-bottom: 10px;
     border-radius: 45px;

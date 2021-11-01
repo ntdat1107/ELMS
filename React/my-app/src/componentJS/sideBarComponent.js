@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink, Route } from "react-router-dom"
 
 function SideBarComponent({
     idName,
@@ -8,15 +9,17 @@ function SideBarComponent({
     name,
     h,
     m,
+    linkName,
+    componentName,
     func,
     callback = () => {},
 }) {
     return (
-    <li className={cName} >
+    <li className={cName}> <NavLink activeClassName="ActiveLink" className="insSideBarLink" to={linkName}>
         <button onClick={func}>
             <img id={idName} src={srcImg} alt={altName} height={h} width={m}/>
             <p>{name}</p>
-        </button>
+        </button> </NavLink>
     </li>
     )
 }
