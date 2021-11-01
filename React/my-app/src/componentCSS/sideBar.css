@@ -25,7 +25,9 @@
     -webkit-border-radius: 20px;
     width: 325px;
 }
-
+#SubSideBar button:hover p {
+    background-color: #160E4D;
+}
 .ActiveLink #dashboard {
     content: url("../img/dashboardHover.png")
 }
@@ -39,7 +41,10 @@
     content: url("../img/profileHover.png")
 }
 
-.ActiveLink button{    
+#SubSideBar .ActiveLink button p {
+    background-color: #160E4D;
+}
+#SubSideBar .ActiveLink button{    
     background-color: #160E4D;
     color: #f4f4f4;
     border-radius: 20px;
@@ -59,8 +64,10 @@ li {
     margin-left: 15px;
 }
 #SubSideBar p {
-    margin-left: 80px;
-    
+    margin-left: 80px;  
+}
+#SubSideBar .insSideBarLink p {
+    background-color: #f4f4f4;  ;
 }
 #SubSideBar #dashboard {
     margin-top: 4px;
