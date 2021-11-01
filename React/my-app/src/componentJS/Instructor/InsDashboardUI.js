@@ -1,5 +1,5 @@
 import React from "react";
-import '../../componentCSS/InsDashboard.css'
+import './CSS/InsDashboard.css'
 import About from "./About";
 
 function InsDashboardUI ({

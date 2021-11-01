@@ -1,5 +1,5 @@
 import React from "react";
-import "../../componentCSS/InsManagerCourse.css"
+import "./CSS/InsManagerCourse.css"
 
 function InsManagerCourse () {
     return (

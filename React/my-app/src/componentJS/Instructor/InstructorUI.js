@@ -6,7 +6,6 @@ import InsManagerCourse from "./InsManageCourse";
 import InsAnnouncement from "./InsAnnouncement"
 import InsManageProfile from "./InsManageProfile"
 
-
 function InstructorUI() {
 return (
     <Router>

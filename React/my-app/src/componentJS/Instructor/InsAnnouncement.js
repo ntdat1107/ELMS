@@ -1,5 +1,5 @@
 import React from "react";
-import "../../componentCSS/InsAnnounment.css"
+import "./CSS/InsAnnounment.css"
 
 function InsAnnouncement() {
     return (

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../componentCSS/InsManageProfile.css"
+import "./CSS/InsManageProfile.css"
 
 function InsManageProfile() {
     return (
