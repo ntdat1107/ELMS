@@ -87,6 +87,7 @@
     transition: all 0.2s ease-out;
 }
 .nav-menu.active {
+    margin-left: 25%;
     background: white;
     left: 0;
     opacity: 1;
