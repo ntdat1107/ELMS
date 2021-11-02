@@ -1,5 +1,9 @@
 #Header {
     position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    z-index: 999;
     width: 100vw;
     height: 120px;
     display: flex;
@@ -32,6 +36,39 @@
 }
 
 
+#avatar img {
+    display: inline-block;
+    margin-right: 20px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    cursor: pointer;
+}
+#informationInstructor #arrow img {
+    margin-top: 20px;
+    cursor: pointer;
+}
+#informationInstructor #arrowClose {
+    transform: rotate(180deg);
+}
+.nav-link {
+    display: inline-block;
+    align-items: center;
+    text-decoration: none;
+}
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 60vw;
+    justify-content: end;
+    margin-right: 2rem;
+}
+.nav-item {
+    height: 80px;
+}
 /* INFORMATION USER */
 
 /*_______Information for Instructor______*/
@@ -86,19 +123,3 @@
 }
 /*_____End Information for Admin______*/
 
-
-#avatar img {
-    display: inline-block;
-    margin-right: 20px;
-    border-radius:50%;
-    -moz-border-radius:50%;
-    -webkit-border-radius:50%;
-    cursor: pointer;
-}
-#informationInstructor #arrow img {
-    margin-top: 20px;
-    cursor: pointer;
-}
-#informationInstructor #arrowClose {
-    transform: rotate(180deg);
-}
