@@ -88,10 +88,13 @@ li {
     background-color: #f4f4f4;  ;
 }
 #SubSideBar #dashboard {
-    margin-top: 4px;
+    margin-top: 5px;
 }
 #SubSideBar #profile {
-    margin-top: 3px;
+    margin-top: 5px;
+}
+#SubSideBar #announce {
+    margin-top: 5px;
 }
 #SideBar button{
     display: flex;
