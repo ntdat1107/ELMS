@@ -6,7 +6,7 @@ import AdminUI from './componentJS/Admin/AdminUI'
 function App() {
   return (
   <div className="App">
-    <AdminUI />
+    <InstructorUI />
   </div>  
   )
 }
