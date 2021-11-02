@@ -4,7 +4,9 @@
     align-items: center;
     left: 0;
     top: 0;
+    z-index: 999;
     height: 120px;
+    max-width: 1500px;
     display: flex;
 }
 #Logo {
@@ -18,12 +20,11 @@
 
 /* SEARCH BAR */
 #SearchBar {
-    margin-top: 50px;
-    margin-left: 125px;
+    margin-top: 65px;
 }
 #Input {
     size: 32;
-    width: 400px;
+    width: 350px;
     height: 40px;
     border-radius: 45px;
     -webkit-border-radius: 45px;
@@ -31,8 +32,8 @@
 }
 #searchIcon {
     position: absolute;
-    margin-top: 8px;
-    margin-left: -50px;
+    top: 73.5px;
+    left: 675px;
     cursor: pointer;
 }
 
@@ -45,15 +46,11 @@
     -webkit-border-radius:50%;
     cursor: pointer;
 }
-#Header #arrow-btn {
-    right: 0px;
-}
-#Header #arrow img {
-    margin-left: 20px;
+#information #arrow img {
     margin-top: 20px;
     cursor: pointer;
 }
-#Header #arrowClose {
+#information #arrowClose {
     transform: rotate(180deg);
 }
 .nav-link {
@@ -62,20 +59,23 @@
     text-decoration: none;
 }
 .nav-menu {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 90vh;
-    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 60vw;
+    justify-content: end;
 }
 .nav-item {
     height: 80px;
 }
+/* INFORMATION USER */
+
+/*_______Information for Instructor______*/
 #information {
-    position: relative;
-    margin-top: 15px;
+    margin-top: 50px;
     margin-bottom: 0px;
-    margin-left: 300px;
     border-radius: 45px;
     -webkit-border-radius: 45px;
     display: flex;
@@ -83,7 +83,7 @@
     padding: 5px;
 }
 #information #inform {
-    margin-left: 20px;
+    margin-right: 10px;
 }
 
 #information h3 {
@@ -98,3 +98,28 @@
 #information #linkName {
     text-decoration: none;
 }
+
+/*_____End Information for Instructor______*/
+
+/*_______Information for Admin______*/
+#informationAdmin {
+    list-style-position: inside;
+    margin-left: 475px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    border-radius: 45px;
+    -webkit-border-radius: 45px;
+    display: flex;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+#informationAdmin h3 {
+    cursor: pointer;
+    font-size: 20px;
+}
+#informationAdmin p {
+    font-size: 14px;
+}
+/*_____End Information for Admin______*/
+
