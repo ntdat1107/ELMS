@@ -1,5 +1,5 @@
 /*_______Addition for Learner______*/
-#SubSideBar button:hover #mycourse {
+#SubSideBar button:hover #mycourses {
     content: url("../img/myCoursesHover.png")
 }
 #SubSideBar button:hover #readtutorial {
@@ -12,7 +12,7 @@
     content: url("../img/takeQuizHover.png")
 }
 /*_______Addition for Learner______*/
-.ActiveLink #mycourse {
+.ActiveLink #mycourses {
     content: url("../img/myCoursesHover.png")
 }
 .ActiveLink #readtutorial {
@@ -23,4 +23,20 @@
 }
 .ActiveLink #takequiz {
     content: url("../img/takeQuizHover.png")
+}
+#SubSideBar #mycourses 
+{
+    margin-top: 4px;
+}
+#SubSideBar #readtutorial 
+{
+    margin-top: 4px;
+}
+#SubSideBar #readnotes
+{
+    margin-top: 4px;
+}
+#SubSideBar #takequiz
+{
+    margin-top: 4px;
 }
