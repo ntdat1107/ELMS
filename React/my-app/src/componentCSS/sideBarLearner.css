@@ -1,0 +1,26 @@
+/*_______Addition for Learner______*/
+#SubSideBar button:hover #mycourse {
+    content: url("../img/myCoursesHover.png")
+}
+#SubSideBar button:hover #readtutorial {
+    content: url("../img/readTutorialHover.png")
+}
+#SubSideBar button:hover #readnotes {
+    content: url("../img/readNotesHover.png")
+}
+#SubSideBar button:hover #takequiz {
+    content: url("../img/takeQuizHover.png")
+}
+/*_______Addition for Learner______*/
+.ActiveLink #mycourse {
+    content: url("../img/myCoursesHover.png")
+}
+.ActiveLink #readtutorial {
+    content: url("../img/readTutorialHover.png")
+}
+.ActiveLink #readnotes {
+    content: url("../img/readNotesHover.png")
+}
+.ActiveLink #takequiz {
+    content: url("../img/takeQuizHover.png")
+}

@@ -25,6 +25,8 @@
 #SubSideBar button:hover #learner {
     content: url("../img/learnerHover.png")
 }
+
+
 #SubSideBar button:hover {
     background-color: #160E4D;
     color: #f4f4f4;
@@ -54,6 +56,8 @@
 .ActiveLink #learner {
     content: url("../img/learnerHover.png")
 }
+
+
 
 #SubSideBar .ActiveLink button p {
     background-color: #160E4D;
