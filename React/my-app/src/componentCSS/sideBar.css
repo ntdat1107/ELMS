@@ -95,6 +95,9 @@ li {
 #SubSideBar #profile {
     margin-top: 5px;
 }
+#SubSideBar #instructor {
+    margin-top: 3px;
+}
 #SubSideBar #manageCourse {
     margin-top: 3px;
 }
