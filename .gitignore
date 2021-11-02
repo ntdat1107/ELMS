@@ -120,3 +120,5 @@ App-duy.js
 React/my-app/src/App.js
 React/my-app/src/App.js
 *.json
+React/my-app/package-lock.json
+React/my-app/package.json
