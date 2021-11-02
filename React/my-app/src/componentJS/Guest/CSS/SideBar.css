@@ -1,0 +1,56 @@
+#sideBarGuest {
+    position: fixed;
+    margin-top: 130px;
+    margin-left: 0px;
+    z-index: 0;
+    width: 350px;
+}
+
+#courseBoardSB {
+    border-radius: 20px; 
+    padding: 10px;
+    margin-top: 10px;
+    width: 320px;
+    margin-left: 10px;
+    background-color: wheat;
+}
+
+#courseBoardSB h1 {
+    margin-left: 20px;
+    border-bottom: 1px solid black;
+    display: flex;
+    width: 310px;
+
+}
+
+#boardHeaderSB {
+    width: 275px;
+    display: flex;
+    margin: 5px
+}
+/* course Item */
+
+#courseItemSB{
+    width: 300px;
+    border: 1px solid gray;
+    display: flex;
+    height: 100px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    background-color: honeydew;
+}
+
+#courseItemSB img {
+    width: auto;
+    display: flex;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+#courseItemSB h3 {
+    margin: 10px;
+    margin-left: 20px;
+    display: block;
+    width: 200px 
+
+}

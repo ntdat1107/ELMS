@@ -116,4 +116,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+App-duy.js
+React/my-app/src/App.js
 React/my-app/src/App.js
