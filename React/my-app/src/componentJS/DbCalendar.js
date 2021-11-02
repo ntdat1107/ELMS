@@ -9,7 +9,7 @@ function DbCalendar() {
     }
     return (
         <div>
-            <Calendar id="calendarDb" onChange={onChange} value={date} />
+            <Calendar onChange={onChange} value={date} />
         </div>
     )
 }
