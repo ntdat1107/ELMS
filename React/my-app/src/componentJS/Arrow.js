@@ -25,4 +25,4 @@ function Arrow() {
     )
 }
 
-export default Arrow
+export default Arrow;
