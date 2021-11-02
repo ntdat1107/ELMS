@@ -8,7 +8,7 @@ import LnReadTutorial       from "./readTutorial";
 import LnReadNotes          from "./readNotes";
 import LnAnnouncements      from "./announcements";
 import LnManageProfile      from "./manageProfile";
-import {logo} from "../../../img/avatarLearner.png";
+import {logo} from "../../../img/avtLearner.jpg";
 
 
 function LearnerUI() {
