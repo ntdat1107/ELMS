@@ -1,7 +1,7 @@
 import React from "react";
 import SearchBar from "./searchBar";
 import InformationAdmin from "./Admin-information";
-import '../componentCSS/Admin-header.css'
+import '../componentCSS/header.css'
 import cheems from "../img/cheems.png"
 import Logo from "../img/Logo.png";
 import { Link } from "react-router-dom"

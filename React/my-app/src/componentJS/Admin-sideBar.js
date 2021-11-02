@@ -1,5 +1,5 @@
 import React from "react";
-import '../componentCSS/Admin-sideBar.css'
+import '../componentCSS/sideBar.css'
 import SideBarComponent from "./sideBarComponent";
 import annouce from "../img/annouce.png"
 import dashboardImg from "../img/dashboard.png"

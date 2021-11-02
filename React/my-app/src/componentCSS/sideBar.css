@@ -18,6 +18,13 @@
 #SubSideBar button:hover #profile {
     content: url("../img/profileHover.png")
 }
+/*_______Addition for Admin______*/
+#SubSideBar button:hover #instructor {
+    content: url("../img/instrHover.png")
+}
+#SubSideBar button:hover #learner {
+    content: url("../img/learnerHover.png")
+}
 #SubSideBar button:hover {
     background-color: #160E4D;
     color: #f4f4f4;
@@ -39,6 +46,13 @@
 }
 .ActiveLink #profile {
     content: url("../img/profileHover.png")
+}
+/*_______Addition for Admin______*/
+.ActiveLink #instructor {
+    content: url("../img/instrHover.png")
+}
+.ActiveLink #learner {
+    content: url("../img/learnerHover.png")
 }
 
 #SubSideBar .ActiveLink button p {
