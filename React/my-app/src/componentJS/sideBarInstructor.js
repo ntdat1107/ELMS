@@ -1,7 +1,7 @@
 import React from "react";
 import '../componentCSS/sideBar.css'
 import SideBarComponent from "./sideBarComponent";
-import annouce from "../img/annouce.png"
+import announce from "../img/announce.png"
 import dashboardImg from "../img/dashboard.png"
 import manageCourse from "../img/managerCourse.png"
 import manageProfile from "../img/profile.png"
@@ -14,7 +14,7 @@ return (
         <ul id="SubSideBar">
             <SideBarComponent linkName="/ins/dashboard" idName="dashboard" srcImg={dashboardImg} altName="DashBoardImage" name="DashBoard" h="32" w="40"/>
             <SideBarComponent linkName="/ins/managecourse" idName="manageCourse" srcImg={manageCourse} altName="ManageCourses Image" name="Manage courses" h="40" w="40"/>
-            <SideBarComponent linkName="/ins/announcement" idName="annouce" srcImg={annouce} altName="AnnoucementImage" name="Announcements" h="40" w="40"/>
+            <SideBarComponent linkName="/ins/announcement" idName="announce" srcImg={announce} altName="AnnouncementImage" name="Announcements" h="40" w="40"/>
             <SideBarComponent linkName="/ins/manageprofile" idName="profile" srcImg={manageProfile} altName="ManageProfile Image" name="Manage profile" w="40"/>                
         </ul>
         <div id="footer">
