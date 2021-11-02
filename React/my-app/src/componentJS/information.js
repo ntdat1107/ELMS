@@ -10,6 +10,9 @@ function Information({
     callback = () => {},
 }) {
     const [click, setClick] = useState(false)
+    const handleClick = () => setClick(!click);
+    const closeMobileMenu = () => setClick(false);
+
     return (
         <div id={idName}>            
             <div id="avatar">
@@ -24,9 +27,18 @@ function Information({
                 <il id="gmail"><p>{gmail}</p></il>
                 <il id="type"><p>{type}</p></il>
             </ul>
-            <div id="arrow" onClick={() => setClick(!click)}>
+            <div id="arrow" onClick={handleClick}>
                 <img src={arrow} alt="ArrowImage" id={click? "arrowClose" : "arrowOpen"}/>
             </div>
+            <ul className={click? 'nav-menu active' : 'nav-menu'}>
+                <li className="nav-item">
+                    <Link to='/ins/managecourse' onClick={closeMobileMenu}>managecourse</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to='/ins/announcement' onClick={closeMobileMenu}>announcement</Link>
+                </li>
+                <li className="nav-item"></li>
+            </ul>
         </div>
     )
 }

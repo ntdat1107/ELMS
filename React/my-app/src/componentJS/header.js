@@ -2,7 +2,6 @@ import React from "react";
 import SearchBar from "./searchBar";
 import Information from "./information";
 import '../componentCSS/header.css'
-import cheems from "../img/cheems.png"
 import Logo from "../img/Logo.png";
 import { Link } from "react-router-dom"
 
@@ -17,7 +16,7 @@ function Header({
 }) {
   return (
       <div id="Header">    
-        <Link to="/ins/dashboard">
+        <Link to={link}>
           <img src={Logo} alt="AppLogo" id="Logo"></img>
         </Link>    
         <SearchBar id="SearchBar" searchType="Search for ..." />

@@ -12,8 +12,8 @@
 #SubSideBar button:hover #manageCourse {
     content: url("../img/manageCourseHover.png")
 }
-#SubSideBar button:hover #annouce {
-    content: url("../img/annouceHover.png")
+#SubSideBar button:hover #announce {
+    content: url("../img/announceHover.png")
 }
 #SubSideBar button:hover #profile {
     content: url("../img/profileHover.png")
@@ -41,8 +41,8 @@
 .ActiveLink #manageCourse {
     content: url("../img/manageCourseHover.png")
 }
-.ActiveLink #annouce {
-    content: url("../img/annouceHover.png")
+.ActiveLink #announce {
+    content: url("../img/announceHover.png")
 }
 .ActiveLink #profile {
     content: url("../img/profileHover.png")
