@@ -36,6 +36,7 @@
 }
 #SubSideBar button:hover p {
     background-color: #160E4D;
+    border-radius: 20px ;
 }
 .ActiveLink #dashboard {
     content: url("../img/dashboardHover.png")
@@ -60,6 +61,7 @@
 
 
 #SubSideBar .ActiveLink button p {
+    border-radius: 20px;
     background-color: #160E4D;
 }
 #SubSideBar .ActiveLink button{    
@@ -112,4 +114,8 @@ li {
 }
 #SubSideBar .insSideBarLink {
     text-decoration: none;
+}
+#footerIns {
+    position: relative;
+    margin-top: 225px;
 }

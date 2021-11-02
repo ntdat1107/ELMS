@@ -17,8 +17,8 @@ return (
             <SideBarComponent linkName="/ins/announcement" idName="announce" srcImg={announce} altName="AnnouncementImage" name="Announcements" h="40" w="40"/>
             <SideBarComponent linkName="/ins/manageprofile" idName="profile" srcImg={manageProfile} altName="ManageProfile Image" name="Manage profile" w="40"/>                
         </ul>
-        <div id="footer">
-            <img src={footer} alt="FooterImage" width="300" height="auto"/>
+        <div id="footerIns">
+            <img src={footer} alt="FooterImage" width="270" height="auto"/>
         </div>
     </div>
     )
