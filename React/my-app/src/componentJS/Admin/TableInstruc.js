@@ -1,4 +1,5 @@
 import React from "react";
+import { Scrollbars } from "react-custom-scrollbars"
 import { Link } from "react-router-dom"
 import remove from "./image/delete.png"
 import moreInfo from "./image/moreInfo.png"
@@ -18,7 +19,7 @@ function TableInstruc() {
                 <p className="tr">Disqualify</p>
                 <p className="tr">Delete</p>
             </div>
-
+            <Scrollbars  style={{width: "100%", height: "100%"}}>
             <div>
                 <TableComponent ID="T2118456" FN="Chris" LN="Evan"/>
                 <div  id="moreInfo">
@@ -265,7 +266,7 @@ function TableInstruc() {
                     <img src={remove} alt="Delete Icon" width="35" height="auto"/>
                 </div>
             </div>           
-
+            </Scrollbars>
         </div>
     )
 }
