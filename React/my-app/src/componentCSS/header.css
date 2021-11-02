@@ -2,10 +2,11 @@
     position: fixed;
     justify-content: center;
     align-items: center;
+    left: 0;
     top: 0;
     z-index: 999;
-    width: 100vw;
     height: 120px;
+    max-width: 1500px;
     display: flex;
 }
 #Logo {
@@ -13,12 +14,13 @@
     width: 325px;
     height: 115px;
     cursor: pointer;
+    top: 0;
+    left: 0;
 }
 
 /* SEARCH BAR */
 #SearchBar {
     margin-top: 65px;
-    margin-left: 50px;
 }
 #Input {
     size: 32;
@@ -64,7 +66,6 @@
     text-align: center;
     width: 60vw;
     justify-content: end;
-    margin-right: 2rem;
 }
 .nav-item {
     height: 80px;
@@ -73,7 +74,6 @@
 
 /*_______Information for Instructor______*/
 #information {
-    margin-left: 475px;
     margin-top: 50px;
     margin-bottom: 0px;
     border-radius: 45px;
