@@ -25,7 +25,7 @@ return (
             <SideBarComponent linkName="/learner/manageProfile" idName="profile" srcImg={manageProfileImg} altName="ManageProfileImage" name="ManageProfile" h="32" w="40"/>
 
         </ul>
-        <div id="footer">
+        <div id="footerLn">
             <img src={footer} alt="FooterImage" width="270" height="auto"/>
         </div>
     </div>
