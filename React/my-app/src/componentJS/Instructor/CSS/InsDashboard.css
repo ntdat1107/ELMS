@@ -58,6 +58,7 @@
 #insdb #statisticDb {
     text-align: center;
     display: inline-block;
+    font-size: 22px;
     width: 400px;
     height: 400px;
     background: rgba(88, 186, 171, 0.3);
