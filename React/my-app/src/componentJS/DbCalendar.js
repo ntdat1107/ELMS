@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Calendar from 'react-calendar'
+import '../componentCSS/dbCalendar.css'
 
 function DbCalendar() {
     const [date, setDate] = useState(new Date());
@@ -8,7 +9,7 @@ function DbCalendar() {
     }
     return (
         <div>
-            <Calendar onChange={onChange} value={date} />
+            <Calendar id="calendarDb" onChange={onChange} value={date} />
         </div>
     )
 }

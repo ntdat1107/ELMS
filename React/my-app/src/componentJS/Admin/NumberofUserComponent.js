@@ -5,7 +5,6 @@ function NumofUComponent({
     idName,
     srcImg,
     altName,
-    imgid,
     name,
     number,
     h,

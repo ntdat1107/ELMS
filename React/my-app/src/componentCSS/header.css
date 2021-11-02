@@ -86,8 +86,11 @@
     border-bottom: 4px solid #242222;
     transition: all 0.2s ease-out;
 }
+.nav-menu {
+    margin-left: 100%;
+}
 .nav-menu.active {
-    margin-left: 25%;
+    margin-left: 40%;
     background: white;
     left: 0;
     opacity: 1;

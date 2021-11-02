@@ -3,7 +3,7 @@ import React from "react";
 import manageCourse from "../../img/managerCourse.png"
 import instr from "../../img/instr.png"
 import learner from "../../img/learner.png"
-import NumofUComponent from "./NumberofUserComponent";
+import NumofUComponent from "./NumberofUserComponent"
 
 function Number() {    
     return (

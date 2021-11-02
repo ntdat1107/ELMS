@@ -1,8 +1,8 @@
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom"
-import HeaderAdmin from '../header';
-import SideBarAdmin from '../Admin-sideBar';
-import AdminDashboard from "./AdminDashboard";
-import AdminManagerCourse from "./AdminCourse";
+import HeaderAdmin from '../header'
+import SideBarAdmin from '../Admin-sideBar'
+import AdminDashboard from "./AdminDashboard"
+import AdminManagerCourse from "./AdminCourse"
 import AdminAnnouncement from "./AdminAnnouncement"
 import AdminInstruc from "./AdminInstruc"
 import AdminLearner from "./AdminLearner"
