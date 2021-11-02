@@ -49,15 +49,45 @@
     padding-top: 40px;
 }
 
-
+/* Calendar */
 
 
 /* Statistics */
 #insdb #statisticDb {
+    text-align: center;
+    display: inline-block;
     width: 400px;
     height: 400px;
     background: rgba(88, 186, 171, 0.3);
     border-radius: 25px;
     margin-left: 325px;
     margin-top: 10px;
+}
+#insdb #textStatistic {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+}
+#insdb #statisticDb p {
+    color: #f4f4f4;
+}
+
+#insdb #botStatistic div{
+    width: 200px;
+    height: 150px;
+}
+#insdb #videoStatistic {
+    float: left;
+    text-align: center;
+}
+#insdb #courseStatistic {
+    float: left;
+    text-align: center;
+}
+#insdb #learnerStatistic {
+    display: inline-block;
+    width: 320px;
+    height: 150px;
+    background: #A2D2FF;
+    border-radius: 20px;
 }
