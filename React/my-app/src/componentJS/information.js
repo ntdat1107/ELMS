@@ -19,7 +19,7 @@ function Information({
                 </Link>
             </div>
             <ul id="inform">
-                <Link to="/ins/manageprofile" id="linkName">
+                <Link to={linkAvt} id="linkName">
                     <il id="name"><h3>{name}</h3></il>
                 </Link>
                 <il id="gmail"><p>{gmail}</p></il>
