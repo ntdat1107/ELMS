@@ -1,7 +1,7 @@
 /*_____________SideBar_____________*/
 #SideBar {
     position: fixed;
-    width: 325px;
+    width: 270px;
     height: 100vh;
     background-color: #f4f4f4;
     margin-top: 115px;
@@ -32,7 +32,7 @@
     color: #f4f4f4;
     border-radius: 20px;
     -webkit-border-radius: 20px;
-    width: 325px;
+    width: 270px;
 }
 #SubSideBar button:hover p {
     background-color: #160E4D;
@@ -67,7 +67,7 @@
     color: #f4f4f4;
     border-radius: 20px;
     -webkit-border-radius: 20px;
-    width: 325px;
+    width: 270px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 li {
@@ -108,8 +108,7 @@ li {
     font-weight: bold;
 }
 #footer {
-    margin-top: 150px;
-    margin-left: 25px;
+    margin-top: 100px;
 }
 #SubSideBar .insSideBarLink {
     text-decoration: none;

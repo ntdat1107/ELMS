@@ -1,10 +1,10 @@
 import React from "react";
 import "../css/LnDashboard.css"
-
+import About from "./about";
 function LnDashboard() {
     return (
         <div id="lnDashboard">
-            <p>Dashboard Page.</p>
+            <About />
         </div>
     )
 }
