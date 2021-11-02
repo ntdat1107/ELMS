@@ -1,14 +1,14 @@
 import React from "react";
-import "./CSS/AdminAnnouncement.css"
+import SearchInstruc from "./SearchInstruc";
+import TableLearner from "./TableLearner"
 
-function AdminLearner () {
+function AdminInstruc () {
     return (
         <div id="adminlearner">
-            <p>
-                Hello Chó!!
-            </p>
+            <SearchInstruc/>
+            <TableLearner />
         </div>
     )
 }
 
-export default AdminLearner;
+export default AdminInstruc;

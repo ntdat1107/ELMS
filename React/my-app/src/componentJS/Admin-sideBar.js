@@ -19,8 +19,8 @@ return (
             <SideBarComponent linkName="/admin/managecourse" idName="manageCourse" srcImg={manageCourse} altName="Manage Courses Image" name="Manage courses" h="40" w="40"/>
             <SideBarComponent linkName="/admin/announcement" idName="announce" srcImg={announce} altName="Announcement Image" name="Announcements" h="40" w="40"/>                
         </ul>
-        <div id="footer">
-            <img src={footer} alt="Footer Image" width="300" height="auto"/>
+        <div id="footerad">
+            <img src={footer} alt="Footer Image" width="270" height="auto"/>
         </div>
     </div>
     )

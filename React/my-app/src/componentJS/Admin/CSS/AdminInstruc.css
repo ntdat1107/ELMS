@@ -1,45 +1,64 @@
+/*File css này dùng cho cả Manage Instructor và Learner*/
 #searchInstruc {
     margin-top: 150px;
-    margin-left: 300px;
-    padding: 5px;
+    margin-left: 310px;
+    padding: 5px 5px 5px 80px;
     width: 1202px;
     height: 50px;
     border: 1px solid black;
+    border-radius: 15px 15px 0px 0px;
+    -webkit-right-radius: 15px 15px 0px 0px;
     position: relative;
 }
 
-#searchName {
-    margin-right: 30px;
-}
-#searchID{
-    margin-top: 8px;
+#searchNIC {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 50px;
+    size: 32px;
+    width: 250px;
+    height: 30px;
+    border-radius: 45px;
+    -webkit-border-radius: 45px;
+    padding-left: 15px;
 }
 
-#searchCourse {
-    margin-left: 30px;
-}
 #searchInsIcon {
     position: absolute;
-    right: 10px;
+    top: 13px;
+    right: 20px;
     cursor: pointer;
 }
 /*______________________________*/
 
+#admininstruc {
+    background-image: url("../image/Background.png");
+}
+#adminlearner {
+    background-image: url("../image/Background.png");
+}
 
 #tableinstruc {
-    margin-left: 300px;
+    font-size: 20px;
+    margin-left: 310px;
     margin-bottom: 30px;
+    margin-right: 20px;
     text-align: center;
     border: 1px solid black;
 }
 
-#tableinstruc > div {
+/*_____display: flex là làm cho các block trong cùng một block lớn thẳng hàng_____*/
+#tableinstruc #titletable {
+    border-bottom: 2px solid black;
+    display: flex;
+}
+
+#tableinstruc .tablecpn {
     display: flex;
 }
 
 #tablecomponent {
     display: flex;
-    text-align: center;
 }
 
 #tableinstruc div p {
@@ -52,18 +71,33 @@
     width: 200px;
     padding-top: 17px;
     border-bottom: 1px solid black;
-    cursor: pointer;
 }
 #disqualify {
     width: 200px;
     padding-top: 10px;
     border-bottom: 1px solid black;
-    cursor: pointer;
 }
 #delete {
     width: 200px;
     padding-top: 10px;
     border-bottom: 1px solid black;
+}
+#grantpms {
+    width: 200px;
+    padding-top: 10px;
+    border-bottom: 1px solid black;
+}
+
+#moreIcon {
+    cursor: pointer;
+}
+#disIcon {
+    cursor: pointer;
+}
+#delIcon {
+    cursor: pointer;
+}
+#grantIcon {
     cursor: pointer;
 }
 
