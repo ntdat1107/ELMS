@@ -33,6 +33,8 @@
 
 
 /* INFORMATION USER */
+
+/*_______Information for Instructor______*/
 #informationInstructor {
     margin-left: 475px;
     margin-top: 50px;
@@ -55,9 +57,35 @@
 #informationInstructor p {
     font-size: 14px;
 }
+
 #informationInstructor #linkName {
     text-decoration: none;
 }
+
+/*_____End Information for Instructor______*/
+
+/*_______Information for Admin______*/
+#informationAdmin {
+    list-style-position: inside;
+    margin-left: 475px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    border-radius: 45px;
+    -webkit-border-radius: 45px;
+    display: flex;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+#informationAdmin h3 {
+    cursor: pointer;
+    font-size: 20px;
+}
+#informationAdmin p {
+    font-size: 14px;
+}
+/*_____End Information for Admin______*/
+
 
 #avatar img {
     display: inline-block;
