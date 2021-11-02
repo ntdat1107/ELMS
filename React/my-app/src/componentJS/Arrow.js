@@ -11,7 +11,7 @@ function Arrow() {
     return (        
         <div className="arrow-btn">            
             <div id="arrow" onClick={handleClick}>
-                <img src={arrow} alt="ArrowImage" id={click? "arrowClose" : "arrowOpen"}/>
+                <img src={arrow} alt="ArrowImage" className="arrowImg" id={click? "arrowClose" : "arrowOpen"}/>
             </div>            
             <ul className={click? 'nav-menu active' : 'nav-menu'}>
                 <li className="nav-item">

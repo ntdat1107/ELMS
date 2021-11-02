@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Calendar from 'react-calendar'
 
-function Calendar() {
+function DbCalendar() {
     const [date, setDate] = useState(new Date());
     const onChange = date => {
         setDate(date);
@@ -13,4 +13,4 @@ function Calendar() {
     )
 }
 
-export default Calendar
+export default DbCalendar;
