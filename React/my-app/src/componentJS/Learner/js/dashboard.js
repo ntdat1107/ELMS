@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/LnDashboard.css"
-import About from "./about";
+import About from "../js/about";
 function LnDashboard() {
     return (
         <div id="lnDashboard">
