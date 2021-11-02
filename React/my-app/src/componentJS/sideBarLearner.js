@@ -26,7 +26,7 @@ return (
 
         </ul>
         <div id="footer">
-            <img src={footer} alt="FooterImage" width="300" height="auto"/>
+            <img src={footer} alt="FooterImage" width="270" height="auto"/>
         </div>
     </div>
     )

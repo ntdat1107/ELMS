@@ -1,4 +1,44 @@
+/* #insdb p {
+    margin-left: 350px;
+    color: black;
+    margin-top: 100px;
+} */
+#lnDashboard #titleFun {
+    font-size: 36px;
+}
+#lnDashboard #getStarted:hover {
+    background-color: #160E4D;
+    color: #f4f4f4;
+}
 #lnDashboard p {
-    margin-top: 500px;
-    margin-left: 500px;
+    color: #f4f4f4;
+    text-align: left;
+    padding-left: 325px;
+    font-weight: bold;
+}
+#lnDashboard #btn {
+    padding-left: 100px;
+}
+#lnDashboard #getStarted {
+    margin-top: 25px;
+    width: 150px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #f4f4f4;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+#lnDashboard #bground {
+    padding-top: 125px;
+    background-image: url("../img/about.png");
+    background-position: right top;
+    display: inline-block;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 325px;
+    width: 840px;
+    height: 366px;
+    background-size: cover
 }

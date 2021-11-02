@@ -34,6 +34,7 @@
 #insdb #bground {
     padding-top: 125px;
     background-image: url("../imgSrc/About.png");
+    background-size: cover;
     background-position: right top;
     display: inline-block;
     text-align: center;

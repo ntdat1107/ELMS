@@ -1,28 +1,32 @@
 #Header {
+    background-color: #f4f4f4;
     position: fixed;
     justify-content: center;
     align-items: center;
+    left: 0;
     top: 0;
     z-index: 999;
-    width: 100vw;
     height: 120px;
     display: flex;
+    width: 100%;
 }
 #Logo {
     background-color: #f4f4f4;
     width: 325px;
     height: 115px;
     cursor: pointer;
+    top: 0;
+    left: 0;
 }
 
 /* SEARCH BAR */
 #SearchBar {
-    margin-top: 65px;
-    margin-left: 50px;
+    margin-top: 20px;
+    padding-left: 40px;
 }
 #Input {
     size: 32;
-    width: 350px;
+    width: 425px;
     height: 40px;
     border-radius: 45px;
     -webkit-border-radius: 45px;
@@ -30,12 +34,18 @@
 }
 #searchIcon {
     position: absolute;
-    top: 73.5px;
-    left: 675px;
+    margin-top: 8px;
+    margin-left: -50px;
     cursor: pointer;
 }
 
 
+#Header #arrow-btn {
+    right: 0px;
+}
+#Header #arrow img {
+    margin-left: 20px;
+}
 #avatar img {
     display: inline-block;
     margin-right: 20px;
@@ -44,11 +54,11 @@
     -webkit-border-radius:50%;
     cursor: pointer;
 }
-#information #arrow img {
+#Header #arrow img {
     margin-top: 20px;
     cursor: pointer;
 }
-#information #arrowClose {
+#Header #arrowClose {
     transform: rotate(180deg);
 }
 .nav-link {
@@ -57,24 +67,20 @@
     text-decoration: none;
 }
 .nav-menu {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 10px;
-    list-style: none;
-    text-align: center;
-    width: 60vw;
-    justify-content: end;
-    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
 }
 .nav-item {
     height: 80px;
 }
 /* INFORMATION USER */
-
-/*_______Information for Instructor______*/
 #information {
-    margin-left: 475px;
-    margin-top: 50px;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 25vw;
     margin-bottom: 0px;
     border-radius: 45px;
     -webkit-border-radius: 45px;
@@ -98,28 +104,3 @@
 #information #linkName {
     text-decoration: none;
 }
-
-/*_____End Information for Instructor______*/
-
-/*_______Information for Admin______*/
-#informationAdmin {
-    list-style-position: inside;
-    margin-left: 475px;
-    margin-top: 50px;
-    margin-bottom: 0px;
-    border-radius: 45px;
-    -webkit-border-radius: 45px;
-    display: flex;
-    border: 1px solid black;
-    padding: 5px;
-}
-
-#informationAdmin h3 {
-    cursor: pointer;
-    font-size: 20px;
-}
-#informationAdmin p {
-    font-size: 14px;
-}
-/*_____End Information for Admin______*/
-

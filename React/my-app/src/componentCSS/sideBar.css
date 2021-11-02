@@ -1,10 +1,10 @@
 /*_____________SideBar_____________*/
 #SideBar {
     position: fixed;
-    width: 325px;
+    width: 270px;
     height: 100vh;
     background-color: #f4f4f4;
-    margin-top: 115px;
+    margin-top: 120px;
 }
 #SubSideBar button:hover #dashboard {
     content: url("../img/dashboardHover.png")
@@ -32,10 +32,11 @@
     color: #f4f4f4;
     border-radius: 20px;
     -webkit-border-radius: 20px;
-    width: 325px;
+    width: 270px;
 }
 #SubSideBar button:hover p {
     background-color: #160E4D;
+    border-radius: 20px ;
 }
 .ActiveLink #dashboard {
     content: url("../img/dashboardHover.png")
@@ -60,6 +61,7 @@
 
 
 #SubSideBar .ActiveLink button p {
+    border-radius: 20px;
     background-color: #160E4D;
 }
 #SubSideBar .ActiveLink button{    
@@ -67,7 +69,7 @@
     color: #f4f4f4;
     border-radius: 20px;
     -webkit-border-radius: 20px;
-    width: 325px;
+    width: 270px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 li {
@@ -82,16 +84,19 @@ li {
     margin-left: 15px;
 }
 #SubSideBar p {
-    margin-left: 80px;  
+    margin-left: 75px;  
 }
 #SubSideBar .insSideBarLink p {
     background-color: #f4f4f4;  ;
 }
 #SubSideBar #dashboard {
-    margin-top: 4px;
+    margin-top: 5px;
 }
 #SubSideBar #profile {
-    margin-top: 3px;
+    margin-top: 5px;
+}
+#SubSideBar #announce {
+    margin-top: 5px;
 }
 #SideBar button{
     display: flex;
@@ -99,15 +104,18 @@ li {
     cursor: pointer;
     border: none;
     box-sizing: border-box;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 45px;
     font-style: normal;
     font-weight: bold;
 }
 #footer {
-    margin-top: 150px;
-    margin-left: 25px;
+    margin-top: 100px;
 }
 #SubSideBar .insSideBarLink {
     text-decoration: none;
+}
+#footerIns {
+    position: relative;
+    margin-top: 225px;
 }

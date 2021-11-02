@@ -1,0 +1,41 @@
+#logInButton {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 30px;
+    margin-top: 30px;
+    margin-left: 320px;
+    width: 150px;
+    height: 50px;
+    box-shadow: 0px 30px 20px -10px rgba(0, 0, 0, 0.1);
+    border-radius: 44px;
+    background-color: yellowgreen;
+
+}
+
+#Header {
+    position: fixed;
+    width: 100vw;
+    height: 120px;
+    display: flex;
+    z-index: 10;
+    overflow: visible;
+    background-color: whitesmoke;
+    padding-bottom: 10px;
+}
+
+
+#signUpButton {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    width: 150px;
+    height: 50px;
+    box-shadow: 0px 30px 20px -10px rgba(0, 0, 0, 0.1);
+    border-radius: 44px;
+
+} 
+
+#headerButton p {
+    font-size: 20px;
+    font-weight: 300;
+}

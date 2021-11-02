@@ -2,9 +2,7 @@ import React from "react";
 import './CSS/InsDashboard.css'
 import About from "./About";
 
-function InsDashboardUI ({
-
-}) {
+function InsDashboardUI () {
     return (
         <div id="insdb">
             <About />
