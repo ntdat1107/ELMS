@@ -119,3 +119,4 @@ dmypy.json
 App-duy.js
 React/my-app/src/App.js
 React/my-app/src/App.js
+*.json
