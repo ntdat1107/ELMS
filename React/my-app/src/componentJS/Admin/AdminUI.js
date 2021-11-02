@@ -13,7 +13,7 @@ return (
     <Router>
         <div className="AdminUI">
         <SideBarAdmin/>
-        <HeaderAdmin link="/ins/dashboard" srcImg={cheems} name="Mai Đức Long" gmail="maiduclong@gmail.com" type="Admin"
+        <HeaderAdmin linkAvt="/admin/dashboard" link="/admin/dashboard" srcImg={cheems} name="Mai Đức Long" gmail="maiduclong@gmail.com" type="Admin"
         idName="informationInstructor"/>
         </div>      
     <Switch>            
