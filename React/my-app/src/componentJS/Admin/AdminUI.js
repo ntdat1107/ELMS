@@ -1,18 +1,20 @@
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom"
-import HeaderAdmin from '../Admin-header';
+import HeaderAdmin from '../header';
 import SideBarAdmin from '../Admin-sideBar';
 import AdminDashboardUI from "./AdminDashboard";
 import AdminManagerCourse from "./AdminCourse";
 import AdminAnnouncement from "./AdminAnnouncement"
 import AdminInstruc from "./AdminInstruc"
 import AdminLearner from "./AdminLearner"
+import cheems from "../../img/cheems.png"
 
 function AdminUI() {
 return (
     <Router>
         <div className="AdminUI">
         <SideBarAdmin/>
-        <HeaderAdmin />
+        <HeaderAdmin link="/ins/dashboard" srcImg={cheems} name="Mai Đức Long" gmail="maiduclong@gmail.com" type="Admin"
+        idName="informationInstructor"/>
         </div>      
     <Switch>            
         <Route exact path='/ins/dashboard' component={AdminDashboardUI}></Route>
