@@ -8,7 +8,7 @@ import LnReadTutorial       from "./readTutorial";
 import LnReadNotes          from "./readNotes";
 import LnAnnouncements      from "./announcements";
 import LnManageProfile      from "./manageProfile";
-import Calender             from "../../DbCalendar"
+
 import avt from "../../../img/cheems.png";
 
 
@@ -29,7 +29,6 @@ return (
             <Route exact path='/learner/announcements'  component={LnAnnouncements}></Route>
             <Route exact path='/learner/manageprofile'  component={LnManageProfile}></Route>
         </Switch>
-        <div><Calender /></div>
     </Router>
     );
 }

@@ -133,3 +133,6 @@
 #lnDashboard #courseContent {
     padding-left: 10px;
 }
+#lnDashboard {
+    display: flex;
+}
