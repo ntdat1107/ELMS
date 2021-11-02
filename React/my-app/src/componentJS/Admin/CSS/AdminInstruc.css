@@ -1,0 +1,69 @@
+#searchInstruc {
+    margin-top: 150px;
+    margin-left: 300px;
+    padding: 5px;
+    width: 1202px;
+    height: 50px;
+    border: 1px solid black;
+    position: relative;
+}
+
+#searchName {
+    margin-right: 30px;
+}
+#searchID{
+    margin-top: 8px;
+}
+
+#searchCourse {
+    margin-left: 30px;
+}
+#searchInsIcon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+/*______________________________*/
+
+
+#tableinstruc {
+    margin-left: 300px;
+    margin-bottom: 30px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#tableinstruc > div {
+    display: flex;
+}
+
+#tablecomponent {
+    display: flex;
+    text-align: center;
+}
+
+#tableinstruc div p {
+    width: 200px;
+    padding: 14px;
+    border-bottom: 1px solid black;
+}
+
+#moreInfo {
+    width: 200px;
+    padding-top: 17px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+#disqualify {
+    width: 200px;
+    padding-top: 10px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+#delete {
+    width: 200px;
+    padding-top: 10px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
