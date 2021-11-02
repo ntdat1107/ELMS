@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom"
-import Arrow from "./Arrow.js"
 function Information({
     srcImg,
     linkAvt,
@@ -23,7 +22,6 @@ function Information({
                 <il id="gmail"><p>{gmail}</p></il>
                 <il id="type"><p>{type}</p></il>
             </ul>
-            <Arrow />
         </div>
     )
 }
