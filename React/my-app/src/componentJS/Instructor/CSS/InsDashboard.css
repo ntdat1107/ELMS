@@ -42,7 +42,7 @@
     display: inline-block;
     text-align: center;
     margin-top: 120px;
-    margin-left: 325px;
+    margin-left: 300px;
     width: 740px;
     height: 180px;
     background-size: cover;
@@ -60,7 +60,7 @@
     height: 400px;
     background: rgba(88, 186, 171, 0.3);
     border-radius: 25px;
-    margin-left: 325px;
+    margin-left: 300px;
     margin-top: 10px;
 }
 #insdb #textStatistic {
@@ -73,12 +73,14 @@
 }
 
 #insdb #botStatistic div{
-    width: 200px;
+    margin-top: 20px;
+    width: 180px;
     height: 150px;
 }
 #insdb #videoStatistic {
     float: left;
     text-align: center;
+    margin-left: 20px;
 }
 #insdb #courseStatistic {
     float: left;
