@@ -8,7 +8,7 @@ function InsDashboardUI () {
     return (
         <div id="insdb">
             <About />
-            <Statistic learnerCount="500"/>
+            <Statistic learnerCount="500" videoCount="20" courseCount="6"/>
             {/* <DbCalendar /> */}
         </div>
     )
