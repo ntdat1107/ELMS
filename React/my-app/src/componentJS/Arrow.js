@@ -19,7 +19,6 @@ function Arrow() {
                 <li className="nav-item">
                     <Link to='/ins/announcement' className="nav-link" onClick={closeMobileMenu}>Logout</Link>
                 </li>
-                <li className="nav-item"></li>
             </ul>
         </div>
     )
