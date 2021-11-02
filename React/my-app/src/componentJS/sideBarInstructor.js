@@ -12,13 +12,13 @@ function SideBarInstructor() {
 return (
     <div id="SideBar">
         <ul id="SubSideBar">
-            <SideBarComponent linkName="/ins/dashboard" idName="dashboard" srcImg={dashboardImg} altName="DashBoard Image" name="DashBoard" h="32" w="40"/>
-            <SideBarComponent linkName="/ins/managecourse" idName="manageCourse" srcImg={manageCourse} altName="Manage Courses Image" name="Manage courses" h="40" w="40"/>
-            <SideBarComponent linkName="/ins/announcement" idName="annouce" srcImg={annouce} altName="Annoucement Image" name="Announcements" h="40" w="40"/>
-            <SideBarComponent linkName="/ins/manageprofile" idName="profile" srcImg={manageProfile} altName="Manage Profile Image" name="Manage profile" w="40"/>                
+            <SideBarComponent linkName="/ins/dashboard" idName="dashboard" srcImg={dashboardImg} altName="DashBoardImage" name="DashBoard" h="32" w="40"/>
+            <SideBarComponent linkName="/ins/managecourse" idName="manageCourse" srcImg={manageCourse} altName="ManageCourses Image" name="Manage courses" h="40" w="40"/>
+            <SideBarComponent linkName="/ins/announcement" idName="annouce" srcImg={annouce} altName="AnnoucementImage" name="Announcements" h="40" w="40"/>
+            <SideBarComponent linkName="/ins/manageprofile" idName="profile" srcImg={manageProfile} altName="ManageProfile Image" name="Manage profile" w="40"/>                
         </ul>
         <div id="footer">
-            <img src={footer} alt="Footer Image" width="300" height="auto"/>
+            <img src={footer} alt="FooterImage" width="300" height="auto"/>
         </div>
     </div>
     )

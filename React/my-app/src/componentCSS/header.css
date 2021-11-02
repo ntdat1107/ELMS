@@ -34,7 +34,6 @@
 
 /* INFORMATION USER */
 #informationInstructor {
-    list-style-position: inside;
     margin-left: 475px;
     margin-top: 50px;
     margin-bottom: 0px;
@@ -44,28 +43,34 @@
     border: 1px solid black;
     padding: 5px;
 }
+#informationInstructor #inform {
+    margin-right: 10px;
+}
 
 #informationInstructor h3 {
+    color: black;
     cursor: pointer;
     font-size: 20px;
 }
 #informationInstructor p {
     font-size: 14px;
 }
+#informationInstructor #linkName {
+    text-decoration: none;
+}
 
 #avatar img {
     display: inline-block;
-    background-size: cover;
-    flex-wrap: wrap;
     margin-right: 20px;
     border-radius:50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
     cursor: pointer;
 }
-#arrow {
-    margin-right: 10px;
-    margin-left: 20px;
-    margin-top: 25px;
+#informationInstructor #arrow img {
+    margin-top: 20px;
     cursor: pointer;
+}
+#informationInstructor #arrowClose {
+    transform: rotate(180deg);
 }

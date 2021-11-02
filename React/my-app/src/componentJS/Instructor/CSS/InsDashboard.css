@@ -6,7 +6,11 @@
 #insdb #titleFun {
     font-size: 36px;
 }
-
+#insdb #getStarted:hover {
+    background-color: #160E4D;
+    color: #f4f4f4;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 #insdb p {
     color: #f4f4f4;
     text-align: left;

@@ -5,13 +5,16 @@ import InsDashboardUI from "./InsDashboardUI";
 import InsManagerCourse from "./InsManageCourse";
 import InsAnnouncement from "./InsAnnouncement"
 import InsManageProfile from "./InsManageProfile"
+import cheems from "../../img/cheems.png"
+
 
 function InstructorUI() {
 return (
     <Router>
         <div className="insUI">
         <SideBarInstructor/>
-        <Header />
+        <Header link="/ins/dashboard" srcImg={cheems} name="Ngọ Tiến Đạt" gmail="tiendat_2001vn@gmail.com" type="Instructor"
+        idName="informationInstructor"/>
         </div>      
         <Switch>
             <Route exact path='/ins/manageprofile' component={InsManageProfile}></Route>            

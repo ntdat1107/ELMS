@@ -8,7 +8,7 @@ function SearchBar ({
     return (
         <div id="SearchBar">
           <input id="Input" type="text" name="Search" placeholder={searchType}></input>
-          <img src={searchImg} alt="Search Icon Image" id="searchIcon" />
+          <img src={searchImg} alt="SearchIconImage" id="searchIcon" />
         </div>
     )
 }
