@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom"
-import Header               from './header';
-import SideBarLearner       from './sideBarLn';
+import Header               from '../../LearnerHeader';
+import SideBarLearner       from '../../LearnerSideBar';
 import LnDashboard          from "./dashboard";
 import LnMyCourses          from "./myCourses";
 import LnTakeQuiz           from "./takeQuiz";
