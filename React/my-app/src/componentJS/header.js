@@ -8,6 +8,7 @@ import { Link } from "react-router-dom"
 
 function Header({
   link,
+  linkAvt,
   srcImg,
   name,
   gmail,
@@ -20,7 +21,7 @@ function Header({
           <img src={Logo} alt="AppLogo" id="Logo"></img>
         </Link>    
         <SearchBar id="SearchBar" searchType="Search for ..." />
-        <Information srcImg={srcImg} name={name} gmail={gmail} type={type} idName={idName}/>
+        <Information linkAvt={linkAvt} srcImg={srcImg} name={name} gmail={gmail} type={type} idName={idName}/>
       </div>
   )
 }

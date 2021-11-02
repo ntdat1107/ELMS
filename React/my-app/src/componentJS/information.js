@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { Link } from "react-router-dom"
 function Information({
     srcImg,
+    linkAvt,
     name,
     gmail,
     type,
@@ -11,7 +12,7 @@ function Information({
     return (
         <div id={idName}>            
             <div id="avatar">
-                <Link to="/ins/manageprofile">
+                <Link to={linkAvt}>
                     <img src={srcImg} alt="AvatarImage" width="60" height="auto"/>
                 </Link>
             </div>
