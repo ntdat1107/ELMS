@@ -10,6 +10,19 @@ import linux from "../img/linux.png";
 import network from "../img/network.png";
 import star from "../img/star.png";
 
+const styleBC = {
+    backgroundColor: "#F8D92E",
+    color: "#4B0C0C"
+}
+const styleN = {
+    backgroundColor: "#C4C4C4",
+    color: "#000000"
+}
+const styleH = {
+    backgroundColor: "#EC5454",
+    color: "#FFFFFF"
+}
+
 function CourseForYou() {
     return (
         <div id="coursesCFY">
@@ -25,7 +38,8 @@ function CourseForYou() {
                         Type="Best Course" 
                         rateScore="4.5" 
                         imgStar={star} 
-                        totalRate="(10,123)" 
+                        totalRate="(10,123)"
+                        tagColor={styleBC}
                     />
                     <CourseForYouCpn 
                         imgSrcCourse = {network} 
@@ -36,7 +50,8 @@ function CourseForYou() {
                         Type="New" 
                         rateScore="4.5" 
                         imgStar={star} 
-                        totalRate="(9999)" 
+                        totalRate="(9999)"
+                        tagColor={styleN}
                     />
                     <CourseForYouCpn 
                         imgSrcCourse = {linux} 
@@ -44,10 +59,11 @@ function CourseForYou() {
                         Name = "Complete Linux Training Course to Get Your Dream IT Job 2021" 
                         Desc="The BEST Linux Administration course that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications" 
                         Author="Mr. Duy" 
-                        Type="New" 
+                        Type="Hot" 
                         rateScore="4.5" 
                         imgStar={star} 
-                        totalRate="(11113)" 
+                        totalRate="(11113)"
+                        tagColor={styleH}
                     />
                     <CourseForYouCpn 
                         imgSrcCourse = {ai} 
@@ -58,7 +74,8 @@ function CourseForYou() {
                         Type="Best Course" 
                         rateScore="4.5" 
                         imgStar={star} 
-                        totalRate="(10,000)" 
+                        totalRate="(10,000)"
+                        tagColor={styleBC}
                     />
                     <CourseForYouCpn 
                         imgSrcCourse = {js} 
@@ -69,7 +86,8 @@ function CourseForYou() {
                         Type="New" 
                         rateScore="4.5" 
                         imgStar={star} 
-                        totalRate="(12345)" 
+                        totalRate="(12345)"
+                        tagColor={styleN}
                     />
                     <CourseForYouCpn 
                         imgSrcCourse = {django} 
@@ -80,7 +98,8 @@ function CourseForYou() {
                         Type="Best Course" 
                         rateScore="4.5" 
                         imgStar={star} 
-                        totalRate="(9876)" 
+                        totalRate="(9876)"
+                        tagColor={styleBC}
                     />
                 </Scrollbars>
             </div>

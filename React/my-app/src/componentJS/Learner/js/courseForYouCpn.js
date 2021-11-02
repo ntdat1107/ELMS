@@ -9,7 +9,8 @@ function courseForYouCpn({
     Type,
     rateScore,
     imgStar,
-    totalRate
+    totalRate,
+    tagColor
 }) {
     return (
         <div id="courseCFY">
@@ -19,7 +20,7 @@ function courseForYouCpn({
                 <p id = "Desc">{Desc}</p>
                 <p id = "Author">{Author}</p>
                 <div id="rateContent">
-                    <div id="p1"><p>{Type}</p></div>
+                    <div id="p1" style={tagColor}><p>{Type}</p></div>
                     <div id="p2"><p>{rateScore} </p></div>
                     <div id="p3"><img src= {imgStar} alt="star"></img></div>
                     <div id="p4"><p>{totalRate}</p></div>
