@@ -8,7 +8,7 @@ import LnReadTutorial       from "./readTutorial";
 import LnReadNotes          from "./readNotes";
 import LnAnnouncements      from "./announcements";
 import LnManageProfile      from "./manageProfile";
-import logo from "../../../img/avtLearner.jpg";
+import avt from "../../../img/cheems.png";
 
 
 function LearnerUI() {
@@ -16,7 +16,7 @@ return (
     <Router>
         <div className="lnUI">
         <SideBarLearner/>
-        <Header linkAvt="/learner/manageprofile" link="/learner/dashboard" srcImg={logo} name="Lâm Thành Dương" gmail="lamduong11201@gmail.com" type="Learner"
+        <Header linkAvt="/learner/manageprofile" link="/learner/dashboard" srcImg={avt} name="Lâm Thành Dương" gmail="lamduong11201@gmail.com" type="Learner"
         idName="information"/>
         </div>      
         <Switch>            

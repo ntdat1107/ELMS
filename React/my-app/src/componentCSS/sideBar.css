@@ -95,8 +95,14 @@ li {
 #SubSideBar #profile {
     margin-top: 5px;
 }
+#SubSideBar #manageCourse {
+    margin-top: 3px;
+}
+#SubSideBar #learner {
+    margin-top: 3px;
+}
 #SubSideBar #announce {
-    margin-top: 5px;
+    margin-top: 3px;
 }
 #SideBar button{
     display: flex;
