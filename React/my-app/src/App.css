@@ -1,6 +1,4 @@
 .App {
   display: flex;
   size: 20;
-  text-align: left;
-  box-sizing: border-box;
 }
