@@ -1,7 +1,7 @@
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom"
 import HeaderAdmin from '../header';
 import SideBarAdmin from '../Admin-sideBar';
-import AdminDashboardUI from "./AdminDashboard";
+import AdminDashboard from "./AdminDashboard";
 import AdminManagerCourse from "./AdminCourse";
 import AdminAnnouncement from "./AdminAnnouncement"
 import AdminInstruc from "./AdminInstruc"
@@ -17,11 +17,11 @@ return (
         idName="informationInstructor"/>
         </div>      
     <Switch>            
-        <Route exact path='/ins/dashboard' component={AdminDashboardUI}></Route>
-        <Route exact path='/ins/instructor' component={AdminInstruc}></Route>
-        <Route exact path='/ins/learner' component={AdminLearner}></Route>
-        <Route exact path='/ins/managecourse' component={AdminManagerCourse}></Route>
-        <Route exact path='/ins/announcement' component={AdminAnnouncement}></Route>
+        <Route exact path='/admin/dashboard' component={AdminDashboard}></Route>
+        <Route exact path='/admin/instructor' component={AdminInstruc}></Route>
+        <Route exact path='/admin/learner' component={AdminLearner}></Route>
+        <Route exact path='/admin/managecourse' component={AdminManagerCourse}></Route>
+        <Route exact path='/admin/announcement' component={AdminAnnouncement}></Route>
     </Switch>
     </Router>
     );
