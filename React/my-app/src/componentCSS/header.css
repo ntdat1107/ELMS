@@ -44,11 +44,11 @@
     -webkit-border-radius:50%;
     cursor: pointer;
 }
-#informationInstructor #arrow img {
+#information #arrow img {
     margin-top: 20px;
     cursor: pointer;
 }
-#informationInstructor #arrowClose {
+#information #arrowClose {
     transform: rotate(180deg);
 }
 .nav-link {
@@ -72,7 +72,7 @@
 /* INFORMATION USER */
 
 /*_______Information for Instructor______*/
-#informationInstructor {
+#information {
     margin-left: 475px;
     margin-top: 50px;
     margin-bottom: 0px;
@@ -82,20 +82,20 @@
     border: 1px solid black;
     padding: 5px;
 }
-#informationInstructor #inform {
+#information #inform {
     margin-right: 10px;
 }
 
-#informationInstructor h3 {
+#information h3 {
     color: black;
     cursor: pointer;
     font-size: 20px;
 }
-#informationInstructor p {
+#information p {
     font-size: 14px;
 }
 
-#informationInstructor #linkName {
+#information #linkName {
     text-decoration: none;
 }
 

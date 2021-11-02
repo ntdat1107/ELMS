@@ -14,7 +14,7 @@ return (
         <div className="insUI">
         <SideBarInstructor/>
         <Header linkAvt="/ins/manageprofile" link="/ins/dashboard" srcImg={cheems} name="Ngọ Tiến Đạt" gmail="tiendat_2001vn@gmail.com" type="Instructor"
-        idName="informationInstructor"/>
+        idName="information"/>
         </div>      
         <Switch>
             <Route exact path='/ins/manageprofile' component={InsManageProfile}></Route>            

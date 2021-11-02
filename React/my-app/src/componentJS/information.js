@@ -6,11 +6,10 @@ function Information({
     name,
     gmail,
     type,
-    idName,
     callback = () => {},
 }) {
     return (
-        <div id={idName}>            
+        <div id="information">            
             <div id="avatar">
                 <Link to={linkAvt}>
                     <img src={srcImg} alt="AvatarImage" width="60" height="auto"/>
