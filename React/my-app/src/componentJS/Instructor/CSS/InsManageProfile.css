@@ -113,7 +113,7 @@
 }
 #insMP #row-6 {
     margin-top: 25px;
-    margin-left: 300px;
+    margin-left: 250px;
 }
 #insMP #row-6 button {
     width: 120px;
@@ -132,4 +132,8 @@
 }
 #insMP #row-6 .btn-save.active {
     display: inline-block;
+}
+#insMP #row-6 #cancel-btn {
+    background-color: #C4C4C4;
+    margin-left: 25px;
 }

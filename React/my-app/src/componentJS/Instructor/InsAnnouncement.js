@@ -1,10 +1,14 @@
 import React from "react";
+import {Helmet} from "react-helmet";
 import "./CSS/InsAnnounment.css"
 
 function InsAnnouncement() {
     return (
         <div id="insAnn">
-            <p>ANN</p>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Annoucements</title>
+            </Helmet>
         </div>
     )
 }
