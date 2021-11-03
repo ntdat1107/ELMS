@@ -154,10 +154,10 @@
     text-decoration: underline;
 }
 
-#insdb  .title {
+#insdb  .container .title {
     font-size: 1.4em;
     font-weight: 300;
-  }
+}
 
 #insdb  .bar-group {
     text-align: center;

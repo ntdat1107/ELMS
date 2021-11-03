@@ -4,7 +4,7 @@ import About from "./About";
 import DbCalendar from "../../componentJS/DbCalendar";
 import Statistic from "./Statistic";
 import MyCourse from "./MyCourse";
-import BarChart from "./Chart";
+import BarChart from "./ChartInstructor";
 
 function InsDashboardUI () {
     return (

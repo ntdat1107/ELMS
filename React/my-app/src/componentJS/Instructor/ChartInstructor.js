@@ -1,6 +1,6 @@
 import React from "react"
 function BarGroup(props) {
-    let height = props.d.value*10*2 
+    let height = props.d.value*10*4
     let xMid =  props.i * 40 + 50
     let yMid = -props.d.value*10*2
     return <g className="bar-group">
@@ -35,18 +35,18 @@ render() {
         }
     } )                         
     return <svg width="350px" height="350px">
-        <g className="colValue" transform="translate(10, 60)">
+        <g className="colValue" transform="translate(10, 0)">
             <text x={4} y={45+14} alignmentBaseline="middle">7</text> 
-            <text x={4} y={75+14} alignmentBaseline="middle">6</text> 
-            <text x={4} y={105+14} alignmentBaseline="middle">5</text> 
-            <text x={4} y={135+14} alignmentBaseline="middle">4</text> 
-            <text x={4} y={165+14} alignmentBaseline="middle">3</text> 
-            <text x={4} y={195+14} alignmentBaseline="middle">2</text> 
-            <text x={4} y={225+14} alignmentBaseline="middle">1</text> 
+            <text x={4} y={85+14} alignmentBaseline="middle">6</text> 
+            <text x={4} y={125+14} alignmentBaseline="middle">5</text> 
+            <text x={4} y={165+14} alignmentBaseline="middle">4</text> 
+            <text x={4} y={205+14} alignmentBaseline="middle">3</text> 
+            <text x={4} y={245+14} alignmentBaseline="middle">2</text> 
+            <text x={4} y={285+14} alignmentBaseline="middle">1</text> 
         </g>
         <g className="container">
             <text className="title" x="40" y="30">Weekly Spent Hours</text>
-            <g className="chart" transform="translate(0, 325)">
+            <g className="chart" transform="translate(0, 200)">
                 {barGroups}
             </g>
         </g>
