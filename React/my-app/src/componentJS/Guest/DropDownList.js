@@ -93,7 +93,7 @@ function DropdownBar() {
   return(
       <div id = "DropdownBar">
         <div className="Dropdowns">
-            <Dropdown
+            <Dropdown id="dropdown"
               name="Level"
               title="Level"
               list={level}

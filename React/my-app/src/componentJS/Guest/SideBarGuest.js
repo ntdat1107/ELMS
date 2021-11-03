@@ -1,5 +1,8 @@
 import React from "react";
 import "./CSS/SideBar.css"
+import cReact  from "./imgs/courseReactJS.png"
+import cJS  from "./imgs/courseJS.png"
+import cPython   from "./imgs/coursePython.png"
 
 const CourseItem = course => (
     <li id = "courseItemSB" >
@@ -44,13 +47,13 @@ const courses = {
         "id": 1,
         "title": "Django Full Course",
         "subtitle": "Lana del Rey",
-        "imgSrc": "https://newsmd1fr.keeng.net/tiin/archive/images/20210902/144811_184826_streamer_2.jpg"
+        "imgSrc": cPython
     },
     {
         "id": 2,
         "title": "React Full Course",
         "subtitle": "Adele",
-        "imgSrc": "https://newsmd1fr.keeng.net/tiin/archive/images/20210902/144811_184826_streamer_2.jpg"
+        "imgSrc": cReact
     }
 ]}
 

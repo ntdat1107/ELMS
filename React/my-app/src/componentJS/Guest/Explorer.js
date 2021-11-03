@@ -1,6 +1,27 @@
 import React from "react";
 import './CSS/Explorer.css'
+
+//course img:
+import cAngular  from "./imgs/Doja.jpg"
+import cPython   from "./imgs/coursePython.png"
+import cUIUX  from "./imgs/courseUIUX.png"
+import cReact  from "./imgs/courseReactJS.png"
+import cJS  from "./imgs/courseJS.png"
+import cCpp  from "./imgs/courseCpp.png"
+
+
+
+
+
+//instructor img:
+import doja from "./imgs/Doja.jpg"
+import hannah from "./imgs/Hannah.jpg"
 import dolores from "./imgs/Dolores.jpg"
+import lupin from "./imgs/Lupin.jpg"
+
+
+
+// icon:
 import student from "./imgs/icon-1-students.png"
 import teacher from "./imgs/icons8_teacher.png"
 import bigimg from "./imgs/instructors.png" 
@@ -51,36 +72,37 @@ function UpperBody() {
 
 const courses = {
     "name": "Popular Courses",
+    "displayButton": true,
     "list": [
     {
         "id": 1,
         "title": "C++",
         "subtitle": "50+ courses",
-        "imgSrc": "https://khaind.github.io/img/cpp_icon.png"
+        "imgSrc": cCpp
     },
     {
         "id": 2,
         "title": "Python",
         "subtitle": "20+ courses",
-        "imgSrc": "https://cdn.transang.me/2019/01/1200px-Python.svg.png"
+        "imgSrc": cPython
     },
     {
         "id": 3,
         "title": "UI/UX design",
         "subtitle": "10+ courses",
-        "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzDaoVmJ9_4YtpEiMuwjkikX_axFDGpIlf2dlpEbimqOpWe8RZo38eVdsxR2-NxrQjydw&usqp=CAU"
+        "imgSrc": cUIUX
     },
     {
         "id": 4,
         "title": "React",
         "subtitle": "10+ courses",
-        "imgSrc": "https://khanh.website/wp-content/uploads/2020/01/kisspng-react-javascript-angularjs-ionic-atom-5b154be6947457.3471941815281223426081.png"
+        "imgSrc": cReact
     } 
 ]}
 
 const courses2 = {
     "name": "Best Instructors",
-    "displayButton": "false",
+    "displayButton": true,
     "list": [
     {
         "id": 1,
@@ -92,19 +114,19 @@ const courses2 = {
         "id": 2,
         "title": "Hannah OwO",
         "subtitle": "5 courses",
-        "imgSrc": "https://newsmd1fr.keeng.net/tiin/archive/images/20210902/144811_184826_streamer_2.jpg"
+        "imgSrc": hannah
     },
     {
         "id": 3,
         "title": "Doja Cat",
         "subtitle": "9 courses",
-        "imgSrc": "https://media.gq-magazine.co.uk/photos/5eaab3bfb7ebbc00082c8369/1:1/w_1080,h_1080,c_limit/20200430-Doja-Cat.jpg"
+        "imgSrc": doja
     },
     {
         "id": 4,
         "title": "Remus Lupin",
         "subtitle": "7 courses",
-        "imgSrc": "https://media1.popsugar-assets.com/files/thumbor/ILPA8_TcMt1ErD7DFQzlU-IURNs/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2016/05/02/726/n/1922283/8ef8b733_edit_img_image_17053399_1462205116/i/JK-Rowling-Tweets-Apology-Killing-Remus-Lupin.png"
+        "imgSrc": lupin
     }
 ]}
 
@@ -125,7 +147,7 @@ const CourseItem = course => (
             <h3>{course.title}</h3>
             <h3>{course.subtitle}</h3>
         </div>
-        <button id = "viewButton"><h3>view</h3></button>
+        {course.displayButton && <button id = "viewButton"><h3>view</h3></button>}
     </li>
 )
 
@@ -147,6 +169,7 @@ function CourseBoard({courses}) {
                         title = {course.title}
                         imgSrc = {course.imgSrc}   
                         subtitle = {course.subtitle}
+                        displayButton = {courses.displayButton}
                     />
                 ))}
             </ul>
