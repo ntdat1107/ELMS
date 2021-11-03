@@ -79,8 +79,11 @@ function ProfileCpn({
                     </div>
                 </div>
                 <div id="row-6">
-                    <button className={change? "btn-save active" : "btn-save"} onClick={saved} >
+                    <button id="save-btn" className={change? "btn-save active" : "btn-save"} onClick={saved} >
                         Save
+                    </button>
+                    <button id="cancel-btn" className={change? "btn-save active" : "btn-save"} onClick={saved} >
+                        Cancel
                     </button>
                 </div>
             </div>
