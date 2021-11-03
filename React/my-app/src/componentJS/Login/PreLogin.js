@@ -15,38 +15,34 @@ function PreLogin() {
         height: "450px",
         marginRight: "10%"
     };
-    const Frame = {
-        border: "solid #FC6B57"
-    };
-
 
     return (
         <div id = "r"> 
             <div id = "container">
             <div style= {styleComponentLeft}>
-                <div class = "user-container">
+                <div className = "user-container">
                     <div id = "Admin"> </div> 
-                    <div class = "Frame" style={Frame}>
-                        <div class="text">Admin</div>
+                    <div className = "Frame" style={{border: "solid #F6BC00"}} onClick = {function() {console.log("Admin")}}>
+                        <div className="text">Admin</div>
                     </div>
                     
                 </div>
             </div>
             
             <div style= {styleComponent}>
-                <div class = "user-container">
+                <div className = "user-container">
                     <div id = "Instructor"> </div>
-                    <div class = "Frame" style={Frame}>
-                        <div class="text">Instructor</div>
+                    <div className = "Frame" style={{border: "solid #FC6B57"}} onClick = {function() {console.log("Instructor")}}>
+                        <div className="text">Instructor</div>
                     </div>
                 </div>
             </div>
 
             <div style= {styleComponentRight}>
-                <div class = "user-container">
+                <div className = "user-container">
                     <div id = "Learner"> </div>
-                    <div class = "Frame" style={Frame}>
-                        <div class="text">Learner</div>
+                    <div className = "Frame" style={{border: "solid #58BAAB"}} onClick = {function() {console.log("Leanrner")}}>
+                        <div className="text">Learner</div>
                     </div>
                 </div>
             </div>
