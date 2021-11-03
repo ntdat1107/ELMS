@@ -53,22 +53,82 @@ body {
   border-bottom-right-radius: 20px;
   text-align: center;
   margin: auto;
+  align-items: center;
 
 }
 .form {
-  width: 400px;
-  height: 500px;
-  background-color: #e2e2e5;
+  width: 50%;
+  height: 70%;
+  display: inline-block;
   position: relative;
-  margin: auto;
+  margin-top: 20px;
+  align-items: center;
+  color: #474A59;
 }
 
-.toggle-btn {
+.btn-box {
+  display: block;
+  margin-top: 20px;
+}
+
+.toggle-btn1 {
+  
   padding: 10px 30px;
   cursor: pointer;
-  background: transparent;
-  border: solid #474A59;
-  border-radius: 15px;
+  background: #FC6B57;
+  border: solid #FC6B57;
+  border-radius: 10px;
   outline: none;
   position: relative;
+  margin-right: 60px;
+  color: white;
+  font-weight: bold;
+  font-family: Courier, monospace;
+}
+.toggle-btn2 {
+  
+  padding: 10px 30px;
+  cursor: pointer;
+  background: white;
+  border: solid #FC6B57;
+  border-radius: 10px;
+  outline: none;
+  position: relative;
+  color: #FC6B57;
+  font-weight: bold;
+  font-family: Courier, monospace;
+}
+#welcome {
+  padding-top: 150px;
+  font-size: 40px;
+  color: white;
+
+}
+.inp {
+  display: block;
+  background-color: white;
+  color: #474A59;
+  border:1px solid #474A59;
+  padding: 10px 20px;
+  outline: none;
+  font-size: 16px;
+  color: #474A59;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.remember{
+  padding: 20px;
+  justify-content:space-between;
+  font-size: 14px;
+}
+
+#checkbox {
+  padding-right: 20px;
+}
+.impBx {
+  border: none;
+  padding: 10px;
+  outline: none;
 }
