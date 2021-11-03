@@ -1,0 +1,59 @@
+#container {
+    margin: auto;
+    align-items: center;
+    width: 90vw;
+    height: 90vh;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+#user-container {
+    width: 320px;
+    height: 450px;
+    margin: auto;
+    vertical-align: middle;
+    align-items: center;
+}
+
+#Admin {
+    width: 320px;
+    height: 320px;
+    background-image: url("Group195.png");
+    background-size: 100%;;
+    background-repeat: no-repeat;
+    
+}
+
+#Instructor {
+    width: 320px;
+    height: 320px;
+    background-image: url("Group196.png");
+    background-size: 100%;;
+    background-repeat: no-repeat;
+}
+
+#Learner {
+    width: 320px;
+    height: 320px;
+    background-image: url("Group194.png");
+    background-size: contain;;
+    background-repeat: no-repeat;
+}
+.Frame {
+    width:  100%;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.text {
+    font-size: 24px;
+    font-weight: bold;
+
+}
