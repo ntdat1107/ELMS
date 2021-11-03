@@ -93,8 +93,13 @@
     text-align: center;
     margin-left: 10px;
 }
-#lnDashboard #rateContent #p2 p {
-    margin-top: 5px;
+#lnDashboard #rateContent #p2 {
+    color: rgba(255,217,2,0.7);
+    height: 30px;
+    width: 30px;
+    font-size: 14px;
+    text-align: center;
+    margin-left: 10px;
 }
 #lnDashboard #rateContent #p3 {
     margin-left: 10px;

@@ -14,10 +14,6 @@ const CourseItem = course => (
 
     </li>
 )
-
-
-
-
 function CourseBoard({courses}) {
     return (
         <div id = "courseBoardSB" >
@@ -38,7 +34,6 @@ function CourseBoard({courses}) {
         </div>
     )
 }
-
 
 const courses = {
     "name": "Popular Courses",
@@ -67,4 +62,5 @@ function SideBarGuest() {
     )
 }
 
+export {CourseBoard};
 export default SideBarGuest;

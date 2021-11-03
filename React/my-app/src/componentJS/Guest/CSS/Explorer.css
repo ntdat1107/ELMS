@@ -25,12 +25,13 @@
     background-color: #fafafa;
 }
 
-#courseBoard #boardHeader {
+#courseBoard #boardHeader{
     display: flex;
     margin-left: px;
     color: lightslategray;
     height: 60px;
     border-bottom: 2px solid #bbbbbb;
+    cursor:pointer;
 }
 
 #courseBoard #boardHeader button {
@@ -47,6 +48,7 @@
     background-color: #FAFAFA;
     font-weight: 600;
     text-align: center;
+    cursor: pointer;
 }
 
 #courseBoard #boardHeader button :hover {
@@ -64,6 +66,7 @@
     width: 395px;
     list-style: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
 }
 
 #courseItem li {
