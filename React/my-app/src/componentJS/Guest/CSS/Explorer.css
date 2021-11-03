@@ -8,7 +8,7 @@
 }
 
 #courseBoard {
-    border: 1px solid black;
+    border: 1px solid #bbbbbb;
     border-width: 2;
     padding: 10px;
     margin-top: 10px;
@@ -22,6 +22,7 @@
     display: flex;
     width: 300px;
     margin-left: 15px;
+    background-color: #fafafa;
 }
 
 #courseBoard #boardHeader {
@@ -29,25 +30,26 @@
     margin-left: px;
     color: lightslategray;
     height: 60px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #bbbbbb;
 }
 
 #courseBoard #boardHeader button {
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-left: 10px;
+    padding-left: 11px;
     padding-right: 10px;
     display: flex;
     margin-top: 10px;
     margin-bottom: 15px;
     width: 75px;    
     border-radius: 20px;
-    background-color: yellowgreen;
+    
+    background-color: #FAFAFA;
     font-weight: 600;
+    text-align: center;
 }
 
 #courseItem {
-    border: 1px solid black;
     padding: auto;
     display: flex;
     height: 120px;
@@ -56,6 +58,7 @@
     border-radius: 20px;
     width: 395px;
     list-style: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #courseItem li {
@@ -77,17 +80,26 @@
     height: 30px;   
 
 }
-#courseItem #viewButton {
+/* #courseItem #viewButton {
     margin-top: 65px;
     display: block;
     height: 30px;
     width: 60px;
     border-radius: 30px;
     background-color:rgb(181, 91, 91);
-}
+} */
 
-#courseItem #viewButton #button{
-    font-weight: 700;
+#courseItem #viewButton {
+    margin-top: 65px;
+    display: block;
+    height: 30px;
+    width: 60px;
+    border-radius: 30px;
+    background-color: #FC6858;
+
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 
@@ -132,7 +144,6 @@
 
 #mainBody #upperBody #big-title-img img {
     display: inline-block;
-    width: 150px;
     height: 150px;
 }
 

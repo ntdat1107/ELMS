@@ -4,6 +4,7 @@
     margin-left: 0px;
     z-index: 0;
     width: 350px;
+    color: #160E4D;
 }
 
 #courseBoardSB {
@@ -12,13 +13,14 @@
     margin-top: 10px;
     width: 320px;
     margin-left: 10px;
-    background-color: wheat;
+    background-color:#FAFAFA;
+    border: 1px solid #BBBBBB;
     box-shadow: 0px 30px 20px -10px rgba(0, 0, 0, 0.1);
 }
 
 #courseBoardSB h1 {
     margin-left: 20px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #bbbbbb;
     display: flex;
     width: 310px;
     
@@ -38,12 +40,13 @@
 
 #courseItemSB{
     width: 300px;
-    border: 1px solid gray;
+    border: 1px solid #bbbbbb;
     display: flex;
     height: 100px;
     border-radius: 20px;
     margin-bottom: 5px;
-    background-color: honeydew;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #courseItemSB img {

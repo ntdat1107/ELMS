@@ -1,0 +1,105 @@
+#coursesCFY {
+    background-color: rgba(88, 186, 171, 0.5);
+    display: inline-block;
+    margin-top: 10px;
+    width: 1100px;
+    height: 520px;
+    border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px 0px 0 0;
+    border-style: solid;
+    border-color: #c4c4c4;
+    border-width: 2px;
+}
+#titleCFY {
+    display: none;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 2px;
+}
+#listCoursesCFY {
+    background-color:white;
+    width: 710x;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 510px;
+}
+
+ #rateContent {
+    display: flex;
+    margin-top: 5px;
+}
+ #rateContent #p1 {
+    width: 90px;
+    height: 30px;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+ #rateContent #p1 p {
+    margin-top: 5px;
+}
+ #rateContent #p2 {
+    color: rgba(255,217,2,0.7);
+    height: 30px;
+    width: 30px;
+    font-size: 14px;
+    text-align: center;
+    margin-left: 10px;
+}
+ #rateContent #p2 p {
+    margin-top: 5px;
+}
+ #rateContent #p3 {
+    margin-left: 10px;
+}
+ #rateContent #p4 {
+    color: rgba(196,196,196,1);
+    height: 30px;
+    width: 60px;
+    font-size: 14px;
+    text-align: center;
+    margin-left: 10px;
+}
+ #rateContent #p4 p {
+    margin-top: 5px;
+}
+/* -----------CourseContent---------- */
+ #courseContent #Name{
+    font-weight: bold;
+    font-size: 14px;
+}
+ #courseContent #Desc{
+    font-size: 14px;
+}
+ #courseContent #Author{
+    color: rgba(196,196,196,1);
+    font-size: 14px;
+}
+/* ----------courseCFY--------- */
+ #courseCFY {
+    display: flex;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+ #courseContent {
+    padding-left: 10px;
+}
+
+/* --------- drop down ---------- */
+
+
+/* ======= search main page ==========*/
+#searchResultWrapper {
+    margin-left: 380px;
+    margin-top: 130px;
+}
+
+
+
+
+
