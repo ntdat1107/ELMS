@@ -3,18 +3,20 @@ import './CSS/InsDashboard.css'
 import About from "./About";
 import DbCalendar from "../../componentJS/DbCalendar";
 import Statistic from "./Statistic";
-import TimePerDay from "./TimePerDay";
 import MyCourse from "./MyCourse";
+import BarChart from "./Chart";
 
 function InsDashboardUI () {
     return (
         <div id="insdb">
-            <div id="row1">
+            <div id="col1">
                 <About />
                 <Statistic learnerCount="500" videoCount="20" courseCount="6"/>
-                <TimePerDay />
+                <div id="WSH">
+                    <BarChart />
+                </div>
             </div>
-            <div id="row2">
+            <div id="col2">
                 <DbCalendar />
                 <MyCourse />
             </div>
