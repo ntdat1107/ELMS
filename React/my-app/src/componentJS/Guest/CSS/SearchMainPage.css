@@ -99,6 +99,48 @@
     margin-top: 130px;
 }
 
+#floatBar {
+    margin-left: 570px;
+    margin-top: 610px;
+    z-index: 12;
+    display: flex;
+    height: 100px;
+    width: 700px;
+    background-color:#04EB93;
+    border-radius: 20px;
+    position: fixed;
+}
+
+#floatBar h1 {
+    margin-left: 20px;
+    margin-top: 30px;
+    height: 40px;
+    width: 500px;
+    padding: auto;
+    color: #fafafa;
+
+}
+
+
+
+#floatBar button{
+    margin-left: 40px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    padding-top: 14px;
+    padding-bottom: 15px;
+    width: 120px;
+    height: 50px;
+    background-color: #fafafa;
+    border-radius: 20px;
+    border: none
+
+}
+#floatBar button h2{
+    height: 20px;
+    color: #04EB93;
+
+}
 
 
 

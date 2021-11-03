@@ -24,38 +24,22 @@ function TagBar() {
 
 function FloatBar() {
     return (
-        <div></div>
-    )
-}
-
-function SearchResultView() {
-    return (
-        <div>
-            <CourseForYou/>
+        <div id = "floatBar">
+            <div>
+                <h1>
+                    Learn effectively, learn with us
+                </h1>
+            </div>
+            <button>
+                <h2>
+                    Join now
+                </h2>
+            </button>
         </div>
     )
 }
 
-let courses = [
-    {
-        "imgSrcCourse":"",
-        "altCourse" : "",
-        "Name" : "C++ from Beginners to Object Oriented Data Structure",
-        "Desc" : "Jump start your C++ Programming Skills through Practical Projects with Basics to Linked Lists , Trees , Pointers, Header",
-        "Author" : "Albus Dumbledore",
-        "Type" : "New",
-        "rateScore" : "4.5",
-        "imgStar" : {star},
-        "totalRate" : "(1,035)"
-    }
-]
 
-function SearchResult(coursesList) {
-    return (
-        <div>
-        </div>
-    )
-}
 
 export {FloatBar};
 export default SearchMainPage;
