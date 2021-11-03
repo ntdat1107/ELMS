@@ -137,3 +137,65 @@
 #lnDashboard {
     display: flex;
 }
+/* Chart */
+#lnDashboard  .title {
+    font-size: 1.4em;
+    font-weight: 300;
+  }
+
+#lnDashboard  .bar-group {
+    text-align: center;
+}
+#lnDashboard  .colValue {
+    font-size: 14px;
+    font-weight:bold;
+}
+
+#lnDashboard  .bar-group .value-label {
+    text-anchor: end;
+    font-Weight: 900;
+    font-size: 0.7em;
+  }
+
+#lnDashboard  .bar-group .name-label {
+    font-size: 14px;
+    fill: #000;
+    font-weight: bold;
+  }
+  
+#lnDashboard  .container .bar-group {
+    transition: opacity 0.3s;
+  }
+
+#lnDashboard  .container .title {
+    font-size: 28px;
+    font-weight: bold;
+    fill: #000;
+  }
+  
+  /* Fade bars when the chart is hovered */
+#lnDashboard  .container:hover .bar-group {
+    opacity: 0.3;
+  }
+  
+  /* But don't fade the hovered bar... */
+#lnDashboard  .container .bar-group:hover {
+    opacity: 1;
+  }
+  
+#lnDashboard .container .bar-group:hover .name-label {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+#lnDashboard  .container .bar-group:hover .value-label {
+    font-size: 10px;
+    fill: #fff;
+  }
+#lnDashboard #WSH{
+    background-color:#00816ede;
+    width: 350px;
+    height: 240px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
