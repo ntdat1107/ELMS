@@ -110,6 +110,7 @@ li {
 #SideBar button{
     display: flex;
     text-align: center;
+    background-color: #f4f4f4;
     cursor: pointer;
     border: none;
     box-sizing: border-box;
