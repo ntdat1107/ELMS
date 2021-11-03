@@ -1,4 +1,4 @@
-#lnMyCourses {
+#listMyCourses {
     background-image: url("../img/mc_bg.png");
     width: 1170px;
     height: 570px;
@@ -6,7 +6,7 @@
     margin-top: 140px;
     margin-left: 325px;
 }
-#lnMyCourses #listMyCourses .Dropdowns {
+ #listMyCourses .Dropdowns {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -19,25 +19,25 @@
             align-items: center;
     margin:10px;
 }
-#lnMyCourses #listMyCourses .Dropdowns h3:nth-of-type(2) {
+ #listMyCourses .Dropdowns h3:nth-of-type(2) {
     margin-top: 50px;
 }
-#lnMyCourses #listMyCourses .Dropdowns p {
+ #listMyCourses .Dropdowns p {
     margin-bottom: 50px;
     font-size: 2.4rem;
 }
-#lnMyCourses #listMyCourses .wrapper {
+ #listMyCourses .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 460px;
+    width: 300px;
 }
 
-#lnMyCourses #listMyCourses #DropdownBar {
+ #listMyCourses #DropdownBar {
     display: flex;
     margin-top: 140px;
-    margin-left: 325px;
+    margin-left: 10px;
 }
