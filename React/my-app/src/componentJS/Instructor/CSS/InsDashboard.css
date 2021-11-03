@@ -153,3 +153,64 @@
     cursor: pointer;
     text-decoration: underline;
 }
+
+#insdb  .container .title {
+    font-size: 1.4em;
+    font-weight: 300;
+}
+
+#insdb  .bar-group {
+    text-align: center;
+}
+#insdb  .colValue {
+    font-size: 14px;
+    font-weight:bold;
+}
+
+#insdb  .bar-group .value-label {
+    text-anchor: end;
+    font-Weight: 900;
+    font-size: 0.7em;
+  }
+
+#insdb  .bar-group .name-label {
+    font-size: 14px;
+    fill: #000;
+    font-weight: bold;
+  }
+  
+#insdb  .container .bar-group {
+    transition: opacity 0.3s;
+  }
+
+#insdb  .container .title {
+    font-size: 28px;
+    font-weight: bold;
+    fill: #000;
+  }
+  
+  /* Fade bars when the chart is hovered */
+#insdb  .container:hover .bar-group {
+    opacity: 0.3;
+  }
+  
+  /* But don't fade the hovered bar... */
+#insdb  .container .bar-group:hover {
+    opacity: 1;
+  }
+  
+#insdb .container .bar-group:hover .name-label {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+#insdb  .container .bar-group:hover .value-label {
+    font-size: 10px;
+    fill: #fff;
+  }
+#insdb #WSH{
+    margin-left: 500px;
+    background-color:#00816ede;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
