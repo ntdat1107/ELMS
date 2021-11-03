@@ -1,3 +1,11 @@
+
+#r {
+    width: 100%;
+    height: 100%;
+    background-color: #58BAAB;
+
+}
+
 #container {
     margin: auto;
     align-items: center;
@@ -6,6 +14,7 @@
     background-color: white;
     border-radius: 15px;
     margin-top: 5vh;
+    margin-bottom: 5vh;
     display: flex;
     justify-content: space-between;
     
@@ -22,7 +31,7 @@
 #Admin {
     width: 320px;
     height: 320px;
-    background-image: url("Group195.png");
+    background-image: url("../../../img/Admin.png");
     background-size: 100%;;
     background-repeat: no-repeat;
     
@@ -31,7 +40,7 @@
 #Instructor {
     width: 320px;
     height: 320px;
-    background-image: url("Group196.png");
+    background-image: url("../../../img/Instructor.png");
     background-size: 100%;;
     background-repeat: no-repeat;
 }
@@ -39,7 +48,7 @@
 #Learner {
     width: 320px;
     height: 320px;
-    background-image: url("Group194.png");
+    background-image: url("../../../img/Leaner.png");
     background-size: contain;;
     background-repeat: no-repeat;
 }

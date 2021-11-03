@@ -1,34 +1,58 @@
+import './CSS/PreLogin.css'
+
 function PreLogin() {
+    const styleComponentLeft = {
+        width: "320",
+        height: "450px",
+        marginLeft: "10%"
+    };
+    const styleComponent = {
+        width: "320",
+        height: "450px",
+    };
+    const styleComponentRight = {
+        width: "320",
+        height: "450px",
+        marginRight: "10%"
+    };
+    const Frame = {
+        border: "solid #FC6B57"
+    };
+
+
     return (
-        <div id = "container">
-            <div style="width: 320px; height: 450px; margin-left: 10%;">
+        <div id = "r"> 
+            <div id = "container">
+            <div style= {styleComponentLeft}>
                 <div class = "user-container">
                     <div id = "Admin"> </div> 
-                    <div class = "Frame" style="border: solid #F6BC00;">
+                    <div class = "Frame" style={Frame}>
                         <div class="text">Admin</div>
                     </div>
                     
                 </div>
             </div>
             
-            <div style="width: 320px; height: 450px;">
+            <div style= {styleComponent}>
                 <div class = "user-container">
                     <div id = "Instructor"> </div>
-                    <div class = "Frame" style="border: solid #FC6B57;">
+                    <div class = "Frame" style={Frame}>
                         <div class="text">Instructor</div>
                     </div>
                 </div>
             </div>
 
-            <div style="width: 320px; height: 450px;margin-right: 10%;">
+            <div style= {styleComponentRight}>
                 <div class = "user-container">
                     <div id = "Learner"> </div>
-                    <div class = "Frame" style="border: solid #58BAAB;">
+                    <div class = "Frame" style={Frame}>
                         <div class="text">Learner</div>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
+        
         )
     }
 
