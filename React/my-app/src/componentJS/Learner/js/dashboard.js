@@ -3,7 +3,7 @@ import "../css/LnDashboard.css"
 import About from "../js/about";
 import CourseForYou from "../js/courseForYou";
 import Calender             from "../../DbCalendar"
-import Chart from "./char"
+import Chart from "./chart"
 function LnDashboard() {
     return (
         <div id="lnDashboard">

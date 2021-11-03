@@ -64,28 +64,28 @@
 #tableinstruc div p {
     width: 200px;
     padding: 14px;
-    border-bottom: 1px solid black;
+    
 }
 
 #moreInfo {
     width: 200px;
     padding-top: 17px;
-    border-bottom: 1px solid black;
+    
 }
 #disqualify {
     width: 200px;
     padding-top: 10px;
-    border-bottom: 1px solid black;
+    
 }
 #delete {
     width: 200px;
     padding-top: 10px;
-    border-bottom: 1px solid black;
+    
 }
 #grantpms {
     width: 200px;
     padding-top: 10px;
-    border-bottom: 1px solid black;
+    
 }
 
 #moreIcon {
@@ -99,5 +99,38 @@
 }
 #grantIcon {
     cursor: pointer;
+}
+
+/*______________________________________________________*/
+.paginationBttns {
+  width: 100%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.paginationBttns a {
+  padding: 0px 3px 0px 3px;
+  margin-top: 20px;
+  margin: 2px;
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
+}
+
+.paginationBttns a:hover {
+  color: white;
+  background-color: #98C3BB;
+}
+
+.paginationActive a {
+  color: white;
+  background-color: #98C3BB;
+}
+
+.paginationDisabled a {
+  color: white;
+  background-color: #98C3BB;
 }
 
