@@ -2,11 +2,11 @@ import React from "react";
 import './CSS/Explorer.css'
 
 //course img:
-import cAngular  from "./imgs/Doja.jpg"
 import cPython   from "./imgs/coursePython.png"
 import cUIUX  from "./imgs/courseUIUX.png"
 import cReact  from "./imgs/courseReactJS.png"
-import cJS  from "./imgs/courseJS.png"
+// import cJS  from "./imgs/courseJS.png"
+// import cAngular  from "./imgs/Doja.jpg"
 import cCpp  from "./imgs/courseCpp.png"
 
 

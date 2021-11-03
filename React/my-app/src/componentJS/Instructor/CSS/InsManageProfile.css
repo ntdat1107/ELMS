@@ -1,11 +1,11 @@
 #insMP {
-    margin-top: 150px;
+    display: flex;
+    margin-top: 125px;
     margin-left: 300px;
     box-sizing: border-box;
     width: 1200px;
-    height: 550px;
+    height: 580px;
     background-color: #EFFAF8;
-    border: 1px solid #000000;
     border-radius: 20px;
 }
 
@@ -45,3 +45,91 @@
 
 
 /* ------Text input------ */
+#insMP #col1 {
+    margin-left: 50px;
+}
+#insMP #col2 {
+    margin-top: 10px;
+    margin-left: 100px;
+}
+#insMP #row-1, #insMP #row-2, #insMP #row-4{
+    display: flex;
+}
+#insMP #row-2, #insMP #row-3, #insMP #row-4, #insMP #row-5 {
+    margin-top: 20px;
+}
+#insMP #col2 .label-pf {
+    display: block;
+    position: relative;
+    margin-left: 5px;
+    font-size: 26px;
+}
+#insMP .input-tag-pf {
+    display: block;
+    border-radius: 15px;
+    border: 1px solid;
+    height: 40px;
+    font-size: 24px;
+    padding-left: 10px;
+}
+
+
+#insMP #input-email {
+    width: 400px;
+}
+#insMP #input-lastname {
+    width: 200px;
+}
+#insMP #col2 #f-name {
+    margin-left: 50px;
+}
+#insMP #input-fname {
+    width: 200px;
+}
+#insMP #col2 #sex {
+    margin-left: 75px;
+}
+#insMP #input-sex {
+    width: 100px;
+}
+#insMP #input-email {
+    width: 450px;
+}
+#insMP #col2 #b-day {
+    margin-left: 75px;
+}
+#insMP #input-birthday {
+    width: 215px;
+}
+#insMP #input-number, #insMP #input-city {
+    width: 300px;
+}
+#insMP #col2 #country {
+    margin-left: 75px;
+}
+#insMP #input-des {
+    width: 600px;
+    height: 75px;
+}
+#insMP #row-6 {
+    margin-top: 25px;
+    margin-left: 300px;
+}
+#insMP #row-6 button {
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    -webkit-border-radius: 20px;
+    border-radius: 25px;
+    background-color: #44bebe;
+    color: #f4f4f4;
+}
+
+#insMP #row-6 .btn-save {
+    display: none;
+}
+#insMP #row-6 .btn-save.active {
+    display: inline-block;
+}

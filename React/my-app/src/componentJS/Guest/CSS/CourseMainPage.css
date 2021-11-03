@@ -1,0 +1,194 @@
+#bodyPage {
+    margin-top: 120px;
+    margin-left:10px;
+}
+
+#courseMainPage {
+    display: flex;
+}
+
+
+#upperBody {
+    display: flex;
+    margin-left: 40px;
+    background-color: #263238;
+    width: 1420px;
+    height: 280px;
+    border-radius: 20px;
+}
+
+#uppderBody #imageBox #enrollButton {
+
+}
+
+
+#upperBody #informationBox {
+    margin-top: 20px;
+    margin-bottom: auto;
+    margin-left: 80px;
+    margin-right: 20px;
+    display: inline-block;
+    width: 890px;
+    cursor: context-menu;
+}
+
+#upperBody #informationBox p{
+    color: #fafafa;
+    margin: 10px;
+    cursor: context-menu;
+}
+
+#upperBody #informationBox h1{
+    color: #fafafa;
+    margin: 10px;
+    cursor: context-menu;
+}
+
+#upperBody #informationBox h2{
+    color: #fafafa;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#upperBody #informationBox #rate{
+    display: flex;
+    margin-left: 0px;
+    text-align: left;
+}
+
+
+#upperBody #informationBox #rate img{
+    margin-top: 12px;
+    margin-right: 10px;
+    padding: 0px;
+    height: 15px;
+}
+
+#upperBody #informationBox #rate #score {
+    color: rgba(255,217,2,0.7);
+    font-weight: 400;
+}
+
+#upperBody #informationBox #rate #numRate {
+    color: rgba(196,196,196,1);
+}
+#upperBody #imageBox {
+    margin-top: 10px;
+    margin-left: 40px;
+    display: inline-block;
+    padding: 10px;
+    background-color: #e87070;
+    position: relative;
+    height: 260px;
+    border-radius: 10px;
+}
+
+#upperBody #imageBox button {
+    margin-top: 10px;
+    margin-left:auto;
+    margin-right: auto;
+    display: block;
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #fafafa;
+    background-color: #fafafa;
+    cursor: pointer;
+}
+
+#upperBody #imageBox button :hover {
+
+    color: #e87070
+}
+
+#lowerBody {
+    margin-left: 40px;
+    margin-top: 10px;
+    display: flex;
+    cursor: context-menu;
+}
+
+#lowerBody #infoBox {
+    padding: 10px;
+    padding-left: 20px;
+    width: 960px;
+    height: 300px;
+    background-color: #c4c4c4;
+    margin-right: 20px;
+    border-radius: 20px;
+    padding-top: 20px;
+    overflow: hidden;
+    cursor: context-menu;
+}
+
+#lowerBody #courseBoard {
+    padding: 10px;
+    padding-top: 0px;
+    display: absolute;
+    height: 310px;
+    margin-top:0px;
+    margin-left:20px;
+    
+}
+
+#lowerBody #courseBoard #boardHeader {
+    height: 40px;
+}
+
+#lowerBody #courseBoard h3 {
+    width: auto;
+}
+
+#lowerBody #courseBoard #boardHeader h1 {
+    margin-right: auto;
+    margin-left: auto;
+    width: auto;
+    text-align: center;
+    
+}
+
+#lowerBody #courseBoard #boardHeader button {
+    display: none;
+}
+
+#lowerBody #contentItem {
+    margin-left:50px;
+    cursor: context-menu;
+}
+
+#lowerBody #contentItem h1{
+    margin-left:20px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    cursor: context-menu;
+}
+
+#lowerBody #contentItem li{
+    margin-left:30px;
+    margin-top: 5px;
+    margin-bottom: 5px ;
+    cursor: context-menu;
+}
+
+#backButton .button{
+    z-index: 10;
+    position: fixed;
+    width: 90px;
+    height: 60px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 30px;
+    border: none;
+    background-color: #04EB93;
+    cursor: pointer;
+}
+
+.button {
+    transition-duration: 0.4s;
+    background-color: #04EB93;
+    color: #263238;
+  }
+  
+.button:hover { /* Green */
+    color: white;
+}

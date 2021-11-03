@@ -44,7 +44,7 @@
   }
   
   .dd-wrapper{
-    width:150px
+    width:150px;
   }
 
   .Dropdowns h3:nth-of-type(2) {
@@ -54,7 +54,17 @@
     margin-bottom: 50px;
     font-size: 2.4rem;
   }
-
 #DropdownBar {
     display: flex;
+}
+
+.dd-wrapper .dd-list .dd-scroll-list .dd-list-item:hover{
+  background-color:#BBBBBB;
+  color:white
+}
+
+#listMyCourses .dd-wrapper .dd-list .dd-scroll-list {
+  overflow-y:hidden;
+  max-height:215px;
+  padding:15px 0
 }
