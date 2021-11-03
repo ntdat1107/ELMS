@@ -21,7 +21,7 @@ function Header({
         <Link to={link}>
           <img src={Logo} alt="AppLogo" id="Logo"></img>
         </Link>    
-        <SearchBar id="SearchBar" name="Search" searchType="Search for ..." />
+        <SearchBar id="SearchBar" name="Search" searchType="Search for anything" />
         <Information linkAvt={linkAvt} srcImg={srcImg} name={name} gmail={gmail} type={type} idName={idName}/>
       </div>
   )
