@@ -1,6 +1,5 @@
 import React from 'react';
 import { Dropdown } from 'reactjs-dropdown-component';
-import "./CSS/Dropdowns.css"
 
 const levels = {
   level: [
@@ -93,7 +92,7 @@ function DropdownBar() {
   return(
       <div id = "DropdownBar">
         <div className="Dropdowns">
-            <Dropdown id="dropdown"
+            <Dropdown
               name="Level"
               title="Level"
               list={level}

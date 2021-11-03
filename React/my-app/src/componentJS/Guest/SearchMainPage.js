@@ -3,8 +3,10 @@ import CourseForYou from "../Learner/js/courseForYou";
 import "../Learner/css/LnDashboard.css"
 import star from "../Learner/img/star.png"
 import "./CSS/SearchMainPage.css"
+
 import DropDownBar from "./DropDownList";
 import "./CSS/Dropdowns.css"
+
 function SearchMainPage() {
     return(
         <div id = "searchResultWrapper">

@@ -1,10 +1,10 @@
 import React from "react";
 import "../css/LnMyCourses.css"
-
+import ListMyCourses from './listMC'
 function LnMyCourses() {
     return (
         <div id="lnMyCourses">
-            <p>MyCourses Page.</p>
+            <ListMyCourses />
         </div>
     )
 }

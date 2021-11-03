@@ -1,7 +1,6 @@
 import './App.css';
-import InstructorUI from './componentJS/Instructor/InstructorUI';
 import LearnerUI from './componentJS/Learner/js/learnerUI';
-
+import InstructorUI from './componentJS/Instructor/InstructorUI';
 
 function App() {
   return (

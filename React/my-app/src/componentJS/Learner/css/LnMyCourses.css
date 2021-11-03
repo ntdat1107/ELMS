@@ -1,4 +1,43 @@
-#lnMyCourses p {
-    margin-top: 500px;
-    margin-left: 500px;
+#listMyCourses {
+    background-image: url("../img/mc_bg.png");
+    width: 1170px;
+    height: 570px;
+    background-size: cover;
+    margin-top: 140px;
+    margin-left: 325px;
+}
+ #listMyCourses .Dropdowns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin:10px;
+}
+ #listMyCourses .Dropdowns h3:nth-of-type(2) {
+    margin-top: 50px;
+}
+ #listMyCourses .Dropdowns p {
+    margin-bottom: 50px;
+    font-size: 2.4rem;
+}
+ #listMyCourses .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 300px;
+}
+
+ #listMyCourses #DropdownBar {
+    display: flex;
+    margin-top: 140px;
+    margin-left: 10px;
 }

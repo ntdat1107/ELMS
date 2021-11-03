@@ -1,9 +1,12 @@
 import React            from "react";
 import Header           from './HeaderGuest'
 import SideBarGuest     from "./SideBarGuest";
+
 import SearchMainPage   from "./SearchMainPage";
+
 import { FloatBar } from "./SearchMainPage";
 import './CSS/HomePage.css'
+
 import './CSS/Search.css'
 function SearchGuestUI() {
     return (
@@ -12,7 +15,6 @@ function SearchGuestUI() {
             <FloatBar/>
             <SideBarGuest/>
             <SearchMainPage/>
-
         </div>
     )
 }

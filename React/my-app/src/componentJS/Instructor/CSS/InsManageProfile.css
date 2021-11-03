@@ -1,4 +1,47 @@
-#insMP p {
-    margin-top: 500px;
-    margin-left: 500px;
+#insMP {
+    margin-top: 150px;
+    margin-left: 300px;
+    box-sizing: border-box;
+    width: 1200px;
+    height: 550px;
+    background-color: #EFFAF8;
+    border: 1px solid #000000;
+    border-radius: 20px;
 }
+
+#insMP .avatarChange #big-avt {
+    display: inline-block;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+}
+
+#insMP .avatarChange #container #change-avt {
+    transform: translate(25%, 25%);
+}
+
+#insMP .avatarChange #container {
+    cursor: pointer;
+    position: relative;
+    margin-top: -50px;
+    margin-left: 100px;
+    width: 45px;
+    height: 45px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    background-color: #C4C4C4;
+}
+#insMP .avatarChange {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+#insMP .avatarChange #nameUser {
+    position: relative;
+    font-size: 40px;
+    line-height: 60px;
+    margin-left: -40px;
+}
+
+
+/* ------Text input------ */
