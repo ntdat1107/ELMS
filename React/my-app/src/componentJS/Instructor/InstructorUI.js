@@ -1,5 +1,6 @@
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom"
 import Header from '../header';
+import './CSS/InstructorUI.css'
 import SideBarInstructor from '../sideBarInstructor';
 import InsDashboardUI from "./InsDashboardUI";
 import InsManagerCourse from "./InsManageCourse";
@@ -10,12 +11,11 @@ import cheems from "../../img/cheems.png"
 
 function InstructorUI() {
 return (
+<div className="insUI">
     <Router>
-        <div className="insUI">
         <SideBarInstructor/>
         <Header linkAvt="/ins/manageprofile" link="/ins/dashboard" srcImg={cheems} name="Ngọ Tiến Đạt" gmail="tiendat_2001vn@gmail.com" type="Instructor"
         idName="information"/>
-        </div>      
         <Switch>
             <Route exact path='/ins/manageprofile' component={InsManageProfile}></Route>            
             <Route exact path='/ins/dashboard' component={InsDashboardUI}></Route>
@@ -23,7 +23,8 @@ return (
             <Route exact path='/ins/announcement' component={InsAnnouncement}></Route>
         </Switch>
     </Router>
-    );
+</div>
+);
 }
 
 

@@ -1,8 +1,8 @@
 #insMC {
-    display: flex;
+    display: inline-block;
     margin-left: 300px;
     margin-top: 125px;
-    width: 100%;
+    width: 1225px;
     height: 80vh;
 }
 
@@ -11,7 +11,7 @@
     display: inline-block;
     margin-top: 10px;
     margin-left: 325px;
-    width: 740px;
+    width: 700px;
     height: 400px;
     border-radius: 20px 20px 0 0;
     -webkit-border-radius: 20px 20px 0 0;
@@ -75,7 +75,7 @@
 }
 /* -----------CourseContent---------- */
 #insMC #courseContent {
-    width: 75%;
+    width: 70%;
 }
 #insMC #courseContent #Name{
     display: inline-block;
