@@ -1,125 +1,129 @@
 import React from 'react';
 import { Dropdown } from 'reactjs-dropdown-component';
 
-const levels = {
-  level: [
+const choiceSBs = {
+  choiceSB: [
     {
-      label: 'Beginner',
-      value: 'beginner',
+      label: 'Recently Accessed',
+      value: 'recentlyAccessed',
     },
     {
-      label: 'Intermediate',
-      value: 'intermediate',
+      label: 'Recently Enrolled',
+      value: 'recentlyEnrolled',
     },
     {
-      label: 'Advanced',
-      value: 'advanced',
+      label: 'Title: A to Z',
+      value: 'aToZ',
     },
     {
-      label: 'All levels',
-      value: 'all-levels',
-    },
-  ]
-};
-
-const features = {
-  feature: [
-    {
-      label: 'Quiz',
-      value: 'quiz',
-    },
-    {
-      label: 'Interactions',
-      value: 'interactions',
-    },
-    {
-      label: 'Subtitled',
-      value: 'subtitled',
-    },
-    {
-      label: 'All features',
-      value: 'all-features',
+      label: 'Title: Z to A',
+      value: 'zToA',
     },
   ]
 };
 
-const ratings = {
-  rating: [
+const choiceFT1s = {
+  choiceFT1: [
     {
-      label: 'Best courses',
-      value: 'best-courses',
+      label: 'Favorites',
+      value: 'favorites',
     },
     {
-      label: '4* and above',
-      value: '4-above',
+      label: 'Archived',
+      value: 'archived',
     },
     {
-      label: '3* and above',
-      value: '3-above',
+      label: 'All Categories',
+      value: 'allCategories',
     },
     {
-      label: 'All ratings',
-      value: 'all-ratings',
+      label: 'Development',
+      value: 'devepolment',
+    },
+    {
+      label: 'Design',
+      value: 'design',
+    }
+  ]
+};
+
+const choiceFT2s = {
+  choiceFT2: [
+    {
+      label: 'Not Started',
+      value: 'notStarted',
+    },
+    {
+      label: 'In Progress',
+      value: 'inProgress',
     },
   ]
 };
 
-const sortBy = {
-  sort: [
+const choiceFT3s = {
+  choiceFT3: [
     {
-      label: 'Most relevant',
-      value: 'relevant',
+      label: 'Trần Hoàng Duy',
+      value: 'tranHoangDuy',
     },
     {
-      label: 'Most reviewed',
-      value: 'review',
+      label: 'Lâm Thành Dương',
+      value: 'lamThanhDuong',
     },
     {
-      label: 'Newest',
-      value: 'new',
+      label: 'Nguyễn Tấn Đạt',
+      value: 'nguyenTanDat',
+    },
+    {
+      label: 'Ngọ Tiến Đạt',
+      value: 'ngoTienDat',
+    },
+    {
+      label: 'Mai Đức Long',
+      value: 'maiDucLong',
     },
 
   ]
 };
 
 const onChange = (item, name) => {console.log(item, name)}
-const { level } = levels;
-const { feature} = features;
-const { sort } = sortBy;
-const { rating } = ratings;
+const { choiceSB } = choiceSBs;
+const { choiceFT1} = choiceFT1s;
+const { choiceFT2 } = choiceFT2s;
+const { choiceFT3 } = choiceFT3s;
 
 function DropdownBar() {
   return(
       <div id = "DropdownBar">
+          <div className="Dropdowns">
+              <Dropdown
+                name="SortBy"
+                title="Recently Accessed"
+                list={choiceSB}
+                onChange={onChange}
+              />        
+          </div>
         <div className="Dropdowns">
             <Dropdown
-              name="Level"
-              title="Level"
-              list={level}
+              name="Filter1"
+              title="Categories"
+              list={choiceFT1}
               onChange={onChange}
             />        
         </div>
         <div className="Dropdowns">
             <Dropdown
-              name="Ratings"
-              title="Ratings"
-              list={rating}
+              name="Filter2"
+              title="Progress"
+              list={choiceFT2}
               onChange={onChange}
             />        
         </div>
         <div className="Dropdowns">
             <Dropdown
-              name="Feature"
-              title="Feature"
-              list={feature}
-              onChange={onChange}
-            />        
-        </div>
-        <div className="Dropdowns">
-            <Dropdown
-              name="Sort by"
-              title="Sort by"
-              list={sort}
+              name="Filter3"
+              title="Instructor"
+              list={choiceFT3}
               onChange={onChange}
             />        
         </div>

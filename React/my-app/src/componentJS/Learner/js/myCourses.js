@@ -1,10 +1,9 @@
 import React from "react";
-import "../css/LnMyCourses.css"
-import ListMyCourses from './listMC'
+import MyCoursesCpn from './myCourseCpn'
 function LnMyCourses() {
     return (
         <div id="lnMyCourses">
-            <ListMyCourses />
+            <MyCoursesCpn />
         </div>
     )
 }
