@@ -89,7 +89,7 @@ function CourseMainPage() {
 
 function LowerBody() {
     return (
-        <div id = "lowerBody">
+        <div id = "lowerBody1">
             <div id = "infoBox">
                 <Scrollbars style={{ width: 940, height: 280 }} id = "contentList">
                     <div id = "contentItem">

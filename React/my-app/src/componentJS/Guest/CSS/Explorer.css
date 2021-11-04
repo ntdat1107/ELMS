@@ -1,7 +1,7 @@
 #mainBody {
     padding-left: 10px;
     margin-left: 350px;
-    margin-top: 130px;
+    margin-top: 120px;
     color: #fafafa;
     display: block;
 
@@ -34,7 +34,7 @@
     cursor:pointer;
 }
 
-#courseBoard #boardHeader button {
+#courseBoard #boardHeader p {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 11px;
@@ -51,9 +51,15 @@
     cursor: pointer;
 }
 
+#courseBoard #boardHeader button{
+    border: none;
+    background-color: #FFFFFF;
+}
+
 #courseBoard #boardHeader button :hover {
     background-color: #bbbbbb;
-    border: 1px solid #bbbbbb;
+    color:#160E4D;
+    border: 1px solid #160E4D;
 }
 
 #courseItem {
@@ -85,20 +91,16 @@
     width: 180px;
     margin-top: 12.5px;
     margin-bottom: 12.5px;
-    height: 30px;   
+    height: 30px;
+    color: #160E4D;
+    font-family: Roboto;
+    font-size: 20;
 
 }
-/* #courseItem #viewButton {
-    margin-top: 65px;
-    display: block;
-    height: 30px;
-    width: 60px;
-    border-radius: 30px;
-    background-color:rgb(181, 91, 91);
-} */
 
 #courseItem #viewButton {
-    margin-top: 65px;
+    margin-top: auto;
+    margin-bottom: auto;
     display: block;
     height: 30px;
     width: 60px;
@@ -108,8 +110,12 @@
     font-weight: 100;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    cursor: pointer;
 }
 
+#courseItem #viewButton :hover {
+    color: #fafafa;
+}
 
 #courseItem #information {
     margin-left: 10px;
@@ -127,6 +133,7 @@
 
 #mainBody #upperBody {
     display: flex;
+    margin-left:0px;
     background-color: #04EB93;
     width: 1150px;
     border-radius: 20px;
@@ -173,9 +180,4 @@
 #upperBody #small-titles-child{
     display: flex;
 
-}
-
-#courseBoard #scrollBar {
-    width: 420px;
-    height: 500px;
 }

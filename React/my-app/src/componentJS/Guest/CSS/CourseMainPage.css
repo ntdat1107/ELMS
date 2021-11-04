@@ -17,11 +17,6 @@
     border-radius: 20px;
 }
 
-#uppderBody #imageBox #enrollButton {
-
-}
-
-
 #upperBody #informationBox {
     margin-top: 20px;
     margin-bottom: auto;
@@ -101,14 +96,14 @@
     color: #e87070
 }
 
-#lowerBody {
+#lowerBody1 {
     margin-left: 40px;
     margin-top: 10px;
     display: flex;
     cursor: context-menu;
 }
 
-#lowerBody #infoBox {
+#lowerBody1 #infoBox {
     padding: 10px;
     padding-left: 20px;
     width: 960px;
@@ -121,7 +116,7 @@
     cursor: context-menu;
 }
 
-#lowerBody #courseBoard {
+#lowerBody1 #courseBoard {
     padding: 10px;
     padding-top: 0px;
     display: absolute;
@@ -131,15 +126,15 @@
     
 }
 
-#lowerBody #courseBoard #boardHeader {
+#lowerBody1 #courseBoard #boardHeader {
     height: 40px;
 }
 
-#lowerBody #courseBoard h3 {
+#lowerBody1 #courseBoard h3 {
     width: auto;
 }
 
-#lowerBody #courseBoard #boardHeader h1 {
+#lowerBody1 #courseBoard #boardHeader h1 {
     margin-right: auto;
     margin-left: auto;
     width: auto;
@@ -147,23 +142,23 @@
     
 }
 
-#lowerBody #courseBoard #boardHeader button {
+#lowerBody1 #courseBoard #boardHeader button {
     display: none;
 }
 
-#lowerBody #contentItem {
+#lowerBody1 #contentItem {
     margin-left:50px;
     cursor: context-menu;
 }
 
-#lowerBody #contentItem h1{
+#lowerBody1 #contentItem h1{
     margin-left:20px;
     margin-top:10px;
     margin-bottom: 10px;
     cursor: context-menu;
 }
 
-#lowerBody #contentItem li{
+#lowerBody1 #contentItem li{
     margin-left:30px;
     margin-top: 5px;
     margin-bottom: 5px ;
