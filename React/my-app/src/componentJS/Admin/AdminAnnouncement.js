@@ -1,12 +1,11 @@
 import React from "react";
+import ListAnnoun from "./listAnnoun";
 import "./CSS/AdminAnnouncement.css"
 
 function AdminAnnounce () {
     return (
         <div id="adminannounce">
-            <p>
-                Hello Chó!!
-            </p>
+            <ListAnnoun/>
         </div>
     )
 }

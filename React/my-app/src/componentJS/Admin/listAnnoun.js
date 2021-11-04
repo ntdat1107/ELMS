@@ -41,7 +41,7 @@ function ListAnnoun() {
                         <SearchBar searchImg={searchImg} name="SearchList" searchType="Search ..." />
                     </div>
                 
-                    <Scrollbars style={{ width: "100%", height: 630 }}>
+                    <Scrollbars style={{ width: "100%", height: 500 }}>
                     {users.map((user) => {            
                     return (  
                         <div id="sublistAnnoun">                                
@@ -57,13 +57,12 @@ function ListAnnoun() {
                     </Scrollbars>
                 </div>
 
-                <div>
+                <div id="content-block">
                 {users.map((user) => {            
                 return (
                     <div id={user.id} className={(click == user.stt)? "choose active" : "choose"}>
                         <p>From: MAI DUC LONG</p>
-                        <p>To: {user.receiver}</p>
-                        <p>{user.receiver}</p>
+                        <p>To: {user.receiver}</p>                        
                         <p>{user.subject}</p>
                         <p>{user.content}</p>
                         <p>{user.time}</p>

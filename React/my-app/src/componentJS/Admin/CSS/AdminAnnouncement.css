@@ -5,6 +5,9 @@
 #wholeblock {
     position: relative;
     display: flex;
+    margin-top: 150px;
+    margin-left: 280px;
+    width: 1220px;
 }
 
 #listAnnoun {
@@ -51,6 +54,11 @@
     right: 5px;
     top: 2px;
 }
+
+#content-block {
+    width: 775px;
+}
+
 
 .choose {
     display: none;
