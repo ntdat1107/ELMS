@@ -2,7 +2,7 @@
     background-color: #f4f4f4;
     position: fixed;
     align-items: center;
-    /* z-index: 999; */
+    z-index: 999;
     height: 120px;
     display: flex;
     width: 100%;
@@ -150,7 +150,7 @@
     background: white;
     left: 0;
     opacity: 1;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease;    
 }
 /* Notication */
 #Header .HasNoti #numOfNoti {
