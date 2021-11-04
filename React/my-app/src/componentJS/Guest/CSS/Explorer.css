@@ -2,7 +2,6 @@
     padding-left: 10px;
     margin-left: 350px;
     margin-top: 120px;
-    color: #fafafa;
     display: block;
 
 }
@@ -86,17 +85,19 @@
     margin: 10px;
     border-radius: 20px;    
 }
-#courseItem #information h3 {
+#courseItem #information h3{
     display: block;
     width: 180px;
     margin-top: 12.5px;
     margin-bottom: 12.5px;
     height: 30px;
     color: #160E4D;
-    font-family: Roboto;
-    font-size: 20;
-
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-weight: thin;
 }
+
 
 #courseItem #viewButton {
     margin-top: auto;
@@ -112,6 +113,11 @@
     text-align: center;
     cursor: pointer;
 }
+#courseItem #viewButton #navLink {
+    text-decoration: none;
+    color: #160E4D;
+}
+
 
 #courseItem #viewButton :hover {
     color: #fafafa;
@@ -138,6 +144,8 @@
     width: 1150px;
     border-radius: 20px;
     height: 200px;
+    cursor: pointer;
+    color: #fafafa;
 }
 
 #mainBody #small-titles {

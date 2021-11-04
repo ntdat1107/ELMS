@@ -1,0 +1,77 @@
+#cVideoView {
+    margin-top: 125px;
+    width: 1500px;
+    display: flex;
+}
+
+
+#cVideoView #mainPage #videoFrame {
+    height: 450px;
+    display: block;
+    background-color: beige;
+}
+
+#videoFrame {
+    position:absolute;
+    height: 450px;
+    display: block;
+    background-color: beige;
+    z-index: 10;
+    margin-left: 75px;
+}
+
+#cVideoView #mainPage {
+    margin-left: 20px;
+    display: block;
+    width: 1150px;
+    background-color: seashell;
+}
+
+#videoFrame.react-player {  
+    margin-left: 60px;
+    margin-right: auto;
+    
+}
+
+#cVideoView #lowBody {
+    margin-top: 460px;
+    width: 1150px;
+    height: 350px;
+    background-color: royalblue;
+    display: block;
+}
+
+#cVideoView #rightSB {
+    float: right;  
+    margin-left: 20px;
+    text-align: center;
+
+}
+
+#cVideoView #rightSB #sbheader{
+    text-align: center;
+}
+
+#cVideoView #rightSB .pro-sidebar-header{
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
+
+#cVideoView #lesson {
+    display: flex;
+}
+
+#cVideoView #lesson #lesson-information{
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+#cVideoView #lesson #play-button {
+    display: inline-block;
+    margin-right: 20px;
+}

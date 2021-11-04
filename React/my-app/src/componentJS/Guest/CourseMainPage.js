@@ -188,5 +188,5 @@ function BackButton() {
     )
 }
 
-
+export {BackButton};
 export default CourseMainPage;

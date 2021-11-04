@@ -1,5 +1,6 @@
 import React from "react";
 import './CSS/Explorer.css'
+import { NavLink } from "react-router-dom";
 
 //course img:
 import cPython   from "./imgs/coursePython.png"
@@ -78,25 +79,29 @@ const courses = {
         "id": 1,
         "title": "C++",
         "subtitle": "50+ courses",
-        "imgSrc": cCpp
+        "imgSrc": cCpp,
+        "link" : "%Cpp%all%course"
     },
-    {
+    {    
         "id": 2,
         "title": "Python",
         "subtitle": "20+ courses",
-        "imgSrc": cPython
+        "imgSrc": cPython,
+        "link" : "%Cpp%all%course"
     },
     {
         "id": 3,
         "title": "UI/UX design",
         "subtitle": "10+ courses",
-        "imgSrc": cUIUX
+        "imgSrc": cUIUX,
+        "link" : "%Cpp%all%course",
     },
     {
         "id": 4,
         "title": "React",
         "subtitle": "10+ courses",
-        "imgSrc": cReact
+        "imgSrc": cReact,
+        "link" : "%Cpp%all%course",
     } 
 ]}
 
@@ -108,25 +113,29 @@ const courses2 = {
         "id": 1,
         "title": "Dolores Umbridge",
         "subtitle": "12 courses",
-        "imgSrc": dolores
+        "imgSrc": dolores,
+        "link" : "%Cpp%all%course",
     },
     {
         "id": 2,
         "title": "Hannah OwO",
         "subtitle": "5 courses",
-        "imgSrc": hannah
+        "imgSrc": hannah,
+        "link" : "%Cpp%all%course",
     },
     {
         "id": 3,
         "title": "Doja Cat",
         "subtitle": "9 courses",
-        "imgSrc": doja
+        "imgSrc": doja,
+        "link" : "%Cpp%all%course",
     },
     {
         "id": 4,
         "title": "Remus Lupin",
         "subtitle": "7 courses",
-        "imgSrc": lupin
+        "imgSrc": lupin,
+        "link" : "%Cpp%all%course"
     }
 ]}
 
@@ -142,12 +151,20 @@ function LowerBody() {
 
 const CourseItem = course => (
     <li id = "courseItem">
+        
         <img src = {course.imgSrc} alt ={course.title}/>
         <div id = "information">
             <h3>{course.title}</h3>
             <h3>{course.subtitle}</h3>
         </div>
-        {course.displayButton && <button id = "viewButton"><h3>view</h3></button>}
+        {course.displayButton && <button id = "viewButton">
+                <NavLink activeClassName="ActiveLink" to = "/search" id = "navLink">
+                    <h3>
+                        view
+                    </h3>
+                </NavLink>
+        </button>}
+
     </li>
 )
 
