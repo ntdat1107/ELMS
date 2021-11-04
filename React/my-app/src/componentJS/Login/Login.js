@@ -17,7 +17,7 @@ function Login() {
                             </div>                       
                             <div class = "inp">
                                 <span>Password</span>
-                                <input class = "impBx" type="text"></input>
+                                <input class = "impBx" type="password"></input>
                             </div> 
                             <div class="remember">
                                 <label id = "checkbox"> <input type="checkbox"></input> Remember me</label>
