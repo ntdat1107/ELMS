@@ -8,7 +8,7 @@
     width: 100%;
 }
 
-.Signupcontainer {
+.Signuppage .Signupcontainer {
     display: flex;
     height: 80%;
     margin: 0 auto;
@@ -16,7 +16,7 @@
 
 }
 
-.Signupleft {
+.Signuppage .Signupleft {
     width: 50%;
     height: 100%;
     background-color: white;
@@ -31,7 +31,7 @@
 
 }
 
-.Signupright {
+.Signuppage .Signupright {
     background: #58BAAB;
     color: #FFFFFF;
     width: 50%;
@@ -45,7 +45,7 @@
 
 }
 
-.Signupform {
+.Signuppage .Signupform {
     width: 65%;
     height: 70%;
     display: inline-block;
@@ -55,12 +55,12 @@
     color: #474A59;
 }
 
-.Signupbtn-box {
+.Signuppage .Signupbtn-box {
     display: block;
     margin-top: 20px;
 }
 
-.Signuptoggle-btn1 {
+.Signuppage .Signuptoggle-btn1 {
 
     padding: 10px 30px;
     cursor: pointer;
@@ -75,14 +75,14 @@
 
 }
 
-#Signupwelcome {
+.Signuppage #Signupwelcome {
     padding-top: 150px;
     font-size: 40px;
     color: white;
 
 }
 
-.Signupinp {
+.Signuppage .Signupinp {
     display: block;
     background-color: white;
     color: #474A59;
@@ -96,18 +96,19 @@
     margin: 10px;
 }
 
-.Signupremember {
+.Signuppage .Signupremember {
     padding: 20px;
     justify-content: space-between;
     font-size: 14px;
 }
 
-#Signupcheckbox {
+.Signuppage #Signupcheckbox {
     padding-right: 80px;
 }
 
-.SignupimpBx {
+.Signuppage .SignupimpBx {
     border: none;
     padding: 10px;
     outline: none;
+    width: 60%;
 }
