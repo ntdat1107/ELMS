@@ -197,10 +197,18 @@
     font-size: 10px;
     fill: #fff;
   }
+#lnDashboard #calendar {
+    height: 300px;
+    width: 320px;
+}
 #lnDashboard #WSH{
     background-color:#00816ede;
     width: 350px;
     height: 240px;
     -webkit-border-radius: 20px;
     border-radius: 20px;
+    margin-top: 36px;
+    margin-right: 20px;
+
 }
+
