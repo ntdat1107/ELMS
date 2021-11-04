@@ -61,8 +61,8 @@
 /* INFORMATION USER */
 #information {
     position: relative;
-    margin-top: 15px;
-    margin-left: 30vw;
+    margin-top: 0px;
+    margin-left: 20px;
     margin-bottom: 0px;
     border-radius: 45px;
     -webkit-border-radius: 45px;
@@ -86,6 +86,28 @@
 #information #linkName {
     text-decoration: none;
 }
+/* Bell Message */
+#Header #bellMessage {
+    display: flex;
+}
+#Header #bellMessage #bell {
+    height: 50px;
+    width: 50px;
+    margin-left: 340px;
+}
+#Header #bellMessage #bell #bellImg {
+    margin: 5px;
+}
+#Header #bellMessage #message {
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+}
+#Header #bellMessage #message #messageImg {
+    margin: 7.5px;
+}
+
+
 
 
 
