@@ -5,7 +5,7 @@ import announce from "../img/announce.png"
 import dashboardImg from "../img/dashboard.png"
 import manageCourse from "../img/managerCourse.png"
 import instr from "../img/instr.png"
-import learner from "../img/learner.png"
+import learner from "../img/LearnerSideBar.png"
 import footer from "../img/footer.png"
 
 

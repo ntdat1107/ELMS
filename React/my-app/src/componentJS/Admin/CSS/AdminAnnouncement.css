@@ -1,29 +1,78 @@
-#SearchList {
-    padding-left: 20px;
-}
-
 #wholeblock {
     position: relative;
     display: flex;
     margin-top: 150px;
     margin-left: 280px;
     width: 1220px;
+    background-color: #58BAAB;
 }
 
+/*_____________SearchBar______________*/
+#SearchList {
+    margin-top: 4%;
+    margin-left: 2%;
+    padding-left: 20px;
+    width: 300px;
+}
+#searchAnnoun {
+    position: relative;
+}
+
+#inputAnnoun {
+    size: 32;
+    width: 260px;
+    height: 35px;
+    padding-left: 15px;
+    border-radius: 45px;
+    -webkit-border-radius: 45px;
+    border-color: 1px solid black;
+}
+
+#searchAnnounIcon {
+    position: absolute;
+    top: 6px;
+    right: 25px;
+    cursor: pointer;
+}
+/*_________________________________*/
+
+/*___________Left Block___________*/
+
 #listAnnoun {
+    width: 320px;
     text-align: center;
+    background-color: white;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+#listAnnoun #sublistAnnoun {
+    margin-top: 2%;
+    text-align: center;
+    
 }
 
 .Announcpn {
     background-color: white;
-    border: 1px solid black;
-    margin: 5px;
-    width: 270px;
+    border: 0px;
+    width: 280px;
     height: auto;
     text-align: left;
+    margin: 15px;
+    padding-left: 12px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px; 
+    line-height: 25px;
     position: relative;
     cursor: pointer;
-    display: inline-block;
+}
+
+.Announcpn:hover {
+    width: 290px;
+    box-shadow: 3px 3px 5px grey;
 }
 
 .Announcpn  p {
@@ -35,17 +84,17 @@
 }
 
 .Announcpn .receiver {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 18px;
     width: 190px;
 }
 .Announcpn .subject {
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 18px;
     width: 250px;
 }
 .Announcpn .content {
-    font-size: 12px;
+    font-size: 14px;
+    font-style: italic;
+    padding-left: 20px;
     width: 250px;
 }
 .Announcpn .time {
@@ -54,11 +103,51 @@
     right: 5px;
     top: 2px;
 }
+/*_______________________*/
 
+/*__________Right Block___________*/
 #content-block {
-    width: 775px;
+    width: 840px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
+#content-block #sender-receiver {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    line-height: 30px;
+}
+
+#content-block #inside-content-block {
+    background-color: white;
+    height: 470px;
+    margin: 20px 20px 20px 0px;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    position: relative;
+}
+
+#content-block #inside-content-block #subject-inside {
+    font-size: 30px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #898989;
+}
+
+#content-block #inside-content-block #content-inside {
+    font-size: 18px;
+    text-indent: 30px;
+    line-height: 32px;
+    padding: 15px;
+}
+
+#content-block #inside-content-block #time-inside {
+    position: absolute;
+    top: 30px;
+    right: 15px
+}
 
 .choose {
     display: none;
