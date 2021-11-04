@@ -133,13 +133,19 @@
     height: 50px;
     background-color: #fafafa;
     border-radius: 20px;
-    border: none
+    border: none;
+    cursor: pointer;
 
 }
 #floatBar button h2{
     height: 20px;
     color: #04EB93;
+    transition-duration: 0.4s;
 
+}
+
+#floatBar button :hover {
+    color: #FC6858; 
 }
 
 

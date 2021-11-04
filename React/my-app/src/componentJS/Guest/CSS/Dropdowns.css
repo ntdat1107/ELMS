@@ -4,31 +4,10 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     text-rendering: optimizeLegibility;
-  }
-  html {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 55%;
-  }
-  body {
-    font-size: 1.6rem;
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-    -webkit-tap-highlight-color: rgba(214, 83, 83, 0);
-  }
-  body.noFocus *:focus {
-    outline: none;
-  }
-  ul,
-  li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  p {
-    margin: 0;
-    padding: 0;
-  }
+    font-size: 50%;
+
+}
+  
   .Dropdowns {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -44,15 +23,21 @@
   }
   
   .dd-wrapper{
-    width:150px;
+    width:200px;
+    font-size: 16px;
   }
+
+.dd-scroll-list {
+    font-size: 14px;
+    font-weight: 300;
+}
 
   .Dropdowns h3:nth-of-type(2) {
     margin-top: 50px;
   }
   .Dropdowns p {
     margin-bottom: 50px;
-    font-size: 2.4rem;
+    /* font-size: 2.4rem; */
   }
 #DropdownBar {
     display: flex;
@@ -67,4 +52,13 @@
   overflow-y:hidden;
   max-height:215px;
   padding:15px 0
+}
+.dd-wrapper .dd-list .dd-scroll-list {
+  overflow-y: hidden;
+}
+
+
+.dd-wrapper .dd-list .dd-scroll-list .dd-list-item {
+  font-size: 16px;
+  line-height: 1.6rem;
 }

@@ -3,14 +3,19 @@ import "./CSS/SideBar.css"
 import cReact  from "./imgs/courseReactJS.png"
 import cJS  from "./imgs/courseJS.png"
 import cPython   from "./imgs/coursePython.png"
+import { NavLink } from "react-router-dom";
 
 const CourseItem = course => (
     <li id = "courseItemSB" >
-        <img src = {course.imgSrc} alt ={course.title}/>
-        <div id = "informationSB" >
-            <h3 >{course.title}</h3>
-            <h3 >{course.subtitle}</h3>
-        </div>
+        
+            <img src = {course.imgSrc} alt ={course.title}/>
+            <div id = "informationSB" >
+                <NavLink to="/course/DADA" activeClassName="ActiveLink" id = "navLink">
+                    <h3 id = "courseName">{course.title}</h3>
+                    <h3 id = "courseIns">{course.subtitle}</h3>
+                </NavLink>
+            </div>
+        
 
     </li>
 )
@@ -18,10 +23,10 @@ function CourseBoard({courses}) {
     return (
         <div id = "courseBoardSB" >
             <div id = "boardHeaderSB" > 
-                <h1>{courses.name}</h1>
+                <h2>{courses.name}</h2>
             </div>
 
-            <ul id = "">
+            <ul id = "courseListSB">
                 {courses.list.map((course) => (
                     <CourseItem 
                         key = {course.id}
@@ -36,7 +41,24 @@ function CourseBoard({courses}) {
 }
 
 const courses = {
-    "name": "Popular Courses",
+    "name": "Best Courses",
+    "list": [
+    {
+        "id": 1,
+        "title": "Django Full Course",
+        "subtitle": "Lana del Rey",
+        "imgSrc": cPython
+    },
+    {
+        "id": 2,
+        "title": "React Full Course",
+        "subtitle": "Adele",
+        "imgSrc": cReact
+    }
+]}
+
+const courses2 = {
+    "name": "New Courses",
     "list": [
     {
         "id": 1,
@@ -57,7 +79,7 @@ function SideBarGuest() {
     return (
         <div id = "sideBarGuest">
             <CourseBoard courses = {courses}/>
-            <CourseBoard courses = {courses}/>
+            <CourseBoard courses = {courses2}/>
         </div>
     )
 }
