@@ -36,22 +36,30 @@ function ListAnnoun() {
     return (
          
             <div id="wholeblock">
-                <div id="SearchList">
-                    <SearchBar searchImg={searchImg} name="SearchList" searchType="Search ..." />
+                <div id="listAnnoun">
+                    <div id="SearchList">
+                        <SearchBar searchImg={searchImg} name="SearchList" searchType="Search ..." />
+                    </div>
+                
+                    <Scrollbars style={{ width: "100%", height: 630 }}>
+                    {users.map((user) => {            
+                    return (  
+                        <div id="sublistAnnoun">                                
+                        <button className="Announcpn" id={user.stt} onClick={parentClick}>
+                            <p className="receiver" onClick={handleClick}>To: {user.receiver}</p>
+                            <p className="subject" onClick={handleClick}>Subject: {user.subject} </p>
+                            <p className="content" onClick={handleClick}>{user.content}</p>
+                            <p className="time" onClick={handleClick}>{user.time}</p>
+                        </button>
+                        </div>        
+                    );
+                    })}
+                    </Scrollbars>
                 </div>
 
+                <div>
                 {users.map((user) => {            
-                return (    
-                    <div id="listAnnoun">
-                    <div id="sublistAnnoun">                                
-                    <button className="Announcpn" id={user.stt} onClick={parentClick}>
-                        <p className="receiver" onClick={handleClick}>To: {user.receiver}</p>
-                        <p className="subject" onClick={handleClick}>Subject: {user.subject} </p>
-                        <p className="content" onClick={handleClick}>{user.content}</p>
-                        <p className="time" onClick={handleClick}>{user.time}</p>
-                    </button>
-                    </div>        
-                        
+                return (
                     <div id={user.id} className={(click == user.stt)? "choose active" : "choose"}>
                         <p>From: MAI DUC LONG</p>
                         <p>To: {user.receiver}</p>
@@ -60,10 +68,9 @@ function ListAnnoun() {
                         <p>{user.content}</p>
                         <p>{user.time}</p>
                     </div>
-                </div>
-                );
+                    );
                 })}
-                
+                </div>
             </div>  
         
     )

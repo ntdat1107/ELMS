@@ -2,11 +2,13 @@
     padding-left: 20px;
 }
 
-#listAnnoun {
-    display: flex;
-}
 #wholeblock {
     position: relative;
+    display: flex;
+}
+
+#listAnnoun {
+    text-align: center;
 }
 
 .Announcpn {
@@ -55,5 +57,5 @@
 }
 
 .choose.active {
-    display: flex;
+    display: block;
 }
