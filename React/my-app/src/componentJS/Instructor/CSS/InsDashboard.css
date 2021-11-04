@@ -1,6 +1,10 @@
 #insdb #getStarted:hover {
-    background-color: #160E4D;
+    background-color: #c4c4c4;
     color: #f4f4f4;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388; 
 }
 #insdb #titleFun {
     color: #f4f4f4;
