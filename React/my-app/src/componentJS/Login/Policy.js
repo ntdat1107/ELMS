@@ -1,4 +1,5 @@
 import "./CSS/Policy.css"
+import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom"
 
 function Policy() {
     return (
@@ -303,8 +304,9 @@ function Policy() {
                         </ul>
                     </div>
 
-                
-                <button type="button" className="Policytoggle-btn1">BACK</button>
+                <Link to='/signup'>
+                    <button type="button" className="Policytoggle-btn1">BACK</button>
+                </Link>
 
             </div>
         </div>

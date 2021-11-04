@@ -1,4 +1,5 @@
 import './CSS/Signup.css'
+import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom"
 
 function Signup() {
 
@@ -25,12 +26,16 @@ function Signup() {
                             </div>
                             <div class="Signupremember">
                                 <label id="Signupcheckbox"> <input type="checkbox"></input> Agree with policy</label>
-                                <a href="#">Privacy Policy</a>
+                                <Link to='/policy'>
+                                    <a>Privacy Policy</a>
+                                </Link>
                             </div>
-                            <div class="Signupbtn-box">
-                                <button type="button" class="Signuptoggle-btn1">Sign up</button>
+                            <Link to='login'>
+                                <div class="Signupbtn-box">
+                                    <button type="button" class="Signuptoggle-btn1">Sign up</button>
 
-                            </div>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

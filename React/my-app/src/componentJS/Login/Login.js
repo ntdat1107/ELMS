@@ -1,4 +1,5 @@
 import './CSS/Login.css'
+import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom"
 
 function Login() {
 
@@ -21,11 +22,15 @@ function Login() {
                             </div> 
                             <div class="remember">
                                 <label id = "checkbox"> <input type="checkbox"></input> Remember me</label>
-                                <a href="#">Forgot password?</a>
+                                <Link to='/forgotpass'>
+                                    <a>Forgot password?</a>
+                                </Link>
                             </div>
                             <div class="btn-box">
                                 <button type="button" class="toggle-btn1">Log in</button>
-                                <button type="button" class="toggle-btn2">Sign up</button>
+                                <Link to='/signup'>
+                                    <button type="button" class="toggle-btn2">Sign up</button>
+                                </Link>
 
                             </div>
                         </div>

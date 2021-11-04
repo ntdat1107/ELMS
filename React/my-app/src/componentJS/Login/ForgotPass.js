@@ -1,5 +1,5 @@
 import './CSS/ForgotPass.css'
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom"
+import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom"
 
 function ForgotPass() {
     return (
@@ -13,8 +13,10 @@ function ForgotPass() {
 
                 <input class="ForgotPassimpBx" type="text"></input>
                 <div class="ForgotPassbtn-box">
-                    <button type="button" class="ForgotPasstoggle-btn1">Reset</button>
-                    <button type="button" class="ForgotPasstoggle-btn2">Cancel</button>
+                    <Link to='/login'>
+                        <button type="button" class="ForgotPasstoggle-btn1">Reset</button>
+                        <button type="button" class="ForgotPasstoggle-btn2">Cancel</button>
+                    </Link>
 
                 </div>  
             </div>
