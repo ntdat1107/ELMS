@@ -1,18 +1,4 @@
-html {
-  background-color:#FFFFFF;
-  width:100%;
-  height:100%;
-}
-body {
-  width:100%;
-  height:100%;
-  background: gray;
-  font-family: 'Inter UI', sans-serif;
-  margin: 0;
-  
-}
-
-.page {
+.Loginpage {
   background: #e2e2e5;
   display: flex;
   flex-direction: column;
@@ -20,8 +6,9 @@ body {
   position: absolute;
   place-content: center;
   width: 100%;
+  
 }
-.container {
+.Loginpage .container {
   display: flex;
   height: 80%;
   margin: 0 auto;
@@ -29,7 +16,7 @@ body {
   
 }
 
-.left {
+.Loginpage .container .left {
   width: 50%;
   height: 100%;
   background-color: white;
@@ -43,7 +30,7 @@ body {
 
   
 }
-.right {
+.Loginpage .container .right {
   background: #58BAAB;
   color: #FFFFFF;
   width: 50%;
@@ -56,7 +43,7 @@ body {
   align-items: center;
 
 }
-.form {
+.Loginpage .container .right .form {
   width: 50%;
   height: 70%;
   display: inline-block;
@@ -66,12 +53,37 @@ body {
   color: #474A59;
 }
 
-.btn-box {
+.Loginpage .container .right .inp {
+  display: block;
+  background-color: white;
+  color: #474A59;
+  border:1px solid #474A59;
+  padding: 10px 20px;
+  outline: none;
+  font-size: 16px;
+  color: #474A59;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  margin: 10px;
+}
+.Loginpage .container .right .inp .impBx {
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+
+.Loginpage .container .right .remember{
+  padding: 20px;
+  justify-content:space-between;
+  font-size: 14px;
+}
+
+.Loginpage .container .right .btn-box {
   display: block;
   margin-top: 20px;
 }
 
-.toggle-btn1 {
+.Loginpage .container .right .btn-box  .toggle-btn1 {
   
   padding: 10px 30px;
   cursor: pointer;
@@ -85,7 +97,7 @@ body {
   font-weight: bold;
   font-family: Courier, monospace;
 }
-.toggle-btn2 {
+.Loginpage .container .right .btn-box  .toggle-btn2 {
   
   padding: 10px 30px;
   cursor: pointer;
@@ -98,37 +110,14 @@ body {
   font-weight: bold;
   font-family: Courier, monospace;
 }
-#welcome {
+.Loginpage .container .right #welcome {
   padding-top: 150px;
   font-size: 40px;
   color: white;
 
 }
-.inp {
-  display: block;
-  background-color: white;
-  color: #474A59;
-  border:1px solid #474A59;
-  padding: 10px 20px;
-  outline: none;
-  font-size: 16px;
-  color: #474A59;
-  letter-spacing: 1px;
-  border-radius: 20px;
-  margin: 10px;
-}
 
-.remember{
-  padding: 20px;
-  justify-content:space-between;
-  font-size: 14px;
-}
 
-#checkbox {
+.Loginpage .container .right .remember #checkbox {
   padding-right: 20px;
-}
-.impBx {
-  border: none;
-  padding: 10px;
-  outline: none;
 }

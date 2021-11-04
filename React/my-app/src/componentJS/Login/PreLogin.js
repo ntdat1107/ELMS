@@ -17,32 +17,32 @@ function PreLogin() {
     };
 
     return (
-        <div id = "r"> 
-            <div id = "container">
+        <div id = "PreLoginr"> 
+            <div id = "PreLogincontainer">
             <div style= {styleComponentLeft}>
-                <div className = "user-container">
-                    <div id = "Admin"> </div> 
-                    <div className = "Frame" style={{border: "solid #F6BC00"}} onClick = {function() {console.log("Admin")}}>
-                        <div className="text">Admin</div>
+                <div className = "PreLoginuser-container">
+                    <div id = "PreLoginAdmin"> </div> 
+                    <div className = "PreLoginFrame" style={{border: "solid #F6BC00"}} onClick = {function() {console.log("Admin")}}>
+                        <div className="PreLogintext">Admin</div>
                     </div>
                     
                 </div>
             </div>
             
             <div style= {styleComponent}>
-                <div className = "user-container">
-                    <div id = "Instructor"> </div>
-                    <div className = "Frame" style={{border: "solid #FC6B57"}} onClick = {function() {console.log("Instructor")}}>
-                        <div className="text">Instructor</div>
+                <div className = "PreLoginuser-container">
+                    <div id = "PreLoginInstructor"> </div>
+                    <div className = "PreLoginFrame" style={{border: "solid #FC6B57"}} onClick = {function() {console.log("Instructor")}}>
+                        <div className="PreLogintext">Instructor</div>
                     </div>
                 </div>
             </div>
 
             <div style= {styleComponentRight}>
-                <div className = "user-container">
-                    <div id = "Learner"> </div>
-                    <div className = "Frame" style={{border: "solid #58BAAB"}} onClick = {function() {console.log("Leanrner")}}>
-                        <div className="text">Learner</div>
+                <div className = "PreLoginuser-container">
+                    <div id = "PreLoginLearner"> </div>
+                    <div className = "PreLoginFrame" style={{border: "solid #58BAAB"}} onClick = {function() {console.log("Leanrner")}}>
+                        <div className="PreLogintext">Learner</div>
                     </div>
                 </div>
             </div>
