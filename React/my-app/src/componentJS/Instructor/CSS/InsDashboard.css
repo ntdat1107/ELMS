@@ -106,11 +106,10 @@
 
 
 #insdb #mycourse {
-    border: 2px solid green;
+    border: 2px solid #3FBB8C;
     width: 350px;
     height: 225px;
     border-radius: 20px;
-    position: absolute;
     margin-top: 10px;
 }
 

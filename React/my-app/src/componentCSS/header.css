@@ -2,7 +2,7 @@
     background-color: #f4f4f4;
     position: fixed;
     align-items: center;
-    z-index: 999;
+    /* z-index: 999; */
     height: 120px;
     display: flex;
     width: 100%;
@@ -151,7 +151,6 @@
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
-    z-index: 1;
 }
 /* Notication */
 #Header .HasNoti #numOfNoti {
@@ -244,7 +243,7 @@
     position: absolute;
 }
 .nav-item-ms {
-    height: 340px;
+    height: 500px;
     width: 390px;
     padding-left: 25px;
     border: 1px solid #c4c4c4;
@@ -260,7 +259,7 @@
     border-bottom: 1px solid #000;
 }
 .nav-item-ms #titleNoti-ms {
-    width: 390px;
+    width: 350px;
     font-size: 14px;
     padding-right: 25px;
     height: 20px;
@@ -275,8 +274,8 @@
     transition: all 0.5s ease;
     height: 500px;
     width: 350px;
-    left: 1145px;
-    top: 140px;
+    left: 750px;
+    top: 80px;
 }
 #Header #messageBtn {
     height: 40px
@@ -299,7 +298,7 @@
 }
 .nav-item-ms #Input {
     size: 32;
-    width: 300px;
+    width: 340px;
     height: 40px;
     border-radius: 45px;
     -webkit-border-radius: 45px;

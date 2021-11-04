@@ -45,7 +45,7 @@ render() {
             <text x={4} y={285+14} alignmentBaseline="middle">1</text> 
         </g>
         <g className="container">
-            <text className="title" x="40" y="30">Weekly Spent Hours</text>
+            <text className="title" x="30" y="30">Weekly Spent Hours</text>
             <g className="chart" transform="translate(0, 200)">
                 {barGroups}
             </g>
