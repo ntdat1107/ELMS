@@ -2,12 +2,12 @@ import React from "react"
 function BarGroup(props) {
     let height = props.d.value*10*4
     let xMid =  props.i * 40 + 50
-    let yMid = -props.d.value*10*2
+    let yMid = -props.d.value*10*4
     return <g className="bar-group">
-    <text className="name-label" x={xMid+5} y={(yMid/2+height/2+10)} alignmentBaseline="middle" >{props.d.name}</text>
-    <rect id="rect1" x= {xMid} y={-140}  height={140} width={30} fill= "#c4c4c4" rx ="15" ry="15" />
-    <rect id="rect2" x= {xMid} y={yMid}  height={height} width={30} fill={props.color} rx ="15" ry="15" />
-    <text className="value-label" x={xMid+18} y={yMid+8} fill={props.color} alignmentBaseline="middle" >{props.d.value}</text>
+    <text className="name-label" x={xMid - 5} y={(yMid/4+height/4+10+140)} alignmentBaseline="middle" >{props.d.name}</text>
+    <rect id="rect1" x= {xMid-10} y={-280+140}  height={280} width={30} fill= "#c4c4c4" rx ="15" ry="15" />
+    <rect id="rect2" x= {xMid-10} y={yMid+140}  height={height} width={30} fill={props.color} rx ="15" ry="15" />
+    <text className="value-label" x={xMid+18-10} y={yMid+8+140} fill={props.color} alignmentBaseline="middle" >{props.d.value}</text>
   </g>
   }
 const colorOdd = "#F6BC00";
@@ -34,7 +34,7 @@ render() {
             return <g><BarGroup key = {i} d={d} i={i} color = {colorOdd}/></g>
         }
     } )                         
-    return <svg width="350px" height="350px">
+    return <svg width="350px" height="400px">
         <g className="colValue" transform="translate(10, 0)">
             <text x={4} y={45+14} alignmentBaseline="middle">7</text> 
             <text x={4} y={85+14} alignmentBaseline="middle">6</text> 

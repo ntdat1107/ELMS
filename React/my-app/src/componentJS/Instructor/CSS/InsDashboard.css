@@ -212,8 +212,11 @@
     fill: #fff;
   }
 #insdb #WSH{
-    margin-left: 500px;
+    margin-left: 720px;
     background-color:#00816ede;
     -webkit-border-radius: 20px;
     border-radius: 20px;
+    width: 320px;
+    height: 400px;
+    margin-top: -400px;
 }
