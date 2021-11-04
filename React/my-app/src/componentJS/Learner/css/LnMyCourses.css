@@ -181,6 +181,7 @@ display: flex;
 margin-bottom: 10px;
 margin-top: 10px;
 margin-left:10px;
+width: 300px;
 }
 #myCourses .itemCourse {
 margin-right:15px;
@@ -198,6 +199,7 @@ height: 120px;
 position: relative;
 top: 10px;
 left:200px;
+width: 32.4px;
 }
 
 #myCourses .itemCourse #nameCourse {
@@ -289,7 +291,7 @@ background-image: url(../img/star2_5.png);
 margin-left: 4_5px;
 width: 65px;
 height: 13px;
-background-im_5age: url(../img/star3.png);
+background-image: url(../img/star3.png);
 }
 #myCourses .rateCourseMC #score3_5 {
 
@@ -402,4 +404,46 @@ display: none;
 }
 #myCourses .rateCourseMC #hadScore {
 padding-left: 50px;
+}
+
+/* OpenMore */
+#myCourses .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 200px;
+    height: 170px;
+    position: absolute;
+    border:1px solid #c4c4c4;
+}
+#myCourses .nav-menu.active .nav-link {
+    display: flex;
+    background-color: #f4f4f4;
+}
+#myCourses .nav-item {
+    height: 30px;
+    font-size: 14px;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#myCourses .nav-item p{
+    margin-left: 20px;
+}
+
+#myCourses .nav-link:hover {
+    border-bottom: 4px solid #242222;
+    transition: all 0.2s ease-out;
+}
+#myCourses .nav-menu.active {
+    display:block;
+    background: white;
+    opacity: 1;
+    transition: all 0.5s ease;
+    margin-top: 10px;
+    margin-left: 41px;
+}
+/* Scroll Bar */
+#myCourses #scrollbars {
+    height: 335px;
+    width: 782px;
 }

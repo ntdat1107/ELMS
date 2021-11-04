@@ -3,7 +3,6 @@ import ReactPaginate from "react-paginate";
 import { Scrollbars } from "react-custom-scrollbars"
 import { Link } from "react-router-dom"
 import ItemCourse from "./itemCourse"
-import PropTypes from 'prop-types';
 import listCourse from "./dataListCourse.json"
 function TableCourse() {
   const [courses] = useState(listCourse.slice(0, 96));
@@ -16,7 +15,7 @@ function TableCourse() {
     .slice(pagesVisited, pagesVisited + coursesPerPage)
     .map((course) => {
       return (
-            <div>
+            <div id="displayCourse">
               <div id="rowCourses">
                 <ItemCourse 
                     idCourse={course.idCourse}
@@ -52,7 +51,7 @@ function TableCourse() {
 
   return (
       <div id="tableCourses">
-          <Scrollbars>
+          <Scrollbars id="scrollbars">
           {displayCourses}
           </Scrollbars>
           <ReactPaginate

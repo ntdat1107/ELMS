@@ -1,5 +1,36 @@
-import React from 'react'
+import React, {useState} from 'react'
 import moreImg from "../img/more.png"
+import share from "../img/shareM.png"
+import favorite from "../img/favoriteM.png"
+import archived from "../img/archivedM.png"
+
+function OpenMore() {
+    const [click, setClick] = useState(false)
+    const handleClick = () => setClick(!click);
+    const closeMobileMenu = () => setClick(false);
+    
+    return (        
+        <div className="more-btn">            
+            <div id="more" onClick={handleClick}>
+                <img src={moreImg} alt="MoreImage" className="moreImg" id={click? "moreClose" : "moreOpen"}/>
+            </div>            
+            <ul className={click? 'nav-menu active' : 'nav-menu'}>
+                <li className="nav-item">
+                    <img src={share} alt="ShareImg" width="15px" height="15px"></img>
+                    <p>Share</p>
+                </li>
+                <li className="nav-item">
+                    <img src={favorite} alt="FavoriteImg" width="15px" height="15px"></img>
+                    <p>Favorite</p>
+                </li>
+                <li className="nav-item">
+                    <img src={archived} alt="ArchivedImg" width="15px" height="15px"></img>
+                    <p>Archived</p>
+                </li>
+            </ul>
+        </div>
+    )
+}
 
 function ItemCourse({
     nameCourse,
@@ -12,7 +43,7 @@ function ItemCourse({
     return (
         <div className="itemCourse" >
             <div class="imgCourse" id = {idCourse}>
-                <img id="more" src={moreImg} alt="moreImg"/>
+                <OpenMore />
             </div>
             <div id="nameCourse">
                 <p>{nameCourse}</p>
