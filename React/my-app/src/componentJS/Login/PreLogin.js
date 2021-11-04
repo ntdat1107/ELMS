@@ -1,5 +1,5 @@
 import './CSS/PreLogin.css'
-
+import {Link} from 'react-router-dom';
 function PreLogin() {
     const styleComponentLeft = {
         width: "320",
@@ -21,29 +21,35 @@ function PreLogin() {
             <div id = "PreLogincontainer">
             <div style= {styleComponentLeft}>
                 <div className = "PreLoginuser-container">
-                    <div id = "PreLoginAdmin"> </div> 
-                    <div className = "PreLoginFrame" style={{border: "solid #F6BC00"}} onClick = {function() {console.log("Admin")}}>
-                        <div className="PreLogintext">Admin</div>
-                    </div>
+                    <Link className="PreloginLink" to="/login">
+                        <div id = "PreLoginAdmin"> </div>
+                        <div className = "PreLoginFrame" style={{border: "solid #F6BC00"}}>
+                            <div className="PreLogintext">Admin</div>
+                        </div>
+                    </Link>
                     
                 </div>
             </div>
             
             <div style= {styleComponent}>
                 <div className = "PreLoginuser-container">
-                    <div id = "PreLoginInstructor"> </div>
-                    <div className = "PreLoginFrame" style={{border: "solid #FC6B57"}} onClick = {function() {console.log("Instructor")}}>
-                        <div className="PreLogintext">Instructor</div>
-                    </div>
+                    <Link className="PreloginLink" to="/login">
+                        <div id = "PreLoginInstructor"> </div>
+                        <div className = "PreLoginFrame" style={{border: "solid #FC6B57"}} onClick = {function() {console.log("Instructor")}}>
+                            <div className="PreLogintext">Instructor</div>
+                        </div>
+                    </Link>
                 </div>
             </div>
 
             <div style= {styleComponentRight}>
                 <div className = "PreLoginuser-container">
-                    <div id = "PreLoginLearner"> </div>
-                    <div className = "PreLoginFrame" style={{border: "solid #58BAAB"}} onClick = {function() {console.log("Leanrner")}}>
-                        <div className="PreLogintext">Learner</div>
-                    </div>
+                    <Link className="PreloginLink" to="/login">
+                        <div id = "PreLoginLearner"> </div>
+                        <div className = "PreLoginFrame" style={{border: "solid #58BAAB"}} onClick = {function() {console.log("Leanrner")}}>
+                            <div className="PreLogintext">Learner</div>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>
