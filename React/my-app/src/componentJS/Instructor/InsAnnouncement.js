@@ -1,10 +1,12 @@
 import React from "react";
 import {Helmet} from "react-helmet";
+import ListAnnoun from "../Admin/listAnnoun";
 import "./CSS/InsAnnounment.css"
 
 function InsAnnouncement() {
     return (
-        <div id="insAnn">
+        <div id="adminannounce">
+            <ListAnnoun/>
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Annoucements</title>
