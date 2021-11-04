@@ -54,7 +54,7 @@ function TableInstruc2() {
 
         
           <Scrollbars style={{ width: "100%", height: 430 }}>
-          {displayUsers}
+            {displayUsers}
           </Scrollbars>
 
           <ReactPaginate
