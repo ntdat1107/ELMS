@@ -131,6 +131,7 @@
 
 #content-block #inside-content-block #subject-inside {
     font-size: 30px;
+    color: #160E4D;
     padding-left: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #898989;
@@ -147,6 +148,18 @@
     position: absolute;
     top: 30px;
     right: 15px
+}
+
+#content-block #inside-content-block #newannoun {
+    display: absolute;
+    margin-left: 730px;
+    margin-top: 140px;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+#content-block #inside-content-block #newannoun:hover {
+    box-shadow: 3px 3px 5px grey;
 }
 
 .choose {
