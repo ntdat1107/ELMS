@@ -1,4 +1,147 @@
-#lnManageProfile p {
-    margin-top: 500px;
-    margin-left: 500px;
+#lnManageProfile {
+    display: flex;
+    margin-top: 125px;
+    box-sizing: border-box;
+    width: 1200px;
+    height: 580px;
+    background-color: #EFFAF8;
+    border-radius: 20px;
+}
+
+#lnManageProfile .avatarChange #big-avt {
+    display: inline-block;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+}
+
+#lnManageProfile .avatarChange #container #change-avt {
+    transform: translate(25%, 25%);
+}
+
+#lnManageProfile .avatarChange #container {
+    cursor: pointer;
+    position: relative;
+    margin-top: -50px;
+    width: 45px;
+    height: 45px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    background-color: #C4C4C4;
+}
+#lnManageProfile .avatarChange {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+#lnManageProfile .avatarChange #nameUser {
+    position: relative;
+    font-size: 40px;
+    line-height: 60px;
+    margin-left: -40px;
+}
+
+
+/* ------Text input------ */
+#lnManageProfile #col1 {
+    margin-left: 50px;
+}
+#lnManageProfile #col2 {
+    margin-top: 10px;
+    margin-left: 100px;
+}
+#lnManageProfile #row-1, #lnManageProfile #row-2, #lnManageProfile #row-4{
+    display: flex;
+}
+#lnManageProfile #row-2, #lnManageProfile #row-3, #lnManageProfile #row-4, #lnManageProfile #row-5 {
+    margin-top: 20px;
+}
+#lnManageProfile #col2 .label-pf {
+    display: block;
+    position: relative;
+    margin-left: 5px;
+    font-size: 26px;
+}
+#lnManageProfile .input-tag-pf {
+    display: block;
+    border-radius: 15px;
+    border: 1px solid;
+    height: 40px;
+    font-size: 24px;
+    padding-left: 10px;
+}
+
+
+#lnManageProfile #input-email {
+    width: 400px;
+}
+#lnManageProfile #input-lastname {
+    width: 200px;
+}
+#lnManageProfile #col2 #f-name {
+    margin-left: 50px;
+}
+#lnManageProfile #input-fname {
+    width: 200px;
+}
+#lnManageProfile #col2 #sex {
+    margin-left: 75px;
+}
+#lnManageProfile #input-sex {
+    width: 100px;
+}
+#lnManageProfile #input-email {
+    width: 450px;
+}
+#lnManageProfile #col2 #b-day {
+    margin-left: 75px;
+}
+#lnManageProfile #input-birthday {
+    width: 215px;
+}
+#lnManageProfile #input-number, #lnManageProfile #input-city {
+    width: 300px;
+}
+#lnManageProfile #col2 #country {
+    margin-left: 75px;
+}
+#lnManageProfile #input-des {
+    width: 600px;
+    height: 75px;
+}
+#lnManageProfile #row-6 {
+    margin-top: 25px;
+    margin-left: 200px;
+}
+#lnManageProfile #row-6 button {
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    -webkit-border-radius: 20px;
+    border-radius: 25px;
+    color: #f4f4f4;
+}
+
+#lnManageProfile #row-6 .btn-save {
+    display: none;
+}
+#lnManageProfile #row-6 .btn-save.active {
+    display: inline-block;
+}
+#lnManageProfile #row-6 #save-btn {    
+    background-color: #44bebe;
+}
+#lnManageProfile #row-6 #cancel-btn {
+    background-color: #C4C4C4;
+    margin-left: 25px;
+}
+
+#lnManageProfile #row-6 .btn-save.active:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388; 
 }
