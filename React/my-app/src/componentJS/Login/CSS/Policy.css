@@ -1,29 +1,44 @@
-.page {
+.Policypage {
     background-color: #58BAAB;
-    display: flex;
     flex-direction: column;
     height: 100%;
-    position: absolute;
     place-content: center;
     width: 100%;
 }
 
-.container {
+.Policypage .Policycontainer {
     display: block;
-    height: 90%;
+    height: 60%;
     margin: 0 auto;
-    width: 80%;
+    width: 60%;
     border-radius: 20px;
     background: #FFFFFF;
     text-align: center;
 }
 
-.btn-box {
+
+
+.Policypage .Policycontainer .Policybtn-box {
     display: block;
     margin-top: 40px;
 }
 
-.toggle-btn1 {
+.Policypage .PrivacyPrivacyContainer {
+
+    width: 100%;
+    height: 100%;
+}
+.Policypage .Policycontainer .PolicyPrivacy{
+    width: 80%;
+    height: 70%;
+    overflow: scroll;
+    overflow-x: hidden;
+    text-align: left;
+    padding: 5%;
+    margin: auto;
+    font-size: 12px;
+}
+.Policypage .Policycontainer .Policytoggle-btn1 {
 
     padding: 10px 30px;
     cursor: pointer;
@@ -37,21 +52,12 @@
     font-weight: bold;
     font-family: Courier, monospace;
 }
-#header {
+.Policypage .Policycontainer #Policyheader {
     margin-top: 50px;
 }
 
-#txt1{
+.Policypage .Policycontainer #Policytxt1{
     font-size: 36px;
     color: #FC6B57;
     margin-bottom: 10px;
-}
-.Privacy{
-    width: 80%;
-    height: 70%;
-    overflow: scroll;
-    overflow-x: hidden;
-    text-align: left;
-    padding: 5%;
-    margin: auto;
 }

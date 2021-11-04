@@ -2,13 +2,13 @@ import "./CSS/Policy.css"
 
 function Policy() {
     return (
-        <div class="page">
-            <div class="container">
-                <div id="header">
-                    <h1 id="txt1" class="txt">Privacy Policy</h1>
+        <div className="Policypage">
+            <div className="Policycontainer">
+                <div id="Policyheader">
+                    <h1 id="Policytxt1" className="Policytxt">Privacy Policy</h1>
                 </div>
-
-                <div class="Privacy">
+                <div className = "PrivacyPrivacyContainer">
+                <div className="PolicyPrivacy">
                     <p>Last updated: November 04, 2021</p>
                     <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of
                         Your information when You use the Service and tells You about Your privacy rights and how the law
@@ -304,9 +304,11 @@ function Policy() {
                         <li>By email: e-learning3S.gmail.com</li>
                     </ul>
                 </div>
+                </div>
+                
 
-                <div class="btn-box">
-                    <button type="button" class="toggle-btn1">BACK</button>
+                <div className="Policybtn-box">
+                    <button type="button" className="Policytoggle-btn1">BACK</button>
 
                 </div>
             </div>
