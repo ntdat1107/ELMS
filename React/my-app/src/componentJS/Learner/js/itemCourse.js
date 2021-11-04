@@ -15,15 +15,15 @@ function OpenMore() {
                 <img src={moreImg} alt="MoreImage" className="moreImg" id={click? "moreClose" : "moreOpen"}/>
             </div>            
             <ul className={click? 'nav-menu active' : 'nav-menu'}>
-                <li className="nav-item">
+                <li className="nav-item" onClick={closeMobileMenu}>
                     <img src={share} alt="ShareImg" width="15px" height="15px"></img>
                     <p>Share</p>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" onClick={closeMobileMenu}>
                     <img src={favorite} alt="FavoriteImg" width="15px" height="15px"></img>
                     <p>Favorite</p>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" onClick={closeMobileMenu}>
                     <img src={archived} alt="ArchivedImg" width="15px" height="15px"></img>
                     <p>Archived</p>
                 </li>

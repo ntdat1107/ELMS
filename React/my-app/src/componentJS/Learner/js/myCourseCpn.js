@@ -1,5 +1,4 @@
 import React from "react";
-import { Scrollbars } from 'react-custom-scrollbars';
 import DropList from "./dropList"
 import SearchBar from "../../searchBar"
 import "../css/LnMyCourses.css"
