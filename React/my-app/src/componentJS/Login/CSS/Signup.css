@@ -13,7 +13,7 @@ body {
 
 }
 
-.page {
+.Signuppage {
     background: #e2e2e5;
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@ body {
     width: 100%;
 }
 
-.container {
+.Signupcontainer {
     display: flex;
     height: 80%;
     margin: 0 auto;
@@ -31,7 +31,7 @@ body {
 
 }
 
-.left {
+.Signupleft {
     width: 50%;
     height: 100%;
     background-color: white;
@@ -46,7 +46,7 @@ body {
 
 }
 
-.right {
+.Signupright {
     background: #58BAAB;
     color: #FFFFFF;
     width: 50%;
@@ -60,7 +60,7 @@ body {
 
 }
 
-.form {
+.Signupform {
     width: 50%;
     height: 70%;
     display: inline-block;
@@ -70,12 +70,12 @@ body {
     color: #474A59;
 }
 
-.btn-box {
+.Signupbtn-box {
     display: block;
     margin-top: 20px;
 }
 
-.toggle-btn1 {
+.Signuptoggle-btn1 {
 
     padding: 10px 30px;
     cursor: pointer;
@@ -90,14 +90,14 @@ body {
 
 }
 
-#welcome {
+#Signupwelcome {
     padding-top: 150px;
     font-size: 40px;
     color: white;
 
 }
 
-.inp {
+.Signupinp {
     display: block;
     background-color: white;
     color: #474A59;
@@ -111,17 +111,17 @@ body {
     margin: 10px;
 }
 
-.remember {
+.Signupremember {
     padding: 20px;
     justify-content: space-between;
     font-size: 14px;
 }
 
-#checkbox {
+#Signupcheckbox {
     padding-right: 80px;
 }
 
-.impBx {
+.SignupimpBx {
     border: none;
     padding: 10px;
     outline: none;
