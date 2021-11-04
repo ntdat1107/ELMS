@@ -114,11 +114,13 @@
 }
 
 #insdb #mycourse #head {
+    font-size: 24px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
 }
 #insdb #mycourse #my-c-list {
+    font-size: 24px;
     padding-top: 20px;
 }
 #insdb #mycourse #my-c-list {
