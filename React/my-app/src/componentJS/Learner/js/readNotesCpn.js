@@ -1,6 +1,6 @@
 import React from 'react'
-import FilterTQ from './filterTQ';
-import TableTQ from './tableTQ';
+import FilterRN from './filterRN';
+import TableRN from './tableRN';
 function TakeQuizCpn() {
     return (
         <div id="takeQuizCpn">
