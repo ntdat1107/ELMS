@@ -5,7 +5,9 @@ import ProfileCpn from "./profileCpn";
 
 function InsManageProfile() {
     return (
-        <ProfileCpn srcImage={avtCheems} name="Ngọ Tiến Đạt" />
+        <div id="insMP">
+            <ProfileCpn srcImage={avtCheems} name="Ngọ Tiến Đạt" />
+        </div>
     )
 }
 export default InsManageProfile;

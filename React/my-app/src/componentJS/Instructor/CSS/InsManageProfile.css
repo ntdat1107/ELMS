@@ -1,4 +1,4 @@
-#insMP {
+#insMP #MP{
     display: flex;
     margin-top: 125px;
     margin-left: 300px;
@@ -7,20 +7,21 @@
     height: 580px;
     background-color: #EFFAF8;
     border-radius: 20px;
+    border: black 1px solid;
 }
 
-#insMP .avatarChange #big-avt {
+#insMP #MP .avatarChange #big-avt {
     display: inline-block;
     border-radius:50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
 }
 
-#insMP .avatarChange #container #change-avt {
+#insMP #MP .avatarChange #container #change-avt {
     transform: translate(25%, 25%);
 }
 
-#insMP .avatarChange #container {
+#insMP #MP .avatarChange #container {
     cursor: pointer;
     position: relative;
     margin-top: -50px;
@@ -32,11 +33,11 @@
     -webkit-border-radius:50%;
     background-color: #C4C4C4;
 }
-#insMP .avatarChange {
+#insMP #MP .avatarChange {
     margin-top: 50px;
     margin-left: 50px;
 }
-#insMP .avatarChange #nameUser {
+#insMP #MP .avatarChange #nameUser {
     position: relative;
     font-size: 40px;
     line-height: 60px;
@@ -45,26 +46,26 @@
 
 
 /* ------Text input------ */
-#insMP #col1 {
+#insMP #MP #col1 {
     margin-left: 50px;
 }
-#insMP #col2 {
+#insMP #MP #col2 {
     margin-top: 10px;
     margin-left: 100px;
 }
-#insMP #row-1, #insMP #row-2, #insMP #row-4{
+#insMP #MP #row-1, #insMP #row-2, #insMP #row-4{
     display: flex;
 }
-#insMP #row-2, #insMP #row-3, #insMP #row-4, #insMP #row-5 {
+#insMP #MP #row-2, #insMP #row-3, #insMP #row-4, #insMP #row-5 {
     margin-top: 20px;
 }
-#insMP #col2 .label-pf {
+#insMP #MP #col2 .label-pf {
     display: block;
     position: relative;
     margin-left: 5px;
     font-size: 26px;
 }
-#insMP .input-tag-pf {
+#insMP #MP .input-tag-pf {
     display: block;
     border-radius: 15px;
     border: 1px solid;
@@ -74,48 +75,48 @@
 }
 
 
-#insMP #input-email {
+#insMP #MP #input-email {
     width: 400px;
 }
-#insMP #input-lastname {
+#insMP #MP #input-lastname {
     width: 200px;
 }
-#insMP #col2 #f-name {
+#insMP #MP #col2 #f-name {
     margin-left: 50px;
 }
-#insMP #input-fname {
+#insMP #MP #input-fname {
     width: 200px;
 }
-#insMP #col2 #sex {
+#insMP #MP #col2 #sex {
     margin-left: 75px;
 }
-#insMP #input-sex {
+#insMP #MP #input-sex {
     width: 100px;
 }
-#insMP #input-email {
+#insMP #MP #input-email {
     width: 450px;
 }
-#insMP #col2 #b-day {
+#insMP #MP #col2 #b-day {
     margin-left: 75px;
 }
-#insMP #input-birthday {
+#insMP #MP #input-birthday {
     width: 215px;
 }
-#insMP #input-number, #insMP #input-city {
+#insMP #MP #input-number, #insMP #input-city {
     width: 300px;
 }
-#insMP #col2 #country {
+#insMP #MP #col2 #country {
     margin-left: 75px;
 }
-#insMP #input-des {
+#insMP #MP #input-des {
     width: 600px;
     height: 75px;
 }
-#insMP #row-6 {
+#insMP #MP #row-6 {
     margin-top: 25px;
     margin-left: 200px;
 }
-#insMP #row-6 button {
+#insMP #MP #row-6 button {
     width: 120px;
     height: 40px;
     font-size: 18px;
@@ -126,21 +127,21 @@
     color: #f4f4f4;
 }
 
-#insMP #row-6 .btn-save {
+#insMP #MP #row-6 .btn-save {
     display: none;
 }
-#insMP #row-6 .btn-save.active {
+#insMP #MP #row-6 .btn-save.active {
     display: inline-block;
 }
-#insMP #row-6 #save-btn {    
+#insMP #MP #row-6 #save-btn {    
     background-color: #44bebe;
 }
-#insMP #row-6 #cancel-btn {
+#insMP #MP #row-6 #cancel-btn {
     background-color: #C4C4C4;
     margin-left: 25px;
 }
 
-#insMP #row-6 .btn-save.active:hover {
+#insMP #MP #row-6 .btn-save.active:hover {
     border: 1px solid;
     box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
     outline-color: rgba(255, 255, 255, 0);

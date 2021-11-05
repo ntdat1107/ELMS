@@ -10,7 +10,7 @@ function ProfileCpn({
     const handleChange = () => setChange(true);
     const saved = () => setChange(false)
     return (
-        <div id="insMP">
+        <div id="MP">
             <div id="col1">
                 <div className="avatarChange">
                     <img id="big-avt" src={srcImage} alt="Avatar" width="150px" height="auto" />
