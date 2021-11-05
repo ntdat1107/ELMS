@@ -4,12 +4,14 @@ import JS from "./imgSrc/JS.png"
 import {Link} from "react-router-dom"
 
 
-function MyCourse(
+function MyCourse({
+    titleName,
+}
 ) {
     return (
         <div id="mycourse">
             <div id="head">
-                <div id="my-c-title">My Courses</div>
+                <div id="my-c-title">{titleName}</div>
                 <Link to="/ins/managecourse">
                     <div id="my-c-viewall">View All</div>
                 </Link>

@@ -5,7 +5,7 @@ import git from "../Learner/img/git.png";
 import star from "../Learner/img/star.png";
 import Scrollbars from 'react-custom-scrollbars';
 import CourseSection from './CourseSection';
-
+import MyCourse from './MyCourse'
 const styleBC = {
     backgroundColor: "#F8D92E",
     color: "#4B0C0C"
@@ -40,7 +40,8 @@ function InnerCourse() {
                     </Scrollbars>
                 </div>
                 <div id="col-2">
-
+                    
+                    <MyCourse titleName="My other course" />
                 </div>
             </div>
 
