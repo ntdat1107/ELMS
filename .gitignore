@@ -119,7 +119,7 @@ dmypy.json
 App-duy.js
 React/my-app/src/App.js
 React/my-app/src/App.js
-.json
+*.json
 React/my-app/package-lock.json
 React/my-app/package.json
 React/my-app/src/App.js
