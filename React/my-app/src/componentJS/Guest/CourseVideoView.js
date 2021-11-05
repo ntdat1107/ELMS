@@ -5,13 +5,40 @@ import playbutton from "./imgs/playbutton.png"
 import "./CSS/CourseVideoView.css";
 import ReactPlayer from 'react-player';
 import { NavLink } from "react-router-dom";
-
-
-
 import Scrollbars from "react-custom-scrollbars";
 
+import Header from "../header";
+import avt from "../../img/cheems.png"
+
+function MainPage({url}) {
+    return (
+        <div id = "mainPage">
+            <VideoFrame url = {url}/>
+            <LowBody/>
+            
+        </div>
+    )
+}
 
 
+
+
+function OutsidePage() {
+    return(
+        <div id = "outsidePage">
+            <Header 
+                linkAvt="/learner/manageprofile" 
+                link="/learner/dashboard" 
+                srcImg={avt} 
+                name="Lâm Thành Dương" 
+                gmail="lamduong11201@gmail.com" 
+                type="Learner"
+                idName="information"
+            />
+            <RightSideBar courseContentInput = {courseContent}/>
+        </div>
+    )   
+}
 
 function VideoFrame({url}) {
     return(
@@ -21,26 +48,25 @@ function VideoFrame({url}) {
                 url = {url}
                 controls = {true}
                 pip = {true}
-                width = {1050}
+                width = {1000}
                 height = {450}
             />
         </div>
     )
 }
 
-
-function MainPage({url}) {
-    return (
-        <div id = "mainPage">
-            <LowBody/>
-            <VideoFrame url = {url}/>
-        </div>
-    )
-}
-
-
-
 const courseContent = [
+    {
+        "sessionName": "Overview",
+        "lessonList" : [
+            {
+                "lessonName": "bbbb",
+                "lessonDur": "13 min",
+                "navlink" : "/course/1234/",
+                "url": "https://www.youtube.com/watch?v=im5tnxCcPXU",
+            },
+        ]
+    },
     {
         "sessionName": "AAAA",
         "lessonList" : [
@@ -91,6 +117,13 @@ const courseContent = [
     }    
 ]
 
+const overView = {
+    "lessonName": "bbbb",
+    "lessonDur": "13 min",
+    "navlink" : "/course/1234/",
+    "url": "https://www.youtube.com/watch?v=im5tnxCcPXU",
+}
+
 function RightSideBar({courseContentInput}) {
     return(
         <div id = "rightSB">
@@ -103,7 +136,7 @@ function RightSideBar({courseContentInput}) {
 
                 <SidebarContent>
                     <Menu>
-                        <Scrollbars style = {{height: 500}}>
+                        <Scrollbars style = {{height: 530}}>
                             {courseContentInput.map(session => (
                                 <Session session = {session}/>
                             ))}
@@ -114,7 +147,6 @@ function RightSideBar({courseContentInput}) {
         </div>
     )
 }
-
 
 function Session({session}) {
     return (
@@ -153,9 +185,10 @@ function LowBody() {
     return(
         <div id = "lowBody">
             lesson.lessonName
+            aaaaa
         </div>
     )
 }
 
-export {VideoFrame};
+export {OutsidePage};
 export default MainPage;

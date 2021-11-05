@@ -1,4 +1,4 @@
-#coursesCFY {
+#searchResultWrapper #coursesCFY {
     background-color: rgba(88, 186, 171, 0.5);
     display: inline-block;
     margin-top: 10px;
@@ -10,14 +10,14 @@
     border-color: #c4c4c4;
     border-width: 2px;
 }
-#titleCFY {
+#searchResultWrapper #titleCFY {
     display: none;
     font-size: 24px;
     font-weight: bold;
     margin-left: 20px;
     margin-top: 2px;
 }
-#listCoursesCFY {
+#searchResultWrapper #listCoursesCFY {
     background-color:white;
     width: 710x;
     margin-left: 15px;
@@ -25,11 +25,11 @@
     height: 510px;
 }
 
- #rateContent {
+#searchResultWrapper #rateContent {
     display: flex;
     margin-top: 5px;
 }
- #rateContent #p1 {
+#searchResultWrapper #rateContent #p1 {
     width: 90px;
     height: 30px;
     font-size: 14px;
@@ -37,10 +37,10 @@
 }
 
 
- #rateContent #p1 p {
+#searchResultWrapper #rateContent #p1 p {
     margin-top: 5px;
 }
- #rateContent #p2 {
+#searchResultWrapper #rateContent #p2 {
     color: rgba(255,217,2,0.7);
     height: 30px;
     width: 30px;
@@ -48,13 +48,13 @@
     text-align: center;
     margin-left: 10px;
 }
- #rateContent #p2 p {
+#searchResultWrapper #rateContent #p2 p {
     margin-top: 5px;
 }
- #rateContent #p3 {
+#searchResultWrapper #rateContent #p3 {
     margin-left: 10px;
 }
- #rateContent #p4 {
+#searchResultWrapper #rateContent #p4 {
     color: rgba(196,196,196,1);
     height: 30px;
     width: 60px;
@@ -62,23 +62,23 @@
     text-align: center;
     margin-left: 10px;
 }
- #rateContent #p4 p {
+#searchResultWrapper #rateContent #p4 p {
     margin-top: 5px;
 }
 /* -----------CourseContent---------- */
- #courseContent #Name{
+#searchResultWrapper #courseContent #Name{
     font-weight: bold;
     font-size: 14px;
 }
- #courseContent #Desc{
+#searchResultWrapper #courseContent #Desc{
     font-size: 14px;
 }
- #courseContent #Author{
+#searchResultWrapper #courseContent #Author{
     color: rgba(196,196,196,1);
     font-size: 14px;
 }
 /* ----------courseCFY--------- */
- #courseCFY {
+#searchResultWrapper #courseCFY {
     display: flex;
     padding-top: 10px;
     padding-right: 30px;
@@ -86,7 +86,7 @@
     padding-bottom: 10px;
     position: relative;
 }
- #courseContent {
+#searchResultWrapper #courseContent {
     padding-left: 10px;
 }
 

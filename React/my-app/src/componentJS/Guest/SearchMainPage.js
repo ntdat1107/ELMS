@@ -16,13 +16,7 @@ function SearchMainPage() {
     )
 }  
 
-function TagBar() {
-    return (
-        <div>
-            <h3>day la tagbar</h3>
-        </div>
-    )
-}
+
 
 function FloatBar() {
     return (
