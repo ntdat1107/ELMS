@@ -13,7 +13,7 @@ function LoginController() {
     return (
         <Router>
             <Switch>
-                <Route exact path='/' component={PreLogin}></Route>
+                <Route exact path='/prelogin' component={PreLogin}></Route>
                 <Route exact path='/login' component={Login}></Route>
                 <Route exact path='/signup' component={Signup}></Route>
                 <Route exact path='/forgotpass' component={ForgotPass}></Route>

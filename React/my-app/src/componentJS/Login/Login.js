@@ -8,6 +8,11 @@ function Login() {
             <div class="container">
                 <div class="left"></div>
                 <div class="right">
+                    <div id="cancelContainer">
+                        <Link to='/dashboard'>
+                            <button id="cancelButton">X</button> 
+                        </Link>
+                    </div>
                     <div id="welcome">Welcome back!</div>
                     
                     <div >                    

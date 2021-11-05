@@ -21,7 +21,7 @@ return (
             <SideBarComponent linkName="/learner/takeQuiz" idName="takequiz" srcImg={takeQuizImg} altName="TakeQuizImage" name="TakeQuiz" h="32" w="40"/>
             <SideBarComponent linkName="/learner/readTutorial" idName="readtutorial" srcImg={readTutorialImg} altName="ReadTutorialImage" name="ReadTutorial" h="32" w="40"/>
             <SideBarComponent linkName="/learner/readNotes" idName="readnotes" srcImg={readNotesImg} altName="ReadNotesImage" name="ReadNotes" h="32" w="40"/>
-            <SideBarComponent linkName="/learner/announce" idName="announce" srcImg={announceImg} altName="AnnounceImage" name="Announcements" h="32" w="40"/>
+            <SideBarComponent linkName="/learner/announcements" idName="announce" srcImg={announceImg} altName="AnnounceImage" name="Announcements" h="32" w="40"/>
             <SideBarComponent linkName="/learner/manageProfile" idName="profile" srcImg={manageProfileImg} altName="ManageProfileImage" name="ManageProfile" h="32" w="40"/>
 
         </ul>
