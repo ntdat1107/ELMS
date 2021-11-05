@@ -1,0 +1,128 @@
+.Formcolumns {
+Width: 100%;
+}
+.Formcolumn {
+    width:100%;
+}
+@media (min-width: 48em) {
+    .Formcolumn {
+    width: 50%;
+    float:left;
+    }
+    .Formcolumns {
+    content: "";
+    display: table;
+    clear: both;
+    }
+}
+
+/* Customize the label (the container) */
+.Formcontainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .Formques {
+      margin-left: 20px;
+      margin-top: 10px;
+      font-size: 16px;
+  }
+  
+  /* Hide the browser's default radio button */
+  .Formcontainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+#FormSelection {
+    padding: 20px;
+    
+}
+  /* Create a custom radio button */
+  .Formcheckmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .Formcontainer:hover input ~ .Formcheckmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .Formcontainer input:checked ~ .Formcheckmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .Formcheckmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .Formcontainer input:checked ~ .Formcheckmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .Formcontainer .Formcheckmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+
+  .Formcolumns  .Formupload {
+      width: 60%;
+      height: 200px;
+      border-radius: 20px;
+      border: 1px solid black;
+      margin-top: 20px;
+  }
+
+.Formcolumns  .Formupload2 {
+    width: 60%;
+    height: 100px;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-top: 20px;
+    padding: 20px;
+}
+.Formcolumns .Formupload2Confirm {
+    display: flex;
+}
+.Formcolumns .confirmTxt {
+    font-size: 14px;
+}
+.Formupload2Container {
+    display: block;
+    text-align: center;
+
+}
+.Formcolumns .FormSignupbtn-box {
+    margin: 15px;
+    padding: 5px;
+    border-radius: 5px;
+
+
+}
