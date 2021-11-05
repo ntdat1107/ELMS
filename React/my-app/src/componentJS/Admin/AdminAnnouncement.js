@@ -6,8 +6,8 @@ import NewAnnoun from './NewAnnoun'
 function AdminAnnounce () {
     return (
         <div id="adminannounce">
-            <ListAnnoun/>
             <NewAnnoun/>
+            <ListAnnoun/>
         </div>
     )
 }

@@ -4,9 +4,9 @@
 
 #wholeblock {
     display: flex;
-    position: relative;
-    margin-top: 130px;
-    margin-left: 280px;
+    position: absolute;
+    top: 130px;
+    left: 280px;
     width: 1220px;
     background-color: #58BAAB;
     border-radius: 15px;

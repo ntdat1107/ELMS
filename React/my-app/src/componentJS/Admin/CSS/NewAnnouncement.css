@@ -1,6 +1,7 @@
 .new-announ #newannounbutton {
     position: relative;
-    bottom: 90px;
+    z-index: 1;
+    top: 630px;
     left: 1400px;
     cursor: pointer;
 }
@@ -11,8 +12,11 @@
 }
 
 .new-announ .boxbox.show-up {
+    position: relative;
+    top: 100px;
+    z-index: 2;
     background-color: #58BAAB;
-    border: 2px solid black;
+    border: 1px solid black;
     width: 900px;
     height: 500px;
     display: block;
@@ -22,6 +26,7 @@
     text-align: center;
     border-radius: 10px;
     -webkit-border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
 }
 /*______________________________________*/
 
