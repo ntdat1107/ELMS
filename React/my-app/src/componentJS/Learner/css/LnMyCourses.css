@@ -177,11 +177,11 @@ width: 782px;
 height: 335px;
 }
 #myCourses #rowCourses {
-display: flex;
+display: inline-block;
 margin-bottom: 10px;
 margin-top: 10px;
 margin-left:10px;
-width: 300px;
+width: 240px;
 }
 #myCourses .itemCourse {
 margin-right:15px;
@@ -446,4 +446,5 @@ padding-left: 50px;
 #myCourses #scrollbars {
     height: 335px;
     width: 782px;
+    display: flex;
 }
