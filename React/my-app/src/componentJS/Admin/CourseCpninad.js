@@ -97,7 +97,11 @@ function TaskButton({
                             
                             {/* Danh Sach Hoc Vien */}
                             <div className='x' id='b'>
-                                    <div id='green'><img src={learner} alt ='Learner Icon' width='30px' height='30px'/> <span> Learner</span></div>
+                                    <div id='green'>
+                                        <img src={learner} alt ='Learner Icon' width='30px' height='30px'/> 
+                                        <p> Learner</p>
+                                        <img id='plus-icon' src={plus} alt="Plus Icon" width='30px' height='30px' />
+                                    </div>
                                     <div>
                                         <div id='name'>
                                             <img id='right-icon' src={minus} alt='Minus Instructor Icon' width='30px' height='30px' />                                                

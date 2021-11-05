@@ -43,7 +43,7 @@
 #admincourse #coursesCFY #listCoursesCFY #add-taskIcon .nav-menu.active {
     border: 1px solid black;
     width: 180px;
-    height: 90px;
+    height: 100px;
     position: absolute; 
     display: flex;
     left: 965px;
@@ -55,7 +55,9 @@
 #admincourse #coursesCFY #listCoursesCFY #add-taskIcon .nav-menu.active .nav-item{
     font-size: 20px;
     width: 120px;
-    margin: 5px;
+    margin-left: 6px;
+    padding-top: 8px;
+    padding-left: 5px;
     cursor: pointer;
 }
 
@@ -88,10 +90,22 @@
     margin: 10px 0px 10px 50px;
 }
 
+
 #admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #below #green {
     background-color: #58BAAB;
     padding: 3px 0px 3px 12px;    
     display: flex;
+    position: relative;
+}
+
+#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #below #green #plus-icon{
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+
+#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #below #green #plus-icon:hover {
+    box-shadow: 1px 1px 3px black;
 }
 
 #admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #below #name{
@@ -100,14 +114,21 @@
     margin-top: 5px;
     margin-bottom: 8px;
 }
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #below #name-of{
+#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #below #name-of {
     padding-left: 20px;
     cursor: pointer;
 }
 
+#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #below #name-of:hover {
+    text-decoration-line: underline;
+}
 
 #admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #below #name #right-icon{
     cursor: pointer;
+}
+
+#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #below #name #right-icon:hover {
+    box-shadow: 1px 1px 3px black;
 }
 
 #admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open img{
