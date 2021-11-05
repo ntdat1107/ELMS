@@ -19,6 +19,7 @@
     "react-draft-wysiwyg": "^1.14.7",
     "react-helmet": "^6.1.0",
     "react-paginate": "^7.1.5",
+    "react-player": "^2.9.0",
     "react-router-dom": "^5.3.0",
     "react-scripts": "^4.0.3",
     "reactjs-dropdown-component": "^1.2.0",
