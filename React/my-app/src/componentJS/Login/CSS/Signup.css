@@ -45,6 +45,20 @@
 
 }
 
+.Signuppage .Signupright #cancelContainer #cancelButton{
+    margin-left: 90%;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+}
+.Signuppage .Signupright #cancelContainer #cancelButton #X{
+color: #FFFFFF;
+text-decoration: none;
+
+}
 .Signuppage .Signupform {
     width: 65%;
     height: 70%;
@@ -76,7 +90,7 @@
 }
 
 .Signuppage #Signupwelcome {
-    padding-top: 150px;
+    padding-top: 70px;
     font-size: 40px;
     color: white;
 
