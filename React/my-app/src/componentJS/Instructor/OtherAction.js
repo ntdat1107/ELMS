@@ -11,24 +11,22 @@ function OtherAction() {
                 <div id="action-title">Other actions</div>
             </div>
             <div id="action-list">
-                <Link to={"/ins/managecourse/python_for_beginner"}>
-                    <div id="first-c">
-                        <img src={manageLearner} alt="learnerImg" />
-                        <p>Manage learner</p>
+                <Link className="link-action" to={"/ins/managecourse/manage_my_learners"}>
+                    <div id="first-act">
+                        <img className="imgAction" src={manageLearner} alt="learnerImg" height="50px" width="50px" />
+                        <p className="text-action">Manage learner</p>
                     </div>
                 </Link>
-                <Link to={"/ins/managecourse/javascript"}>
-                    <div id="second-c">
-                        <img src={notifyImg} alt="notifyImg" />
-                        <p>Notify</p>
+                <Link className="link-action" to={"/ins/announcement"}>
+                    <div id="second-act">
+                        <img className="imgAction" src={notifyImg} alt="notifyImg" height="40px" width="50px" />
+                        <p className="text-action">Notify</p>
                     </div>
                 </Link>
-                <Link to={"/ins/managecourse/javascript"}>
-                    <div id="second-c">
-                        <img src={plus} alt="plusImg" />
-                        <p>New section</p>
+                    <div id="third-act">
+                        <img className="imgAction" src={plus} alt="plusImg" height="50px" width="50px" />
+                        <p className="text-action">New section</p>
                     </div>
-                </Link>
             </div>
         </div>
     )

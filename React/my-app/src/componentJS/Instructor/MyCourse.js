@@ -6,6 +6,8 @@ import {Link} from "react-router-dom"
 
 function MyCourse({
     titleName,
+    widthSize,
+    heightSize,
 }
 ) {
     return (
@@ -19,13 +21,13 @@ function MyCourse({
             <div id="my-c-list">
                 <Link to={"/ins/managecourse/python_for_beginner"}>
                     <div id="first-c">
-                        <img src={python} alt="ImgCourse" />
+                        <img src={python} alt="ImgCourse" height={heightSize} width={widthSize}/>
                         <p>Python for beginners</p>
                     </div>
                 </Link>
                 <Link to={"/ins/managecourse/javascript"}>
                     <div id="second-c">
-                        <img src={JS} alt="ImgCourse" />
+                        <img src={JS} alt="ImgCourse" height={heightSize} width={widthSize} />
                         <p>Javascript</p>
                     </div>
                 </Link>
