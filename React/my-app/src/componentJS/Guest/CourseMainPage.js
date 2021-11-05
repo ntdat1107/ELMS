@@ -11,6 +11,8 @@ import cPython   from "./imgs/coursePython.png"
 import cCpp  from "./imgs/courseCpp.png"
 import DADA from "./imgs/courseDADAimg.png"
 
+import { NavLink } from "react-router-dom";
+
 
 
 
@@ -79,7 +81,7 @@ function CourseMainPage() {
         <div id="courseMainPage">
             <Header/>
             <div id = "bodyPage">
-                <BackButton/>
+                <BackButton url = "/"/>
                 <UpperBody course = {courseDADA}/>
                 <LowerBody/>
             </div>
@@ -176,14 +178,17 @@ function LowerBody() {
     )
 }
 
-function BackButton() {
+function BackButton({url}) {
+    const handleClick = (props) => {console.log(props)};
     return(
         <div id = "backButton">
-            <button class ="button">
-                <h3>
-                    Go Back
-                </h3>    
-            </button>
+            <NavLink to={url} id="nav-link" onClick = {handleClick}>
+                <button class ="button">
+                    <h3>
+                        Go Back
+                    </h3>
+                </button>
+            </NavLink>
         </div>
     )
 }
