@@ -8,6 +8,13 @@ function Signup() {
             <div class="Signupcontainer">
                 <div class="Signupleft"></div>
                 <div class="Signupright">
+                    <div id="cancelContainer">
+                            <button id="cancelButton">
+                                <Link id="X" to='/'>
+                                    X
+                                </Link>
+                            </button> 
+                    </div>
                     <div id="Signupwelcome">Create account</div>
 
                     <div>
