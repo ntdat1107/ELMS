@@ -1,0 +1,87 @@
+.new-announ #newannounbutton {
+    position: relative;
+    bottom: 90px;
+    left: 1400px;
+    cursor: pointer;
+}
+
+/*    Control Box show up or close     */
+.new-announ .boxbox {
+    display: none;
+}
+
+.new-announ .boxbox.show-up {
+    background-color: #58BAAB;
+    border: 2px solid black;
+    width: 900px;
+    height: 500px;
+    display: block;
+    position: relative;
+    left: 450px;
+    bottom: 610px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+/*______________________________________*/
+
+
+.new-announ #New-Announ-Box #close-button {
+    position: absolute;
+    font-size: 18px;
+    padding: 3px;
+    top: 7px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.new-announ #New-Announ-Box #close-button:hover {
+    box-shadow: 2px 2px 3px black;
+    
+}
+
+.new-announ #New-Announ-Box #tick-box {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.new-announ #New-Announ-Box #tick-box #tick-box-top {
+    display: flex;
+}
+
+.new-announ #New-Announ-Box #tick-box #tick-box-top #tick-box-top-inside {
+    margin: 10px 40px 10px 5px;
+}
+
+.new-announ #New-Announ-Box #tick-box #tick-box-bottom {
+    margin: 0px 0px 5px 5px;
+    display: flex;
+}
+
+.new-announ #New-Announ-Box #tick-box #tick-box-bottom #hihaho {
+    margin-right: 20px;
+}
+
+.new-announ #New-Announ-Box #tick-box #tick-box-bottom #input-receiver {
+    width: 725px;
+    border: 0px solid;
+    font-size: 18px;
+    padding-left: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+
+/*     Text Editor     */
+.new-announ #New-Announ-Box .text-editor {
+    background-color: white;
+    width: 850px;
+    height: 385px;
+    border: 1px solid black;
+    padding: 10px 20px 0px 20px;
+    list-style: none;
+    text-align: center;
+    display: inline-block;
+}

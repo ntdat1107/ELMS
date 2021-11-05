@@ -3,7 +3,7 @@ import JsonData2 from "./FakedataforAnnoun.json"
 import './CSS/AdminAnnouncement.css'
 import SearchAnnoun from "./SearchAnnoun"
 import { Scrollbars } from "react-custom-scrollbars"
-import NewAnnoun from "./image/NewAnnoun.png"
+import NewAnnoun from './NewAnnoun'
 
 function ListAnnoun() {
     const users = JsonData2.slice(0, 50);
@@ -66,14 +66,12 @@ function ListAnnoun() {
                             <p id="subject-inside">{user.subject}</p>
                             <p id="content-inside">{user.content}</p>
                             <p id="time-inside">{user.time}</p>
-                            <div id="newannoun">
-                                <img src={NewAnnoun} alt="New Announcement Image" width="70" height="auto"/>
-                            </div>
-                        </div>    
+                        </div>   
                     </div>
                     );
                 })}
-                </div>                
+                </div>
+                               
             </div>  
         
     )
