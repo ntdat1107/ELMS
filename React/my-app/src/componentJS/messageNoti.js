@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import message from ".././img/message.png";
 import SearchBar from "./searchBar";
-import searchIcon from "../img/search.png"
+import searchIcon from "../img/search.png";
+import sendIcon from "../img/sendMessage.png";
 import { Scrollbars } from 'react-custom-scrollbars';
 const messageNotis = [
     {"content": "From Mr.Long:You have a short test that takes about 20 minutes in the Django course at 2.pm on 31/02/2020."},
@@ -42,9 +43,16 @@ function MessageNoti() {
                         <Scrollbars>
                                 {contentNoti}
                         </Scrollbars>
+                        <div id="sendMessage">
+                            <label id = "toUser">To:</label> <br/>
+                            <input id = "sendToUser" type="text" name = "toUser" placeholder="Enter reciever ..." /><br/>
+                            <input id = "content" type="text" name = "content" placeholder="Enter the text of the message" /> <br/>
+                            <div id="iconSend"><img src = {sendIcon} alt="SendIcon"></img></div>
+                        </div>
                     </div>
                 </li>
             </ul>
+            
         </div>
     )
 }

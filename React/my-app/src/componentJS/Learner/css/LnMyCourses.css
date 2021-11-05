@@ -13,7 +13,7 @@ padding-left: 10px;
 }
 #myCourses .dd-wrapper .dd-header-title{
 margin:2px 10px;
-margin-right:30px;
+margin-right:20px;
 font-weight:bold;
 }
 html {
@@ -37,6 +37,7 @@ margin:10px;
 #myCourses .dd-wrapper{
 width: 180px;
 height: 30px;
+font-size: 12px;
 }
 
 

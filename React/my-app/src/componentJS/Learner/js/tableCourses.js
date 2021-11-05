@@ -20,32 +20,47 @@ function TableCourse() {
     smallCourses.push(temp);
   }
   console.log(smallCourses);
-  const smallDisplay = () => {
-    for(let i = 0; i < smallCourses.length; i++){
-      smallCourses[i].map((course) => {
-        console.log(course.idCourse);
-        return (
-          <div id="itemCourses">
-            <ItemCourse 
-                idCourse={course.idCourse}
-                nameCourse={course.nameCourse}
-                authorCourse={course.authorCourse}
-                progressScore = {course.progressScore}
-                scoreRate={course.scoreRate}
-            />
-          </div>
-        );
-      });
-    } 
-  }
-  const bigDisplay1 = () => {
+  
+  const bigDisplay1 = smallCourses[0].map((course) => {
     return (
       <div id="rowCourses">
-        {smallDisplay}
+        <ItemCourse 
+            idCourse={course.idCourse}
+            nameCourse={course.nameCourse}
+            authorCourse={course.authorCourse}
+            progressScore = {course.progressScore}
+            scoreRate={course.scoreRate}
+        />
       </div>
     );
-  };
-  const bigDisplay = smallCourses[1].map((course) => {
+  });
+  const bigDisplay2 = smallCourses[1].map((course) => {
+    return (
+      <div id="rowCourses">
+        <ItemCourse 
+            idCourse={course.idCourse}
+            nameCourse={course.nameCourse}
+            authorCourse={course.authorCourse}
+            progressScore = {course.progressScore}
+            scoreRate={course.scoreRate}
+        />
+      </div>
+    );
+  });
+  const bigDisplay3 = smallCourses[2].map((course) => {
+    return (
+      <div id="rowCourses">
+        <ItemCourse 
+            idCourse={course.idCourse}
+            nameCourse={course.nameCourse}
+            authorCourse={course.authorCourse}
+            progressScore = {course.progressScore}
+            scoreRate={course.scoreRate}
+        />
+      </div>
+    );
+  });
+  const bigDisplay4 = smallCourses[3].map((course) => {
     return (
       <div id="rowCourses">
         <ItemCourse 
@@ -59,6 +74,7 @@ function TableCourse() {
     );
   });
 
+
   const pageCount = Math.ceil(courses.length / coursesPerPage);
 
   const changePage = ({ selected }) => {
@@ -68,7 +84,10 @@ function TableCourse() {
   return (
       <div id="tableCourses">
           <Scrollbars id="scrollbars">
-          {bigDisplay}
+          {bigDisplay1}
+          {bigDisplay2}
+          {bigDisplay3}
+          {bigDisplay4}
           </Scrollbars>
           <ReactPaginate
               previousLabel={"Prev"}

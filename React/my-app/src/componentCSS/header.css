@@ -193,6 +193,7 @@
     width: 350px;
     padding-left: 25px;
     border: 1px solid #c4c4c4;
+    background-color: #fff;
 }
 .nav-item-noti p {
     width: 300px;
@@ -243,13 +244,14 @@
     position: absolute;
 }
 .nav-item-ms {
-    height: 500px;
+    height: 590px;
     width: 390px;
     padding-left: 25px;
     border: 1px solid #c4c4c4;
+    background-color: #fff;
 }
 .nav-item-ms p {
-    width: 390px;
+    width: 340px;
     font-size: 14px;
     height: 40px;
     -webkit-line-clamp: 2;
@@ -261,7 +263,6 @@
 .nav-item-ms #titleNoti-ms {
     display: inline-block;
     font-size: 14px;
-    padding-right: 25px;
     height: 20px;
     font-weight: bold;
     border-bottom: 3px solid #000;
@@ -272,20 +273,20 @@
     background: white;
     opacity: 1;
     transition: all 0.5s ease;
-    height: 500px;
+    height: 590px;
     width: 350px;
-    left: 750px;
-    top: 80px;
+    left:1140px;
+    top: 120px;
 }
 #Header #messageBtn {
     height: 40px
 }
 #Header #listContentNoti-ms {
-    height: 400px;
+    height: 300px;
     width: 360px;
 }
 #Header #listContentNoti-ms p{
-    width: 350px;
+    width: 340px;
 }
 /* Search Message */
 #SearchBarMs {
@@ -310,4 +311,39 @@
     margin-top: 8px;
     margin-left: -40px;
     cursor: pointer;
+}
+#Header #sendMessage {
+    margin-top: 10px;
+    border-top: 2px solid black;
+    width: 340px;
+}
+#Header #sendMessage #toUser{
+    font-size: 14px;
+    font-weight: bold;
+}
+#Header #sendMessage #sendToUser{
+    font-size: 14px;
+}
+#Header #sendMessage #content {
+    width: 340px;
+    height: 100px;
+    margin-top:5px;
+}
+#Header #sendMessage #iconSend {
+    margin-top:5px;
+    width: 35px;
+    height: 35px;
+}
+#Header #sendMessage #iconSend img{
+    cursor: pointer;
+    padding-left: 7.5px;
+    padding-top: 7.5px;
+}
+#Header #sendMessage #iconSend:hover {
+    margin-top:5px;
+    width: 35px;
+    height: 35px;
+    background-color: #c4c4c4;
+    border-radius: 17.5px;
+    -webkit-border-radius: 17.5px;
 }
