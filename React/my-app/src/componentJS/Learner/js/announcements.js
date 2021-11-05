@@ -1,10 +1,11 @@
 import React from "react";
 import "../css/LnAnnouncements.css"
+import ListAnnoun from "./listAnnouncement"
 
 function LnAnnouncements() {
     return (
         <div id="lnAnnouncements">
-            <p>Announcements Page.</p>
+            <ListAnnoun />
         </div>
     )
 }
