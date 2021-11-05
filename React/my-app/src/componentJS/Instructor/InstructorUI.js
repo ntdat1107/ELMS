@@ -7,6 +7,7 @@ import InsManagerCourse from "./InsManageCourse";
 import InsAnnouncement from "./InsAnnouncement"
 import InsManageProfile from "./InsManageProfile"
 import cheems from "../../img/cheems.png"
+import InnerCourse from "./innerCourse";
 
 
 function InstructorUI() {
@@ -20,6 +21,7 @@ return (
             <Route exact path='/ins/manageprofile' component={InsManageProfile}></Route>            
             <Route exact path='/ins/dashboard' component={InsDashboardUI}></Route>
             <Route exact path='/ins/managecourse' component={InsManagerCourse}></Route>
+            <Route exact path='/ins/managecourse/inner' component={InnerCourse}></Route>
             <Route exact path='/ins/announcement' component={InsAnnouncement}></Route>
         </Switch>
     </Router>
