@@ -36,6 +36,7 @@ function HomePageUI() {
                         <Route exact path='/course/DADA' component={CourseMainPage}></Route>
                         <Route exact path='/' component={HP}></Route>
                         <Route exact path='/login' component={LoginController}></Route>
+                        <Route exact path='/prelogin' component={LoginController}></Route>
                         <Route exact path='/signup' component={LoginController}></Route>
                     </Switch>
                 </Router>
