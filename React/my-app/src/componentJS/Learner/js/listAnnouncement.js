@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
-import JsonData2 from "./FakedataforAnnoun.json"
-import './CSS/AdminAnnouncement.css'
-import SearchAnnoun from "./SearchAnnoun"
+import Data from "./dataForAnnoun.json"
+import '../css/LnAnnouncements.css'
+import SearchAnnoun from "./searchAnnoun"
 import { Scrollbars } from "react-custom-scrollbars"
-import NewAnnoun from './NewAnnoun'
-
+import noRead from "../img/noRead.png"
+import read from "../img/read.png"
+import flag from "../img/flag.png"
+import clear from "../img/clear.png"
 function ListAnnoun() {
-    const users = JsonData2.slice(0, 50);
+    const users = Data.slice(0, 50);
     const [click, setClick] = useState(1)
 
     function parentClick(e) {        
@@ -38,7 +40,7 @@ function ListAnnoun() {
                     </div>
                 
                     <div id="sublistAnnoun">
-                    <Scrollbars style={{ width: "100%", height: 455 }}>
+                    <Scrollbars >
                     {users.map((user) => {            
                     return (  
                         <button className="Announcpn" id={user.stt} onClick={parentClick}>
@@ -66,12 +68,17 @@ function ListAnnoun() {
                             <p id="subject-inside">{user.subject}</p>
                             <p id="content-inside">{user.content}</p>
                             <p id="time-inside">{user.time}</p>
-                        </div>   
+                            <div id="moreOption">
+                                <div id="iconNoReadAnnoun"><img src = {noRead} alt="NoReadIcon"></img></div>    
+                                <div id="iconReadAnnoun"><img src = {read} alt="ReadIcon"></img></div>    
+                                <div id="iconFlagAnnoun"><img src = {flag} alt="FlagIcon"></img></div>    
+                                <div id="iconClear"><img src = {clear} alt="clearIcon"></img></div>    
+                            </div>  
+                        </div>
                     </div>
                     );
                 })}
-                </div>
-                               
+                </div>                
             </div>  
         
     )

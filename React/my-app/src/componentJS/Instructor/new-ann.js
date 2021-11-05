@@ -1,13 +1,13 @@
 import React, {useState} from 'react'
-import newannounbutton from "./image/NewAnnoun.png"
-import './CSS/NewAnnouncement.css'
-import send from './image/Send-button.png'
-import TextEditor from './TextEditor'
+import newannounbutton from "../Admin/image/NewAnnoun.png"
+import './CSS/NewAnn.css'
+import { Link } from "react-router-dom"
+import TextEditor from '../Admin/TextEditor'
 
 
-function NewAnnoun() {
+function NewAnn() {
     const [click, setClick] = useState(false)
-    const OpenNewAnnoun = () => setClick(true)
+    const OpenNewAnnoun = () => setClick(!click)
     const CloseNewAnnounBox = () => setClick(false)
     console.log(click);
 
@@ -19,12 +19,10 @@ function NewAnnoun() {
             <div id="New-Announ-Box" className={click? 'boxbox show-up' : 'boxbox'}>
                 <form id="tick-box">
                     <div id="tick-box-top">
-                        <div id="tick-box-top-inside"><input name="tick-box" type="radio" value="All Course" /> All Course</div>
-                        <div id="tick-box-top-inside"><input name="tick-box" type="radio" value="All Instructor" /> All Instructor</div>
-                        <div id="tick-box-top-inside"><input name="tick-box" type="radio" value="All Learner" /> All Learner</div>
+                        <div id="tick-box-top-inside"><input name="tick-box" type="checkbox" value="All My Learner" /> All My Learner</div>
                     </div>
                     <div id="tick-box-bottom">
-                        <div id='hihaho'><input name="tick-box" type="radio" value="Send to" /> Send to: </div>
+                        <div id='hihaho'><input name="tick-box" type="checkbox" value="Send to" /> Send to: </div>
                         <input id='input-receiver' name="input-receiver" type="text" placeholder="Enter Receiver..." />
                     </div>
                 </form>
@@ -33,11 +31,10 @@ function NewAnnoun() {
                 </div>
 
                 <p id='close-button' onClick={CloseNewAnnounBox}>Close</p>
-                <img id='send-button' onClick={CloseNewAnnounBox} src={send} alt='Send Icon' width="60px" height="'60px" />
             </div>
 
         </div>
     )
 }
 
-export default NewAnnoun;
+export default NewAnn;

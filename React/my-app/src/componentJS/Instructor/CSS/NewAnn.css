@@ -1,25 +1,19 @@
-.new-announ #newannounbutton {
+.new-ann #newannounbutton {
     position: relative;
     z-index: 1;
-    top: 600px;
+    top: 630px;
     left: 1400px;
     cursor: pointer;
 }
 
-.new-announ #newannounbutton:hover {
-    width: 75px;
-    height: 75px;
-}
-
-
 /*    Control Box show up or close     */
-.new-announ .boxbox {
+.new-ann .boxbox {
     display: none;
 }
 
-.new-announ .boxbox.show-up {
+.new-ann .boxbox.show-up {
     position: relative;
-    top: 90px;
+    top: 100px;
     z-index: 2;
     background-color: #58BAAB;
     border: 1px solid black;
@@ -37,7 +31,7 @@
 /*______________________________________*/
 
 
-.new-announ #New-Announ-Box #close-button {
+.new-ann #New-Announ-Box #close-button {
     position: absolute;
     font-size: 18px;
     padding: 3px;
@@ -46,36 +40,36 @@
     cursor: pointer;
 }
 
-.new-announ #New-Announ-Box #close-button:hover {
+.new-ann #New-Announ-Box #close-button:hover {
     box-shadow: 2px 2px 3px black;
     
 }
 
-.new-announ #New-Announ-Box #tick-box {
+.new-ann #New-Announ-Box #tick-box {
     margin-left: 30px;
     margin-bottom: 20px;
     font-size: 20px;
     text-align: left;
 }
 
-.new-announ #New-Announ-Box #tick-box #tick-box-top {
+.new-ann #New-Announ-Box #tick-box #tick-box-top {
     display: flex;
 }
 
-.new-announ #New-Announ-Box #tick-box #tick-box-top #tick-box-top-inside {
+.new-ann #New-Announ-Box #tick-box #tick-box-top #tick-box-top-inside {
     margin: 10px 40px 10px 5px;
 }
 
-.new-announ #New-Announ-Box #tick-box #tick-box-bottom {
+.new-ann #New-Announ-Box #tick-box #tick-box-bottom {
     margin: 0px 0px 5px 5px;
     display: flex;
 }
 
-.new-announ #New-Announ-Box #tick-box #tick-box-bottom #hihaho {
+.new-ann #New-Announ-Box #tick-box #tick-box-bottom #hihaho {
     margin-right: 20px;
 }
 
-.new-announ #New-Announ-Box #tick-box #tick-box-bottom #input-receiver {
+.new-ann #New-Announ-Box #tick-box #tick-box-bottom #input-receiver {
     width: 725px;
     border: 0px solid;
     font-size: 18px;
@@ -84,20 +78,9 @@
     -webkit-border-radius: 5px;
 }
 
-.new-announ #New-Announ-Box #send-button {
-    position: absolute;
-    right: 35px;
-    top: 410px;
-    cursor: pointer;
-}
-
-.new-announ #New-Announ-Box #send-button:hover {
-    width: 65px;
-    height: 65px;
-}
 
 /*     Text Editor     */
-.new-announ #New-Announ-Box .text-editor {
+.new-ann #New-Announ-Box .text-editor {
     background-color: white;
     width: 850px;
     height: 385px;
