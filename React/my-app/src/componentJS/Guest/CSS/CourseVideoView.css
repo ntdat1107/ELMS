@@ -5,19 +5,16 @@
 }
 
 
-#cVideoView #mainPage #videoFrame {
-    height: 450px;
-    display: block;
-    background-color: beige;
-}
 
 #videoFrame {
-    position:absolute;
+    position:relative;
+    margin-top: 125px;
     height: 450px;
-    display: block;
+    display: flex;
     background-color: beige;
     z-index: 10;
     margin-left: 75px;
+    width: 1000px;
 }
 
 #cVideoView #mainPage {
@@ -30,6 +27,7 @@
 #videoFrame.react-player {  
     margin-left: 60px;
     margin-right: auto;
+    margin-top: 125px;
     
 }
 
@@ -74,4 +72,16 @@
 #cVideoView #lesson #play-button {
     display: inline-block;
     margin-right: 20px;
+}
+
+#CV #Header {
+    z-index: 10000;
+}
+
+#CV .pro-sidebar {
+    position: fixed;
+}
+
+#CV .ytp-player-content.ytp-iv-player-content {
+    margin-top: 125px;
 }

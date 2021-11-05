@@ -24,6 +24,22 @@
     background-color: #fafafa;
 }
 
+#courseBoard h3 {
+    display: flex;
+    width: 300px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+
+#courseBoard button h3 {
+    display: flex;
+    width: 300px;
+    margin-left: 10px;
+    font-size: 16px;
+    width: auto;
+}
+
 #courseBoard #boardHeader{
     display: flex;
     margin-left: px;
@@ -48,6 +64,7 @@
     font-weight: 600;
     text-align: center;
     cursor: pointer;
+    font-size: 13px;
 }
 
 #courseBoard #boardHeader button{

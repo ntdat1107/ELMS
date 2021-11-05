@@ -10,16 +10,8 @@ import { NavLink } from "react-router-dom";
 
 import Scrollbars from "react-custom-scrollbars";
 
-function CourseVideoView() {
-    return(
-        <div id = "cVideoView">
-            <div id = "mainPage">
-                <LowBody/>
-            </div>
-            <RightSideBar courseContentInput = {courseContent}/>
-        </div>
-    )
-}
+
+
 
 function VideoFrame({url}) {
     return(
@@ -35,6 +27,17 @@ function VideoFrame({url}) {
         </div>
     )
 }
+
+
+function MainPage({url}) {
+    return (
+        <div id = "mainPage">
+            <LowBody/>
+            <VideoFrame url = {url}/>
+        </div>
+    )
+}
+
 
 
 const courseContent = [
@@ -154,14 +157,5 @@ function LowBody() {
     )
 }
 
-function MainPage({lesson}) {
-    return (
-        <div id = "main-page">
-            <VideoFrame url = {lesson.url}/>
-            <LowBody lesson = {lesson}/>
-        </div>
-    )
-}
-
 export {VideoFrame};
-export default CourseVideoView;
+export default MainPage;
