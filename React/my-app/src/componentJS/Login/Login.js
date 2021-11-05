@@ -1,6 +1,7 @@
 import './CSS/Login.css'
 import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom"
 
+const type='ins'
 function Login() {
 
     return (
@@ -9,7 +10,7 @@ function Login() {
                 <div class="left"></div>
                 <div class="right">
                     <div id="cancelContainer">
-                        <Link to='/dashboard'>
+                        <Link to='/'>
                             <button id="cancelButton">X</button> 
                         </Link>
                     </div>
@@ -32,7 +33,9 @@ function Login() {
                                 </Link>
                             </div>
                             <div class="btn-box">
-                                <button type="button" class="toggle-btn1">Log in</button>
+                                <Link to={'/'+type}>
+                                    <button type="button" class="toggle-btn1">Log in</button>
+                                </Link>
                                 <Link to='/signup'>
                                     <button type="button" class="toggle-btn2">Sign up</button>
                                 </Link>

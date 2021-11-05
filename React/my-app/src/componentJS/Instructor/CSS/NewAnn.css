@@ -1,7 +1,7 @@
 .new-ann #newannounbutton {
     position: relative;
     z-index: 1;
-    top: 630px;
+    top: 600px;
     left: 1400px;
     cursor: pointer;
 }
@@ -89,4 +89,16 @@
     list-style: none;
     text-align: center;
     display: inline-block;
+}
+
+.new-ann #New-Announ-Box #send-button {
+    position: absolute;
+    right: 35px;
+    top: 410px;
+    cursor: pointer;
+}
+
+.new-ann #New-Announ-Box #send-button:hover #send-button {
+    width: 65px;
+    height: 65px;
 }
