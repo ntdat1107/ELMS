@@ -1,9 +1,9 @@
 #lnManageProfile #MP{
     display: flex;
     margin-top: 130px;
-    margin-left: 300px;
+    margin-left: 325px;
     box-sizing: border-box;
-    width: 1200px;
+    width: 1190px;
     height: 575px;
     background-color: #EFFAF8;
     border-radius: 20px;
@@ -47,7 +47,7 @@
 
 /* ------Text input------ */
 #lnManageProfile #MP #col1 {
-    margin-left: 50px;
+    margin-left: 25px;
 }
 #lnManageProfile #MP #col2 {
     margin-top: 10px;

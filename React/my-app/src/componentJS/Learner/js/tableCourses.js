@@ -21,9 +21,9 @@ function TableCourse() {
   }
   console.log(smallCourses);
   
-  const bigDisplay1 = smallCourses[0].map((course) => {
+  const bigDisplay1 = smallCourses[0].map((course,index) => {
     return (
-      <div id="rowCourses">
+      <div id={"rowCourses" + (index + 1)}>
         <ItemCourse 
             idCourse={course.idCourse}
             nameCourse={course.nameCourse}
@@ -34,9 +34,9 @@ function TableCourse() {
       </div>
     );
   });
-  const bigDisplay2 = smallCourses[1].map((course) => {
+  const bigDisplay2 = smallCourses[1].map((course,index) => {
     return (
-      <div id="rowCourses">
+      <div id={"rowCourses" + (index + 1)}>
         <ItemCourse 
             idCourse={course.idCourse}
             nameCourse={course.nameCourse}
@@ -47,9 +47,9 @@ function TableCourse() {
       </div>
     );
   });
-  const bigDisplay3 = smallCourses[2].map((course) => {
+  const bigDisplay3 = smallCourses[2].map((course,index) => {
     return (
-      <div id="rowCourses">
+      <div id={"rowCourses" + (index + 1)}>
         <ItemCourse 
             idCourse={course.idCourse}
             nameCourse={course.nameCourse}
@@ -60,9 +60,9 @@ function TableCourse() {
       </div>
     );
   });
-  const bigDisplay4 = smallCourses[3].map((course) => {
+  const bigDisplay4 = smallCourses[3].map((course,index) => {
     return (
-      <div id="rowCourses">
+      <div id={"rowCourses" + (index + 1)}>
         <ItemCourse 
             idCourse={course.idCourse}
             nameCourse={course.nameCourse}

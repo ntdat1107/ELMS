@@ -64,11 +64,11 @@
 }
 #lnDashboard #listCoursesCFY {
     background-color:white;
-    width: 710x;
+    width: 710px;
     margin-left: 15px;
     margin-right: 15px;
-    margin-top: 15px;
-    height: 375px;
+    margin-top: 0npx;
+    height: 360px;
 }
 /* ------RateContent-------- */
 #lnDashboard #rateContent {
