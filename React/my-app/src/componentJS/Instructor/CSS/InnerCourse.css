@@ -109,11 +109,6 @@
     display: flex;
 }
 
-/* Link */
-.link-to-course {
-    text-decoration: none;
-}
-
 
 
 #inner-course #row-2 #col-1 {
@@ -168,21 +163,21 @@
 #inner-course #mycourse {
     border: 2px solid #3FBB8C;
     width: 350px;
-    height: 225px;
+    height: 175px;
     border-radius: 20px;
     margin-top: 10px;
     margin-left: 60px;
 }
 
 #inner-course #mycourse #head {
-    font-size: 24px;
+    font-size: 20px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
 }
 #inner-course #mycourse #my-c-list {
-    font-size: 20px;
-    padding-top: 20px;
+    font-size: 16px;
+    padding-top: 15px;
 }
 #inner-course #mycourse #my-c-list {
     display: inline-block;
@@ -190,7 +185,7 @@
 }
 #inner-course #my-c-list p {
     padding-left: 20px;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 #inner-course #my-c-list #first-c {
     display: inline-block;
@@ -217,4 +212,45 @@
     color: #160E4D;
     cursor: pointer;
     text-decoration: underline;
+}
+
+#inner-course #row-2 #other-action {
+    border: 2px solid #3FBB8C;
+    width: 350px;
+    height: 250px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+
+#inner-course #row-2 #other-action #head {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+#inner-course #row-2 #other-action #head #action-title {
+    font-size: 32px;
+    text-align: center;
+    display: inline-block;
+}
+
+#inner-course #row-2 #other-action .text-action {
+    margin-left: 30px;
+    font-size: 24px;
+    display: inline-block;
+}
+#inner-course #row-2 #other-action .link-action {
+    text-decoration: none;
+    color: black;
+}
+#inner-course #row-2 #other-action #first-act,
+#inner-course #row-2 #other-action #second-act,
+#inner-course #row-2 #other-action #third-act {
+    line-height: 60px;
+    display: flex;
+    vertical-align: middle;
+    margin-left: 20px;
 }

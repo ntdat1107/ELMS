@@ -18,7 +18,7 @@ function InsDashboardUI () {
             </div>
             <div id="col2">
                 <DbCalendar />
-                <MyCourse titleName="My courses"/>
+                <MyCourse titleName="My courses" heightSize="60px" widthSize="60px"/>
             </div>
         </div>
     )
