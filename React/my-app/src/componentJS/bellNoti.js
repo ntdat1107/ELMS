@@ -27,7 +27,7 @@ function BellNoti() {
             <div id="bellBtn" onClick={handleClick}>
                 <img src={bell} alt="BellImage" className="bellImg" id={click? "BellClose" : "BellOpen"}/>
                 <div className = {bellNotis.length === 0 ? "NoNoti" : "HasNoti"}>
-                    <p id = "numOfNoti">{bellNotis.length}</p>
+                    <p id = "numOfNoti"></p>
                 </div>
             </div>            
             <ul className={click? 'nav-menu-noti active' : 'nav-menu-noti'}>

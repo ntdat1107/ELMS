@@ -30,7 +30,7 @@ function MessageNoti() {
             <div id="messageBtn" onClick={handleClick}>
                 <img src={message} alt="MessageImage" className="messageImg" id={click? "MessageClose" : "MessageOpen"}/>
                 <div className = {messageNotis.length === 0 ? "NoNoti" : "HasNoti"}>
-                    <p id = "numOfNoti">{messageNotis.length}</p>
+                    <p id = "numOfNoti"></p>
                 </div>
             </div>            
             <ul className={click? 'nav-menu-ms active' : 'nav-menu-ms'}>
