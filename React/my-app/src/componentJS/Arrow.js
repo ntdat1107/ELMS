@@ -18,7 +18,7 @@ function Arrow() {
                     <Link to='/ins/managecourse' className="nav-link" onClick={closeMobileMenu}>Switch to Learner</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to='/ins/announcement' className="nav-link" onClick={closeMobileMenu}>Logout</Link>
+                    <Link to='/' className="nav-link" onClick={closeMobileMenu}>Logout</Link>
                 </li>
             </ul>
         </div>
