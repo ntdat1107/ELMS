@@ -1,13 +1,13 @@
 import React, {useState} from 'react'
 import newannounbutton from "./image/NewAnnoun.png"
 import './CSS/NewAnnouncement.css'
-import { Link } from "react-router-dom"
+import send from './image/Send-button.png'
 import TextEditor from './TextEditor'
 
 
 function NewAnnoun() {
     const [click, setClick] = useState(false)
-    const OpenNewAnnoun = () => setClick(!click)
+    const OpenNewAnnoun = () => setClick(true)
     const CloseNewAnnounBox = () => setClick(false)
     console.log(click);
 
@@ -33,6 +33,7 @@ function NewAnnoun() {
                 </div>
 
                 <p id='close-button' onClick={CloseNewAnnounBox}>Close</p>
+                <img id='send-button' onClick={CloseNewAnnounBox} src={send} alt='Send Icon' width="60px" height="'60px" />
             </div>
 
         </div>

@@ -6,6 +6,12 @@
     cursor: pointer;
 }
 
+.new-announ #newannounbutton:hover {
+    width: 75px;
+    height: 75px;
+}
+
+
 /*    Control Box show up or close     */
 .new-announ .boxbox {
     display: none;
@@ -78,6 +84,17 @@
     -webkit-border-radius: 5px;
 }
 
+.new-announ #New-Announ-Box #send-button {
+    position: absolute;
+    right: 35px;
+    top: 410px;
+    cursor: pointer;
+}
+
+.new-announ #New-Announ-Box #send-button:hover {
+    width: 65px;
+    height: 65px;
+}
 
 /*     Text Editor     */
 .new-announ #New-Announ-Box .text-editor {

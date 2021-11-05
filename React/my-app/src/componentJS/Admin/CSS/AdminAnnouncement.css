@@ -158,19 +158,6 @@
     right: 15px
 }
 
-#wholeblock #newannounbutton {
-    position: absolute;
-    bottom: 30px;
-    right: 40px;
-    cursor: pointer;
-}
-
-#wholeblock #newannounbutton:hover {
-    box-shadow: 3px 3px 5px grey;
-    border-radius: 45px;
-    -webkit-border-radius: 45px;
-}
-
 .choose {
     display: none;
 }
