@@ -29,6 +29,11 @@
   border: none;
   color: #FFFFFF;
 }
+.Loginpage .container #cancelContainer #cancelButton #X{
+  color: #FFFFFF;
+  text-decoration: none;
+
+}
 
 .Loginpage .container .left {
   width: 50%;

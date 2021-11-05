@@ -10,9 +10,11 @@ function Login() {
                 <div class="left"></div>
                 <div class="right">
                     <div id="cancelContainer">
-                        <Link to='/'>
-                            <button id="cancelButton">X</button> 
-                        </Link>
+                            <button id="cancelButton">
+                                <Link id="X" to='/'>
+                                    X
+                                </Link>
+                            </button> 
                     </div>
                     <div id="welcome">Welcome back!</div>
                     
