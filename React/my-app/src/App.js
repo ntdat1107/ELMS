@@ -13,8 +13,11 @@ import LoginController from './componentJS/Login/LoginController';
 function App() {
   return (
   <div className="App">
-    <LoginController/>
+    {/* <HomePageGuestUi/> */}
     {/* <LearnerUI /> */}
+    <InstructorUI />
+    {/* <AdminUI /> */}
+    {/* <LoginController /> */}
   </div>  
   )
 }
