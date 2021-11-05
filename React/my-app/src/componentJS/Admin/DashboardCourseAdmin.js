@@ -1,75 +1,27 @@
 import React from "react";
-import './CSS/Explorer.css'
+import '../Guest/CSS/Explorer.css'
 import { NavLink } from "react-router-dom";
 
 //course img:
-import cPython   from "./imgs/coursePython.png"
-import cUIUX  from "./imgs/courseUIUX.png"
-import cReact  from "./imgs/courseReactJS.png"
+import cPython   from "../Guest/imgs/coursePython.png"
+import cUIUX  from "../Guest/imgs/courseUIUX.png"
+import cReact  from "../Guest/imgs/courseReactJS.png"
 // import cJS  from "./imgs/courseJS.png"
 // import cAngular  from "./imgs/Doja.jpg"
-import cCpp  from "./imgs/courseCpp.png"
+import cCpp  from "../Guest/imgs/courseCpp.png"
 
 
 
 
 
 //instructor img:
-import doja from "./imgs/Doja.jpg"
-import hannah from "./imgs/Hannah.jpg"
-import dolores from "./imgs/Dolores.jpg"
-import lupin from "./imgs/Lupin.jpg"
+import doja from "../Guest/imgs/Doja.jpg"
+import hannah from "../Guest/imgs/Hannah.jpg"
+import dolores from "../Guest/imgs/Dolores.jpg"
+import lupin from "../Guest/imgs/Lupin.jpg"
 
-
-
-// icon:
-import student from "./imgs/icon-1-students.png"
-import teacher from "./imgs/icons8_teacher.png"
-import bigimg from "./imgs/instructors.png" 
 
 import {Scrollbars} from 'react-custom-scrollbars'
-
-function MainBody() {
-    return (
-        <div id = "mainBody">
-            <UpperBody/>
-            <LowerBody/>
-        </div>
-    )
-}
-
-function UpperBody() {
-    return (
-        <div id = "upperBody">
-            <div >
-                <div id = "big-titles">
-                    <h1>Learn effectively, learn with us</h1>
-                    <h2>Join our community now</h2>
-                </div>
-                <div id = "small-titles">
-                    
-                    <div id = "small-titles-child">
-                        <img src = {student} alt = "student-icon"/>
-                        <div>
-                            <h2>Students</h2>
-                            <h2>20000 +</h2>
-                        </div>
-                    </div>
-                    <div id = "small-titles-child">
-                        <img src = {teacher} alt = "student-icon"/>
-                        <div>
-                            <h2>Courses</h2>
-                            <h2>200 +</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id = "big-title-img">
-                <img src = {bigimg}/>
-            </div>
-        </div>
-    )
-}
 
 const courses = {
     "name": "Popular Courses",
@@ -139,12 +91,11 @@ const courses2 = {
     }
 ]}
 
-function LowerBody() {
+function DashboardCourseAdmin() {
     return (
         <div id = "lowerBody">
             <CourseBoard courses = {courses}/>
             <CourseBoard courses = {courses2}/>
-
         </div>
     )
 }
@@ -158,7 +109,7 @@ const CourseItem = course => (
             <h3>{course.subtitle}</h3>
         </div>
         {course.displayButton && <button id = "viewButton">
-                <NavLink activeClassName="ActiveLink" to = "/search" id = "navLink">
+                <NavLink activeClassName="ActiveLink" to = "/admin/managecourse" id = "navLink">
                     <h3>
                         view
                     </h3>
@@ -178,7 +129,7 @@ function CourseBoard({courses}) {
                 <h1>{courses.name}</h1>
                 <button><p>view all</p></button>
             </div>
-            <Scrollbars style={{ width: 410, height: 300 }}>
+            <Scrollbars style={{ width: 410, height: 280 }}>
             <ul>
                 {courses.list.map((course) => (
                     <CourseItem
@@ -190,12 +141,12 @@ function CourseBoard({courses}) {
                     />
                 ))}
             </ul>
-            </Scrollbars>   
+            </Scrollbars>
         </div>
     )
 }
 
 
-export {CourseBoard};
-export {LowerBody}
-export default MainBody;
+export default DashboardCourseAdmin;
+
+

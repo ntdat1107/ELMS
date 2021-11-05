@@ -91,15 +91,31 @@
 #moreIcon {
     cursor: pointer;
 }
+#moreIcon:hover {
+    width: 125px;
+}
+
 #disIcon {
     cursor: pointer;
 }
+#disIcon:hover {
+    width: 38px;
+}
+
 #delIcon {
     cursor: pointer;
 }
+#delIcon:hover {
+    width: 38px;
+}
+
 #grantIcon {
     cursor: pointer;
 }
+#grantIcon:hover {
+    width: 38px;
+}
+
 
 /*______________________________________________________*/
 .paginationBttns {

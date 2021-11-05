@@ -71,3 +71,13 @@
     border-radius: 7px;
     -webkit-border-radius: 7px;
 }
+
+/*_________Lower Body_________*/
+#admindashboard #lowerBody {
+    display: flex;
+    margin-left: 450px;
+}
+
+#admindashboard #lowerBody #courseBoard {
+    margin: 30px 50px 0px 0px;
+}
