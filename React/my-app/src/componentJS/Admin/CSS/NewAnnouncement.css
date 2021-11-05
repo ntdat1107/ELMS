@@ -1,7 +1,7 @@
 .new-announ #newannounbutton {
     position: relative;
     z-index: 1;
-    top: 630px;
+    top: 600px;
     left: 1400px;
     cursor: pointer;
 }
@@ -19,7 +19,7 @@
 
 .new-announ .boxbox.show-up {
     position: relative;
-    top: 100px;
+    top: 90px;
     z-index: 2;
     background-color: #58BAAB;
     border: 1px solid black;

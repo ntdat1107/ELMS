@@ -38,7 +38,7 @@ function ListAnnoun() {
                     </div>
                 
                     <div id="sublistAnnoun">
-                    <Scrollbars style={{ width: "100%", height: 515 }}>
+                    <Scrollbars style={{ width: "100%", height: 455 }}>
                     {users.map((user) => {            
                     return (  
                         <button className="Announcpn" id={user.stt} onClick={parentClick}>
