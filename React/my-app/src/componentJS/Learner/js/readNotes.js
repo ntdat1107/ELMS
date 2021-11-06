@@ -1,10 +1,10 @@
 import React from "react";
 import "../css/LnReadNotes.css"
-
+import ReadNotesCpn from "./readNotesCpn"
 function LnReadNotes() {
     return (
         <div id="lnReadNotes">
-            <p>ReadNotes Page.</p>
+            <ReadNotesCpn />
         </div>
     )
 }

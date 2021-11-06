@@ -1,16 +1,16 @@
 import React from 'react'
-import DropListQuiz from './dropListQuiz';
-function FilterTQ() {
+import DropListNote from './dropListNote';
+function FilterRN() {
     return (
-        <div id = "filterTQ">
+        <div id = "filterRN">
             <div id="typeFilter">
                 Courses:
             </div>
-            <div id="filterQuiz">
-                <DropListQuiz />
+            <div id="filterNote">
+                <DropListNote />
             </div>
         </div>
     )
 }
 
-export default FilterTQ
+export default FilterRN

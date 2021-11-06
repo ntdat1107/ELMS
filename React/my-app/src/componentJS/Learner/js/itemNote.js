@@ -1,26 +1,25 @@
 import React from 'react'
 
-function ItemQuiz({
-    nameQuiz,
-    courseQuiz,
-    lengthQuiz,
-    idCourseQuiz,
+function ItemNote({
+    numberNote,
+    courseNote,
+    nameNote,
+    idCourseNote,
     callback = () => {}
 }) {
     return (
-        <div className="itemQuiz" >
-            <div id="nameQuiz">
-                <p>{nameQuiz}</p>
+        <div className="itemNote" >
+            <div id="numOfNote"><p>{numberNote}</p></div>
+            <div className="courseNote" id = {"course" + idCourseNote}>
+                <p>{courseNote}</p>
             </div>
-            <div className="courseQuiz" id = {"course" + idCourseQuiz}>
-                <p>{courseQuiz}</p>
+            <div id="nameNote">
+                <p>{nameNote} </p>
             </div>
-            <div id="lengthQuiz">
-                <p>{lengthQuiz} </p>
-            </div>
-            <input type="button" id="btnStartQuiz" value = "Start Quiz"/>
+            <input type="button" id="btnViewNote" value = "View PDF"/>
+            <input type="button" id="btnDownloadNote" value = "Download PDF"/>
         </div>
     )
 }
 
-export default ItemQuiz;
+export default ItemNote;
