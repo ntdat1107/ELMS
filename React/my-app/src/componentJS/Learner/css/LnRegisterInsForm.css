@@ -1,3 +1,13 @@
+.boxRegIns_show {
+  background-color: white;
+  box-shadow: 3px 3px 5px grey;
+  left: -850px;
+  top: -100px;
+  position: relative;
+  width: 800px;
+  height: 500px;
+}
+
 .Formcolumns {
 Width: 100%;
 }
@@ -15,7 +25,9 @@ Width: 100%;
     clear: both;
     }
 }
-
+.boxRegIns_close {
+  display: none;
+}
 /* Customize the label (the container) */
 .Formcontainer {
     display: block;
@@ -30,11 +42,6 @@ Width: 100%;
     user-select: none;
   }
 
-  .Formques {
-      margin-left: 20px;
-      margin-top: 10px;
-      font-size: 16px;
-  }
   
   /* Hide the browser's default radio button */
   .Formcontainer input {
@@ -92,12 +99,33 @@ Width: 100%;
     background: white;
   }
 
-  .Formcolumns  .Formupload {
-      width: 60%;
-      height: 200px;
+  .Formques, .FormquesBox {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+  }
+   .Formupload {
+    height: 150px;
+    width: 380px;
       border-radius: 20px;
-      border: 1px solid black;
+      border: 1px solid rgb(196, 189, 189);
       margin-top: 20px;
+  }
+  .Formupload p {
+    padding-top: 5px;
+    padding-left: 15px;
+  }
+  #FormPushCV{
+    height: 100px;
+    width: 340px;
+      border-radius: 20px;
+      border: 1px dashed rgb(196, 189, 189);
+      margin-top: 10px;
+      margin-left: 19px;
+      background-image: url(../img/FormPushCV.png);
+  }
+  #FormPushCV p {
+    padding-top: 60px;
   }
 
 .Formcolumns  .Formupload2 {
@@ -108,21 +136,48 @@ Width: 100%;
     margin-top: 20px;
     padding: 20px;
 }
-.Formcolumns .Formupload2Confirm {
+.Formupload2Confirm {
     display: flex;
+    padding-left: 10px;
+    padding-top: 10px;
 }
-.Formcolumns .confirmTxt {
+.Formupload2Confirm #checkBox{
+    height: 20px;
+    width: 20px;
+}
+ #confirmTxt {
     font-size: 14px;
+    padding-left: 10px;
 }
 .Formupload2Container {
     display: block;
     text-align: center;
 
 }
-.Formcolumns .FormSignupbtn-box {
-    margin: 15px;
-    padding: 5px;
-    border-radius: 5px;
-
-
+ .FormSignupbtn-box {
+    display: flex;
+    padding-left: 500px;
+    padding-top: 20px;
+}
+ .FormSignupbtn-box #submitFormBtn {
+    margin-left: 50px;
+    height: 40px;
+    width: 60px;
+    background-color: #1D8676;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+ .FormSignupbtn-box #exitFormBtn {
+    height: 40px;
+    width: 60px;
+    background-color: #fff;
+    color: #1D8676;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #1D8676;
+    cursor: pointer;
 }

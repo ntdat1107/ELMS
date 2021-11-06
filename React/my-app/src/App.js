@@ -26,7 +26,6 @@ import AdminInstruc from './componentJS/Admin/AdminInstruc';
 import AdminLearner from './componentJS/Admin/AdminLearner';
 import AdminCourse from './componentJS/Admin/AdminCourse';
 import AdminAnnounce from './componentJS/Admin/AdminAnnouncement';
-import InstructorRegister from './componentJS/InstructorRegisterForm';
 import CourseView from "./componentJS/Guest/CourseView";
 import SearchLearnerUI from './componentJS/Guest/LearnerSearchPage';
 function App() {
@@ -59,7 +58,6 @@ function App() {
             <Route exact path='/admin/learner' component={AdminLearner}></Route>
             <Route exact path='/admin/managecourse' component={AdminCourse}></Route>
             <Route exact path='/admin/announcement' component={AdminAnnounce}></Route>
-            <Route exact path='/learner/registerInstructor' component={InstructorRegister}></Route>
             <Route exact path='/course_DADA' component={LearnerCourseMainPage}></Route>
             <Route exact path='/' component={HomePageUI}></Route>
             <Route exact path = "/course/1234/" component={CourseView} ></Route>
