@@ -6,9 +6,6 @@ import InsAnnouncement from "./InsAnnouncement"
 import InsManageProfile from "./InsManageProfile"
 import InnerCourse from "./InnerCourse";
 import TableOfLearner from "./TableOfLearner";
-import SideBarInstructor from '../sideBarInstructor';
-import Header from '../header';
-import cheems from "../../img/cheems.png"
 import HomePageUI from "../Guest/HomePageGuestUI";
 
 function InstructorUI() {
