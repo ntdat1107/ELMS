@@ -1,9 +1,11 @@
 import './CSS/Login.css'
 import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom"
+import { typeUser } from './PreLogin'
+
+
 
 const type='ins'
 function Login() {
-
     return (
         <div class="Loginpage">
             <div class="container">

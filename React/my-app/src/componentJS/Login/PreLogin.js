@@ -1,5 +1,9 @@
 import './CSS/PreLogin.css'
 import {Link} from 'react-router-dom';
+
+var typeUser = 0;
+
+
 function PreLogin() {
     const styleComponentLeft = {
         width: "320",
@@ -22,7 +26,7 @@ function PreLogin() {
                 
                 <div style= {styleComponentLeft}>
                     <div className = "PreLoginuser-container">
-                        <Link className="PreloginLink" to="/login">
+                        <Link className="PreloginLink" to="/login" onClick = {function() {typeUser = 0}}>
                             <div id = "PreLoginAdmin"> </div>
                             <div className = "PreLoginFrame" style={{border: "solid #F6BC00"}}>
                                 <div className="PreLogintext">Admin</div>
@@ -33,9 +37,9 @@ function PreLogin() {
                 
                 <div style= {styleComponent}>
                     <div className = "PreLoginuser-container">
-                        <Link className="PreloginLink" to="/login">
+                        <Link className="PreloginLink" to="/login"  onClick = {function() {typeUser = 1}}>
                             <div id = "PreLoginInstructor"> </div>
-                            <div className = "PreLoginFrame" style={{border: "solid #FC6B57"}} onClick = {function() {console.log("Instructor")}}>
+                            <div className = "PreLoginFrame" style={{border: "solid #FC6B57"}}>
                                 <div className="PreLogintext">Instructor</div>
                             </div>
                         </Link>
@@ -44,9 +48,9 @@ function PreLogin() {
 
                 <div style= {styleComponentRight}>
                     <div className = "PreLoginuser-container">
-                        <Link className="PreloginLink" to="/login">
+                        <Link className="PreloginLink" to="/login" onClick = {function() {typeUser = 2}}>
                             <div id = "PreLoginLearner"> </div>
-                            <div className = "PreLoginFrame" style={{border: "solid #58BAAB"}} onClick = {function() {console.log("Leanrner")}}>
+                            <div className = "PreLoginFrame" style={{border: "solid #58BAAB"}}>
                                 <div className="PreLogintext">Learner</div>
                             </div>
                         </Link>
@@ -57,5 +61,5 @@ function PreLogin() {
         
         )
     }
-
+export {typeUser};
 export default PreLogin;
