@@ -5,16 +5,10 @@ import DbCalendar from "../../componentJS/DbCalendar";
 import Statistic from "./Statistic";
 import MyCourse from "./MyCourse";
 import BarChart from "./ChartInstructor";
-import SideBarInstructor from '../sideBarInstructor';
-import Header from '../header';
-import cheems from "../../img/cheems.png"
 
 function InsDashboardUI () {
     return (
         <div id="insdb">
-            <SideBarInstructor/>
-        <Header linkAvt="/ins/manageprofile" link="/ins/dashboard" srcImg={cheems} name="Ngọ Tiến Đạt" gmail="tiendat_2001vn@gmail.com" type="Instructor"
-        idName="information"/>
             <div id="col1">
                 <About />
                 <Statistic learnerCount="500" videoCount="20" courseCount="6"/>
