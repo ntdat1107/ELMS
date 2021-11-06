@@ -30,3 +30,4 @@ To run the UI of the website, type the command
 yarn start
 ```
 # Result
+![image](https://user-images.githubusercontent.com/55391896/140615320-a3ba5506-8420-4e3c-9124-67fc32cbe509.png)
