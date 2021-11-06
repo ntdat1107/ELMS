@@ -26,7 +26,9 @@ const styleH = {
 function CourseForYou() {
     return (
         <div id="coursesCFY">
-            <p id="titleCFY">Courses For You</p>
+            <Link className="Link-coursename" to="/learner/search">
+                <p id="titleCFY">Courses For You</p>
+            </Link>
             <div id="listCoursesCFY">
                 <Scrollbars>
                     <CourseForYouCpn 
