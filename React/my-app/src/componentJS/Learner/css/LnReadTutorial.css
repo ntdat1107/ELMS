@@ -1,35 +1,44 @@
-#lnReadTutorial #takeNoteCpn {
+#lnReadTutorial #readTutorialCpn {
     margin-left: 325px;
     margin-top: 140px;
     height: 565px;
-    width: 1175px; 
-    background-image: url("../img/bgReadNote.png");
+    width: 1190px; 
+    background-image: url("../img/bgReadTutorial.png");
 }
-#lnReadTutorial #titleTQ p {
+#lnReadTutorial #titleRT p {
     font-size: 40px;
     padding-top: 60px;
     padding-left: 20px;
 }
-#lnReadTutorial #titleTQ {
+#lnReadTutorial #titleRT {
     font-weight: bold;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 #lnReadTutorial #typeFilter {
     font-size: 20px;
     color: #fff;
     font-weight: bold;
-    padding-left: 20px;
-    padding-top: 10px;
+    padding-left: 30px;
+    padding-top: 20px;
 }
-#lnReadTutorial #filterRN {
+#lnReadTutorial .dd-wrapper .dd-header{
+    display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;
+    align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;
+    position:relative;border:1px solid #dfdfdf;border-radius:3px;background-color:white;line-height:38px;cursor:default;cursor:pointer;
+    color: #1E5C5F;
+}
+#lnReadTutorial .dd-wrapper .dd-header-title{
+    font-weight:bold;
+}
+#lnReadTutorial #rowFilterRT {
     display: flex;
-    padding-top: 90px;
-    padding-left: 200px;
 }
-#lnReadTutorial #filterNote {
-    padding-left: 10px;
+#lnReadTutorial #filterTutorial {
+    padding-left: 20px;
     padding-top: 5px;
 }
-#lnReadTutorial #filterNote #DropdownBar .dd-wrapper {
+#lnReadTutorial #filterTutorial #DropdownBar .dd-wrapper {
     width: 500px;
     font-size: 14px;
 }
@@ -38,7 +47,7 @@
     color:white;
     font-size: 14px;
 }
-#lnReadTutorial #tableNote {
+#lnReadTutorial #tableTutorial {
     background-color: #fff;
     height: 270px;
     width: 800px;
@@ -46,19 +55,19 @@
     margin-top: 10px;
     border: 3px solid #c4c4c4;
 }
-#lnReadTutorial #stateNote {
+#lnReadTutorial #stateTutorial {
     display: flex;
     padding-top: 10px;
     height: 30px;
     padding-left: 20px;
 }
-#lnReadTutorial #stateNote #takenNote {
+#lnReadTutorial #stateTutorial #takenTutorial {
     height: 30px;
     width: 60px;
     color: #123E40;
     font-size: 14px;
 }
-#lnReadTutorial #stateNote #newNote {
+#lnReadTutorial #stateTutorial #newTutorial {
     height: 30px;
     width: 60px;
     color: #123E40;
@@ -68,17 +77,17 @@
     border-right: 3px solid #c4c4c4;
     font-size: 14px;
 }
-#lnReadTutorial #stateNote #newNote p {
+#lnReadTutorial #stateTutorial #newTutorial p {
     text-align: center;
 }
-#lnReadTutorial #stateNote #takenNote p {
+#lnReadTutorial #stateTutorial #takenTutorial p {
     text-align: center;
     padding-top: 3px;
 }
-#lnReadTutorial #tableNote{
+#lnReadTutorial #tableTutorial{
     width: 1130px;
 }
-#lnReadTutorial #tableNote .itemNote {
+#lnReadTutorial #tableTutorial .itemTutorial {
     display: flex;
     width: 1125px;
     height: 60px;
@@ -88,7 +97,7 @@
     padding-top: 20px;
     font-size: 12px;
 }
-#lnReadTutorial #tableNote .itemNote  #btnViewNote{
+#lnReadTutorial #tableTutorial .itemTutorial  #btnViewTutorial{
     width: 100px;
     height: 40px;
     color: #FC6B57;
@@ -99,11 +108,11 @@
     background-color: #fff;
     cursor: pointer;
 }
-#lnReadTutorial #tableNote .itemNote  #btnViewNote:hover {
+#lnReadTutorial #tableTutorial .itemTutorial  #btnViewTutorial:hover {
     color: #fff;
     background-color: #fc6b57;
 }
-#lnReadTutorial #tableNote .itemNote  #btnDownloadNote{
+#lnReadTutorial #tableTutorial .itemTutorial  #btnDownloadTutorial{
     width: 100px;
     height: 40px;
     color: #57BAAB;
@@ -115,66 +124,66 @@
     cursor: pointer;
     margin-left: 60px;
 }
-#lnReadTutorial #tableNote .itemNote  #btnDownloadNote:hover {
+#lnReadTutorial #tableTutorial .itemTutorial  #btnDownloadTutorial:hover {
     olor: #fff;
     background-color: #57BAAB;
 }
 
-#lnReadTutorial #tableNote #nameColNote {
+#lnReadTutorial #tableTutorial #nameColTutorial {
     font-weight: bold;
     display: flex;
     font-size: 14px;
     border-bottom: 4px solid #c4c4c4;
     padding-top: 5px;
 }
-#lnReadTutorial #tableNote #nameColNote #numberNote {
+#lnReadTutorial #tableTutorial #nameColTutorial #numberTutorial {
     height: 40px;
     width: 30px;
     margin-left: 20px;
     color: #103E2E;
 }
-#lnReadTutorial #tableNote #nameColNote #nameNote {
+#lnReadTutorial #tableTutorial #nameColTutorial #nameTutorial {
     height: 40px;
     width: 380px;
     color: #103E2E;
 }
-#lnReadTutorial #tableNote #nameColNote #courseOfNote {
+#lnReadTutorial #tableTutorial #nameColTutorial #courseOfTutorial {
     height: 40px;
     width: 380px;
     padding-left: 20px;
     color: #103E2E;
 }
-#lnReadTutorial #tableNote #nameColNote #stateViewNote{
+#lnReadTutorial #tableTutorial #nameColTutorial #stateViewTutorial{
     height: 40px;
     width: 160px;
     color: #103E2E;
 }
-#lnReadTutorial #tableNote #nameColNote #stateDownloadNote{
+#lnReadTutorial #tableTutorial #nameColTutorial #stateDownloadTutorial{
     height: 40px;
     width: 100px;
     color: #103E2E;
 }
-#lnReadTutorial #tableNote #scrollBar {
+#lnReadTutorial #tableTutorial #scrollBar {
     height: 210px;
 }
-#lnReadTutorial #tableRN {
+#lnReadTutorial #tableRT {
     padding-left: 10px;
 }
 
-#lnReadTutorial #tableNote .itemNote #numOfNote {
+#lnReadTutorial #tableTutorial .itemTutorial #numOfTutorial {
     width: 30px;
     height: 40px;
 }
-#lnReadTutorial #tableNote .itemNote #numOfNote p {
+#lnReadTutorial #tableTutorial .itemTutorial #numOfTutorial p {
     width: 30px;
     height: 40px;
 }
-#lnReadTutorial #tableNote .itemNote  .courseNote{
+#lnReadTutorial #tableTutorial .itemTutorial  .courseTutorial{
     width: 380px;
     height: 40px;
     color: #fff;
 }
-#lnReadTutorial #tableNote .itemNote  .courseNote p{
+#lnReadTutorial #tableTutorial .itemTutorial  .courseTutorial p{
     width: 250px;
     height: 20px;
     white-space: nowrap;
@@ -186,38 +195,38 @@
     margin-left: 20px;
 }
 
-#lnReadTutorial #tableNote .itemNote  #nameNote{
+#lnReadTutorial #tableTutorial .itemTutorial  #nameTutorial{
     width: 380px;
     height: 40px;
     color:#103E2E;
 }
 
-#lnReadTutorial #tableNote .itemNote  #nameNote p{
+#lnReadTutorial #tableTutorial .itemTutorial  #nameTutorial p{
     width: 380px;
     height: 40px;
     font-size: 14px;
 }
 
-#lnReadTutorial #tableContentNote{
+#lnReadTutorial #tableContentTutorial{
     padding-top: 0px;
 }
-#lnReadTutorial #tableNote .itemNote #course1 p{
+#lnReadTutorial #tableTutorial .itemTutorial #course1 p{
     background-color: #EF533D;
     background-size: cover;
 }
-#lnReadTutorial #tableNote .itemNote #course2 p{
+#lnReadTutorial #tableTutorial .itemTutorial #course2 p{
     background-color: #3A877B;
 }
-#lnReadTutorial #tableNote .itemNote #course3 p{
+#lnReadTutorial #tableTutorial .itemTutorial #course3 p{
     background-color: #3016E2;
 }
-#lnReadTutorial #tableNote .itemNote #course4 p{
+#lnReadTutorial #tableTutorial .itemTutorial #course4 p{
     background-color: #FC6B57;
 }
-#lnReadTutorial #tableNote .itemNote #course5 p{
+#lnReadTutorial #tableTutorial .itemTutorial #course5 p{
     background-color: #FF8F0B;
 }
-#lnReadTutorial #tableNote .itemNote #course6 p{
+#lnReadTutorial #tableTutorial .itemTutorial #course6 p{
     background-color: #F6BC00;
 }
 /* Pagination */

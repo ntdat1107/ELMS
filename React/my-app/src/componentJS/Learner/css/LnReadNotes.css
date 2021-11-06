@@ -1,4 +1,4 @@
-#lnReadNotes #takeNoteCpn {
+#lnReadNotes #readNoteCpn {
     margin-left: 325px;
     margin-top: 140px;
     height: 565px;
@@ -13,12 +13,21 @@
 #lnReadNotes #titleTQ {
     font-weight: bold;
 }
+#lnReadNotes .dd-wrapper .dd-header{
+    display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;
+    align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;
+    position:relative;border:1px solid #dfdfdf;border-radius:3px;background-color:white;line-height:38px;cursor:default;cursor:pointer;
+    color: #1E5C5F;
+}
+#lnReadNotes .dd-wrapper .dd-header-title{
+    font-weight:bold;
+}
 #lnReadNotes #typeFilter {
     font-size: 20px;
     color: #fff;
     font-weight: bold;
-    padding-left: 20px;
-    padding-top: 10px;
+    padding-left: 30px;
+    padding-top: 20px;
 }
 #lnReadNotes #filterRN {
     display: flex;
