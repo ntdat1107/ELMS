@@ -100,12 +100,10 @@ function InstructorRegister() {
                             </div>
 
                             <div >
-                                    <Link to='/learner/dashboard' className="linkReturn"><button type="button" class="FormSignupbtn-box">Exit</button></Link>
-                                    <Link to='/learner/dashboard' className="linkReturn" onclick = {function() {temp = 1}}>
+                                    <button type="button" class="FormSignupbtn-box">Exit</button>
                                         <button type="button" class="FormSignupbtn-box" >
                                             Submit
                                         </button>
-                                    </Link>
                             </div>
                         </div>
                     </div>
@@ -114,5 +112,4 @@ function InstructorRegister() {
         </div>
     )
 }
-export {temp};
 export default InstructorRegister;
