@@ -26,7 +26,7 @@ import AdminInstruc from './componentJS/Admin/AdminInstruc';
 import AdminLearner from './componentJS/Admin/AdminLearner';
 import AdminCourse from './componentJS/Admin/AdminCourse';
 import AdminAnnounce from './componentJS/Admin/AdminAnnouncement';
-
+import InstructorRegister from './componentJS/InstructorRegisterForm';
 function App() {
   return (
   <div className="App">
@@ -57,6 +57,7 @@ function App() {
             <Route exact path='/admin/learner' component={AdminLearner}></Route>
             <Route exact path='/admin/managecourse' component={AdminCourse}></Route>
             <Route exact path='/admin/announcement' component={AdminAnnounce}></Route>
+            <Route exact path='/learner/registerInstructor' component={InstructorRegister}></Route>
             {/* <Route exact path='/learner/course_DADA' component={}></Route> */}
             <Route exact path='/' component={HomePageUI}></Route>
       </Switch>

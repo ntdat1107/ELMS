@@ -1,14 +1,14 @@
 import React from "react";
 import "../css/LnReadNotes.css"
 import ReadNotesCpn from "./readNotesCpn"
-import Header from '../../header';
+import HeaderLn from '../../headerLn';
 import SideBarLearner       from '../../sideBarLearner';
 import avt from "../../../img/cheems.png";
 function LnReadNotes() {
     return (
         <div id="lnReadNotesUI">
             <SideBarLearner/>
-            <Header linkAvt="/learner/manageprofile" link="/learner/dashboard" srcImg={avt} name="Lâm Thành Dương" gmail="lamduong11201@gmail.com" type="Learner"
+            <HeaderLn linkAvt="/learner/manageprofile" link="/learner/dashboard" srcImg={avt} name="Lâm Thành Dương" gmail="lamduong11201@gmail.com" type="Learner"
             idName="information"/>
             <div id="lnReadNotes">
                 <ReadNotesCpn />

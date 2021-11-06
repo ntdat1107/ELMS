@@ -1,5 +1,5 @@
-import "./CSS/InstructorRegisterForm.css"
-
+import "../componentCSS/InstructorRegisterForm.css"
+import { Link } from "react-router-dom"
 function InstructorRegister() {
     return (
         <div class="Formcolumns">
@@ -98,9 +98,8 @@ function InstructorRegister() {
                             </div>
 
                             <div >
-                                    <button type="button" class="FormSignupbtn-box">Exit</button>
-                                    <button type="button" class="FormSignupbtn-box">Submit</button>
-
+                                    <Link to='/learner/dashboard' className="linkReturn"><button type="button" class="FormSignupbtn-box">Exit</button></Link>
+                                    <Link to='/learner/dashboard' className="linkReturn"><button type="button" class="FormSignupbtn-box">Submit</button></Link>
                             </div>
 
                         </div>
