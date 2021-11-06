@@ -2,8 +2,9 @@ import React, {useState} from 'react'
 import arrow from "../img/arrow.png"
 import { Link } from "react-router-dom"
 import { typeUser } from '../componentJS/Login/PreLogin'
+import {temp} from './InstructorRegisterForm'
 
-
+console.log(temp);
 const checked = (typeUser === 3) ? "TA" : "";
 
 function ArrowLN() {
