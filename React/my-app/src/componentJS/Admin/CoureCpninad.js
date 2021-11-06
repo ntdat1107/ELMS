@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import task from "./image/Task.png"
 import './CSS/AdminCourse.css'
-import CourseForYouCpn from '../Learner/js/courseForYouCpn'
+import CourseComponentAd from './CourseComponentAd'
 import change from './image/changeIcon.png'
 import minus from './image/Iconminus.png'
 import plus from './image/Iconplus.png'
@@ -72,7 +72,7 @@ function TaskButton({
             <div className={click2? 'detail-box open' : 'detail-box'} >
                         
                         <p id='close' onClick={closeBox}>X</p>
-                        <CourseForYouCpn 
+                        <CourseComponentAd 
                             imgSrcCourse = {imgSrcCourse} 
                             altCourse = {altCourse} 
                             Name = {Name}
@@ -187,7 +187,7 @@ function TaskButton({
                         <p id='close' onClick={closeBox}></p>
             </div>
 
-            <CourseForYouCpn 
+            <CourseComponentAd 
                 imgSrcCourse = {imgSrcCourse} 
                 altCourse = {altCourse} 
                 Name = {Name}

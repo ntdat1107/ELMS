@@ -12,18 +12,13 @@ function CourseComponentAd({
     rateScore,
     imgStar,
     totalRate,
-    tagColor,
-    linkToCourse
+    tagColor
 }) {
     return (
         <div id="courseCFY">
-            <Link className="link-to-course" to={linkToCourse}>
-                <img id = "imgCourse" src={imgSrcCourse} alt = {altCourse} width = "240px" height = "120px"></img>
-            </Link>
+            <img id = "imgCourse" src={imgSrcCourse} alt = {altCourse} width = "240px" height = "120px"></img>
             <div id="courseContent">
-                <Link className="link-to-course" to={linkToCourse}>
-                    <p id = "Name">{Name}</p>
-                </Link>
+                <p id = "Name">{Name}</p>
                 <p id = "Desc">{Desc}</p>
                 <p id = "Author">{Author}</p>
                 <div id="rateContent">
@@ -33,7 +28,6 @@ function CourseComponentAd({
                     <div id="p4"><p>{totalRate}</p></div>
                 </div>
             </div>
-          
         </div>
     )
 }

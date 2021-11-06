@@ -30,7 +30,7 @@ function Courseinad() {
             <p id="titleCFY">Courses For You</p>
             <div id="listCoursesCFY">
                 <Scrollbars>
-                    <div id='add-taskIcon'>
+                    
                         <TaskButton 
                             imgSrcCourse = {git} 
                             altCourse = "GitCourseImage" 
@@ -43,7 +43,8 @@ function Courseinad() {
                             totalRate="(10,123)"
                             tagColor={styleBC}
                         />                        
-                    </div>
+                    
+                    
                         <TaskButton 
                             imgSrcCourse = {network} 
                             altCourse = "NetWorkImage" 
@@ -56,6 +57,8 @@ function Courseinad() {
                             totalRate="(9999)"
                             tagColor={styleN}
                         />
+                       
+                        
                         <TaskButton 
                             imgSrcCourse = {linux} 
                             altCourse = "LinuxImage" 
@@ -68,6 +71,8 @@ function Courseinad() {
                             totalRate="(11113)"
                             tagColor={styleH}
                         />
+                     
+                        
                         <TaskButton 
                             imgSrcCourse = {ai} 
                             altCourse = "AIImage" 
@@ -80,6 +85,8 @@ function Courseinad() {
                             totalRate="(10,000)"
                             tagColor={styleBC}
                         />
+                      
+                        
                         <TaskButton 
                             imgSrcCourse = {js} 
                             altCourse = "JSImage" 
@@ -91,7 +98,8 @@ function Courseinad() {
                             imgStar={star} 
                             totalRate="(12345)"
                             tagColor={styleN}
-                        />
+                        />                
+                   
                         <TaskButton 
                             imgSrcCourse = {django} 
                             altCourse = "DjangoImage" 
@@ -104,6 +112,7 @@ function Courseinad() {
                             totalRate="(9876)"
                             tagColor={styleBC}
                         />
+                   
                 </Scrollbars>
             </div>
         </div>
