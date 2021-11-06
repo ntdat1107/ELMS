@@ -1,8 +1,9 @@
 # ELMS
 E-learning management system
 
-#Option 1: npm
+# Option 1: npm
 `cd .\React\my-app\`
+> Hello
 and then run
 `npm install`
 to install all needed packages.
