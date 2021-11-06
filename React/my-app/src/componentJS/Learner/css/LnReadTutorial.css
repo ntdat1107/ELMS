@@ -90,11 +90,10 @@
 #lnReadTutorial #tableTutorial .itemTutorial {
     display: flex;
     width: 1125px;
-    height: 60px;
+    height: 110px;
     padding-left: 20px;
     padding-right: 20px;
-    border-bottom: 2px solid #c4c4c4;
-    padding-top: 20px;
+    padding-top: 10px;
     font-size: 12px;
 }
 #lnReadTutorial #tableTutorial .itemTutorial  #btnViewTutorial{
@@ -150,7 +149,7 @@
 #lnReadTutorial #tableTutorial #nameColTutorial #courseOfTutorial {
     height: 40px;
     width: 380px;
-    padding-left: 20px;
+    padding-left: 10px;
     color: #103E2E;
 }
 #lnReadTutorial #tableTutorial #nameColTutorial #stateViewTutorial{
@@ -164,35 +163,28 @@
     color: #103E2E;
 }
 #lnReadTutorial #tableTutorial #scrollBar {
-    height: 210px;
+    height: 260px;
 }
 #lnReadTutorial #tableRT {
     padding-left: 10px;
 }
 
-#lnReadTutorial #tableTutorial .itemTutorial #numOfTutorial {
-    width: 30px;
-    height: 40px;
-}
-#lnReadTutorial #tableTutorial .itemTutorial #numOfTutorial p {
-    width: 30px;
-    height: 40px;
-}
 #lnReadTutorial #tableTutorial .itemTutorial  .courseTutorial{
-    width: 380px;
-    height: 40px;
+    width: 270px;
+    height: 30px;
     color: #fff;
 }
 #lnReadTutorial #tableTutorial .itemTutorial  .courseTutorial p{
     width: 250px;
-    height: 20px;
+    height: 30px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: center;
     padding: 2px;
     border-radius: 5px;
-    margin-left: 20px;
+    margin-left: 10px;
+    padding-top: 8px;
 }
 
 #lnReadTutorial #tableTutorial .itemTutorial  #nameTutorial{
@@ -208,7 +200,7 @@
 }
 
 #lnReadTutorial #tableContentTutorial{
-    padding-top: 0px;
+    padding-top: 50px;
 }
 #lnReadTutorial #tableTutorial .itemTutorial #course1 p{
     background-color: #EF533D;
@@ -268,4 +260,68 @@ background-color: #1E5C5F;
 #lnReadTutorial .paginationDisabled a {
 color: white;
 background-color: #1E5C5F;
+}
+
+/* Img Course Tutorial */
+
+#lnReadTutorial #imgTutorialDjango {
+    background-image: url(../img/djangoTutorial.png);
+    width: 184px;
+    height: 90px;
+
+}
+#lnReadTutorial #imgTutorialML {
+    background-image: url(../img/aiTutorial.png);
+    width: 184px;
+    height: 90px;
+
+}
+#lnReadTutorial #imgTutorialLinux {
+    background-image: url(../img/linuxTutorial.png);
+    width: 184px;
+    height: 90px;
+
+}
+
+/* Content Tutorial */
+#lnReadTutorial #contentTutorial {
+    border-radius: 10px;
+    border: 1px solid #1F4A33;
+    margin-left: 20px;
+    width: 900px;
+    padding-top: 5px;
+    height: 90px
+}
+/* Row 1 Tutorial */
+#lnReadTutorial #rowTutorialInfo1 {
+    display: flex;
+}
+#lnReadTutorial #rowTutorialInfo1 #titleTutorial {
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+#lnReadTutorial #rowTutorialInfo2 #descTutorial {
+    padding-left: 8px;
+    font-size: 14px;
+}
+#lnReadTutorial #rowTutorialInfo2 #descTutorial p {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 20px;
+    width: 850px;
+}
+#lnReadTutorial #rowTutorialInfo3 #btnReadTutorial {
+    width: 90px;
+    height: 25px;
+    color: #fff;
+    margin-left: 8px;
+    background-color: #206466;
+    border-radius: 10px;
+    border: 1px solid #000;
+    font-size: 14px;
+    margin-top: 5px;
 }
