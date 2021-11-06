@@ -3,9 +3,19 @@ import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom"
 import { typeUser } from './PreLogin'
 
 
+function handleUserType(Utype) {
+    if (typeUser == 0) {
+        return 0;
+    } else if (typeUser == 1) {
+        return 1;
+    } else {
+        return 2;
+    }
+}
 
 const type='ins'
 function Login() {
+    console.log(handleUserType(typeUser));
     return (
         <div class="Loginpage">
             <div class="container">
