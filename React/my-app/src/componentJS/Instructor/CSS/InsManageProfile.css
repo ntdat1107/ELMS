@@ -1,5 +1,6 @@
 #insMP #MP{
     display: flex;
+    position: absolute;
     margin-top: 125px;
     margin-left: 300px;
     box-sizing: border-box;

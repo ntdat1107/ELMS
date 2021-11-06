@@ -1,6 +1,6 @@
-/* #inner-course {
-    display: inline-block;
-} */
+#inner-course {
+    position: absolute;    
+}
 #inner-course #row-1 {
     display: inline-block;
     margin-left: 300px;
