@@ -14,6 +14,13 @@ import ForgotPass from './componentJS/Login/ForgotPass';
 import Policy from './componentJS/Login/Policy';
 import SearchGuestUI from './componentJS/Guest/SearchGuest';
 import CourseMainPage from './componentJS/Guest/CourseMainPage';
+import LnDashboard from './componentJS/Learner/js/dashboard';
+import LnMyCourses from './componentJS/Learner/js/myCourses';
+import LnTakeQuiz from './componentJS/Learner/js/takeQuiz';
+import LnReadTutorial from './componentJS/Learner/js/readTutorial';
+import LnReadNotes from './componentJS/Learner/js/readNotes';
+import LnAnnouncements from './componentJS/Learner/js/announcements';
+import LnManageProfile from './componentJS/Learner/js/manageProfile';
 
 function App() {
   return (
@@ -26,9 +33,7 @@ function App() {
             <Route exact path='/ins/managecourse/inner' component={InnerCourse}></Route>
             <Route exact path='/ins/announcement' component={InsAnnouncement}></Route>
             <Route exact path='/ins/managecourse/manage_my_learners' component={TableOfLearner}></Route>
-            <Route exact path='/learner/dashboard' component={InsDashboardUI} />
             <Route exact path='/admin/dashboard' component={InsDashboardUI} />
-            <Route exact path='/learner/dashboard' component={InsDashboardUI} />
             <Route exact path='/prelogin' component={PreLogin}></Route>
             <Route exact path='/login' component={Login}></Route>
             <Route exact path='/signup' component={Signup}></Route>
@@ -36,6 +41,14 @@ function App() {
             <Route exact path='/policy' component={Policy}></Route>
             <Route exact path='/search' component={SearchGuestUI}></Route>
             <Route exact path='/course/DADA' component={CourseMainPage}></Route>
+            <Route exact path='/learner/dashboard'      component={LnDashboard}></Route>
+            <Route exact path='/learner/mycourses'      component={LnMyCourses}></Route>
+            <Route exact path='/learner/takequiz'       component={LnTakeQuiz}></Route>
+            <Route exact path='/learner/readtutorial'   component={LnReadTutorial}></Route>
+            <Route exact path='/learner/readnotes'      component={LnReadNotes}></Route>
+            <Route exact path='/learner/announcements'  component={LnAnnouncements}></Route>
+            <Route exact path='/learner/manageprofile'  component={LnManageProfile}></Route>
+            {/* <Route exact path='/learner/course_DADA' component={}></Route> */}
             <Route exact path='/' component={HomePageUI}></Route>
       </Switch>
     </Router>

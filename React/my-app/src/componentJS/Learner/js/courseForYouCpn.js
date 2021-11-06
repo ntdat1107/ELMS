@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function courseForYouCpn({
     imgSrcCourse,
@@ -14,9 +15,13 @@ function courseForYouCpn({
 }) {
     return (
         <div id="courseCFY">
-            <img id = "imgCourse" src={imgSrcCourse} alt = {altCourse} width = "240px" height = "120px"></img>
+            <Link to="/learner/course/DADA">
+                <img id = "imgCourse" src={imgSrcCourse} alt = {altCourse} width = "240px" height = "120px"></img>
+            </Link>
             <div id="courseContent">
-                <p id = "Name">{Name}</p>
+                <Link className="Link-coursename" to="/learner/course/DADA">
+                    <p id = "Name">{Name}</p>
+                </Link>
                 <p id = "Desc">{Desc}</p>
                 <p id = "Author">{Author}</p>
                 <div id="rateContent">
