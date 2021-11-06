@@ -11,6 +11,9 @@ import cPython   from "./imgs/coursePython.png"
 import cCpp  from "./imgs/courseCpp.png"
 import DADA from "./imgs/courseDADAimg.png"
 
+import HeaderLearner from "../header";
+import avt from "../../img/cheems.png"
+
 import { NavLink } from "react-router-dom";
 
 
@@ -88,6 +91,28 @@ function CourseMainPage() {
         </div>
     )
 }
+
+function LearnerCourseMainPage() {
+    return (
+        <div id="courseMainPage">
+            <HeaderLearner 
+                linkAvt="/learner/manageprofile" 
+                link="/learner/dashboard" 
+                srcImg={avt} 
+                name="Lâm Thành Dương" 
+                gmail="lamduong11201@gmail.com" 
+                type="Learner"
+                idName="information"
+            />
+            <div id = "bodyPage">
+                <BackButton url = "/learner/dashboard"/>
+                <UpperBody course = {courseDADA}/>
+                <LowerBody/>
+            </div>
+        </div>
+    )
+}
+
 
 function LowerBody() {
     return (
@@ -193,5 +218,5 @@ function BackButton({url}) {
     )
 }
 
-export {BackButton};
+export {BackButton, LearnerCourseMainPage};
 export default CourseMainPage;
