@@ -1,21 +1,21 @@
 import './CSS/Login.css'
 import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom"
 import { typeUser } from './PreLogin'
+import { useState } from 'react';
 
 
-function handleUserType(Utype) {
-    if (typeUser == 0) {
-        return 0;
-    } else if (typeUser == 1) {
-        return 1;
-    } else {
-        return 2;
-    }
-}
 
-const type='ins'
 function Login() {
-    console.log(handleUserType(typeUser));
+    function handleUserType(Utype) {
+        if (Utype == 0) {
+            return "admin";
+        } else if (Utype == 1) {
+            return "ins";
+        } else {
+            return "learner";
+        }
+    }
+    let type=handleUserType(typeUser)
     return (
         <div class="Loginpage">
             <div class="container">
