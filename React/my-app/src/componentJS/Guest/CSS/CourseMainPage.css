@@ -178,12 +178,12 @@
     cursor: pointer;
 }
 
-.button {
+#backButton .button {
     transition-duration: 0.4s;
     background-color: #04EB93;
     color: #263238;
   }
   
-.button:hover { /* Green */
+#backButton .button:hover { /* Green */
     color: white;
 }

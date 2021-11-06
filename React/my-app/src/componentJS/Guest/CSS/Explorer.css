@@ -49,6 +49,11 @@
     cursor:pointer;
 }
 
+#lowerBody #courseBoard #boardHeader h1{
+    font-size: 36px;
+}
+
+
 #courseBoard #boardHeader p {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -163,6 +168,13 @@
     height: 200px;
     cursor: pointer;
     color: #fafafa;
+}
+#mainBody #upperBody h1{
+    font-size: 32px;
+}
+
+#mainBody #upperBody h2{
+    font-size: 24px;
 }
 
 #mainBody #small-titles {

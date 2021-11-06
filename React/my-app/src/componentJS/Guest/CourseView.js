@@ -9,8 +9,7 @@ import "./CSS/CourseVideoView.css";
 import MainPage from "./CourseVideoView";
 import { OutsidePage } from "./CourseVideoView";
 import avt from "../../img/cheems.png"
-
-
+import { BackButton } from './CourseMainPage'
 function V1() { 
     return (
     <MainPage url = "https://www.youtube.com/watch?v=D9G1VOjN_84"/>
@@ -58,7 +57,9 @@ function CourseView() {
     return(
         <div id = "CV">
             <Router>
-                <OutsidePage/>  
+                <BackButton url = "/learner/dashboard" style = {{"z-index" : "1000"}} />
+                <OutsidePage/>
+                
                 <Switch>
                     <Route exact path = "/course/1234/1_1" component={V1} ></Route>
                     <Route exact path = "/course/1234/1_2" component={V2} ></Route>

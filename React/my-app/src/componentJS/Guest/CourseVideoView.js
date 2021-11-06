@@ -1,11 +1,19 @@
 import React from "react";
 import { ProSidebar, Menu, MenuItem, SubMenu, SidebarHeader, SidebarFooter, SidebarContent} from 'react-pro-sidebar';
+
 import 'react-pro-sidebar/dist/css/styles.css';
 import playbutton from "./imgs/playbutton.png"
+
 import "./CSS/CourseVideoView.css";
 import ReactPlayer from 'react-player';
 import { NavLink } from "react-router-dom";
 import Scrollbars from "react-custom-scrollbars";
+import Navbar from 'react-bootstrap/Navbar';
+
+
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
+
 
 import Header from "../header";
 import avt from "../../img/cheems.png"
@@ -48,7 +56,7 @@ function VideoFrame({url}) {
                 url = {url}
                 controls = {true}
                 pip = {true}
-                width = {1000}
+                width = {900}
                 height = {450}
             />
         </div>
@@ -117,12 +125,7 @@ const courseContent = [
     }    
 ]
 
-const overView = {
-    "lessonName": "bbbb",
-    "lessonDur": "13 min",
-    "navlink" : "/course/1234/",
-    "url": "https://www.youtube.com/watch?v=im5tnxCcPXU",
-}
+
 
 function RightSideBar({courseContentInput}) {
     return(
@@ -184,8 +187,62 @@ function Lesson({lesson}) {
 function LowBody() {
     return(
         <div id = "lowBody">
-            lesson.lessonName
-            aaaaa
+            <LowNavBar/>
+            <LowBodyBox/>
+        </div>
+    )
+}
+
+function LowNavBar() {
+    return(
+        <div id = "lowNavBar">
+            <NavItem1 title = "overview"/>
+            <NavItem2 title= "hi1" url = "/h1" />
+            <NavItem2 title= "hi2" url = "/h2" />
+        </div>  
+    )
+}
+
+function NavItem2({title, url}) {
+    const handleClick = (props) => {console.log(props)}; 
+    return(
+        <div id = "navItem">
+            <NavLink to={url} id="nav-link" onClick = {handleClick}>
+                <h3>{title}</h3>
+            </NavLink>
+        </div>
+    )
+}
+
+function NavItem1({title}) {
+    const handleClick = (props) => {console.log(props)}; 
+    return(
+        <div id = "navItem" onClick = {handleClick}>
+                <h3>{title}</h3>
+        </div>
+    )
+}
+
+function LowBodyBox(){
+    return(
+        <div id = "lowBodyBox">
+            <Scrollbars style = {{height: 300}}>
+                <h2>what we'll learn</h2>
+                <p>Engineers, as practitioners of engineering, are people who invent, design, analyze, build, and test machines, systems, structures and materials to fulfill objectives and requirements while considering the limitations imposed by practicality, regulation, safety, and cost. The work of engineers forms the link between scientific discoveries and their subsequent applications to human and business needs and quality of life.</p>
+                
+                <h2>what we'll learn</h2>
+                <p>Engineers, as practitioners of engineering, are people who invent, design, analyze, build, and test machines, systems, structures and materials to fulfill objectives and requirements while considering the limitations imposed by practicality, regulation, safety, and cost. The work of engineers forms the link between scientific discoveries and their subsequent applications to human and business needs and quality of life.</p>
+                
+                <h2>what we'll learn</h2>
+                <p>Engineers, as practitioners of engineering, are people who invent, design, analyze, build, and test machines, systems, structures and materials to fulfill objectives and requirements while considering the limitations imposed by practicality, regulation, safety, and cost. The work of engineers forms the link between scientific discoveries and their subsequent applications to human and business needs and quality of life.</p>
+                
+                <h2>what we'll learn</h2>
+                <p>Engineers, as practitioners of engineering, are people who invent, design, analyze, build, and test machines, systems, structures and materials to fulfill objectives and requirements while considering the limitations imposed by practicality, regulation, safety, and cost. The work of engineers forms the link between scientific discoveries and their subsequent applications to human and business needs and quality of life.</p>
+                
+                <h2>what we'll learn</h2>
+                <p>Engineers, as practitioners of engineering, are people who invent, design, analyze, build, and test machines, systems, structures and materials to fulfill objectives and requirements while considering the limitations imposed by practicality, regulation, safety, and cost. The work of engineers forms the link between scientific discoveries and their subsequent applications to human and business needs and quality of life.</p>
+                
+            </Scrollbars>
         </div>
     )
 }

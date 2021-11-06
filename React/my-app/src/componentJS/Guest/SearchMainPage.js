@@ -9,9 +9,9 @@ import "./CSS/Dropdowns.css"
 
 function SearchMainPage() {
     return(
-        <div id = "searchResultWrapper">
+        <div id = "searchResultWrapper" >
             <DropDownBar/>
-            <CourseForYou/>
+            <CourseForYou className = "cfySearch"/>
         </div>
     )
 }  

@@ -6,7 +6,7 @@
     background-color:#1D1D1D;
     z-index: 10;
     margin-left: 60px;
-    padding-left: 50px;
+    padding-left: 90px;
     width: 1100px;
 
 }
@@ -30,8 +30,43 @@
     width: 1100px;
     height: 350px;
     background-color: #1D1D1D;
-    display: relative;
+    display: block;
+    position: relative;
+    color: #fafafa;
+
 }
+
+#lowBody #lowNavBar {
+    display: flex;
+    position: relative;
+    width: 1100px;
+    height: 50px;
+    background-color: #263238;
+    color: #fafafa;
+    padding-left: 40px;
+}
+
+#lowBody #lowBodyBox {
+    display: flex;
+    width: 1100px;
+    height: 300px;
+    background-color: #fafafa;
+    padding-left: 40px;
+    color:#263238;
+
+}
+
+#lowBody #lowBodyBox h2{
+    font-size: 26px;
+    margin: 10px;
+}
+
+#lowBody #lowBodyBox p{
+    font-size: 16px;
+    margin: 5px;
+    padding-right: 40px;
+}
+
 
 #cVideoView #rightSB {
     float: right;  
@@ -80,4 +115,46 @@
     margin-top: 125px;
     margin-left: 1200px;
     position: fixed;
+}
+
+#backButton .button{
+    z-index: 100;
+    position: fixed;
+    width: 90px;
+    height: 60px;
+    cursor: pointer;
+    margin-top: 200px;
+    margin-left: 30px;
+    border-radius: 30px;
+    border: none;
+    background-color: #04EB93;
+    cursor: pointer;
+
+}
+
+#backButton .button {
+    transition-duration: 0.4s;
+    background-color: #04EB93;
+    color: #263238;
+  }
+  
+#backButton .button:hover { /* Green */
+    color: white;
+}
+
+#lowBody #lowNavBar #navItem h3{
+    padding: 10px;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+#navItem #nav-link {
+    text-decoration: none;
+    color: #fafafa;
+}
+
+#navItem :hover {
+    color: aqua;
+    border-bottom:5px solid blanchedalmond;
+
 }
