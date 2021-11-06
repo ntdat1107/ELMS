@@ -1,10 +1,10 @@
 import React from "react";
 import "../css/LnReadTutorial.css"
-
+import ReadTutorialCpn from "./readTutorialCpn"
 function LnReadTutorial() {
     return (
         <div id="lnReadTutorial">
-            <p>ReadTutorial Page.</p>
+            <ReadTutorialCpn />
         </div>
     )
 }

@@ -1,25 +1,25 @@
 import React from 'react'
 
-function ItemNote({
-    numberNote,
-    courseNote,
-    nameNote,
-    idCourseNote,
+function ItemTutorial({
+    numberTutorial,
+    courseTutorial,
+    nameTutorial,
+    idCourseTutorial,
     callback = () => {}
 }) {
     return (
-        <div className="itemNote" >
-            <div id="numOfNote"><p>{numberNote}</p></div>
-            <div className="courseNote" id = {"course" + idCourseNote}>
-                <p>{courseNote}</p>
+        <div className="itemTutorial" >
+            <div id="numOfTutorial"><p>{numberTutorial}</p></div>
+            <div className="courseTutorial" id = {"course" + idCourseTutorial}>
+                <p>{courseTutorial}</p>
             </div>
-            <div id="nameNote">
-                <p>{nameNote} </p>
+            <div id="nameTutorial">
+                <p>{nameTutorial} </p>
             </div>
-            <input type="button" id="btnViewNote" value = "View PDF"/>
-            <input type="button" id="btnDownloadNote" value = "Download PDF"/>
+            <input type="button" id="btnViewTutorial" value = "View PDF"/>
+            <input type="button" id="btnDownloadTutorial" value = "Download PDF"/>
         </div>
     )
 }
 
-export default ItemNote;
+export default ItemTutorial;

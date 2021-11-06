@@ -1,19 +1,19 @@
 import React from 'react'
-import FilterRN from './filterRN';
-import TableRN from './tableRN';
-function TakeNoteCpn() {
+import FilterRT from './filterRT';
+import TableRT from './tableRT';
+function TakeTutorialCpn() {
     return (
-        <div id="takeNoteCpn">
-            <div id="filterRN">
-                <FilterRN />
+        <div id="takeTutorialCpn">
+            <div id="filterRT">
+                <FilterRT />
             </div>
-           <div id="tableContentNote">
-                <div id="tableRN">
-                    <TableRN />
+           <div id="tableContentTutorial">
+                <div id="tableRT">
+                    <TableRT />
                 </div>
            </div>
         </div>
     )
 }
 
-export default TakeNoteCpn
+export default TakeTutorialCpn

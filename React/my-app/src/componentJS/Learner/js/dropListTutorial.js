@@ -1,8 +1,8 @@
 import React from 'react';
 import { Dropdown } from 'reactjs-dropdown-component';
 
-const quizCourses = {
-  quizCourse: [
+const tutorialCourses = {
+  tutorialCourse: [
     {
       label: 'All course',
       value: '0',
@@ -37,7 +37,7 @@ const quizCourses = {
 
 
 const onChange = (item, name) => {console.log(item, name)}
-const { quizCourse } = quizCourses;
+const { tutorialCourse } = tutorialCourses;
 
 function DropdownBar() {
   return(
@@ -46,7 +46,7 @@ function DropdownBar() {
               <Dropdown
                 name="FilterBy"
                 title="All courses"
-                list={quizCourse}
+                list={tutorialCourse}
                 onChange={onChange}
               />        
           </div>
