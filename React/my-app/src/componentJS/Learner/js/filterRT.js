@@ -3,11 +3,16 @@ import DropListTutorial from './dropListTutorial';
 function FilterRT() {
     return (
         <div id = "filterRT">
-            <div id="typeFilter">
-                Courses:
+            <div id="titleRT">
+                <p>Tutorial</p>
             </div>
-            <div id="filterTutorial">
-                <DropListTutorial />
+            <div id="rowFilterRT">
+                <div id="typeFilter">
+                    Courses:
+                </div>
+                <div id="filterTutorial">
+                    <DropListTutorial />
+                </div>
             </div>
         </div>
     )

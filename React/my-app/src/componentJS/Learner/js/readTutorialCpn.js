@@ -1,9 +1,9 @@
 import React from 'react'
 import FilterRT from './filterRT';
 import TableRT from './tableRT';
-function TakeTutorialCpn() {
+function ReadTutorialCpn() {
     return (
-        <div id="takeTutorialCpn">
+        <div id="readTutorialCpn">
             <div id="filterRT">
                 <FilterRT />
             </div>
@@ -16,4 +16,4 @@ function TakeTutorialCpn() {
     )
 }
 
-export default TakeTutorialCpn
+export default ReadTutorialCpn
