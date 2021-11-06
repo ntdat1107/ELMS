@@ -6,7 +6,7 @@ function LogIn() {
 
     return (
         <div id = "headerButton">
-            <Link to="/login">
+            <Link to="/prelogin">
                 <button id = "logInButton">
                     <p>Log In</p>
                 </button>

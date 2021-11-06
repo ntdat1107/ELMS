@@ -35,7 +35,7 @@ function Login() {
                                 </Link>
                             </div>
                             <div class="btn-box">
-                                <Link to={'/'+type}>
+                                <Link to={'/'+type+'/dashboard'}>
                                     <button type="button" class="toggle-btn1">Log in</button>
                                 </Link>
                                 <Link to='/signup'>
