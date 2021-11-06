@@ -40,7 +40,7 @@
 }
 #lnReadNotes #tableNote {
     background-color: #fff;
-    height: 280px;
+    height: 270px;
     width: 800px;
     margin-left: 20px;
     margin-top: 10px;
@@ -155,7 +155,7 @@
     color: #103E2E;
 }
 #lnReadNotes #tableNote #scrollBar {
-    height: 220px;
+    height: 210px;
 }
 #lnReadNotes #tableRN {
     padding-left: 10px;
@@ -199,7 +199,7 @@
 }
 
 #lnReadNotes #tableContentNote{
-    padding-top: 10px;
+    padding-top: 0px;
 }
 #lnReadNotes #tableNote .itemNote #course1 p{
     background-color: #EF533D;
