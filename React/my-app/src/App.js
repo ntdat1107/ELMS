@@ -21,6 +21,11 @@ import LnReadTutorial from './componentJS/Learner/js/readTutorial';
 import LnReadNotes from './componentJS/Learner/js/readNotes';
 import LnAnnouncements from './componentJS/Learner/js/announcements';
 import LnManageProfile from './componentJS/Learner/js/manageProfile';
+import AdminDashboard from './componentJS/Admin/AdminDashboard';
+import AdminInstruc from './componentJS/Admin/AdminInstruc';
+import AdminLearner from './componentJS/Admin/AdminLearner';
+import AdminCourse from './componentJS/Admin/AdminCourse';
+import AdminAnnounce from './componentJS/Admin/AdminAnnouncement';
 
 function App() {
   return (
@@ -33,7 +38,6 @@ function App() {
             <Route exact path='/ins/managecourse/inner' component={InnerCourse}></Route>
             <Route exact path='/ins/announcement' component={InsAnnouncement}></Route>
             <Route exact path='/ins/managecourse/manage_my_learners' component={TableOfLearner}></Route>
-            <Route exact path='/admin/dashboard' component={InsDashboardUI} />
             <Route exact path='/prelogin' component={PreLogin}></Route>
             <Route exact path='/login' component={Login}></Route>
             <Route exact path='/signup' component={Signup}></Route>
@@ -48,6 +52,11 @@ function App() {
             <Route exact path='/learner/readnotes'      component={LnReadNotes}></Route>
             <Route exact path='/learner/announcements'  component={LnAnnouncements}></Route>
             <Route exact path='/learner/manageprofile'  component={LnManageProfile}></Route>
+            <Route exact path='/admin/dashboard' component={AdminDashboard}></Route>
+            <Route exact path='/admin/instructor' component={AdminInstruc}></Route>
+            <Route exact path='/admin/learner' component={AdminLearner}></Route>
+            <Route exact path='/admin/managecourse' component={AdminCourse}></Route>
+            <Route exact path='/admin/announcement' component={AdminAnnounce}></Route>
             {/* <Route exact path='/learner/course_DADA' component={}></Route> */}
             <Route exact path='/' component={HomePageUI}></Route>
       </Switch>
