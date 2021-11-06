@@ -73,22 +73,22 @@ const courseContent = [
         ]
     },
     {
-        "sessionName": "AAAA",
+        "sessionName": "Chapter 1: Fantastic Beasts",
         "lessonList" : [
             {
-                "lessonName": "bbbb",
+                "lessonName": "Where",
                 "lessonDur": "13 min",
                 "navlink" : "/course/1234/1_1",
                 "url": "https://www.youtube.com/watch?v=im5tnxCcPXU",
             },
             {
-                "lessonName": "cccc",
+                "lessonName": "To",
                 "lessonDur": "34 min",
                 "navlink" : "/course/1234/1_2",
                 "url" : "https://www.youtube.com/watch?v=8GEU6zkCpT8",
             },
             {
-                "lessonName": "dddd",
+                "lessonName": "Find Them",
                 "lessonDur": "25 min",
                 "navlink" : "/course/1234/1_3",
                 "url" : "https://www.youtube.com/watch?v=D9G1VOjN_84",
@@ -97,22 +97,22 @@ const courseContent = [
         ]
     },
     {
-        "sessionName": "BBBB",
+        "sessionName": "Chapter 2: Thor",
         "lessonList" : [
             {
-                "lessonName": "bbbb",
+                "lessonName": "Love",
                 "lessonDur": "13 min",
                 "navlink" : "/course/1234/2_1",
                 "url" : "https://www.youtube.com/watch?v=rGSsg93ZrT4",
             },
             {
-                "lessonName": "cccc",
+                "lessonName": "And",
                 "lessonDur": "34 min",
                 "navlink" : "/course/1234/2_2",
                 "url" : "https://www.youtube.com/watch?v=Fj3ZZIlQdlI",
             },
             {
-                "lessonName": "dddd",
+                "lessonName": "Thunder",
                 "lessonDur": "25 min",
                 "navlink" : "/course/1234/2_3",
                 "url" : "https://www.youtube.com/watch?v=zF5Ddo9JdpY",
@@ -191,9 +191,9 @@ function LowBody() {
 function LowNavBar() {
     return(
         <div id = "lowNavBar">
-            <NavItem1 title = "overview"/>
-            <NavItem2 title= "hi1" url = "/h1" />
-            <NavItem2 title= "hi2" url = "/h2" />
+            <NavItem1 title = "Overview"/>
+            <NavItem2 title= "Quiz" url = "/learner/takeQuiz" />
+            <NavItem2 title= "Turorial" url = "/learner/readTutorial" />
         </div>  
     )
 }
@@ -236,7 +236,6 @@ function LowBodyBox(){
                 
                 <h2>what we'll learn</h2>
                 <p>Engineers, as practitioners of engineering, are people who invent, design, analyze, build, and test machines, systems, structures and materials to fulfill objectives and requirements while considering the limitations imposed by practicality, regulation, safety, and cost. The work of engineers forms the link between scientific discoveries and their subsequent applications to human and business needs and quality of life.</p>
-                
             </Scrollbars>
         </div>
     )

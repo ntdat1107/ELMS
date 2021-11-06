@@ -28,6 +28,7 @@ import AdminCourse from './componentJS/Admin/AdminCourse';
 import AdminAnnounce from './componentJS/Admin/AdminAnnouncement';
 import InstructorRegister from './componentJS/InstructorRegisterForm';
 import CourseView from "./componentJS/Guest/CourseView";
+import SearchLearnerUI from './componentJS/Guest/LearnerSearchPage';
 function App() {
   return (
   <div className="App">
@@ -62,6 +63,8 @@ function App() {
             <Route exact path='/course_DADA' component={LearnerCourseMainPage}></Route>
             <Route exact path='/' component={HomePageUI}></Route>
             <Route exact path = "/course/1234/" component={CourseView} ></Route>
+            <Route exact path = "/learner/search/" component={SearchLearnerUI} ></Route>
+            
       </Switch>
     </Router>
   </div>  

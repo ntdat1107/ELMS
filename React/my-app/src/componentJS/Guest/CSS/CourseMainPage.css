@@ -31,18 +31,21 @@
     color: #fafafa;
     margin: 10px;
     cursor: context-menu;
+    font-size: 16px;
 }
 
 #upperBody #informationBox h1{
     color: #fafafa;
     margin: 10px;
     cursor: context-menu;
+    font-size: 36px;
 }
 
 #upperBody #informationBox h2{
     color: #fafafa;
     margin: 10px;
     cursor: pointer;
+    font-size: 24px;
 }
 
 #upperBody #informationBox #rate{
@@ -116,6 +119,15 @@
     cursor: context-menu;
 }
 
+#lowerBody1 #infoBox h2{
+    font-size: 24px;
+}
+
+#lowerBody1 #infoBox h3{
+    font-size: 18px;
+}
+
+
 #lowerBody1 #courseBoard {
     padding: 10px;
     padding-top: 0px;
@@ -139,6 +151,7 @@
     margin-left: auto;
     width: auto;
     text-align: center;
+    font-size: 28px;
     
 }
 
