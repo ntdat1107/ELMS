@@ -22,7 +22,6 @@ return (
             <Route exact path='/ins/managecourse/inner' component={InnerCourse}></Route>
             <Route exact path='/ins/announcement' component={InsAnnouncement}></Route>
             <Route exact path='/ins/managecourse/manage_my_learners' component={TableOfLearner}></Route>
-            <Route exact path='/learner/dashboard' component={InsDashboardUI} />
             <Route exact path='/' component={HomePageUI}></Route> 
         </Switch>
     </Router>
