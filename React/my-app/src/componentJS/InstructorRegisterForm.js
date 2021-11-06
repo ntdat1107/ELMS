@@ -1,7 +1,7 @@
 import "../componentCSS/InstructorRegisterForm.css"
 import { Link } from "react-router-dom"
 
-
+var temp = 0;
 function InstructorRegister() {
     return (
         <div class="Formcolumns">
@@ -101,7 +101,7 @@ function InstructorRegister() {
 
                             <div >
                                     <Link to='/learner/dashboard' className="linkReturn"><button type="button" class="FormSignupbtn-box">Exit</button></Link>
-                                    <Link to='/learner/dashboard' className="linkReturn">
+                                    <Link to='/learner/dashboard' className="linkReturn" onclick = {function() {temp = 1}}>
                                         <button type="button" class="FormSignupbtn-box" >
                                             Submit
                                         </button>
@@ -114,4 +114,5 @@ function InstructorRegister() {
         </div>
     )
 }
+export {temp};
 export default InstructorRegister;
