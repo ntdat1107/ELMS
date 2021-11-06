@@ -15,7 +15,7 @@ function LoginController() {
     return (
         <Router>
             <Switch>
-                <Route exact path='/ins' component={InstructorUI} />
+                <Route exact path='/ins/dashboard' component={InstructorUI} />
                 <Route exact path='/prelogin' component={PreLogin}></Route>
                 <Route exact path='/login' component={Login}></Route>
                 <Route exact path='/signup' component={Signup}></Route>

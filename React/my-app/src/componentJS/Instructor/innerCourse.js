@@ -7,6 +7,12 @@ import Scrollbars from 'react-custom-scrollbars';
 import CourseSection from './CourseSection';
 import MyCourse from './MyCourse'
 import OtherAction from './OtherAction';
+
+import SideBarInstructor from '../sideBarInstructor';
+import Header from '../header';
+import cheems from "../../img/cheems.png"
+
+
 const styleBC = {
     backgroundColor: "#F8D92E",
     color: "#4B0C0C"
@@ -14,7 +20,11 @@ const styleBC = {
 
 function InnerCourse() {
     return (
-        <div id="inner-course">
+        <div id="inner-course-UI">
+            <SideBarInstructor/>
+            <Header linkAvt="/ins/manageprofile" link="/ins/dashboard" srcImg={cheems} name="Ngọ Tiến Đạt" gmail="tiendat_2001vn@gmail.com" type="Instructor"
+        idName="information"/>
+            <div id="inner-course">
             <div id="row-1">
                 <CourseComponent 
                         imgSrcCourse = {git} 
@@ -45,7 +55,7 @@ function InnerCourse() {
                     <MyCourse titleName="My other course" heightSize="45px" widthSize="45px" />
                 </div>
             </div>
-
+            </div>
         </div>
     )
 }
