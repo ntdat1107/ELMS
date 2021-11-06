@@ -16,4 +16,17 @@ To run the UI of the website, type the command
 npm start
 ```
 # Option 2: yarn
-`npx create-react-app <your-app-name>`
+First, from the root, run the command:
+```
+cd .\React\my-app\
+```
+and then run
+```
+yarn install
+```
+to install all needed packages.
+To run the UI of the website, type the command
+```
+yarn start
+```
+# Result
