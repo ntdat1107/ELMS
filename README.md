@@ -5,7 +5,6 @@ E-learning management system
 First, from the root, run the command:
 ```
 cd .\React\my-app\
-npx create-react-app <your-app-name>
 ```
 and then run
 ```
