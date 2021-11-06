@@ -11,10 +11,6 @@ import network from "../Learner/img/network.png";
 import star from "../Learner/img/star.png";
 import "./CSS/InsManagerCourse.css"
 
-import SideBarInstructor from '../sideBarInstructor';
-import Header from '../header';
-import cheems from "../../img/cheems.png"
-
 const styleBC = {
     backgroundColor: "#F8D92E",
     color: "#4B0C0C"
@@ -28,11 +24,7 @@ const styleH = {
     color: "#FFFFFF"
 }
 function InsManagerCourse () {
-return (
-    <div id="insMC-UI">
-        <SideBarInstructor/>
-        <Header linkAvt="/ins/manageprofile" link="/ins/dashboard" srcImg={cheems} name="Ngọ Tiến Đạt" gmail="tiendat_2001vn@gmail.com" type="Instructor"
-        idName="information"/>
+    return (
         <div id="insMC">
             <Scrollbars>
                 <CourseComponent 
@@ -116,7 +108,6 @@ return (
                 />
             </Scrollbars>
         </div>
-    </div>
     )
 }
 

@@ -6,7 +6,6 @@ import remove from "../Admin/image/delete.png"
 import moreInfo from "../Admin/image/moreInfo.png"
 import grantpms from "../Admin/image/grantpermission.png"
 import TableComponent from "../Admin/TableComponent"
-import "../Admin/CSS/AdminInstruc.css"
 
 function TableCpn() {
     const [users, setUsers] = useState(JsonData.slice(0, 100));
