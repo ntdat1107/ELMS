@@ -2,9 +2,11 @@
 E-learning management system
 
 # Option 1: npm
+First, from the root, run the command:
+(
 `cd .\React\my-app\`
-# Option 1
 `npx create-react-app <your-app-name>`
+)
 and then run
 `npm install`
 to install all needed packages.
