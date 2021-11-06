@@ -11,7 +11,9 @@ and then run
 npm install
 ```
 to install all needed packages.
-Then type `npm start` to run the UI of the website
-
+To run the UI of the website, type the command
+```
+npm start
+```
 # Option 2: yarn
 `npx create-react-app <your-app-name>`
