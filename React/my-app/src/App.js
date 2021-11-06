@@ -13,7 +13,7 @@ import Signup from './componentJS/Login/SignUp';
 import ForgotPass from './componentJS/Login/ForgotPass';
 import Policy from './componentJS/Login/Policy';
 import SearchGuestUI from './componentJS/Guest/SearchGuest';
-import CourseMainPage from './componentJS/Guest/CourseMainPage';
+import CourseMainPage, { LearnerCourseMainPage } from './componentJS/Guest/CourseMainPage';
 import LnDashboard from './componentJS/Learner/js/dashboard';
 import LnMyCourses from './componentJS/Learner/js/myCourses';
 import LnTakeQuiz from './componentJS/Learner/js/takeQuiz';
@@ -27,6 +27,7 @@ import AdminLearner from './componentJS/Admin/AdminLearner';
 import AdminCourse from './componentJS/Admin/AdminCourse';
 import AdminAnnounce from './componentJS/Admin/AdminAnnouncement';
 import InstructorRegister from './componentJS/InstructorRegisterForm';
+import CourseView from "./componentJS/Guest/CourseView";
 function App() {
   return (
   <div className="App">
@@ -58,8 +59,9 @@ function App() {
             <Route exact path='/admin/managecourse' component={AdminCourse}></Route>
             <Route exact path='/admin/announcement' component={AdminAnnounce}></Route>
             <Route exact path='/learner/registerInstructor' component={InstructorRegister}></Route>
-            {/* <Route exact path='/learner/course_DADA' component={}></Route> */}
+            <Route exact path='/course_DADA' component={LearnerCourseMainPage}></Route>
             <Route exact path='/' component={HomePageUI}></Route>
+            <Route exact path = "/course/1234/" component={CourseView} ></Route>
       </Switch>
     </Router>
   </div>  

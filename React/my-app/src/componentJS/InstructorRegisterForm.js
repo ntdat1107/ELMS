@@ -114,5 +114,4 @@ function InstructorRegister() {
         </div>
     )
 }
-
 export default InstructorRegister;

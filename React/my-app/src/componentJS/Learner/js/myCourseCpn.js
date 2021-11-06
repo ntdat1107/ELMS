@@ -4,6 +4,7 @@ import SearchBar from "../../searchBar"
 import "../css/LnMyCourses.css"
 import searchIconMC from "../img/searchMC.png"
 import TableCourses from "./tableCourses"
+
 function ListMC() {
     return (
         <div id = "myCourses">

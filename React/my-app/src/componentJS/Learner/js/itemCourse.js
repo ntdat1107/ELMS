@@ -3,7 +3,7 @@ import moreImg from "../img/more.png"
 import share from "../img/shareM.png"
 import favorite from "../img/favoriteM.png"
 import archived from "../img/archivedM.png"
-
+import {Link} from 'react-router-dom'
 function OpenMore() {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click);
@@ -46,7 +46,9 @@ function ItemCourse({
                 <OpenMore />
             </div>
             <div id="nameCourse">
-                <p>{nameCourse}</p>
+                <Link className="Link-coursename" to="/course/1234/">
+                    <p>{nameCourse}</p>
+                </Link>
             </div>
             <div id="authorCourse">
                 <p>{authorCourse} </p>
