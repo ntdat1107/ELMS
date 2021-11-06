@@ -11,18 +11,6 @@ import HomePageUI from "../Guest/HomePageGuestUI";
 function InstructorUI() {
 return (
 <div className="insUI">
-    <Router>
-        <Switch>
-            <Route exact path='/ins/manageprofile' component={InsManageProfile}></Route>            
-            <Route exact path='/ins/dashboard' component={InsDashboardUI}></Route>
-            <Route exact path='/ins/managecourse' component={InsManagerCourse}></Route>
-            <Route exact path='/ins/managecourse/inner' component={InnerCourse}></Route>
-            <Route exact path='/ins/announcement' component={InsAnnouncement}></Route>
-            <Route exact path='/ins/managecourse/manage_my_learners' component={TableOfLearner}></Route>
-            <Route exact path='/learner/dashboard' component={InsDashboardUI} />
-            <Route exact path='/' component={HomePageUI}></Route> 
-        </Switch>
-    </Router>
 </div>
 );
 }

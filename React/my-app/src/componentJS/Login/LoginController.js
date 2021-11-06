@@ -13,19 +13,7 @@ import HomePageUI from "../Guest/HomePageGuestUI"
 
 function LoginController() {
     return (
-        <Router>
-            <Switch>
-                <Route exact path='/ins/dashboard' component={InstructorUI} />
-                <Route exact path='/learner/dashboard' component={InstructorUI} />
-                <Route exact path='/admin/dashboard' component={InstructorUI} />
-                <Route exact path='/prelogin' component={PreLogin}></Route>
-                <Route exact path='/login' component={Login}></Route>
-                <Route exact path='/signup' component={Signup}></Route>
-                <Route exact path='/forgotpass' component={ForgotPass}></Route>
-                <Route exact path='/policy' component={Policy}></Route>
-                <Route exact path='/' component={HomePageUI} />
-            </Switch>
-        </Router>
+        <div id="no1"></div>
     )
     
 }

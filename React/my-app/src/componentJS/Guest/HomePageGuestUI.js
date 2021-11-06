@@ -18,7 +18,7 @@ import Signup from "../Login/SignUp";
 import LoginController from "../Login/LoginController";
 import InsDashboardUI from "../Instructor/InsDashboardUI";
 
-function HP() {
+function HomePageUI() {
     return (
         <div>
             <Header/>
@@ -28,21 +28,5 @@ function HP() {
     )
 }
 
-function HomePageUI() {
-    return (
-            <div id="homePageUI">
-                <Router>
-                    <Switch>
-                        <Route exact path='/search' component={SearchGuestUI}></Route>
-                        <Route exact path='/course/DADA' component={CourseMainPage}></Route>
-                        <Route exact path='/' component={HP}></Route>
-                        <Route exact path='/prelogin' component={LoginController}></Route> 
-                        <Route exact path='/signup' component={LoginController}></Route>                       
-                    </Switch>
-                </Router>
-            </div>
-
-    )
-}
 
 export default HomePageUI;
