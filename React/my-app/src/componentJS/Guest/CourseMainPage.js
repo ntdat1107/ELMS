@@ -16,9 +16,6 @@ import avt from "../../img/cheems.png"
 
 import { NavLink } from "react-router-dom";
 
-
-
-
 const courses = {
     "name": "Similar Courses",
     "displayButton": false,
@@ -94,7 +91,7 @@ function CourseMainPage() {
 
 function LearnerCourseMainPage() {
     return (
-        <div id="courseMainPage">
+        <div id="learnerCourseMainPage">
             <HeaderLearner 
                 linkAvt="/learner/manageprofile" 
                 link="/learner/dashboard" 
