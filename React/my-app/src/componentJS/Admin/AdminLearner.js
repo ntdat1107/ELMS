@@ -5,7 +5,7 @@ import SideBarAdmin from "../Admin-sideBar";
 import HeaderAdmin from '../header';
 import cheems from "../../img/cheems.png"
 
-function AdminInstruc () {
+function AdminLearner () {
     return (
         <div id='adminlearner-UI'>
         <div className="AdminUI">
@@ -21,4 +21,4 @@ function AdminInstruc () {
     )
 }
 
-export default AdminInstruc;
+export default AdminLearner;

@@ -37,7 +37,7 @@ function Signup() {
                                     <a>Privacy Policy</a>
                                 </Link>
                             </div>
-                            <Link to='prelogin'>
+                            <Link to='/'>
                                 <div class="Signupbtn-box">
                                     <button type="button" class="Signuptoggle-btn1">Sign up</button>
 

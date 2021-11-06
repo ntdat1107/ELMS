@@ -12,7 +12,7 @@ import manageProfileImg from "../img/profile.png"
 import footer from "../img/footer.png"
 
 
-function SideBarInstructor() {    
+function SideBarLearner() {    
 return (
     <div id="SideBar">
         <ul id="SubSideBar">
@@ -33,4 +33,4 @@ return (
 }
 
 
-export default SideBarInstructor;
+export default SideBarLearner;

@@ -21,7 +21,7 @@ function TableTutorial() {
             courseTutorial={tutorial.course}
             titleTutorial={tutorial.title}
             descTutorial = {tutorial.desc}
-            idCourseTutorial = {tutorial.id}
+            idTutorial={tutorial.id}
         />
       </div>
     );

@@ -1,7 +1,6 @@
 import './CSS/Login.css'
-import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom"
+import {Link } from "react-router-dom"
 import { typeUser } from './PreLogin'
-import { useState } from 'react';
 
 
 
