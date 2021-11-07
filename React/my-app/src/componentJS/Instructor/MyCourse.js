@@ -19,13 +19,13 @@ function MyCourse({
                 </Link>
             </div>
             <div id="my-c-list">
-                <Link to={"/ins/managecourse/python_for_beginner"}>
+                <Link to={"/ins/managecourse/inner"}>
                     <div id="first-c">
                         <img src={python} alt="ImgCourse" height={heightSize} width={widthSize}/>
                         <p>Python for beginners</p>
                     </div>
                 </Link>
-                <Link to={"/ins/managecourse/javascript"}>
+                <Link to={"/ins/managecourse/inner"}>
                     <div id="second-c">
                         <img src={JS} alt="ImgCourse" height={heightSize} width={widthSize} />
                         <p>Javascript</p>
