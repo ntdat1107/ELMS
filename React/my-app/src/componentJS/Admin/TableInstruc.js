@@ -53,7 +53,7 @@ function TableInstruc2() {
         </div>
 
         
-          <Scrollbars style={{ width: "100%", height: 430 }}>
+          <Scrollbars style={{ width: "100%", height: 275 }}>
             {displayUsers}
           </Scrollbars>
 
