@@ -47,6 +47,14 @@
     border: 1px solid black;
 }
 
+#admininstruc-UI #tableinstruc {
+    height: 381px;
+}
+
+#adminlearner-UI #tableinstruc {
+    height: 381px;
+}
+
 /*_____display: flex là làm cho các block trong cùng một block lớn thẳng hàng_____*/
 #tableinstruc #titletable {
     border-bottom: 2px solid black;
@@ -121,6 +129,7 @@
 .paginationBttns {
   width: 100%;
   height: 40px;
+  margin-top: 10px;
   list-style: none;
   display: flex;
   justify-content: center;
