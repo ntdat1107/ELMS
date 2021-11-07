@@ -1,11 +1,11 @@
 import React from "react";
 import CourseForYou from "../Learner/js/courseForYou";
 import "../Learner/css/LnDashboard.css"
-import star from "../Learner/img/star.png"
 import "./CSS/SearchMainPage.css"
 
 import DropDownBar from "./DropDownList";
 import "./CSS/Dropdowns.css"
+import { Link } from "react-router-dom";
 
 function SearchMainPage() {
     return(
@@ -26,11 +26,13 @@ function FloatBar() {
                     Learn effectively, learn with us
                 </h1>
             </div>
-            <button>
-                <h2>
-                    Join now
-                </h2>
-            </button>
+            <Link to="/signup">
+                <button>
+                    <h2>
+                        Join now
+                    </h2>
+                </button>
+            </Link>
         </div>
     )
 }
