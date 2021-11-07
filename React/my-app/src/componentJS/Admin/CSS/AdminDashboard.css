@@ -2,7 +2,7 @@
 #number {                                   /*This is the biggest, covering all the elements below*/
     color: #160E4D;
     margin-left: 390px;
-    margin-top: 170px;
+    margin-top: 130px;
     display: flex;
 }
 
@@ -43,7 +43,7 @@
 #numofinstruc{
     background-color: #CDBBFF;
     width: 321px;
-    height: 180px;
+    height: 160px;
     position: relative;
     box-shadow: 1px 2px black;
     border-radius: 7px;
@@ -54,7 +54,7 @@
     background-color: #A2D2FF;
     margin-left: 40px;
     width: 321px;
-    height: 180px;
+    height: 160px;
     position: relative;
     box-shadow: 1px 2px black;
     border-radius: 7px;
@@ -65,7 +65,7 @@
     background-color: #68E2B4;
     margin-left: 40px;
     width: 321px;
-    height: 180px;
+    height: 160px;
     position: relative;
     box-shadow: 1px 2px black;
     border-radius: 7px;
@@ -79,5 +79,5 @@
 }
 
 #admindashboard #lowerBody #courseBoard {
-    margin: 30px 50px 0px 0px;
+    margin: 15px 50px 0px 0px;
 }

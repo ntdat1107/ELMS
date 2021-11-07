@@ -42,17 +42,17 @@
     font-size: 20px;
     margin-left: 310px;
     margin-bottom: 30px;
-    margin-right: 20px;
+    margin-right: 23px;
     text-align: center;
     border: 1px solid black;
 }
 
 #admininstruc-UI #tableinstruc {
-    height: 381px;
+    height: 480px;
 }
 
 #adminlearner-UI #tableinstruc {
-    height: 381px;
+    height: 480px;
 }
 
 /*_____display: flex là làm cho các block trong cùng một block lớn thẳng hàng_____*/
