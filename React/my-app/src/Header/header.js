@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import SearchBar from "./searchBar";
-import '../componentCSS/header.css'
+import './header.css'
 import Logo from "../img/Logo.png";
 import { Link } from "react-router-dom"
 import searchIcon from "../img/search.png"
