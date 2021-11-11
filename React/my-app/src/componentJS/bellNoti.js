@@ -16,7 +16,7 @@ const bellNotis = [
 ]
 const contentNoti = bellNotis.map((noti, index) => {
     return (
-        <p>{(index+1) + ". "+ noti.content}</p>
+        <p key={index}>{(index+1) + ". "+ noti.content}</p>
     )
 })
 function BellNoti() {

@@ -28,10 +28,10 @@ class BarChart extends React.Component {
 render() {
     let barGroups = this.state.data.map((d,i) => {
         if((i + 1) % 2 === 0) {
-            return <g><BarGroup key = {i} d={d} i={i} color = {colorEven}/></g>
+            return <g key = {i}><BarGroup key = {i} d={d} i={i} color = {colorEven}/></g>
         }
         else {
-            return <g><BarGroup key = {i} d={d} i={i} color = {colorOdd}/></g>
+            return <g key = {i}><BarGroup key = {i} d={d} i={i} color = {colorOdd}/></g>
         }
     } )                         
     return <svg width="350px" height="400px">

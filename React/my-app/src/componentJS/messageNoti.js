@@ -19,7 +19,7 @@ const messageNotis = [
 ]
 const contentNoti = messageNotis.map((noti, index) => {
     return (
-        <p>{(index+1) + ". "+ noti.content}</p>
+        <p key={index}>{(index+1) + ". "+ noti.content}</p>
     )
 })
 function MessageNoti() {

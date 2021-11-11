@@ -14,7 +14,7 @@ function NewAnn() {
     return (        
         <div className="new-ann">  
 
-            <img onClick={OpenNewAnnoun} id="newannounbutton" src={newannounbutton} alt="New Announcement Image" width="70" height="70"/>
+            <img onClick={OpenNewAnnoun} id="newannounbutton" src={newannounbutton} alt="NewAnnouncementImage" width="70" height="70"/>
 
             <div id="New-Announ-Box" className={click? 'boxbox show-up' : 'boxbox'}>
                 <form id="tick-box">
@@ -31,7 +31,7 @@ function NewAnn() {
                 </div>
 
                 <p id='close-button' onClick={CloseNewAnnounBox}>Close</p>
-                <img id='send-button' onClick={CloseNewAnnounBox} src={send} alt='Send Icon' width="60px" height="'60px" />
+                <img id='send-button' onClick={CloseNewAnnounBox} src={send} alt='SendIcon' width="60px" height="'60px" />
             </div>
 
         </div>

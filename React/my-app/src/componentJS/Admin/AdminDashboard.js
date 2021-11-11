@@ -6,8 +6,7 @@ import SideBarAdmin from "../Admin-sideBar";
 import HeaderAdmin from '../header';
 import cheems from "../../img/cheems.png"
 
-function AdminDashboard ({
-}) {
+function AdminDashboard () {
     return (
         <div id='admindashboard-UI'>
         <div className="AdminUI">

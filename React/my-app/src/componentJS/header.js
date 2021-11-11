@@ -6,7 +6,7 @@ import Logo from "../img/Logo.png";
 import { Link } from "react-router-dom"
 import searchIcon from "../img/search.png"
 import BellMessage from "./bellMessage"
-
+import { typeUser } from "./Login/PreLogin";
 function Header({
   link,
   linkAvt,
@@ -16,6 +16,7 @@ function Header({
   type,
   idName,
 }) {
+  console.log(typeUser)
   return (
       <div id="Header">    
         <Link to={link}>

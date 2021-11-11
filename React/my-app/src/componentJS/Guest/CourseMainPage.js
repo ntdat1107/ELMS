@@ -64,7 +64,7 @@ function UpperBody({course}) {
                 
             </div>
             <div id = "imageBox">
-                <img src = {course.imgSrc}/>
+                <img src = {course.imgSrc} alt="img"/>
                 <button id = "enrollButton">
                     <h3>
                         Enroll course

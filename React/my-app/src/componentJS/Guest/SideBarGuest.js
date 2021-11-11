@@ -1,7 +1,6 @@
 import React from "react";
 import "./CSS/SideBar.css"
 import cReact  from "./imgs/courseReactJS.png"
-import cJS  from "./imgs/courseJS.png"
 import cPython   from "./imgs/coursePython.png"
 import { NavLink } from "react-router-dom";
 

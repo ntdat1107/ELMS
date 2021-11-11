@@ -9,7 +9,7 @@ import TableComponent from "../Admin/TableComponent"
 import "../Admin/CSS/AdminInstruc.css"
 
 function TableCpn() {
-    const [users, setUsers] = useState(JsonData.slice(0, 100));
+    const users = JsonData.slice(0, 100);
     const [pageNumber, setPageNumber] = useState(0);
   
     const usersPerPage = 10;

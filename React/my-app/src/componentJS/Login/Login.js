@@ -6,9 +6,9 @@ import { typeUser } from './PreLogin'
 
 function Login() {
     function handleUserType(Utype) {
-        if (Utype == 0) {
+        if (Utype === 0) {
             return "admin";
-        } else if (Utype == 1) {
+        } else if (Utype === 1) {
             return "ins";
         } else {
             return "learner";

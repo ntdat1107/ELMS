@@ -1,5 +1,5 @@
 import './CSS/Signup.css'
-import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function Signup() {
 

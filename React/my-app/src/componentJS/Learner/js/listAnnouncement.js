@@ -12,8 +12,8 @@ function ListAnnoun() {
     const [click, setClick] = useState(1)
 
     function parentClick(e) {        
-        if (click != 0) {
-            (click == e.target.id)?  setClick(0) : setClick(e.target.id)
+        if (click !== 0) {
+            (click === e.target.id)?  setClick(0) : setClick(e.target.id)
         }               
         else {
             setClick(e.target.id);
@@ -22,8 +22,8 @@ function ListAnnoun() {
 
     function handleClick(e) {   
         e.stopPropagation();
-        if (click != 0) {              
-            (click == e.target.parentElement.id)?  setClick(0) : setClick(e.target.parentElement.id)
+        if (click !== 0) {              
+            (click === e.target.parentElement.id)?  setClick(0) : setClick(e.target.parentElement.id)
         }               
         else {
             setClick(e.target.parentElement.id)
@@ -59,7 +59,7 @@ function ListAnnoun() {
                 <div id="content-block">
                 {users.map((user) => {            
                 return (
-                    <div id={user.id} className={(click == user.stt)? "choose active" : "choose"}>
+                    <div id={user.id} className={(click === user.stt)? "choose active" : "choose"}>
                         <div id="sender-receiver">
                             <p>From: MAI DUC LONG</p>
                             <p>To: {user.receiver}</p>                        

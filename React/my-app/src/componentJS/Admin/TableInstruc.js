@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import JsonData from "./MOCK_DATA.json";
 import ReactPaginate from "react-paginate";
 import { Scrollbars } from "react-custom-scrollbars"
-import { Link } from "react-router-dom"
 import remove from "./image/delete.png"
 import moreInfo from "./image/moreInfo.png"
 import disqualify from "./image/disqualify.png"
@@ -10,7 +9,7 @@ import TableComponent from "./TableComponent"
 import "./CSS/AdminInstruc.css"
 
 function TableInstruc2() {
-  const [users, setUsers] = useState(JsonData.slice(0, 100));
+  const users = JsonData.slice(0, 100);
   const [pageNumber, setPageNumber] = useState(0);
 
   const usersPerPage = 15;

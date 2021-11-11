@@ -65,7 +65,7 @@ function UpperBody() {
                 </div>
             </div>
             <div id = "big-title-img">
-                <img src = {bigimg}/>
+                <img src = {bigimg} alt="img"/>
             </div>
         </div>
     )

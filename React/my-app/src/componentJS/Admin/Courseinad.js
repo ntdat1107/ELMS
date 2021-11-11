@@ -8,7 +8,6 @@ import js from "../Learner/img/js.png";
 import linux from "../Learner/img/linux.png";
 import network from "../Learner/img/network.png";
 import star from "../Learner/img/star.png";
-import task from "./image/Task.png"
 import "./CSS/AdminCourse.css"
 
 const styleBC = {

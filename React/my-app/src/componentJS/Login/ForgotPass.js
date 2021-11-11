@@ -1,5 +1,5 @@
 import './CSS/ForgotPass.css'
-import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function ForgotPass() {
     return (

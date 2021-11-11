@@ -1,5 +1,5 @@
 import React from "react";
-import { ProSidebar, Menu, MenuItem, SubMenu, SidebarHeader, SidebarFooter, SidebarContent} from 'react-pro-sidebar';
+import { ProSidebar, Menu, MenuItem, SubMenu, SidebarHeader, SidebarContent} from 'react-pro-sidebar';
 
 import 'react-pro-sidebar/dist/css/styles.css';
 import playbutton from "./imgs/playbutton.png"
