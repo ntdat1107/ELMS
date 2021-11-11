@@ -1,9 +1,8 @@
 import React, {useState} from 'react'
-import arrow from "../img/arrow.png"
-import "../componentJS/Learner/css/LnRegisterInsForm.css";
+import arrow from "../../../img/arrow.png"
+import "./LnRegisterInsForm.css";
 import { Link } from "react-router-dom"
-import { typeUser } from '../componentJS/Login/PreLogin'
-const checked = (typeUser === 3) ? "TA" : "";
+const checked = "";
 
 function ArrowLN() {
     const [click, setClick] = useState(false)

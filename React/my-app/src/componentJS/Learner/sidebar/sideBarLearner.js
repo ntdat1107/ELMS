@@ -1,20 +1,19 @@
 import React from "react";
-import '../componentCSS/sideBar.css'
-import '../componentCSS/sideBarLearner.css'
+import './sideBarLearner.css'
 import SideBarComponent from "./sideBarComponent";
-import dashboardImg from "../img/dashboard.png"
-import announceImg from "../img/announce.png"
-import myCoursesImg from "../img/myCourses.png"
-import takeQuizImg from "../img/takeQuiz.png"
-import readTutorialImg from "../img/readTutorial.png"
-import readNotesImg from "../img/readNotes.png"
-import manageProfileImg from "../img/profile.png"
-import footer from "../img/footer.png"
+import dashboardImg from "../../../img/dashboard.png"
+import announceImg from "../../../img/announce.png"
+import myCoursesImg from "../../../img/myCourses.png"
+import takeQuizImg from "../../../img/takeQuiz.png"
+import readTutorialImg from "../../../img/readTutorial.png"
+import readNotesImg from "../../../img/readNotes.png"
+import manageProfileImg from "../../../img/profile.png"
+import footer from "../../../img/footer.png"
 
 
 function SideBarLearner() {    
 return (
-    <div id="SideBar">
+    <div id="SideBarLn">
         <ul id="SubSideBar">
             <SideBarComponent linkName="/learner/dashboard" idName="dashboard" srcImg={dashboardImg} altName="DashboardImage" name="Dashboard" h="32" w="40"/>
             <SideBarComponent linkName="/learner/myCourses" idName="mycourses" srcImg={myCoursesImg} altName="MyCoursesImage" name="MyCourses" h="32" w="40"/>

@@ -1,17 +1,16 @@
 import React from "react";
-import "../css/LnDashboard.css"
-import About from "../js/about";
-import CourseForYou from "../js/courseForYou";
+import "./LnDashboard.css"
+import About from "./about";
+import CourseForYou from "./courseForYou";
 import Calendar             from "../../DbCalendar"
 import Chart from "./chart"
-import HeaderLn from '../../headerLn';
-import SideBarLearner       from '../../sideBarLearner';
-import avt from "../../../img/cheems.png";
+import HeaderLn from '../header/headerLn';
+import SideBarLearner       from '../sidebar/sideBarLearner';
 function LnDashboard() {
     return (
         <div id="lnDashBoardUI">
             <SideBarLearner/>
-            <HeaderLn linkAvt="/learner/manageprofile" link="/learner/dashboard" srcImg={avt} name="Lâm Thành Dương" gmail="lamduong11201@gmail.com" type="Learner"
+            <HeaderLn linkAvt="/learner/manageprofile" link="/learner/dashboard" srcImg="http://placehold.jp/450x450.png" name="Lâm Thành Dương" gmail="lamduong11201@gmail.com" type="Learner"
             idName="information"/>
             <div id="lnDashboard">
                 <div id="about_CFY">

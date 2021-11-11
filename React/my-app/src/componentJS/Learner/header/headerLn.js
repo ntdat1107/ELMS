@@ -1,11 +1,11 @@
 import React from "react";
-import SearchBar from "./searchBar";
+import SearchBar from "../../searchBar";
 import InformationLn from "./informationLn";
-import '../componentCSS/header.css'
-import Logo from "../img/Logo.png";
+import './headerLn.css'
+import Logo from "../../../img/Logo.png";
 import { Link } from "react-router-dom"
-import searchIcon from "../img/search.png"
-import BellMessage from "./bellMessage"
+import searchIcon from "../../../img/search.png"
+import BellMessage from "../../bellMessage"
 
 function HeaderLn({
   link,
@@ -17,7 +17,7 @@ function HeaderLn({
   idName,
 }) {
   return (
-      <div id="Header">    
+      <div id="HeaderLn">    
         <Link to={link}>
           <img src={Logo} alt="AppLogo" id="Logo"></img>
         </Link>    
