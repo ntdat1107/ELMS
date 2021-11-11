@@ -3,7 +3,7 @@ import "./CSS/InsManageProfile.css"
 import avtCheems from "../../img/cheems.png"
 import ProfileCpn from "./profileCpn";
 import SideBarInstructor from '../sideBarInstructor';
-import Header from '../header';
+import Header from '../../Header/header'
 import cheems from "../../img/cheems.png"
 
 function InsManageProfile() {

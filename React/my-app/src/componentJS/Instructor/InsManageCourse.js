@@ -12,7 +12,7 @@ import star from "../Learner/img/star.png";
 import "./CSS/InsManagerCourse.css"
 
 import SideBarInstructor from '../sideBarInstructor';
-import Header from '../header';
+import Header from '../../Header/header'
 import cheems from "../../img/cheems.png"
 
 const styleBC = {

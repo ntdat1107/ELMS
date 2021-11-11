@@ -4,7 +4,7 @@ import "./CSS/AdminAnnouncement.css"
 import NewAnnoun from './NewAnnoun'
 import SideBarAdmin from "../Admin-sideBar";
 import cheems from "../../img/cheems.png"
-import Header from "../header";
+import Header from '../../Header/header'
 
 function AdminAnnounce () {
     return (

@@ -4,7 +4,7 @@ import Number from "./NumberofUser";
 import DashboardCourseAdmin from "./DashboardCourseAdmin";
 import SideBarAdmin from "../Admin-sideBar";
 import cheems from "../../img/cheems.png"
-import Header from "../header";
+import Header from '../../Header/header'
 
 function AdminDashboard () {
     return (

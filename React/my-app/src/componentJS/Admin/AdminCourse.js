@@ -4,7 +4,7 @@ import Courseinad from "./Courseinad";
 import DropdownBar from "../Guest/DropDownList";
 import SideBarAdmin from "../Admin-sideBar";
 import cheems from "../../img/cheems.png"
-import Header from "../header";
+import Header from '../../Header/header'
 
 function AdminCourse () {
     return (

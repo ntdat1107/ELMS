@@ -6,7 +6,7 @@ import "./CSS/TableOfLearner.css"
 import SearchHead from './SearchHead';
 import TableCpn from './TableCpn';
 import SideBarInstructor from '../sideBarInstructor';
-import Header from '../header';
+import Header from '../../Header/header'
 import cheems from "../../img/cheems.png"
 
 const styleBC = {

@@ -3,7 +3,7 @@ import SearchInstruc from "./SearchInstruc";
 import TableInstruc from "./TableInstruc"
 import SideBarAdmin from "../Admin-sideBar";
 import cheems from "../../img/cheems.png"
-import Header from "../header";
+import Header from '../../Header/header'
 
 function AdminInstruc () {
     return (

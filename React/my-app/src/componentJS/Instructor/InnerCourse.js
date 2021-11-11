@@ -9,7 +9,7 @@ import MyCourse from './MyCourse'
 import OtherAction from './OtherAction';
 
 import SideBarInstructor from '../sideBarInstructor';
-import Header from '../header';
+import Header from '../../Header/header'
 import cheems from "../../img/cheems.png"
 
 

@@ -5,7 +5,7 @@ import InsDashboardUI from './componentJS/Instructor/InsDashboardUI';
 import InsManagerCourse from './componentJS/Instructor/InsManageCourse';
 import InnerCourse from './componentJS/Instructor/InnerCourse';
 import InsAnnouncement from './componentJS/Instructor/InsAnnouncement';
-import TableOfLearner from './componentJS/Instructor/TableOfLearner';
+import TableOfLearner from './componentJS/Instructor/InsTableOfLearner';
 import HomePageUI from './componentJS/Guest/HomePageGuestUI';
 import PreLogin from './componentJS/Login/PreLogin';
 import Login from './componentJS/Login/Login';

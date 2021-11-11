@@ -3,7 +3,7 @@ import ListAnnoun from "../Admin/listAnnoun";
 import "./CSS/InsAnnounment.css"
 import NewAnn from './new-ann'
 import SideBarInstructor from '../sideBarInstructor';
-import Header from '../header';
+import Header from '../../Header/header'
 import cheems from "../../img/cheems.png"
 
 

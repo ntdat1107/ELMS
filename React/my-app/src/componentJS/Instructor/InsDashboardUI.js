@@ -6,7 +6,7 @@ import Statistic from "./Statistic";
 import MyCourse from "./MyCourse";
 import BarChart from "./ChartInstructor";
 import SideBarInstructor from '../sideBarInstructor';
-import Header from '../header';
+import Header from '../../Header/header'
 import cheems from "../../img/cheems.png"
 
 function InsDashboardUI () {
