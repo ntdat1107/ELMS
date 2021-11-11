@@ -1,7 +1,7 @@
 import './CSS/PreLogin.css'
 import {Link} from 'react-router-dom';
 
-var typeUser = 0;
+var typeUser = -1;
 
 
 function PreLogin() {

@@ -30,68 +30,68 @@ function ArrowLN() {
                     </li>
                     <div className="boxRegIns">
                         <div className={click1? 'boxRegIns_show' : 'boxRegIns_close'}>
-                            <div class="Formcolumn">
+                            <div className="Formcolumn">
                                 <div >
                                     <div className="Formques">What kind of teaching have you done before?</div>
                                     <div id = "FormSelection">
-                                        <label class="Formcontainer">In person, informally
+                                        <label className="Formcontainer">In person, informally
                                             <input type="checkbox">
                                             </input>
-                                            <span class="Formcheckmark"></span>
+                                            <span className="Formcheckmark"></span>
                                         </label>
-                                        <label class="Formcontainer">In person, professionally
+                                        <label className="Formcontainer">In person, professionally
                                             <input type="checkbox"></input>
-                                            <span class="Formcheckmark"></span>
+                                            <span className="Formcheckmark"></span>
                                         </label>
-                                        <label class="Formcontainer">Online
+                                        <label className="Formcontainer">Online
                                             <input type="checkbox"></input>
-                                            <span class="Formcheckmark"></span>
+                                            <span className="Formcheckmark"></span>
                                         </label>
-                                        <label class="Formcontainer">Other
+                                        <label className="Formcontainer">Other
                                             <input type="checkbox"></input>
-                                            <span class="Formcheckmark"></span>
+                                            <span className="Formcheckmark"></span>
                                         </label>
                                     </div>
                                 </div>
                                 <div >
                                     <div className="Formques" >How much of a video “pro” are you?</div>
                                     <div id = "FormSelection">
-                                        <label class="Formcontainer">I’m a beginner
+                                        <label className="Formcontainer">I’m a beginner
                                             <input type="checkbox">
                                             </input>
-                                            <span class="Formcheckmark"></span>
+                                            <span className="Formcheckmark"></span>
                                         </label>
-                                        <label class="Formcontainer">I have some knowledge
+                                        <label className="Formcontainer">I have some knowledge
                                             <input type="checkbox"></input>
-                                            <span class="Formcheckmark"></span>
+                                            <span className="Formcheckmark"></span>
                                         </label>
-                                        <label class="Formcontainer">I’m experienced
+                                        <label className="Formcontainer">I’m experienced
                                             <input type="checkbox"></input>
-                                            <span class="Formcheckmark"></span>
+                                            <span className="Formcheckmark"></span>
                                         </label>
-                                        <label class="Formcontainer">I have videos ready to up load
+                                        <label className="Formcontainer">I have videos ready to up load
                                             <input type="checkbox"></input>
-                                            <span class="Formcheckmark"></span>
+                                            <span className="Formcheckmark"></span>
                                         </label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="Formcolumn">
+                            <div className="Formcolumn">
                                 <div >
                                     <div className="Formques">Do you have an audience to share your course with?</div>
                                     <div id = "FormSelection">
-                                        <label class="Formcontainer">Not at the moment
+                                        <label className="Formcontainer">Not at the moment
                                             <input type="checkbox">
                                             </input>
-                                            <span class="Formcheckmark"></span>
+                                            <span className="Formcheckmark"></span>
                                         </label>
-                                        <label class="Formcontainer">I have a small following
+                                        <label className="Formcontainer">I have a small following
                                             <input type="checkbox"></input>
-                                            <span class="Formcheckmark"></span>
+                                            <span className="Formcheckmark"></span>
                                         </label>
-                                        <label class="Formcontainer">I have a sizeable following
+                                        <label className="Formcontainer">I have a sizeable following
                                             <input type="checkbox"></input>
-                                            <span class="Formcheckmark"></span>
+                                            <span className="Formcheckmark"></span>
                                         </label>
                                     </div>
                                 </div>
