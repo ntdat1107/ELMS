@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
-import message from ".././img/message.png";
+import message from "../img/message.png";
 import SearchBar from "./searchBar";
 import searchIcon from "../img/search.png";
 import sendIcon from "../img/sendMessage.png";
 import { Scrollbars } from 'react-custom-scrollbars';
+
 const messageNotis = [
     {"content": "From Mr.Long:You have a short test that takes about 20 minutes in the Django course at 2.pm on 31/02/2020."},
     {"content": "From Mr.Long:You have a short test that takes about 20 minutes in the Django course at 2.pm on 31/02/2020."},

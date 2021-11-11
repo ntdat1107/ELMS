@@ -7,14 +7,26 @@
     margin-top: 120px;
     z-index: 999;
 }
+#SubSideBar #dashboard {
+    content: url("../img/dashboard.png");
+}
 #SubSideBar button:hover #dashboard {
     content: url("../img/dashboardHover.png")
+}
+#SubSideBar #manageCourse {
+    content: url("../img/managerCourse.png");
 }
 #SubSideBar button:hover #manageCourse {
     content: url("../img/manageCourseHover.png")
 }
+#SubSideBar #announce {
+    content: url("../img/announce.png");
+}
 #SubSideBar button:hover #announce {
     content: url("../img/announceHover.png")
+}
+#SubSideBar #profile {
+    content: url("../img/profile.png");
 }
 #SubSideBar button:hover #profile {
     content: url("../img/profileHover.png")
@@ -39,16 +51,16 @@
     background-color: #160E4D;
     border-radius: 20px ;
 }
-.ActiveLink #dashboard {
+#SubSideBar .ActiveLink #dashboard {
     content: url("../img/dashboardHover.png")
 }
-.ActiveLink #manageCourse {
+#SubSideBar .ActiveLink #manageCourse {
     content: url("../img/manageCourseHover.png")
 }
-.ActiveLink #announce {
+#SubSideBar .ActiveLink #announce {
     content: url("../img/announceHover.png")
 }
-.ActiveLink #profile {
+#SubSideBar .ActiveLink #profile {
     content: url("../img/profileHover.png")
 }
 /*_______Addition for Admin______*/

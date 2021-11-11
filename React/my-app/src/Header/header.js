@@ -12,7 +12,6 @@ import arrow from "../img/arrow.png"
 function Arrow({
   typeUserTemp
 }) {
-  console.log(typeUserTemp)
   let arrowList = []
   switch (typeUserTemp) {
     case 0:
@@ -63,7 +62,6 @@ function Arrow({
     default:
       break;
   }
-  console.log(arrowList)
   const [click, setClick] = useState(false)
   const handleClick = () => setClick(!click);
   return (        
