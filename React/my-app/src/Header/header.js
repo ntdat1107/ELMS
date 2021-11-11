@@ -132,9 +132,9 @@ function Header({
         <Link to={link}>
           <img src={Logo} alt="AppLogo" id="Logo"></img>
         </Link>    
-        <SearchBar searchImg = {searchIcon} id="SearchBar" name="Search" searchType="Search for anything" />
-        <BellMessage />
-        <Information linkAvt={linkAvt} srcImg={srcImg} name={name} gmail={gmail} type={type} idName={idName} typeUserTemp={typeUserTemp}/>
+        {typeUserTemp!==-1 && <SearchBar searchImg = {searchIcon} id="SearchBar" name="Search" searchType="Search for anything" />}
+        {typeUserTemp!==-1 && <BellMessage />}
+        {typeUserTemp!==-1 && <Information linkAvt={linkAvt} srcImg={srcImg} name={name} gmail={gmail} type={type} idName={idName} typeUserTemp={typeUserTemp}/>}
       </div>
   )
 }
