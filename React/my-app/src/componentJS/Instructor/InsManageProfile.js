@@ -11,7 +11,7 @@ function InsManageProfile() {
         <div id="insMP-UI">
             <SideBarInstructor/>
             <Header linkAvt="/ins/manageprofile" link="/ins/dashboard" srcImg={cheems} name="Ngọ Tiến Đạt" gmail="tiendat_2001vn@gmail.com" type="Instructor"
-                    idName="information"/>
+                    idName="information" typeUserTemp={1}/>
             <div id="insMP">
                 <ProfileCpn srcImage={avtCheems} name="Ngọ Tiến Đạt" />
             </div>

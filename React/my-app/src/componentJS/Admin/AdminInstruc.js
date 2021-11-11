@@ -2,16 +2,16 @@ import React from "react";
 import SearchInstruc from "./SearchInstruc";
 import TableInstruc from "./TableInstruc"
 import SideBarAdmin from "../Admin-sideBar";
-import HeaderAdmin from '../header';
 import cheems from "../../img/cheems.png"
+import Header from "../header";
 
 function AdminInstruc () {
     return (
         <div id='admininstruc-UI'>
         <div className="AdminUI">
             <SideBarAdmin/>
-            <HeaderAdmin linkAvt="/admin/dashboard" link="/admin/dashboard" srcImg={cheems} name="Mai Đức Long" gmail="maiduclong@gmail.com" type="Admin"
-            idName="informationInstructor"/>
+            <Header linkAvt="/admin/dashboard" link="/admin/dashboard" srcImg={cheems} name="Mai Đức Long" gmail="maiduclong@gmail.com" type="Admin"
+            idName="informationInstructor" typeUserTemp={0}/>
         </div>
         <div id="admininstruc">
             <SearchInstruc/>

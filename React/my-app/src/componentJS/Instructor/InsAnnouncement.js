@@ -12,7 +12,7 @@ function InsAnnouncement() {
         <div id="adminannounce">
             <SideBarInstructor/>
             <Header linkAvt="/ins/manageprofile" link="/ins/dashboard" srcImg={cheems} name="Ngọ Tiến Đạt" gmail="tiendat_2001vn@gmail.com" type="Instructor"
-        idName="information"/>
+        idName="information" typeUserTemp={1}/>
             <NewAnn/>
             <ListAnnoun/>
         </div>

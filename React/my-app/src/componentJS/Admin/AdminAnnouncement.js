@@ -3,16 +3,16 @@ import ListAnnoun from "./listAnnoun";
 import "./CSS/AdminAnnouncement.css"
 import NewAnnoun from './NewAnnoun'
 import SideBarAdmin from "../Admin-sideBar";
-import HeaderAdmin from '../header';
 import cheems from "../../img/cheems.png"
+import Header from "../header";
 
 function AdminAnnounce () {
     return (
         <div id='adminannounce-UI'>
         <div className="AdminUI">
                 <SideBarAdmin/>
-                <HeaderAdmin linkAvt="/admin/dashboard" link="/admin/dashboard" srcImg={cheems} name="Mai Đức Long" gmail="maiduclong@gmail.com" type="Admin"
-                idName="informationInstructor"/>
+                <Header linkAvt="/admin/dashboard" link="/admin/dashboard" srcImg={cheems} name="Mai Đức Long" gmail="maiduclong@gmail.com" type="Admin"
+                idName="informationInstructor" typeUserTemp={0}/>
             </div>
         <div id="adminannounce">
             <NewAnnoun/>

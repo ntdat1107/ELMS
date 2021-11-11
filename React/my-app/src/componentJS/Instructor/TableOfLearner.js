@@ -19,7 +19,7 @@ function TableOfLearner() {
         <div id="managelearner">
             <SideBarInstructor/>
             <Header linkAvt="/ins/manageprofile" link="/ins/dashboard" srcImg={cheems} name="Ngọ Tiến Đạt" gmail="tiendat_2001vn@gmail.com" type="Instructor"
-                    idName="information"/>
+                    idName="information" typeUserTemp={1}/>
         <div id="table-learner">
             <div id="row-1">
                 <CourseComponent 

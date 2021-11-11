@@ -3,16 +3,16 @@ import "./CSS/AdminCourse.css"
 import Courseinad from "./Courseinad";
 import DropdownBar from "../Guest/DropDownList";
 import SideBarAdmin from "../Admin-sideBar";
-import HeaderAdmin from '../header';
 import cheems from "../../img/cheems.png"
+import Header from "../header";
 
 function AdminCourse () {
     return (
         <div id='admincourse-UI'>
         <div className="AdminUI">
             <SideBarAdmin/>
-            <HeaderAdmin linkAvt="/admin/dashboard" link="/admin/dashboard" srcImg={cheems} name="Mai Đức Long" gmail="maiduclong@gmail.com" type="Admin"
-            idName="informationInstructor"/>
+            <Header linkAvt="/admin/dashboard" link="/admin/dashboard" srcImg={cheems} name="Mai Đức Long" gmail="maiduclong@gmail.com" type="Admin"
+            idName="informationInstructor"  typeUserTemp={0}/>
         </div>
         <div id="admincourse">
             <DropdownBar/>
