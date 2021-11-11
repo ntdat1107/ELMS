@@ -3,8 +3,6 @@ import ReactPaginate from "react-paginate";
 import { Scrollbars } from "react-custom-scrollbars"
 import DataTutorial from "./dataTutorial";
 import ItemTutorial from "./itemTutorial"; 
-console.log(DataTutorial);
-console.log(11111111111111111);
 function TableTutorial() {
   const [listTutorial] = useState(DataTutorial.slice(0, 24));
   const [pageNumber, setPageNumber] = useState(0);

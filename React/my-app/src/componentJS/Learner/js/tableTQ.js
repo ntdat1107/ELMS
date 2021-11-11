@@ -3,8 +3,6 @@ import ReactPaginate from "react-paginate";
 import { Scrollbars } from "react-custom-scrollbars"
 import DataQuiz from "./dataQuiz";
 import ItemQuiz from "./itemQuiz"; 
-console.log(DataQuiz);
-console.log(11111111111111111);
 function TableQuiz() {
   const [listQuiz] = useState(DataQuiz.slice(0, 24));
   const [pageNumber, setPageNumber] = useState(0);

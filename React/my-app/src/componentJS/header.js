@@ -8,60 +8,61 @@ import BellMessage from "./bellMessage"
 import arrow from "../img/arrow.png"
 import { typeUser } from "./Login/PreLogin";
 
-
-let arrowList = [
-  {
-    linkTo : '/',
-    textInside : "Logout"
-  }
-]
-if (typeUser===0) {
-  arrowList = [
-    {
-      linkTo : '/',
-      textInside : "Logout"
-    }
-  ]
+let arrowList = []
+console.log(typeUser)
+switch (typeUser) {
+  case 0:
+  case -1:
+    arrowList = [
+      {
+        linkTo : '/',
+        textInside : "Logout"
+      }
+    ];
+    break;
+  case 1:
+    arrowList = [
+      {
+        linkTo : '/learner/dashboard',
+        textInside : "Switch to Learner"
+      },
+      {
+        linkTo : '/',
+        textInside : "Logout"
+      }
+    ];
+    break;
+  case 2:
+    arrowList = [
+      {
+        linkTo : '/ins/dashboard',
+        textInside : "Switch to Instructor"
+      },
+      {
+        linkTo : '/',
+        textInside : "Logout"
+      }
+    ];
+    break;
+  case 3:
+    arrowList = [
+      {
+        linkTo : '/ins/dashboard',
+        textInside : "Switch to Instructor"
+      },
+      {
+        linkTo : '/',
+        textInside : "Logout"
+      }
+    ];
+    break;
+  default:
+    break;
 }
-else if (typeUser===1) {
-  arrowList = [
-    {
-      linkTo : '/learner/dashboard',
-      textInside : "Switch to Learner"
-    },
-    {
-      linkTo : '/',
-      textInside : "Logout"
-    }
-  ]
-}
-else if (typeUser===2) {
-  arrowList = [
-    {
-      linkTo : '/ins/dashboard',
-      textInside : "Switch to Instructor"
-    },
-    {
-      linkTo : '/',
-      textInside : "Logout"
-    }
-  ]
-}
-else if (typeUser===3) {
-  arrowList = [
-    {
-      linkTo : '/ins/dashboard',
-      textInside : "Switch to Instructor"
-    },
-    {
-      linkTo : '/',
-      textInside : "Logout"
-    }
-  ]
-}
+console.log(arrowList)
 const ArrowListCpn = arrowList.map((content, index) => {
   return (
-  <li className="nav-item">
+  <li key={index} className="nav-item">
     <Link to={content.linkTo} className="nav-link">{content.textInside}</Link>
   </li>
   )
