@@ -42,7 +42,7 @@ function ItemCourse({
 }) {
     return (
         <div className="itemCourse" >
-            <div class="imgCourse" id = {idCourse}>
+            <div className="imgCourse" id = {idCourse}>
                 <OpenMore />
             </div>
             <div id="nameCourse">
