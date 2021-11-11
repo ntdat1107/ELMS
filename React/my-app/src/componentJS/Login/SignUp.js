@@ -34,7 +34,7 @@ function Signup() {
                             <div className="Signupremember">
                                 <label id="Signupcheckbox"> <input type="checkbox"></input> Agree with policy</label>
                                 <Link to='/policy'>
-                                    <a>Privacy Policy</a>
+                                    Privacy Policy
                                 </Link>
                             </div>
                             <Link to='/'>
