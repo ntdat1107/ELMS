@@ -1,4 +1,4 @@
-.boxRegIns_show {
+.boxRegIns {
   background-color: white;
   box-shadow: 3px 3px 5px grey;
   left: -850px;
@@ -25,9 +25,7 @@ Width: 100%;
     clear: both;
     }
 }
-.boxRegIns_close {
-  display: none;
-}
+
 /* Customize the label (the container) */
 .Formcontainer {
     display: block;
@@ -115,19 +113,6 @@ Width: 100%;
     padding-top: 5px;
     padding-left: 15px;
   }
-  #FormPushCV{
-    height: 100px;
-    width: 340px;
-      border-radius: 20px;
-      border: 1px dashed rgb(196, 189, 189);
-      margin-top: 10px;
-      margin-left: 19px;
-      background-image: url(../img/FormPushCV.png);
-  }
-  #FormPushCV p {
-    padding-top: 60px;
-  }
-
 .Formcolumns  .Formupload2 {
     width: 60%;
     height: 100px;

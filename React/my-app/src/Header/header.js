@@ -38,8 +38,8 @@ function Arrow({
     case 2:
       arrowList = [
         {
-          linkTo : '/ins/dashboard',
-          textInside : "Switch to Instructor"
+          linkTo : '/learner/registerIns',
+          textInside : "Register to teach E-Learning"
         },
         {
           linkTo : '/',

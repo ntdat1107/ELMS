@@ -124,24 +124,7 @@
     color: #000;
     cursor: pointer;
 }
-.nav-link2 {
-    display: none;
-    align-items: center;
-    text-decoration: none;
-    padding: 0.5rem 0.5rem;
-    height: 60px;
-    color: #000;
-    cursor: pointer;
-}
-.nav-link3 {
-    display: none;
-    align-items: center;
-    text-decoration: none;
-    padding: 0.5rem 0.5rem;
-    height: 100%;
-    color: #000;
-    cursor: pointer;
-}
+
 .nav-menu {
     display: none;
     flex-direction: column;
