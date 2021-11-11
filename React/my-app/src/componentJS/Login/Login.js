@@ -16,10 +16,10 @@ function Login() {
     }
     let type=handleUserType(typeUser)
     return (
-        <div class="Loginpage">
-            <div class="container">
-                <div class="left"></div>
-                <div class="right">
+        <div className="Loginpage">
+            <div className="container">
+                <div className="left"></div>
+                <div className="right">
                     <div id="cancelContainer">
                             <button id="cancelButton">
                                 <Link id="X" to='/'>
@@ -30,27 +30,27 @@ function Login() {
                     <div id="welcome">Welcome back!</div>
                     
                     <div >                    
-                        <div class="form">
-                            <div class = "inp">
+                        <div className="form">
+                            <div className = "inp">
                                 <span>Username</span>
-                                <input class = "impBx" type="text"></input>
+                                <input className = "impBx" type="text"></input>
                             </div>                       
-                            <div class = "inp">
+                            <div className = "inp">
                                 <span>Password</span>
-                                <input class = "impBx" type="password"></input>
+                                <input className = "impBx" type="password"></input>
                             </div> 
-                            <div class="remember">
+                            <div className="remember">
                                 <label id = "checkbox"> <input type="checkbox"></input> Remember me</label>
                                 <Link to='/forgotpass'>
-                                    <a>Forgot password?</a>
+                                    Forgot password?
                                 </Link>
                             </div>
-                            <div class="btn-box">
+                            <div className="btn-box">
                                 <Link to={'/'+type+'/dashboard'}>
-                                    <button type="button" class="toggle-btn1">Log in</button>
+                                    <button type="button" className="toggle-btn1">Log in</button>
                                 </Link>
                                 <Link to='/signup'>
-                                    <button type="button" class="toggle-btn2">Sign up</button>
+                                    <button type="button" className="toggle-btn2">Sign up</button>
                                 </Link>
 
                             </div>

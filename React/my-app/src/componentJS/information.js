@@ -20,10 +20,10 @@ function Information({
             </div>
             <ul id="inform">
                 <Link to={linkAvt} id="linkName">
-                    <il id="name"><h3>{name}</h3></il>
+                    <li id="name"><h3>{name}</h3></li>
                 </Link>
-                <il id="gmail"><p>{gmail}</p></il>
-                <il id="type"><p>{type}</p></il>
+                <li id="gmail"><p>{gmail}</p></li>
+                <li id="type"><p>{type}</p></li>
             </ul>
             <Arrow />
         </div>

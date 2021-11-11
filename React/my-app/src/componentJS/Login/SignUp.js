@@ -4,10 +4,10 @@ import { Link } from "react-router-dom"
 function Signup() {
 
     return (
-        <div class="Signuppage">
-            <div class="Signupcontainer">
-                <div class="Signupleft"></div>
-                <div class="Signupright">
+        <div className="Signuppage">
+            <div className="Signupcontainer">
+                <div className="Signupleft"></div>
+                <div className="Signupright">
                     <div id="cancelContainer">
                             <button id="cancelButton">
                                 <Link id="X" to='/'>
@@ -18,28 +18,28 @@ function Signup() {
                     <div id="Signupwelcome">Create account</div>
 
                     <div>
-                        <div class="Signupform">
-                            <div class="Signupinp">
+                        <div className="Signupform">
+                            <div className="Signupinp">
                                 <span>Username</span>
-                                <input class="SignupimpBx" type="text"></input>
+                                <input className="SignupimpBx" type="text"></input>
                             </div>
-                            <div class="Signupinp">
+                            <div className="Signupinp">
                                 <span>Password</span>
-                                <input class="SignupimpBx" type="password"></input>
+                                <input className="SignupimpBx" type="password"></input>
                             </div>
-                            <div class="Signupinp">
+                            <div className="Signupinp">
                                 <span>Retype Password</span>
-                                        <input class="SignupimpBx" type="password"></input>
+                                        <input className="SignupimpBx" type="password"></input>
                             </div>
-                            <div class="Signupremember">
+                            <div className="Signupremember">
                                 <label id="Signupcheckbox"> <input type="checkbox"></input> Agree with policy</label>
                                 <Link to='/policy'>
                                     <a>Privacy Policy</a>
                                 </Link>
                             </div>
                             <Link to='/'>
-                                <div class="Signupbtn-box">
-                                    <button type="button" class="Signuptoggle-btn1">Sign up</button>
+                                <div className="Signupbtn-box">
+                                    <button type="button" className="Signuptoggle-btn1">Sign up</button>
 
                                 </div>
                             </Link>
