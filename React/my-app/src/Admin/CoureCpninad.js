@@ -68,7 +68,7 @@ function CourseCpninad({ id, imgSrcCourse, altCourse, Name, Desc, Author, Type, 
                         imgStar={imgStar}
                         totalRate={totalRate}
                         tagColor={tagColor}
-                        linkName="/admin/managecourse"
+                        linkName='/'
                     />
                     <div id="ScrollBars">
                         <Scrollbars style={{ width: 1000, height: "42vh" }}>

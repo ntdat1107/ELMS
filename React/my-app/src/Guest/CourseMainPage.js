@@ -2,7 +2,7 @@ import React            from "react";
 import Header           from '../Header/header';
 import {CourseBoard}      from "./Explorer";
 import Scrollbars from "react-custom-scrollbars";
-import imgStar          from "../Learner/img/star.png"
+import imgStar          from "../Learner/img/rateStar/star4_5.png"
 
 import './CSS/HomePage.css'
 import "./CSS/CourseMainPage.css"
@@ -64,7 +64,7 @@ function UpperBody({course}) {
             </div>
             <div id = "imageBox">
                 <img src = {course.imgSrc} alt="img"/>
-                <button id = "enrollButton">
+                <button id = "enrollButton" style={{height: "50px"}}>
                     <h3>
                         Enroll course
                     </h3>
