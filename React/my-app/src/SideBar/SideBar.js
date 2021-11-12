@@ -8,6 +8,8 @@ import myCourses from "../img/myCourses.png"
 import takeQuiz from "../img/takeQuiz.png"
 import readTutorial from "../img/readTutorial.png"
 import readNotes from "../img/readNotes.png"
+import manageIns from "../img/manageIns.png"
+import manageLn from "../img/manageLn.png"
 import footer from "../img/footer.png"
 import { NavLink } from "react-router-dom"
 
@@ -151,7 +153,53 @@ function SideBar({
             break;
         //Administrator
         case 0:
-
+            sideBarList = [
+                {
+                    "idName" : "dashboard",
+                    "srcImg" : dashboardImg,
+                    "altName" : "DashBoardImage",
+                    "nameSideBar" : "DashBoard",
+                    "h" : "32",
+                    "w" : "40",
+                    "linkName" : "/admin/dashboard",
+                },
+                {
+                    "idName" : "manageIns",
+                    "srcImg" : manageIns,
+                    "altName" : "ManageInsImage",
+                    "nameSideBar" : "Manage Instructor",
+                    "h" : "32",
+                    "w" : "40",
+                    "linkName" : "/admin/manageinstructor",
+                },
+                {
+                    "idName" : "manageLn",
+                    "srcImg" : manageLn,
+                    "altName" : "ManageLnImage",
+                    "nameSideBar" : "Manage Learner",
+                    "h" : "32",
+                    "w" : "40",
+                    "linkName" : "/admin/managelearner",
+                },
+                {
+                    "idName" : "manageCourse",
+                    "srcImg" : manageCourse,
+                    "altName" : "manageCourseImage",
+                    "nameSideBar" : "Manage Course",
+                    "h" : "32",
+                    "w" : "40",
+                    "linkName" : "/admin/managecourse",
+                },
+                {
+                    "idName" : "announce",
+                    "srcImg" : announce,
+                    "altName" : "AnnouncementImage",
+                    "nameSideBar" : "Announcements",
+                    "h" : "32",
+                    "w" : "40",
+                    "linkName" : "/admin/announcement",
+                }
+            ]
             break;
         //Guest
         default:

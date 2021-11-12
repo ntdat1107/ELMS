@@ -24,11 +24,11 @@
     content: url("../img/profileHover.png")
 }
 /*_______Addition for Admin______*/
-#SubSideBar button:hover #instructor {
-    content: url("../img/instrHover.png")
+#SubSideBar button:hover #manageIns {
+    content: url("../img/manageInsHover.png")
 }
-#SubSideBar button:hover #learner {
-    content: url("../img/learnerHover.png")
+#SubSideBar button:hover #manageLn {
+    content: url("../img/manageLnHover.png")
 }
 /*_______Addition for Learner______*/
 #SubSideBar button:hover #myCourses {
@@ -69,11 +69,11 @@
     content: url("../img/profileHover.png")
 }
 /*_______Addition for Admin______*/
-#SubSideBar .ActiveLink #instructor {
-    content: url("../img/instrHover.png")
+#SubSideBar .ActiveLink #manageIns {
+    content: url("../img/manageInsHover.png")
 }
-#SubSideBar .ActiveLink #learner {
-    content: url("../img/learnerHover.png")
+#SubSideBar .ActiveLink #manageLn {
+    content: url("../img/manageLnHover.png")
 }
 /*_______Addition for Learner______*/
 #SubSideBar .ActiveLink #myCourses {
@@ -125,13 +125,13 @@ li {
 #SubSideBar #profile {
     margin-top: 5px;
 }
-#SubSideBar #instructor {
+#SubSideBar #manageIns {
     margin-top: 3px;
 }
 #SubSideBar #manageCourse {
     margin-top: 3px;
 }
-#SubSideBar #learner {
+#SubSideBar #manageLn {
     margin-top: 3px;
 }
 #SubSideBar #announce {
