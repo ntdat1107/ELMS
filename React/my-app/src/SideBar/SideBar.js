@@ -125,7 +125,7 @@ function SideBar({ typeUserTemp }) {
                     nameSideBar: "Announcements",
                     h: "32",
                     w: "40",
-                    linkName: "/learner/announcement",
+                    linkName: "/learner/announcements",
                 },
                 {
                     idName: "profile",
