@@ -1,15 +1,15 @@
 import React from "react";
-import "../css/LnTakeQuiz.css"
+import "./LnTakeQuiz.css"
 import TakeQuiz from './takeQuizCpn'
-import HeaderLn from '../../headerLn';
-import SideBarLearner       from '../../sideBarLearner';
-import avt from "../../../img/cheems.png";
+import Header from '../../Header/header';
+import SideBar       from '../../SideBar/SideBar';
+import avatarLn from '../../img/avtLn.png'
 function LnTakeQuiz() {
     return (
         <div id="lnTakeQuizUI">
-            <SideBarLearner/>
-            <HeaderLn linkAvt="/learner/manageprofile" link="/learner/dashboard" srcImg={avt} name="Lâm Thành Dương" gmail="lamduong11201@gmail.com" type="Learner"
-            idName="information"/>
+            <SideBar typeUserTemp={2}/>
+            <Header linkAvt="/learner/manageprofile" link="/learner/dashboard" srcImg={avatarLn} name="Lâm Thành Dương" gmail="lamduong11201@gmail.com" type="Learner"
+            idName="information" typeUserTemp={2}/>
             <div id="lnTakeQuiz">
                 <TakeQuiz />
             </div>

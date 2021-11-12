@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Data from "./dataForAnnoun.json"
+import Data from "./dataForAnnoun"
 import SearchAnnoun from "./searchAnnoun"
 import { Scrollbars } from "react-custom-scrollbars"
 import noRead from "../img/noRead.png"

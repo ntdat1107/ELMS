@@ -36,7 +36,7 @@
 }
 #lnReadTutorial #filterTutorial {
     padding-left: 20px;
-    padding-top: 5px;
+    padding-top: 15px;
 }
 #lnReadTutorial #filterTutorial #DropdownBar .dd-wrapper {
     width: 500px;
@@ -47,43 +47,18 @@
     color:white;
     font-size: 14px;
 }
+#lnReadTutorial .dd-wrapper .dd-list .dd-scroll-list .dd-list-item{
+    font-size: 14px;
+}
 #lnReadTutorial #tableTutorial {
     background-color: #fff;
-    height: 270px;
+    height: 285px;
     width: 800px;
     margin-left: 20px;
     margin-top: 10px;
     border: 3px solid #c4c4c4;
 }
-#lnReadTutorial #stateTutorial {
-    display: flex;
-    padding-top: 10px;
-    height: 30px;
-    padding-left: 20px;
-}
-#lnReadTutorial #stateTutorial #takenTutorial {
-    height: 30px;
-    width: 60px;
-    color: #123E40;
-    font-size: 14px;
-}
-#lnReadTutorial #stateTutorial #newTutorial {
-    height: 30px;
-    width: 60px;
-    color: #123E40;
-    background-color: #fff;
-    border-top: 3px solid #c4c4c4;
-    border-left: 3px solid #c4c4c4;
-    border-right: 3px solid #c4c4c4;
-    font-size: 14px;
-}
-#lnReadTutorial #stateTutorial #newTutorial p {
-    text-align: center;
-}
-#lnReadTutorial #stateTutorial #takenTutorial p {
-    text-align: center;
-    padding-top: 3px;
-}
+
 #lnReadTutorial #tableTutorial{
     width: 1130px;
 }
@@ -128,42 +103,8 @@
     background-color: #57BAAB;
 }
 
-#lnReadTutorial #tableTutorial #nameColTutorial {
-    font-weight: bold;
-    display: flex;
-    font-size: 14px;
-    border-bottom: 4px solid #c4c4c4;
-    padding-top: 5px;
-}
-#lnReadTutorial #tableTutorial #nameColTutorial #numberTutorial {
-    height: 40px;
-    width: 30px;
-    margin-left: 20px;
-    color: #103E2E;
-}
-#lnReadTutorial #tableTutorial #nameColTutorial #nameTutorial {
-    height: 40px;
-    width: 380px;
-    color: #103E2E;
-}
-#lnReadTutorial #tableTutorial #nameColTutorial #courseOfTutorial {
-    height: 40px;
-    width: 380px;
-    padding-left: 10px;
-    color: #103E2E;
-}
-#lnReadTutorial #tableTutorial #nameColTutorial #stateViewTutorial{
-    height: 40px;
-    width: 160px;
-    color: #103E2E;
-}
-#lnReadTutorial #tableTutorial #nameColTutorial #stateDownloadTutorial{
-    height: 40px;
-    width: 100px;
-    color: #103E2E;
-}
 #lnReadTutorial #tableTutorial #scrollBar {
-    height: 260px;
+    height: 275px;
 }
 #lnReadTutorial #tableRT {
     padding-left: 10px;
@@ -187,17 +128,7 @@
     padding-top: 8px;
 }
 
-#lnReadTutorial #tableTutorial .itemTutorial  #nameTutorial{
-    width: 380px;
-    height: 40px;
-    color:#103E2E;
-}
 
-#lnReadTutorial #tableTutorial .itemTutorial  #nameTutorial p{
-    width: 380px;
-    height: 40px;
-    font-size: 14px;
-}
 
 #lnReadTutorial #tableContentTutorial{
     padding-top: 50px;

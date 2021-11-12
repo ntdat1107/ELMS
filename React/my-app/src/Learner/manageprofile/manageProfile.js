@@ -1,18 +1,18 @@
 import React from "react";
-import "../css/LnManageProfile.css"
-import avtCheems from "../../../img/cheems.png"
+import "./LnManageProfile.css"
+import avtProfile from "../../img/avtProfileLn.png"
 import ProfileCpn from "../../Instructor/profileCpn";
-import HeaderLn from '../../headerLn';
-import SideBarLearner       from '../../sideBarLearner';
-import avt from "../../../img/cheems.png";
+import Header from '../../Header/header';
+import SideBar       from '../../SideBar/SideBar';
+import avatarLn from '../../img/avtLn.png'
 function LnManageProfile() {
     return (
         <div id="lnManageProfileUI">
-            <SideBarLearner/>
-            <HeaderLn linkAvt="/learner/manageprofile" link="/learner/dashboard" srcImg={avt} name="Lâm Thành Dương" gmail="lamduong11201@gmail.com" type="Learner"
-            idName="information"/>
+            <SideBar typeUserTemp={2}/>
+            <Header linkAvt="/learner/manageprofile" link="/learner/dashboard" srcImg={avatarLn} name="Lâm Thành Dương" gmail="lamduong11201@gmail.com" type="Learner"
+            idName="information" typeUserTemp={2}/>
             <div id="lnManageProfile">
-                <ProfileCpn srcImage={avtCheems} name="LAM THANH DUONG" />
+                <ProfileCpn srcImage={avtProfile} name="LAM THANH DUONG" />
             </div>
         </div>
     )

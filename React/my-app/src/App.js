@@ -2,7 +2,6 @@ import './App.css';
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom"
 import InsDashboardUI from './Instructor/InsDashboardUI';
 import InsManageProfile from './Instructor/InsManageProfile';
-import RegisterInsUI from './Learner/registerIns/registerToIns'
 import InsManagerCourse from './Instructor/InsManageCourse';
 import InnerCourse from './Instructor/InnerCourse';
 import InsAnnouncement from './Instructor/InsAnnouncement';
@@ -16,12 +15,13 @@ import Policy from './Login/Policy';
 import SearchGuestUI from './Guest/SearchGuest';
 import CourseMainPage, { LearnerCourseMainPage } from './Guest/CourseMainPage';
 import LnDashboard from './Learner/dashboard/dashboard';
-import LnMyCourses from './Learner/js/myCourses';
-import LnTakeQuiz from './Learner/js/takeQuiz';
-import LnReadTutorial from './Learner/js/readTutorial';
-import LnReadNotes from './Learner/js/readNotes';
-import LnAnnouncements from './Learner/js/announcements';
-import LnManageProfile from './Learner/js/manageProfile';
+import RegisterInsUI from './Learner/registerIns/registerToIns';
+import LnMyCourses from './Learner/mycourses/myCourses';
+import LnTakeQuiz from './Learner/takequiz/takeQuiz';
+import LnReadTutorial from './Learner/readtutorial/readTutorial';
+import LnReadNotes from './Learner/readnote/readNotes';
+import LnAnnouncements from './Learner/announcement/announcements';
+import LnManageProfile from './Learner/manageprofile/manageProfile';
 import AdminDashboard from './Admin/AdminDashboard';
 import AdminInstruc from './Admin/AdminInstruc';
 import AdminLearner from './Admin/AdminLearner';

@@ -47,6 +47,9 @@
     color:white;
     font-size: 14px;
 }
+#lnReadNotes .dd-wrapper .dd-list .dd-scroll-list .dd-list-item{
+    font-size: 14px;
+}
 #lnReadNotes #tableNote {
     background-color: #fff;
     height: 270px;
@@ -113,7 +116,7 @@
     background-color: #fc6b57;
 }
 #lnReadNotes #tableNote .itemNote  #btnDownloadNote{
-    width: 100px;
+    width: 110px;
     height: 40px;
     color: #57BAAB;
     background-color: #fff;
@@ -125,7 +128,7 @@
     margin-left: 60px;
 }
 #lnReadNotes #tableNote .itemNote  #btnDownloadNote:hover {
-    olor: #fff;
+    color: #fff;
     background-color: #57BAAB;
 }
 
