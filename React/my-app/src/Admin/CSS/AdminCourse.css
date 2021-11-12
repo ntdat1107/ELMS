@@ -49,6 +49,7 @@
 
 #admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open {
     position: fixed;
+    display: block;
     top: 0;
     left: 0;
     right: 0;
@@ -65,7 +66,6 @@
 
 #admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open .modal-body {
     background-color: white;
-
     position: relative;
     top: 20vh;
     left: 25vw;

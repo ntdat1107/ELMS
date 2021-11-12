@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import JsonData2 from "./FakedataforAnnoun.json";
+import JsonData2 from "./FakedataforAnnoun";
 import "./CSS/AdminAnnouncement.css";
 import SearchAnnoun from "./SearchAnnoun";
 import { Scrollbars } from "react-custom-scrollbars";
@@ -60,7 +60,7 @@ function ListAnnoun() {
             <div id="content-block">
                 {users.map((user) => {
                     return (
-                        <div id={user.id} className={click === user.stt ? "choose active" : "choose"}>
+                        <div id={user.stt} className={click == user.stt ? "choose active" : "choose"}>
                             <div id="sender-receiver">
                                 <p>From: MAI DUC LONG</p>
                                 <p>To: {user.receiver}</p>
