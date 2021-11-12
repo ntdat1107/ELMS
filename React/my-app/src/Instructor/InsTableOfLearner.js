@@ -1,7 +1,7 @@
 import React from 'react'
 import CourseForYouCpn from '../courseForYou/courseForYouCpn';
 import git from "../Learner/img/course/git1.jpg";
-import star from "../Learner/img/rateStar/star.png";
+import star from "../Learner/img/rateStar/star4_5.png";
 import "./CSS/TableOfLearner.css"
 import SideBar from '../SideBar/SideBar';
 import Header from '../Header/header'

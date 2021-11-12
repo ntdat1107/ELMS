@@ -7,7 +7,7 @@ import django from "../Learner/img/course/cpp1.jpg";
 import js from "../Learner/img/course/cpp1.jpg";
 import linux from "../Learner/img/course/cpp1.jpg";
 import network from "../Learner/img/course/cpp1.jpg";
-import star from "../Learner/img/rateStar/star.png";
+import star from "../Learner/img/rateStar/star4_5.png";
 import "./CSS/InsManagerCourse.css"
 import CourseForYouCpn from "../courseForYou/courseForYouCpn";
 import SideBar from '../SideBar/SideBar';
