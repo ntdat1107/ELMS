@@ -13,13 +13,7 @@
 
 /* ----------courseCFY--------- */
 #admincourse #courseCFY {
-    display: flex;
-    padding: 10px 30px 10px 10px;
-    position: relative;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-#admincourse #courseContent {
-    padding-left: 10px;
 }
 
 /* Link */
@@ -29,7 +23,7 @@
 
 /* -----------CourseContent---------- */
 #admincourse #courseContent {
-    width: 70%;
+    margin-top: -5px;
 }
 #admincourse #courseContent #Name {
     display: inline-block;
@@ -38,6 +32,12 @@
 }
 #admincourse #courseContent #Desc {
     font-size: 16px;
+
+    width: 100%;
+}
+#admincourse #courseContent #Desc p{
+    width: 100%;
+    padding: 2px;
 }
 #admincourse #courseContent #Author {
     color: rgba(196, 196, 196, 1);
@@ -45,7 +45,7 @@
 }
 
 /* ------RateContent-------- */
-#admincourse #rateContent {
+/* #admincourse #rateContent {
     display: flex;
     margin-top: 5px;
 }
@@ -81,7 +81,7 @@
 }
 #admincourse #rateContent #p4 p {
     margin-top: 5px;
-}
+} */
 
 /* ------Task-------- */
 
