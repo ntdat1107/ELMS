@@ -1,11 +1,11 @@
 import React, {useState} from "react";
-import SearchBar from "./searchBar";
 import './header.css'
 import Logo from "../img/Logo.png";
 import { Link } from "react-router-dom"
 import searchIcon from "../img/search.png"
 import BellMessage from "./bellMessage"
 import arrow from "../img/arrow.png"
+import SearchBar from './searchBar'
 
 
 
@@ -113,7 +113,23 @@ function Information({
   )
 }
 
+function AuthBtn() {
 
+  return (
+      <div id = "auth-btn">
+          <Link to="/prelogin">
+              <button id = "login-btn">
+                  <p>Log In</p>
+              </button>
+          </Link>
+          <Link to="/signup">
+              <button id = "signup-btn">
+                  <p>Sign Up</p>
+              </button>
+          </Link>
+      </div>
+  )
+}
 
 function Header({
   link,
@@ -130,11 +146,14 @@ function Header({
         <Link to={link}>
           <img src={Logo} alt="AppLogo" id="Logo"></img>
         </Link>    
-        {typeUserTemp!==-1 && <SearchBar searchImg = {searchIcon} id="SearchBar" name="Search" searchType="Search for anything" />}
+        <SearchBar searchImg = {searchIcon} id="SearchBar" name="Search" searchType="Search for anything" />
         {typeUserTemp!==-1 && <BellMessage />}
-        {typeUserTemp!==-1 && <Information linkAvt={linkAvt} srcImg={srcImg} name={name} gmail={gmail} type={type} idName={idName} typeUserTemp={typeUserTemp}/>}
+        {typeUserTemp!==-1 && <Information linkAvt={linkAvt} srcImg={srcImg} name={name} 
+                                          gmail={gmail} type={type} idName={idName} typeUserTemp={typeUserTemp}/>}
+        {typeUserTemp===-1 && <AuthBtn />}
       </div>
   )
 }
+
 
 export default Header;

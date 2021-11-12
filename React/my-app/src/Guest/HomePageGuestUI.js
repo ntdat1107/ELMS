@@ -1,5 +1,5 @@
 import React from "react";
-import Header from './HeaderGuest'
+import Header from '../Header/header'
 import SideBarGuest from "./SideBarGuest";
 import MainBody from "./Explorer"
 import './CSS/HomePage.css'
@@ -7,7 +7,7 @@ import './CSS/HomePage.css'
 function HomePageUI() {
     return (
         <div>
-            <Header/>
+            <Header link="/" typeUserTemp={-1} />
             <SideBarGuest/>
             <MainBody/>
         </div>

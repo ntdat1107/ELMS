@@ -18,7 +18,7 @@
 /* SEARCH BAR */
 #SearchBar {
     margin-top: 20px;
-    padding-left: 40px;
+    padding-left: 35px;
 }
 #Input {
     size: 32;
@@ -368,4 +368,54 @@
     background-color: #c4c4c4;
     border-radius: 17.5px;
     -webkit-border-radius: 17.5px;
+}
+
+
+
+
+/* Guest */
+#login-btn {
+    transition-duration: 0.4s;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 400px;
+    width: 150px;
+    height: 50px;
+    border-radius: 44px;
+    background-color: #FC6858;
+    border: none;
+    cursor: pointer;
+}
+
+#login-btn :hover {
+    color: #FFFFFF;
+    box-shadow: 0px 30px 20px -10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+#signup-btn {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 150px;
+    height: 50px;    
+    border-radius: 44px;
+    border: 1px solid #BBBBBB;
+    cursor: pointer;
+} 
+
+#signup-btn :hover {
+    color: #FC6858;
+    box-shadow: 0px 30px 20px -10px rgba(0, 0, 0, 0.1);
+}
+
+#auth-btn p {
+    font-size: 20px;
+    font-weight: 300;
 }
