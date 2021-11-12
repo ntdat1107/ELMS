@@ -4,7 +4,7 @@ import cheems from "../img/cheems.png"
 import SideBar from "../SideBar/SideBar";
 import ListAnnounceCpn from "../ListAnnounceCpn/ListAnnounceCpn";
 import AnnounData from "../Admin/FakedataforAnnoun"
-import NewAnnoun from "../Admin/NewAnnoun";
+import NewAnnoun from "../ListAnnounceCpn/NewAnnoun";
 
 
 function InsAnnouncement() {
@@ -14,7 +14,7 @@ function InsAnnouncement() {
             <Header linkAvt="/ins/manageprofile" link="/ins/dashboard" srcImg={cheems} name="Ngọ Tiến Đạt" gmail="tiendat_2001vn@gmail.com" type="Instructor"
         idName="information" typeUserTemp={1}/>
             <div id="ins-announce">
-                <ListAnnounceCpn Addition_Part={<NewAnnoun />} FakeData={AnnounData} />
+                <ListAnnounceCpn Addition_Part={<NewAnnoun typeUserTemp={1}/>} FakeData={AnnounData} />
             </div>
         </div>
     )

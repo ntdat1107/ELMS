@@ -1,6 +1,6 @@
 import React from "react";
 import ListAnnounceCpn from "../ListAnnounceCpn/ListAnnounceCpn";
-import NewAnnoun from "./NewAnnoun";
+import NewAnnoun from "../ListAnnounceCpn/NewAnnoun";
 import SideBar from "../SideBar/SideBar";
 import cheems from "../img/cheems.png";
 import Header from "../Header/header";
@@ -23,7 +23,7 @@ function AdminAnnounce() {
                 />
             </div>
             <div id="adminannounce">
-                <ListAnnounceCpn Addition_Part={<NewAnnoun />} FakeData={AnnounData} />
+                <ListAnnounceCpn Addition_Part={<NewAnnoun typeUserTemp={0} />} FakeData={AnnounData} />
             </div>
         </div>
     );
