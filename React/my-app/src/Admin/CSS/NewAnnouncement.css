@@ -1,8 +1,9 @@
 .new-announ #newannounbutton {
-    position: relative;
-    z-index: 1;
-    top: 600px;
-    left: 1400px;
+    position: absolute;
+    display: block;
+    right: 3%;
+    bottom: 5%;
+    z-index: 3;
     cursor: pointer;
 }
 

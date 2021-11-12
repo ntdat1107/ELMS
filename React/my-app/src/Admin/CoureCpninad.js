@@ -33,7 +33,6 @@ function TaskButton({ id, imgSrcCourse, altCourse, Name, Desc, Author, Type, rat
         setClick2(false);
         setClick3(false);
     };
-    console.log(click3);
 
     return (
         <div id="add-taskIcon">
