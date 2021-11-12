@@ -57,6 +57,9 @@
     text-align: center;
     margin-left: 10px;
 }
+#rateContent #p2 p{
+    padding-top: 5px;
+}
  #rateContent #p3 {
     margin-left: 10px;
 }
