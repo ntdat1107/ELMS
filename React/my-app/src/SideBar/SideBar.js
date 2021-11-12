@@ -1,230 +1,221 @@
 import React from "react";
-import './sideBar.css'
-import announce from "../img/announce.png"
-import dashboardImg from "../img/dashboard.png"
-import manageCourse from "../img/managerCourse.png"
-import manageProfile from "../img/profile.png"
-import myCourses from "../img/myCourses.png"
-import takeQuiz from "../img/takeQuiz.png"
-import readTutorial from "../img/readTutorial.png"
-import readNotes from "../img/readNotes.png"
-import manageIns from "../img/manageIns.png"
-import manageLn from "../img/manageLn.png"
-import footer from "../img/footer.png"
-import { NavLink } from "react-router-dom"
+import "./sideBar.css";
+import announce from "../img/announce.png";
+import dashboardImg from "../img/dashboard.png";
+import manageCourse from "../img/managerCourse.png";
+import manageProfile from "../img/profile.png";
+import myCourses from "../img/myCourses.png";
+import takeQuiz from "../img/takeQuiz.png";
+import readTutorial from "../img/readTutorial.png";
+import readNotes from "../img/readNotes.png";
+import manageIns from "../img/manageIns.png";
+import manageLn from "../img/manageLn.png";
+import footer from "../img/footer.png";
+import { NavLink } from "react-router-dom";
 
-function SideBarComponent({
-    idName,
-    srcImg,
-    altName,
-    nameSideBar,
-    h,
-    w,
-    linkName,
-    func,
-    inx,
-}) {
+function SideBarComponent({ idName, srcImg, altName, nameSideBar, h, w, linkName, func, inx }) {
     return (
-    <li key={inx}> 
-        <NavLink activeClassName="ActiveLink" className="insSideBarLink" to={linkName}>
-            <button onClick={func}>
-                <img id={idName} src={srcImg} alt={altName} height={h} width={w}/>
-                <p>{nameSideBar}</p>
-            </button> 
-        </NavLink>
-    </li>
-    )
+        <li key={inx}>
+            <NavLink activeClassName="ActiveLink" className="insSideBarLink" to={linkName}>
+                <button onClick={func}>
+                    <img id={idName} src={srcImg} alt={altName} height={h} width={w} />
+                    <p>{nameSideBar}</p>
+                </button>
+            </NavLink>
+        </li>
+    );
 }
 
-
-function SideBar({
-    typeUserTemp,
-}) {    
+function SideBar({ typeUserTemp }) {
     let sideBarList = [];
     switch (typeUserTemp) {
         //Instructor
         case 1:
             sideBarList = [
                 {
-                    "idName" : "dashboard",
-                    "srcImg" : dashboardImg,
-                    "altName" : "DashBoardImage",
-                    "nameSideBar" : "DashBoard",
-                    "h" : "32",
-                    "w" : "40",
-                    "linkName" : "/ins/dashboard",
+                    idName: "dashboard",
+                    srcImg: dashboardImg,
+                    altName: "DashBoardImage",
+                    nameSideBar: "DashBoard",
+                    h: "32",
+                    w: "40",
+                    linkName: "/ins/dashboard",
                 },
                 {
-                    "idName" : "manageCourse",
-                    "srcImg" : manageCourse,
-                    "altName" : "ManageCoursesImage",
-                    "nameSideBar" : "Manage Course",
-                    "h" : "40",
-                    "w" : "40",
-                    "linkName" : "/ins/managecourse",
+                    idName: "manageCourse",
+                    srcImg: manageCourse,
+                    altName: "ManageCoursesImage",
+                    nameSideBar: "Manage Course",
+                    h: "40",
+                    w: "40",
+                    linkName: "/ins/managecourse",
                 },
                 {
-                    "idName" : "announce",
-                    "srcImg" : announce,
-                    "altName" : "AnnouncementImage",
-                    "nameSideBar" : "Announcements",
-                    "h" : "40",
-                    "w" : "40",
-                    "linkName" : "/ins/announcement",
+                    idName: "announce",
+                    srcImg: announce,
+                    altName: "AnnouncementImage",
+                    nameSideBar: "Announcements",
+                    h: "40",
+                    w: "40",
+                    linkName: "/ins/announcement",
                 },
                 {
-                    "idName" : "profile",
-                    "srcImg": manageProfile,
-                    "altName" : "ManageProfileImage",
-                    "nameSideBar" : "Manage profile",
-                    "h" : "auto",
-                    "w" : "40",
-                    "linkName" : "/ins/manageprofile",
-                }
-            ]
+                    idName: "profile",
+                    srcImg: manageProfile,
+                    altName: "ManageProfileImage",
+                    nameSideBar: "Manage profile",
+                    h: "auto",
+                    w: "40",
+                    linkName: "/ins/manageprofile",
+                },
+            ];
             break;
         //Learner
         case 2:
             sideBarList = [
                 {
-                    "idName" : "dashboard",
-                    "srcImg" : dashboardImg,
-                    "altName" : "DashBoardImage",
-                    "nameSideBar" : "DashBoard",
-                    "h" : "32",
-                    "w" : "40",
-                    "linkName" : "/learner/dashboard",
+                    idName: "dashboard",
+                    srcImg: dashboardImg,
+                    altName: "DashBoardImage",
+                    nameSideBar: "DashBoard",
+                    h: "32",
+                    w: "40",
+                    linkName: "/learner/dashboard",
                 },
                 {
-                    "idName" : "myCourses",
-                    "srcImg" : myCourses,
-                    "altName" : "MyCoursesImage",
-                    "nameSideBar" : "My Courses",
-                    "h" : "32",
-                    "w" : "40",
-                    "linkName" : "/learner/mycourses",
+                    idName: "myCourses",
+                    srcImg: myCourses,
+                    altName: "MyCoursesImage",
+                    nameSideBar: "My Courses",
+                    h: "32",
+                    w: "40",
+                    linkName: "/learner/mycourses",
                 },
                 {
-                    "idName" : "takeQuiz",
-                    "srcImg" : takeQuiz,
-                    "altName" : "TakeQuizImage",
-                    "nameSideBar" : "Take Quiz",
-                    "h" : "32",
-                    "w" : "40",
-                    "linkName" : "/learner/takequiz",
+                    idName: "takeQuiz",
+                    srcImg: takeQuiz,
+                    altName: "TakeQuizImage",
+                    nameSideBar: "Take Quiz",
+                    h: "32",
+                    w: "40",
+                    linkName: "/learner/takequiz",
                 },
                 {
-                    "idName" : "readTutorial",
-                    "srcImg" : readTutorial,
-                    "altName" : "readTutorialImage",
-                    "nameSideBar" : "Read Tutorial",
-                    "h" : "32",
-                    "w" : "40",
-                    "linkName" : "/learner/readtutorial",
+                    idName: "readTutorial",
+                    srcImg: readTutorial,
+                    altName: "readTutorialImage",
+                    nameSideBar: "Read Tutorial",
+                    h: "32",
+                    w: "40",
+                    linkName: "/learner/readtutorial",
                 },
                 {
-                    "idName" : "readNotes",
-                    "srcImg" : readNotes,
-                    "altName" : "ReadNotesImage",
-                    "nameSideBar" : "Read Notes",
-                    "h" : "32",
-                    "w" : "40",
-                    "linkName" : "/learner/readnotes",
+                    idName: "readNotes",
+                    srcImg: readNotes,
+                    altName: "ReadNotesImage",
+                    nameSideBar: "Read Notes",
+                    h: "32",
+                    w: "40",
+                    linkName: "/learner/readnotes",
                 },
                 {
-                    "idName" : "announce",
-                    "srcImg" : announce,
-                    "altName" : "AnnouncementImage",
-                    "nameSideBar" : "Announcements",
-                    "h" : "32",
-                    "w" : "40",
-                    "linkName" : "/learner/announcement",
+                    idName: "announce",
+                    srcImg: announce,
+                    altName: "AnnouncementImage",
+                    nameSideBar: "Announcements",
+                    h: "32",
+                    w: "40",
+                    linkName: "/learner/announcement",
                 },
                 {
-                    "idName" : "profile",
-                    "srcImg": manageProfile,
-                    "altName" : "ManageProfileImage",
-                    "nameSideBar" : "Manage profile",
-                    "h" : "32",
-                    "w" : "40",
-                    "linkName" : "/learner/manageprofile",
-                }
-            ]
+                    idName: "profile",
+                    srcImg: manageProfile,
+                    altName: "ManageProfileImage",
+                    nameSideBar: "Manage profile",
+                    h: "32",
+                    w: "40",
+                    linkName: "/learner/manageprofile",
+                },
+            ];
             break;
         //Administrator
         case 0:
             sideBarList = [
                 {
-                    "idName" : "dashboard",
-                    "srcImg" : dashboardImg,
-                    "altName" : "DashBoardImage",
-                    "nameSideBar" : "DashBoard",
-                    "h" : "32",
-                    "w" : "40",
-                    "linkName" : "/admin/dashboard",
+                    idName: "dashboard",
+                    srcImg: dashboardImg,
+                    altName: "DashBoardImage",
+                    nameSideBar: "DashBoard",
+                    h: "32",
+                    w: "40",
+                    linkName: "/admin/dashboard",
                 },
                 {
-                    "idName" : "manageIns",
-                    "srcImg" : manageIns,
-                    "altName" : "ManageInsImage",
-                    "nameSideBar" : "Manage Instructor",
-                    "h" : "32",
-                    "w" : "40",
-                    "linkName" : "/admin/manageinstructor",
+                    idName: "manageIns",
+                    srcImg: manageIns,
+                    altName: "ManageInsImage",
+                    nameSideBar: "Manage Instructor",
+                    h: "32",
+                    w: "40",
+                    linkName: "/admin/manageinstructor",
                 },
                 {
-                    "idName" : "manageLn",
-                    "srcImg" : manageLn,
-                    "altName" : "ManageLnImage",
-                    "nameSideBar" : "Manage Learner",
-                    "h" : "32",
-                    "w" : "40",
-                    "linkName" : "/admin/managelearner",
+                    idName: "manageLn",
+                    srcImg: manageLn,
+                    altName: "ManageLnImage",
+                    nameSideBar: "Manage Learner",
+                    h: "32",
+                    w: "40",
+                    linkName: "/admin/managelearner",
                 },
                 {
-                    "idName" : "manageCourse",
-                    "srcImg" : manageCourse,
-                    "altName" : "manageCourseImage",
-                    "nameSideBar" : "Manage Course",
-                    "h" : "32",
-                    "w" : "40",
-                    "linkName" : "/admin/managecourse",
+                    idName: "manageCourse",
+                    srcImg: manageCourse,
+                    altName: "manageCourseImage",
+                    nameSideBar: "Manage Course",
+                    h: "32",
+                    w: "40",
+                    linkName: "/admin/managecourse",
                 },
                 {
-                    "idName" : "announce",
-                    "srcImg" : announce,
-                    "altName" : "AnnouncementImage",
-                    "nameSideBar" : "Announcements",
-                    "h" : "32",
-                    "w" : "40",
-                    "linkName" : "/admin/announcement",
-                }
-            ]
+                    idName: "announce",
+                    srcImg: announce,
+                    altName: "AnnouncementImage",
+                    nameSideBar: "Announcements",
+                    h: "32",
+                    w: "40",
+                    linkName: "/admin/announcement",
+                },
+            ];
             break;
         //Guest
         default:
             break;
     }
-return (
-    <div id="SideBar">
-        <ul id="SubSideBar">
-            {
-                sideBarList.map((content, index) => {
-                    console.log(content.srcImg)
+    return (
+        <div id="SideBar">
+            <ul id="SubSideBar">
+                {sideBarList.map((content, index) => {
+                    console.log(content.srcImg);
                     return (
-                        <SideBarComponent inx={index} linkName={content.linkName} idName={content.idName}
-                            srcImg={content.srcImg} altName={content.altName} nameSideBar={content.nameSideBar} 
-                            w={content.w} h={content.h}/>
-                    )
-                })
-            }
-        </ul>
-        <div id="footer">
-            <img src={footer} alt="FooterImage" width="270" height="auto"/>
+                        <SideBarComponent
+                            inx={index}
+                            linkName={content.linkName}
+                            idName={content.idName}
+                            srcImg={content.srcImg}
+                            altName={content.altName}
+                            nameSideBar={content.nameSideBar}
+                            w={content.w}
+                            h={content.h}
+                        />
+                    );
+                })}
+            </ul>
+            <div id="footer">
+                <img src={footer} alt="FooterImage" width="270" height="auto" />
+            </div>
         </div>
-    </div>
-    )
+    );
 }
-
 
 export default SideBar;
