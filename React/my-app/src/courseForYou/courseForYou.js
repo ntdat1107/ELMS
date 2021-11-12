@@ -43,6 +43,7 @@ function CourseForYou() {
                         imgStar={star} 
                         totalRate="(10,123)"
                         tagColor={styleBC}
+                        linkName="/course/DADA"
                     />
                     <CourseForYouCpn 
                         imgSrcCourse = {network} 
@@ -55,6 +56,7 @@ function CourseForYou() {
                         imgStar={star} 
                         totalRate="(9999)"
                         tagColor={styleN}
+                        linkName="/course/DADA"
                     />
                     <CourseForYouCpn 
                         imgSrcCourse = {linux} 
@@ -67,6 +69,7 @@ function CourseForYou() {
                         imgStar={star} 
                         totalRate="(11113)"
                         tagColor={styleH}
+                        linkName="/course/DADA"
                     />
                     <CourseForYouCpn 
                         imgSrcCourse = {ai} 
@@ -79,6 +82,7 @@ function CourseForYou() {
                         imgStar={star} 
                         totalRate="(10,000)"
                         tagColor={styleBC}
+                        linkName="/course/DADA"
                     />
                     <CourseForYouCpn 
                         imgSrcCourse = {js} 
@@ -91,6 +95,7 @@ function CourseForYou() {
                         imgStar={star} 
                         totalRate="(12345)"
                         tagColor={styleN}
+                        linkName="/course/DADA"
                     />
                     <CourseForYouCpn 
                         imgSrcCourse = {django} 
@@ -103,6 +108,7 @@ function CourseForYou() {
                         imgStar={star} 
                         totalRate="(9876)"
                         tagColor={styleBC}
+                        linkName="/course/DADA"
                     />
                 </Scrollbars>
             </div>
