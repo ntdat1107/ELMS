@@ -2,14 +2,14 @@ import React from "react";
 import "./LnDashboard.css"
 import About from "./about";
 import CourseForYou from "./courseForYou";
-import Calendar             from "../../DbCalendar"
+import Calendar             from "../../Calendar/DbCalendar"
 import Chart from "./chart"
-import Header from '../../';
-import SideBarLearner       from '../sidebar/sideBarLearner';
+import Header from '../../Header/header';
+import SideBar       from '../../SideBar/SideBar';
 function LnDashboard() {
     return (
         <div id="lnDashBoardUI">
-            <SideBarLearner/>
+            <SideBar/>
             <Header linkAvt="/learner/manageprofile" link="/learner/dashboard" srcImg="http://placehold.jp/450x450.png" name="Lâm Thành Dương" gmail="lamduong11201@gmail.com" type="Learner"
             idName="information" typeUserTemp={1}/>
             <div id="lnDashboard">

@@ -4,6 +4,10 @@ import announce from "../img/announce.png"
 import dashboardImg from "../img/dashboard.png"
 import manageCourse from "../img/managerCourse.png"
 import manageProfile from "../img/profile.png"
+import myCourses from "../img/myCourses.png"
+import takeQuiz from "../img/takeQuiz.png"
+import readTutorial from "../img/readTutorial.png"
+import takeNotes from "../img/takeNotes.png"
 import footer from "../img/footer.png"
 import { NavLink } from "react-router-dom"
 
@@ -38,6 +42,7 @@ function SideBar({
 }) {    
     let sideBarList = [];
     switch (typeUserTemp) {
+        //Instructor
         case 1:
             sideBarList = [
                 {
@@ -78,14 +83,52 @@ function SideBar({
                 }
             ]
             break;
-        
+        //Learner
         case 0:
-
+            sideBarList = [
+                {
+                    "idName" : "dashboard",
+                    "srcImg" : dashboardImg,
+                    "altName" : "DashBoardImage",
+                    "nameSideBar" : "DashBoard",
+                    "h" : "32",
+                    "w" : "40",
+                    "linkName" : "/ins/dashboard",
+                },
+                {
+                    "idName" : "manageCourse",
+                    "srcImg" : manageCourse,
+                    "altName" : "ManageCoursesImage",
+                    "nameSideBar" : "Manage Course",
+                    "h" : "40",
+                    "w" : "40",
+                    "linkName" : "/ins/managecourse",
+                },
+                {
+                    "idName" : "announce",
+                    "srcImg" : announce,
+                    "altName" : "AnnouncementImage",
+                    "nameSideBar" : "Announcements",
+                    "h" : "40",
+                    "w" : "40",
+                    "linkName" : "/ins/announcement",
+                },
+                {
+                    "idName" : "profile",
+                    "srcImg": manageProfile,
+                    "altName" : "ManageProfileImage",
+                    "nameSideBar" : "Manage profile",
+                    "h" : "auto",
+                    "w" : "40",
+                    "linkName" : "/ins/manageprofile",
+                }
+            ]
             break;
-
+        //Administrator
         case 2:
 
             break;
+        //Guest
         default:
             break;
     }
