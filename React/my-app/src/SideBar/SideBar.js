@@ -23,11 +23,13 @@ function SideBarComponent({
     inx,
 }) {
     return (
-    <li key={inx}> <NavLink activeClassName="ActiveLink" className="insSideBarLink" to={linkName}>
-        <button onClick={func}>
-            <img id={idName} src={srcImg} alt={altName} height={h} width={w}/>
-            <p>{nameSideBar}</p>
-        </button> </NavLink>
+    <li key={inx}> 
+        <NavLink activeClassName="ActiveLink" className="insSideBarLink" to={linkName}>
+            <button onClick={func}>
+                <img id={idName} src={srcImg} alt={altName} height={h} width={w}/>
+                <p>{nameSideBar}</p>
+            </button> 
+        </NavLink>
     </li>
     )
 }
