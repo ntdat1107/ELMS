@@ -31,16 +31,16 @@
     content: url("../img/learnerHover.png")
 }
 /*_______Addition for Learner______*/
-#SubSideBar button:hover #mycourses {
+#SubSideBar button:hover #myCourses {
     content: url("../img/myCoursesHover.png")
 }
-#SubSideBar button:hover #readtutorial {
+#SubSideBar button:hover #readTutorial {
     content: url("../img/readTutorialHover.png")
 }
-#SubSideBar button:hover #readnotes {
+#SubSideBar button:hover #readNotes {
     content: url("../img/readNotesHover.png")
 }
-#SubSideBar button:hover #takequiz {
+#SubSideBar button:hover #takeQuiz {
     content: url("../img/takeQuizHover.png")
 }
 
@@ -76,16 +76,16 @@
     content: url("../img/learnerHover.png")
 }
 /*_______Addition for Learner______*/
-#SubSideBar .ActiveLink #mycourses {
+#SubSideBar .ActiveLink #myCourses {
     content: url("../img/myCoursesHover.png")
 }
-#SubSideBar .ActiveLink #readtutorial {
+#SubSideBar .ActiveLink #readTutorial {
     content: url("../img/readTutorialHover.png")
 }
-#SubSideBar .ActiveLink #readnotes {
+#SubSideBar .ActiveLink #readNotes {
     content: url("../img/readNotesHover.png")
 }
-#SubSideBar .ActiveLink #takequiz {
+#SubSideBar .ActiveLink #takeQuiz {
     content: url("../img/takeQuizHover.png")
 }
 
@@ -137,6 +137,23 @@ li {
 #SubSideBar #announce {
     margin-top: 3px;
 }
+#SubSideBar #myCourses 
+{
+    margin-top: 5px;
+}
+#SubSideBar #readTutorial 
+{
+    margin-top: 5px;
+}
+#SubSideBar #readNotes
+{
+    margin-top: 5px;
+}
+#SubSideBar #takeQuiz
+{
+    margin-top: 5px;
+}
+
 #SideBar button{
     display: flex;
     text-align: center;
@@ -155,9 +172,10 @@ li {
 #SubSideBar .insSideBarLink {
     text-decoration: none;
 }
-#footerIns {
-    position: relative;
-    margin-top: 225px;
+#footer {
+    position: absolute;
+    top: 400px;
+    left: 0px;
 }
 #footerad {
     margin-top: 225px;

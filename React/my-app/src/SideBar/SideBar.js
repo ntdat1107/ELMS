@@ -82,7 +82,7 @@ function SideBar({
             ]
             break;
         //Learner
-        case 0:
+        case 2:
             sideBarList = [
                 {
                     "idName" : "dashboard",
@@ -150,7 +150,7 @@ function SideBar({
             ]
             break;
         //Administrator
-        case 2:
+        case 0:
 
             break;
         //Guest
@@ -171,7 +171,7 @@ return (
                 })
             }
         </ul>
-        <div id="footerIns">
+        <div id="footer">
             <img src={footer} alt="FooterImage" width="270" height="auto"/>
         </div>
     </div>
