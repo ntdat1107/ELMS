@@ -1,9 +1,9 @@
 import React from "react";
 import "./CSS/InsManageProfile.css"
-import avtCheems from "../../img/cheems.png"
+import avtCheems from "../img/cheems.png"
 import ProfileCpn from "./profileCpn";
-import Header from '../../Header/header'
-import cheems from "../../img/cheems.png"
+import Header from '../Header/header'
+import cheems from "../img/cheems.png"
 import SideBar from "../SideBar/SideBar";
 
 function InsManageProfile() {

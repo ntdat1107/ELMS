@@ -11,8 +11,7 @@ import cPython   from "./imgs/coursePython.png"
 import cCpp  from "./imgs/courseCpp.png"
 import DADA from "./imgs/courseDADAimg.png"
 
-import HeaderLearner from "../header";
-import avt from "../../img/cheems.png"
+import avt from "../img/cheems.png"
 
 import { NavLink } from "react-router-dom";
 
@@ -92,7 +91,7 @@ function CourseMainPage() {
 function LearnerCourseMainPage() {
     return (
         <div id="learnerCourseMainPage">
-            <HeaderLearner 
+            <Header 
                 linkAvt="/learner/manageprofile" 
                 link="/learner/dashboard" 
                 srcImg={avt} 
@@ -100,6 +99,7 @@ function LearnerCourseMainPage() {
                 gmail="lamduong11201@gmail.com" 
                 type="Learner"
                 idName="information"
+                typeUserTemp={2}
             />
             <div id = "bodyPage">
                 <BackButton url = "/learner/dashboard"/>

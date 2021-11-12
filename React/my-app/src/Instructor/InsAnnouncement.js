@@ -1,9 +1,9 @@
 import React from "react";
-import ListAnnoun from "../Admin/listAnnoun";
+import ListAnnoun from "../ListAnnounceCpn/ListAnnounceCpn";
 import "./CSS/InsAnnounment.css"
 import NewAnn from './new-ann'
-import Header from '../../Header/header'
-import cheems from "../../img/cheems.png"
+import Header from '../Header/header'
+import cheems from "../img/cheems.png"
 import SideBar from "../SideBar/SideBar";
 
 

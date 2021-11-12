@@ -7,8 +7,8 @@ import Scrollbars from 'react-custom-scrollbars';
 import CourseSection from './CourseSection';
 import MyCourse from './MyCourse'
 import OtherAction from './OtherAction';
-import Header from '../../Header/header'
-import cheems from "../../img/cheems.png"
+import Header from '../Header/header'
+import cheems from "../img/cheems.png"
 import SideBar from '../SideBar/SideBar';
 
 

@@ -13,7 +13,7 @@ import Scrollbars from "react-custom-scrollbars";
 
 
 import Header from "../Header/header";
-import avt from "../../img/cheems.png"
+import avt from "../img/cheems.png"
 
 function MainPage({url}) {
     return (

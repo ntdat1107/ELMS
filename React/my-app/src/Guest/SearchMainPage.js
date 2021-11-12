@@ -1,6 +1,6 @@
 import React from "react";
-import CourseForYou from "../Learner/js/courseForYou";
-import "../Learner/css/LnDashboard.css"
+import CourseForYou from "../Learner/dashboard/courseForYou";
+import "../Learner/dashboard/LnDashboard.css"
 import "./CSS/SearchMainPage.css"
 
 import DropDownBar from "./DropDownList";
