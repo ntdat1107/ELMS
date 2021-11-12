@@ -1,13 +1,13 @@
 import React from 'react'
 import CourseForYouCpn from '../courseForYou/courseForYouCpn';
-import git from "../Learner/img/git.png";
-import star from "../Learner/img/star.png";
+import git from "../Learner/img/course/git.png";
+import star from "../Learner/img/rateStar/star.png";
 import "./CSS/TableOfLearner.css"
-import SearchHead from './SearchHead';
-import TableCpn from './TableCpn';
 import SideBar from '../SideBar/SideBar';
 import Header from '../Header/header'
 import cheems from "../img/cheems.png"
+import SearchInTable from '../TableManage/SearchInTable';
+import TableManage from '../TableManage/TableManage';
 
 const styleBC = {
     backgroundColor: "#F8D92E",
@@ -38,8 +38,8 @@ function TableOfLearner() {
                 />
             </div>
             <div id="row-2">
-                <SearchHead/>
-                <TableCpn />
+                <SearchInTable typeUserTemp={1}/>
+                <TableManage />
             </div>
         </div>
         </div>

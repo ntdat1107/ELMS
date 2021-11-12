@@ -105,13 +105,14 @@
 
 
 
-#table-learner #row-2 #searchInstruc{
+#table-learner #row-2 #searchTable{
     margin-top: 10px;
     margin-left: 280px;
 }
 #table-learner #row-2 #tableinstruc {
     margin-left: 280px;
     margin-bottom: 10px;
+    height: 380px;
 }
 #table-learner #row-2 label {
     font-size: 24px;
