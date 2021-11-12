@@ -9,7 +9,7 @@ import SideBar       from '../../SideBar/SideBar';
 function LnDashboard() {
     return (
         <div id="lnDashBoardUI">
-            <SideBar/>
+            <SideBar typeUserTemp={0}/>
             <Header linkAvt="/learner/manageprofile" link="/learner/dashboard" srcImg="http://placehold.jp/450x450.png" name="Lâm Thành Dương" gmail="lamduong11201@gmail.com" type="Learner"
             idName="information" typeUserTemp={1}/>
             <div id="lnDashboard">

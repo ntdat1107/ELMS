@@ -7,7 +7,7 @@ import manageProfile from "../img/profile.png"
 import myCourses from "../img/myCourses.png"
 import takeQuiz from "../img/takeQuiz.png"
 import readTutorial from "../img/readTutorial.png"
-import takeNotes from "../img/takeNotes.png"
+import readNotes from "../img/readNotes.png"
 import footer from "../img/footer.png"
 import { NavLink } from "react-router-dom"
 
@@ -93,16 +93,43 @@ function SideBar({
                     "nameSideBar" : "DashBoard",
                     "h" : "32",
                     "w" : "40",
-                    "linkName" : "/ins/dashboard",
+                    "linkName" : "/learner/dashboard",
                 },
                 {
-                    "idName" : "manageCourse",
-                    "srcImg" : manageCourse,
-                    "altName" : "ManageCoursesImage",
-                    "nameSideBar" : "Manage Course",
+                    "idName" : "myCourses",
+                    "srcImg" : myCourses,
+                    "altName" : "MyCoursesImage",
+                    "nameSideBar" : "My Courses",
                     "h" : "40",
                     "w" : "40",
-                    "linkName" : "/ins/managecourse",
+                    "linkName" : "/learner/mycourses",
+                },
+                {
+                    "idName" : "takeQuiz",
+                    "srcImg" : takeQuiz,
+                    "altName" : "TakeQuizImage",
+                    "nameSideBar" : "Take Quiz",
+                    "h" : "40",
+                    "w" : "40",
+                    "linkName" : "/learner/takequiz",
+                },
+                {
+                    "idName" : "readTutorial",
+                    "srcImg" : readTutorial,
+                    "altName" : "readTutorialImage",
+                    "nameSideBar" : "Read Tutorial",
+                    "h" : "40",
+                    "w" : "40",
+                    "linkName" : "/learner/readtutorial",
+                },
+                {
+                    "idName" : "readNotes",
+                    "srcImg" : readNotes,
+                    "altName" : "ReadNotesImage",
+                    "nameSideBar" : "Read Notes",
+                    "h" : "40",
+                    "w" : "40",
+                    "linkName" : "/learner/readnotes",
                 },
                 {
                     "idName" : "announce",
@@ -111,7 +138,7 @@ function SideBar({
                     "nameSideBar" : "Announcements",
                     "h" : "40",
                     "w" : "40",
-                    "linkName" : "/ins/announcement",
+                    "linkName" : "/learner/announcement",
                 },
                 {
                     "idName" : "profile",
@@ -120,7 +147,7 @@ function SideBar({
                     "nameSideBar" : "Manage profile",
                     "h" : "auto",
                     "w" : "40",
-                    "linkName" : "/ins/manageprofile",
+                    "linkName" : "/learner/manageprofile",
                 }
             ]
             break;
