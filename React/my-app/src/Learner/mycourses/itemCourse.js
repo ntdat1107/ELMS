@@ -67,7 +67,7 @@ function ItemCourse({
                         </div>
                 </div>
                 <div className="rateCourseMC">
-                    <div id = {scoreRate === 0 ? "notScore" : "hadScore"}>
+                    <div id = {scoreRate == 0 ? "notScore" : "hadScore"}>
                         <div id={"score" + scoreRate}></div>
                         <p>Your rating</p>
                     </div>
