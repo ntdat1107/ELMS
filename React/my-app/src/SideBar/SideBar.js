@@ -11,10 +11,6 @@ import readNotes from "../img/readNotes.png"
 import footer from "../img/footer.png"
 import { NavLink } from "react-router-dom"
 
-
-
-
-
 function SideBarComponent({
     idName,
     srcImg,
@@ -100,7 +96,7 @@ function SideBar({
                     "srcImg" : myCourses,
                     "altName" : "MyCoursesImage",
                     "nameSideBar" : "My Courses",
-                    "h" : "40",
+                    "h" : "32",
                     "w" : "40",
                     "linkName" : "/learner/mycourses",
                 },
@@ -109,7 +105,7 @@ function SideBar({
                     "srcImg" : takeQuiz,
                     "altName" : "TakeQuizImage",
                     "nameSideBar" : "Take Quiz",
-                    "h" : "40",
+                    "h" : "32",
                     "w" : "40",
                     "linkName" : "/learner/takequiz",
                 },
@@ -118,7 +114,7 @@ function SideBar({
                     "srcImg" : readTutorial,
                     "altName" : "readTutorialImage",
                     "nameSideBar" : "Read Tutorial",
-                    "h" : "40",
+                    "h" : "32",
                     "w" : "40",
                     "linkName" : "/learner/readtutorial",
                 },
@@ -127,7 +123,7 @@ function SideBar({
                     "srcImg" : readNotes,
                     "altName" : "ReadNotesImage",
                     "nameSideBar" : "Read Notes",
-                    "h" : "40",
+                    "h" : "32",
                     "w" : "40",
                     "linkName" : "/learner/readnotes",
                 },
@@ -136,7 +132,7 @@ function SideBar({
                     "srcImg" : announce,
                     "altName" : "AnnouncementImage",
                     "nameSideBar" : "Announcements",
-                    "h" : "40",
+                    "h" : "32",
                     "w" : "40",
                     "linkName" : "/learner/announcement",
                 },
@@ -145,7 +141,7 @@ function SideBar({
                     "srcImg": manageProfile,
                     "altName" : "ManageProfileImage",
                     "nameSideBar" : "Manage profile",
-                    "h" : "auto",
+                    "h" : "32",
                     "w" : "40",
                     "linkName" : "/learner/manageprofile",
                 }
