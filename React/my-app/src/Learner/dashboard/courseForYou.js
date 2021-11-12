@@ -20,7 +20,7 @@ function CourseForYou() {
                 imgStar= {course.imgStar}
                 totalRate= {course.totalRate}
                 tagColor= {course.tagColor}
-                linkName="/course/DADA"
+                linkName="/course_DADA"
             />
         )
     });

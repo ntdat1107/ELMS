@@ -1,5 +1,5 @@
 import React from "react";
-import CourseForYou from "../courseForYou/courseForYou";
+import CourseForYou from "../courseForYou/courseForYouCpn";
 import "../Learner/dashboard/LnDashboard.css"
 import "./CSS/SearchMainPage.css"
 
