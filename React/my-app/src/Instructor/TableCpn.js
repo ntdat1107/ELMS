@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import JsonData from "../Admin/MOCK_DATA.json";
+import JsonData from "../Admin/MOCK_DATA";
 import ReactPaginate from "react-paginate";
 import { Scrollbars } from "react-custom-scrollbars"
 import remove from "../Admin/image/delete.png"
