@@ -55,8 +55,8 @@ function App() {
             <Route exact path='/learner/announcements'  component={LnAnnouncements}></Route>
             <Route exact path='/learner/manageprofile'  component={LnManageProfile}></Route>
             <Route exact path='/admin/dashboard' component={AdminDashboard}></Route>
-            <Route exact path='/admin/instructor' component={AdminInstruc}></Route>
-            <Route exact path='/admin/learner' component={AdminLearner}></Route>
+            <Route exact path='/admin/manageinstructor' component={AdminInstruc}></Route>
+            <Route exact path='/admin/managelearner' component={AdminLearner}></Route>
             <Route exact path='/admin/managecourse' component={AdminCourse}></Route>
             <Route exact path='/admin/announcement' component={AdminAnnounce}></Route>
             <Route exact path='/course_DADA' component={LearnerCourseMainPage}></Route>
