@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import SearchAnnoun from "../Admin/SearchAnnoun";
+import searchImg from "../img/search.png";
 import { Scrollbars } from "react-custom-scrollbars";
+import "./ListAnnouncement.css";
 
 function ListAnnounceCpn({ Addition_Part, FakeData }) {
     const users = FakeData.slice(0, 50);
@@ -24,15 +25,16 @@ function ListAnnounceCpn({ Addition_Part, FakeData }) {
     }
 
     return (
-        <div id="wholeblock">
+        <div id="Announ-wholeblock">
             {Addition_Part}
             <div id="listAnnoun">
-                <div id="SearchList">
-                    <SearchAnnoun />
+                <div id="searchAnnoun">
+                    <input id="inputAnnoun" type="text" name="Name:" placeholder="Search ..."></input>
+                    <img src={searchImg} alt="SearchIconImage" id="searchAnnounIcon" />
                 </div>
 
                 <div id="sublistAnnoun">
-                    <Scrollbars style={{ width: "100%", height: 455 }}>
+                    <Scrollbars>
                         {users.map((user) => {
                             return (
                                 <button className="Announcpn" id={user.stt} onClick={parentClick}>
@@ -60,7 +62,7 @@ function ListAnnounceCpn({ Addition_Part, FakeData }) {
                     return (
                         <div id={user.stt} className={click == user.stt ? "choose active" : "choose"}>
                             <div id="sender-receiver">
-                                <p>From: MAI DUC LONG</p>
+                                <p>From: {user.sender}</p>
                                 <p>To: {user.receiver}</p>
                             </div>
                             <div id="inside-content-block">
