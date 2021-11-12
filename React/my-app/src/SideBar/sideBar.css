@@ -24,23 +24,23 @@
     content: url("../img/profileHover.png")
 }
 /*_______Addition for Admin______*/
-#SubSideBar button:hover #manageIns {
+#SubSideBar button:hover #manageins {
     content: url("../img/manageInsHover.png")
 }
-#SubSideBar button:hover #manageLn {
+#SubSideBar button:hover #manageln {
     content: url("../img/manageLnHover.png")
 }
 /*_______Addition for Learner______*/
-#SubSideBar button:hover #myCourses {
+#SubSideBar button:hover #mycourses {
     content: url("../img/myCoursesHover.png")
 }
-#SubSideBar button:hover #readTutorial {
+#SubSideBar button:hover #readtutorial {
     content: url("../img/readTutorialHover.png")
 }
-#SubSideBar button:hover #readNotes {
+#SubSideBar button:hover #readnotes {
     content: url("../img/readNotesHover.png")
 }
-#SubSideBar button:hover #takeQuiz {
+#SubSideBar button:hover #takequiz {
     content: url("../img/takeQuizHover.png")
 }
 
@@ -69,23 +69,23 @@
     content: url("../img/profileHover.png")
 }
 /*_______Addition for Admin______*/
-#SubSideBar .ActiveLink #manageIns {
+#SubSideBar .ActiveLink #manageins {
     content: url("../img/manageInsHover.png")
 }
-#SubSideBar .ActiveLink #manageLn {
+#SubSideBar .ActiveLink #manageln {
     content: url("../img/manageLnHover.png")
 }
 /*_______Addition for Learner______*/
-#SubSideBar .ActiveLink #myCourses {
+#SubSideBar .ActiveLink #mycourses {
     content: url("../img/myCoursesHover.png")
 }
-#SubSideBar .ActiveLink #readTutorial {
+#SubSideBar .ActiveLink #readtutorial {
     content: url("../img/readTutorialHover.png")
 }
-#SubSideBar .ActiveLink #readNotes {
+#SubSideBar .ActiveLink #readnotes {
     content: url("../img/readNotesHover.png")
 }
-#SubSideBar .ActiveLink #takeQuiz {
+#SubSideBar .ActiveLink #takequiz {
     content: url("../img/takeQuizHover.png")
 }
 
@@ -125,31 +125,31 @@ li {
 #SubSideBar #profile {
     margin-top: 5px;
 }
-#SubSideBar #manageIns {
+#SubSideBar #manageins {
     margin-top: 3px;
 }
-#SubSideBar #manageCourse {
+#SubSideBar #managecourse {
     margin-top: 3px;
 }
-#SubSideBar #manageLn {
+#SubSideBar #manageln {
     margin-top: 3px;
 }
 #SubSideBar #announce {
     margin-top: 3px;
 }
-#SubSideBar #myCourses 
+#SubSideBar #mycourses 
 {
     margin-top: 5px;
 }
-#SubSideBar #readTutorial 
+#SubSideBar #readtutorial 
 {
     margin-top: 5px;
 }
-#SubSideBar #readNotes
+#SubSideBar #readnotes
 {
     margin-top: 5px;
 }
-#SubSideBar #takeQuiz
+#SubSideBar #takequiz
 {
     margin-top: 5px;
 }

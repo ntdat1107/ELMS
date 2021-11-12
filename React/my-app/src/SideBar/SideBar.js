@@ -83,7 +83,7 @@ function SideBar({ typeUserTemp }) {
                     linkName: "/learner/dashboard",
                 },
                 {
-                    idName: "myCourses",
+                    idName: "mycourses",
                     srcImg: myCourses,
                     altName: "MyCoursesImage",
                     nameSideBar: "My Courses",
@@ -92,7 +92,7 @@ function SideBar({ typeUserTemp }) {
                     linkName: "/learner/mycourses",
                 },
                 {
-                    idName: "takeQuiz",
+                    idName: "takequiz",
                     srcImg: takeQuiz,
                     altName: "TakeQuizImage",
                     nameSideBar: "Take Quiz",
@@ -101,7 +101,7 @@ function SideBar({ typeUserTemp }) {
                     linkName: "/learner/takequiz",
                 },
                 {
-                    idName: "readTutorial",
+                    idName: "readtutorial",
                     srcImg: readTutorial,
                     altName: "readTutorialImage",
                     nameSideBar: "Read Tutorial",
@@ -110,7 +110,7 @@ function SideBar({ typeUserTemp }) {
                     linkName: "/learner/readtutorial",
                 },
                 {
-                    idName: "readNotes",
+                    idName: "readnotes",
                     srcImg: readNotes,
                     altName: "ReadNotesImage",
                     nameSideBar: "Read Notes",
@@ -151,7 +151,7 @@ function SideBar({ typeUserTemp }) {
                     linkName: "/admin/dashboard",
                 },
                 {
-                    idName: "manageIns",
+                    idName: "manageins",
                     srcImg: manageIns,
                     altName: "ManageInsImage",
                     nameSideBar: "Manage Instructor",
@@ -160,7 +160,7 @@ function SideBar({ typeUserTemp }) {
                     linkName: "/admin/manageinstructor",
                 },
                 {
-                    idName: "manageLn",
+                    idName: "manageln",
                     srcImg: manageLn,
                     altName: "ManageLnImage",
                     nameSideBar: "Manage Learner",
@@ -169,7 +169,7 @@ function SideBar({ typeUserTemp }) {
                     linkName: "/admin/managelearner",
                 },
                 {
-                    idName: "manageCourse",
+                    idName: "managecourse",
                     srcImg: manageCourse,
                     altName: "manageCourseImage",
                     nameSideBar: "Manage Course",
