@@ -1,8 +1,6 @@
-.Formcolumns {
-Width: 100%;
-}
 .Formcolumn {
     width:100%;
+    padding-left: 5%;
 }
 @media (min-width: 48em) {
     .Formcolumn {
@@ -15,30 +13,40 @@ Width: 100%;
     clear: both;
     }
 }
-
+#FormPushCV {
+  margin-top: 5%;
+  margin-left: 5%;
+  border: 1px dashed rgb(196, 189, 189);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  height: 60%;
+  width: 90%;
+}
 /* Customize the label (the container) */
 .Formcontainer {
-    display: block;
+    display: flex;
     position: relative;
-    padding-left: 35px;
-    margin-bottom: 20px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid #000;
+}
+.Formcontainer input {
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
     cursor: pointer;
-    font-size: 14px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+}
+.Formcontainer label {
+    height: 30px;
+    margin-top: 12px;
+    margin-left: 10px;
 }
 
   
   /* Hide the browser's default radio button */
-.Formcontainer input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
+
   
 #FormSelection {
     padding: 20px;
@@ -55,15 +63,6 @@ Width: 100%;
     border-radius: 50%;
 }
   
-  /* On mouse-over, add a grey background color */
-.Formcontainer:hover input ~ .Formcheckmark {
-    background-color: #ccc;
-}
-  
-  /* When the radio button is checked, add a blue background */
-.Formcontainer input:checked ~ .Formcheckmark {
-    background-color: #2196F3;
-}
   
   /* Create the indicator (the dot/circle - hidden when not checked) */
 .Formcheckmark:after {
@@ -87,17 +86,22 @@ Width: 100%;
     background: white;
 }
 
-.Formques, .FormquesBox {
+.Formques {
       margin-top: 10px;
       font-size: 20px;
       font-weight: bold;
 }
+.FormquesBox {
+      margin-top: 70px;
+      font-size: 20px;
+      font-weight: bold;
+}
 .Formupload {
-    height: 150px;
-    width: 380px;
-      border-radius: 20px;
-      border: 1px solid rgb(196, 189, 189);
-      margin-top: 20px;
+    height: 200px;
+    width: 600px;
+    border-radius: 20px;
+    border: 1px solid rgb(196, 189, 189);
+    margin-top: 20px;
 }
 .Formupload p {
     padding-top: 5px;
@@ -113,15 +117,16 @@ Width: 100%;
 }
 .Formupload2Confirm {
     display: flex;
-    padding-left: 10px;
+    padding-left: 50px;
     padding-top: 10px;
 }
 .Formupload2Confirm #checkBox{
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
 }
  #confirmTxt {
-    font-size: 14px;
+    font-size: 20px;
     padding-left: 10px;
 }
 .Formupload2Container {
@@ -131,28 +136,31 @@ Width: 100%;
 }
  .FormSignupbtn-box {
     display: flex;
-    padding-left: 500px;
+    padding-left: 200px;
     padding-top: 20px;
 }
  .FormSignupbtn-box #submitFormBtn {
-    margin-left: 50px;
+    margin-left: 200px;
     height: 40px;
-    width: 60px;
+    width: 80px;
     background-color: #1D8676;
     color: #fff;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 5px;
     border-radius: 10px;
     cursor: pointer;
 }
  .FormSignupbtn-box #exitFormBtn {
     height: 40px;
-    width: 60px;
+    width: 80px;
     background-color: #fff;
     color: #1D8676;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 5px;
     border-radius: 10px;
     border: 1px solid #1D8676;
     cursor: pointer;
+}
+.Link-coursename{
+  text-decoration: none;
 }
