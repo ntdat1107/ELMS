@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import task from "./image/Task.png";
 import "./CSS/AdminCourse.css";
-import CourseComponentAd from "./CourseComponentAd";
+import CourseForYouCpn from "../courseForYou/courseForYouCpn";
 import change from "./image/changeIcon.png";
 import minus from "./image/Iconminus.png";
 import plus from "./image/Iconplus.png";
@@ -11,7 +11,7 @@ import instructor from "../img/manageInsHover.png";
 import learner from "../img/manageLnHover.png";
 import { Scrollbars } from "react-custom-scrollbars";
 
-function TaskButton({ id, imgSrcCourse, altCourse, Name, Desc, Author, Type, rateScore, imgStar, totalRate, tagColor, callback = () => {} }) {
+function CourseCpninad({ id, imgSrcCourse, altCourse, Name, Desc, Author, Type, rateScore, imgStar, totalRate, tagColor, callback = () => {} }) {
     const [click, setClick] = useState(false);
     const [click2, setClick2] = useState(false);
     const [click3, setClick3] = useState(false);
@@ -57,7 +57,7 @@ function TaskButton({ id, imgSrcCourse, altCourse, Name, Desc, Author, Type, rat
                     <p id="close" onClick={closeBox}>
                         X
                     </p>
-                    <CourseComponentAd
+                    <CourseForYouCpn
                         imgSrcCourse={imgSrcCourse}
                         altCourse={altCourse}
                         Name={Name}
@@ -175,7 +175,7 @@ function TaskButton({ id, imgSrcCourse, altCourse, Name, Desc, Author, Type, rat
                 <p id="close" onClick={closeBox}></p>
             </div>
 
-            <CourseComponentAd
+            <CourseForYouCpn
                 imgSrcCourse={imgSrcCourse}
                 altCourse={altCourse}
                 Name={Name}
@@ -191,4 +191,4 @@ function TaskButton({ id, imgSrcCourse, altCourse, Name, Desc, Author, Type, rat
     );
 }
 
-export default TaskButton;
+export default CourseCpninad;
