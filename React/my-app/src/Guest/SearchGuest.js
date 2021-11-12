@@ -1,5 +1,5 @@
 import React            from "react";
-import Header           from './HeaderGuest'
+import Header           from '../Header/header'
 import SideBarGuest     from "./SideBarGuest";
 
 import SearchMainPage   from "./SearchMainPage";
@@ -11,7 +11,7 @@ import './CSS/Search.css'
 function SearchGuestUI() {
     return (
         <div id="searchGuestUI">
-            <Header/>   
+            <Header link="/" typeUserTemp={-1} />   
             <FloatBar/>
             <SideBarGuest/>
             <SearchMainPage/>

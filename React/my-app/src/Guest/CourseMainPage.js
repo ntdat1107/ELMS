@@ -1,5 +1,5 @@
 import React            from "react";
-import Header           from './HeaderGuest';
+import Header           from '../Header/header';
 import {CourseBoard}      from "./Explorer";
 import Scrollbars from "react-custom-scrollbars";
 import imgStar          from "../Learner/img/star.png"
@@ -79,7 +79,7 @@ function UpperBody({course}) {
 function CourseMainPage() {
     return (
         <div id="courseMainPage">
-            <Header/>
+            <Header link="/" typeUserTemp={-1} />
             <div id = "bodyPage">
                 <BackButton url = "/"/>
                 <UpperBody course = {courseDADA}/>

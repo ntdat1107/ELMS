@@ -5,9 +5,9 @@ import star from "../Learner/img/star.png";
 import "./CSS/TableOfLearner.css"
 import SearchHead from './SearchHead';
 import TableCpn from './TableCpn';
-import SideBarInstructor from '../sideBarInstructor';
-import Header from '../../Header/header'
-import cheems from "../../img/cheems.png"
+import SideBar from '../SideBar/SideBar';
+import Header from '../Header/header'
+import cheems from "../img/cheems.png"
 
 const styleBC = {
     backgroundColor: "#F8D92E",
@@ -17,7 +17,7 @@ const styleBC = {
 function TableOfLearner() {
     return (
         <div id="managelearner">
-            <SideBarInstructor/>
+            <SideBar typeUserTemp={1}/>
             <Header linkAvt="/ins/manageprofile" link="/ins/dashboard" srcImg={cheems} name="Ngọ Tiến Đạt" gmail="tiendat_2001vn@gmail.com" type="Instructor"
                     idName="information" typeUserTemp={1}/>
         <div id="table-learner">

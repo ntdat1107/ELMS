@@ -1,38 +1,38 @@
 import './App.css';
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom"
 import InsDashboardUI from './Instructor/InsDashboardUI';
-// import InsManageProfile from './Instructor/InsManageProfile';
-// import RegisterInsUI from './Learner/registerIns/registerToIns'
-// import InsManagerCourse from './Instructor/InsManageCourse';
-// import InnerCourse from './Instructor/InnerCourse';
-// import InsAnnouncement from './Instructor/InsAnnouncement';
-// import TableOfLearner from './Instructor/InsTableOfLearner';
-// import HomePageUI from './Guest/HomePageGuestUI';
-// import PreLogin from './Login/PreLogin';
-// import Login from './Login/Login';
-// import Signup from './Login/SignUp';
-// import ForgotPass from './Login/ForgotPass';
-// import Policy from './Login/Policy';
-// import SearchGuestUI from './Guest/SearchGuest';
-// import CourseMainPage, { LearnerCourseMainPage } from './Guest/CourseMainPage';
-// import LnDashboard from './Learner/dashboard/dashboard';
-// import LnMyCourses from './Learner/js/myCourses';
-// import LnTakeQuiz from './Learner/js/takeQuiz';
-// import LnReadTutorial from './Learner/js/readTutorial';
-// import LnReadNotes from './Learner/js/readNotes';
-// import LnAnnouncements from './Learner/js/announcements';
-// import LnManageProfile from './Learner/js/manageProfile';
-// import AdminDashboard from './Admin/AdminDashboard';
-// import AdminInstruc from './Admin/AdminInstruc';
-// import AdminLearner from './Admin/AdminLearner';
-// import AdminCourse from './Admin/AdminCourse';
-// import AdminAnnounce from './Admin/AdminAnnouncement';
-// import CourseView from "./Guest/CourseView";
-// import SearchLearnerUI from './Guest/LearnerSearchPage';
+import InsManageProfile from './Instructor/InsManageProfile';
+import RegisterInsUI from './Learner/registerIns/registerToIns'
+import InsManagerCourse from './Instructor/InsManageCourse';
+import InnerCourse from './Instructor/InnerCourse';
+import InsAnnouncement from './Instructor/InsAnnouncement';
+import TableOfLearner from './Instructor/InsTableOfLearner';
+import HomePageUI from './Guest/HomePageGuestUI';
+import PreLogin from './Login/PreLogin';
+import Login from './Login/Login';
+import Signup from './Login/SignUp';
+import ForgotPass from './Login/ForgotPass';
+import Policy from './Login/Policy';
+import SearchGuestUI from './Guest/SearchGuest';
+import CourseMainPage, { LearnerCourseMainPage } from './Guest/CourseMainPage';
+import LnDashboard from './Learner/dashboard/dashboard';
+import LnMyCourses from './Learner/js/myCourses';
+import LnTakeQuiz from './Learner/js/takeQuiz';
+import LnReadTutorial from './Learner/js/readTutorial';
+import LnReadNotes from './Learner/js/readNotes';
+import LnAnnouncements from './Learner/js/announcements';
+import LnManageProfile from './Learner/js/manageProfile';
+import AdminDashboard from './Admin/AdminDashboard';
+import AdminInstruc from './Admin/AdminInstruc';
+import AdminLearner from './Admin/AdminLearner';
+import AdminCourse from './Admin/AdminCourse';
+import AdminAnnounce from './Admin/AdminAnnouncement';
+import CourseView from "./Guest/CourseView";
+import SearchLearnerUI from './Guest/LearnerSearchPage';
 function App() {
   return (
   <div className="App">
-    {/* <Router>
+    <Router>
       <Switch>
             <Route exact path='/ins/dashboard' component={InsDashboardUI}></Route>
             <Route exact path='/ins/manageprofile' component={InsManageProfile}></Route>            
@@ -65,8 +65,7 @@ function App() {
             <Route exact path = "/learner/search/" component={SearchLearnerUI} ></Route>
             <Route exact path = "/learner/registerIns" component={RegisterInsUI} ></Route>
       </Switch>
-    </Router> */}
-    <InsDashboardUI />
+    </Router>
   </div>  
   )
 }

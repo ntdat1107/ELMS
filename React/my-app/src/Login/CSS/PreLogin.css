@@ -31,7 +31,7 @@
 #PreLoginr #PreLogincontainer #PreLoginAdmin {
     width: 320px;
     height: 320px;
-    background-image: url("../../../img/Admin.png");
+    background-image: url("../../img/Admin.png");
     background-size: 100%;;
     background-repeat: no-repeat;
     
@@ -40,7 +40,7 @@
 #PreLoginr #PreLogincontainer #PreLoginInstructor {
     width: 320px;
     height: 320px;
-    background-image: url("../../../img/Instructor.png");
+    background-image: url("../../img/Instructor.png");
     background-size: 100%;;
     background-repeat: no-repeat;
 }
@@ -48,7 +48,7 @@
 #PreLoginr #PreLogincontainer #PreLoginLearner {
     width: 320px;
     height: 320px;
-    background-image: url("../../../img/learner.png");
+    background-image: url("../../img/learner.png");
     background-size: contain;;
     background-repeat: no-repeat;
 }

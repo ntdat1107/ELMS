@@ -1,6 +1,5 @@
 import React from "react";
 import './CSS/InsDashboard.css'
-import About from "./About";
 import DbCalendar from "../Calendar/DbCalendar";
 import Statistic from "./Statistic";
 import MyCourse from "./MyCourse";
@@ -8,6 +7,19 @@ import BarChart from "./ChartInstructor";
 import SideBarInstructor from '../SideBar/SideBar';
 import Header from '../Header/header'
 import cheems from "../img/cheems.png"
+import {Link} from 'react-router-dom'
+
+function About() {    
+    return (
+        <div id="bground">
+            <p id="titleFun">Learning is Fun!</p>
+            <p id="descript">Learn fun awaywhere and anytime without any time limit just through the application.</p>
+            <Link to="/ins/managecourse" id="btn">
+                <button id="getStarted">Get Started</button> 
+            </Link >
+        </div>
+    )
+}
 
 function InsDashboardUI () {
     return (

@@ -1,7 +1,7 @@
 import React            from "react";
-import Header from "../header";
+import Header from "../Header/header";
 import avt from "../../img/cheems.png"
-import SideBar from "../sideBarLearner";
+import SideBar from "../SideBar/SideBar";
 import SearchMainPage   from "./SearchMainPage";
 
 import './CSS/HomePage.css'
@@ -18,8 +18,9 @@ function SearchLearnerUI() {
                 gmail="lamduong11201@gmail.com" 
                 type="Learner"
                 idName="information"
+                typeUserTemp={2}
             />
-            <SideBar/>
+            <SideBar typeUserTemp={2}/>
             <SearchMainPage/>
         </div>
     )

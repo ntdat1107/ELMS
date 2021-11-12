@@ -12,7 +12,7 @@ import Scrollbars from "react-custom-scrollbars";
 
 
 
-import Header from "../header";
+import Header from "../Header/header";
 import avt from "../../img/cheems.png"
 
 function MainPage({url}) {
@@ -39,6 +39,7 @@ function OutsidePage() {
                 gmail="lamduong11201@gmail.com" 
                 type="Learner"
                 idName="information"
+                typeUserTemp={2}
             />
             <RightSideBar courseContentInput = {courseContent}/>
         </div>
