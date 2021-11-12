@@ -1,6 +1,6 @@
 import React from "react";
 
-import manageCourse from "../img/managerCourse.png";
+import manageCourse from "../img/manageCourse.png";
 import instr from "../img/manageIns.png";
 import learnersidebar from "../img/manageLn.png";
 import NumofUComponent from "./NumberofUserComponent";

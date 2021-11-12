@@ -2,7 +2,7 @@ import React from "react";
 import "./sideBar.css";
 import announce from "../img/announce.png";
 import dashboardImg from "../img/dashboard.png";
-import manageCourse from "../img/managerCourse.png";
+import manageCourse from "../img/manageCourse.png";
 import manageProfile from "../img/profile.png";
 import myCourses from "../img/myCourses.png";
 import takeQuiz from "../img/takeQuiz.png";

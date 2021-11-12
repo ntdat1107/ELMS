@@ -1,15 +1,14 @@
 .new-announ #newannounbutton {
     position: absolute;
     display: block;
-    right: 3%;
-    bottom: 5%;
+    right: 2%;
+    bottom: 3%;
     z-index: 3;
     cursor: pointer;
 }
 
 .new-announ #newannounbutton:hover {
-    width: 75px;
-    height: 75px;
+    transform: scale(1.1);
 }
 
 /*    Control Box show up or close     */
@@ -62,7 +61,8 @@
 }
 
 .new-announ #New-Announ-Box #close-button:hover {
-    box-shadow: 2px 2px 3px black;
+    transform: scale(1.1);
+    text-decoration: underline;
 }
 
 .new-announ #New-Announ-Box #tick-box {
@@ -106,8 +106,7 @@
 }
 
 .new-announ #New-Announ-Box #send-button:hover {
-    width: 65px;
-    height: 65px;
+    transform: scale(1.1);
 }
 
 /*     Text Editor     */

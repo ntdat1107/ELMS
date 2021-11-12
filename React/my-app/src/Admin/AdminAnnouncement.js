@@ -1,11 +1,10 @@
 import React from "react";
 import ListAnnounceCpn from "../ListAnnounceCpn/ListAnnounceCpn";
-import "./CSS/AdminAnnouncement.css";
 import NewAnnoun from "./NewAnnoun";
 import SideBar from "../SideBar/SideBar";
 import cheems from "../img/cheems.png";
 import Header from "../Header/header";
-import JsonData2 from "./FakedataforAnnoun";
+import AnnounData from "./FakedataforAnnoun";
 
 function AdminAnnounce() {
     return (
@@ -24,7 +23,7 @@ function AdminAnnounce() {
                 />
             </div>
             <div id="adminannounce">
-                <ListAnnounceCpn Addition_Part={<NewAnnoun />} FakeData={JsonData2} />
+                <ListAnnounceCpn Addition_Part={<NewAnnoun />} FakeData={AnnounData} />
             </div>
         </div>
     );

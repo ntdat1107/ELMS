@@ -9,93 +9,97 @@
 }
 
 #SubSideBar button:hover #dashboard {
-    content: url("../img/dashboardHover.png")
+    content: url("../img/dashboardHover.png");
 }
 
 #SubSideBar button:hover #manageCourse {
-    content: url("../img/manageCourseHover.png")
+    content: url("../img/manageCourseHover.png");
 }
 
 #SubSideBar button:hover #announce {
-    content: url("../img/announceHover.png")
+    content: url("../img/announceHover.png");
 }
 
 #SubSideBar button:hover #profile {
-    content: url("../img/profileHover.png")
+    content: url("../img/profileHover.png");
 }
 /*_______Addition for Admin______*/
 #SubSideBar button:hover #manageins {
-    content: url("../img/manageInsHover.png")
+    content: url("../img/manageInsHover.png");
 }
 #SubSideBar button:hover #manageln {
-    content: url("../img/manageLnHover.png")
+    content: url("../img/manageLnHover.png");
+}
+#SubSideBar button:hover #managecourse {
+    content: url("../img/manageCourseHover.png");
 }
 /*_______Addition for Learner______*/
 #SubSideBar button:hover #mycourses {
-    content: url("../img/myCoursesHover.png")
+    content: url("../img/myCoursesHover.png");
 }
 #SubSideBar button:hover #readtutorial {
-    content: url("../img/readTutorialHover.png")
+    content: url("../img/readTutorialHover.png");
 }
 #SubSideBar button:hover #readnotes {
-    content: url("../img/readNotesHover.png")
+    content: url("../img/readNotesHover.png");
 }
 #SubSideBar button:hover #takequiz {
-    content: url("../img/takeQuizHover.png")
+    content: url("../img/takeQuizHover.png");
 }
 
-
 #SubSideBar button:hover {
-    background-color: #160E4D;
+    background-color: #160e4d;
     color: #f4f4f4;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     width: 270px;
 }
 #SubSideBar button:hover p {
-    background-color: #160E4D;
-    border-radius: 20px ;
+    background-color: #160e4d;
+    border-radius: 20px;
 }
 #SubSideBar .ActiveLink #dashboard {
-    content: url("../img/dashboardHover.png")
+    content: url("../img/dashboardHover.png");
 }
 #SubSideBar .ActiveLink #manageCourse {
-    content: url("../img/manageCourseHover.png")
+    content: url("../img/manageCourseHover.png");
 }
 #SubSideBar .ActiveLink #announce {
-    content: url("../img/announceHover.png")
+    content: url("../img/announceHover.png");
 }
 #SubSideBar .ActiveLink #profile {
-    content: url("../img/profileHover.png")
+    content: url("../img/profileHover.png");
 }
 /*_______Addition for Admin______*/
 #SubSideBar .ActiveLink #manageins {
-    content: url("../img/manageInsHover.png")
+    content: url("../img/manageInsHover.png");
 }
 #SubSideBar .ActiveLink #manageln {
-    content: url("../img/manageLnHover.png")
+    content: url("../img/manageLnHover.png");
+}
+#SubSideBar .ActiveLink #managecourse {
+    content: url("../img/manageCourseHover.png");
 }
 /*_______Addition for Learner______*/
 #SubSideBar .ActiveLink #mycourses {
-    content: url("../img/myCoursesHover.png")
+    content: url("../img/myCoursesHover.png");
 }
 #SubSideBar .ActiveLink #readtutorial {
-    content: url("../img/readTutorialHover.png")
+    content: url("../img/readTutorialHover.png");
 }
 #SubSideBar .ActiveLink #readnotes {
-    content: url("../img/readNotesHover.png")
+    content: url("../img/readNotesHover.png");
 }
 #SubSideBar .ActiveLink #takequiz {
-    content: url("../img/takeQuizHover.png")
+    content: url("../img/takeQuizHover.png");
 }
-
 
 #SubSideBar .ActiveLink button p {
     border-radius: 20px;
-    background-color: #160E4D;
+    background-color: #160e4d;
 }
-#SubSideBar .ActiveLink button{    
-    background-color: #160E4D;
+#SubSideBar .ActiveLink button {
+    background-color: #160e4d;
     color: #f4f4f4;
     border-radius: 20px;
     -webkit-border-radius: 20px;
@@ -114,10 +118,10 @@ li {
     margin-left: 15px;
 }
 #SubSideBar p {
-    margin-left: 75px;  
+    margin-left: 75px;
 }
 #SubSideBar .insSideBarLink p {
-    background-color: #f4f4f4;  ;
+    background-color: #f4f4f4;
 }
 #SubSideBar #dashboard {
     margin-top: 5px;
@@ -137,24 +141,20 @@ li {
 #SubSideBar #announce {
     margin-top: 3px;
 }
-#SubSideBar #mycourses 
-{
+#SubSideBar #mycourses {
     margin-top: 5px;
 }
-#SubSideBar #readtutorial 
-{
+#SubSideBar #readtutorial {
     margin-top: 5px;
 }
-#SubSideBar #readnotes
-{
+#SubSideBar #readnotes {
     margin-top: 5px;
 }
-#SubSideBar #takequiz
-{
+#SubSideBar #takequiz {
     margin-top: 5px;
 }
 
-#SideBar button{
+#SideBar button {
     display: flex;
     text-align: center;
     background-color: #f4f4f4;
@@ -166,8 +166,6 @@ li {
     font-style: normal;
     font-weight: bold;
 }
-
-
 
 #SubSideBar .insSideBarLink {
     text-decoration: none;

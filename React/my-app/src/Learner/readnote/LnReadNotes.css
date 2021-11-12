@@ -52,11 +52,12 @@
 }
 #lnReadNotes #tableNote {
     background-color: #fff;
-    height: 270px;
+    height: 280px;
     width: 800px;
     margin-left: 20px;
-    margin-top: 10px;
+    margin-top: 0px;
     border: 3px solid #c4c4c4;
+    width: 1130px;
 }
 #lnReadNotes #stateNote {
     display: flex;
@@ -86,9 +87,6 @@
 #lnReadNotes #stateNote #takenNote p {
     text-align: center;
     padding-top: 3px;
-}
-#lnReadNotes #tableNote{
-    width: 1130px;
 }
 #lnReadNotes #tableNote .itemNote {
     display: flex;
@@ -167,7 +165,7 @@
     color: #103E2E;
 }
 #lnReadNotes #tableNote #scrollBar {
-    height: 210px;
+    height: 220px;
 }
 #lnReadNotes #tableRN {
     padding-left: 10px;
@@ -187,7 +185,7 @@
     color: #fff;
 }
 #lnReadNotes #tableNote .itemNote  .courseNote p{
-    width: 250px;
+    width: 260px;
     height: 20px;
     white-space: nowrap;
     overflow: hidden;

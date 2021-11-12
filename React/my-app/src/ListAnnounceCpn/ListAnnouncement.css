@@ -1,55 +1,51 @@
-#adminannounce {
-    position: relative;
-}
-
-#adminannounce #wholeblock {
+#Announ-wholeblock {
     display: flex;
-    position: absolute;
-    top: 130px;
-    left: 280px;
-    width: 1220px;
-    height: 560px;
-    background-color: #58BAAB;
+    position: relative;
+    margin-top: 18vh;
+    margin-left: 19vw;
+    width: 79vw;
+    height: 75vh;
+    background-color: #58baab;
     border-radius: 15px;
     -webkit-border-radius: 15px;
 }
 
 /*_____________SearchBar______________*/
-#adminannounce #SearchList {
+#Announ-wholeblock #searchAnnoun {
+    position: relative;
+    width: 92%;
+    height: 100%;
     margin-top: 4%;
     margin-left: 2%;
     padding-left: 20px;
-    width: 300px;
-}
-#adminannounce #searchAnnoun {
-    position: relative;
+    height: 7%;
 }
 
-#adminannounce #inputAnnoun {
+#Announ-wholeblock #inputAnnoun {
     size: 32;
-    width: 260px;
-    height: 35px;
+    width: 100%;
+    height: 100%;
     padding-left: 15px;
     border-radius: 45px;
     -webkit-border-radius: 45px;
     border-color: 1px solid black;
 }
 
-#adminannounce #searchAnnounIcon {
+#Announ-wholeblock #searchAnnounIcon {
     position: absolute;
-    top: 6px;
-    right: 25px;
+    top: 20%;
+    right: 5%;
     cursor: pointer;
 }
 /*_________________________________*/
 
 /*___________Left Block___________*/
 
-#adminannounce #listAnnoun {
-    width: 320px;
+#Announ-wholeblock #listAnnoun {
+    width: 25%;
+    height: 95%;
     text-align: center;
     background-color: white;
-    height: 530px;
     margin-top: 1%;
     margin-left: 2%;
     margin-bottom: 1%;
@@ -57,32 +53,34 @@
     -webkit-border-radius: 5px;
 }
 
-#adminannounce #listAnnoun #sublistAnnoun {
+#Announ-wholeblock #listAnnoun #sublistAnnoun {
     margin-top: 2%;
     text-align: center;
+    width: 98%;
+    height: 85%;
 }
 
-#adminannounce .Announcpn {
+#Announ-wholeblock .Announcpn {
     background-color: white;
     border: 0px;
-    width: 280px;
+    width: 90%;
     height: auto;
     text-align: left;
-    margin: 15px 15px 5px 15px;
-    padding-left: 12px;
+    margin: 15px 4% 5px 4%;
+    padding-left: 2%;
     border-radius: 15px;
-    -webkit-border-radius: 15px; 
+    -webkit-border-radius: 15px;
     line-height: 25px;
     position: relative;
     cursor: pointer;
 }
 
-#adminannounce .Announcpn:hover {
-    width: 290px;
+#Announ-wholeblock .Announcpn:hover {
+    width: 92%;
     box-shadow: 3px 3px 5px grey;
 }
 
-#adminannounce .Announcpn  p {
+#Announ-wholeblock .Announcpn p {
     color: black;
     padding: 2px 0px 2px 10px;
     white-space: nowrap;
@@ -90,21 +88,21 @@
     text-overflow: ellipsis;
 }
 
-#adminannounce .Announcpn .receiver {
+#Announ-wholeblock .Announcpn .receiver {
     font-size: 18px;
     width: 190px;
 }
-#adminannounce .Announcpn .subject {
+#Announ-wholeblock .Announcpn .subject {
     font-size: 18px;
     width: 250px;
 }
-#adminannounce .Announcpn .content {
+#Announ-wholeblock .Announcpn .content {
     font-size: 14px;
     font-style: italic;
     padding-left: 20px;
     width: 250px;
 }
-#adminannounce .Announcpn .time {
+#Announ-wholeblock .Announcpn .time {
     font-size: 12px;
     position: absolute;
     right: 5px;
@@ -113,56 +111,59 @@
 /*_______________________*/
 
 /*__________Right Block___________*/
-#adminannounce #content-block {
+#Announ-wholeblock #content-block {
     position: relative;
-    width: 840px;
-    margin-left: 30px;
-    margin-top: 30px;
+    width: 70%;
+    height: 95%;
+    margin: 1% 0px 1% 2%;
 }
 
-#adminannounce #content-block #sender-receiver {
+#Announ-wholeblock #content-block #sender-receiver {
     font-size: 18px;
     font-weight: bold;
     color: white;
     line-height: 30px;
+    height: 10%;
 }
 
-#adminannounce #content-block #inside-content-block {
+#Announ-wholeblock #content-block #inside-content-block {
     background-color: white;
-    height: 430px;
-    margin: 20px 20px 20px 0px;
+    width: 99%;
+    height: 87%;
+    margin: 2% 2% 1% 0px;
     padding: 10px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     position: relative;
 }
 
-#adminannounce #content-block #inside-content-block #subject-inside {
+#Announ-wholeblock #content-block #inside-content-block #subject-inside {
     font-size: 30px;
-    color: #160E4D;
+    color: #160e4d;
     padding-left: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #898989;
 }
 
-#adminannounce #content-block #inside-content-block #content-inside {
+#Announ-wholeblock #content-block #inside-content-block #content-inside {
     font-size: 18px;
     text-indent: 30px;
     line-height: 32px;
     padding: 15px;
 }
 
-#adminannounce #content-block #inside-content-block #time-inside {
+#Announ-wholeblock #content-block #inside-content-block #time-inside {
     position: absolute;
     font-size: 14px;
     top: 30px;
-    right: 15px
+    right: 15px;
 }
 
-#adminannounce .choose {
+#Announ-wholeblock .choose {
     display: none;
 }
 
-#adminannounce .choose.active {
+#Announ-wholeblock .choose.active {
     display: block;
+    height: 100%;
 }

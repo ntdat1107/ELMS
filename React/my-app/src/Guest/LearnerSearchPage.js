@@ -1,6 +1,6 @@
 import React            from "react";
 import Header from "../Header/header";
-import avt from "../../img/cheems.png"
+import avt from "../img/cheems.png"
 import SideBar from "../SideBar/SideBar";
 import SearchMainPage   from "./SearchMainPage";
 
