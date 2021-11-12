@@ -1,17 +1,69 @@
+import cpp1 from '../Learner/img/course/cpp1.jpg'
+import css1 from '../Learner/img/course/css1.jpg'
+import design1 from '../Learner/img/course/design1.jpg'
+import design2 from '../Learner/img/course/design2.jpg'
+import design3 from '../Learner/img/course/design3.jpg'
+import figma1 from '../Learner/img/course/figma1.jpg'
+import git1 from '../Learner/img/course/git1.jpg'
+import html1 from '../Learner/img/course/html1.jpg'
+import html2 from '../Learner/img/course/html2.jpg'
+import html3 from '../Learner/img/course/html3.jpg'
+import html4 from '../Learner/img/course/html4.jpg'
+import html5 from '../Learner/img/course/html5.jpg'
+import js1 from '../Learner/img/course/js1.jpg'
+import js2 from '../Learner/img/course/js2.jpg'
+import js3 from '../Learner/img/course/js3.jpg'
+import js4 from '../Learner/img/course/js4.jpg'
+import mobile1 from '../Learner/img/course/mobile1.jpg'
+import php1 from '../Learner/img/course/php1.jpg'
+import pygame1 from '../Learner/img/course/pygame1.jpg'
+import python1 from '../Learner/img/course/python1.jpg'
+import python2 from '../Learner/img/course/python2.jpg'
+import react1 from '../Learner/img/course/react1.jpg'
+import sql1 from '../Learner/img/course/sql1.jpg'
+import web1 from '../Learner/img/course/web1.jpg'
+import web2 from '../Learner/img/course/web2.jpg'
+import web3 from '../Learner/img/course/web3.jpg'
+import web4 from '../Learner/img/course/web4.jpg'
 
+import star0 from '../Learner/img/rateStar/star.png'
+import star0_5 from '../Learner/img/rateStar/star0_5.png'
+import star1 from '../Learner/img/rateStar/star1.png'
+import star1_5 from '../Learner/img/rateStar/star1_5.png'
+import star2 from '../Learner/img/rateStar/star2.png'
+import star2_5 from '../Learner/img/rateStar/star2_5.png'
+import star3 from '../Learner/img/rateStar/star3.png'
+import star3_5 from '../Learner/img/rateStar/star3_5.png'
+import star4 from '../Learner/img/rateStar/star4.png'
+import star4_5 from '../Learner/img/rateStar/star4_5.png'
+import star5 from '../Learner/img/rateStar/star5.png'
+
+const styleBC = {
+    backgroundColor: "#F8D92E",
+    color: "#4B0C0C"
+}
+const styleN = {
+    backgroundColor: "#C4C4C4",
+    color: "#000000"
+}
+const styleH = {
+    backgroundColor: "#EC5454",
+    color: "#FFFFFF"
+}
 
 
 const data = 
 [
-    {imgSrcCourse = "git", 
-    altCourse = "GitCourseImage", 
-    Name = "Complete Linux Training Course to Get Your Dream IT Job 2021", 
-    Desc="The BEST Linux Administration course that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications for RHCSA, RHCE, LFCS, CLNP certifications",
-    Author="Mr. Long", 
-    Type="Best Course", 
-    rateScore="4.5", 
-    imgStar={star}, 
-    totalRate="(10,123)",
-    tagColor={styleBC},
-    linkName="/course/DADA"},
+    {imgSrcCourse: cpp1, 
+    altCourse: "GitCourseImage", 
+    name: "Complete Linux Training Course to Get Your Dream IT Job 2021", 
+    desc: "A-Z Guide to using CSS and CSS3 to enhance your web pages. Save time using CSS let us show you what CSS can do. Save time using CSS let us show you what CSS can do.",
+    author: "Mr. Long", 
+    type: "Best Course", 
+    rateScore: "4.5", 
+    imgStar: star4_5, 
+    totalRate: "(10,123)",
+    tagColor: styleBC
+    }
 ]
+export default data;

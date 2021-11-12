@@ -1,8 +1,8 @@
 import React from 'react'
-import noRead from "../img/noRead.png"
-import read from "../img/read.png"
-import flag from "../img/flag.png"
-import clear from "../img/clear.png"
+import noRead from "../img/icon/noRead.png"
+import read from "../img/icon/read.png"
+import flag from "../img/icon/flag.png"
+import clear from "../img/icon/clear.png"
 function MoreOpAnnoun() {
     return (
         <div id="moreOption">

@@ -1,5 +1,5 @@
 #myCourses {
-background-image: url("../img/mc_bg.png");
+background-image: url("../img/background/mc_bg.png");
 width: 1170px;
 height: 570px;
 background-size: cover;
@@ -261,67 +261,62 @@ width: 100px;
 
 width: 65px;
 height: 13px;
-background-image: url(../img/star0.png);
 }
 #myCourses .rateCourseMC #score0_5 {
 
 width: 65px;
 height: 13px;
-background-image: url(../img/star0_5.png);
 }
 #myCourses .rateCourseMC #score1 {
 
 width: 65px;
 height: 13px;
-background-image: url(../img/star1.png);
 }
 #myCourses .rateCourseMC #score1_5 {
-
 width: 65px;
 height: 13px;
-background-image: url(../img/star1_5.png);
 }
 #myCourses .rateCourseMC #score2 {
 
 width: 65px;
 height: 13px;
-background-image: url(../img/star2.png);
+
 }
 #myCourses .rateCourseMC #score2_5 {
 
 width: 65px;
 height: 13px;
-background-image: url(../img/star2_5.png);
+
 }
 #myCourses .rateCourseMC #score3 {
 margin-left: 4_5px;
 width: 65px;
 height: 13px;
-background-image: url(../img/star3.png);
+
 }
 #myCourses .rateCourseMC #score3_5 {
 
 width: 65px;
 height: 13px;
-background-image: url(../img/star3_5.png);
+
 }
 #myCourses .rateCourseMC #score4 {
 
 width: 65px;
 height: 13px;
-background-image: url(../img/star4.png);
+
 }
 #myCourses .rateCourseMC #score4_5 {
 
 width: 65px;
 height: 13px;
-background-image: url(../img/star4_5.png);
+
 }
 #myCourses .rateCourseMC #score5 {
 
 width: 65px;
 height: 13px;
-background-image: url(../img/star5.png);
+
 }
 #myCourses .itemCourse .imgCourse {
 width: 238px;
@@ -333,34 +328,28 @@ width: 100px;
 }
 /* Background Course */
 #myCourses #gitCourse{
-background-image: url(../img/git.png);
-width: 238px;
-height: 118px;
+width: 240px;
+height: 120px;
 }
 #myCourses #javaScriptCourse{
-background-image: url(../img/js.png);
-width: 238px;
-height: 118px;
+width: 240px;
+height: 120px;
 }
 #myCourses #linuxCourse{
-background-image: url(../img/linux.png);
-width: 238px;
-height: 118px;
+width: 240px;
+height: 120px;
 }
 #myCourses #djangoCourse{
-background-image: url(../img/django.png);
 width: 238px;
-height: 118px;
+height: 120px;
 }
 #myCourses #networkComputerCourse{
-background-image: url(../img/network.png);
-width: 238px;
-height: 118px;
+width: 240px;
+height: 120px;
 }
 #myCourses #MLCourse{
-background-image: url(../img/ai.png);
-width: 238px;
-height: 118px;
+width: 240px;
+height: 120px;
 }
 /* pagination */
 #myCourses .paginationBttns {

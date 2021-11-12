@@ -1,7 +1,7 @@
 import React from "react";
 import "./LnDashboard.css"
 import About from "./about";
-import CourseForYou from "../../courseForYou/courseForYou";
+import CourseForYou from "./courseForYou";
 import Calendar             from "../../Calendar/DbCalendar"
 import Chart from "./chart"
 import Header from '../../Header/header';

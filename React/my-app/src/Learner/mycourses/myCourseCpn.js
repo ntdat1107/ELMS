@@ -2,7 +2,7 @@ import React from "react";
 import DropList from "./dropListCourse"
 import SearchBar from "../../Header/searchBar"
 import "./LnMyCourses.css"
-import searchIconMC from "../img/searchMC.png"
+import searchIconMC from "../img/icon/searchMC.png"
 import TableCourses from "./tableCourses"
 
 function ListMC() {

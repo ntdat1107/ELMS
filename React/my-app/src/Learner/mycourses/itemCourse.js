@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
-import moreImg from "../img/more.png"
-import share from "../img/shareM.png"
-import favorite from "../img/favoriteM.png"
-import archived from "../img/archivedM.png"
+import moreImg from "../img/icon/more.png"
+import share from "../img/icon/shareM.png"
+import favorite from "../img/icon/favoriteM.png"
+import archived from "../img/icon/archivedM.png"
 import {Link} from 'react-router-dom'
 function OpenMore() {
     const [click, setClick] = useState(false)

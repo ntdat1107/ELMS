@@ -3,7 +3,7 @@
     margin-top: 140px;
     height: 565px;
     width: 1190px; 
-    background-image: url("../img/bgReadTutorial.png");
+    background-image: url("../img/background/bgReadTutorial.png");
 }
 #lnReadTutorial #titleRT p {
     font-size: 40px;
@@ -196,20 +196,17 @@ background-color: #1E5C5F;
 /* Img Course Tutorial */
 
 #lnReadTutorial #imgTutorialDjango {
-    background-image: url(../img/djangoTutorial.png);
-    width: 184px;
+    width: 180px;
     height: 90px;
 
 }
 #lnReadTutorial #imgTutorialML {
-    background-image: url(../img/aiTutorial.png);
-    width: 184px;
+    width: 180px;
     height: 90px;
 
 }
 #lnReadTutorial #imgTutorialLinux {
-    background-image: url(../img/linuxTutorial.png);
-    width: 184px;
+    width: 180px;
     height: 90px;
 
 }

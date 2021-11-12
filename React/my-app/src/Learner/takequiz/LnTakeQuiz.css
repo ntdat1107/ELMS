@@ -3,7 +3,7 @@
     margin-top: 140px;
     height: 565px;
     width: 1190px; 
-    background-image: url("../img/bgTakeQuiz.png");
+    background-image: url("../img/background/bgTakeQuiz.png");
 }
 #lnTakeQuiz #titleTQ p {
     font-size: 40px;
