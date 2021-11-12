@@ -176,17 +176,6 @@
     right: 15px
 }
 
-#lnAnnouncements #content-block #inside-content-block #newannoun {
-    display: absolute;
-    margin-left: 730px;
-    margin-top: 140px;
-    cursor: pointer;
-    padding-top: 10px;
-}
-
-#lnAnnouncements #content-block #inside-content-block #newannoun:hover {
-    box-shadow: 3px 3px 5px grey;
-}
 
 #lnAnnouncements .choose {
     display: none;
@@ -196,12 +185,13 @@
     display: block;
 }
 /* Four Option */
-#lnAnnouncements #inside-content-block #moreOption {
+#lnAnnouncements #moreOption {
     display: flex;
     width: 240px;
     position: absolute;
-    left: 550px;
-    top: 380px;
+    left: 950px;
+    top: 460px;
+    z-index: 1;
 }
 #lnAnnouncements #moreOption #iconReadAnnoun, #iconFlagAnnoun, #iconClear{
     cursor: pointer;
