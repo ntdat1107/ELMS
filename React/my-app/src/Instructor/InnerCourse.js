@@ -4,17 +4,72 @@ import './CSS/InnerCourse.css'
 import git from "../Learner/img/git.png";
 import star from "../Learner/img/star.png";
 import Scrollbars from 'react-custom-scrollbars';
-import CourseSection from './CourseSection';
 import MyCourse from './MyCourse'
-import OtherAction from './OtherAction';
 import Header from '../Header/header'
 import cheems from "../img/cheems.png"
 import SideBar from '../SideBar/SideBar';
+import plus from './imgSrc/plus.png'
+import deleteImg from './imgSrc/delete.png'
+import {Link} from "react-router-dom"
+import manageLearner from './imgSrc/manageLearner.png'
+import notifyImg from './imgSrc/notify.png'
 
 
 const styleBC = {
     backgroundColor: "#F8D92E",
     color: "#4B0C0C"
+}
+
+
+function CourseSection({
+    nameSection,
+    isDefault,
+}) {
+    return (
+        <div className="section-cpn">
+            <div id="name-section">
+                <p className="name-section-cpn">{nameSection}</p>
+                <img src={plus} alt="PlusImg" width="45px" height="45px"/>
+                {!isDefault && <img src={deleteImg} alt="deleteImg" width="35px" height="45px"/>}
+            </div>
+            <div className="subsection-contain" id="one">
+                <p className="subsection-cpn">{nameSection + " 1: Introduce"}</p>
+                <img src={deleteImg} alt="deleteImg" width="20px" height="25px"/>
+            </div>
+            <div className="subsection-contain" id="two">
+                <p className="subsection-cpn">{nameSection + " 2: Guide"}</p>
+                <img src={deleteImg} alt="deleteImg" width="20px" height="25px"/>
+            </div>
+        </div>
+    )
+}
+
+function OtherAction() {
+    return (
+        <div id="other-action">
+            <div id="head">
+                <div id="action-title">Other actions</div>
+            </div>
+            <div id="action-list">
+                <Link className="link-action" to={"/ins/managecourse/manage_my_learners"}>
+                    <div id="first-act">
+                        <img className="imgAction" src={manageLearner} alt="learnerImg" height="50px" width="50px" />
+                        <p className="text-action">Manage learner</p>
+                    </div>
+                </Link>
+                <Link className="link-action" to={"/ins/announcement"}>
+                    <div id="second-act">
+                        <img className="imgAction" src={notifyImg} alt="notifyImg" height="40px" width="50px" />
+                        <p className="text-action">Notify</p>
+                    </div>
+                </Link>
+                    <div id="third-act">
+                        <img className="imgAction" src={plus} alt="plusImg" height="50px" width="50px" />
+                        <p className="text-action">New section</p>
+                    </div>
+            </div>
+        </div>
+    )
 }
 
 function InnerCourse() {
