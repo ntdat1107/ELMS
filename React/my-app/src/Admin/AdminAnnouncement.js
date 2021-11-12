@@ -23,7 +23,6 @@ function AdminAnnounce() {
                 />
             </div>
             <div id="adminannounce">
-                <NewAnnoun />
                 <ListAnnoun />
             </div>
         </div>

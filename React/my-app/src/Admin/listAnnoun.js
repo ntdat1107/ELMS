@@ -3,6 +3,7 @@ import JsonData2 from "./FakedataforAnnoun";
 import "./CSS/AdminAnnouncement.css";
 import SearchAnnoun from "./SearchAnnoun";
 import { Scrollbars } from "react-custom-scrollbars";
+import NewAnnoun from "./NewAnnoun";
 
 function ListAnnoun() {
     const users = JsonData2.slice(0, 50);
@@ -28,6 +29,7 @@ function ListAnnoun() {
 
     return (
         <div id="wholeblock">
+            <NewAnnoun />
             <div id="listAnnoun">
                 <div id="SearchList">
                     <SearchAnnoun />
