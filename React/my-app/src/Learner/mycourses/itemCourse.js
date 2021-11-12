@@ -38,6 +38,7 @@ function ItemCourse({
     progressScore,
     imgCourse,
     scoreRate,
+    imgRate,
     callback = () => {}
 }) {
     return (
@@ -69,7 +70,7 @@ function ItemCourse({
                 </div>
                 <div className="rateCourseMC">
                     <div id = {scoreRate == 0 ? "notScore" : "hadScore"}>
-                        <div id={"score" + scoreRate}></div>
+                        <img src={imgRate} alt="Img rating" />
                         <p>Your rating</p>
                     </div>
                 </div>

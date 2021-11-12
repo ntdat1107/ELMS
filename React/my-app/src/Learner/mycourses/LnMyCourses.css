@@ -181,7 +181,7 @@ background-color: #ffffff;
 width: 782px;
 height: 335px;
 }
-#myCourses #rowCourses1,#rowCourses2,#rowCourses3 {
+#myCourses #colCourses1,#colCourses2,#colCourses3 {
 display: inline-block;
 margin-bottom: 10px;
 margin-top: 10px;
@@ -381,6 +381,8 @@ display: none;
 }
 #myCourses .rateCourseMC #hadScore {
 padding-left: 50px;
+position: relative;
+top: 30px;
 }
 
 /* OpenMore */
@@ -411,30 +413,34 @@ padding-left: 50px;
     border-bottom: 4px solid #242222;
     transition: all 0.2s ease-out;
 }
-#myCourses #rowCourses1 .nav-menu.active {
+#myCourses #colCourses1 .nav-menu.active {
     display:block;
     background: white;
     opacity: 1;
     transition: all 0.5s ease;
-    margin-top: 10px;
+    margin-top: -130px;
+    z-index: 1;
     margin-left: 41px;
 }
-#myCourses #rowCourses2 .nav-menu.active {
+#myCourses #colCourses2 .nav-menu.active {
     display:block;
     background: white;
     opacity: 1;
     transition: all 0.5s ease;
-    margin-top: 10px;
+    margin-top: -130px;
+    z-index: 1;
     margin-left: 301px;
 }
-#myCourses #rowCourses3 .nav-menu.active {
+#myCourses #colCourses3 .nav-menu.active {
     display:block;
     background: white;
     opacity: 1;
     transition: all 0.5s ease;
-    margin-top: 10px;
+    margin-top: -130px;
+    z-index: 1;
     margin-left: 561px;
 }
+
 /* Scroll Bar */
 #myCourses #scrollbars {
     height: 335px;

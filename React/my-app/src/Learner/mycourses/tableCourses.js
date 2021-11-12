@@ -4,7 +4,7 @@ import { Scrollbars } from "react-custom-scrollbars"
 import ItemCourse from "./itemCourse"
 import listCourse from "./dataListCourse"
 function TableCourse() {
-  const [courses] = useState(listCourse.slice(0, 96));
+  const [courses] = useState(listCourse.slice(0, 36));
   const [pageNumber, setPageNumber] = useState(0);
 
   const coursesPerPage = 12;
@@ -22,52 +22,56 @@ function TableCourse() {
   
   const bigDisplay1 = smallCourses[0].map((course,index) => {
     return (
-      <div id={"rowCourses" + (index + 1)}>
+      <div id={"colCourses" + (index + 1)}>
         <ItemCourse 
             imgCourse={course.imgCourse}
             nameCourse={course.nameCourse}
             authorCourse={course.authorCourse}
             progressScore = {course.progressScore}
             scoreRate={course.scoreRate}
+            imgRate={course.imgRate}
         />
       </div>
     );
   });
   const bigDisplay2 = smallCourses[1].map((course,index) => {
     return (
-      <div id={"rowCourses" + (index + 1)}>
+      <div id={"colCourses" + (index + 1)}>
         <ItemCourse 
-            idCourse={course.idCourse}
+            imgCourse={course.imgCourse}
             nameCourse={course.nameCourse}
             authorCourse={course.authorCourse}
             progressScore = {course.progressScore}
             scoreRate={course.scoreRate}
+            imgRate={course.imgRate}
         />
       </div>
     );
   });
   const bigDisplay3 = smallCourses[2].map((course,index) => {
     return (
-      <div id={"rowCourses" + (index + 1)}>
+      <div id={"colCourses" + (index + 1)}>
         <ItemCourse 
-            idCourse={course.idCourse}
+            imgCourse={course.imgCourse}
             nameCourse={course.nameCourse}
             authorCourse={course.authorCourse}
             progressScore = {course.progressScore}
             scoreRate={course.scoreRate}
+            imgRate={course.imgRate}
         />
       </div>
     );
   });
   const bigDisplay4 = smallCourses[3].map((course,index) => {
     return (
-      <div id={"rowCourses" + (index + 1)}>
+      <div id={"colCourses" + (index + 1)}>
         <ItemCourse 
-            idCourse={course.idCourse}
+            imgCourse={course.imgCourse}
             nameCourse={course.nameCourse}
             authorCourse={course.authorCourse}
             progressScore = {course.progressScore}
             scoreRate={course.scoreRate}
+            imgRate={course.imgRate}
         />
       </div>
     );
