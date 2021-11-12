@@ -1,7 +1,7 @@
 import React from "react";
-import DropList from "./dropList"
-import SearchBar from "../../searchBar"
-import "../css/LnMyCourses.css"
+import DropList from "./dropListCourse"
+import SearchBar from "../../SideBar/SideBar"
+import "./LnMyCourses.css"
 import searchIconMC from "../img/searchMC.png"
 import TableCourses from "./tableCourses"
 

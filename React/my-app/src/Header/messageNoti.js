@@ -29,7 +29,7 @@ function MessageNoti() {
     return (        
         <div className="message-btn">            
             <div id="messageBtn" onClick={handleClick}>
-                <img src={message} alt="MessageImage" className="messageImg" id={click? "MessageClose" : "MessageOpen"}/>
+                <img src={message} style={{cursor: 'pointer'}} alt="MessageImage" className="messageImg" id={click? "MessageClose" : "MessageOpen"}/>
                 <div className = {messageNotis.length === 0 ? "NoNoti" : "HasNoti"}>
                     <p id = "numOfNoti"></p>
                 </div>

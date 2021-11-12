@@ -25,7 +25,7 @@ function BellNoti() {
     return (        
         <div className="bell-btn">            
             <div id="bellBtn" onClick={handleClick}>
-                <img src={bell} alt="BellImage" className="bellImg" id={click? "BellClose" : "BellOpen"}/>
+                <img src={bell} style={{cursor: 'pointer'}} alt="BellImage" className="bellImg" id={click? "BellClose" : "BellOpen"}/>
                 <div className = {bellNotis.length === 0 ? "NoNoti" : "HasNoti"}>
                     <p id = "numOfNoti"></p>
                 </div>
