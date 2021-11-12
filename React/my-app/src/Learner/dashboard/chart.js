@@ -3,7 +3,7 @@ function BarGroup(props) {
     let height = props.d.value*10*2 
     let xMid =  props.i * 40 + 50
     let yMid = -props.d.value*10*2
-    return <g className="bar-group">
+    return <g className="bar-group" style={{cursor: 'pointer'}}>
     <text className="name-label" x={xMid+5} y={(yMid/2+height/2+10)} alignmentBaseline="middle" >{props.d.name}</text>
     <rect id="rect1" x= {xMid} y={-140}  height={140} width={30} fill= "#c4c4c4" rx ="15" ry="15" />
     <rect id="rect2" x= {xMid} y={yMid}  height={height} width={30} fill={props.color} rx ="15" ry="15" />
