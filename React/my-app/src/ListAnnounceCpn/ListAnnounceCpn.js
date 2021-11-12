@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-import JsonData2 from "./FakedataforAnnoun";
-import "./CSS/AdminAnnouncement.css";
-import SearchAnnoun from "./SearchAnnoun";
+import SearchAnnoun from "../Admin/SearchAnnoun";
 import { Scrollbars } from "react-custom-scrollbars";
-import NewAnnoun from "./NewAnnoun";
 
-function ListAnnoun() {
-    const users = JsonData2.slice(0, 50);
+function ListAnnounceCpn({ Addition_Part, FakeData }) {
+    const users = FakeData.slice(0, 50);
     const [click, setClick] = useState(1);
 
     function parentClick(e) {
@@ -25,11 +22,10 @@ function ListAnnoun() {
             setClick(e.target.parentElement.id);
         }
     }
-    console.log(click);
 
     return (
         <div id="wholeblock">
-            <NewAnnoun />
+            {Addition_Part}
             <div id="listAnnoun">
                 <div id="SearchList">
                     <SearchAnnoun />
@@ -80,4 +76,4 @@ function ListAnnoun() {
     );
 }
 
-export default ListAnnoun;
+export default ListAnnounceCpn;
