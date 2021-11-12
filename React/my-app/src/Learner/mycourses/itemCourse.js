@@ -36,13 +36,14 @@ function ItemCourse({
     nameCourse,
     authorCourse,
     progressScore,
-    idCourse,
+    imgCourse,
     scoreRate,
     callback = () => {}
 }) {
     return (
         <div className="itemCourse" >
-            <div className="imgCourse" id = {idCourse}>
+            <div className="imgCourse" style={{overflow: "hidden"}}>
+                <img src={imgCourse} alt = "Course Img" style={{borderBottom: "1px solid #000"}}></img>
                 <OpenMore />
             </div>
             <div id="nameCourse">

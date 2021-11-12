@@ -203,7 +203,7 @@ height: 120px;
 }
 #myCourses .itemCourse #more {
 position: relative;
-top: 10px;
+top: -130px;
 left:200px;
 width: 32.4px;
 }
@@ -213,19 +213,24 @@ font-size: 12px;
 font-weight: bold;
 box-sizing: border-box;
 padding-left: 10px;
-margin-top: 5px;
 width: 240px;
 height:40px;
+top: -30px;
+position: relative;
 }
 #myCourses .itemCourse #authorCourse {
 box-sizing: border-box;
 width: 240px;
 padding-left: 10px;
 height: 30px;
+top: -30px;
+position: relative;
 }
 #myCourses .itemCourse .rateCourseMC {
 box-sizing: border-box;
 width: 240px;
+top: -30px;
+position: relative;
 }
 #myCourses .itemCourse {
 background-color: #fff;
@@ -234,11 +239,15 @@ box-sizing: border-box;
 #myCourses #progressBarBase {
 padding-left: 10px;
 margin-top: 5px;
+top: -50px;
+position: relative;
 }
 #myCourses #rateCourse-stateProgress {
 display:flex;
 padding-left: 10px;
 margin-bottom: 10px;
+top: -50px;
+position: relative;
 }
 #myCourses #rateCourse-stateProgress .start  #progressStart{
 width:100px;
@@ -258,17 +267,17 @@ width: 100px;
 }
 /* ----------------------------------- */
 #myCourses .rateCourseMC #score0 {
-
+background-image: url('../img/rateStar/star0.png');
 width: 65px;
 height: 13px;
 }
 #myCourses .rateCourseMC #score0_5 {
-
+background-image: url('../img/rateStar/star0_5.png');
 width: 65px;
 height: 13px;
 }
 #myCourses .rateCourseMC #score1 {
-
+background-image: url('../img/rateStar/star1.png');
 width: 65px;
 height: 13px;
 }
@@ -318,39 +327,12 @@ width: 65px;
 height: 13px;
 
 }
-#myCourses .itemCourse .imgCourse {
-width: 238px;
-height: 120px;
-}
 /* ------------------- */
 #myCourses #stateProgressMC {
 width: 100px;
 }
 /* Background Course */
-#myCourses #gitCourse{
-width: 240px;
-height: 120px;
-}
-#myCourses #javaScriptCourse{
-width: 240px;
-height: 120px;
-}
-#myCourses #linuxCourse{
-width: 240px;
-height: 120px;
-}
-#myCourses #djangoCourse{
-width: 238px;
-height: 120px;
-}
-#myCourses #networkComputerCourse{
-width: 240px;
-height: 120px;
-}
-#myCourses #MLCourse{
-width: 240px;
-height: 120px;
-}
+
 /* pagination */
 #myCourses .paginationBttns {
 width: 100%;

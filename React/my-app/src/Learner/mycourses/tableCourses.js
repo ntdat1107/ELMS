@@ -24,7 +24,7 @@ function TableCourse() {
     return (
       <div id={"rowCourses" + (index + 1)}>
         <ItemCourse 
-            idCourse={course.idCourse}
+            imgCourse={course.imgCourse}
             nameCourse={course.nameCourse}
             authorCourse={course.authorCourse}
             progressScore = {course.progressScore}
