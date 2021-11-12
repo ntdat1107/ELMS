@@ -11,15 +11,16 @@ function courseForYouCpn({
     rateScore,
     imgStar,
     totalRate,
-    tagColor
+    tagColor,
+    linkName
 }) {
     return (
         <div id="courseCFY">
-            <Link to="/course_DADA">
+            <Link to={linkName}>
                 <img id = "imgCourse" src={imgSrcCourse} alt = {altCourse} width = "240px" height = "120px"></img>
             </Link>
             <div id="courseContent">
-                <Link className="Link-coursename" to="/course_DADA">
+                <Link className="Link-coursename" to={linkName}>
                     <p id = "Name">{Name}</p>
                 </Link>
                 <p id = "Desc">{Desc}</p>

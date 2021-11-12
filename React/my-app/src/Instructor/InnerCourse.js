@@ -1,5 +1,5 @@
 import React from 'react'
-import CourseComponent from "./CourseComponent";
+import CourseForYouCpn from '../courseForYou/courseForYouCpn';
 import './CSS/InnerCourse.css'
 import git from "../Learner/img/git.png";
 import star from "../Learner/img/star.png";
@@ -80,7 +80,7 @@ function InnerCourse() {
         idName="information" typeUserTemp={1}/>
             <div id="inner-course">
             <div id="row-1">
-                <CourseComponent 
+                <CourseForYouCpn 
                         imgSrcCourse = {git} 
                         altCourse = "GitCourseImage" 
                         Name = "Complete Git Course to Get Your Dream IT Job 2021" 

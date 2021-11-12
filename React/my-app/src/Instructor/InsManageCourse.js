@@ -1,7 +1,6 @@
 import React from "react";
 import { Scrollbars } from 'react-custom-scrollbars';
 import "./CSS/InsManagerCourse.css"
-import CourseComponent from "./CourseComponent";
 import git from "../Learner/img/git.png";
 import ai from "../Learner/img/ai.png";
 import django from "../Learner/img/django.png";
@@ -10,7 +9,7 @@ import linux from "../Learner/img/linux.png";
 import network from "../Learner/img/network.png";
 import star from "../Learner/img/star.png";
 import "./CSS/InsManagerCourse.css"
-
+import CourseForYouCpn from "../courseForYou/courseForYouCpn";
 import SideBar from '../SideBar/SideBar';
 import Header from '../Header/header'
 import cheems from "../img/cheems.png"
@@ -35,7 +34,7 @@ return (
         idName="information" typeUserTemp={1}/>
         <div id="insMC">
             <Scrollbars>
-                <CourseComponent 
+                <CourseForYouCpn 
                     imgSrcCourse = {git} 
                     altCourse = "GitCourseImage" 
                     Name = "Complete Git Course to Get Your Dream IT Job 2021" 
@@ -47,9 +46,9 @@ return (
                     imgStar={star} 
                     totalRate="(10,123)"
                     tagColor={styleBC}
-                    linkToCourse="/ins/managecourse/inner"
+                    linkName="/ins/managecourse/inner"
                 />
-                <CourseComponent 
+                <CourseForYouCpn 
                     imgSrcCourse = {network} 
                     altCourse = "NetWorkImage" 
                     Name = "Learning Network Technology and Security" 
@@ -60,9 +59,9 @@ return (
                     imgStar={star} 
                     totalRate="(9999)"
                     tagColor={styleN}
-                    linkToCourse="/ins/managecourse/inner"
+                    linkName="/ins/managecourse/inner"
                 />
-                <CourseComponent 
+                <CourseForYouCpn 
                     imgSrcCourse = {linux} 
                     altCourse = "LinuxImage" 
                     Name = "Complete Linux Training Course to Get Your Dream IT Job 2021" 
@@ -73,9 +72,9 @@ return (
                     imgStar={star} 
                     totalRate="(11113)"
                     tagColor={styleH}
-                    linkToCourse="/ins/managecourse/inner"
+                    linkName="/ins/managecourse/inner"
                 />
-                <CourseComponent 
+                <CourseForYouCpn 
                     imgSrcCourse = {ai} 
                     altCourse = "AIImage" 
                     Name = "Complete AI Course to Get Your Dream IT Job 2021" 
@@ -86,9 +85,9 @@ return (
                     imgStar={star} 
                     totalRate="(10,000)"
                     tagColor={styleBC}
-                    linkToCourse="/ins/managecourse/inner"
+                    linkName="/ins/managecourse/inner"
                 />
-                <CourseComponent 
+                <CourseForYouCpn 
                     imgSrcCourse = {js} 
                     altCourse = "JSImage" 
                     Name = "Complete Javascript Training Course to Get Your Dream IT Job 2021" 
@@ -99,9 +98,9 @@ return (
                     imgStar={star} 
                     totalRate="(12345)"
                     tagColor={styleN}
-                    linkToCourse="/ins/managecourse/inner"
+                    linkName="/ins/managecourse/inner"
                 />
-                <CourseComponent 
+                <CourseForYouCpn 
                     imgSrcCourse = {django} 
                     altCourse = "DjangoImage" 
                     Name = "Complete Python Django Training Course to Get Your Dream IT Job 2021" 
@@ -112,7 +111,7 @@ return (
                     imgStar={star} 
                     totalRate="(9876)"
                     tagColor={styleBC}
-                    linkToCourse="/ins/managecourse/inner"
+                    linkName="/ins/managecourse/inner"
                 />
             </Scrollbars>
         </div>
