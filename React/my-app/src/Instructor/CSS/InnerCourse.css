@@ -171,6 +171,7 @@
 }
 #inner-course #my-c-list p {
     float: right;
+    font-size: 20px;
 }
 #inner-course #head #my-c-title {
     float: left;
@@ -189,7 +190,7 @@
 #inner-course #row-2 #other-action {
     border: 2px solid #3FBB8C;
     width: 350px;
-    height: 250px;
+    height: 225px;
     border-radius: 20px;
     margin-top: 10px;
     margin-left: 60px;

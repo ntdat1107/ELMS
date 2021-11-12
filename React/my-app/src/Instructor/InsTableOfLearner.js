@@ -1,6 +1,6 @@
 import React from 'react'
 import CourseForYouCpn from '../courseForYou/courseForYouCpn';
-import git from "../Learner/img/course/git.png";
+import git from "../Learner/img/course/git1.jpg";
 import star from "../Learner/img/rateStar/star.png";
 import "./CSS/TableOfLearner.css"
 import SideBar from '../SideBar/SideBar';

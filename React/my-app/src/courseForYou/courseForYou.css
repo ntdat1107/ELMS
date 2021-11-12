@@ -87,3 +87,8 @@
     overflow: hidden;
     border: 1px solid #000;
 }
+
+
+.Link-coursename {
+    text-decoration: none;
+}

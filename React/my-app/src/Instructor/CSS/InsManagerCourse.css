@@ -6,76 +6,29 @@
     width: 1225px;
     height: 80vh;
 }
-
-/* ------RateContent-------- */
-#insMC #rateContent {
-    display: flex;
-    margin-top: 5px;
-}
 #insMC #rateContent #p1 {
-    width: 90px;
-    height: 30px;
     font-size: 14px;
-    text-align: center;
+    font-weight: bold;
 }
 
 
-#insMC #rateContent #p1 p {
-    margin-top: 5px;
-}
 #insMC #rateContent #p2 {
-    color: rgba(255,217,2,0.7);
-    height: 30px;
-    width: 30px;
     font-size: 14px;
-    text-align: center;
-    margin-left: 10px;
-}
-#insMC #rateContent #p2 p {
-    margin-top: 5px;
+    font-weight: bold;
 }
 
 #insMC #rateContent #p4 {
-    color: rgba(196,196,196,1);
-    height: 30px;
-    width: 60px;
     font-size: 14px;
-    text-align: center;
-    margin-left: 10px;
 }
-#insMC #rateContent #p4 p {
-    margin-top: 5px;
-}
-/* -----------CourseContent---------- */
 #insMC #courseContent {
     width: 70%;
 }
 #insMC #courseContent #Name{
-    display: inline-block;
-    font-weight: bold;
     font-size: 20px;
 }
 #insMC #courseContent #Desc{
     font-size: 16px;
 }
 #insMC #courseContent #Author{
-    color: rgba(196,196,196,1);
     font-size: 16px;
-}
-/* ----------courseCFY--------- */
-#insMC #courseCFY {
-    display: flex;
-    padding-top: 10px;
-    padding-right: 30px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    position: relative;
-}
-#insMC #courseContent {
-    padding-left: 10px;
-}
-
-/* Link */
-.link-to-course {
-    text-decoration: none;
 }

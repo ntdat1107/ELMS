@@ -1,8 +1,8 @@
 import React from 'react'
 import CourseForYouCpn from '../courseForYou/courseForYouCpn';
 import './CSS/InnerCourse.css'
-import git from "../Learner/img/git.png";
-import star from "../Learner/img/star.png";
+import git from "../Learner/img/course/git1.jpg";
+import star from "../Learner/img/rateStar/star.png";
 import Scrollbars from 'react-custom-scrollbars';
 import MyCourse from './MyCourse'
 import Header from '../Header/header'

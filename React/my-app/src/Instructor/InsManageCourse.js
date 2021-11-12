@@ -1,12 +1,12 @@
 import React from "react";
 import { Scrollbars } from 'react-custom-scrollbars';
 import "./CSS/InsManagerCourse.css"
-import git from "../Learner/img/course/git.png";
-import ai from "../Learner/img/course/ai.png";
-import django from "../Learner/img/course/django.png";
-import js from "../Learner/img/course/js.png";
-import linux from "../Learner/img/course/linux.png";
-import network from "../Learner/img/course/network.png";
+import git from "../Learner/img/course/git1.jpg";
+import ai from "../Learner/img/course/cpp1.jpg";
+import django from "../Learner/img/course/cpp1.jpg";
+import js from "../Learner/img/course/cpp1.jpg";
+import linux from "../Learner/img/course/cpp1.jpg";
+import network from "../Learner/img/course/cpp1.jpg";
 import star from "../Learner/img/rateStar/star.png";
 import "./CSS/InsManagerCourse.css"
 import CourseForYouCpn from "../courseForYou/courseForYouCpn";

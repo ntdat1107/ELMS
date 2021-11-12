@@ -6,101 +6,26 @@
     height: auto;
 }
 
-#table-learner #row-1 #coursesCFY {
-    background-color: rgba(88, 186, 171, 0.5);
-    display: inline-block;
-    margin-top: 10px;
-    margin-left: 325px;
-    width: 700px;
-    height: 200px;
-    border-radius: 20px 20px 0 0;
-    -webkit-border-radius: 20px 20px 0 0;
-    border-style: solid;
-    border-color: #c4c4c4;
-    border-width: 2px;
-}
-#table-learner #row-1 #titleCFY {
-    font-size: 24px;
-    font-weight: bold;
-    margin-left: 20px;
-    margin-top: 2px;
-}
-#table-learner #row-1 #listCoursesCFY {
-    background-color:white;
-    width: 710x;
-    margin-left: 15px;
-    margin-right: 15px;
-    height: 355px;
-}
-/* ------RateContent-------- */
-#table-learner #row-1 #rateContent {
-    display: flex;
-    margin-top: 5px;
-}
 #table-learner #row-1 #rateContent #p1 {
-    width: 90px;
-    height: 30px;
     font-size: 14px;
-    text-align: center;
-}
-
-
-#table-learner #row-1 #rateContent #p1 p {
-    margin-top: 5px;
 }
 #table-learner #row-1 #rateContent #p2 {
-    color: rgba(255,217,2,0.7);
-    height: 30px;
-    width: 30px;
     font-size: 14px;
-    text-align: center;
-    margin-left: 10px;
-}
-#table-learner #row-1 #rateContent #p2 p {
-    margin-top: 5px;
-}
-#table-learner #row-1 #rateContent #p3 {
-    margin-top: 5px;
-    margin-left: 10px;
 }
 #table-learner #row-1 #rateContent #p4 {
-    color: rgba(196,196,196,1);
-    height: 30px;
-    width: 60px;
     font-size: 14px;
-    text-align: center;
-    margin-left: 10px;
 }
-#table-learner #row-1 #rateContent #p4 p {
-    margin-top: 5px;
-}
-/* -----------CourseContent---------- */
 #table-learner #row-1 #courseContent {
     width: 70%;
 }
 #table-learner #row-1 #courseContent #Name{
-    display: inline-block;
-    font-weight: bold;
     font-size: 18px;
 }
 #table-learner #row-1 #courseContent #Desc{
     font-size: 14px;
 }
 #table-learner #row-1 #courseContent #Author{
-    color: rgba(196,196,196,1);
     font-size: 14px;
-}
-/* ----------courseCFY--------- */
-#table-learner #row-1 #courseCFY {
-    display: flex;
-    padding-top: 10px;
-    padding-right: 30px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    position: relative;
-}
-#table-learner #row-1 #courseContent {
-    padding-left: 10px;
 }
 
 
