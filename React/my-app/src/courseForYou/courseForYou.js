@@ -1,14 +1,15 @@
 import React from 'react'
 import { Scrollbars } from 'react-custom-scrollbars';
 import { Link } from "react-router-dom";
+import './courseForYou.css';
 import CourseForYouCpn from "./courseForYouCpn";
-import git from "../img/git.png";
-import ai from "../img/ai.png";
-import django from "../img/django.png";
-import js from "../img/js.png";
-import linux from "../img/linux.png";
-import network from "../img/network.png";
-import star from "../img/star.png";
+import git from "../Learner/img/git.png"
+import ai from "../Learner/img/ai.png";
+import django from "../Learner/img/django.png";
+import js from "../Learner/img/js.png";
+import linux from "../Learner/img/linux.png";
+import network from "../Learner/img/network.png";
+import star from "../Learner/img/star.png";
 
 const styleBC = {
     backgroundColor: "#F8D92E",

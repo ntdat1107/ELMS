@@ -171,6 +171,10 @@ margin-top: 16px;
 display: flex;
 }
 /* List Course */
+.Link-coursename{
+    text-decoration: none;
+    color: #000;
+}
 #myCourses #tableCourses {
 margin-left:20px;
 background-color: #ffffff;

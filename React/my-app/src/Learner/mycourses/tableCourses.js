@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactPaginate from "react-paginate";
 import { Scrollbars } from "react-custom-scrollbars"
 import ItemCourse from "./itemCourse"
-import listCourse from "./dataListCourse.json"
+import listCourse from "./dataListCourse"
 function TableCourse() {
   const [courses] = useState(listCourse.slice(0, 96));
   const [pageNumber, setPageNumber] = useState(0);
