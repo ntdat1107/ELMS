@@ -1,13 +1,13 @@
 import React from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 import CourseCpninad from "./CoureCpninad";
-import git from "../Learner/img/git.png";
-import ai from "../Learner/img/ai.png";
-import django from "../Learner/img/django.png";
-import js from "../Learner/img/js.png";
-import linux from "../Learner/img/linux.png";
-import network from "../Learner/img/network.png";
-import star from "../Learner/img/star.png";
+import git from "../Learner/img/course/git.png";
+import ai from "../Learner/img/course/ai.png";
+import django from "../Learner/img/course/django.png";
+import js from "../Learner/img/course/js.png";
+import linux from "../Learner/img/course/linux.png";
+import network from "../Learner/img/course/network.png";
+import star from "../Learner/img/rateStar/star.png";
 import "./CSS/AdminCourse.css";
 
 const styleBC = {
