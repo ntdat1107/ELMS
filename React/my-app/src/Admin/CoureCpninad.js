@@ -72,7 +72,7 @@ function CourseCpninad({ id, imgSrcCourse, altCourse, Name, Desc, Author, Type, 
                     <div id="ScrollBars">
                         <Scrollbars style={{ width: 1000, height: "42vh" }}>
                             <div id="below">
-                                <div className="x" id="a">
+                                <div className="user-in-course">
                                     <div id="green">
                                         <img src={instructor} alt="Instructor Icon" width="30px" height="30px" /> <p> Instructor</p>
                                     </div>
@@ -83,7 +83,7 @@ function CourseCpninad({ id, imgSrcCourse, altCourse, Name, Desc, Author, Type, 
                                 </div>
 
                                 {/* Danh Sach Hoc Vien */}
-                                <div className="x" id="b">
+                                <div className="user-in-course" id="b">
                                     <div id="green">
                                         <img src={learner} alt="Learner Icon" width="30px" height="30px" />
                                         <span> Learner</span>

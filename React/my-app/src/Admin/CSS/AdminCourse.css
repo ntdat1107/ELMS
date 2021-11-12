@@ -1,40 +1,50 @@
 #admincourse {
     margin-top: 120px;
-    margin-left: 290px;
+    margin-left: 300px;
+    width: 100%;
     position: relative;
 }
 
-#admincourse #coursesCFY #listCoursesCFY {
-    position: relative;
+#admincourse #courseinad {
+    display: inline-block;
+    width: 100%;
+    height: 71vh;
 }
 
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .taskIcon {
+#admincourse #titleCFY {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 2px;
+}
+
+#admincourse #courseinad #add-taskIcon .taskIcon {
     width: 5px;
     height: auto;
     position: relative;
-    left: 1080px;
+    left: 95%;
     top: 120px;
     cursor: pointer;
-    z-index: 0;
+    z-index: 1;
 }
 
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .taskIcon:hover {
+#admincourse #courseinad #add-taskIcon .taskIcon:hover {
     box-shadow: 1px 1px 5px black;
 }
 
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .nav-menu.active {
+#admincourse #courseinad #add-taskIcon .nav-menu.active {
     border: 1px solid black;
     width: 180px;
     height: 100px;
     position: absolute;
     display: flex;
-    left: 915px;
+    left: 81%;
     top: 65px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
 }
 
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .nav-menu.active .nav-item {
+#admincourse #courseinad #add-taskIcon .nav-menu.active .nav-item {
     font-size: 20px;
     width: 120px;
     margin-left: 6px;
@@ -43,11 +53,11 @@
     cursor: pointer;
 }
 
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .nav-menu.active .nav-item:hover {
+#admincourse #courseinad #add-taskIcon .nav-menu.active .nav-item:hover {
     box-shadow: 1px 1px 3px black;
 }
 
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open {
+#admincourse #courseinad #add-taskIcon .detail-box.open {
     position: fixed;
     display: block;
     top: 0;
@@ -57,14 +67,14 @@
     z-index: 3;
 }
 
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open .modal-overlay {
+#admincourse #courseinad #add-taskIcon .detail-box.open .modal-overlay {
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open .modal-body {
+#admincourse #courseinad #add-taskIcon .detail-box.open .modal-body {
     background-color: white;
     position: relative;
     top: 20vh;
@@ -77,57 +87,57 @@
     -webkit-border-radius: 10px;
 }
 
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #below {
+#admincourse #courseinad #add-taskIcon .detail-box.open #below {
     font-size: 20px;
 }
 
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #below .x {
+#admincourse #courseinad #add-taskIcon .detail-box.open #below .user-in-course {
     border: 1px solid black;
     width: 800px;
     margin: 10px 0px 10px 50px;
 }
 
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #below #green {
+#admincourse #courseinad #add-taskIcon .detail-box.open #below #green {
     background-color: #58baab;
     padding: 3px 0px 3px 12px;
     display: flex;
     position: relative;
 }
 
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #below #green #plus-icon {
+#admincourse #courseinad #add-taskIcon .detail-box.open #below #green #plus-icon {
     cursor: pointer;
     position: absolute;
     right: 10px;
 }
 
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #below #green #plus-icon:hover {
+#admincourse #courseinad #add-taskIcon .detail-box.open #below #green #plus-icon:hover {
     box-shadow: 1px 1px 3px black;
 }
 
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #below #name {
+#admincourse #courseinad #add-taskIcon .detail-box.open #below #name {
     display: flex;
     padding-left: 12px;
     margin-top: 5px;
     margin-bottom: 8px;
 }
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #below #name-of {
+#admincourse #courseinad #add-taskIcon .detail-box.open #below #name-of {
     padding-left: 20px;
     cursor: pointer;
 }
 
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #below #name-of:hover {
+#admincourse #courseinad #add-taskIcon .detail-box.open #below #name-of:hover {
     text-decoration-line: underline;
 }
 
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #below #name #right-icon {
+#admincourse #courseinad #add-taskIcon .detail-box.open #below #name #right-icon {
     cursor: pointer;
 }
 
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #below #name #right-icon:hover {
+#admincourse #courseinad #add-taskIcon .detail-box.open #below #name #right-icon:hover {
     box-shadow: 1px 1px 3px black;
 }
 
-#admincourse #coursesCFY #listCoursesCFY #add-taskIcon .detail-box.open #close {
+#admincourse #courseinad #add-taskIcon .detail-box.open #close {
     position: absolute;
     z-index: 1;
     font-weight: bold;
@@ -135,6 +145,10 @@
     right: 15px;
     top: 5px;
     cursor: pointer;
+}
+
+#admincourse #courseinad #add-taskIcon .detail-box.open #close:hover {
+    transform: scale(1.1);
 }
 
 /*_______________________________________________________*/
@@ -159,98 +173,4 @@
 #add-taskIcon .task-button {
     position: relative;
     z-index: 1;
-}
-
-#admincourse #coursesCFY {
-    background-color: rgba(88, 186, 171, 0.5);
-    display: inline-block;
-    height: 490px;
-    border-radius: 20px 20px 0 0;
-    -webkit-border-radius: 20px 20px 0 0;
-    border-style: solid;
-    border-color: #c4c4c4;
-    border-width: 2px;
-}
-#admincourse #titleCFY {
-    font-size: 24px;
-    font-weight: bold;
-    margin-left: 20px;
-    margin-top: 2px;
-}
-#admincourse #listCoursesCFY {
-    background-color: white;
-    width: 1180px;
-    margin-left: 15px;
-    margin-right: 15px;
-    height: 440px;
-}
-/* ------RateContent-------- */
-#admincourse #rateContent {
-    display: flex;
-    margin-top: 5px;
-}
-#admincourse #rateContent #p1 {
-    width: 90px;
-    height: 30px;
-    font-size: 14px;
-    text-align: center;
-}
-
-#admincourse #rateContent #p1 p {
-    margin-top: 5px;
-}
-#admincourse #rateContent #p2 {
-    color: rgba(255, 217, 2, 0.7);
-    height: 30px;
-    width: 30px;
-    font-size: 14px;
-    text-align: center;
-    margin-left: 10px;
-}
-#admincourse #rateContent #p2 {
-    color: rgba(255, 217, 2, 0.7);
-    height: 30px;
-    width: 30px;
-    font-size: 14px;
-    text-align: center;
-    margin-left: 10px;
-}
-#admincourse #rateContent #p3 {
-    margin-left: 10px;
-}
-#admincourse #rateContent #p4 {
-    color: rgba(196, 196, 196, 1);
-    height: 30px;
-    width: 60px;
-    font-size: 14px;
-    text-align: center;
-    margin-left: 10px;
-}
-#admincourse #rateContent #p4 p {
-    margin-top: 5px;
-}
-/* -----------CourseContent---------- */
-#admincourse #courseContent #Name {
-    font-weight: bold;
-    font-size: 14px;
-}
-#admincourse #courseContent #Desc {
-    font-size: 14px;
-}
-#admincourse #courseContent #Author {
-    color: rgba(196, 196, 196, 1);
-    font-size: 14px;
-}
-/* ----------courseCFY--------- */
-#admincourse #courseCFY {
-    display: flex;
-    padding-top: 10px;
-    width: 1030px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    position: relative;
-    z-index: 0;
-}
-#admincourse #courseContent {
-    padding-left: 10px;
 }
