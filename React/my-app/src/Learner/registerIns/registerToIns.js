@@ -69,11 +69,11 @@ function BoxRegisterIns() {
                 </div>
                 <div >
                     <div className="FormquesBox">Attach a certificate image</div>
-                    <div className="Formupload">
+                    <div className="Formupload" style={{fontSize: "20px"}}>
                         <p>Maximum file size: 100MB, maximum number of files: 3</p>
                         <div id="FormPushCV">
                             <img src={uploadCV} alt="Upload CV" style = {{paddingLeft: "45%"}} />
-                            <p style = {{paddingLeft: "10%"}}>You can drag and drop files here to add them.</p>
+                            <p style = {{paddingLeft: "10%", fontSize: "20px"}}>You can drag and drop files here to add them.</p>
                         </div>
                     </div>
                 </div>
@@ -91,8 +91,8 @@ function BoxRegisterIns() {
                 </div>
             </div>
             <div className="FormSignupbtn-box">
-                <Link to="/learner/dashboard" className="Link-coursename" ><p id="exitFormBtn">Exit</p></Link>
-                <Link to="/learner/dashboard" className="Link-coursename" ><p id="submitFormBtn">Submit</p></Link>
+                <Link to="/learner/dashboard" className="Link-coursename" ><p style={{fontSize: "20px"}} id="exitFormBtn">Exit</p></Link>
+                <Link to="/learner/dashboard" className="Link-coursename" ><p style={{fontSize: "20px"}} id="submitFormBtn">Submit</p></Link>
             </div>
         </div>
     )
