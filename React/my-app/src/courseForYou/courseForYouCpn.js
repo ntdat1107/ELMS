@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import './courseForYou.css';
 import RateContent from './RateContent';
-function courseForYouCpn({
+function CourseForYouCpn({
     imgSrcCourse,
     Name,
     Desc,
@@ -30,4 +30,4 @@ function courseForYouCpn({
     )
 }
 
-export default courseForYouCpn;
+export default CourseForYouCpn;

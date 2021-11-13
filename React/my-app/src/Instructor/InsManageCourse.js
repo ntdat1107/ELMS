@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Scrollbars } from 'react-custom-scrollbars';
 import "./CSS/InsManagerCourse.css"
 import "./CSS/InsManagerCourse.css"
@@ -6,9 +6,17 @@ import CourseForYouCpn from "../courseForYou/courseForYouCpn";
 import SideBar from '../SideBar/SideBar';
 import Header from '../Header/header'
 import cheems from "../img/cheems.png"
-import Courses from "./MOCK_DATA_COURSE.js"
+import axios from 'axios'
 
 function InsManagerCourse () {
+    const [Courses, setCourses] = useState([])
+    useEffect(() => {
+        const fetchCourses = async () => {
+            const { data } = await axios.get('/api/managecourse')
+            setCourses(data)
+        }
+        fetchCourses()
+    }, [])
 return (
     <div id="insMC-UI">
         <SideBar typeUserTemp={1}/>

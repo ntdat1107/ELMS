@@ -1,5 +1,28 @@
 {
   "dependencies": {
-    "react-paginate": "^7.1.5"
+    "express": "^4.17.1"
+  },
+  "name": "elms",
+  "description": "This is an application for web based e-learning system. In this project, we built the front-end for the system.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node Backend/server.js",
+    "server": "nodemon --inspect Backend/server.js",
+    "client": "npm start --prefix React/my-app",
+    "dev": "concurrently \"npm run server\" \"npm run client\"" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntdat1107/ELMS.git"
+  },
+  "author": "Team 3's friends",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ntdat1107/ELMS/issues"
+  },
+  "homepage": "https://github.com/ntdat1107/ELMS#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

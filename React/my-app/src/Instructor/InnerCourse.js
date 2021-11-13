@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState} from 'react'
 import CourseForYouCpn from '../courseForYou/courseForYouCpn';
 import './CSS/InnerCourse.css'
 import Scrollbars from 'react-custom-scrollbars';
@@ -11,8 +11,7 @@ import deleteImg from './imgSrc/delete.png'
 import {Link} from "react-router-dom"
 import manageLearner from './imgSrc/manageLearner.png'
 import notifyImg from './imgSrc/notify.png'
-import Courses from "./MOCK_DATA_COURSE.js"
-
+import axios from 'axios';
 
 
 function CourseSection({
@@ -67,9 +66,16 @@ function OtherAction() {
 }
 
 function InnerCourse({ match }) {
-
-    const CourseNow = Courses.find(c => c.fastName == match.params.id)
-
+    const [CourseNow, setCourses] = useState([])
+    const [isDone, setDone] = useState(false)
+    useEffect(() => {
+        const fetchCourses = async () => {
+            const { data } = await axios.get(`/api/managecourse/${match.params.id}`)
+            setCourses(data)
+            setDone(true)
+        }
+        fetchCourses()
+    }, [])
     return (
         <div id="inner-course-UI">
             <SideBar typeUserTemp={1}/>
@@ -77,7 +83,9 @@ function InnerCourse({ match }) {
         idName="information" typeUserTemp={1}/>
             <div id="inner-course">
             <div id="row-1">
-                <CourseForYouCpn 
+                {
+                    isDone &&
+                    <CourseForYouCpn 
                         imgSrcCourse = {CourseNow.imgSrcCourse} 
                         Name = {CourseNow.Name}
                         Desc = {CourseNow.Desc}
@@ -86,7 +94,8 @@ function InnerCourse({ match }) {
                         rateScore = {CourseNow.rateScore}
                         totalRate = {CourseNow.totalRate}
                         linkName = {`/ins/managecourse/${CourseNow.fastName}`}
-                />
+                    />
+                }
             </div>
             <div id="row-2">
                 <div id="col-1">
