@@ -37,19 +37,10 @@ function MessageNoti() {
             <ul className={click? 'nav-menu-ms active' : 'nav-menu-ms'}>
                 <li className="nav-item-ms">
                     <p id = "titleNoti-ms">Message</p>
-                    <div id="searchBarMsMc">
-                        <SearchBar searchImg = {searchIcon} id="SearchBarMs" name="SearchMs" searchType="Search for" />
-                    </div>
                     <div id="listContentNoti-ms">
                         <Scrollbars>
                                 {contentNoti}
                         </Scrollbars>
-                        <div id="sendMessage">
-                            <label id = "toUser">To:</label> <br/>
-                            <input id = "sendToUser" type="text" name = "toUser" placeholder="Enter reciever ..." /><br/>
-                            <input id = "content" type="text" name = "content" placeholder="Enter the text of the message" /> <br/>
-                            <div id="iconSend"><img src = {sendIcon} alt="SendIcon"></img></div>
-                        </div>
                     </div>
                 </li>
             </ul>

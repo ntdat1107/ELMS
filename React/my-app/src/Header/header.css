@@ -135,20 +135,7 @@
     display: flex;
     background-color: #f4f4f4;
 }
-.nav-menu.active .nav-link2 {
-    display: flex;
-    background-color: #f4f4f4;
-}
-.nav-menu.active .nav-link3 {
-    display: flex;
-    background-color: #f4f4f4;
-}
-.nav-menu.active #roleLnTA .nav-link2 {
-    display: none;
-}
-.nav-menu.active #roleLn .nav-link3 {
-    display: none;
-}
+
 .nav-item {
     height: 60px;
     font-size: 24px;
@@ -255,8 +242,8 @@
 
 /* Notification */
 #Header #message-btn #nav-item-ms {
-    width: 200px;
-    height: 600px;
+    width: 350px;
+    height: 340px;
 }
 .nav-menu-ms {
     display: none;
@@ -266,14 +253,14 @@
     position: absolute;
 }
 .nav-item-ms {
-    height: 600px;
-    width: 390px;
+    height: 340px;
+    width: 350px;
     padding-left: 25px;
     border: 1px solid #c4c4c4;
     background-color: #fff;
 }
 .nav-item-ms p {
-    width: 340px;
+    width: 300px;
     font-size: 14px;
     height: 40px;
     -webkit-line-clamp: 2;
@@ -284,6 +271,7 @@
 }
 .nav-item-ms #titleNoti-ms {
     display: inline-block;
+    width: 300px;
     font-size: 14px;
     height: 20px;
     font-weight: bold;
@@ -295,80 +283,21 @@
     background: white;
     opacity: 1;
     transition: all 0.5s ease;
-    height: 590px;
+    height: 340px;
     width: 350px;
-    left:1140px;
-    top: 120px;
+    left:790px;
+    top: 80px;
 }
 #Header #messageBtn {
     height: 40px
 }
 #Header #listContentNoti-ms {
     height: 300px;
-    width: 360px;
 }
 #Header #listContentNoti-ms p{
-    width: 340px;
+    width: 300px;
 }
-/* Search Message */
-#SearchBarMs {
-    margin-top: 20px;
-    padding-left: 40px;
-}
-#searchBarMsMc {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.nav-item-ms #Input {
-    size: 32;
-    width: 340px;
-    height: 40px;
-    border-radius: 45px;
-    -webkit-border-radius: 45px;
-    border-color: black;
-    padding-left: 15px;
-}
-#searchIcon {
-    position: absolute;
-    margin-top: 8px;
-    margin-left: -40px;
-    cursor: pointer;
-}
-#Header #sendMessage {
-    margin-top: 10px;
-    border-top: 2px solid black;
-    width: 340px;
-}
-#Header #sendMessage #toUser{
-    font-size: 14px;
-    font-weight: bold;
-}
-#Header #sendMessage #sendToUser{
-    font-size: 14px;
-}
-#Header #sendMessage #content {
-    width: 340px;
-    height: 100px;
-    margin-top:5px;
-}
-#Header #sendMessage #iconSend {
-    margin-top:5px;
-    width: 35px;
-    height: 35px;
-}
-#Header #sendMessage #iconSend img{
-    cursor: pointer;
-    padding-left: 7.5px;
-    padding-top: 7.5px;
-}
-#Header #sendMessage #iconSend:hover {
-    margin-top:5px;
-    width: 35px;
-    height: 35px;
-    background-color: #c4c4c4;
-    border-radius: 17.5px;
-    -webkit-border-radius: 17.5px;
-}
+
 
 
 
