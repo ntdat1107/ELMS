@@ -70,8 +70,14 @@ function ItemCourse({
                 </div>
                 <div className="rateCourseMC">
                     <div id = {scoreRate == 0 ? "notScore" : "hadScore"}>
-                        <img src={imgRate} alt="Img rating" />
-                        <p>Your rating</p>
+                        <Link className="Link-coursename" to="/learner/ratingcourse">
+                            <img src={imgRate} alt="Img rating" style={{cursor: "pointer"}}/>
+                        </Link>
+                        <Link className="Link-coursename" to="/learner/ratingcourse">
+                            <p style={{cursor: "pointer"}}>Your rating</p>
+                        </Link>
+                        
+                        
                     </div>
                 </div>
             </div>
