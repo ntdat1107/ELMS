@@ -54,7 +54,10 @@
 /* -----------CourseContent---------- */
  #courseContent #Name{
     font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: 14px;
+    height: 25px;
 }
  #courseContent #Desc{
     font-size: 14px;

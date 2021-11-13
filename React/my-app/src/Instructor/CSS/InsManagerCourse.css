@@ -21,10 +21,11 @@
     font-size: 14px;
 }
 #insMC #courseContent {
-    width: 70%;
+    flex-wrap: wrap;
 }
 #insMC #courseContent #Name{
     font-size: 20px;
+    flex-wrap: wrap;
 }
 #insMC #courseContent #Desc{
     font-size: 16px;

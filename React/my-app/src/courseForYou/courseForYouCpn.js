@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import './courseForYou.css';
+import RateContent from './RateContent';
 function courseForYouCpn({
     imgSrcCourse,
     altCourse,
@@ -9,7 +10,6 @@ function courseForYouCpn({
     Author,
     Type,
     rateScore,
-    imgStar,
     totalRate,
     tagColor,
     linkName
@@ -25,12 +25,7 @@ function courseForYouCpn({
                 </Link>
                 <p id = "Desc">{Desc}</p>
                 <p id = "Author">{Author}</p>
-                <div id="rateContent">
-                    <div id="p1" style={tagColor}><p>{Type}</p></div>
-                    <div id="p2"><p>{rateScore} </p></div>
-                    <div id="p3"><img src= {imgStar} alt="star"></img></div>
-                    <div id="p4"><p>{totalRate}</p></div>
-                </div>
+                <RateContent TypeCpn={Type} rateScoreCpn={rateScore} totalRateCpn={totalRate} tagColorCpn={tagColor} />
             </div>
         </div>
     )
