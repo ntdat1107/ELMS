@@ -1,18 +1,17 @@
-import React from 'react'
+import React, { useState} from 'react'
 import RatingCmt from './ratingCmt'
 import RatingStar from './ratingStar'
 import RatingInfo from './ratingInfo'
-import cpp1 from '../Learner/img/course/cpp1.jpg'
 import './rating.css'
-function RatingCpn() {
+function RatingCpn({imgCourse, nameCourse, authorCourse, progressScore}) {
     return (
         <div id="ratingCpn">
             <div id="row1">
                 <RatingInfo 
-                    imgCourse= {cpp1}
-                    nameCourse= "Gitting Started: Step-by-Step Git and Github Crash Course"
-                    authorCourse = "Abhin Chhabra, Senior Sotfware Engineer"
-                    progressScore =  {50}
+                    imgCourse= {imgCourse}
+                    nameCourse= {nameCourse}
+                    authorCourse = {authorCourse}
+                    progressScore = {progressScore}
                 />
             </div>
             <div id="titleRating"><p>Please leave your rating</p></div>

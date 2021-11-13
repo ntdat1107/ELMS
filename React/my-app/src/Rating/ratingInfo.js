@@ -11,19 +11,19 @@ function RatingInfo({
     return (
         <div className="ratingInfo" >
             <div className="imgCourse" id="r1" style={{overflow: "hidden"}}>
-                <img src={imgCourse} alt = "Course Img"  style={{height: "135px"}}></img>
+                <img src={imgCourse} alt = "Course Img"  style={{height: "100px"}}></img>
             </div>
            <div id="r2">
-                <div id="nameCourse">
+                <div id="nameCourseRate">
                     <p>{nameCourse}</p>
                 </div>
-                <div id="authorCourse">
+                <div id="authorCourseRate">
                     <p>{authorCourse} </p>
                 </div>
-                <div id="progressCourse">
-                    <svg id="progressBarBase" width="300" height="20">
-                        <rect width="300" height="20" fill="#c4c4c4" />
-                        <rect width={progressScore * 300 / 100} height="20" fill="#05611E" />
+                <div id="progressCourseRate">
+                    <svg id="progressBarBaseRate" width="230" height="15">
+                        <rect width="230" height="15" fill="#c4c4c4" />
+                        <rect width={progressScore * 230 / 100} height="15" fill="#05611E" />
                     </svg>
                 </div>
                 <div className={progressScore === 0 ? "start" : "started"}>

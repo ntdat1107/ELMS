@@ -4,6 +4,9 @@ import share from "../img/icon/shareM.png"
 import favorite from "../img/icon/favoriteM.png"
 import archived from "../img/icon/archivedM.png"
 import {Link} from 'react-router-dom'
+import RatingCourse from '../../Rating/ratingCpn'
+import imgRate from '../img/rateStar/star4_5.png'
+import deleteIcon from '../img/icon/deleteIcon.png'
 function OpenMore() {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click);
@@ -31,6 +34,28 @@ function OpenMore() {
         </div>
     )
 }
+function OpenRate({imgCourse, nameCourse, authorCourse, progressScore}) {
+    const [click, setClick] = useState(false)
+    const handleClick = () => setClick(!click);
+    const closeMenuRate = () => setClick(false);
+    return (        
+        <div className="rate-btn">            
+            <div id="rate" onClick={handleClick}>
+                <img src={imgRate} alt="Img rating" style={{cursor: "pointer"}} id={click? "rateClose" : "rateOpen"}/>
+            </div>            
+            <ul className={click? 'nav-menu-rate active' : 'nav-menu-rate'}>
+                <div>
+                <RatingCourse 
+                    imgCourse = {imgCourse} 
+                    nameCourse = {nameCourse} 
+                    authorCourse = {authorCourse}
+                    progressScore = {progressScore}
+                /></div>
+                <div><img src={deleteIcon} alt="Delete Icon" onClick={closeMenuRate} style={{cursor: 'pointer', height: '20px', width: '20px'}} /></div>
+            </ul>
+        </div>
+    )
+}
 
 function ItemCourse({
     nameCourse,
@@ -38,7 +63,6 @@ function ItemCourse({
     progressScore,
     imgCourse,
     scoreRate,
-    imgRate,
     callback = () => {}
 }) {
     return (
@@ -70,14 +94,13 @@ function ItemCourse({
                 </div>
                 <div className="rateCourseMC">
                     <div id = {scoreRate == 0 ? "notScore" : "hadScore"}>
-                        <Link className="Link-coursename" to="/learner/ratingcourse">
-                            <img src={imgRate} alt="Img rating" style={{cursor: "pointer"}}/>
-                        </Link>
-                        <Link className="Link-coursename" to="/learner/ratingcourse">
-                            <p style={{cursor: "pointer"}}>Your rating</p>
-                        </Link>
-                        
-                        
+                        <OpenRate 
+                            imgCourse = {imgCourse} 
+                            nameCourse = {nameCourse} 
+                            authorCourse = {authorCourse}
+                            progressScore = {progressScore}
+                        />
+                        <p style={{cursor: "pointer"}}>Your rating</p>
                     </div>
                 </div>
             </div>
