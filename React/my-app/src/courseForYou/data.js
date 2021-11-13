@@ -50,6 +50,9 @@ const styleH = {
     backgroundColor: "#EC5454",
     color: "#FFFFFF"
 }
+const styleNon = {
+    display: "none"
+}
 
 
 const data = 
@@ -103,44 +106,44 @@ const data =
     name: "Complete Linux Training Course to Get Your Dream IT Job 2021", 
     desc: "A-Z Guide to using CSS and CSS3 to enhance your web pages. Save time using CSS let us show you what CSS can do. Save time using CSS let us show you what CSS can do.",
     author: "Mr. Long", 
-    type: "Best Course", 
+    type: "Hot", 
     rateScore: "2.5", 
     imgStar: star2_5, 
     totalRate: "(10,123)",
-    tagColor: styleBC
+    tagColor: styleH
     },
     {imgSrcCourse: figma1, 
     altCourse: "GitCourseImage", 
     name: "Complete Linux Training Course to Get Your Dream IT Job 2021", 
     desc: "A-Z Guide to using CSS and CSS3 to enhance your web pages. Save time using CSS let us show you what CSS can do. Save time using CSS let us show you what CSS can do.",
     author: "Mr. Long", 
-    type: "Best Course", 
+    type: "", 
     rateScore: "3", 
     imgStar: star3, 
     totalRate: "(10,123)",
-    tagColor: styleBC
+    tagColor: styleNon
     },
     {imgSrcCourse: git1, 
     altCourse: "GitCourseImage", 
     name: "Complete Linux Training Course to Get Your Dream IT Job 2021", 
     desc: "A-Z Guide to using CSS and CSS3 to enhance your web pages. Save time using CSS let us show you what CSS can do. Save time using CSS let us show you what CSS can do.",
     author: "Mr. Long", 
-    type: "Best Course", 
+    type: "New", 
     rateScore: "3.5", 
     imgStar: star3_5, 
     totalRate: "(10,123)",
-    tagColor: styleBC
+    tagColor: styleN
     },
     {imgSrcCourse: html1, 
     altCourse: "GitCourseImage", 
     name: "Complete Linux Training Course to Get Your Dream IT Job 2021", 
     desc: "A-Z Guide to using CSS and CSS3 to enhance your web pages. Save time using CSS let us show you what CSS can do. Save time using CSS let us show you what CSS can do.",
     author: "Mr. Long", 
-    type: "Best Course", 
+    type: "Hot", 
     rateScore: "4", 
     imgStar: star4, 
     totalRate: "(10,123)",
-    tagColor: styleBC
+    tagColor: styleH
     },
     {imgSrcCourse: html2, 
     altCourse: "GitCourseImage", 
