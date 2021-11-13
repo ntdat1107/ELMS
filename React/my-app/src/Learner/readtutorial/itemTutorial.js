@@ -3,18 +3,20 @@ import React from 'react'
 function ItemTutorial({
     courseTutorial,
     titleTutorial,
-    idCourseTutorial,
+    imgCourseTutorial,
     descTutorial,
     idTutorial,
     callback = () => {}
 }) {
     return (
         <div className="itemTutorial" >
-            <div id = {"imgTutorial" + idCourseTutorial}></div>
+            <div className="imgCourseTutorial">
+                <img src={imgCourseTutorial} alt="Img Course" style={{height: "90px"}}/>
+            </div>
             <div id="contentTutorial">
                 <div id="rowTutorialInfo1">
                     <div className="courseTutorial" id = {"course" + idTutorial}>
-                        <p>{courseTutorial}</p>
+                        <p style={{fontSize: "14px"}}>{courseTutorial}</p>
                     </div>
                     <div id="titleTutorial">
                         <p>{titleTutorial}</p>

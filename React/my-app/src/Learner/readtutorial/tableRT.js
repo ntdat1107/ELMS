@@ -6,7 +6,7 @@ import ItemTutorial from "./itemTutorial";
 console.log(DataTutorial);
 console.log(11111111111111111);
 function TableTutorial() {
-  const [listTutorial] = useState(DataTutorial.slice(0, 24));
+  const [listTutorial] = useState(DataTutorial.slice(0, 27));
   const [pageNumber, setPageNumber] = useState(0);
 
   const tutorialPerPage = 6;
@@ -17,7 +17,7 @@ function TableTutorial() {
     return (
       <div id={"rowTutorial"}>
         <ItemTutorial 
-            idCourseTutorial = {tutorial.idCourse}
+            imgCourseTutorial = {tutorial.imgCourseTutorial}
             courseTutorial={tutorial.course}
             titleTutorial={tutorial.title}
             descTutorial = {tutorial.desc}
