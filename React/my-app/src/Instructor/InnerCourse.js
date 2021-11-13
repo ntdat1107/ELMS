@@ -75,7 +75,7 @@ function InnerCourse({ match }) {
             setDone(true)
         }
         fetchCourses()
-    }, [])
+    }, [match])
     return (
         <div id="inner-course-UI">
             <SideBar typeUserTemp={1}/>
