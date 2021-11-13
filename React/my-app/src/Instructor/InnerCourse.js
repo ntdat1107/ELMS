@@ -15,11 +15,6 @@ import manageLearner from './imgSrc/manageLearner.png'
 import notifyImg from './imgSrc/notify.png'
 
 
-const styleBC = {
-    backgroundColor: "#F8D92E",
-    color: "#4B0C0C"
-}
-
 
 function CourseSection({
     nameSection,
@@ -81,17 +76,14 @@ function InnerCourse() {
             <div id="inner-course">
             <div id="row-1">
                 <CourseForYouCpn 
-                        imgSrcCourse = {git} 
-                        altCourse = "GitCourseImage" 
+                        imgSrcCourse = "https://nareshit.com/wp-content/uploads/2018/09/C-plus-plus-online-training-nareshit.jpg" 
                         Name = "Complete Git Course to Get Your Dream IT Job 2021" 
                         Desc="The BEST Git course that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications. 
                         This course is designed for those students who do not have enough time to learn Git." 
                         Author="Mr. Dat" 
                         Type="Best Course" 
-                        rateScore="4.9" 
-                        imgStar={star} 
-                        totalRate="(10,123)"
-                        tagColor={styleBC}
+                        rateScore={4.9}
+                        totalRate={10000}
                         linkToCourse="/ins/managecourse/inner"
                 />
             </div>

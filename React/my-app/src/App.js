@@ -37,7 +37,7 @@ function App() {
           <Route exact path='/ins/dashboard' component={InsDashboardUI}></Route>
           <Route exact path='/ins/manageprofile' component={InsManageProfile}></Route>
           <Route exact path='/ins/managecourse' component={InsManagerCourse}></Route>
-          <Route exact path='/ins/managecourse/inner' component={InnerCourse}></Route>
+          <Route exact path='/ins/managecourse/:fastname' component={InnerCourse}></Route>
           <Route exact path='/ins/announcement' component={InsAnnouncement}></Route>
           <Route exact path='/ins/managecourse/manage_my_learners' component={TableOfLearner}></Route>
           <Route exact path='/prelogin' component={PreLogin}></Route>

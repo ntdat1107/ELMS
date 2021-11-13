@@ -4,7 +4,6 @@ import './courseForYou.css';
 import RateContent from './RateContent';
 function courseForYouCpn({
     imgSrcCourse,
-    altCourse,
     Name,
     Desc,
     Author,
@@ -17,7 +16,7 @@ function courseForYouCpn({
     return (
         <div id="courseCFY">
             <Link to={linkName}>
-                <img id = "imgCourse" src={imgSrcCourse} alt = {altCourse} width = "240px" height = "120px"></img>
+                <img id = "imgCourse" src={imgSrcCourse} alt = "courseImg" width = "240px" height = "120px"></img>
             </Link>
             <div id="courseContent">
                 <Link className="Link-coursename" to={linkName}>
