@@ -30,14 +30,14 @@ function Login() {
                     <div id="welcome">Welcome back!</div>
                     
                     <div >                    
-                        <div className="form">
+                        <form className="form">
                             <div className = "inp">
                                 <span>Username</span>
-                                <input className = "impBx" type="text"></input>
+                                <input className = "impBx" type="text" required></input>
                             </div>                       
                             <div className = "inp">
                                 <span>Password</span>
-                                <input className = "impBx" type="password"></input>
+                                <input className = "impBx" type="password" required></input>
                             </div> 
                             <div className="remember">
                                 <label id = "checkbox"> <input type="checkbox"></input> Remember me</label>
@@ -47,14 +47,14 @@ function Login() {
                             </div>
                             <div className="btn-box">
                                 <Link to={'/'+type+'/dashboard'}>
-                                    <button type="button" className="toggle-btn1">Log in</button>
+                                    <button type="submit" className="toggle-btn1">Log in</button>
                                 </Link>
                                 <Link to='/signup'>
-                                    <button type="button" className="toggle-btn2">Sign up</button>
+                                    <button type="submit" className="toggle-btn2">Sign up</button>
                                 </Link>
 
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
