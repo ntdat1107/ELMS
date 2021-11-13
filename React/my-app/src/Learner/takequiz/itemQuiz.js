@@ -18,7 +18,7 @@ function ItemQuiz({
             <div id="lengthQuiz">
                 <p>{lengthQuiz} </p>
             </div>
-            <input type="button" id="btnStartQuiz" value = "Start Quiz"/>
+            <input style={{cursor: 'pointer'}} type="button" id="btnStartQuiz" value = "Start Quiz"/>
         </div>
     )
 }

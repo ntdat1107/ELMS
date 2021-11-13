@@ -28,7 +28,7 @@ function ItemTutorial({
                     </div>
                 </div>
                 <div id="rowTutorialInfo3">
-                    <input type="button" id="btnReadTutorial" value = "Read more"/>
+                    <input style={{cursor: 'pointer'}} type="button" id="btnReadTutorial" value = "Read more"/>
                 </div>
             </div>
         </div>
