@@ -1,8 +1,6 @@
 import React from 'react'
 import CourseForYouCpn from '../courseForYou/courseForYouCpn';
 import './CSS/InnerCourse.css'
-import git from "../Learner/img/course/git1.jpg";
-import star from "../Learner/img/rateStar/star4_5.png";
 import Scrollbars from 'react-custom-scrollbars';
 import MyCourse from './MyCourse'
 import Header from '../Header/header'
@@ -13,6 +11,7 @@ import deleteImg from './imgSrc/delete.png'
 import {Link} from "react-router-dom"
 import manageLearner from './imgSrc/manageLearner.png'
 import notifyImg from './imgSrc/notify.png'
+import Courses from "./MOCK_DATA_COURSE.js"
 
 
 
@@ -67,7 +66,10 @@ function OtherAction() {
     )
 }
 
-function InnerCourse() {
+function InnerCourse({ match }) {
+
+    const CourseNow = Courses.find(c => c.fastName == match.params.id)
+
     return (
         <div id="inner-course-UI">
             <SideBar typeUserTemp={1}/>
@@ -76,15 +78,14 @@ function InnerCourse() {
             <div id="inner-course">
             <div id="row-1">
                 <CourseForYouCpn 
-                        imgSrcCourse = "https://nareshit.com/wp-content/uploads/2018/09/C-plus-plus-online-training-nareshit.jpg" 
-                        Name = "Complete Git Course to Get Your Dream IT Job 2021" 
-                        Desc="The BEST Git course that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications. 
-                        This course is designed for those students who do not have enough time to learn Git." 
-                        Author="Mr. Dat" 
-                        Type="Best Course" 
-                        rateScore={4.9}
-                        totalRate={10000}
-                        linkToCourse="/ins/managecourse/inner"
+                        imgSrcCourse = {CourseNow.imgSrcCourse} 
+                        Name = {CourseNow.Name}
+                        Desc = {CourseNow.Desc}
+                        Author = {CourseNow.Author}
+                        Type = {CourseNow.Type}
+                        rateScore = {CourseNow.rateScore}
+                        totalRate = {CourseNow.totalRate}
+                        linkName = {`/ins/managecourse/${CourseNow.fastName}`}
                 />
             </div>
             <div id="row-2">

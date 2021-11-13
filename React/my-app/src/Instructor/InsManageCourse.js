@@ -19,9 +19,9 @@ return (
                 {
                     Courses.map((data, index) => {
                         return (
-                            <CourseForYouCpn imgSrcCourse={data.imgSrcCourse}
+                            <CourseForYouCpn key={index} imgSrcCourse={data.imgSrcCourse}
                             Name={data.Name} Desc={data.Desc} Author={data.Author} Type={data.Type}
-                            rateScore={data.rateScore} totalRate={data.totalRate} linkName={"/ins/managecourse/" + data.fastName}/>
+                            rateScore={data.rateScore} totalRate={data.totalRate} linkName={`/ins/managecourse/${data.fastName}`}/>
                         )
                     })
                 }

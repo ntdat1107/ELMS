@@ -124,3 +124,7 @@ React/my-app/package-lock.json
 React/my-app/package.json
 React/my-app/src/App.js
 *.json
+
+
+
+/node_modules

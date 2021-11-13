@@ -13,9 +13,9 @@ import manageLn from "../img/manageLn.png";
 import footer from "../img/footer.png";
 import { NavLink } from "react-router-dom";
 
-function SideBarComponent({ idName, srcImg, altName, nameSideBar, h, w, linkName, func, inx }) {
+function SideBarComponent({ idName, srcImg, altName, nameSideBar, h, w, linkName, func}) {
     return (
-        <li key={inx}>
+        <li>
             <NavLink activeClassName="ActiveLink" className="insSideBarLink" to={linkName}>
                 <button onClick={func}>
                     <img id={idName} src={srcImg} alt={altName} height={h} width={w} />
@@ -196,10 +196,9 @@ function SideBar({ typeUserTemp }) {
         <div id="SideBar">
             <ul id="SubSideBar">
                 {sideBarList.map((content, index) => {
-                    console.log(content.srcImg);
                     return (
                         <SideBarComponent
-                            inx={index}
+                            key={index}
                             linkName={content.linkName}
                             idName={content.idName}
                             srcImg={content.srcImg}
