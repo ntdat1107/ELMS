@@ -21,9 +21,9 @@ function RatingInfo({
                     <p>{authorCourse} </p>
                 </div>
                 <div id="progressCourseRate">
-                    <svg id="progressBarBaseRate" width="230" height="20">
-                        <rect width="230" height="20" fill="#c4c4c4" />
-                        <rect width={progressScore * 230 / 100} height="20" fill="#05611E" />
+                    <svg id="progressBarBaseRate" width="230" height="15">
+                        <rect width="230" height="15" fill="#c4c4c4" />
+                        <rect width={progressScore * 230 / 100} height="15" fill="#05611E" />
                     </svg>
                 </div>
                 <div className={progressScore === 0 ? "start" : "started"}>

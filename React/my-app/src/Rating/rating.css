@@ -22,14 +22,15 @@
 .ratingInfo #r2 #nameCourseRate{
     font-size: 16px;
     font-weight: bold;
-    height: 30px
+    height: 45px;
+    width: 280px;
 }
 .ratingInfo #r2 #authorCourseRate{
     font-size: 14px;
     height: 30px
 }
 .ratingInfo #r2 #progressCourseRate{
-    height: 30px;
+    height: 15px;
 }
 
 .ratingInfo #r2 .start  #progressStart{

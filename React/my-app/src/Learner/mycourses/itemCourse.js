@@ -34,7 +34,7 @@ function OpenMore() {
         </div>
     )
 }
-function OpenRate() {
+function OpenRate({imgCourse, nameCourse, authorCourse, progressScore}) {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click);
     const closeMenuRate = () => setClick(false);
@@ -44,7 +44,13 @@ function OpenRate() {
                 <img src={imgRate} alt="Img rating" style={{cursor: "pointer"}} id={click? "rateClose" : "rateOpen"}/>
             </div>            
             <ul className={click? 'nav-menu-rate active' : 'nav-menu-rate'}>
-                <div><RatingCourse /></div>
+                <div>
+                <RatingCourse 
+                    imgCourse = {imgCourse} 
+                    nameCourse = {nameCourse} 
+                    authorCourse = {authorCourse}
+                    progressScore = {progressScore}
+                /></div>
                 <div><img src={deleteIcon} alt="Delete Icon" onClick={closeMenuRate} style={{cursor: 'pointer', height: '20px', width: '20px'}} /></div>
             </ul>
         </div>
@@ -88,7 +94,12 @@ function ItemCourse({
                 </div>
                 <div className="rateCourseMC">
                     <div id = {scoreRate == 0 ? "notScore" : "hadScore"}>
-                        <OpenRate />
+                        <OpenRate 
+                            imgCourse = {imgCourse} 
+                            nameCourse = {nameCourse} 
+                            authorCourse = {authorCourse}
+                            progressScore = {progressScore}
+                        />
                         <p style={{cursor: "pointer"}}>Your rating</p>
                     </div>
                 </div>
