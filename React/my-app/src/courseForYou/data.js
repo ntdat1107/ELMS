@@ -60,17 +60,17 @@ const data =
     desc: "A-Z Guide to using CSS and CSS3 to enhance your web pages. Save time using CSS let us show you what CSS can do. Save time using CSS let us show you what CSS can do.",
     author: "Mr. Long", 
     type: "Best Course", 
-    rateScore: "0.5", 
-    imgStar: star0_5, 
+    rateScore: "5", 
+    imgStar: star5, 
     totalRate: "(10,123)",
-    tagColor: styleH
+    tagColor: styleBC
     },
     {imgSrcCourse: css1, 
     altCourse: "GitCourseImage", 
     name: "Complete Linux Training Course to Get Your Dream IT Job 2021", 
     desc: "A-Z Guide to using CSS and CSS3 to enhance your web pages. Save time using CSS let us show you what CSS can do. Save time using CSS let us show you what CSS can do.",
     author: "Mr. Long", 
-    type: "Best Course", 
+    type: "New", 
     rateScore: "1", 
     imgStar: star1, 
     totalRate: "(10,123)",
@@ -158,11 +158,11 @@ const data =
     name: "Complete Linux Training Course to Get Your Dream IT Job 2021", 
     desc: "A-Z Guide to using CSS and CSS3 to enhance your web pages. Save time using CSS let us show you what CSS can do. Save time using CSS let us show you what CSS can do.",
     author: "Mr. Long", 
-    type: "Best Course", 
+    type: "Hot", 
     rateScore: "5", 
     imgStar: star5, 
     totalRate: "(10,123)",
-    tagColor: styleBC
+    tagColor: styleH
     }
 ]
 export default data;
