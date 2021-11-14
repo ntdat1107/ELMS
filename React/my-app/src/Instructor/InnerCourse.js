@@ -86,13 +86,13 @@ function InnerCourse({ match }) {
                 {
                     isDone &&
                     <CourseForYouCpn 
-                        imgSrcCourse = {CourseNow.imgSrcCourse} 
-                        Name = {CourseNow.Name}
-                        Desc = {CourseNow.Desc}
-                        Author = {CourseNow.Author}
-                        Type = {CourseNow.Type}
+                        imgSrcCourse = {CourseNow.image} 
+                        Name = {CourseNow.name}
+                        Desc = {CourseNow.descriptioin}
+                        Author = {CourseNow.author}
+                        Type = {CourseNow.typeCourse}
                         rateScore = {CourseNow.rateScore}
-                        totalRate = {CourseNow.totalRate}
+                        totalRate = {CourseNow.rateNum}
                         linkName = {`/ins/managecourse/${CourseNow.fastName}`}
                     />
                 }

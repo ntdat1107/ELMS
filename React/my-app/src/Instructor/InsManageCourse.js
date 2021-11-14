@@ -25,11 +25,11 @@ return (
         <div id="insMC">
             <Scrollbars>
                 {
-                    Courses.map((data) => {
+                    Courses.map((data, index) => {
                         return (
-                            <CourseForYouCpn key={data._id} imgSrcCourse={data.imgSrcCourse}
-                            Name={data.Name} Desc={data.Desc} Author={data.Author} Type={data.Type}
-                            rateScore={data.rateScore} totalRate={data.totalRate} linkName={`/ins/managecourse/${data.fastName}`}/>
+                            <CourseForYouCpn key={index} imgSrcCourse={data.image}
+                            Name={data.name} Desc={data.description} Author={data.author} Type={data.typeCourse}
+                            rateScore={data.rateScore} totalRate={data.rateNum} linkName={`/ins/managecourse/${data.fastName}`}/>
                         )
                     })
                 }

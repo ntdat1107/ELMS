@@ -1,10 +1,18 @@
 import express from 'express'
 import dotenv from 'dotenv'
-import Courses from './data/MOCK_DATA_COURSE.js'
+import colors from 'colors'
+import connectDB from './config/db.js'
+import Courses from './data/Courses.js'
 
 dotenv.config()
 
+connectDB()
+
 const app = express()
+
+app.get('/', (req, res) => {
+    res.send("Running")
+})
 
 app.get('/api/managecourse', (req, res) => {
     res.json(Courses)
@@ -18,7 +26,7 @@ app.get('/api/managecourse/:id', (req, res) => {
 
 
 const PORT = process.env.PORT || 5000
-app.listen(PORT, console.log(`Server is running at http://localhost:${PORT}`))
+app.listen(PORT, console.log(`Server is running at http://localhost:${PORT}`.yellow.bold))
 
 
 

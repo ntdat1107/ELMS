@@ -32,7 +32,6 @@ function RateContent({
 }) {
     let star = star0
     let styleType = styleN
-    console.log(TypeCpn.toUpperCase() == "Best course".toUpperCase())
     // Choose Star Img
     if (rateScoreCpn > 0 && rateScoreCpn < 1) star = star05
     else if (rateScoreCpn === 1) star = star1
