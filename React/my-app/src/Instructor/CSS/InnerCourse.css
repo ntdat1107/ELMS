@@ -10,74 +10,26 @@
 }
 
 
-/* ------RateContent-------- */
-#inner-course #row-1 #rateContent {
-    display: flex;
-    margin-top: 5px;
-}
-#inner-course #row-1 #rateContent #p1 {
-    width: 90px;
-    height: 30px;
-    font-size: 16px;
-    text-align: center;
-}
 
 
-#inner-course #row-1 #rateContent #p1 p {
-    margin-top: 5px;
-}
 #inner-course #row-1 #rateContent #p2 {
-    color: rgba(255,217,2,0.7);
-    height: 30px;
-    width: 30px;
     font-size: 14px;
-    text-align: center;
-    margin-left: 10px;
-}
-#inner-course #row-1 #rateContent #p2 p {
-    margin-top: 5px;
 }
 
 #inner-course #row-1 #rateContent #p4 {
-    color: rgba(196,196,196,1);
-    height: 30px;
-    width: 60px;
     font-size: 14px;
-    text-align: center;
-    margin-left: 10px;
-}
-#inner-course #row-1 #rateContent #p4 p {
-    margin-top: 5px;
 }
 /* -----------CourseContent---------- */
-#inner-course #row-1 #courseContent {
-    width: 70%;
-}
 #inner-course #row-1 #courseContent #Name{
-    display: inline-block;
-    font-weight: bold;
     font-size: 20px;
-    flex-wrap: wrap;
 }
 #inner-course #row-1 #courseContent #Desc{
     font-size: 16px;
 }
 #inner-course #row-1 #courseContent #Author{
-    color: rgba(196,196,196,1);
     font-size: 16px;
 }
 /* ----------courseCFY--------- */
-#inner-course #row-1 #courseCFY {
-    display: flex;
-    padding-top: 10px;
-    padding-right: 30px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    position: relative;
-}
-#inner-course #row-1 #courseContent {
-    padding-left: 10px;
-}
 #inner-course #row-1 {
     display: flex;
 }

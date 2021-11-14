@@ -76,6 +76,7 @@ function InnerCourse({ match }) {
         }
         fetchCourses()
     }, [match])
+    console.log(CourseNow)
     return (
         <div id="inner-course-UI">
             <SideBar typeUserTemp={1}/>
@@ -88,7 +89,7 @@ function InnerCourse({ match }) {
                     <CourseForYouCpn 
                         imgSrcCourse = {CourseNow.image} 
                         Name = {CourseNow.name}
-                        Desc = {CourseNow.descriptioin}
+                        Desc = {CourseNow.description}
                         Author = {CourseNow.author}
                         Type = {CourseNow.typeCourse}
                         rateScore = {CourseNow.rateScore}
