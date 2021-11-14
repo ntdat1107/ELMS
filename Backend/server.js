@@ -1,7 +1,9 @@
 const express = require('express')
 const Courses = require('./data/MOCK_DATA_COURSE')
+const dotenv = require('dotenv')
 
-const port = 5000
+dotenv.config()
+
 const app = express()
 
 app.get('/api/managecourse', (req, res) => {
@@ -12,7 +14,11 @@ app.get('/api/managecourse/:id', (req, res) => {
     const courseNow = Courses.find(c => c.fastName == req.params.id)
     res.json(courseNow)
 })
-app.listen(port, console.log(`Server is running at http://localhost:${port}`))
+
+
+
+const PORT = process.env.PORT || 5000
+app.listen(PORT, console.log(`Server is running at http://localhost:${PORT}`))
 
 
 

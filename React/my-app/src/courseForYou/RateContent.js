@@ -35,19 +35,19 @@ function RateContent({
     console.log(TypeCpn.toUpperCase() == "Best course".toUpperCase())
     // Choose Star Img
     if (rateScoreCpn > 0 && rateScoreCpn < 1) star = star05
-    else if (rateScoreCpn == 1) star = star1
+    else if (rateScoreCpn === 1) star = star1
     else if (rateScoreCpn > 1 && rateScoreCpn < 2) star = star15
-    else if (rateScoreCpn == 2) star = star2
+    else if (rateScoreCpn === 2) star = star2
     else if (rateScoreCpn > 2 && rateScoreCpn < 3) star = star25
-    else if (rateScoreCpn == 3) star = star3
+    else if (rateScoreCpn === 3) star = star3
     else if (rateScoreCpn > 3 && rateScoreCpn < 4) star = star35
-    else if (rateScoreCpn == 4) star = star4
+    else if (rateScoreCpn === 4) star = star4
     else if (rateScoreCpn > 4 && rateScoreCpn < 5) star = star45
-    else if (rateScoreCpn == 5) star = star5
+    else if (rateScoreCpn === 5) star = star5
     // Choose Style
-    if (TypeCpn.toUpperCase() == "Hot".toUpperCase()) styleType = styleH
-    else if (TypeCpn.toUpperCase() == "Best course".toUpperCase()) styleType = styleBC
-    else if (TypeCpn.toUpperCase() == "New".toUpperCase()) styleType = styleN
+    if (TypeCpn.toUpperCase() === "Hot".toUpperCase()) styleType = styleH
+    else if (TypeCpn.toUpperCase() === "Best course".toUpperCase()) styleType = styleBC
+    else if (TypeCpn.toUpperCase() === "New".toUpperCase()) styleType = styleN
     return (
         <div id="rateContent">
             <div id="p1" style={styleType}><p>{TypeCpn}</p></div>
