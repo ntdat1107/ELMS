@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React from 'react'
 import RatingCmt from './ratingCmt'
 import RatingStar from './ratingStar'
 import RatingInfo from './ratingInfo'
