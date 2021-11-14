@@ -52,4 +52,4 @@ const Courses = [
 ]
 
 
-module.exports = Courses
+export default Courses;

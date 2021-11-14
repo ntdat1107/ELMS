@@ -1,6 +1,6 @@
-const express = require('express')
-const Courses = require('./data/MOCK_DATA_COURSE')
-const dotenv = require('dotenv')
+import express from 'express'
+import dotenv from 'dotenv'
+import Courses from './data/MOCK_DATA_COURSE.js'
 
 dotenv.config()
 
