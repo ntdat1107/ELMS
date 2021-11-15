@@ -68,7 +68,6 @@ function OtherAction() {
 }
 
 function InnerCourse({ match }) {
-
     const dispatch = useDispatch()
     const courseDetail = useSelector(state => state.courseDetail)
     let { loading, error, course } = courseDetail
@@ -83,7 +82,7 @@ function InnerCourse({ match }) {
         idName="information" typeUserTemp={1}/>
             <div id="inner-course">
             <div id="row-1">
-                { course.image &&
+                { course.name &&
                 <CourseForYouCpn 
                     imgSrcCourse = {course.image} 
                     Name = {course.name}

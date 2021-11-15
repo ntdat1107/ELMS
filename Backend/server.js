@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import colors from 'colors'
 import connectDB from './config/db.js'
 import courseRoutes from './routes/courseRoutes.js'
+import { errorHandle, notFound } from './middleware/errorMiddleware.js'
 
 dotenv.config()
 
@@ -17,6 +18,11 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/managecourse', courseRoutes)
+
+app.use(notFound)
+
+
+app.use(errorHandle)
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, console.log(`Server is running at http://localhost:${PORT}`.yellow.bold))

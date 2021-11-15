@@ -17,7 +17,7 @@ const ratingSchema = mongoose.Schema({
 
 
 const courseSchema = mongoose.Schema({
-    user: {
+    authorCourse: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: 'User'
@@ -69,4 +69,6 @@ const courseSchema = mongoose.Schema({
 
 const Course = mongoose.model('Course', courseSchema)
 
+
+export {courseSchema}
 export default Course
