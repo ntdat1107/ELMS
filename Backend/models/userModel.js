@@ -1,31 +1,4 @@
 import mongoose from 'mongoose'
-import { courseSchema } from './courseModel'
-
-
-const profileSchema = mongoose.Schema({
-    avatar: {
-        type: String,
-        default: "https://st.quantrimang.com/photos/image/072015/22/avatar.jpg"
-    },
-    sex: {
-        type: String,
-    },
-    birthDay: {
-        type: Date,
-    },
-    phoneNumber: {
-        type: String,
-    },
-    city: {
-        type: String,
-    },
-    country: {
-        type: String
-    },
-    description: {
-        type: String,
-    }
-})
 
 
 const userSchema = mongoose.Schema({
@@ -61,8 +34,28 @@ const userSchema = mongoose.Schema({
         required: true,
         default: false
     },
-    profile: profileSchema,
-    hasCourse: [courseSchema]
+    avatar: {
+        type: String,
+        default: "https://st.quantrimang.com/photos/image/072015/22/avatar.jpg"
+    },
+    sex: {
+        type: String,
+    },
+    birthDay: {
+        type: Date,
+    },
+    phoneNumber: {
+        type: String,
+    },
+    city: {
+        type: String,
+    },
+    country: {
+        type: String
+    },
+    description: {
+        type: String,
+    }
 }, {
     timestamps: true
 })
