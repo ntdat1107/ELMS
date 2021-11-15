@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux'
 import { Scrollbars } from 'react-custom-scrollbars';
 import "./CSS/InsManagerCourse.css"
 import "./CSS/InsManagerCourse.css"
@@ -6,17 +7,16 @@ import CourseForYouCpn from "../courseForYou/courseForYouCpn";
 import SideBar from '../SideBar/SideBar';
 import Header from '../Header/header'
 import cheems from "../img/cheems.png"
-import axios from 'axios'
-
+import { listCourses } from "../../actions/courseActions";
 function InsManagerCourse () {
-    const [Courses, setCourses] = useState([])
+    const dispatch = useDispatch()
+
+    const courseList = useSelector(state => state.courseList)
+    const { loading, error, courses } = courseList
+
     useEffect(() => {
-        const fetchCourses = async () => {
-            const { data } = await axios.get('/api/managecourse')
-            setCourses(data)
-        }
-        fetchCourses()
-    }, [])
+        dispatch(listCourses())
+    }, [dispatch])
 return (
     <div id="insMC-UI">
         <SideBar typeUserTemp={1}/>
@@ -25,7 +25,7 @@ return (
         <div id="insMC">
             <Scrollbars>
                 {
-                    Courses.map((data, index) => {
+                    courses.map((data, index) => {
                         return (
                             <CourseForYouCpn key={index} imgSrcCourse={data.image}
                             Name={data.name} Desc={data.description} Author={data.author} Type={data.typeCourse}

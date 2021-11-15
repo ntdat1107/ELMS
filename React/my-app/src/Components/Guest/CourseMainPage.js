@@ -205,7 +205,7 @@ function BackButton({url}) {
     return(
         <div id = "backButton">
             <NavLink to={url} id="nav-link" onClick = {handleClick}>
-                <button class ="button">
+                <button className ="button">
                     <h3>
                         Go Back
                     </h3>

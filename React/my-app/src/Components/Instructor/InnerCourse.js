@@ -1,4 +1,5 @@
 import React, { useEffect, useState} from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import CourseForYouCpn from '../courseForYou/courseForYouCpn';
 import './CSS/InnerCourse.css'
 import Scrollbars from 'react-custom-scrollbars';
@@ -12,6 +13,7 @@ import {Link} from "react-router-dom"
 import manageLearner from './imgSrc/manageLearner.png'
 import notifyImg from './imgSrc/notify.png'
 import axios from 'axios';
+import { detailCourse } from '../../actions/courseActions';
 
 
 function CourseSection({
@@ -66,17 +68,14 @@ function OtherAction() {
 }
 
 function InnerCourse({ match }) {
-    const [CourseNow, setCourses] = useState([])
-    const [isDone, setDone] = useState(false)
+
+    const dispatch = useDispatch()
+    const courseDetail = useSelector(state => state.courseDetail)
+    let { loading, error, course } = courseDetail
+
     useEffect(() => {
-        const fetchCourses = async () => {
-            const { data } = await axios.get(`/api/managecourse/${match.params.id}`)
-            setCourses(data)
-            setDone(true)
-        }
-        fetchCourses()
-    }, [match])
-    console.log(CourseNow)
+        dispatch(detailCourse(match.params.id))
+    }, [dispatch])
     return (
         <div id="inner-course-UI">
             <SideBar typeUserTemp={1}/>
@@ -84,18 +83,17 @@ function InnerCourse({ match }) {
         idName="information" typeUserTemp={1}/>
             <div id="inner-course">
             <div id="row-1">
-                {
-                    isDone &&
-                    <CourseForYouCpn 
-                        imgSrcCourse = {CourseNow.image} 
-                        Name = {CourseNow.name}
-                        Desc = {CourseNow.description}
-                        Author = {CourseNow.author}
-                        Type = {CourseNow.typeCourse}
-                        rateScore = {CourseNow.rateScore}
-                        totalRate = {CourseNow.rateNum}
-                        linkName = {`/ins/managecourse/${CourseNow.fastName}`}
-                    />
+                { course.image &&
+                <CourseForYouCpn 
+                    imgSrcCourse = {course.image} 
+                    Name = {course.name}
+                    Desc = {course.description}
+                    Author = {course.author}
+                    Type = {course.typeCourse}
+                    rateScore = {course.rateScore}
+                    totalRate = {course.rateNum}
+                    linkName = {`/ins/managecourse/${course.fastName}`}
+                />
                 }
             </div>
             <div id="row-2">

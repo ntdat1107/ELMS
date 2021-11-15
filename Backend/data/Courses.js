@@ -7,7 +7,7 @@ const courses = [
         description:"The BEST Git course that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications. This course is designed for those students who do not have enough time to learn Git." ,
         rateScore: 3.5,
         rateNum: 100,
-        typeCourse: "Hot",
+        typeCourse: "Best Course",
         fastName: "git"
     },
     {
@@ -18,7 +18,7 @@ const courses = [
         description:"The BEST Git course that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications. This course is designed for those students who do not have enough time to learn Git." ,
         rateScore: 3.5,
         rateNum: 100,
-        typeCourse: "Hot",
+        typeCourse: "New",
         fastName: "cpp"
     },
     {
