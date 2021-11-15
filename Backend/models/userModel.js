@@ -55,7 +55,11 @@ const userSchema = mongoose.Schema({
     },
     description: {
         type: String,
-    }
+    },
+    hasCourse: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Course'
+    }]
 }, {
     timestamps: true
 })

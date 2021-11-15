@@ -25,8 +25,12 @@ const importData = async () => {
         const sampleCourse = courses.map(course => {
             return { ...course, user: insUser }
         })
-
-        await Course.insertMany(sampleCourse)
+        const temp = await Course.insertMany(sampleCourse)
+        const manyUser = users.map(user => {
+            return { ...user, hasCourse:temp}
+        })
+        await User.deleteMany()
+        await User.insertMany(manyUser)
         console.log(`Data imported!!`.green.inverse)
         process.exit()
 
