@@ -72,8 +72,14 @@
     margin: auto;
 }
 
-#nameinp{
+#nameinp1{
     width: 47%;
+    margin-left: 0;
+}
+
+#nameinp2{
+    width: 47%;
+    margin-right: 0;
 }
 
 .Signuppage .Signuptoggle-btn1 {

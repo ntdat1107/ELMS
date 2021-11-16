@@ -61,11 +61,11 @@ function Signup({history}) {
                     <form className="Signupform" onSubmit={submitHandler}>
 
                         <div id = "name">
-                            <input className="Signupinp" id="nameinp" type="text" 
+                            <input className="Signupinp" id="nameinp1" type="text" 
                                 placeholder="First name" required 
                                 onChange={(e) => setFirstName(e.target.value)}></input>
 
-                            <input className="Signupinp" id="nameinp" type="text" 
+                            <input className="Signupinp" id="nameinp2" type="text" 
                                 placeholder="Last name" required 
                                 onChange={(e) => setLastName(e.target.value)}></input>
                         </div>
