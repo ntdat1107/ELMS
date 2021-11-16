@@ -8,7 +8,7 @@ export const listCourses = () => async (dispatch) => {
     try {
         dispatch({ type: COURSE_LIST_REQUEST})
 
-        const { data } = await axios.get('/api/managecourse')
+        const { data } = await axios.get('/api/courses')
         dispatch({
             type: COURSE_LIST_SUCCESS,
             payload: data
@@ -25,7 +25,7 @@ export const detailCourse = (id) => async (dispatch) => {
     try {
         dispatch({ type: COURSE_DETAIL_REQUEST })
 
-        const { data } = await axios.get(`/api/managecourse/${id}`)
+        const { data } = await axios.get(`/api/courses/${id}`)
         dispatch({
             type: COURSE_DETAIL_SUCCESS,
             payload: data

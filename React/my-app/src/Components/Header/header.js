@@ -9,59 +9,7 @@ import SearchBar from './searchBar'
 
 
 
-function Arrow({
-  typeUserTemp
-}) {
-  let arrowList = []
-  switch (typeUserTemp) {
-    case 0:
-    case -1:
-      arrowList = [
-        {
-          linkTo : '/',
-          textInside : "Logout"
-        }
-      ];
-      break;
-    case 1:
-      arrowList = [
-        {
-          linkTo : '/learner/dashboard',
-          textInside : "Switch to Learner"
-        },
-        {
-          linkTo : '/',
-          textInside : "Logout"
-        }
-      ];
-      break;
-    case 2:
-      arrowList = [
-        {
-          linkTo : '/learner/registerIns',
-          textInside : "Register to teach E-Learning"
-        },
-        {
-          linkTo : '/',
-          textInside : "Logout"
-        }
-      ];
-      break;
-    case 3:
-      arrowList = [
-        {
-          linkTo : '/ins/dashboard',
-          textInside : "Switch to Instructor"
-        },
-        {
-          linkTo : '/',
-          textInside : "Logout"
-        }
-      ];
-      break;
-    default:
-      break;
-  }
+function Arrow() {
   const [click, setClick] = useState(false)
   const handleClick = () => setClick(!click);
   return (        
@@ -70,15 +18,9 @@ function Arrow({
               <img src={arrow} alt="ArrowImage" className="arrowImg" id={click? "arrowClose" : "arrowOpen"}/>
           </div>            
           <ul className={click? 'nav-menu active' : 'nav-menu'}>
-              {
-              arrowList.map((content, index) => {
-                  return (
-                  <li key={index} className="nav-item">
-                    <Link to={content.linkTo} className="nav-link">{content.textInside}</Link>
-                  </li>
-                  )
-                })
-              }
+            <li  className="nav-item">
+              <Link to='/' className="nav-link">Logout</Link>
+            </li>
           </ul>
       </div>
   )
@@ -91,8 +33,7 @@ function Information({
   linkAvt,
   name,
   gmail,
-  type,
-  typeUserTemp
+  type
 }) {
   return (
       <div id="information">            
@@ -108,7 +49,7 @@ function Information({
               <li id="gmail"><p>{gmail}</p></li>
               <li id="type"><p>{type}</p></li>
           </ul>
-          <Arrow typeUserTemp={typeUserTemp}/>
+          <Arrow/>
       </div>
   )
 }
@@ -117,7 +58,7 @@ function AuthBtn() {
 
   return (
       <div id = "auth-btn">
-          <Link to="/prelogin">
+          <Link to="/login">
               <button id = "login-btn">
                   <p>Log In</p>
               </button>
@@ -147,10 +88,10 @@ function Header({
           <img src={Logo} alt="AppLogo" id="Logo"></img>
         </Link>    
         <SearchBar searchImg = {searchIcon} id="SearchBar" name="Search" searchType="Search for anything" />
-        {typeUserTemp!==-1 && <BellMessage />}
-        {typeUserTemp!==-1 && <Information linkAvt={linkAvt} srcImg={srcImg} name={name} 
+        {typeUserTemp !== -1 && <BellMessage />}
+        {typeUserTemp !== -1 && <Information linkAvt={linkAvt} srcImg={srcImg} name={name} 
                                           gmail={gmail} type={type} idName={idName} typeUserTemp={typeUserTemp}/>}
-        {typeUserTemp===-1 && <AuthBtn />}
+        {typeUserTemp === -1 && <AuthBtn />}
       </div>
   )
 }
