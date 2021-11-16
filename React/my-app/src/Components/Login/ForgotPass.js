@@ -11,7 +11,7 @@ function ForgotPass() {
                 </div>
                 
 
-                <input className="ForgotPassimpBx" type="text"></input>
+                <input className="ForgotPassimpBx" type="email" required></input>
                 <div className="ForgotPassbtn-box">
                     <Link to='/login'>
                         <button type="button" className="ForgotPasstoggle-btn1">Reset</button>

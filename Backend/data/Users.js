@@ -131,14 +131,6 @@ const users = [
         isLearner: true
     },
     {
-        firstName : 'Ben',
-        lastName : 'Adam',
-        email: 'lamduong@gmail.com',
-        accountID: 'dingybend',
-        password: bcrypt.hashSync('hello123', 10),
-        isLearner: true
-    },
-    {
         firstName : 'Nathan',
         lastName : 'Abram',
         email: 'Succubus@gmail.com',
@@ -160,14 +152,6 @@ const users = [
         email: 'Dodecahedron@gmail.com',
         accountID: 'Dodecahedron',
         password: bcrypt.hashSync('asdsferrgg123', 10),
-        isLearner: true
-    },
-    {
-        firstName : 'Stephen',
-        lastName : 'Arthur',
-        email: 'lamduong@gmail.com',
-        accountID: 'dingybend',
-        password: bcrypt.hashSync('jfuut7664', 10),
         isLearner: true
     },
     {
