@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './CSS/Login.css'
 import {Link } from "react-router-dom"
 import { useDispatch, useSelector } from 'react-redux'
-import { login, profile } from '../../actions/userActions.js'
+import { login } from '../../actions/userActions.js'
 
 function Login({history}) {
     const [accountID, setAccountID] = useState('')
@@ -23,7 +23,6 @@ function Login({history}) {
     const submitHandler = (e) => {
         e.preventDefault()
         dispatch(login(accountID, password))
-        dispatch(profile(accountID, password))
     }
 
     return (
