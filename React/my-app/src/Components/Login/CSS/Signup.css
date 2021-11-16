@@ -40,7 +40,6 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     text-align: center;
-    margin: auto;
     align-items: center;
 
 }
@@ -57,21 +56,24 @@
 .Signuppage .Signupright #cancelContainer #cancelButton #X{
 color: #FFFFFF;
 text-decoration: none;
-
 }
 .Signuppage .Signupform {
     width: 65%;
     height: 70%;
-    display: inline-block;
-    position: relative;
     margin-top: 20px;
     align-items: center;
     color: #474A59;
+    margin: auto;
 }
 
-.Signuppage .Signupbtn-box {
-    display: block;
-    margin-top: 20px;
+.Signuppage #name {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+#nameinp{
+    width: 47%;
 }
 
 .Signuppage .Signuptoggle-btn1 {
@@ -86,28 +88,28 @@ text-decoration: none;
     color: #FC6B57;
     font-weight: bold;
     font-family: Courier, monospace;
-
+    margin-top: 10px;
 }
 
 .Signuppage #Signupwelcome {
-    padding-top: 70px;
+    padding-top: 5%;
     font-size: 40px;
     color: white;
+    margin: auto;
 
 }
 
 .Signuppage .Signupinp {
-    display: block;
     background-color: white;
-    color: #474A59;
     border: 1px solid #474A59;
-    padding: 10px 20px;
+    padding: 20px 30px;
     outline: none;
     font-size: 13px;
     color: #474A59;
     letter-spacing: 1px;
-    border-radius: 20px;
-    margin: 10px;
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 80%;
 }
 
 .Signuppage .Signupremember {
@@ -120,9 +122,11 @@ text-decoration: none;
     padding-right: 80px;
 }
 
-.Signuppage .SignupimpBx {
-    border: none;
-    padding: 10px;
-    outline: none;
-    width: 60%;
+.label-group{
+    margin: 2%;
+}
+
+.Signuppage #Typecheckbox{
+    margin: 30px;
+    font-size: 14px;
 }

@@ -15,36 +15,45 @@ function Signup() {
                                 </Link>
                             </button> 
                     </div>
-                    <div id="Signupwelcome">Create account</div>
+                    <h3 id="Signupwelcome">Create account</h3>
 
-                    <div>
-                        <div className="Signupform">
-                            <div className="Signupinp">
-                                <span>Username</span>
-                                <input className="SignupimpBx" type="text"></input>
-                            </div>
-                            <div className="Signupinp">
-                                <span>Password</span>
-                                <input className="SignupimpBx" type="password"></input>
-                            </div>
-                            <div className="Signupinp">
-                                <span>Retype Password</span>
-                                        <input className="SignupimpBx" type="password"></input>
-                            </div>
-                            <div className="Signupremember">
-                                <label id="Signupcheckbox"> <input type="checkbox"></input> Agree with policy</label>
-                                <Link to='/policy'>
-                                    Privacy Policy
-                                </Link>
-                            </div>
-                            <Link to='/'>
-                                <div className="Signupbtn-box">
-                                    <button type="button" className="Signuptoggle-btn1">Sign up</button>
+                    <form className="Signupform">
 
-                                </div>
+                        <div id = "name">
+                            <input className="Signupinp" id="nameinp" type="text" placeholder="First name" required></input>
+                            <input className="Signupinp" id="nameinp" type="text" placeholder="Last name" required></input>
+                        </div>
+                        
+                        <input className="Signupinp" type="email" placeholder="Email" required></input>
+
+                        <input className="Signupinp" type="text" placeholder="User name" required></input>
+
+                        <input className="Signupinp" type="password" placeholder="Password" required></input>
+
+                        <input className="Signupinp" type="password" placeholder="Retype Password" required></input>
+
+                        <div className="label-group">
+                            <label for ="isInstructor" id = "Typecheckbox" >Instructor
+                            <input type="radio" id = "isInstructor" name="indoor-outdoor" checked></input>
+                            </label>
+
+                            <label for ="isLearner" id = "Typecheckbox">Learner
+                            <input type="radio" id = "isLearner" name="Type account"></input>
+                            </label>
+                        </div>
+
+                        <div className="Signupremember">
+                            <label id="Signupcheckbox"> <input type="checkbox"></input> Agree with policy</label>
+                            <Link to='/policy'>
+                                Privacy Policy
                             </Link>
                         </div>
-                    </div>
+                        
+                        <Link to='/'>
+                            <button type="submit" className="Signuptoggle-btn1">Sign up</button>
+                        </Link>
+                    </form>
+
                 </div>
             </div>
         </div>
