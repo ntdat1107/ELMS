@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import './CSS/InsDashboard.css'
 import DbCalendar from "../Calendar/DbCalendar";
 import Statistic from "./Statistic";
@@ -7,6 +7,7 @@ import SideBarInstructor from '../SideBar/SideBar';
 import Header from '../Header/header'
 import cheems from "../img/cheems.png"
 import {Link} from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 function About() {    
     return (
@@ -75,7 +76,12 @@ render() {
     }
 }
 
-function InsDashboardUI () {
+function InsDashboardUI ({history}) {
+    const userLogin = useSelector(state => state.userLogin)
+    const {userInfo} = userLogin
+    useEffect(() => {
+        if (!userInfo) history.push('/login')
+    }, [history, userInfo])
     return (
         <div id="insdb">
             <SideBarInstructor typeUserTemp={1}/>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import CourseForYouCpn from '../courseForYou/courseForYouCpn';
 import git from "../Learner/img/course/git1.jpg";
 import star from "../Learner/img/rateStar/star4_5.png";
@@ -8,13 +8,21 @@ import Header from '../Header/header'
 import cheems from "../img/cheems.png"
 import SearchInTable from '../TableManage/SearchInTable';
 import TableManage from '../TableManage/TableManage';
+import { useSelector } from 'react-redux'
+
 
 const styleBC = {
     backgroundColor: "#F8D92E",
     color: "#4B0C0C"
 }
 
-function TableOfLearner() {
+function TableOfLearner({history}) {
+    // Check if logged in
+    const userLogin = useSelector(state => state.userLogin)
+    const {userInfo} = userLogin
+    useEffect(() => {
+        if (!userInfo) history.push('/login')
+    }, [history, userInfo])
     return (
         <div id="managelearner">
             <SideBar typeUserTemp={1}/>

@@ -1,5 +1,9 @@
-import { USER_LOGIN_FAIL, USER_LOGIN_REQUEST, USER_LOGIN_SUCCESS } from "../constants/userConstants"
+import { USER_LOGIN_FAIL, USER_LOGIN_REQUEST, USER_LOGIN_SUCCESS,
+    USER_LOGOUT,
+    USER_PROFILE_FAIL, USER_PROFILE_REQUEST, USER_PROFILE_SUCCESS } from "../constants/userConstants"
 import axios from 'axios'
+
+
 export const login = (accountID, password) => async (dispatch) => {
     try {
         dispatch({
@@ -26,4 +30,39 @@ export const login = (accountID, password) => async (dispatch) => {
             : error.message,
         })
     }
+}
+
+
+export const profile = (accountID, password) => async (dispatch) => {
+    try {
+        dispatch({
+            type: USER_PROFILE_REQUEST
+        })
+        const config = {
+            headers: {
+                'Content-type': 'application/json'
+            }
+        }
+        const { data } = await axios.post('/api/users/profile', { accountID, password }, config)
+
+        dispatch({
+            type: USER_PROFILE_SUCCESS,
+            payload: data
+        })
+        
+        localStorage.setItem('userProfile', JSON.stringify(data))
+    } catch (error) {
+        dispatch({
+            type: USER_PROFILE_FAIL,
+            payload: error.response && error.response.data.message
+            ? error.response.data.message
+            : error.message,
+        })
+    }
+}
+
+
+export const logout = () => (dispatch) => {
+    localStorage.removeItem('userInfo')
+    dispatch({ type: USER_LOGOUT})
 }

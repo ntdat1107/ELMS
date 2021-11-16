@@ -1,12 +1,20 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./CSS/InsManageProfile.css"
 import avtCheems from "../img/cheems.png"
 import ProfileCpn from "./profileCpn";
 import Header from '../Header/header'
 import cheems from "../img/cheems.png"
 import SideBar from "../SideBar/SideBar";
+import { useSelector } from 'react-redux'
 
-function InsManageProfile() {
+
+function InsManageProfile({history}) {
+    // Check if logged in
+    const userLogin = useSelector(state => state.userLogin)
+    const {userInfo} = userLogin
+    useEffect(() => {
+        if (!userInfo) history.push('/login')
+    }, [history, userInfo])
     return (
         <div id="insMP-UI">
             <SideBar typeUserTemp={1}/>

@@ -8,8 +8,14 @@ import SideBar from '../SideBar/SideBar';
 import Header from '../Header/header'
 import cheems from "../img/cheems.png"
 import { listCourses } from "../../actions/courseActions";
-function InsManagerCourse () {
+function InsManagerCourse ({history}) {
     const dispatch = useDispatch()
+    // Check if logged in
+    const userLogin = useSelector(state => state.userLogin)
+    const {userInfo} = userLogin
+    useEffect(() => {
+        if (!userInfo) history.push('/login')
+    }, [history, userInfo])
 
     const courseList = useSelector(state => state.courseList)
     const { loading, error, courses } = courseList

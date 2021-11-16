@@ -67,14 +67,23 @@ function OtherAction() {
     )
 }
 
-function InnerCourse({ match }) {
+function InnerCourse({ match, history }) {
     const dispatch = useDispatch()
+    const userLogin = useSelector(state => state.userLogin)
+    const {userInfo} = userLogin
+    useEffect(() => {
+        if (!userInfo) history.push('/login')
+    }, [history, userInfo])
+
+
     const courseDetail = useSelector(state => state.courseDetail)
     let { loading, error, course } = courseDetail
 
     useEffect(() => {
         dispatch(detailCourse(match.params.id))
     }, [dispatch])
+
+    
     return (
         <div id="inner-course-UI">
             <SideBar typeUserTemp={1}/>

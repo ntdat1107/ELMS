@@ -1,13 +1,20 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Header from '../Header/header'
 import cheems from "../img/cheems.png"
 import SideBar from "../SideBar/SideBar";
 import ListAnnounceCpn from "../ListAnnounceCpn/ListAnnounceCpn";
 import AnnounData from "../Admin/FakedataforAnnoun"
 import NewAnnoun from "../ListAnnounceCpn/NewAnnoun";
+import { useSelector } from 'react-redux'
 
 
-function InsAnnouncement() {
+function InsAnnouncement({history}) {
+    // Check if logged in
+    const userLogin = useSelector(state => state.userLogin)
+    const {userInfo} = userLogin
+    useEffect(() => {
+        if (!userInfo) history.push('/login')
+    }, [history, userInfo])
     return (
         <div id="ins-announce-ui">
             <SideBar typeUserTemp={1}/>

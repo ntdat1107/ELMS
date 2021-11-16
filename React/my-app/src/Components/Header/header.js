@@ -6,20 +6,25 @@ import searchIcon from "../img/search.png"
 import BellMessage from "./bellMessage"
 import arrow from "../img/arrow.png"
 import SearchBar from './searchBar'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { logout } from "../../actions/userActions";
 
 
 function Arrow() {
   const [click, setClick] = useState(false)
   const handleClick = () => setClick(!click);
+  const dispatch = useDispatch()
+  const logoutHandler = () => {
+    dispatch(logout())
+  }
   return (        
       <div className="arrow-btn">            
           <div id="arrow" onClick={handleClick}>
               <img src={arrow} alt="ArrowImage" className="arrowImg" id={click? "arrowClose" : "arrowOpen"}/>
           </div>            
           <ul className={click? 'nav-menu active' : 'nav-menu'}>
-            <li  className="nav-item">
-              <Link to='/' className="nav-link">Logout</Link>
+            <li className="nav-item">
+              <Link to='/' onClick={logoutHandler} className="nav-link">Logout</Link>
             </li>
           </ul>
       </div>
@@ -72,26 +77,36 @@ function AuthBtn() {
   )
 }
 
-function Header({
-  link,
-  linkAvt,
-  srcImg,
-  name,
-  gmail,
-  type,
-  idName,
-  typeUserTemp
-}) {
+function Header() {
+  const userLogin = useSelector(state => state.userLogin)
+  const { userInfo } = userLogin
+  let typeU, linkProfile, linkLogo
+  if (userInfo) {
+    if (userInfo.isLearner) {
+      linkProfile = '/learner/manageprofile'
+      typeU = 'Learner'
+      linkLogo = '/learner/dashboard'
+    }
+    else if (userInfo.isIns) {
+      linkProfile = '/ins/manageprofile'
+      typeU = 'Instructor'
+      linkLogo = '/ins/dashboard'
+    }
+    else if (userInfo.isAdmin) {
+      typeU = 'Admin'
+      linkLogo = '/admin/dashboard'
+      linkProfile = '/admin/dashboard'
+    }
+  }
   return (
       <div id="Header">    
-        <Link to={link}>
+        <Link to={linkLogo}>
           <img src={Logo} alt="AppLogo" id="Logo"></img>
         </Link>    
         <SearchBar searchImg = {searchIcon} id="SearchBar" name="Search" searchType="Search for anything" />
-        {typeUserTemp !== -1 && <BellMessage />}
-        {typeUserTemp !== -1 && <Information linkAvt={linkAvt} srcImg={srcImg} name={name} 
-                                          gmail={gmail} type={type} idName={idName} typeUserTemp={typeUserTemp}/>}
-        {typeUserTemp === -1 && <AuthBtn />}
+        { userInfo && <BellMessage /> }
+        { userInfo && <Information linkAvt={linkProfile} srcImg={userInfo.avatar} name={userInfo.firstName + ' ' + userInfo.lastName} gmail={userInfo.email} type={typeU} idName={userInfo.accountID}/>}
+        { !userInfo && <AuthBtn />}
       </div>
   )
 }

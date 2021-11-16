@@ -16,7 +16,7 @@ const users = [
         email: 'lamduong@gmail.com',
         accountID: 'lamduong',
         password: bcrypt.hashSync('123456', 10),
-        isLeaner: true
+        isLearner: true
     },
     {
         firstName : 'Mai Duc',

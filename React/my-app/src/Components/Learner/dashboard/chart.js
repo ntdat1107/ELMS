@@ -27,7 +27,6 @@ class BarChart extends React.Component {
 
 render() {
     let barGroups = this.state.data.map((d,i) => {
-        console.log((i + 1) % 2 === 0);
         if((i + 1) % 2 === 0) {
             return <g><BarGroup key = {i} d={d} i={i} color = {colorEven}/></g>
         }
