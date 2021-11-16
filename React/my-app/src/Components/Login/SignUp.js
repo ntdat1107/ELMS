@@ -34,7 +34,7 @@ function Signup() {
 
                         <div className="label-group">
                             <label for ="isInstructor" id = "Typecheckbox" >Instructor
-                            <input type="radio" id = "isInstructor" name="indoor-outdoor" checked></input>
+                            <input type="radio" id = "isInstructor" name="Type account" checked></input>
                             </label>
 
                             <label for ="isLearner" id = "Typecheckbox">Learner
