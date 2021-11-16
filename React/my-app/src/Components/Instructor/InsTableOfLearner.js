@@ -22,6 +22,7 @@ function TableOfLearner({history}) {
     const {userInfo} = userLogin
     useEffect(() => {
         if (!userInfo) history.push('/login')
+        // else if (!userInfo.isIns) push error not type
     }, [history, userInfo])
     return (
         <div id="managelearner">

@@ -1,6 +1,6 @@
 const courses = [
     {
-        author: "Mr. Dat",
+        authorName: "Dat",
         name: "Complete Git Course to Get Your Dream IT Job 2021" ,
         image: "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg",
         category: "beginner",
@@ -11,7 +11,7 @@ const courses = [
         fastName: "git"
     },
     {
-        author: "Mr. Dat",
+        authorName: "Long",
         name: "Complete Git Course to Get Your Dream IT Job 2021" ,
         image: "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg",
         category: "beginner",
@@ -22,7 +22,7 @@ const courses = [
         fastName: "cpp"
     },
     {
-        author: "Mr. Dat",
+        authorName: "Dat",
         name: "Complete Git Course to Get Your Dream IT Job 2021" ,
         image: "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg",
         category: "beginner",
@@ -33,7 +33,7 @@ const courses = [
         fastName: "py"
     },
     {
-        author: "Mr. Dat",
+        authorName: "Long",
         name: "Complete Git Course to Get Your Dream IT Job 2021" ,
         image: "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg",
         category: "beginner",
@@ -43,6 +43,61 @@ const courses = [
         typeCourse: "Hot",
         fastName: "gcc-gpp"
     },
+    {
+        authorName: "Dat",
+        name: "Complete kotlin Course to Get Your Dream IT Job 2021" ,
+        image: "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg",
+        category: "beginner",
+        description:"The BEST Kotlin that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications. This course is designed for those students who do not have enough time to learn Git." ,
+        rateScore: 3.5,
+        rateNum: 100,
+        typeCourse: "Hot",
+        fastName: "kotlin"
+    },
+    {
+        authorName: "Dat",
+        name: "Complete kotlin Course to Get Your Dream IT Job 2021" ,
+        image: "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg",
+        category: "beginner",
+        description:"The BEST Kotlin that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications. This course is designed for those students who do not have enough time to learn Git." ,
+        rateScore: 3.5,
+        rateNum: 100,
+        typeCourse: "Hot",
+        fastName: "haskell"
+    },
+    {
+        authorName: "Dat",
+        name: "Complete kotlin Course to Get Your Dream IT Job 2021" ,
+        image: "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg",
+        category: "beginner",
+        description:"The BEST Kotlin that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications. This course is designed for those students who do not have enough time to learn Git." ,
+        rateScore: 3.5,
+        rateNum: 100,
+        typeCourse: "Hot",
+        fastName: "hellow"
+    },
+    {
+        authorName: "Dat",
+        name: "Complete kotlin Course to Get Your Dream IT Job 2021" ,
+        image: "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg",
+        category: "beginner",
+        description:"The BEST Kotlin that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications. This course is designed for those students who do not have enough time to learn Git." ,
+        rateScore: 3.5,
+        rateNum: 100,
+        typeCourse: "Hot",
+        fastName: "csharp"
+    },
+    {
+        authorName: "Dat",
+        name: "Complete kotlin Course to Get Your Dream IT Job 2021" ,
+        image: "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg",
+        category: "beginner",
+        description:"The BEST Kotlin that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications. This course is designed for those students who do not have enough time to learn Git." ,
+        rateScore: 3.5,
+        rateNum: 100,
+        typeCourse: "Hot",
+        fastName: "java"
+    }
 ]
 
 

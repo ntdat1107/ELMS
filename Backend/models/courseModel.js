@@ -17,12 +17,12 @@ const ratingSchema = mongoose.Schema({
 
 
 const courseSchema = mongoose.Schema({
-    user: {
+    userAdmin: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: 'User'
     },
-    author: {
+    authorName: {
         type: String,
         required: true
     },

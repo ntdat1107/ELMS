@@ -3,6 +3,14 @@ import bcrypt from 'bcryptjs'
 
 const users = [
     {
+        firstName: 'Admin',
+        lastName: 'User',
+        email: 'admin@example.com',
+        accountID: 'admin',
+        password: bcrypt.hashSync('123456', 10),
+        isAdmin: true
+    },
+    {
         firstName : 'Ngo Tien',
         lastName : 'Dat',
         email: 'tiendat@gmail.com',
@@ -24,7 +32,7 @@ const users = [
         email: 'mailong@gmail.com',
         accountID: 'mailong',
         password: bcrypt.hashSync('123456', 10),
-        isAdmin: true
+        isIns: true
     },
     {
         firstName : 'Ngu Quan',
@@ -70,7 +78,7 @@ const users = [
         firstName : 'Katrina',
         lastName : 'William',
         email: 'dingybend@gmail.com',
-        accountID: 'dingybend',
+        accountID: 'dingybend0',
         password: bcrypt.hashSync('asdsferrgg123', 10),
         isLearner: true
     },
@@ -133,7 +141,7 @@ const users = [
     {
         firstName : 'Ben',
         lastName : 'Adam',
-        email: 'lamduong@gmail.com',
+        email: 'benadam@gmail.com',
         accountID: 'dingybend',
         password: bcrypt.hashSync('hello123', 10),
         isLearner: true
@@ -165,8 +173,8 @@ const users = [
     {
         firstName : 'Stephen',
         lastName : 'Arthur',
-        email: 'lamduong@gmail.com',
-        accountID: 'dingybend',
+        email: 'stephenArthur@gmail.com',
+        accountID: 'dingybend1',
         password: bcrypt.hashSync('jfuut7664', 10),
         isLearner: true
     },
@@ -193,9 +201,7 @@ const users = [
         accountID: 'Slangwhanger',
         password: bcrypt.hashSync('hello123', 10),
         isLearner: true
-    },
-
-
+    }
 ]
 
 export default users

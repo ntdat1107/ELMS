@@ -18,19 +18,23 @@ const importData = async () => {
         await User.deleteMany()
         await Course.deleteMany()
         
-        const createUsers = await User.insertMany(users)
+        const createUsers = await User.insertMany(users[0])
 
-        const insUser = createUsers[0]._id
+        const adminUser = createUsers[0]._id
 
         const sampleCourse = courses.map(course => {
-            return { ...course, user: insUser }
+            return { ...course, userAdmin: adminUser }
         })
-        const temp = await Course.insertMany(sampleCourse)
-        const manyUser = users.map(user => {
-            return { ...user, hasCourse:temp}
+        const courseList = await Course.insertMany(sampleCourse)
+        let sampleUser = users.map(user => {
+            const listCourseTemp = []
+            for (let i=0; i<courseList.length; i++) {
+                if (courseList[i].authorName == user.lastName) listCourseTemp.push(courseList[i]._id)
+            }
+            return { ...user, hasCourse: listCourseTemp}
         })
-        await User.deleteMany()
-        await User.insertMany(manyUser)
+        sampleUser = sampleUser.slice(1, users.length)
+        await User.insertMany(sampleUser)
         console.log(`Data imported!!`.green.inverse)
         process.exit()
 
