@@ -14,12 +14,6 @@ const authUser = asyncHandler(async(req, res) => {
     if (user && await user.matchPassword(password)) {
         res.json({
             _id: user._id,
-            firstName: user.firstName,
-            lastName: user.lastName,
-            accountID: user.accountID,
-            email: user.email,
-            avatar: user.avatar,
-            hasCourse: user.hasCourse,
             isAdmin: user.isAdmin,
             isLearner: user.isLearner,
             isIns: user.isIns,
@@ -52,7 +46,8 @@ const getUserProfile = asyncHandler(async(req, res) => {
             description: user.description,
             sex: user.sex,
             phoneNumber: user.phoneNumber,
-            birthDay: user.birthDay
+            birthDay: user.birthDay,
+            hasCourse: user.hasCourse
         })
     } else {
         res.status(401)

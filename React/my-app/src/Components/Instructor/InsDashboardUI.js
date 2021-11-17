@@ -7,7 +7,8 @@ import SideBarInstructor from '../SideBar/SideBar';
 import Header from '../Header/header'
 import cheems from "../img/cheems.png"
 import {Link} from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { getUserProfile } from "../../actions/userActions";
 
 function About() {    
     return (
@@ -77,12 +78,21 @@ render() {
 }
 
 function InsDashboardUI ({history}) {
+    const dispatch = useDispatch()
     const userLogin = useSelector(state => state.userLogin)
     const {userInfo} = userLogin
     useEffect(() => {
         if (!userInfo) history.push('/login')
         // else if (!userInfo.isIns) push error not type
     }, [history, userInfo])
+
+    const userProfile = useSelector(state => state.userProfile)
+    const {userDetail} = userProfile
+    useEffect(() => {
+        if (!userDetail) {
+            dispatch(getUserProfile('profile'))
+        }
+    }, [dispatch, history, userDetail])
     return (
         <div id="insdb">
             <SideBarInstructor typeUserTemp={1}/>
@@ -92,7 +102,7 @@ function InsDashboardUI ({history}) {
             <div id="col1">
                 <About />
                 <Statistic learnerCount={500} videoCount="20" 
-                courseCount={userInfo? userInfo.hasCourse.length : 0}/>
+                courseCount={userDetail? userDetail.hasCourse.length : 0}/>
                 <div id="WSH">
                     <BarChart />
                 </div>
