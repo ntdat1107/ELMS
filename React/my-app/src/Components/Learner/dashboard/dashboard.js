@@ -6,9 +6,7 @@ import Calendar             from "../../Calendar/DbCalendar"
 import Header from '../../Header/header';
 import SideBar       from '../../SideBar/SideBar';
 import avatatLn from '../../img/avtLn.png'
-import data from '../../courseForYou/data'
-import { Scrollbars } from 'react-custom-scrollbars';
-import CourseForYouCpn from "../../courseForYou/courseForYouCpn";
+import CourseForYou from "./courseForYou";
 
 //Start About
 function About() {    
@@ -82,40 +80,9 @@ render() {
 //End Chart 
 
 //Start Course For You
-function CourseForYou() {
-    const display = data.map((course) => {
-        return(
-            <CourseForYouCpn 
-                imgSrcCourse = {course.imgSrcCourse}
-                altCourse = {course.altCourse}
-                Name = {course.name}
-                Desc= {course.desc}
-                Author= {course.author}
-                Type= {course.type}
-                rateScore= {course.rateScore}
-                imgStar= {course.imgStar}
-                totalRate= {course.totalRate}
-                tagColor= {course.tagColor}
-                linkName="/course_DADA"
-            />
-        )
-    });
-    return (
-        <div id="coursesCFY">
-            <Link className="Link-coursename" to="/learner/search">
-                <p id="titleCFY">Courses For You</p>
-            </Link>
-            <div id="listCoursesCFY">
-                <Scrollbars>
-                    {display}
-                </Scrollbars>
-            </div>
-        </div>
-    )
-}
+
 //End Course For You
 function LnDashboard({ history }) {
-    const dispatch = useDispatch()
     // Check if logged in
     const userLogin = useSelector(state => state.userLogin)
     const {userInfo} = userLogin
@@ -123,6 +90,7 @@ function LnDashboard({ history }) {
         if (!userInfo) history.push('/login')
         // else if (!userInfo.isIns) push error not type
     }, [history, userInfo])
+
     return (
         <div id="lnDashBoardUI">
             <SideBar typeUserTemp={2}/>
