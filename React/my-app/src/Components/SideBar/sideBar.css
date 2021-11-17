@@ -37,15 +37,6 @@
 #SubSideBar button:hover #mycourses {
     content: url("../img/myCoursesHover.png");
 }
-#SubSideBar button:hover #readtutorial {
-    content: url("../img/readTutorialHover.png");
-}
-#SubSideBar button:hover #readnotes {
-    content: url("../img/readNotesHover.png");
-}
-#SubSideBar button:hover #takequiz {
-    content: url("../img/takeQuizHover.png");
-}
 
 #SubSideBar button:hover {
     background-color: #160e4d;
@@ -84,15 +75,7 @@
 #SubSideBar .ActiveLink #mycourses {
     content: url("../img/myCoursesHover.png");
 }
-#SubSideBar .ActiveLink #readtutorial {
-    content: url("../img/readTutorialHover.png");
-}
-#SubSideBar .ActiveLink #readnotes {
-    content: url("../img/readNotesHover.png");
-}
-#SubSideBar .ActiveLink #takequiz {
-    content: url("../img/takeQuizHover.png");
-}
+
 
 #SubSideBar .ActiveLink button p {
     border-radius: 20px;

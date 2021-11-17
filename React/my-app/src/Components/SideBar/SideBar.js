@@ -5,9 +5,6 @@ import dashboardImg from "../img/dashboard.png";
 import manageCourse from "../img/manageCourse.png";
 import manageProfile from "../img/profile.png";
 import myCourses from "../img/myCourses.png";
-import takeQuiz from "../img/takeQuiz.png";
-import readTutorial from "../img/readTutorial.png";
-import readNotes from "../img/readNotes.png";
 import manageIns from "../img/manageIns.png";
 import manageLn from "../img/manageLn.png";
 import footer from "../img/footer.png";
@@ -90,33 +87,6 @@ function SideBar({ typeUserTemp }) {
                     h: "32",
                     w: "40",
                     linkName: "/learner/mycourses",
-                },
-                {
-                    idName: "takequiz",
-                    srcImg: takeQuiz,
-                    altName: "TakeQuizImage",
-                    nameSideBar: "Take Quiz",
-                    h: "32",
-                    w: "40",
-                    linkName: "/learner/takequiz",
-                },
-                {
-                    idName: "readtutorial",
-                    srcImg: readTutorial,
-                    altName: "readTutorialImage",
-                    nameSideBar: "Read Tutorial",
-                    h: "32",
-                    w: "40",
-                    linkName: "/learner/readtutorial",
-                },
-                {
-                    idName: "readnotes",
-                    srcImg: readNotes,
-                    altName: "ReadNotesImage",
-                    nameSideBar: "Read Notes",
-                    h: "32",
-                    w: "40",
-                    linkName: "/learner/readnotes",
                 },
                 {
                     idName: "announce",

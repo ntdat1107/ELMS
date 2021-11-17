@@ -16,9 +16,6 @@ import CourseMainPage, { LearnerCourseMainPage } from './Components/Guest/Course
 import LnDashboard from './Components/Learner/dashboard/dashboard';
 import RegisterInsUI from './Components/Learner/registerIns/registerToIns';
 import LnMyCourses from './Components/Learner/mycourses/myCourses';
-import LnTakeQuiz from './Components/Learner/takequiz/takeQuiz';
-import LnReadTutorial from './Components/Learner/readtutorial/readTutorial';
-import LnReadNotes from './Components/Learner/readnote/readNotes';
 import LnAnnouncements from './Components/Learner/announcement/announcements';
 import LnManageProfile from './Components/Learner/manageprofile/manageProfile';
 import AdminDashboard from './Components/Admin/AdminDashboard';
@@ -47,9 +44,6 @@ function App() {
           <Route exact path='/course/DADA' component={CourseMainPage}></Route>
           <Route exact path='/learner/dashboard' component={LnDashboard}></Route>
           <Route exact path='/learner/mycourses' component={LnMyCourses}></Route>
-          <Route exact path='/learner/takequiz' component={LnTakeQuiz}></Route>
-          <Route exact path='/learner/readtutorial' component={LnReadTutorial}></Route>
-          <Route exact path='/learner/readnotes' component={LnReadNotes}></Route>
           <Route exact path='/learner/announcements' component={LnAnnouncements}></Route>
           <Route exact path='/learner/manageprofile' component={LnManageProfile}></Route>
           <Route exact path='/admin/dashboard' component={AdminDashboard}></Route>
