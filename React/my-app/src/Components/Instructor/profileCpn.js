@@ -17,7 +17,7 @@ function ProfileCpn({
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [passwordConfirm, setPasswordConfirm] = useState('')
-    const [birthDay, setBirthDay] = useState('')
+    const [birthDay, setBirthDay] = useState('2000-10-10')
     const [city, setCity] = useState('')
     const [country, setCoutry] = useState('')
     const [sex, setSex] = useState('Other')
@@ -47,6 +47,12 @@ function ProfileCpn({
             setCity(userDetail.city)
             setDescription(userDetail.description)
             setPhoneNumber(userDetail.phoneNumber)
+            var userNow = JSON.parse(localStorage.getItem('userInfo'))
+            userNow.lastName = userDetail.lastName
+            userNow.firstName = userDetail.firstName
+            userNow.email = userDetail.email
+            userNow.avatar = userDetail.avatar
+            localStorage.setItem("userInfo", JSON.stringify(userNow))
         }
     }, [dispatch, history, userDetail])
     const saveHandle = (e) => {

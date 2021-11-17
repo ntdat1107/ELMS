@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, {useState, useEffect } from "react";
 import './header.css'
 import Logo from "../img/Logo.png";
 import { Link } from "react-router-dom"
@@ -7,7 +7,7 @@ import BellMessage from "./bellMessage"
 import arrow from "../img/arrow.png"
 import SearchBar from './searchBar'
 import { useDispatch, useSelector } from 'react-redux'
-import { logout, removeProfile } from "../../actions/userActions";
+import { getUserProfile, logout, removeProfile } from "../../actions/userActions";
 
 
 function Arrow() {
@@ -79,8 +79,17 @@ function AuthBtn() {
 }
 
 function Header({history}) {
+  const dispatch = useDispatch()
   const userLogin = useSelector(state => state.userLogin)
   const { userInfo } = userLogin
+  const userProfile = useSelector(state => state.userProfile)
+  const {userDetail} = userProfile
+  console.log(userDetail)
+  useEffect(() => {
+    if (!userDetail) {
+         dispatch(getUserProfile('profile'))
+    }
+  }, [dispatch, history, userDetail])
   let typeU, linkProfile, linkLogo
   if (userInfo) {
     if (userInfo.isLearner) {
@@ -110,7 +119,7 @@ function Header({history}) {
         </Link>    
         <SearchBar searchImg = {searchIcon} id="SearchBar" name="Search" searchType="Search for anything" />
         { userInfo && <BellMessage /> }
-        { userInfo && <Information linkAvt={linkProfile} srcImg={userInfo.avatar} name={userInfo.firstName + ' ' + userInfo.lastName} gmail={userInfo.email} type={typeU} idName={userInfo.accountID}/>}
+        { userInfo && userDetail && <Information linkAvt={linkProfile} srcImg={userDetail.avatar} name={userDetail.firstName + ' ' + userDetail.lastName} gmail={userDetail.email} type={typeU} idName={userDetail.accountID}/>}
         { !userInfo && <AuthBtn />}
       </div>
   )
