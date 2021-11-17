@@ -21,9 +21,25 @@ const getUserCourses = asyncHandler(async(req, res) => {
     }
     else {
         res.status(404)
-        throw new Error('User not found!')
+        throw new Error('User not found')
     }
 })
 
 
-export { getUserCourses }
+const getLearners = asyncHandler(async(req, res) => {
+    const listLearners = await User.find({isLearner: true})
+    if (listLearners) {
+        let ans = []
+        for (let i=0; i<listLearners.length; i++) {
+            if (listLearners[i].hasCourse.indexOf(req.params.id) !== -1) ans.push(listLearners[i])
+        }
+        res.json(ans)
+    }
+    else {
+        res.status(404)
+        throw new Error('User not found')
+    }
+})
+
+
+export { getUserCourses, getLearners }

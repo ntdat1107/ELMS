@@ -78,13 +78,13 @@ function InnerCourse({ match, history }) {
 
 
     const courseDetail = useSelector(state => state.courseDetail)
-    let { loading, error, course } = courseDetail
+    const { loading, error, course } = courseDetail
 
     useEffect(() => {
         dispatch(detailCourse(match.params.id))
     }, [dispatch])
 
-    
+    console.log(course)
     return (
         <div id="inner-course-UI">
             <SideBar typeUserTemp={1}/>
