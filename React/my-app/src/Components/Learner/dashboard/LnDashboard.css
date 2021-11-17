@@ -120,7 +120,7 @@
     text-decoration: none;
     color: black;
 }
-#coursesCFY {
+#lnDashboard #coursesCFY {
   background-color: rgba(88, 186, 171, 0.5);
   display: inline-block;
   margin-top: 10px;
@@ -133,13 +133,13 @@
   border-color: #c4c4c4;
   border-width: 2px;
 }
-#titleCFY {
+#lnDashboard #titleCFY {
   font-size: 24px;
   font-weight: bold;
   margin-left: 20px;
   margin-top: 2px;
 }
-#listCoursesCFY {
+#lnDashboard #listCoursesCFY {
   background-color:white;
   width: 710px;
   margin-left: 15px;
@@ -148,4 +148,43 @@
   height: 350px;
 }
 
+/* Chart */
+#lnDashboard .title {
+  font-size: 1.4em;
+  font-weight: 300;
+}
 
+#lnDashboard .bar-group .name-label {
+  font-size: 8px;
+  fill: #000;
+}
+
+#lnDashboard .bar-group .value-label {
+  text-anchor: end;
+  fill: yellow;
+  font-weight: 900;
+  font-size: 0.7em;
+}
+
+#lnDashboard .container .bar-group {
+  transition: opacity 0.3s;
+}
+
+/* Fade bars when the chart is hovered */
+#lnDashboard .container:hover .bar-group {
+  opacity: 0.3;
+}
+
+/* But don't fade the hovered bar... */
+#lnDashboard .container .bar-group:hover {
+  opacity: 1;
+}
+
+#lnDashboard .container .bar-group:hover .name-label {
+  font-weight: bold;
+  font-size: 10px;
+}
+
+#lnDashboard .container .bar-group:hover .value-label {
+  font-size: 10px;
+}
