@@ -15,8 +15,8 @@ const reducer = combineReducers({
 const userInfoFromStorage = localStorage.getItem('userInfo') 
                                 ? JSON.parse(localStorage.getItem('userInfo')) : null
 
-const userProfileFromStorage = localStorage.getItem('userProfile')
-                                ? JSON.parse(localStorage.getItem('userProfile')) : null
+const userProfileFromStorage = localStorage.getItem('userDetail')
+                                ? JSON.parse(localStorage.getItem('userDetail')) : null
 
 const initialStore = {
     userLogin: { userInfo: userInfoFromStorage },

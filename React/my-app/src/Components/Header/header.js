@@ -7,7 +7,7 @@ import BellMessage from "./bellMessage"
 import arrow from "../img/arrow.png"
 import SearchBar from './searchBar'
 import { useDispatch, useSelector } from 'react-redux'
-import { logout } from "../../actions/userActions";
+import { logout, removeProfile } from "../../actions/userActions";
 
 
 function Arrow() {
@@ -16,6 +16,7 @@ function Arrow() {
   const dispatch = useDispatch()
   const logoutHandler = () => {
     dispatch(logout())
+    dispatch(removeProfile())
   }
   return (        
       <div className="arrow-btn">            
@@ -97,6 +98,10 @@ function Header() {
       linkLogo = '/admin/dashboard'
       linkProfile = '/admin/dashboard'
     }
+  }
+  else {
+    typeU = 'Guest'
+    linkLogo = '/'
   }
   return (
       <div id="Header">    

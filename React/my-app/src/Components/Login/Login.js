@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './CSS/Login.css'
 import {Link } from "react-router-dom"
 import { useDispatch, useSelector } from 'react-redux'
-import { login } from '../../actions/userActions.js'
+import { getUserProfile, login } from '../../actions/userActions.js'
 
 function Login({history}) {
     const [accountID, setAccountID] = useState('')
@@ -14,6 +14,7 @@ function Login({history}) {
 
     useEffect(() => {
         if (userInfo) {
+            dispatch(getUserProfile('profile'))
             if (userInfo.isLearner) history.push('/learner/dashboard')
             else if (userInfo.isIns) history.push('/ins/dashboard')
             else if (userInfo.isAdmin) history.push('/admin/dashboard')

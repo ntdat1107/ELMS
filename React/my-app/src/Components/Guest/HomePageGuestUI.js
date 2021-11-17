@@ -7,7 +7,7 @@ import './CSS/HomePage.css'
 function HomePageUI() {
     return (
         <div>
-            <Header link="/" typeUserTemp={-1} />
+            <Header/>
             <SideBarGuest/>
             <MainBody/>
         </div>
