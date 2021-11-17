@@ -16,7 +16,7 @@ function CourseForYou() {
     const display = courses.map((data, index) => {
         return(
             <CourseForYouCpn key={index} imgSrcCourse={data.image}
-            Name={data.name} Desc={data.description} Author={data.author} Type={data.typeCourse}
+            Name={data.name} Desc={data.description} Author={data.authorName} Type={data.typeCourse}
             rateScore={data.rateScore} totalRate={data.rateNum} linkName={`/ins/managecourse/${data.fastName}`}/>
         )
     });
