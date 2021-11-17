@@ -84,7 +84,6 @@ function Header({history}) {
   const { userInfo } = userLogin
   const userProfile = useSelector(state => state.userProfile)
   const {userDetail} = userProfile
-  console.log(userDetail)
   useEffect(() => {
     if (!userDetail) {
          dispatch(getUserProfile('profile'))

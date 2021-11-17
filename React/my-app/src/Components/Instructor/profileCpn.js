@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import camera from "./imgSrc/camera.png"
 import { useDispatch, useSelector } from 'react-redux'
-import { getUserProfile, login, updateUserProfile } from '../../actions/userActions'
+import { getUserProfile, updateUserProfile } from '../../actions/userActions'
 
 function ProfileCpn({
     history,
@@ -17,10 +17,10 @@ function ProfileCpn({
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [passwordConfirm, setPasswordConfirm] = useState('')
-    const [birthDay, setBirthDay] = useState('2000-10-10')
+    const [birthDay, setBirthDay] = useState('')
     const [city, setCity] = useState('')
-    const [country, setCoutry] = useState('')
-    const [sex, setSex] = useState('Other')
+    const [country, setCoutry] = useState('other')
+    const [sex, setSex] = useState('other')
     const [avatar, setAvatar] = useState('')
     const [description, setDescription] = useState('')
     const [phoneNumber, setPhoneNumber] = useState('')
@@ -40,19 +40,13 @@ function ProfileCpn({
             setLastName(userDetail.lastName)
             setFirstName(userDetail.firstName)
             setEmail(userDetail.email)
-            setBirthDay(userDetail.birthDay)
+            setBirthDay(userDetail.birthDay.split('T')[0])
             setAvatar(userDetail.avatar)
             setSex(userDetail.sex)
             setCoutry(userDetail.country)
             setCity(userDetail.city)
             setDescription(userDetail.description)
             setPhoneNumber(userDetail.phoneNumber)
-            var userNow = JSON.parse(localStorage.getItem('userInfo'))
-            userNow.lastName = userDetail.lastName
-            userNow.firstName = userDetail.firstName
-            userNow.email = userDetail.email
-            userNow.avatar = userDetail.avatar
-            localStorage.setItem("userInfo", JSON.stringify(userNow))
         }
     }, [dispatch, history, userDetail])
     const saveHandle = (e) => {
@@ -110,7 +104,7 @@ function ProfileCpn({
                         onChange={ (e) => {handleChange(); setSex(e.target.value)}} >
                             <option value="Male" label="Male" />
                             <option value="Female" label="Female" />
-                            <option value="Other" label="Other" />
+                            <option value="other" label="Other" />
                         </select>
                     </div>
                 </div>  
@@ -125,7 +119,7 @@ function ProfileCpn({
                         <label className="label-pf" for="input-birthday">Birthdate</label>
                         <input className="input-tag-pf" type="date" id="input-birthday" name="birthday" 
                         value={birthDay}
-                        onChange={(e) => {handleChange(); setBirthDay(e.target.valueAsDate)}} />  
+                        onChange={(e) => {handleChange(); setBirthDay(e.target.value)}} />  
                     </div>
                 </div>
                 <div id="row-3">
@@ -148,12 +142,13 @@ function ProfileCpn({
                         <select className="input-tag-pf" type="text"  id="input-country" 
                         value={country}
                         onChange={(e) => {handleChange(); setCoutry(e.target.value)}}>
-                            <option label="Việt Nam" />
-                            <option label="England" />
-                            <option label="Japan" />
-                            <option label="American" />
-                            <option label="Singapore" />
-                            <option label="India" />
+                            <option value="Việt Nam" label="Việt Nam" />
+                            <option value="England" label="England" />
+                            <option value="Japan" label="Japan" />
+                            <option value="American" label="American" />
+                            <option value="Singapore" label="Singapore" />
+                            <option label="India" label="India" />
+                            <option value="other" label="Other" />
                         </select>
                     </div>
                 </div>
