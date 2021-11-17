@@ -7,7 +7,6 @@ import InnerCourse from './Components/Instructor/InnerCourse';
 import InsAnnouncement from './Components/Instructor/InsAnnouncement';
 import TableOfLearner from './Components/Instructor/InsTableOfLearner';
 import HomePageUI from './Components/Guest/HomePageGuestUI';
-import PreLogin from './Components/Login/PreLogin';
 import Login from './Components/Login/Login';
 import Signup from './Components/Login/SignUp';
 import ForgotPass from './Components/Login/ForgotPass';
@@ -40,7 +39,6 @@ function App() {
           <Route exact path='/ins/managecourse/:id' component={InnerCourse}></Route>
           <Route exact path='/ins/announcement' component={InsAnnouncement}></Route>
           <Route exact path='/ins/managecourse/manage_my_learners' component={TableOfLearner}></Route>
-          <Route exact path='/prelogin' component={PreLogin}></Route>
           <Route exact path='/login' component={Login}></Route>
           <Route exact path='/signup' component={Signup}></Route>
           <Route exact path='/forgotpass' component={ForgotPass}></Route>

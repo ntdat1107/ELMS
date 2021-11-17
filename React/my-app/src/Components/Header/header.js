@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState } from "react";
 import './header.css'
 import Logo from "../img/Logo.png";
 import { Link } from "react-router-dom"
@@ -78,7 +78,7 @@ function AuthBtn() {
   )
 }
 
-function Header() {
+function Header({history}) {
   const userLogin = useSelector(state => state.userLogin)
   const { userInfo } = userLogin
   let typeU, linkProfile, linkLogo

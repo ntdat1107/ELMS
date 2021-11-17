@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import camera from "./imgSrc/camera.png"
 import { useDispatch, useSelector } from 'react-redux'
-import { getUserProfile } from '../../actions/userActions'
+import { getUserProfile, login, updateUserProfile } from '../../actions/userActions'
 
 function ProfileCpn({
     history,
@@ -16,10 +16,11 @@ function ProfileCpn({
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [birthDay, setBirthDay] = useState()
+    const [passwordConfirm, setPasswordConfirm] = useState('')
+    const [birthDay, setBirthDay] = useState('')
     const [city, setCity] = useState('')
     const [country, setCoutry] = useState('')
-    const [sex, setSex] = useState('')
+    const [sex, setSex] = useState('Other')
     const [avatar, setAvatar] = useState('')
     const [description, setDescription] = useState('')
     const [phoneNumber, setPhoneNumber] = useState('')
@@ -28,17 +29,47 @@ function ProfileCpn({
     const dispatch = useDispatch()
     const userProfile = useSelector(state => state.userProfile)
     const {userDetail} = userProfile
+
+    const userUpdateProfile = useSelector(state => state.userUpdateProfile)
+    const {success} = userUpdateProfile
     useEffect(() => {
-        if (!userDetail) dispatch(getUserProfile('profile'))
+        if (!userDetail) {
+             dispatch(getUserProfile('profile'))
+        }
         else {
             setLastName(userDetail.lastName)
+            setFirstName(userDetail.firstName)
+            setEmail(userDetail.email)
+            setBirthDay(userDetail.birthDay)
+            setAvatar(userDetail.avatar)
+            setSex(userDetail.sex)
+            setCoutry(userDetail.country)
+            setCity(userDetail.city)
+            setDescription(userDetail.description)
+            setPhoneNumber(userDetail.phoneNumber)
         }
-    }, [userDetail])
+    }, [dispatch, history, userDetail])
     const saveHandle = (e) => {
-
+        e.preventDefault()
+        if (password !== passwordConfirm) {
+            // Handle password do not match
+        }
+        else {
+            dispatch(updateUserProfile({id: userDetail._id, firstName, lastName, email, avatar, city, country,
+            description, sex, phoneNumber, birthDay, password}))
+        }
     }
     const cancelHandle = (e) => {
-
+        setLastName(userDetail.lastName)
+        setFirstName(userDetail.firstName)
+        setEmail(userDetail.email)
+        setBirthDay(userDetail.birthDay)
+        setAvatar(userDetail.avatar)
+        setSex(userDetail.sex)
+        setCoutry(userDetail.country)
+        setCity(userDetail.city)
+        setDescription(userDetail.description)
+        setPhoneNumber(userDetail.phoneNumber)
     }
 
     return (
@@ -63,11 +94,13 @@ function ProfileCpn({
                     <div id="f-name">
                         <label className="label-pf" for="input-fname">First Name</label>
                         <input className="input-tag-pf" type="text" id="input-fname" name="firstname" 
+                        value={firstName}
                         onChange={(e) => {handleChange(); setFirstName(e.target.value)}}/>
                     </div>
                     <div id="sex">
                         <label className="label-pf" for="sex">Sex</label>
                         <select className="input-tag-pf" id="input-sex" name="sex" 
+                        value={sex}
                         onChange={ (e) => {handleChange(); setSex(e.target.value)}} >
                             <option value="Male" label="Male" />
                             <option value="Female" label="Female" />
@@ -79,17 +112,21 @@ function ProfileCpn({
                     <div id="email">
                         <label className="label-pf" for="input-email">Email</label>
                         <input className="input-tag-pf" type="email"  id="input-email" name="email" 
+                        value={email}
                         onChange={(e) => {handleChange(); setEmail(e.target.value)}} />
                     </div>
                     <div id="b-day" >
                         <label className="label-pf" for="input-birthday">Birthdate</label>
-                        <input className="input-tag-pf" type="date" id="input-birthday" name="birthday" onChange={(e) => {handleChange(); setBirthDay(e.target.valueAsDate)}} />  
+                        <input className="input-tag-pf" type="date" id="input-birthday" name="birthday" 
+                        value={birthDay}
+                        onChange={(e) => {handleChange(); setBirthDay(e.target.valueAsDate)}} />  
                     </div>
                 </div>
                 <div id="row-3">
                     <div id="contact-number">
                         <label className="label-pf" for="input-number">Contact number</label>
                         <input className="input-tag-pf" type="tel"  id="input-number" 
+                        value={phoneNumber}
                         onChange={(e) => {handleChange(); setPhoneNumber(e.target.value)}}/>
                     </div>
                 </div>
@@ -97,11 +134,13 @@ function ProfileCpn({
                     <div id="city">
                         <label className="label-pf" for="input-city">City</label>
                         <input className="input-tag-pf" type="text"  id="input-city" 
+                        value={city}
                         onChange={(e) => {handleChange(); setCity(e.target.value)}}/>
                     </div>
                     <div id="country">
                         <label className="label-pf" for="input-country">Country</label>
                         <select className="input-tag-pf" type="text"  id="input-country" 
+                        value={country}
                         onChange={(e) => {handleChange(); setCoutry(e.target.value)}}>
                             <option label="Việt Nam" />
                             <option label="England" />
@@ -116,6 +155,7 @@ function ProfileCpn({
                     <div id="description">
                         <label className="label-pf" for="input-des">Description</label>
                         <textarea className="input-tag-pf" type="text" id="input-des" 
+                        value={description}
                         onChange={(e) => {handleChange(); setDescription(e.target.value)}}/>
                     </div>
                 </div>
