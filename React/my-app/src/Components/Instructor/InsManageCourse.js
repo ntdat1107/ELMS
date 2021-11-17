@@ -7,7 +7,7 @@ import CourseForYouCpn from "../courseForYou/courseForYouCpn";
 import SideBar from '../SideBar/SideBar';
 import Header from '../Header/header'
 import cheems from "../img/cheems.png"
-import { listCourses } from "../../actions/courseActions";
+import { getMyCourses } from "../../actions/myCoursesAction";
 function InsManagerCourse ({history}) {
     const dispatch = useDispatch()
     // Check if logged in
@@ -18,11 +18,10 @@ function InsManagerCourse ({history}) {
         // else if (!userInfo.isIns) push error not type
     }, [history, userInfo])
 
-    const courseList = useSelector(state => state.courseList)
-    const { loading, error, courses } = courseList
-
+    const myCourses = useSelector(state => state.myCourses)
+    const { loading, error, myCoursesList } = myCourses
     useEffect(() => {
-        dispatch(listCourses())
+        dispatch(getMyCourses(userInfo._id))
     }, [dispatch])
 return (
     <div id="insMC-UI">
@@ -32,10 +31,10 @@ return (
         <div id="insMC">
             <Scrollbars>
                 {
-                    courses.map((data, index) => {
+                    myCoursesList && myCoursesList.map((data, index) => {
                         return (
                             <CourseForYouCpn key={index} imgSrcCourse={data.image}
-                            Name={data.name} Desc={data.description} Author={data.author} Type={data.typeCourse}
+                            Name={data.name} Desc={data.description} Author={data.authorName} Type={data.typeCourse}
                             rateScore={data.rateScore} totalRate={data.rateNum} linkName={`/ins/managecourse/${data.fastName}`}/>
                         )
                     })

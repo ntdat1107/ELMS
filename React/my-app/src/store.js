@@ -3,6 +3,7 @@ import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { courseDetailReducer, courseListReducer } from './Reducers/courseReducers'
 import { userLoginReducer, userProfileReducer, userRegisterReducer, userUpdateProfileReducer } from './Reducers/userReducers'
+import { myCoursesReducer } from './Reducers/myCoursesReducers'
 
 const reducer = combineReducers({
     courseList: courseListReducer,
@@ -10,7 +11,8 @@ const reducer = combineReducers({
     userLogin: userLoginReducer,
     userProfile: userProfileReducer,
     userRegister: userRegisterReducer,
-    userUpdateProfile: userUpdateProfileReducer
+    userUpdateProfile: userUpdateProfileReducer,
+    myCourses: myCoursesReducer
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo') 
