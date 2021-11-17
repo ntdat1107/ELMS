@@ -3,7 +3,7 @@
     margin-top: 150px;
     margin-left: 310px;
     padding: 5px 5px 5px 80px;
-    width: 1202px;
+    width: 1200px;
     height: 50px;
     border: 1px solid black;
     border-radius: 15px 15px 0px 0px;
@@ -11,7 +11,12 @@
     position: relative;
 }
 
-#searchNIC {
+#searchInstruc #searchNIC-label {
+    font-size: 18px;
+}
+
+#searchInstruc #searchNIC {
+    font-size: 18px;
     margin-top: 5px;
     margin-left: 10px;
     margin-right: 50px;
@@ -23,7 +28,7 @@
     padding-left: 15px;
 }
 
-#searchInsIcon {
+#searchInstruc #searchInsIcon {
     position: absolute;
     top: 13px;
     right: 20px;
@@ -72,28 +77,23 @@
 #tableinstruc div p {
     width: 200px;
     padding: 14px;
-    
 }
 
 #moreInfo {
     width: 200px;
     padding-top: 17px;
-    
 }
 #disqualify {
     width: 200px;
     padding-top: 10px;
-    
 }
 #delete {
     width: 200px;
     padding-top: 10px;
-    
 }
 #grantpms {
     width: 200px;
     padding-top: 10px;
-    
 }
 
 #moreIcon {
@@ -124,38 +124,36 @@
     width: 38px;
 }
 
-
 /*______________________________________________________*/
 .paginationBttns {
-  width: 100%;
-  height: 40px;
-  margin-top: 10px;
-  list-style: none;
-  display: flex;
-  justify-content: center;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
 }
 
 .paginationBttns a {
-  padding: 0px 3px 0px 3px;
-  margin-top: 20px;
-  margin: 2px;
-  border: 1px solid black;
-  color: black;
-  cursor: pointer;
+    padding: 0px 3px 0px 3px;
+    margin-top: 20px;
+    margin: 2px;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
 }
 
 .paginationBttns a:hover {
-  color: white;
-  background-color: #98C3BB;
+    color: white;
+    background-color: #98c3bb;
 }
 
 .paginationActive a {
-  color: white;
-  background-color: #98C3BB;
+    color: white;
+    background-color: #98c3bb;
 }
 
 .paginationDisabled a {
-  color: white;
-  background-color: #98C3BB;
+    color: white;
+    background-color: #98c3bb;
 }
-
