@@ -31,7 +31,7 @@ function BarGroup(props) {
     <rect id="rect2" x= {xMid-10} y={yMid+140}  height={height} width={30} fill={props.color} rx ="15" ry="15" />
     <text className="value-label" x={xMid+18-10} y={yMid+8+140} fill={props.color} alignmentBaseline="middle" >{props.d.value}</text>
   </g>
-  }
+}
 const colorOdd = "#F6BC00";
 const colorEven = "#FC6B57";
 class BarChart extends React.Component {
@@ -91,7 +91,8 @@ function InsDashboardUI ({history}) {
             idName="information" typeUserTemp={1}/>
             <div id="col1">
                 <About />
-                <Statistic learnerCount="500" videoCount="20" courseCount="6"/>
+                <Statistic learnerCount={500} videoCount="20" 
+                courseCount={userInfo? userInfo.hasCourse.length : 0}/>
                 <div id="WSH">
                     <BarChart />
                 </div>

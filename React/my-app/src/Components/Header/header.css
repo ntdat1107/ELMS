@@ -37,7 +37,8 @@
 }
 /* Arrow */
 #Header #arrow-btn {
-    right: 0px;
+    margin-left: 50px;
+    display: inline-block;
 }
 #Header #arrow img {
     margin-left: 20px;
@@ -68,6 +69,7 @@
     display: flex;
     border: 1px solid black;
     padding: 5px;
+    width: 375px;
 }
 #information #inform {
     margin-right: 10px;
@@ -85,6 +87,9 @@
 #information #linkName {
     text-decoration: none;
 }
+
+
+
 /* Bell Message */
 #Header #bellMessage {
     display: flex;
@@ -142,14 +147,6 @@
     white-space: 20px;
 }
 .nav-link:hover {
-    border-bottom: 4px solid #242222;
-    transition: all 0.2s ease-out;
-}
- .nav-link2:hover {
-    border-bottom: 4px solid #242222;
-    transition: all 0.2s ease-out;
-}
-.nav-link3:hover {
     border-bottom: 4px solid #242222;
     transition: all 0.2s ease-out;
 }
