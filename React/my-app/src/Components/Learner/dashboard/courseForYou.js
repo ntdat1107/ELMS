@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Scrollbars } from 'react-custom-scrollbars';
 import CourseForYouCpn from "../../courseForYou/courseForYouCpn";
 import { Link } from "react-router-dom"
-// import data from '../../courseForYou/data'
 import { listCourses } from "../../../actions/courseActions";
 function CourseForYou() {
     const dispatch = useDispatch()
