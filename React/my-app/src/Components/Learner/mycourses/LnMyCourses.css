@@ -180,13 +180,11 @@ margin-left:20px;
 background-color: #ffffff;
 width: 782px;
 height: 335px;
+position: relative;
 }
-#myCourses #colCourses1,#colCourses2,#colCourses3 {
+#myCourses #colCourses {
 display: inline-block;
-margin-bottom: 10px;
-margin-top: 10px;
-margin-left:10px;
-margin-right: 10px;
+margin: 10px;
 width: 240px;
 }
 #myCourses .itemCourse {
@@ -214,23 +212,20 @@ font-weight: bold;
 box-sizing: border-box;
 padding-left: 10px;
 width: 240px;
-height:40px;
-top: -30px;
+height:30px;
 position: relative;
 }
 #myCourses .itemCourse #authorCourse {
 box-sizing: border-box;
 width: 240px;
 padding-left: 10px;
-height: 30px;
-top: -30px;
+height: 20px;
 position: relative;
 }
 #myCourses .itemCourse .rateCourseMC {
 box-sizing: border-box;
 width: 240px;
-top: -30px;
-position: relative;
+
 }
 #myCourses .itemCourse {
 background-color: #fff;
@@ -239,15 +234,11 @@ box-sizing: border-box;
 #myCourses #progressBarBase {
 padding-left: 10px;
 margin-top: 5px;
-top: -50px;
-position: relative;
 }
 #myCourses #rateCourse-stateProgress {
 display:flex;
 padding-left: 10px;
 margin-bottom: 10px;
-top: -50px;
-position: relative;
 }
 #myCourses #rateCourse-stateProgress .start  #progressStart{
 width:100px;
@@ -261,12 +252,7 @@ display: none;
 #myCourses #rateCourse-stateProgress .started #progressStart {
 display: none;
 }
-#myCourses .rateCourseMC {
-width: 100px;
-}
-#myCourses #stateProgressMC {
-width: 100px;
-}
+
 /* Background Course */
 
 /* pagination */
@@ -317,8 +303,6 @@ display: none;
 }
 #myCourses .rateCourseMC #hadScore {
 padding-left: 50px;
-position: relative;
-top: 30px;
 }
 
 /* OpenMore */
@@ -341,33 +325,17 @@ top: 30px;
 #myCourses .nav-item p{
     margin-left: 20px;
 }
-#myCourses #colCourses1 .nav-menu.active {
+#myCourses #colCourses .nav-menu.active {
     display:block;
     background: white;
     opacity: 1;
     transition: all 0.5s ease;
-    margin-top: -130px;
+    margin-top: -163px;
     z-index: 1;
-    margin-left: 41px;
+    margin-left: 0px;
+    box-shadow: 1px 3px 3px grey;
 }
-#myCourses #colCourses2 .nav-menu.active {
-    display:block;
-    background: white;
-    opacity: 1;
-    transition: all 0.5s ease;
-    margin-top: -130px;
-    z-index: 1;
-    margin-left: 301px;
-}
-#myCourses #colCourses3 .nav-menu.active {
-    display:block;
-    background: white;
-    opacity: 1;
-    transition: all 0.5s ease;
-    margin-top: -130px;
-    z-index: 1;
-    margin-left: 561px;
-}
+
 /* OpenRate */
 #myCourses .nav-menu-rate {
     display: none;
@@ -375,37 +343,16 @@ top: 30px;
     height: 275px;
     position: absolute;
 }
-#myCourses #colCourses1 .nav-menu-rate.active {
+#myCourses #colCourses .nav-menu-rate.active {
     display:flex;
     opacity: 1;
     background-color: #fff;
     transition: all 0.5s ease;
-    margin-top: -230px;
+    top: 30px;
     z-index: 1;
-    margin-left: -40px;
+    left: 150px;
     box-shadow: 2px 5px 5px grey;
 }
-#myCourses #colCourses2 .nav-menu-rate.active {
-    display:flex;
-    opacity: 1;
-    background-color: #fff;
-    transition: all 0.5s ease;
-    margin-top: -230px;
-    z-index: 1;
-    margin-left: -300px;
-    box-shadow: 2px 5px 5px grey;
-}
-#myCourses #colCourses3 .nav-menu-rate.active {
-    display:flex;
-    opacity: 1;
-    background-color: #fff;
-    transition: all 0.5s ease;
-    margin-top: -230px;
-    z-index: 1;
-    margin-left: -560px;
-    box-shadow: 2px 5px 5px grey;
-}
-
 
 /* Scroll Bar */
 #myCourses #scrollbars {

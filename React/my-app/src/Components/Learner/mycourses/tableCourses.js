@@ -12,59 +12,11 @@ function TableCourse() {
 
   const bigCourses = courses
     .slice(pagesVisited, pagesVisited + coursesPerPage)
-  const smallCourses = [];
-  for(let i = 0; i + 3 <= bigCourses.length; i = i + 3)
-  {
-    var temp = bigCourses.slice(i,i + 3);
-    smallCourses.push(temp);
-  }
-  console.log(smallCourses);
+
   
-  const bigDisplay1 = smallCourses[0].map((course,index) => {
+  const display = bigCourses.map((course,index) => {
     return (
-      <div id={"colCourses" + (index + 1)}>
-        <ItemCourse 
-            imgCourse={course.imgCourse}
-            nameCourse={course.nameCourse}
-            authorCourse={course.authorCourse}
-            progressScore = {course.progressScore}
-            scoreRate={course.scoreRate}
-            imgRate={course.imgRate}
-        />
-      </div>
-    );
-  });
-  const bigDisplay2 = smallCourses[1].map((course,index) => {
-    return (
-      <div id={"colCourses" + (index + 1)}>
-        <ItemCourse 
-            imgCourse={course.imgCourse}
-            nameCourse={course.nameCourse}
-            authorCourse={course.authorCourse}
-            progressScore = {course.progressScore}
-            scoreRate={course.scoreRate}
-            imgRate={course.imgRate}
-        />
-      </div>
-    );
-  });
-  const bigDisplay3 = smallCourses[2].map((course,index) => {
-    return (
-      <div id={"colCourses" + (index + 1)}>
-        <ItemCourse 
-            imgCourse={course.imgCourse}
-            nameCourse={course.nameCourse}
-            authorCourse={course.authorCourse}
-            progressScore = {course.progressScore}
-            scoreRate={course.scoreRate}
-            imgRate={course.imgRate}
-        />
-      </div>
-    );
-  });
-  const bigDisplay4 = smallCourses[3].map((course,index) => {
-    return (
-      <div id={"colCourses" + (index + 1)}>
+      <div id="colCourses" key={index}>
         <ItemCourse 
             imgCourse={course.imgCourse}
             nameCourse={course.nameCourse}
@@ -87,10 +39,7 @@ function TableCourse() {
   return (
       <div id="tableCourses">
           <Scrollbars id="scrollbars">
-          {bigDisplay1}
-          {bigDisplay2}
-          {bigDisplay3}
-          {bigDisplay4}
+          {display}
           </Scrollbars>
           <ReactPaginate
               previousLabel={"Prev"}
