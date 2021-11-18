@@ -8,12 +8,8 @@ import "./TableManage.css";
 
 function TableManage({ heightSB, listLearner }) {
     const users = listLearner;
-    const [pageNumber, setPageNumber] = useState(0);
 
-    const usersPerPage = 20;
-    const pagesVisited = pageNumber * usersPerPage;
-
-    const displayUsers = users.slice(pagesVisited, pagesVisited + usersPerPage).map((user) => {
+    const displayUsers = users.map((user) => {
         return (
             <div className="tablecpn">
                 <div>
@@ -29,13 +25,6 @@ function TableManage({ heightSB, listLearner }) {
             </div>
         );
     });
-
-    const pageCount = Math.ceil(users.length / usersPerPage);
-
-    const changePage = ({ selected }) => {
-        setPageNumber(selected);
-    };
-
     return (
         <div id="tableinstruc">
             <div id="titletable">
@@ -46,19 +35,7 @@ function TableManage({ heightSB, listLearner }) {
                 <p className="tt-moreIcon">More Infromation</p>
                 <p className="tt-delIcon">Delete</p>
             </div>
-            <Scrollbars style={{ width: "100%", height: 345 }}>{displayUsers}</Scrollbars>
-
-            <ReactPaginate
-                previousLabel={"Prev"}
-                nextLabel={"Next"}
-                pageCount={pageCount}
-                onPageChange={changePage}
-                containerClassName={"paginationBttns"}
-                previousLinkClassName={"previousBttn"}
-                nextLinkClassName={"nextBttn"}
-                disabledClassName={"paginationDisabled"}
-                activeClassName={"paginationActive"}
-            />
+            <Scrollbars style={{ width: "100%", height: 400 }}>{displayUsers}</Scrollbars>
         </div>
     );
 }

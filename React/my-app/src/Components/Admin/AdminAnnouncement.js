@@ -1,4 +1,6 @@
 import React from "react";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import ListAnnounceCpn from "../ListAnnounceCpn/ListAnnounceCpn";
 import NewAnnoun from "../ListAnnounceCpn/NewAnnoun";
 import SideBar from "../SideBar/SideBar";
@@ -6,7 +8,12 @@ import cheems from "../img/cheems.png";
 import Header from "../Header/header";
 import AnnounData from "./FakedataforAnnoun";
 
-function AdminAnnounce() {
+function AdminAnnounce({ history }) {
+    const userLogin = useSelector((state) => state.userLogin);
+    const { userInfo } = userLogin;
+    useEffect(() => {
+        if (!userInfo || userInfo.isIns) history.push("/login");
+    }, [history, userInfo]);
     return (
         <div id="adminannounce-UI">
             <div className="AdminUI">

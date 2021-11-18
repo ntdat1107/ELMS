@@ -18,21 +18,20 @@
 #table-learner #row-1 #courseContent {
     width: 70%;
 }
-#table-learner #row-1 #courseContent #Name{
+#table-learner #row-1 #courseContent #Name {
     font-size: 18px;
 }
-#table-learner #row-1 #courseContent #Desc{
+#table-learner #row-1 #courseContent #Desc {
     font-size: 14px;
 }
-#table-learner #row-1 #courseContent #Author{
+#table-learner #row-1 #courseContent #Author {
     font-size: 14px;
 }
 
-
-
-#table-learner #row-2 #searchTable{
+#table-learner #row-2 #searchTable {
     margin-top: 10px;
     margin-left: 280px;
+    padding-left: 40px;
 }
 #table-learner #row-2 #tableinstruc {
     margin-left: 280px;
@@ -40,5 +39,5 @@
     height: 380px;
 }
 #table-learner #row-2 label {
-    font-size: 24px;
+    font-size: 18px;
 }
