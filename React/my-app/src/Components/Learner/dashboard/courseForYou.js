@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Scrollbars } from 'react-custom-scrollbars';
 import CourseForYouCpn from "../../courseForYou/courseForYouCpn";
 import { Link } from "react-router-dom"
-// import data from '../../courseForYou/data'
 import { listCourses } from "../../../actions/courseActions";
 function CourseForYou() {
     const dispatch = useDispatch()
@@ -16,7 +15,7 @@ function CourseForYou() {
     const display = courses.map((data, index) => {
         return(
             <CourseForYouCpn key={index} imgSrcCourse={data.image}
-            Name={data.name} Desc={data.description} Author={data.author} Type={data.typeCourse}
+            Name={data.name} Desc={data.description} Author={data.authorName} Type={data.typeCourse}
             rateScore={data.rateScore} totalRate={data.rateNum} linkName={`/ins/managecourse/${data.fastName}`}/>
         )
     });

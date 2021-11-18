@@ -2,18 +2,14 @@ import mongoose from "mongoose";
 
 const announcementSchema = mongoose.Schema(
     {
+        conversationId: {
+            type: String,
+            required: true,
+        },
         sender: {
             type: mongoose.Schema.Types.ObjectId,
             required: true,
-            ref: "User",
         },
-        receiver: [
-            {
-                type: mongoose.Schema.Types.ObjectId,
-                required: true,
-                ref: "User",
-            },
-        ],
         subject: {
             type: String,
             required: true,

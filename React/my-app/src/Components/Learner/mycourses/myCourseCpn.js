@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import DropList from "./dropListCourse"
 import "./LnMyCourses.css"
 import searchIconMC from "../img/icon/searchMC.png"
@@ -14,9 +13,7 @@ function ListMC() {
                 <div id="archived"><p>Archived</p></div>
                         <div>
                         <input id="Input" type="text" name="SearchBarMC" placeholder="Search my course"></input>
-                        <Link className="Link-coursename" to="/learner/search/">
-                            <img src={searchIconMC} alt="SearchIconImage" id="searchIcon" />
-                        </Link>
+                        <img src={searchIconMC} alt="SearchIconImage" id="searchIcon" />
                         </div>
             </div>
             <div id="labelSortFilter">
