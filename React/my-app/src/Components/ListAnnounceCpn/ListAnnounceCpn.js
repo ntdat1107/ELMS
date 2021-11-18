@@ -1,9 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import searchImg from "../img/search.png";
 import { Scrollbars } from "react-custom-scrollbars";
 import "./ListAnnouncement.css";
+import { useDispatch, useSelector } from "react-redux";
+import { getUserProfile } from "../../actions/userActions";
+import axios from "axios";
 
-function ListAnnounceCpn({ Addition_Part, FakeData }) {
+function ListAnnounceCpn({ history, Addition_Part, FakeData }) {
+    /* ___________________________________________ */
+    const dispatch = useDispatch();
+    const userProfile = useSelector((state) => state.userProfile);
+    const { userDetail } = userProfile;
+    useEffect(() => {
+        if (!userDetail) {
+            dispatch(getUserProfile("profile"));
+        }
+    }, [dispatch, history, userDetail]);
+    console.log(userDetail && userDetail._id);
+    /* ___________________________________________ */
+
+    /* _____________________________________________ */
+    const [conversations, setConversations] = useState([]);
+    useEffect(() => {
+        const getConversations = async () => {
+            try {
+                const res = await axios.get("/api/conversations/" + (userDetail && userDetail._id));
+                console.log(res);
+            } catch (err) {
+                console.log(err);
+            }
+        };
+        getConversations();
+    }, [userDetail && userDetail._id]);
+    /* _____________________________________________ */
+
     const users = FakeData.slice(0, 50);
     const [click, setClick] = useState(1);
 

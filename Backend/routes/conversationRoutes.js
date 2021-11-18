@@ -9,10 +9,13 @@ const router = express.Router();
 router.post(
     "/",
     asyncHandler(async (req, res) => {
+        const { subject, content, stt } = req.body;
         const newConversation = new Conversation({
             members: [req.body.senderId, req.body.receiverId],
+            subject,
+            content,
+            stt,
         });
-
         try {
             const savedConversation = await newConversation.save();
             res.status(200).json(savedConversation);
