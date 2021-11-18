@@ -35,7 +35,7 @@ function App() {
           <Route exact path='/ins/managecourse' component={InsManagerCourse}></Route>
           <Route exact path='/ins/managecourse/:id' component={InnerCourse}></Route>
           <Route exact path='/ins/announcement' component={InsAnnouncement}></Route>
-          <Route exact path='/ins/managecourse/manage_my_learners' component={TableOfLearner}></Route>
+          <Route exact path='/ins/managecourse/:fastName/manage_my_learners' component={TableOfLearner}></Route>
           <Route exact path='/login' component={Login}></Route>
           <Route exact path='/signup' component={Signup}></Route>
           <Route exact path='/forgotpass' component={ForgotPass}></Route>

@@ -1,29 +1,30 @@
-import React from "react";
+import React, {useEffect} from "react";
 import SearchInstruc from "./SearchInstruc";
-import TableLearner from "./TableLearner";
 import SideBar from "../SideBar/SideBar";
-import cheems from "../img/cheems.png";
 import Header from "../Header/header";
+import TableManage from "../TableManage/TableManage";
+import { useSelector, useDispatch } from 'react-redux'
+import { getSysLearner } from "../../actions/adminActions";
+
 
 function AdminLearner() {
+    const dispatch = useDispatch()
+    const sysLearner = useSelector(state => state.sysLearner)
+    const { loading, error, sysLearnerList } = sysLearner
+
+    useEffect(() => {
+        dispatch(getSysLearner())
+    }, [dispatch])
+
     return (
         <div id="adminlearner-UI">
             <div className="AdminUI">
                 <SideBar typeUserTemp={0} />
-                <Header
-                    linkAvt="/admin/dashboard"
-                    link="/admin/dashboard"
-                    srcImg={cheems}
-                    name="Mai Đức Long"
-                    gmail="maiduclong@gmail.com"
-                    type="Admin"
-                    idName="informationInstructor"
-                    typeUserTemp={0}
-                />
+                <Header />
             </div>
             <div id="adminlearner">
                 <SearchInstruc />
-                <TableLearner />
+                <TableManage listLearner={sysLearnerList} />
             </div>
         </div>
     );

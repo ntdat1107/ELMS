@@ -1,29 +1,29 @@
-import React from "react";
+import React, {useEffect} from "react";
 import SearchInstruc from "./SearchInstruc";
-import TableInstruc from "./TableInstruc";
 import SideBar from "../SideBar/SideBar";
-import cheems from "../img/cheems.png";
 import Header from "../Header/header";
+import TableManage from "../TableManage/TableManage";
+import { useSelector, useDispatch } from 'react-redux'
+import { getSysIns } from "../../actions/adminActions";
 
 function AdminInstruc() {
+    const dispatch = useDispatch()
+    const sysIns = useSelector(state => state.sysIns)
+    const { loading, error, sysInsList } = sysIns
+
+    useEffect(() => {
+        dispatch(getSysIns())
+    }, [dispatch])
+
     return (
         <div id="admininstruc-UI">
             <div className="AdminUI">
                 <SideBar typeUserTemp={0} />
-                <Header
-                    linkAvt="/admin/dashboard"
-                    link="/admin/dashboard"
-                    srcImg={cheems}
-                    name="Mai Đức Long"
-                    gmail="maiduclong@gmail.com"
-                    type="Admin"
-                    idName="informationInstructor"
-                    typeUserTemp={0}
-                />
+                <Header />
             </div>
             <div id="admininstruc">
                 <SearchInstruc />
-                <TableInstruc />
+                <TableManage listLearner={sysInsList} />
             </div>
         </div>
     );

@@ -8,7 +8,8 @@ function SearchInTable({
     return (
         <div id="searchTable">
             <label>Name</label>:<input id="searchNIC" type="text" name="Name:" placeholder="Enter name ..."></input>
-            <label>ID</label>:<input id="searchNIC" type="text" name="ID:" placeholder="Enter ID ..."></input>
+            <label>Username</label>:<input id="searchNIC" type="text" name="userName:" placeholder="Enter user name ..."></input>
+            <label>Email</label>:<input id="searchNIC" type="text" name="email:" placeholder="Enter email ..."></input>
             {   typeUserTemp != 1 &&
                 <div> <label>Course</label>:<input id="searchNIC" type="text" name="Course:" 
                 placeholder="Enter course ..."></input>

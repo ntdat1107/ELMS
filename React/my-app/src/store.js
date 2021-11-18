@@ -4,6 +4,8 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import { courseDetailReducer, courseListReducer } from './Reducers/courseReducers'
 import { userLoginReducer, userProfileReducer, userRegisterReducer, userUpdateProfileReducer } from './Reducers/userReducers'
 import { myCoursesReducer } from './Reducers/myCoursesReducers'
+import { myLearnerReducer } from './Reducers/myLearnerReducers'
+import { sysInsReducer, sysLearnerReducer } from './Reducers/adminReducers'
 
 const reducer = combineReducers({
     courseList: courseListReducer,
@@ -12,7 +14,10 @@ const reducer = combineReducers({
     userProfile: userProfileReducer,
     userRegister: userRegisterReducer,
     userUpdateProfile: userUpdateProfileReducer,
-    myCourses: myCoursesReducer
+    myCourses: myCoursesReducer,
+    myLearner: myLearnerReducer,
+    sysLearner: sysLearnerReducer,
+    sysIns: sysInsReducer
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo') 

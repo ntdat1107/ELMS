@@ -28,10 +28,11 @@ const getUserCourses = asyncHandler(async(req, res) => {
 
 const getLearners = asyncHandler(async(req, res) => {
     const listLearners = await User.find({isLearner: true})
+    const courseNow = await Course.findOne({fastName: req.params.fastName})
     if (listLearners) {
         let ans = []
         for (let i=0; i<listLearners.length; i++) {
-            if (listLearners[i].hasCourse.indexOf(req.params.id) !== -1) ans.push(listLearners[i])
+            if (listLearners[i].hasCourse.indexOf(courseNow._id) !== -1) ans.push(listLearners[i])
         }
         res.json(ans)
     }

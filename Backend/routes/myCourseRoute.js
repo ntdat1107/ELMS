@@ -6,6 +6,6 @@ const router = express.Router()
 
 router.route('/:id').get(getUserCourses)
 
-router.route('/learners/:id').get(getLearners)
+router.route('/learners/:fastName').get(getLearners)
 
 export default router

@@ -39,14 +39,14 @@ function CourseSection({
     )
 }
 
-function OtherAction() {
+function OtherAction({manageCourseLink}) {
     return (
         <div id="other-action">
             <div id="head">
                 <div id="action-title">Other actions</div>
             </div>
             <div id="action-list">
-                <Link className="link-action" to={"/ins/managecourse/manage_my_learners"}>
+                <Link className="link-action" to={manageCourseLink}>
                     <div id="first-act">
                         <img className="imgAction" src={manageLearner} alt="learnerImg" height="50px" width="50px" />
                         <p className="text-action">Manage learner</p>
@@ -83,15 +83,20 @@ function InnerCourse({ match, history }) {
     useEffect(() => {
         dispatch(detailCourse(match.params.id))
     }, [dispatch])
-    console.log(course)
-    return (
+    if ( userInfo && course && course.name && userInfo.hasCourse.indexOf(course._id) == -1) {
+        return (
+            <div id="err">
+                ERROR
+            </div>
+        )
+    }
+    else return (
         <div id="inner-course-UI">
             <SideBar typeUserTemp={1}/>
-            <Header linkAvt="/ins/manageprofile" link="/ins/dashboard" srcImg={cheems} name="Ngọ Tiến Đạt" gmail="tiendat_2001vn@gmail.com" type="Instructor"
-        idName="information" typeUserTemp={1}/>
+            <Header />
             <div id="inner-course">
             <div id="row-1">
-                { course.name &&
+                { course && course.name &&
                 <CourseForYouCpn 
                     imgSrcCourse = {course.image} 
                     Name = {course.name}
@@ -114,7 +119,7 @@ function InnerCourse({ match, history }) {
                     </Scrollbars>
                 </div>
                 <div id="col-2">
-                    <OtherAction />
+                    <OtherAction manageCourseLink={`/ins/managecourse/${course.fastName}/manage_my_learners`}/>
                     <MyCourse titleName="My other course" heightSize="45px" widthSize="45px" />
                 </div>
             </div>

@@ -12,6 +12,10 @@ import learner from "../img/manageLnHover.png";
 import { Scrollbars } from "react-custom-scrollbars";
 
 function CourseCpninad({ id, imgSrcCourse, altCourse, Name, Desc, Author, Type, rateScore, imgStar, totalRate, tagColor, callback = () => {} }) {
+
+
+    
+
     const [click, setClick] = useState(false);
     const [click2, setClick2] = useState(false);
     const [click3, setClick3] = useState(false);

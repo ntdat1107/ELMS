@@ -1,13 +1,15 @@
 import React from 'react'
 
 function DetailCpn({
-    ID,
+    userName,
+    email,
     FN,
     LN,
 }) {
     return (
         <div id="detailCpn">
-            <p id="ID">{ID}</p>
+            <p id="userName">{userName}</p>
+            <p id="email">{email}</p>
             <p id="FN">{FN}</p>
             <p id="LN">{LN}</p>
         </div>

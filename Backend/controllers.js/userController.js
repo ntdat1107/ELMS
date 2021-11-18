@@ -17,6 +17,7 @@ const authUser = asyncHandler(async(req, res) => {
             isAdmin: user.isAdmin,
             isLearner: user.isLearner,
             isIns: user.isIns,
+            hasCourse: user.hasCourse,
             token: generateToken(user._id)
         })
     }
@@ -63,38 +64,38 @@ const updateUserProfile = asyncHandler(async(req, res) => {
     const user = await User.findById(req.user._id)
 
     if (user) {
-            user.firstName = req.body.firstName || user.firstName
-            user.lastName = req.body.lastName || user.lastName
-            user.email = req.body.email || user.email
-            user.avatar = req.body.avatar || user.avatar
-            user.city = req.body.city || user.city
-            user.country = req.body.country || user.country
-            user.description = req.body.description || user.description
-            user.sex = req.body.sex || user.sex
-            user.phoneNumber = req.body.phoneNumber || user.phoneNumber
-            user.birthDay = req.body.birthDay || user.birthDay
-            if (req.body.password) {
-                user.password = req.body.password
-            }
-
-            const updateUser = await user.save()
-
-            res.json({
-                _id: updateUser._id,
-                firstName: updateUser.firstName,
-                lastName: updateUser.lastName,
-                accountID: updateUser.accountID,
-                email: updateUser.email,
-                avatar: updateUser.avatar,
-                city: updateUser.city,
-                country: updateUser.country,
-                description: updateUser.description,
-                sex: updateUser.sex,
-                phoneNumber: updateUser.phoneNumber,
-                birthDay: updateUser.birthDay,
-                token: generateToken(updateUser.password)
-            })
+        user.firstName = req.body.firstName || user.firstName
+        user.lastName = req.body.lastName || user.lastName
+        user.email = req.body.email || user.email
+        user.avatar = req.body.avatar || user.avatar
+        user.city = req.body.city || user.city
+        user.country = req.body.country || user.country
+        user.description = req.body.description || user.description
+        user.sex = req.body.sex || user.sex
+        user.phoneNumber = req.body.phoneNumber || user.phoneNumber
+        user.birthDay = req.body.birthDay || user.birthDay
+        if (req.body.password) {
+            user.password = req.body.password
         }
+
+        const updateUser = await user.save()
+
+        res.json({
+            _id: updateUser._id,
+            firstName: updateUser.firstName,
+            lastName: updateUser.lastName,
+            accountID: updateUser.accountID,
+            email: updateUser.email,
+            avatar: updateUser.avatar,
+            city: updateUser.city,
+            country: updateUser.country,
+            description: updateUser.description,
+            sex: updateUser.sex,
+            phoneNumber: updateUser.phoneNumber,
+            birthDay: updateUser.birthDay,
+            token: generateToken(updateUser.password)
+        })
+    }
     else {
         res.status(401)
         throw new Error('User not found')
@@ -148,4 +149,40 @@ const registerUser = asyncHandler(async(req, res) => {
     }
 })
 
-export { authUser, getUserProfile, updateUserProfile, registerUser }
+const getAllUserList = asyncHandler(async(req, res) => {
+    const allUserList = await User.find({})
+    if (allUserList) {
+        res.json(allUserList)
+    }
+    else {
+        res.status(401)
+        throw new Error('User not found')
+    }
+})
+const getLearnerUserList = asyncHandler(async(req, res) => {
+    const allLearnerList = await User.find({isLearner: true})
+    if (allLearnerList) {
+        res.json(allLearnerList)
+    }
+    else {
+        res.status(401)
+        throw new Error('User not found')
+    }
+})
+const getInsUserList = asyncHandler(async(req, res) => {
+    const allInsList = await User.find({isIns: true})
+    if (allInsList) {
+        res.json(allInsList)
+    }
+    else {
+        res.status(401)
+        throw new Error('User not found')
+    }
+})
+
+
+
+export { 
+    authUser, getUserProfile, updateUserProfile, registerUser,
+    getAllUserList, getLearnerUserList, getInsUserList
+}
