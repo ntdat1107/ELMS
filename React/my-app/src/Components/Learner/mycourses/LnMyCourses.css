@@ -1,4 +1,4 @@
-#myCourses {
+#lnMyCourses #myCourses {
 background-image: url("../img/background/mc_bg.png");
 width: 1170px;
 height: 570px;
@@ -7,11 +7,11 @@ margin-top: 140px;
 margin-left: 325px;
 }
 /* Dropbar */
-#myCourses #DropdownBar{
+#lnMyCourses #myCourses #DropdownBar{
 position: relative;
 padding-left: 10px;
 }
-#myCourses .dd-wrapper .dd-header-title{
+#lnMyCourses #myCourses .dd-wrapper .dd-header-title{
 margin:2px 10px;
 margin-right:20px;
 font-weight:bold;
@@ -20,7 +20,7 @@ html {
 font-family: 'Nunito Sans', sans-serif;
 font-size: 8px;
 }
-#myCourses .Dropdowns {
+#lnMyCourses #myCourses .Dropdowns {
 display: -webkit-box;
 display: -ms-flexbox;
 display: flex;
@@ -34,83 +34,71 @@ display: flex;
 margin:10px;
 }
 
-#myCourses .dd-wrapper{
+#lnMyCourses #myCourses .dd-wrapper{
 width: 180px;
 height: 30px;
 font-size: 12px;
 }
 
 
-#myCourses .Dropdowns h3:nth-of-type(2) {
+#lnMyCourses #myCourses .Dropdowns h3:nth-of-type(2) {
 margin-top: 50px;
 }
-#myCourses .Dropdowns p {
+#lnMyCourses #myCourses .Dropdowns p {
 margin-bottom: 50px;
 font-size: 2.4rem;
 }
 
-#myCourses #DropdownBar {
+#lnMyCourses #myCourses #DropdownBar {
 display: flex;
 }
-#myCourses .dd-wrapper .dd-header span {
+#lnMyCourses #myCourses .dd-wrapper .dd-header span {
 display: flex;
 margin-right: 10px;
 }
-#myCourses .dd-wrapper .dd-header {
+#lnMyCourses #myCourses .dd-wrapper .dd-header {
 display: flex;
 height: 30px;
 }
 
-#myCourses .dd-wrapper .dd-list .dd-scroll-list {
+#lnMyCourses #myCourses .dd-wrapper .dd-list .dd-scroll-list {
 overflow-y:hidden;
 max-height:215px;
 padding:15px 0;
 }
-#myCourses .dd-wrapper .dd-list .dd-scroll-list .dd-list-item:hover{
+#lnMyCourses #myCourses .dd-wrapper .dd-list .dd-scroll-list .dd-list-item:hover{
 background-color:#1E5C5F;
 color:white
 }
-#myCourses #DropdownBar #sortBy p{
+#lnMyCourses #myCourses #DropdownBar #sortBy p{
 font-size: 10px;
 }
-#myCourses .dd-wrapper .dd-header{
+#lnMyCourses #myCourses .dd-wrapper .dd-header{
 display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;
 align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;
 position:relative;border:1px solid #dfdfdf;border-radius:3px;background-color:white;line-height:38px;cursor:default;cursor:pointer;
 color: #1E5C5F;
 }
 /* TitleMC */
-#myCourses .titleMC {
+#lnMyCourses #myCourses .titleMC {
 color: #fff;
 font-weight: bold;
 position: relative;
 padding-top: 15px;
 margin-left: 20px;
 }
-#myCourses .titleMC p{
+#lnMyCourses #myCourses .titleMC p{
 font-size: 40px;
 }
 /* Type Course */
-#myCourses #typeCourse {
+#lnMyCourses #myCourses #typeCourse {
 display: flex;
 margin-left: 20px;
 margin-top: 15px;
 height: 30px;
 }
-/* Search Bar MC */
-#myCourses  #Input {
-font-size: 12px;
-margin-left: 240px;
-height: 30px;
-width: 380px;
-}
-#myCourses #searchIcon {
-position: absolute;
-margin-top: 5px;
-margin-left: -30px;
-cursor: pointer;
-}
-#myCourses #typeCourse #allCourses {
+
+#lnMyCourses #myCourses #typeCourse #allCourses {
 background-color: #316668;
 color: #fff;
 font-size: 12px;
@@ -119,10 +107,10 @@ border-bottom: 4px solid #fff;
 width: 80px;
 text-align: center;
 }
-#myCourses #typeCourse #allCourses p {
+#lnMyCourses #myCourses #typeCourse #allCourses p {
 padding: 5px 0px;
 }
-#myCourses #typeCourse #archived {
+#lnMyCourses #myCourses #typeCourse #archived {
 background-color: #316668;
 color: #fff;
 font-size: 12px;
@@ -130,31 +118,31 @@ font-weight: bold;
 width: 80px;
 text-align: center;
 }
-#myCourses #typeCourse #archived p {
+#lnMyCourses #myCourses #typeCourse #archived p {
 padding: 5px 0px;
 }
 /* Label Sort Filter */
-#myCourses #labelSortFilter{
+#lnMyCourses #myCourses #labelSortFilter{
 display: flex;
 }
-#myCourses #sort, #filter {
+#lnMyCourses #myCourses #sort, #filter {
 color: white;
 font-size: 12px;
 font-weight: bold;
 width: 80px;
 text-align: left;
 }
-#myCourses #sort {
+#lnMyCourses #myCourses #sort {
 margin-left:20px;
 }
-#myCourses #filter {
+#lnMyCourses #myCourses #filter {
 margin-left: 120px;
 }
-#myCourses #labelSortFilter {
+#lnMyCourses #myCourses #labelSortFilter {
 margin-top: 10px;
 }
 /* Filter Bar */
-#myCourses #buttonReset {
+#lnMyCourses #myCourses #buttonReset {
 color: white;
 font-size: 12px;
 font-weight: bold;
@@ -163,11 +151,11 @@ text-align: left;
 margin-left: 10px;
 height: 50px;
 }
-#myCourses #buttonReset p{
+#lnMyCourses #myCourses #buttonReset p{
 height: 50px;
 margin-top: 16px;
 }
-#myCourses #filterBar {
+#lnMyCourses #myCourses #filterBar {
 display: flex;
 }
 /* List Course */
@@ -175,38 +163,38 @@ display: flex;
     text-decoration: none;
     color: #000;
 }
-#myCourses #tableCourses {
+#lnMyCourses #myCourses #tableCourses {
 margin-left:20px;
 background-color: #ffffff;
 width: 782px;
 height: 335px;
 position: relative;
 }
-#myCourses #colCourses {
+#lnMyCourses #myCourses #colCourses {
 display: inline-block;
 margin: 10px;
 width: 240px;
 }
-#myCourses .itemCourse {
+#lnMyCourses #myCourses .itemCourse {
 margin-right:15px;
 width: 240px;
 height: 240px;
 border: 1px solid #000;
 box-sizing: border-box;
 }
-#myCourses .itemCourse #bgCourse {
+#lnMyCourses #myCourses .itemCourse #bgCourse {
 width: 238px;
 box-sizing: border-box;
 height: 120px;
 }
-#myCourses .itemCourse #more {
+#lnMyCourses #myCourses .itemCourse #more {
 position: relative;
 top: -130px;
 left:200px;
 width: 32.4px;
 }
 
-#myCourses .itemCourse #nameCourse {
+#lnMyCourses #myCourses .itemCourse #nameCourse {
 font-size: 12px;
 font-weight: bold;
 box-sizing: border-box;
@@ -215,48 +203,48 @@ width: 240px;
 height:30px;
 position: relative;
 }
-#myCourses .itemCourse #authorCourse {
+#lnMyCourses #myCourses .itemCourse #authorCourse {
 box-sizing: border-box;
 width: 240px;
 padding-left: 10px;
 height: 20px;
 position: relative;
 }
-#myCourses .itemCourse .rateCourseMC {
+#lnMyCourses #myCourses .itemCourse .rateCourseMC {
 box-sizing: border-box;
 width: 240px;
 
 }
-#myCourses .itemCourse {
+#lnMyCourses #myCourses .itemCourse {
 background-color: #fff;
 box-sizing: border-box;
 }
-#myCourses #progressBarBase {
+#lnMyCourses #myCourses #progressBarBase {
 padding-left: 10px;
 margin-top: 5px;
 }
-#myCourses #rateCourse-stateProgress {
+#lnMyCourses #myCourses #rateCourse-stateProgress {
 display:flex;
 padding-left: 10px;
 margin-bottom: 10px;
 }
-#myCourses #rateCourse-stateProgress .start  #progressStart{
+#lnMyCourses #myCourses #rateCourse-stateProgress .start  #progressStart{
 width:100px;
 }
-#myCourses #rateCourse-stateProgress .started #progressStarted{
+#lnMyCourses #myCourses #rateCourse-stateProgress .started #progressStarted{
 width:100px;
 }
-#myCourses #rateCourse-stateProgress .start #progressStarted {
+#lnMyCourses #myCourses #rateCourse-stateProgress .start #progressStarted {
 display: none;
 }
-#myCourses #rateCourse-stateProgress .started #progressStart {
+#lnMyCourses #myCourses #rateCourse-stateProgress .started #progressStart {
 display: none;
 }
 
 /* Background Course */
 
 /* pagination */
-#myCourses .paginationBttns {
+#lnMyCourses #myCourses .paginationBttns {
 width: 100%;
 height: 40px;
 list-style: none;
@@ -266,16 +254,16 @@ margin-top: 10px;
 font-size: 14px;
 }
 
-#myCourses .paginationBttns .previousBttn {
+#lnMyCourses #myCourses .paginationBttns .previousBttn {
     -webkit-border-radius: 10px 0px 0px 10px;
     border-radius: 10px 0px 0px 10px;
 }
-#myCourses .paginationBttns .nextBttn {
+#lnMyCourses #myCourses .paginationBttns .nextBttn {
     -webkit-border-radius: 0px 10px 10px 0px;
     border-radius: 0px 10px 10px 0px;
 }
 
-#myCourses .paginationBttns a {
+#lnMyCourses #myCourses .paginationBttns a {
 padding:3px 5px 3px 5px;
 border: 1px solid black;
 color: black;
@@ -283,30 +271,30 @@ cursor: pointer;
 }
 
 
-#myCourses .paginationBttns a:hover {
+#lnMyCourses #myCourses .paginationBttns a:hover {
 color: white;
 background-color: #1E5C5F;
 }
 
-#myCourses .paginationActive a {
+#lnMyCourses #myCourses .paginationActive a {
 color: white;
 background-color: #1E5C5F;
 }
 
-#myCourses .paginationDisabled a {
+#lnMyCourses #myCourses .paginationDisabled a {
 color: white;
 background-color: #1E5C5F;
 }
 /* Rate Score Course */
-#myCourses .rateCourseMC #notScore {
+#lnMyCourses #myCourses .rateCourseMC #notScore {
 display: none;
 }
-#myCourses .rateCourseMC #hadScore {
+#lnMyCourses #myCourses .rateCourseMC #hadScore {
 padding-left: 50px;
 }
 
 /* OpenMore */
-#myCourses .nav-menu {
+#lnMyCourses #myCourses .nav-menu {
     display: none;
     flex-direction: column;
     width: 200px;
@@ -315,17 +303,17 @@ padding-left: 50px;
     border:1px solid #c4c4c4;
 }
 
-#myCourses .nav-item {
+#lnMyCourses #myCourses .nav-item {
     height: 30px;
     font-size: 14px;
     display: flex;
     margin-top: 20px;
     margin-left: 20px;
 }
-#myCourses .nav-item p{
+#lnMyCourses #myCourses .nav-item p{
     margin-left: 20px;
 }
-#myCourses #colCourses .nav-menu.active {
+#lnMyCourses #myCourses #colCourses .nav-menu.active {
     display:block;
     background: white;
     opacity: 1;
@@ -337,13 +325,13 @@ padding-left: 50px;
 }
 
 /* OpenRate */
-#myCourses .nav-menu-rate {
+#lnMyCourses #myCourses .nav-menu-rate {
     display: none;
     width: 500px;
     height: 275px;
     position: absolute;
 }
-#myCourses #colCourses .nav-menu-rate.active {
+#lnMyCourses #myCourses #colCourses .nav-menu-rate.active {
     display:flex;
     opacity: 1;
     background-color: #fff;
@@ -355,8 +343,31 @@ padding-left: 50px;
 }
 
 /* Scroll Bar */
-#myCourses #scrollbars {
+#lnMyCourses #myCourses #scrollbars {
     height: 335px;
     width: 782px;
     display: flex;
+}
+/* Search Box */ 
+#lnMyCourses #myCourses .searchMyCourse{
+    margin-left: 210px;
+}
+#lnMyCourses #myCourses .searchMyCourse #btn-1{
+    width: 350px;
+    height: 30px;
+    border-radius: 15px 0px 0px 15px;
+    font-size: 12px;
+    border: 1px solid black;
+    color: black;
+    padding-left: 10px;
+}
+#lnMyCourses #myCourses .searchMyCourse #btn-2{
+    height: 30px;
+    width: 50px;
+    border-radius: 0px 15px 15px 0px;
+    font-size: 12px;
+    border: 1px solid black;
+    background-color: #316668;
+    color:#fff;
+    cursor: pointer;
 }

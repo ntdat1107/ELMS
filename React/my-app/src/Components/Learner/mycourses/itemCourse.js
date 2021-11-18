@@ -44,7 +44,7 @@ function OpenMore() {
         </div>
     )
 }
-function OpenRate({imgCourse, nameCourse, authorCourse, progressScore, rateScore}) {
+function OpenRate({imgCourse, nameCourse, authorCourse, rateScore}) {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click);
     const closeMenuRate = () => setClick(false);
@@ -71,7 +71,6 @@ function OpenRate({imgCourse, nameCourse, authorCourse, progressScore, rateScore
                     imgCourse = {imgCourse} 
                     nameCourse = {nameCourse} 
                     authorCourse = {authorCourse}
-                    progressScore = {progressScore}
                     rateScore = {rateScore}
                 /></div>
                 <div><img src={deleteIcon} alt="Delete Icon" onClick={closeMenuRate} style={{cursor: 'pointer', height: '20px', width: '20px'}} /></div>
@@ -83,7 +82,6 @@ function OpenRate({imgCourse, nameCourse, authorCourse, progressScore, rateScore
 function ItemCourse({
     nameCourse,
     authorCourse,
-    progressScore,
     imgCourse,
     rateScore,
     callback = () => {}
@@ -102,30 +100,15 @@ function ItemCourse({
             <div id="authorCourse">
                 <p>{authorCourse} </p>
             </div>
-            <svg id="progressBarBase" width="230" height="10">
-                <rect width="230" height="10" fill="#c4c4c4" />
-                <rect width={progressScore * 230 / 100} height="10" fill="#05611E" />
-            </svg>
-            <div id="rateCourse-stateProgress">
-                <div className={progressScore === 0 ? "start" : "started"}>
-                        <div id="progressStarted">
-                            <p>{progressScore + "% COMPLETE"}</p>
-                        </div>
-                        <div id="progressStart">
-                            <p>START COURSE</p>
-                        </div>
-                </div>
-                <div className="rateCourseMC">
-                    <div id = {rateScore == 0 ? "notScore" : "hadScore"}>
-                        <OpenRate 
-                            imgCourse = {imgCourse} 
-                            nameCourse = {nameCourse} 
-                            authorCourse = {authorCourse}
-                            progressScore = {progressScore}
-                            rateScore = {rateScore}
-                        />
-                        <p style={{cursor: "pointer"}}>Your rating</p>
-                    </div>
+            <div className="rateCourseMC">
+                <div id = {rateScore == 0 ? "notScore" : "hadScore"}>
+                    <OpenRate 
+                        imgCourse = {imgCourse} 
+                        nameCourse = {nameCourse} 
+                        authorCourse = {authorCourse}
+                        rateScore = {rateScore}
+                    />
+                    <p style={{cursor: "pointer"}}>Your rating</p>
                 </div>
             </div>
         </div>
