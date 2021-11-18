@@ -12,7 +12,7 @@ import Signup from './Components/Login/SignUp';
 import ForgotPass from './Components/Login/ForgotPass';
 import Policy from './Components/Login/Policy';
 import SearchGuestUI from './Components/Guest/SearchGuest';
-import CourseMainPage, { LearnerCourseMainPage } from './Components/Guest/CourseMainPage';
+import CourseMainPage from './Components/Guest/CourseMainPage';
 import LnDashboard from './Components/Learner/dashboard/dashboard';
 import RegisterInsUI from './Components/Learner/registerIns/registerToIns';
 import LnMyCourses from './Components/Learner/mycourses/myCourses';
@@ -42,7 +42,7 @@ function App() {
           <Route exact path='/forgotpass' component={ForgotPass}></Route>
           <Route exact path='/policy' component={Policy}></Route>
           <Route exact path='/search' component={SearchGuestUI}></Route>
-          <Route exact path='/course/DADA' component={CourseMainPage}></Route>
+          <Route exact path='/course/:id' component={CourseMainPage}></Route>
           <Route exact path='/learner/dashboard' component={LnDashboard}></Route>
           <Route exact path='/learner/mycourses' component={LnMyCourses}></Route>
           <Route exact path='/learner/announcements' component={LnAnnouncements}></Route>
@@ -52,7 +52,6 @@ function App() {
           <Route exact path='/admin/managelearner' component={AdminLearner}></Route>
           <Route exact path='/admin/managecourse' component={AdminCourse}></Route>
           <Route exact path='/admin/announcement' component={AdminAnnounce}></Route>
-          <Route exact path='/course_DADA' component={LearnerCourseMainPage}></Route>
           <Route exact path="/course/1234/" component={CourseView} ></Route>
           <Route exact path="/learner/search/" component={SearchLearnerUI} ></Route>
           <Route exact path="/learner/registerIns" component={RegisterInsUI} ></Route>
