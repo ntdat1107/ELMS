@@ -62,7 +62,7 @@ function Login({history}) {
                             <div className="btn-box">
                                     <button type="submit" className="toggle-btn1">Log in</button>
                                 <Link to='/signup'>
-                                    <button type="submit" className="toggle-btn2">Sign up</button>
+                                    <button type="button" className="toggle-btn2">Sign up</button>
                                 </Link>
                             </div>
                         </form>
