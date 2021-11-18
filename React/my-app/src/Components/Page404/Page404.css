@@ -1,0 +1,15 @@
+.Cases-404{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-size: 20px;
+
+
+}
+
+.header404{
+    margin-right: 2%;
+    font-size: 40px;
+}
