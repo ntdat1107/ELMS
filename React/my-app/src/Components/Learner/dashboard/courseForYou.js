@@ -16,7 +16,7 @@ function CourseForYou() {
         return(
             <CourseForYouCpn key={index} imgSrcCourse={data.image}
             Name={data.name} Desc={data.description} Author={data.authorName} Type={data.typeCourse}
-            rateScore={data.rateScore} totalRate={data.rateNum} linkName={`/ins/managecourse/${data.fastName}`}/>
+            rateScore={data.rateScore} totalRate={data.rateNum} linkName={`/course/${data.fastName}`}/>
         )
     });
     return (

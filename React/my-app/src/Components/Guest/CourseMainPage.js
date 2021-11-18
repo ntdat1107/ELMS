@@ -1,19 +1,19 @@
-import React            from "react";
+import React, { useEffect, useState} from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import Header           from '../Header/header';
 import {CourseBoard}      from "./Explorer";
-import Scrollbars from "react-custom-scrollbars";
-import imgStar          from "../Learner/img/rateStar/star4_5.png"
-
+import Scrollbars from "react-custom-scrollbars"
 import './CSS/HomePage.css'
 import "./CSS/CourseMainPage.css"
 
 import cPython   from "./imgs/coursePython.png"
 import cCpp  from "./imgs/courseCpp.png"
-import DADA from "./imgs/courseDADAimg.png"
 
-import avt from "../img/cheems.png"
 
 import { NavLink } from "react-router-dom";
+
+import { detailCourse } from '../../actions/courseActions';
+
 
 const courses = {
     "name": "Similar Courses",
@@ -32,21 +32,6 @@ const courses = {
         "imgSrc": cPython
     }
 ]};
-const styleBC = {
-    backgroundColor: "#F8D92E",
-    color: "#4B0C0C"
-};
-const courseDADA = {
-    "name": "Defense against Dark arts",
-    "description": "Learn how to defend  against all aspects of the Dark Arts, including dark creatures, curses, hexes, jinxes and duelling",
-    "instructor": "Dolores Umbridge",
-    "imgSrc" : DADA,
-    "tagColor" : styleBC,
-    "type" : "Best Course",
-    "rateScore" : "4.5",
-    "totalRate" : "(1,562)"
-
-};
 
 function UpperBody({course}) { 
     return(
@@ -54,16 +39,15 @@ function UpperBody({course}) {
             <div id = "informationBox">
                 <h1>{course.name}</h1>
                 <p>{course.description}</p>
-                <h2>{course.instructor}</h2>
+                <h2>{course.authorName}</h2>
                 <div id="rate">
                     <p id="score">{course.rateScore} </p>
-                    <img src= {imgStar} alt="star"/>
-                    <div id = "numRate"><p>{course.totalRate}</p></div>
+                    <div id = "numRate"><p>{course.rateNum}</p></div>
                 </div>
                 
             </div>
             <div id = "imageBox">
-                <img src = {course.imgSrc} alt="img"/>
+                <img src = {course.image} alt="img" style = {{width: "350px", height: "180px", borderRadius: "5px"}}/>
                 <button id = "enrollButton" style={{height: "50px"}}>
                     <h3>
                         Enroll course
@@ -75,122 +59,54 @@ function UpperBody({course}) {
     )
 }
 
-function CourseMainPage() {
+
+function CourseMainPageTest({ match, history }) {
+    const dispatch = useDispatch()
+    const userLogin = useSelector(state => state.userLogin)
+    const {userInfo} = userLogin
+    // useEffect(() => {
+    //     if (!userInfo) history.push('/login')
+    //     // else if (!userInfo.isIns) push error not type
+    // }, [history, userInfo])
+
+
+    const courseDetail = useSelector(state => state.courseDetail)
+    const { loading, error, course } = courseDetail
+
+    useEffect(() => {
+        dispatch(detailCourse(match.params.id))
+    }, [dispatch])
+
+    console.log(course)
+
     return (
         <div id="courseMainPage">
             <Header link="/" typeUserTemp={-1} />
             <div id = "bodyPage">
                 <BackButton url = "/"/>
-                <UpperBody course = {courseDADA}/>
-                <LowerBody/>
-            </div>
-        </div>
-    )
-}
-
-function LearnerCourseMainPage() {
-    return (
-        <div id="learnerCourseMainPage">
-            <Header 
-                linkAvt="/learner/manageprofile" 
-                link="/learner/dashboard" 
-                srcImg={avt} 
-                name="Lâm Thành Dương" 
-                gmail="lamduong11201@gmail.com" 
-                type="Learner"
-                idName="information"
-                typeUserTemp={2}
-            />
-            <div id = "bodyPage">
-                <BackButton url = "/learner/dashboard"/>
-                <UpperBody course = {courseDADA}/>
-                <LowerBody/>
+                <UpperBody course = {course}/>
+                <LowerBody course = {course}/>
             </div>
         </div>
     )
 }
 
 
-function LowerBody() {
+function LowerBody({course}) {
     return (
         <div id = "lowerBody1">
             <div id = "infoBox">
                 <Scrollbars style={{ width: 940, height: 280 }} id = "contentList">
                     <div id = "contentItem">
                         <h2>
-                            What we'll learn:
+                            Overview
                         </h2>
-                        <ul>
-                            <li>
-                                <h3>Array</h3>
-                            </li>
-                            <li>
-                                <h3>Loop</h3>
-                            </li>
-                            <li>
-                                <h3>String</h3>
-                            </li>
-                            <li>
-                                <h3>Function</h3>
-                            </li>
-                            <li>
-                                <h3>Recursive</h3>
-                            </li>
-                            <li>
-                                <h3>Hexes</h3>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id = "contentItem">
-                        <h2>
-                            What we'll learn:
-                        </h2>
-                        <ul>
-                            <li>
-                                <h3>Array</h3>
-                            </li>
-                            <li>
-                                <h3>Loop</h3>
-                            </li>
-                            <li>
-                                <h3>String</h3>
-                            </li>
-                            <li>
-                                <h3>Function</h3>
-                            </li>
-                            <li>
-                                <h3>Recursive</h3>
-                            </li>
-                            <li>
-                                <h3>Hexes</h3>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id = "contentItem">
-                        <h2>
-                            What we'll learn:
-                        </h2>
-                        <ul>
-                            <li>
-                                <h3>Array</h3>
-                            </li>
-                            <li>
-                                <h3>Loop</h3>
-                            </li>
-                            <li>
-                                <h3>String</h3>
-                            </li>
-                            <li>
-                                <h3>Function</h3>
-                            </li>
-                            <li>
-                                <h3>Recursive</h3>
-                            </li>
-                            <li>
-                                <h3>Hexes</h3>
-                            </li>
-                        </ul>
-                    </div>
+                        <p>
+                            {course.name}
+                            {course.authorName}
+                            {/* {course.overview} */}
+                        </p>
+                    </div>  
                 </Scrollbars>
             </div>
             <div>
@@ -215,5 +131,5 @@ function BackButton({url}) {
     )
 }
 
-export {BackButton, LearnerCourseMainPage};
-export default CourseMainPage;
+export {BackButton};
+export default CourseMainPageTest;
