@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUserProfile } from "../../actions/userActions";
 import axios from "axios";
 
-function ListAnnounceCpn({ history, Addition_Part, FakeData }) {
-    /* ___________________________________________ */
+function ListAnnounceCpn({ history, Addition_Part }) {
+    /* _____________Current User_____________ */
     const dispatch = useDispatch();
     const userProfile = useSelector((state) => state.userProfile);
     const { userDetail } = userProfile;
@@ -16,16 +16,13 @@ function ListAnnounceCpn({ history, Addition_Part, FakeData }) {
             dispatch(getUserProfile("profile"));
         }
     }, [dispatch, history, userDetail]);
-    console.log(userDetail && userDetail._id);
-    /* ___________________________________________ */
 
-    /* _____________________________________________ */
     const [conversations, setConversations] = useState([]);
     useEffect(() => {
         const getConversations = async () => {
             try {
                 const res = await axios.get("/api/conversations/" + (userDetail && userDetail._id));
-                console.log(res);
+                setConversations(res.data);
             } catch (err) {
                 console.log(err);
             }
@@ -34,7 +31,6 @@ function ListAnnounceCpn({ history, Addition_Part, FakeData }) {
     }, [userDetail && userDetail._id]);
     /* _____________________________________________ */
 
-    const users = FakeData.slice(0, 50);
     const [click, setClick] = useState(1);
 
     function parentClick(e) {
@@ -65,20 +61,20 @@ function ListAnnounceCpn({ history, Addition_Part, FakeData }) {
 
                 <div id="sublistAnnoun">
                     <Scrollbars>
-                        {users.map((user) => {
+                        {conversations.map((conversation) => {
                             return (
-                                <button className="Announcpn" id={user.stt} onClick={parentClick}>
+                                <button className="Announcpn" id={conversation.stt} onClick={parentClick}>
                                     <p className="receiver" onClick={handleClick}>
-                                        To: {user.receiver}
+                                        To: {conversation.receiver}
                                     </p>
                                     <p className="subject" onClick={handleClick}>
-                                        Subject: {user.subject}
+                                        Subject: {conversation.subject}
                                     </p>
                                     <p className="content" onClick={handleClick}>
-                                        {user.content}
+                                        {conversation.content}
                                     </p>
                                     <p className="time" onClick={handleClick}>
-                                        {user.time}
+                                        {conversation.time}
                                     </p>
                                 </button>
                             );
@@ -88,17 +84,17 @@ function ListAnnounceCpn({ history, Addition_Part, FakeData }) {
             </div>
 
             <div id="content-block">
-                {users.map((user) => {
+                {conversations.map((conversation) => {
                     return (
-                        <div id={user.stt} className={click == user.stt ? "choose active" : "choose"}>
+                        <div id={conversation.stt} className={click == conversation.stt ? "choose active" : "choose"}>
                             <div id="sender-receiver">
-                                <p>From: {user.sender}</p>
-                                <p>To: {user.receiver}</p>
+                                <p>From: {conversation.sender}</p>
+                                <p>To: {conversation.receiver}</p>
                             </div>
                             <div id="inside-content-block">
-                                <p id="subject-inside">{user.subject}</p>
-                                <p id="content-inside">{user.content}</p>
-                                <p id="time-inside">{user.time}</p>
+                                <p id="subject-inside">{conversation.subject}</p>
+                                <p id="content-inside">{conversation.content}</p>
+                                <p id="time-inside">{conversation.time}</p>
                             </div>
                         </div>
                     );

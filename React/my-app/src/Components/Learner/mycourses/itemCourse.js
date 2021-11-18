@@ -13,7 +13,7 @@ function OpenMore() {
     const closeMobileMenu = () => setClick(false);
     
     return (        
-        <div className="more-btn">            
+        <div className="more-btn" style={{position: 'absolute'}}>            
             <div id="more" onClick={handleClick}>
                 <img style={{cursor: 'pointer'}} src={moreImg} alt="MoreImage" className="moreImg" id={click? "moreClose" : "moreOpen"}/>
             </div>            

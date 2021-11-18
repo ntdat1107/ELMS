@@ -9,7 +9,7 @@ const CourseItem = course => (
         
             <img src = {course.imgSrc} alt ={course.title}/>
             <div id = "informationSB" >
-                <NavLink to="/course/DADA" activeClassName="ActiveLink" id = "navLink">
+                <NavLink to="/course/git" activeClassName="InactiveLink" id = "navLink">
                     <h3 id = "courseName">{course.title}</h3>
                     <h3 id = "courseIns">{course.subtitle}</h3>
                 </NavLink>
