@@ -44,9 +44,11 @@ function RateContent({
     else if (rateScoreCpn > 4 && rateScoreCpn < 5) star = star45
     else if (rateScoreCpn === 5) star = star5
     // Choose Style
-    if (TypeCpn.toUpperCase() === "Hot".toUpperCase()) styleType = styleH
-    else if (TypeCpn.toUpperCase() === "Best course".toUpperCase()) styleType = styleBC
-    else if (TypeCpn.toUpperCase() === "New".toUpperCase()) styleType = styleN
+    if (TypeCpn) {
+        if (TypeCpn.toUpperCase() === "Hot".toUpperCase()) styleType = styleH
+        else if (TypeCpn.toUpperCase() === "Best course".toUpperCase()) styleType = styleBC
+        else if (TypeCpn.toUpperCase() === "New".toUpperCase()) styleType = styleN
+    }
     return (
         <div id="rateContent">
             <div id="p1" style={styleType}><p>{TypeCpn}</p></div>

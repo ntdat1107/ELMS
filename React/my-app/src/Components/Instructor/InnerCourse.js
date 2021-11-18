@@ -83,7 +83,6 @@ function InnerCourse({ match, history }) {
     useEffect(() => {
         dispatch(detailCourse(match.params.id))
     }, [dispatch])
-
     console.log(course)
     return (
         <div id="inner-course-UI">
@@ -97,7 +96,7 @@ function InnerCourse({ match, history }) {
                     imgSrcCourse = {course.image} 
                     Name = {course.name}
                     Desc = {course.description}
-                    Author = {course.author}
+                    Author = {course.authorName}
                     Type = {course.typeCourse}
                     rateScore = {course.rateScore}
                     totalRate = {course.rateNum}

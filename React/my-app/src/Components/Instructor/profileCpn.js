@@ -40,7 +40,7 @@ function ProfileCpn({
             setLastName(userDetail.lastName)
             setFirstName(userDetail.firstName)
             setEmail(userDetail.email)
-            setBirthDay(userDetail.birthDay[10] == 'T' ? userDetail.birthDay.split('T')[0] : null)
+            setBirthDay(userDetail.birthDay ? userDetail.birthDay.split('T')[0] : null)
             setAvatar(userDetail.avatar)
             setSex(userDetail.sex)
             setCoutry(userDetail.country)
