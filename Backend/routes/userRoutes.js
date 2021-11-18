@@ -1,5 +1,5 @@
 import express from "express";
-import { authUser, getAllUserList, getInsUserList, getLearnerUserList, getUserProfile, registerUser, updateUserProfile } from "../controllers.js/userController.js";
+import { authUser, getAllUserList, getInsUserList, getLearnerUserList, getUserByID, getUserProfile, registerUser, updateUserProfile } from "../controllers.js/userController.js";
 import { protect } from "../middleware/authMiddleware.js";
 
 const router = express.Router()
@@ -11,5 +11,6 @@ router.route('/profile').get(protect, getUserProfile).put(protect, updateUserPro
 router.route('/all').get(getAllUserList)
 router.route('/learner').get(getLearnerUserList)
 router.route('/ins').get(getInsUserList)
+router.route('/getby/:id').get(getUserByID)
 
 export default router
