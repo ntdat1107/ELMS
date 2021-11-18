@@ -14,15 +14,27 @@ function InsManagerCourse ({history}) {
     const {userInfo} = userLogin
     useEffect(() => {
         if (!userInfo || !userInfo.isIns) history.push('/login')
-        // else if (!userInfo.isIns) push error not type
     }, [history, userInfo])
 
     const myCourses = useSelector(state => state.myCourses)
     const { loading, error, myCoursesList } = myCourses
     useEffect(() => {
-        dispatch(getMyCourses(userInfo._id))
+        dispatch(getMyCourses())
     }, [dispatch])
-return (
+    console.log(error)
+    if (loading) {
+        return (
+            <h1>Loading</h1>
+        )
+    }
+    else if (error) {
+        return (
+            <div id="err">
+                <h1>ERROR</h1>
+            </div>
+        )
+    }
+    else return (
     <div id="insMC-UI">
         <SideBar typeUserTemp={1}/>
         <Header />

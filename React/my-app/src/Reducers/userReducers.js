@@ -25,7 +25,7 @@ export const userRegisterReducer = (state = {}, action) => {
         case USER_REGISTER_REQUEST:
             return { loading: true}
         case USER_REGISTER_SUCCESS:
-            return { loading: false, userInfo: action.payload }
+            return { loading: false, userRegInfo: action.payload }
         case USER_REGISTER_FAIL:
             return { loading: false, error: action.payload}
         case USER_LOGOUT:
@@ -69,10 +69,10 @@ export const userUpdateProfileReducer = (state = { }, action) => {
 
 
 
-export const userDetailByIDReducer = (state = { }, action) => {
+export const userDetailByIDReducer = (state = { userInfoByID: {} }, action) => {
     switch (action.type) {
         case GET_USER_REQUEST:
-            return { loading: true }
+            return { loading: true, userInfoByID: {}}
         case GET_USER_SUCCESS:
             return { loading: false, userInfoByID: action.payload}
         case GET_USER_FAIL:

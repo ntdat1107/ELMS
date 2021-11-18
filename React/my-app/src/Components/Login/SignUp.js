@@ -25,15 +25,26 @@ function Signup({history}) {
     }
     
     const dispatch = useDispatch()
-    const userRegister = useSelector(state => state.userRegister)
-
-    const { userInfo } = userRegister
+    const userLogin = useSelector(state => state.userLogin)
+    const { loading, error, userInfo } = userLogin
 
     useEffect(() => {
         if (userInfo) {
-            history.push('/')
+            if (userInfo.isLearner) history.push('/learner/dashboard')
+            else if (userInfo.isIns) history.push('/ins/dashboard')
+            else if (userInfo.isAdmin) history.push('/admin/dashboard')
         }
     }, [history, userInfo])
+
+    const userRegister = useSelector(state => state.userRegister)
+
+    const { userRegInfo } = userRegister
+
+    useEffect(() => {
+        if (userRegInfo) {
+            history.push('/')
+        }
+    }, [history, userRegInfo, dispatch])
 
     const submitHandler = (e) => {
         e.preventDefault()
@@ -58,7 +69,7 @@ function Signup({history}) {
                     </div>
                     <h3 id="Signupwelcome">Create account</h3>
 
-                    <form className="Signupform" onSubmit={submitHandler}>
+                    <form className="Signupform">
 
                         <div id = "name">
                             <input className="Signupinp" id="nameinp1" type="text" 
@@ -104,8 +115,7 @@ function Signup({history}) {
                             Privacy Policy
                         </Link>
                     </div>
-                    
-                    <button type="submit" className="Signuptoggle-btn1">Sign up</button>
+                    <button type="submit" className="Signuptoggle-btn1" onClick={submitHandler}>Sign up</button>
                     <label id="direct-to-login-label" for="direct-to-login">Have an Account?</label>
                     <Link to='/login'>
                         <button type="submit" id="direct-to-login">Login</button>

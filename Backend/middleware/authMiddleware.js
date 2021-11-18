@@ -27,4 +27,22 @@ const protect = asyncHandler(async (req, res, next) => {
     }
 })
 
-export { protect }
+
+const checkIns = asyncHandler(async (req, res, next) => {
+    if (req.user && req.user.isIns) {
+        const course = await Course.findOne({fastName: req.params.fastName})
+        if (req.user.hasCourse.indexOf(course._id) !== -1) {
+            next()
+        }
+        else {
+            res.status(401)
+            throw new Error('This course is not existed or you are not author')
+        }
+    }
+    else {
+        res.status(401)
+        throw new Error('Not authorized as an instructor')
+    }
+})
+
+export { protect, checkIns }

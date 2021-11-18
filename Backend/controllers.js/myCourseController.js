@@ -7,14 +7,13 @@ import User from '../models/userModel.js'
 //@dest     Fetch all courses of user
 //@route    GET /api/mycourses/:id
 const getUserCourses = asyncHandler(async(req, res) => {
-    const userNow = await User.findById(req.params.id)
+    const userNow = req.user
     if (userNow) {
         if (userNow.hasCourse.length == 0) res.json([])
         else {
             let arr = []
             for (let i=0; i<userNow.hasCourse.length; i++) {
-                let courseTemp = await Course.findById(userNow.hasCourse[i])
-                arr.push(courseTemp)
+                arr.push(await Course.findById(userNow.hasCourse[i]))
             }
             res.json(arr)
         }
@@ -82,4 +81,15 @@ const createNewCourse = asyncHandler(async(req, res) => {
     }
 })
 
-export { getUserCourses, getLearners, createNewCourse }
+const getMyCourse = asyncHandler(async(req, res) => {
+    const course = await Course.findOne({fastName: req.params.fastName})
+    if (course) {
+        res.json(course)
+    }
+    else {
+        res.status(404)
+        throw new Error('Course not found')
+    }
+})
+
+export { getUserCourses, getLearners, createNewCourse, getMyCourse }
