@@ -7,6 +7,7 @@ import { userDetailByIDReducer, userLoginReducer, userProfileReducer,
 import { addCourseReducer, myCoursesReducer } from './Reducers/myCoursesReducers'
 import { myLearnerReducer } from './Reducers/myLearnerReducers'
 import { sysInsReducer, sysLearnerReducer } from './Reducers/adminReducers'
+import { useDispatch, useSelector } from 'react-redux'
 
 const reducer = combineReducers({
     courseList: courseListReducer,

@@ -5,7 +5,6 @@ import Statistic from "./Statistic";
 import MyCourse from "./MyCourse";
 import SideBarInstructor from '../SideBar/SideBar';
 import Header from '../Header/header'
-import cheems from "../img/cheems.png"
 import {Link} from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserProfile } from "../../actions/userActions";
@@ -82,7 +81,7 @@ function InsDashboardUI ({history}) {
     const userLogin = useSelector(state => state.userLogin)
     const {userInfo} = userLogin
     useEffect(() => {
-        if (!userInfo) history.push('/login')
+        if (!userInfo || !userInfo.isIns) history.push('/login')
         // else if (!userInfo.isIns) push error not type
     }, [history, userInfo])
 
@@ -96,9 +95,7 @@ function InsDashboardUI ({history}) {
     return (
         <div id="insdb">
             <SideBarInstructor typeUserTemp={1}/>
-            <Header linkAvt="/ins/manageprofile" link="/ins/dashboard" srcImg={cheems} name="Ngọ Tiến Đạt" 
-            gmail="tiendat_2001vn@gmail.com" type="Instructor"
-            idName="information" typeUserTemp={1}/>
+            <Header />
             <div id="col1">
                 <About />
                 <Statistic learnerCount={500} videoCount="20" 

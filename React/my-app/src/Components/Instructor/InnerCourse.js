@@ -5,14 +5,12 @@ import './CSS/InnerCourse.css'
 import Scrollbars from 'react-custom-scrollbars';
 import MyCourse from './MyCourse'
 import Header from '../Header/header'
-import cheems from "../img/cheems.png"
 import SideBar from '../SideBar/SideBar';
 import plus from './imgSrc/plus.png'
 import deleteImg from './imgSrc/delete.png'
 import {Link} from "react-router-dom"
 import manageLearner from './imgSrc/manageLearner.png'
 import notifyImg from './imgSrc/notify.png'
-import axios from 'axios';
 import { detailCourse } from '../../actions/courseActions';
 
 
@@ -72,7 +70,7 @@ function InnerCourse({ match, history }) {
     const userLogin = useSelector(state => state.userLogin)
     const {userInfo} = userLogin
     useEffect(() => {
-        if (!userInfo) history.push('/login')
+        if (!userInfo || !userInfo.isIns) history.push('/login')
         // else if (!userInfo.isIns) push error not type
     }, [history, userInfo])
 

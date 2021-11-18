@@ -15,7 +15,7 @@ function TableOfLearner({history, match}) {
     const userLogin = useSelector(state => state.userLogin)
     const {userInfo} = userLogin
     useEffect(() => {
-        if (!userInfo) history.push('/login')
+        if (!userInfo || !userInfo.isIns) history.push('/login')
         // else if (!userInfo.isIns) push error not type
     }, [history, userInfo])
 

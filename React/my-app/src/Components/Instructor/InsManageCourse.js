@@ -6,7 +6,6 @@ import "./CSS/InsManagerCourse.css"
 import CourseForYouCpn from "../courseForYou/courseForYouCpn";
 import SideBar from '../SideBar/SideBar';
 import Header from '../Header/header'
-import cheems from "../img/cheems.png"
 import { getMyCourses } from "../../actions/myCoursesAction";
 function InsManagerCourse ({history}) {
     const dispatch = useDispatch()
@@ -14,7 +13,7 @@ function InsManagerCourse ({history}) {
     const userLogin = useSelector(state => state.userLogin)
     const {userInfo} = userLogin
     useEffect(() => {
-        if (!userInfo) history.push('/login')
+        if (!userInfo || !userInfo.isIns) history.push('/login')
         // else if (!userInfo.isIns) push error not type
     }, [history, userInfo])
 
@@ -26,8 +25,7 @@ function InsManagerCourse ({history}) {
 return (
     <div id="insMC-UI">
         <SideBar typeUserTemp={1}/>
-        <Header linkAvt="/ins/manageprofile" link="/ins/dashboard" srcImg={cheems} name="Ngọ Tiến Đạt" gmail="tiendat_2001vn@gmail.com" type="Instructor"
-        idName="information" typeUserTemp={1}/>
+        <Header />
         <div id="insMC">
             <Scrollbars>
                 {

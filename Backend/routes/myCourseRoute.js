@@ -1,5 +1,4 @@
 import express from "express";
-import { getCourse, getCourseByFastname } from "../controllers.js/courseController.js";
 import { createNewCourse, getLearners, getUserCourses } from "../controllers.js/myCourseController.js";
 const router = express.Router()
 
