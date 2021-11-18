@@ -2,9 +2,18 @@ import mongoose from "mongoose";
 
 const ConversationSchema = new mongoose.Schema(
     {
-        members: {
-            type: Array,
+        sender: {
+            type: mongoose.Schema.Types.ObjectId,
+            required: true,
+            ref: "User",
         },
+        receivers: [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+                required: true,
+                ref: "User",
+            },
+        ],
         subject: {
             type: String,
             required: true,

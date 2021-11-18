@@ -34,6 +34,8 @@ class TextEditor extends Component {
 }
 
 function NewAnnoun({ typeUserTemp }) {
+    const arr = document.getElementsByTagName("input");
+
     const [click, setClick] = useState(false);
     const OpenNewAnnoun = () => setClick(true);
     const CloseNewAnnounBox = () => setClick(false);
@@ -50,13 +52,10 @@ function NewAnnoun({ typeUserTemp }) {
                         {typeUserTemp != 1 && (
                             <div id="tick-box-top">
                                 <div id="tick-box-top-inside">
-                                    <input name="tick-box" type="radio" value="All Course" /> All Course
+                                    <input name="tick-box" type="checkbox" value="All Instructor" /> All Instructors
                                 </div>
                                 <div id="tick-box-top-inside">
-                                    <input name="tick-box" type="radio" value="All Instructor" /> All Instructor
-                                </div>
-                                <div id="tick-box-top-inside">
-                                    <input name="tick-box" type="radio" value="All Learner" /> All Learner
+                                    <input name="tick-box" type="checkbox" value="All Learner" /> All Learners
                                 </div>
                             </div>
                         )}
@@ -67,12 +66,6 @@ function NewAnnoun({ typeUserTemp }) {
                                 </div>
                             </div>
                         )}
-                        <div id="tick-box-bottom">
-                            <div id="hihaho">
-                                <input name="tick-box" type="radio" value="Send to" /> Send to:{" "}
-                            </div>
-                            <input id="input-receiver" name="input-receiver" type="text" placeholder="Enter Receiver..." />
-                        </div>
                     </form>
                     <div className="text-editor">
                         <TextEditor />
