@@ -24,12 +24,11 @@ const SearchBox= ({ history }) => {
     }
 
     return(
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} className="searchMyCourse">
         <label>
-          Name:
-          <input type="text" name='q' onChange={(e)=> setKeyword(e.target.value)} placeholder='Search my courses' />
+          <input id="btn-1" type="text" name='q' onChange={(e)=> setKeyword(e.target.value)} placeholder='Search my courses'/>
         </label>
-        <input type="submit" value="Submit" />
+        <input id="btn-2" type="submit" value="Search" />
       </form>
     )
 }
