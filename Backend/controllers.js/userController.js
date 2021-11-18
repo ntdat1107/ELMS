@@ -1,4 +1,5 @@
 import asyncHandler from 'express-async-handler'
+import Course from '../models/courseModel.js'
 import User from '../models/userModel.js'
 import generateToken from '../utils/generateToken.js'
 
@@ -62,7 +63,6 @@ const getUserProfile = asyncHandler(async(req, res) => {
 // @access  Private
 const updateUserProfile = asyncHandler(async(req, res) => {
     const user = await User.findById(req.user._id)
-
     if (user) {
         user.firstName = req.body.firstName || user.firstName
         user.lastName = req.body.lastName || user.lastName
@@ -77,8 +77,16 @@ const updateUserProfile = asyncHandler(async(req, res) => {
         if (req.body.password) {
             user.password = req.body.password
         }
-
         const updateUser = await user.save()
+
+        if (user.isIns) {
+            const listCourses = user.hasCourse
+            for (let i=0; i<listCourses.length; i++) {
+                const course = await Course.findById(listCourses[i])
+                course.authorName = user.lastName
+                await course.save()
+            }
+        }
 
         res.json({
             _id: updateUser._id,

@@ -42,5 +42,41 @@ const getLearners = asyncHandler(async(req, res) => {
     }
 })
 
+const createNewCourse = asyncHandler(async(req, res) => {
+    const { userID, name, image, category, description, fastName } = req.body
 
-export { getUserCourses, getLearners }
+    const courseExists = await Course.findOne({ fastName })
+    const userAuthor = await User.findById( userID )
+    const admin = await User.findOne({ isAdmin: true })
+    if ( courseExists ) {
+        res.status(400)
+        throw new Error('Pathname already exists')
+    }
+    const course = await Course.create({
+        authorName: userAuthor.lastName,
+        name,
+        image,
+        category,
+        description,
+        fastName,
+        userAdmin: admin._id 
+    })
+    if (course) {
+        userAuthor.hasCourse.push(course._id)
+        res.status(201).json({
+            _id: course._id,
+            name: course.name,
+            category: course.category,
+            description: course.description,
+            fastName: course.fastName,
+            rateScore: course.rateScore,
+            rateNum: course.rateNum
+        })
+    }
+    else {
+        res.status(400)
+        throw new Error('Invalid course data')
+    }
+})
+
+export { getUserCourses, getLearners, createNewCourse }

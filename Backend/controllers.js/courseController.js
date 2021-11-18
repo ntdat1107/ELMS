@@ -1,5 +1,6 @@
 import asyncHandler from 'express-async-handler'
 import Course from '../models/courseModel.js'
+import User from '../models/userModel.js'
 
 
 
@@ -25,6 +26,7 @@ const getCourseByFastname = asyncHandler(async (req, res) => {
         throw new Error('Course not found!!')
     }
 })
+
 
 export {
     getCourse,
