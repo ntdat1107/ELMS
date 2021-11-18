@@ -81,7 +81,7 @@ function InnerCourse({ match, history }) {
     useEffect(() => {
         dispatch(getMyCourseByFastName(match.params.id))
     }, [dispatch])
-    
+    console.log(console.error())
     if (loading) {
         return (
             <div id="loading">
@@ -92,7 +92,7 @@ function InnerCourse({ match, history }) {
     else if (error) {
         return (
             <div id="err">
-                <h1>error</h1>
+                <h1>{error}</h1>
             </div>
         )
     }

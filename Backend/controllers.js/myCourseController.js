@@ -92,4 +92,24 @@ const getMyCourse = asyncHandler(async(req, res) => {
     }
 })
 
-export { getUserCourses, getLearners, createNewCourse, getMyCourse }
+const deleteCourse = asyncHandler(async(req, res) => {
+    const course = await Course.findOne({fastName: req.params.fastName})
+    const users = await User.find({})
+        
+    if (course) {
+        for (let i=0; i<users.length; i++) {
+            if (users[i].hasCourse.indexOf(course._id) !== -1) {
+                users[i].hasCourse = users[i].hasCourse.filter(item => !item.equals(course._id))
+                await users[i].save()
+            }
+        }
+        await course.remove()
+        res.json({ message: 'Course removed' })
+    }
+    else {
+        res.status(404)
+        throw new Error('Course not found')
+    }
+})
+
+export { getUserCourses, getLearners, createNewCourse, getMyCourse, deleteCourse }

@@ -18,7 +18,7 @@ export const myCoursesReducer = (state = {}, action) => {
 export const myOneCourseReducer = (state = { myOneCourseDetail: {} }, action) => {
     switch (action.type) {
         case MY_ONE_COURSE_REQUEST:
-            return { loading: true, myOneCourseDetail: {}}
+            return { loading: true }
         case MY_ONE_COURSE_SUCCESS:
             return { loading: false, myOneCourseDetail: action.payload }
         case MY_ONE_COURSE_FAIL:
