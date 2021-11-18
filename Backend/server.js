@@ -5,6 +5,8 @@ import connectDB from "./config/db.js";
 import courseRoutes from "./routes/courseRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import myCourseRoutes from "./routes/myCourseRoute.js";
+import conversationRoutes from "./routes/conversationRoutes.js";
+import announcementRoutes from "./routes/announcementRoutes.js";
 import { errorHandle, notFound } from "./middleware/errorMiddleware.js";
 
 dotenv.config();
@@ -22,6 +24,8 @@ app.get("/", (req, res) => {
 app.use("/api/courses", courseRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/mycourses", myCourseRoutes);
+app.use("/api/conversation", conversationRoutes);
+app.use("/api/announcement", announcementRoutes);
 app.use(notFound);
 app.use(errorHandle);
 
