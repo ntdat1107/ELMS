@@ -41,7 +41,6 @@ function App() {
           <Route exact path='/signup' component={Signup}></Route>
           <Route exact path='/forgotpass' component={ForgotPass}></Route>
           <Route exact path='/policy' component={Policy}></Route>
-          <Route exact path='/search' component={SearchGuestUI}></Route>
           <Route exact path='/course/:id' component={CourseMainPage}></Route>
           <Route exact path='/learner/dashboard' component={LnDashboard}></Route>
           <Route exact path='/learner/mycourses' component={LnMyCourses}></Route>
@@ -53,7 +52,7 @@ function App() {
           <Route exact path='/admin/managecourse' component={AdminCourse}></Route>
           <Route exact path='/admin/announcement' component={AdminAnnounce}></Route>
           <Route exact path="/course/1234/" component={CourseView} ></Route>
-          <Route exact path="/learner/search/" component={SearchLearnerUI} ></Route>
+          <Route exact path="/search/" component={SearchLearnerUI} ></Route>
           <Route exact path="/learner/registerIns" component={RegisterInsUI} ></Route>
           <Route exact path='/ins/addcourse' component={AddCourseUI} />
           <Route exact path='/' component={HomePageUI}></Route>
