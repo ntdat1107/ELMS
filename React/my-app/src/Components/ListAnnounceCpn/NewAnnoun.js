@@ -6,36 +6,34 @@ import { Editor } from "react-draft-wysiwyg";
 import { EditorState } from "draft-js";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
-
 class TextEditor extends Component {
     state = {
-      editorState: EditorState.createEmpty(),
+        editorState: EditorState.createEmpty(),
     };
-  
+
     onEditorStateChange = (editorState) => {
-      this.setState({
-        editorState,
-      });
+        this.setState({
+            editorState,
+        });
     };
-  
+
     render() {
-      const { editorState } = this.state; 
-      return (
-        <div>
-          <Editor
-            editorState={editorState}
-            toolbarClassName="toolbarClassName"
-            wrapperClassName="wrapperClassName"
-            editorClassName="editorClassName"
-            onEditorStateChange={this.onEditorStateChange}
-          />
-        </div>
-      );
+        const { editorState } = this.state;
+        return (
+            <div>
+                <Editor
+                    editorState={editorState}
+                    toolbarClassName="toolbarClassName"
+                    wrapperClassName="wrapperClassName"
+                    editorClassName="editorClassName"
+                    onEditorStateChange={this.onEditorStateChange}
+                />
+            </div>
+        );
     }
-  }
+}
 
-
-function NewAnnoun({typeUserTemp}) {
+function NewAnnoun({ typeUserTemp }) {
     const [click, setClick] = useState(false);
     const OpenNewAnnoun = () => setClick(true);
     const CloseNewAnnounBox = () => setClick(false);
@@ -49,27 +47,26 @@ function NewAnnoun({typeUserTemp}) {
                 <div className="new-announ-modal-overlay"></div>
                 <div className="new-announ-modal-body">
                     <form id="tick-box">
-                        { typeUserTemp != 1 &&
-                          <div id="tick-box-top">
-                            <div id="tick-box-top-inside">
-                                <input name="tick-box" type="radio" value="All Course" /> All Course
+                        {typeUserTemp != 1 && (
+                            <div id="tick-box-top">
+                                <div id="tick-box-top-inside">
+                                    <input name="tick-box" type="radio" value="All Course" /> All Course
+                                </div>
+                                <div id="tick-box-top-inside">
+                                    <input name="tick-box" type="radio" value="All Instructor" /> All Instructor
+                                </div>
+                                <div id="tick-box-top-inside">
+                                    <input name="tick-box" type="radio" value="All Learner" /> All Learner
+                                </div>
                             </div>
-                            <div id="tick-box-top-inside">
-                                <input name="tick-box" type="radio" value="All Instructor" /> All Instructor
+                        )}
+                        {typeUserTemp == 1 && (
+                            <div id="tick-box-top">
+                                <div id="tick-box-top-inside">
+                                    <input name="tick-box" type="radio" value="All my learners" /> All my learners
+                                </div>
                             </div>
-                            <div id="tick-box-top-inside">
-                                <input name="tick-box" type="radio" value="All Learner" /> All Learner
-                            </div>
-                        </div>
-                        }
-                        {
-                          typeUserTemp == 1 && 
-                          <div id="tick-box-top">
-                            <div id="tick-box-top-inside">
-                                <input name="tick-box" type="radio" value="All my learners" /> All my learners
-                            </div>
-                          </div>
-                        }
+                        )}
                         <div id="tick-box-bottom">
                             <div id="hihaho">
                                 <input name="tick-box" type="radio" value="Send to" /> Send to:{" "}
