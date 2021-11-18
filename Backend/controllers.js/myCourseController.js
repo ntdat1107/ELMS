@@ -42,10 +42,10 @@ const getLearners = asyncHandler(async(req, res) => {
 })
 
 const createNewCourse = asyncHandler(async(req, res) => {
-    const { userID, name, image, category, description, fastName } = req.body
+    const { name, image, category, description, fastName } = req.body
 
     const courseExists = await Course.findOne({ fastName })
-    const userAuthor = await User.findById( userID )
+    const userAuthor = await User.findById( req.user._id )
     const admin = await User.findOne({ isAdmin: true })
     if ( courseExists ) {
         res.status(400)

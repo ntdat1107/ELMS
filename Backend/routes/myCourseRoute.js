@@ -10,7 +10,7 @@ router.route('/getcourseby/:fastName').get(protect, checkIns, getMyCourse)
 
 router.route('/learners/:fastName').get(protect, checkIns, getLearners)
 
-router.route('/newcourse').post(createNewCourse)
+router.route('/newcourse').post(protect, createNewCourse)
 
 router.route('/:fastName').delete(protect, checkIns, deleteCourse)
 export default router
