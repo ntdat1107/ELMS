@@ -26,6 +26,15 @@ function ProfileCpn({
     const [phoneNumber, setPhoneNumber] = useState('')
 
 
+    function getCurrentDate(separator='-'){
+        let newDate = new Date()
+        let date = newDate.getDate();
+        let month = newDate.getMonth() + 1;
+        let year = newDate.getFullYear();
+        
+        return `${year}${separator}${month<10?`0${month}`:`${month}`}${separator}${date}`
+        }
+
     const dispatch = useDispatch()
     const userProfile = useSelector(state => state.userProfile)
     const {userDetail} = userProfile
@@ -117,7 +126,8 @@ function ProfileCpn({
                     </div>
                     <div id="b-day" >
                         <label className="label-pf" for="input-birthday">Birthdate</label>
-                        <input className="input-tag-pf" type="date" id="input-birthday" name="birthday" 
+                        <input className="input-tag-pf" type="date" id="input-birthday" 
+                        name="birthday" min="1920-01-01" max={getCurrentDate()}
                         value={birthDay}
                         onChange={(e) => {handleChange(); setBirthDay(e.target.value)}} />  
                     </div>
