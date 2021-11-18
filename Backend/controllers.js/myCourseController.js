@@ -63,6 +63,7 @@ const createNewCourse = asyncHandler(async(req, res) => {
     })
     if (course) {
         userAuthor.hasCourse.push(course._id)
+        await userAuthor.save()
         res.status(201).json({
             _id: course._id,
             name: course.name,
@@ -70,7 +71,9 @@ const createNewCourse = asyncHandler(async(req, res) => {
             description: course.description,
             fastName: course.fastName,
             rateScore: course.rateScore,
-            rateNum: course.rateNum
+            rateNum: course.rateNum,
+            authorID: userAuthor._id,
+            list: userAuthor.hasCourse
         })
     }
     else {

@@ -188,9 +188,19 @@ const getInsUserList = asyncHandler(async(req, res) => {
     }
 })
 
-
+const getUserByID = asyncHandler(async(req, res) => {
+    const user = await User.findById(req.params.id)
+    if (user) {
+        res.json(user)
+    }
+    else {
+        res.status(401)
+        throw new Error('User not found')
+    }
+})
 
 export { 
     authUser, getUserProfile, updateUserProfile, registerUser,
-    getAllUserList, getLearnerUserList, getInsUserList
+    getAllUserList, getLearnerUserList, getInsUserList,
+    getUserByID
 }
