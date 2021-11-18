@@ -87,8 +87,7 @@ function LnDashboard({ history }) {
     const userLogin = useSelector(state => state.userLogin)
     const {userInfo} = userLogin
     useEffect(() => {
-        if (!userInfo) history.push('/login')
-        // else if (!userInfo.isIns) push error not type
+        if (!userInfo || !userInfo.isLearner) history.push('/login')
     }, [history, userInfo])
 
     return (

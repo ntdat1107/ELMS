@@ -5,8 +5,18 @@ import favorite from "../img/icon/favoriteM.png"
 import archived from "../img/icon/archivedM.png"
 import {Link} from 'react-router-dom'
 import RatingCourse from '../../Rating/ratingCpn'
-import imgRate from '../img/rateStar/star4_5.png'
 import deleteIcon from '../img/icon/deleteIcon.png'
+import star05 from '../img/rateStar/star0_5.png'
+import star15 from '../img/rateStar/star1_5.png'
+import star25 from '../img/rateStar/star2_5.png'
+import star35 from '../img/rateStar/star3_5.png'
+import star45 from '../img/rateStar/star4_5.png'
+import star1 from '../img/rateStar/star1.png'
+import star2 from '../img/rateStar/star2.png'
+import star3 from '../img/rateStar/star3.png'
+import star4 from '../img/rateStar/star4.png'
+import star5 from '../img/rateStar/star5.png'
+import star0 from '../img/rateStar/star0.png'
 function OpenMore() {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click);
@@ -34,14 +44,26 @@ function OpenMore() {
         </div>
     )
 }
-function OpenRate({imgCourse, nameCourse, authorCourse, progressScore}) {
+function OpenRate({imgCourse, nameCourse, authorCourse, progressScore, rateScore}) {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click);
     const closeMenuRate = () => setClick(false);
+    let star = star0
+    // Choose Star Img
+    if (rateScore > 0 && rateScore < 1) star = star05
+    else if (rateScore === 1) star = star1
+    else if (rateScore > 1 && rateScore < 2) star = star15
+    else if (rateScore === 2) star = star2
+    else if (rateScore > 2 && rateScore < 3) star = star25
+    else if (rateScore === 3) star = star3
+    else if (rateScore > 3 && rateScore < 4) star = star35
+    else if (rateScore === 4) star = star4
+    else if (rateScore > 4 && rateScore < 5) star = star45
+    else if (rateScore === 5) star = star5
     return (        
         <div className="rate-btn">            
             <div id="rate" onClick={handleClick}>
-                <img src={imgRate} alt="Img rating" style={{cursor: "pointer"}} id={click? "rateClose" : "rateOpen"}/>
+                <img src={star} alt="Img rating" style={{cursor: "pointer"}} id={click? "rateClose" : "rateOpen"}/>
             </div>            
             <ul className={click? 'nav-menu-rate active' : 'nav-menu-rate'}>
                 <div>
@@ -50,6 +72,7 @@ function OpenRate({imgCourse, nameCourse, authorCourse, progressScore}) {
                     nameCourse = {nameCourse} 
                     authorCourse = {authorCourse}
                     progressScore = {progressScore}
+                    rateScore = {rateScore}
                 /></div>
                 <div><img src={deleteIcon} alt="Delete Icon" onClick={closeMenuRate} style={{cursor: 'pointer', height: '20px', width: '20px'}} /></div>
             </ul>
@@ -62,13 +85,13 @@ function ItemCourse({
     authorCourse,
     progressScore,
     imgCourse,
-    scoreRate,
+    rateScore,
     callback = () => {}
 }) {
     return (
         <div className="itemCourse" >
             <div className="imgCourse" style={{overflow: "hidden"}}>
-                <img src={imgCourse} alt = "Course Img" style={{borderBottom: "1px solid #000"}}></img>
+                <img src={imgCourse} alt = "Course Img" style={{borderBottom: "1px solid #000", width: "240px"}}></img>
                 <OpenMore />
             </div>
             <div id="nameCourse">
@@ -93,12 +116,13 @@ function ItemCourse({
                         </div>
                 </div>
                 <div className="rateCourseMC">
-                    <div id = {scoreRate == 0 ? "notScore" : "hadScore"}>
+                    <div id = {rateScore == 0 ? "notScore" : "hadScore"}>
                         <OpenRate 
                             imgCourse = {imgCourse} 
                             nameCourse = {nameCourse} 
                             authorCourse = {authorCourse}
                             progressScore = {progressScore}
+                            rateScore = {rateScore}
                         />
                         <p style={{cursor: "pointer"}}>Your rating</p>
                     </div>

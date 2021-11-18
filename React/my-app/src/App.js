@@ -44,6 +44,7 @@ function App() {
           <Route exact path='/course/:id' component={CourseMainPage}></Route>
           <Route exact path='/learner/dashboard' component={LnDashboard}></Route>
           <Route exact path='/learner/mycourses' component={LnMyCourses}></Route>
+          <Route exact path='/learner/mycourses/search/:keyword' component={LnMyCourses}></Route>
           <Route exact path='/learner/announcements' component={LnAnnouncements}></Route>
           <Route exact path='/learner/manageprofile' component={LnManageProfile}></Route>
           <Route exact path='/admin/dashboard' component={AdminDashboard}></Route>

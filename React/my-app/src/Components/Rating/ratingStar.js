@@ -16,10 +16,10 @@ const labels = {
   5: 'Excellent+',
 };
 
-export default function HoverRating() {
-  const [value, setValue] = React.useState(2);
+export default function RatingStar({rateScore}) {
+  const [value, setValue] = React.useState(rateScore);
   const [hover, setHover] = React.useState(-1);
-
+  console.log(value)
   return (
     <Box
       sx={{

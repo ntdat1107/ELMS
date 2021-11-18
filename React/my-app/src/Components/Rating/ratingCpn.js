@@ -3,7 +3,7 @@ import RatingCmt from './ratingCmt'
 import RatingStar from './ratingStar'
 import RatingInfo from './ratingInfo'
 import './rating.css'
-function RatingCpn({imgCourse, nameCourse, authorCourse, progressScore}) {
+function RatingCpn({imgCourse, nameCourse, authorCourse, progressScore, rateScore}) {
     return (
         <div id="ratingCpn">
             <div id="row1">
@@ -17,7 +17,7 @@ function RatingCpn({imgCourse, nameCourse, authorCourse, progressScore}) {
             <div id="titleRating"><p>Please leave your rating</p></div>
             <div id="row2">
                 <div id="ratingStar">
-                    <RatingStar />
+                    <RatingStar rateScore={rateScore} />
                 </div>
                 <RatingCmt />
             </div>

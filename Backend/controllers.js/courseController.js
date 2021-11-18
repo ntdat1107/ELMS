@@ -8,7 +8,13 @@ import User from '../models/userModel.js'
 // @route   GET /api/managecourse
 // @access  Public
 const getCourse = asyncHandler(async(req, res) => {
-    const courses = await Course.find({})
+    const keyword = req.query.keyword ? {
+        name: {
+            $regex: req.query.keyword,
+            $options: 'i'
+        }
+    } : {}
+    const courses = await Course.find({ ...keyword })
     res.json(courses)
 })
 

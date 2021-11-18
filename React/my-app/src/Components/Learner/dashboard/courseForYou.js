@@ -21,7 +21,7 @@ function CourseForYou() {
     });
     return (
         <div id="coursesCFY">
-            <Link className="Link-coursename" to="/learner/search">
+            <Link className="Link-coursename" to="/search">
                 <p id="titleCFY">Courses For You</p>
             </Link>
             <div id="listCoursesCFY">
