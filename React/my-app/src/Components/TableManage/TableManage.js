@@ -4,18 +4,13 @@ import { Scrollbars } from "react-custom-scrollbars";
 import remove from "../Admin/image/delete.png";
 import moreInfo from "../Admin/image/moreInfo.png";
 import DetailCpn from "./DetailCpn";
-import './TableManage.css'
+import "./TableManage.css";
 
-function TableManage({
-    heightSB,
-    listLearner
-}
-    
-) {
-    const users = listLearner
+function TableManage({ heightSB, listLearner }) {
+    const users = listLearner;
     const [pageNumber, setPageNumber] = useState(0);
 
-    const usersPerPage = 15;
+    const usersPerPage = 20;
     const pagesVisited = pageNumber * usersPerPage;
 
     const displayUsers = users.slice(pagesVisited, pagesVisited + usersPerPage).map((user) => {
@@ -44,14 +39,14 @@ function TableManage({
     return (
         <div id="tableinstruc">
             <div id="titletable">
-                <p className="tr">Username</p>
-                <p className="tr">Email</p>
-                <p className="tr">First Name</p>
-                <p className="tr">Last Name</p>
-                <p className="tr">More Infromation</p>
-                <p className="tr">Delete</p>
+                <p className="tt-userName">Username</p>
+                <p className="tt-email">Email</p>
+                <p className="tt-FN">First Name</p>
+                <p className="tt-LN">Last Name</p>
+                <p className="tt-moreIcon">More Infromation</p>
+                <p className="tt-delIcon">Delete</p>
             </div>
-            <Scrollbars style={{ width: "100%", height: 275 }}>{displayUsers}</Scrollbars>
+            <Scrollbars style={{ width: "100%", height: 345 }}>{displayUsers}</Scrollbars>
 
             <ReactPaginate
                 previousLabel={"Prev"}

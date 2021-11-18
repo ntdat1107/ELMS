@@ -1,19 +1,20 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import SearchInstruc from "./SearchInstruc";
 import SideBar from "../SideBar/SideBar";
 import Header from "../Header/header";
 import TableManage from "../TableManage/TableManage";
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from "react-redux";
 import { getSysIns } from "../../actions/adminActions";
+import "./CSS/AdminInstruc.css";
 
 function AdminInstruc() {
-    const dispatch = useDispatch()
-    const sysIns = useSelector(state => state.sysIns)
-    const { loading, error, sysInsList } = sysIns
+    const dispatch = useDispatch();
+    const sysIns = useSelector((state) => state.sysIns);
+    const { loading, error, sysInsList } = sysIns;
 
     useEffect(() => {
-        dispatch(getSysIns())
-    }, [dispatch])
+        dispatch(getSysIns());
+    }, [dispatch]);
 
     return (
         <div id="admininstruc-UI">
