@@ -19,7 +19,7 @@ function InsManagerCourse ({history}) {
     const myCourses = useSelector(state => state.myCourses)
     const { loading, error, myCoursesList } = myCourses
     useEffect(() => {
-        dispatch(getMyCourses())
+        if (!myCoursesList) dispatch(getMyCourses())
     }, [dispatch])
     if (loading) {
         return (

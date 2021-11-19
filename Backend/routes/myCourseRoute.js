@@ -1,5 +1,5 @@
 import express from "express";
-import { createNewCourse, deleteCourse, enrollCourse, getAllMyLearners, 
+import { createNewCourse, deleteCourse, enrollCourse, getAllMyLearnersID, 
     getLearners, getMyCourse, getUserCourses } from "../controllers.js/myCourseController.js";
 import { checkIns, checkLearner, protect } from "../middleware/authMiddleware.js";
 const router = express.Router()
@@ -15,7 +15,7 @@ router.route('/newcourse').post(protect, createNewCourse)
 
 router.route('/:fastName').delete(protect, checkIns, deleteCourse)
 
-router.route('learners').get(protect, getAllMyLearners)
+router.route('/getlearners').get(protect, getAllMyLearnersID)
 
 router.route('/enroll/:fastName').post(protect, checkLearner, enrollCourse)
 

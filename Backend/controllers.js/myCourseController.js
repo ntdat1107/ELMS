@@ -113,14 +113,20 @@ const deleteCourse = asyncHandler(async(req, res) => {
 })
 
 
-const getAllMyLearners = asyncHandler(async(req, res) => {
-    const user = User.findById(req.user._id)
-    const learners = User.find({isLearner: true})
-    let idList = []
-    for (let i=0; i<user.hasCourse.length; i++) {
-        
+const getAllMyLearnersID = asyncHandler(async(req, res) => {
+    const user = await User.findById(req.user._id)
+    if (!user.isIns) {
+        res.status(201)
+        throw new Error('You are not an instructor')
     }
-    res.json(isList)
+    const idList = []
+    for (let i=0; i<user.hasCourse.length; i++) {
+        const course = await Course.findById(user.hasCourse[i])
+        if (course && course.learnerList) course.learnerList.map(id => {
+            idList.push(id)
+        })
+    }
+    res.json(idList)
 })
 
 const enrollCourse = asyncHandler(async(req, res) => {
@@ -134,4 +140,4 @@ const enrollCourse = asyncHandler(async(req, res) => {
 })
 
 export { getUserCourses, getLearners, createNewCourse, getMyCourse, 
-    deleteCourse, getAllMyLearners, enrollCourse }
+    deleteCourse, getAllMyLearnersID, enrollCourse }

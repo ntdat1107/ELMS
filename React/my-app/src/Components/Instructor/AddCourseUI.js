@@ -22,7 +22,7 @@ function AddCourseUI({history}) {
     let image= "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg"
     const handleSubmit = (e) => {
         e.preventDefault()
-        dispatch(addNewCourse(userInfo._id, name, image, category, desc, fastName))
+        dispatch(addNewCourse(name, image, category, desc, fastName))
     }
 
     return (

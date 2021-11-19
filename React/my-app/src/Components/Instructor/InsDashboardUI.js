@@ -8,6 +8,7 @@ import Header from '../Header/header'
 import {Link} from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserProfile } from "../../actions/userActions";
+import { getMyLearnerID } from "../../actions/myCoursesAction";
 
 function About() {    
     return (
@@ -87,17 +88,22 @@ function InsDashboardUI ({history}) {
 
     const userProfile = useSelector(state => state.userProfile)
     const {loading, error, userDetail} = userProfile
+    // useEffect(() => {
+    //     if (!userDetail) {
+    //         dispatch(getUserProfile('profile'))
+    //     }
+    // }, [dispatch, history, userDetail])
+    const getMyLearnersID = useSelector(state => state.getMyLearnersID)
+    const { loadingLearner, errorLearner, myLearnerList } = getMyLearnersID
     useEffect(() => {
-        if (!userDetail) {
-            dispatch(getUserProfile('profile'))
-        }
-    }, [dispatch, history, userDetail])
-    if (loading) return (
+        if (!myLearnerList) dispatch(getMyLearnerID())
+    }, [dispatch, history, myLearnerList])
+    if (loading || loadingLearner) return (
         <div id="loading">
             <h1>Loading</h1>
         </div>
     )
-    else if (error) return (
+    else if (error || errorLearner) return (
         <div id="error">
             <h1>{Error}</h1>
         </div>
@@ -108,7 +114,7 @@ function InsDashboardUI ({history}) {
             <Header />
             <div id="col1">
                 <About />
-                <Statistic learnerCount={500} videoCount="20" 
+                <Statistic learnerCount={myLearnerList? myLearnerList.length : 0} videoCount="20" 
                 courseCount={userDetail? userDetail.hasCourse.length : 0}/>
                 <div id="WSH">
                     <BarChart />

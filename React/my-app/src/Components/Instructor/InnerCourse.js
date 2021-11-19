@@ -10,7 +10,7 @@ import plus from './imgSrc/plus.png'
 import deleteImg from './imgSrc/delete.png'
 import {Link} from "react-router-dom"
 import manageLearner from './imgSrc/manageLearner.png'
-import notifyImg from './imgSrc/notify.png'
+import { deleteCourseNow } from '../../actions/myCoursesAction.js';
 import { getMyCourseByFastName } from '../../actions/myCoursesAction.js';
 
 
@@ -37,7 +37,7 @@ function CourseSection({
     )
 }
 
-function OtherAction({manageCourseLink}) {
+function OtherAction({manageCourseLink, deleteHandle}) {
     return (
         <div id="other-action">
             <div id="head">
@@ -50,7 +50,7 @@ function OtherAction({manageCourseLink}) {
                         <p className="text-action">Manage learner</p>
                     </div>
                 </Link>
-                <div id="third-act" onClick>
+                <div id="third-act" onClick={deleteHandle}>
                     <img className="imgAction" src={deleteImg} alt="delimg" height="50px" width="40px" />
                     <p className="text-action">Delete course</p>
                 </div>
@@ -63,17 +63,29 @@ function InnerCourse({ match, history }) {
     const dispatch = useDispatch()
     const userLogin = useSelector(state => state.userLogin)
     const {userInfo} = userLogin
-    useEffect(() => {
-        if (!userInfo || !userInfo.isIns) history.push('/login')
-    }, [history, userInfo])
+    
 
 
     const myOneCourse = useSelector(state => state.myOneCourse)
     const { loading, error, myOneCourseDetail } = myOneCourse
 
+    const courseDelete = useSelector(state => state.courseDelete)
+    const { success } = courseDelete
+
     useEffect(() => {
-        dispatch(getMyCourseByFastName(match.params.id))
-    }, [dispatch])
+        if (userInfo && userInfo.isIns) dispatch(getMyCourseByFastName(match.params.id))
+        else history.push('/login')
+    }, [history, dispatch, success])
+
+    useEffect(() => {
+        if (!myOneCourseDetail) history.push('/login')
+    }, [success])
+
+
+    const deleteHandle = (e) => {
+        dispatch(deleteCourseNow(match.params.id))
+    }
+
     if (loading) {
         return (
             <div id="loading">
@@ -84,7 +96,9 @@ function InnerCourse({ match, history }) {
     else if (error) {
         return (
             <div id="err">
-                <h1>{error}</h1>
+            <SideBar typeUserTemp={1}/>
+            <Header />
+                <h1 style = {{marginTop: "350px", marginLeft: "500px", borderRadius: "5px"}}>{error}</h1>
             </div>
         )
     }
@@ -115,7 +129,7 @@ function InnerCourse({ match, history }) {
                     </Scrollbars>
                 </div>
                 <div id="col-2">
-                    <OtherAction manageCourseLink={`/ins/managecourse/${myOneCourseDetail.fastName}/manage_my_learners`}/>
+                    <OtherAction deleteHandle={deleteHandle} manageCourseLink={`/ins/managecourse/${myOneCourseDetail.fastName}/manage_my_learners`}/>
                 </div>
             </div>
             </div>

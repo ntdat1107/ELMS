@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { ADD_COURSE_FAIL, ADD_COURSE_REQUEST, ADD_COURSE_SUCCESS,
     MY_COURSE_REQUEST, MY_COURSE_SUCCESS, MY_COURSE_FAIL,
-    MY_ONE_COURSE_REQUEST, MY_ONE_COURSE_SUCCESS, MY_ONE_COURSE_FAIL, ENROLL_COURSE_REQUEST, ENROLL_COURSE_FAIL, ENROLL_COURSE_SUCCESS } from '../constants/myCourseConstants'
+    MY_ONE_COURSE_REQUEST, MY_ONE_COURSE_SUCCESS, MY_ONE_COURSE_FAIL, ENROLL_COURSE_REQUEST, ENROLL_COURSE_FAIL, ENROLL_COURSE_SUCCESS, MY_LEARNER_REQUEST, MY_LEARNER_FAIL, MY_LEARNER_SUCCESS, DELETE_COURSE_REQUEST, DELETE_COURSE_SUCCESS, DELETE_COURSE_FAIL } from '../constants/myCourseConstants'
 
 export const getMyCourses = () => async(dispatch, getState) => {
     try {
@@ -58,7 +58,7 @@ export const getMyCourseByFastName = (fastName) => async(dispatch, getState) => 
 }
 
 export const addNewCourse = 
-    ( userID, name, image, category, description, fastName ) => async (dispatch, getState) => {
+    ( name, image, category, description, fastName ) => async (dispatch, getState) => {
     try {
         dispatch({
             type: ADD_COURSE_REQUEST
@@ -72,7 +72,7 @@ export const addNewCourse =
             }
         }
 
-        const { data } = await axios.post( '/api/mycourses/newcourse', { userID, name, image, 
+        const { data } = await axios.post( '/api/mycourses/newcourse', { name, image, 
             category, description, fastName }, config )
 
         dispatch({
@@ -112,6 +112,67 @@ export const enrollNewCourse = (id) => async (dispatch, getState) => {
     } catch (error) {
         dispatch({
             type: ENROLL_COURSE_FAIL,
+            payload: error.response && error.response.data.message
+            ? error.response.data.message
+            : error.message,
+        })
+    }
+}
+
+export const getMyLearnerID = () => async (dispatch, getState) => {
+    try {
+        dispatch({
+            type: MY_LEARNER_REQUEST
+        })
+        const { userLogin: { userInfo } } = getState() 
+
+        const config = {
+            headers: {
+                'Content-type': 'application/json',
+                Authorization: `Bearer ${userInfo.token}`
+            }
+        }
+
+        const { data } = await axios.get(`/api/mycourses/getlearners`, config)
+
+        dispatch({
+            type: MY_LEARNER_SUCCESS,
+            payload: data
+        })
+    }
+    catch (errorLearner) {
+        dispatch({
+            type: MY_LEARNER_FAIL,
+            payload: errorLearner.response && errorLearner.response.data.message
+            ? errorLearner.response.data.message
+            : errorLearner.message,
+        })
+    }
+}
+
+export const deleteCourseNow = (fastName) => async (dispatch, getState) => {
+    try {
+        dispatch({
+            type: DELETE_COURSE_REQUEST
+        })
+        const { userLogin: { userInfo } } = getState() 
+
+        const config = {
+            headers: {
+                'Content-type': 'application/json',
+                Authorization: `Bearer ${userInfo.token}`
+            }
+        }
+
+        const { data } = await axios.delete(`/api/mycourses/${fastName}`, config)
+
+        dispatch({
+            type: DELETE_COURSE_SUCCESS
+        })
+    }
+    catch(error) {
+        dispatch({
+            type: DELETE_COURSE_FAIL,
             payload: error.response && error.response.data.message
             ? error.response.data.message
             : error.message,

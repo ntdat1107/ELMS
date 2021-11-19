@@ -62,7 +62,9 @@ export const detailCourse = (id) => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: COURSE_DETAIL_FAIL,
-            payload: null
+            payload: error.response && error.response.data.message
+            ? error.response.data.message
+            : error.message,
         })        
     }
 }
