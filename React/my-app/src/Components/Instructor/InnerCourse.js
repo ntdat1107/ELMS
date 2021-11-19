@@ -71,7 +71,6 @@ function InnerCourse({ match, history }) {
     const {userInfo} = userLogin
     useEffect(() => {
         if (!userInfo || !userInfo.isIns) history.push('/login')
-        // else if (!userInfo.isIns) push error not type
     }, [history, userInfo])
 
 
@@ -81,7 +80,6 @@ function InnerCourse({ match, history }) {
     useEffect(() => {
         dispatch(getMyCourseByFastName(match.params.id))
     }, [dispatch])
-    console.log(console.error())
     if (loading) {
         return (
             <div id="loading">

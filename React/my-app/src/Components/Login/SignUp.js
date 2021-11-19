@@ -115,7 +115,7 @@ function Signup({history}) {
                             Privacy Policy
                         </Link>
                     </div>
-                    <button type="submit" className="Signuptoggle-btn1">Sign up</button>
+                    <button type="submit" onClick={submitHandler} className="Signuptoggle-btn1">Sign up</button>
                     <label id="direct-to-login-label" for="direct-to-login"></label>
                     <Link to='/login'>
                         <button type="submit" id="direct-to-login" className="Signuptoggle-btn1">Login</button>
