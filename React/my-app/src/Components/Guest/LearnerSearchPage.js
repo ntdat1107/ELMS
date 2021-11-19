@@ -1,9 +1,8 @@
-import React, { useEffect, useState} from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import Header from "../Header/header";
-import avt from "../img/cheems.png"
 import SideBar from "../SideBar/SideBar";
-import SearchMainPage   from "./SearchMainPage";
+import SearchMainPage, { FloatBar }   from "./SearchMainPage";
 
 import './CSS/HomePage.css'
 
@@ -13,7 +12,7 @@ import { func } from 'prop-types';
 
 
 
-function SearchLearnerUI({match, history}) {
+function SearchUI({match, history}) {
     let typeUsr = -1;
     let isGuest = false;
     const userLogin = useSelector(state => state.userLogin)
@@ -32,7 +31,11 @@ function SearchLearnerUI({match, history}) {
     // }, [history, userInfo])
     const sideBar = (isGuest) =>  {
         if (isGuest == true) {
-            return (<SideBarGuest/>)
+            return (
+                <>
+                <SideBarGuest/>
+                <FloatBar/>
+                </>)
         }
         else return (<SideBar typeUserTemp={typeUsr}/>)
     }
@@ -45,8 +48,9 @@ function SearchLearnerUI({match, history}) {
                 typeUserTemp={typeUsr}
             />
             <SearchMainPage/>
+            {isGuest}&&
         </div>
     )
 }
 
-export default SearchLearnerUI;
+export default SearchUI;
