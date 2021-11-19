@@ -7,7 +7,7 @@ import User from '../models/userModel.js'
 //@dest     Fetch all courses of user
 //@route    GET /api/mycourses/:id
 const getUserCourses = asyncHandler(async(req, res) => {
-    const userNow = req.user
+    const userNow = await User.findById(req.user._id)
     if (userNow) {
         if (userNow.hasCourse.length == 0) res.json([])
         else {
@@ -61,6 +61,7 @@ const createNewCourse = asyncHandler(async(req, res) => {
         userAdmin: admin._id 
     })
     if (course) {
+        await course.save()
         userAuthor.hasCourse.push(course._id)
         await userAuthor.save()
         res.status(201).json({
@@ -112,4 +113,15 @@ const deleteCourse = asyncHandler(async(req, res) => {
     }
 })
 
-export { getUserCourses, getLearners, createNewCourse, getMyCourse, deleteCourse }
+
+const getAllMyLearners = asyncHandler(async(req, res) => {
+    const user = User.findById(req.user._id)
+    const learners = User.find({isLearner: true})
+    let idList = []
+    for (let i=0; i<user.hasCourse.length; i++) {
+        
+    }
+    res.json(isList)
+})
+
+export { getUserCourses, getLearners, createNewCourse, getMyCourse, deleteCourse, getAllMyLearners }

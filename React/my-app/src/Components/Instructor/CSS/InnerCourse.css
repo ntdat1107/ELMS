@@ -180,3 +180,10 @@
     vertical-align: middle;
     margin-left: 20px;
 }
+#inner-course #row-2 #other-action #third-act {
+    margin-left: 25px;
+    cursor: pointer;
+}
+#inner-course #row-2 #other-action #third-act p{
+    margin-left: 35px;
+}
