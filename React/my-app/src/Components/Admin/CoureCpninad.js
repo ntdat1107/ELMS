@@ -2,20 +2,12 @@ import React, { useState } from "react";
 import task from "./image/Task.png";
 import "./CSS/AdminCourse.css";
 import CourseForYouCpn from "../courseForYou/courseForYouCpn";
-import change from "./image/changeIcon.png";
-import minus from "./image/Iconminus.png";
-import plus from "./image/Iconplus.png";
 import infor from "./image/Inforicon.png";
 import deletecourse from "./image/deletecourse.png";
-import instructor from "../img/manageInsHover.png";
-import learner from "../img/manageLnHover.png";
 import { Scrollbars } from "react-custom-scrollbars";
+import InforCourse from "./InforCourse";
 
-function CourseCpninad({ id, imgSrcCourse, altCourse, Name, Desc, Author, Type, rateScore, imgStar, totalRate, tagColor, callback = () => {} }) {
-
-
-    
-
+function CourseCpninad({ id, imgSrcCourse, Name, Desc, Author, Type, rateScore, totalRate, tagColor, linkName, callback = () => {} }) {
     const [click, setClick] = useState(false);
     const [click2, setClick2] = useState(false);
     const [click3, setClick3] = useState(false);
@@ -63,113 +55,19 @@ function CourseCpninad({ id, imgSrcCourse, altCourse, Name, Desc, Author, Type, 
                     </p>
                     <CourseForYouCpn
                         imgSrcCourse={imgSrcCourse}
-                        altCourse={altCourse}
                         Name={Name}
                         Desc={Desc}
                         Author={Author}
                         Type={Type}
                         rateScore={rateScore}
-                        imgStar={imgStar}
                         totalRate={totalRate}
                         tagColor={tagColor}
-                        linkName='/'
+                        linkName={linkName}
                     />
                     <div id="ScrollBars">
                         <Scrollbars style={{ width: 1000, height: "42vh" }}>
                             <div id="below">
-                                <div className="user-in-course">
-                                    <div id="green">
-                                        <img src={instructor} alt="Instructor Icon" width="30px" height="30px" /> <p> Instructor</p>
-                                    </div>
-                                    <div id="name">
-                                        <img id="right-icon" src={change} alt="Change Instructor Icon" width="30px" height="30px" />
-                                        <p id="name-of">{Author}</p>
-                                    </div>
-                                </div>
-
-                                {/* Danh Sach Hoc Vien */}
-                                <div className="user-in-course" id="b">
-                                    <div id="green">
-                                        <img src={learner} alt="Learner Icon" width="30px" height="30px" />
-                                        <span> Learner</span>
-                                        <img id="plus-icon" src={plus} alt="Plus Icon" width="30px" height="30px" />
-                                    </div>
-                                    <div>
-                                        <div id="name">
-                                            <img id="right-icon" src={minus} alt="Minus Instructor Icon" width="30px" height="30px" />
-                                            <p id="name-of">Duong Lam</p>
-                                        </div>
-                                        <div id="name">
-                                            <img id="right-icon" src={minus} alt="Minus Instructor Icon" width="30px" height="30px" />
-                                            <p id="name-of">Dat Ngo</p>
-                                        </div>
-                                        <div id="name">
-                                            <img id="right-icon" src={minus} alt="Minus Instructor Icon" width="30px" height="30px" />
-                                            <p id="name-of">Duy Hoang</p>
-                                        </div>
-                                        <div id="name">
-                                            <img id="right-icon" src={minus} alt="Minus Instructor Icon" width="30px" height="30px" />
-                                            <p id="name-of">Dat Nguyen</p>
-                                        </div>
-                                        <div id="name">
-                                            <img id="right-icon" src={minus} alt="Minus Instructor Icon" width="30px" height="30px" />
-                                            <p id="name-of">Long Mai</p>
-                                        </div>
-                                        <div id="name">
-                                            <img id="right-icon" src={minus} alt="Minus Instructor Icon" width="30px" height="30px" />
-                                            <p id="name-of">Duong Lam</p>
-                                        </div>
-                                        <div id="name">
-                                            <img id="right-icon" src={minus} alt="Minus Instructor Icon" width="30px" height="30px" />
-                                            <p id="name-of">Dat Ngo</p>
-                                        </div>
-                                        <div id="name">
-                                            <img id="right-icon" src={minus} alt="Minus Instructor Icon" width="30px" height="30px" />
-                                            <p id="name-of">Duy Hoang</p>
-                                        </div>
-                                        <div id="name">
-                                            <img id="right-icon" src={minus} alt="Minus Instructor Icon" width="30px" height="30px" />
-                                            <p id="name-of">Dat Nguyen</p>
-                                        </div>
-                                        <div id="name">
-                                            <img id="right-icon" src={minus} alt="Minus Instructor Icon" width="30px" height="30px" />
-                                            <p id="name-of">Long Mai</p>
-                                        </div>
-                                        <div id="name">
-                                            <img id="right-icon" src={minus} alt="Minus Instructor Icon" width="30px" height="30px" />
-                                            <p id="name-of">Duy Hoang</p>
-                                        </div>
-                                        <div id="name">
-                                            <img id="right-icon" src={minus} alt="Minus Instructor Icon" width="30px" height="30px" />
-                                            <p id="name-of">Dat Nguyen</p>
-                                        </div>
-                                        <div id="name">
-                                            <img id="right-icon" src={minus} alt="Minus Instructor Icon" width="30px" height="30px" />
-                                            <p id="name-of">Long Mai</p>
-                                        </div>
-                                        <div id="name">
-                                            <img id="right-icon" src={minus} alt="Minus Instructor Icon" width="30px" height="30px" />
-                                            <p id="name-of">Duong Lam</p>
-                                        </div>
-                                        <div id="name">
-                                            <img id="right-icon" src={minus} alt="Minus Instructor Icon" width="30px" height="30px" />
-                                            <p id="name-of">Dat Ngo</p>
-                                        </div>
-                                        <div id="name">
-                                            <img id="right-icon" src={minus} alt="Minus Instructor Icon" width="30px" height="30px" />
-                                            <p id="name-of">Duy Hoang</p>
-                                        </div>
-                                        <div id="name">
-                                            <img id="right-icon" src={minus} alt="Minus Instructor Icon" width="30px" height="30px" />
-                                            <p id="name-of">Dat Nguyen</p>
-                                        </div>
-                                        <div id="name">
-                                            <img id="right-icon" src={minus} alt="Minus Instructor Icon" width="30px" height="30px" />
-                                            <p id="name-of">Long Mai</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/*_____________________________________________________________*/}
+                                <InforCourse Author={Author} />
                             </div>
                         </Scrollbars>
                     </div>
@@ -180,18 +78,7 @@ function CourseCpninad({ id, imgSrcCourse, altCourse, Name, Desc, Author, Type, 
                 <p id="close" onClick={closeBox}></p>
             </div>
 
-            <CourseForYouCpn
-                imgSrcCourse={imgSrcCourse}
-                altCourse={altCourse}
-                Name={Name}
-                Desc={Desc}
-                Author={Author}
-                Type={Type}
-                rateScore={rateScore}
-                imgStar={imgStar}
-                totalRate={totalRate}
-                tagColor={tagColor}
-            />
+            <CourseForYouCpn imgSrcCourse={imgSrcCourse} Name={Name} Desc={Desc} Author={Author} Type={Type} rateScore={rateScore} totalRate={totalRate} tagColor={tagColor} linkName={linkName} />
         </div>
     );
 }
