@@ -1,6 +1,7 @@
 import express from "express";
-import { createNewCourse, deleteCourse, getAllMyLearners, getLearners, getMyCourse, getUserCourses } from "../controllers.js/myCourseController.js";
-import { checkIns, protect } from "../middleware/authMiddleware.js";
+import { createNewCourse, deleteCourse, enrollCourse, getAllMyLearners, 
+    getLearners, getMyCourse, getUserCourses } from "../controllers.js/myCourseController.js";
+import { checkIns, checkLearner, protect } from "../middleware/authMiddleware.js";
 const router = express.Router()
 
 
@@ -15,5 +16,7 @@ router.route('/newcourse').post(protect, createNewCourse)
 router.route('/:fastName').delete(protect, checkIns, deleteCourse)
 
 router.route('learners').get(protect, getAllMyLearners)
+
+router.route('/enroll/:fastName').post(protect, checkLearner, enrollCourse)
 
 export default router
