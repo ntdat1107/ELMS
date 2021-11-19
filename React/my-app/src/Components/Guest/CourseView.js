@@ -55,7 +55,7 @@ import { BackButton } from './CourseMainPage'
 //https://youtu.be/_qPdi9D2rHA?list=RDMM
 
 
-function CourseView() {
+function CourseView({match}) {
     return(
         <div id = "CV">
             {/* <Router>
@@ -76,7 +76,7 @@ function CourseView() {
             </Router> */}
             <BackButton url = "/learner/dashboard" style = {{"z-index" : "1000"}} />
             <OutsidePage/>
-            <MainPage url = "https://www.youtube.com/watch?v=D9G1VOjN_84"/>
+            <MainPage match={match} url = "https://www.youtube.com/watch?v=D9G1VOjN_84"/>
         </div>
     )
 }

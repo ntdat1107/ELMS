@@ -1,7 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
-import { courseDetailReducer, courseListReducer } from "./Reducers/courseReducers";
+import { courseDetailReducer, courseListReducer, courseReviewCreateReducer } from "./Reducers/courseReducers";
 import { userDetailByIDReducer, userLoginReducer, userProfileReducer, userRegisterReducer, userUpdateProfileReducer } from "./Reducers/userReducers";
 import { addCourseReducer, myCoursesReducer, myOneCourseReducer } from "./Reducers/myCoursesReducers";
 import { myLearnerReducer } from "./Reducers/myLearnerReducers";
@@ -11,6 +11,7 @@ import { conversationReducer } from "./Reducers/conversationReducers";
 const reducer = combineReducers({
     courseList: courseListReducer,
     courseDetail: courseDetailReducer,
+    courseReviewCreate: courseReviewCreateReducer,
     userLogin: userLoginReducer,
     userProfile: userProfileReducer,
     userRegister: userRegisterReducer,

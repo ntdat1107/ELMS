@@ -7,10 +7,9 @@ const ratingSchema = mongoose.Schema({
         required: true,
         ref: 'User'
     },
-    rateScore: {
-        type: Number,
-        required: true
-    }
+    rating: {type: Number, required: true },
+    comment: {type: String, required: true },
+    name: {type: String, required: true },
 }, {
     timestamps: true
 })
@@ -72,6 +71,8 @@ const courseSchema = mongoose.Schema({
 })
 
 const Course = mongoose.model('Course', courseSchema)
+const Review = mongoose.model('Review', ratingSchema)
 
+export {Review}
 
 export default Course

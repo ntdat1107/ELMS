@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ProSidebar, Menu, MenuItem, SubMenu, SidebarHeader, SidebarContent} from 'react-pro-sidebar';
-
+import { useDispatch, useSelector } from 'react-redux'
 import 'react-pro-sidebar/dist/css/styles.css';
 import playbutton from "./imgs/playbutton.png"
 
@@ -8,18 +8,17 @@ import "./CSS/CourseVideoView.css";
 import ReactPlayer from 'react-player';
 import { NavLink } from "react-router-dom";
 import Scrollbars from "react-custom-scrollbars";
-
-
+import { detailCourse, createCourseReview } from '../../actions/courseActions';
 
 
 import Header from "../Header/header";
 import avt from "../img/cheems.png"
 
-function MainPage({url}) {
+function MainPage({url, match}) {
     return (
         <div id = "mainPage">
             <VideoFrame url = {url}/>
-            <LowBody/>
+            <LowBody match={match}/>
             
         </div>
     )
@@ -180,19 +179,20 @@ function Lesson({lesson}) {
     )
 }
 
-function LowBody() {
+function LowBody({match}) {
     return(
         <div id = "lowBody">
-            <LowNavBar/>
+            <LowNavBar match={match}/>
             <LowBodyBox/>
         </div>
     )
 }
 
-function LowNavBar() {
+function LowNavBar({match}) {
     return(
         <div id = "lowNavBar">
             <NavItem1 title = "Overview"/>
+            <NavItem3  match={match} title = "Review"/>
             <NavItem2 title= "Quiz" url = "/learner/takeQuiz" />
             <NavItem2 title= "Turorial" url = "/learner/readTutorial" />
         </div>  
@@ -215,6 +215,44 @@ function NavItem1({title}) {
     return(
         <div id = "navItem" onClick = {handleClick}>
                 <h3>{title}</h3>
+        </div>
+    )
+}
+
+
+function NavItem3({title, match}) {
+    const [click, setClick] = useState(false)
+    const handleClick = () => setClick(!click);
+    const closeMenu = () => setClick(false);
+
+    const [rating, setRating] = useState(0);
+    const [comment, setComment] = useState('')
+
+    const dispatch = useDispatch()
+
+    const courseDetail = useSelector(state => state.courseDetail)
+    const { loading, error, course } = courseDetail
+    if (!loading) console.log(course)
+
+    const userLogin = useSelector(state => state.userLogin)
+    const {userInfo} = userLogin
+
+    const courseReviewCreate = useSelector(state => state.courseReviewCreate)
+    const {success: successCourseReview} = courseReviewCreate
+
+    useEffect(() => {
+        dispatch(detailCourse(match.params.id))
+    }, [dispatch])
+
+    return(
+        <div className="nav-item-3">
+            <div id = "navItem" >
+                <h3 onClick = {handleClick} >{title}</h3>
+                <ul className={click? 'nav-menu-rate active' : 'nav-menu-rate'}>
+                    <p style={{color: 'black'}}>Review</p>
+                    <button onClick={closeMenu}>Submit</button>
+                </ul>
+            </div>
         </div>
     )
 }

@@ -60,8 +60,8 @@ const TableCourse = ({match}) => {
               imgCourse={course.image}
               nameCourse={course.name}
               authorCourse={course.authorName}
-              progressScore = {50}
               rateScore={course.rateScore}
+              idCourse={course._id}
           />
         </div>
       );

@@ -146,6 +146,7 @@
     padding: 10px;
     font-size: 20px;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 #navItem #nav-link {
@@ -157,4 +158,20 @@
     color: aqua;
     border-bottom:5px solid #fafafa;
 
+}
+/* Rating */
+.nav-item-3 .nav-menu-rate {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+}
+.nav-item-3 .nav-menu-rate.active {
+    display:block;
+    margin-top: 45px;
+    background: red;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1; 
 }
