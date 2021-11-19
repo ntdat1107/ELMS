@@ -51,7 +51,7 @@ const TableCourse = ({match}) => {
     }, [dispatch])
   
     const [pageNumber, setPageNumber] = useState(0);  
-    const coursesPerPage = 12;
+    const coursesPerPage = 9;
     const pagesVisited = pageNumber * coursesPerPage;
     // key={index} imgSrcCourse={data.image}
     //           Name={data.name} Desc={data.description} Author={data.authorName} Type={data.typeCourse}
