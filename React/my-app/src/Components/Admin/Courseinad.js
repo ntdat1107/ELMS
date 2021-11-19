@@ -14,25 +14,36 @@ function Courseinad() {
     useEffect(() => {
         dispatch(listCourses());
     }, [dispatch]);
-    const display = courses.map((data, index) => {
+    if (loading) {
+        return <h1>Loading</h1>;
+    } else if (error) {
         return (
-            <CourseCpninad
-                key={index}
-                imgSrcCourse={data.image}
-                Name={data.name}
-                Desc={data.description}
-                Author={data.authorName}
-                Type={data.typeCourse}
-                rateScore={data.rateScore}
-                totalRate={data.rateNum}
-                linkName={`/course/${data.fastName}`}
-            />
+            <div id="err">
+                <h1>ERROR</h1>
+            </div>
         );
-    });
-    return (
-        <div id="courseinad">
-            <Scrollbars>{display}</Scrollbars>
-        </div>
-    );
+    } else
+        return (
+            <div id="courseinad">
+                <Scrollbars>
+                    {courses &&
+                        courses.map((data, index) => {
+                            return (
+                                <CourseCpninad
+                                    key={index}
+                                    imgSrcCourse={data.image}
+                                    Name={data.name}
+                                    Desc={data.description}
+                                    Author={data.authorName}
+                                    Type={data.typeCourse}
+                                    rateScore={data.rateScore}
+                                    totalRate={data.rateNum}
+                                    linkName={`/course/${data.fastName}`}
+                                />
+                            );
+                        })}
+                </Scrollbars>
+            </div>
+        );
 }
 export default Courseinad;

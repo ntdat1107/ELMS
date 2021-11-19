@@ -65,7 +65,7 @@ function ListAnnounceCpn({ history, Addition_Part }) {
             <div id="content-block">
                 {conversations.map((conversation) => {
                     return (
-                        <div id={conversation.stt} className={click == conversation.stt ? "choose active" : "choose"}>
+                        <div id={conversation._id} className={click == conversation._id ? "choose active" : "choose"}>
                             <div id="sender-receiver">
                                 <p>From: {conversation.sender}</p>
                                 <p>To: {conversation.receiver}</p>
