@@ -5,7 +5,7 @@ const router = express.Router()
 
 
 router.route('/').get(getCourse)
-router.route('/:id/reviews').post(protect, createCourseReview)
+router.route('/:id/:token/reviews').post(protect, createCourseReview)
 
 
 router.route('/:id').get(getCourseByFastname)
