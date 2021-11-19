@@ -1,27 +1,49 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Scrollbars } from "react-custom-scrollbars";
 import remove from "../Admin/image/delete.png";
 import moreInfo from "../Admin/image/moreInfo.png";
 import DetailCpn from "./DetailCpn";
+import InforUser from "./InforUser";
+import { deleteUserNow } from "../../actions/userActions";
 import "./TableManage.css";
 
 function TableManage({ heightSB, listLearner }) {
     const users = listLearner;
 
-    const [click, setClick] = useState(1);
+    const dispatch = useDispatch();
+    const userDelete = useSelector((state) => state.userDelete);
+    const { success: successDelete } = userDelete;
+    useEffect(() => {}, [dispatch, successDelete]);
 
-    function handleClick(e) {
+    /* Set Click For More Information Box */
+    const [click1, setClick1] = useState(0);
+
+    function handleClick1(e) {
         e.stopPropagation();
-        if (click !== 0) {
-            click === e.target.id ? setClick(0) : setClick(e.target.id);
+        if (click1 !== 0) {
+            click1 === e.target.id ? setClick1(0) : setClick1(e.target.id);
         } else {
-            setClick(e.target.id);
+            setClick1(e.target.id);
         }
     }
 
     const closeBox = () => {
-        setClick(0);
+        setClick1(0);
     };
+    /* ________________________________________________________________ */
+
+    /* Set Click for Delete Confirm Box */
+
+    function handleClick2(e) {
+        e.stopPropagation();
+        if (window.confirm("Are you sure that you want to delete this user"))
+            dispatch(deleteUserNow(e.target.id));
+    }
+
+    /* ________________________________________________________________ */
+
+    /* ________________________________________________________________ */
 
     var stt = 0;
 
@@ -35,11 +57,27 @@ function TableManage({ heightSB, listLearner }) {
                     <DetailCpn email={user.email} FN={user.firstName} LN={user.lastName} />{" "}
                 </div>
                 <div id="moreInfo">
-                    <img id={user._id} className="moreIcon" src={moreInfo} alt="MoreInfromationIcon" onClick={handleClick} width="118" height="18" />
+                    <img
+                        id={user._id}
+                        onClick={handleClick1}
+                        className="moreIcon"
+                        src={moreInfo}
+                        alt="MoreInfromationIcon"
+                        width="118"
+                        height="18"
+                    />
                 </div>
 
                 <div id="delete">
-                    <img id="delIcon" src={remove} alt="Delete Icon" width="35" height="auto" />
+                    <img
+                        id={user._id}
+                        onClick={handleClick2}
+                        className="delIcon"
+                        src={remove}
+                        alt="Delete Icon"
+                        width="35"
+                        height="auto"
+                    />
                 </div>
             </div>
         );
@@ -67,24 +105,8 @@ function TableManage({ heightSB, listLearner }) {
                 if (user.isIns) Role = "Instructor";
 
                 return (
-                    <div className={click == user._id ? "moreInfomation open" : "moreInfomation"}>
-                        <div className="modal-overlay"></div>
-                        <div className="modal-body">
-                            <p id="close" onClick={closeBox}>
-                                X
-                            </p>
-                            <div className="useInfor">
-                                <img id="userAvt" src={user.avatar} alt="UserAvt" width="200px" />
-                                <p>{`Full Name: ${user.firstName}  ${user.lastName}`}</p>
-                                <p>{`Role: ${Role}`}</p>
-                                <p>{`Email: ${user.email}`}</p>
-                                <p>{`User_Id: ${user._id}`}</p>
-                                <p>{`Account ID (username): ${user.accountID}`}</p>
-                                <p>BirthDay: 01/01/2001</p>
-                                <p>Favourite Programing Language: Javascript, KotLin</p>
-                                <p>Description: I love Javascript, KotLin. My idol is Lam Thien Toan!</p>
-                            </div>
-                        </div>
+                    <div>
+                        <InforUser user={user} click1={click1} closeBox={closeBox} Role={Role} />
                     </div>
                 );
             })}

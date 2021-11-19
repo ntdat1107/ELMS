@@ -1,13 +1,32 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
-import { courseDetailReducer, courseDetailRateReducer, courseListReducer, courseReviewCreateReducer } from "./Reducers/courseReducers";
-import { userDetailByIDReducer, userLoginReducer, userProfileReducer, userRegisterReducer, userUpdateProfileReducer } from "./Reducers/userReducers";
-import { addCourseReducer, courseDeleteReducer, enrollCourseReducer, getMyLearnersIDReducer, myCoursesReducer, myOneCourseReducer } from "./Reducers/myCoursesReducers";
+import {
+    courseDetailReducer,
+    courseDetailRateReducer,
+    courseListReducer,
+    courseReviewCreateReducer,
+} from "./Reducers/courseReducers";
+import {
+    userDetailByIDReducer,
+    userLoginReducer,
+    userProfileReducer,
+    userRegisterReducer,
+    userUpdateProfileReducer,
+    userDeleteReducer,
+} from "./Reducers/userReducers";
+import {
+    addCourseReducer,
+    courseDeleteReducer,
+    enrollCourseReducer,
+    getMyLearnersIDReducer,
+    myCoursesReducer,
+    myOneCourseReducer,
+} from "./Reducers/myCoursesReducers";
 import { myLearnerReducer } from "./Reducers/myLearnerReducers";
 import { sysInsReducer, sysLearnerReducer } from "./Reducers/adminReducers";
 import { conversationsenderReducer, conversationrcvReducer } from "./Reducers/conversationReducers";
-import {lessonListReducer, lessonDetailReducer} from "./Reducers/lessonReducers" 
+import { lessonListReducer, lessonDetailReducer } from "./Reducers/lessonReducers";
 
 const reducer = combineReducers({
     courseList: courseListReducer,
@@ -18,6 +37,7 @@ const reducer = combineReducers({
     userProfile: userProfileReducer,
     userRegister: userRegisterReducer,
     userUpdateProfile: userUpdateProfileReducer,
+    userDelete: userDeleteReducer,
     myCourses: myCoursesReducer,
     myLearner: myLearnerReducer,
     sysLearner: sysLearnerReducer,
@@ -29,12 +49,16 @@ const reducer = combineReducers({
     getMyLearnersID: getMyLearnersIDReducer,
     courseDelete: courseDeleteReducer,
     lessonList: lessonListReducer,
-    lessonDetail: lessonDetailReducer
+    lessonDetail: lessonDetailReducer,
 });
 
-const userInfoFromStorage = localStorage.getItem("userInfo") ? JSON.parse(localStorage.getItem("userInfo")) : null;
+const userInfoFromStorage = localStorage.getItem("userInfo")
+    ? JSON.parse(localStorage.getItem("userInfo"))
+    : null;
 
-const userProfileFromStorage = localStorage.getItem("userDetail") ? JSON.parse(localStorage.getItem("userDetail")) : null;
+const userProfileFromStorage = localStorage.getItem("userDetail")
+    ? JSON.parse(localStorage.getItem("userDetail"))
+    : null;
 
 const initialStore = {
     userLogin: { userInfo: userInfoFromStorage },
@@ -42,6 +66,10 @@ const initialStore = {
 };
 const middleware = [thunk];
 
-const store = createStore(reducer, initialStore, composeWithDevTools(applyMiddleware(...middleware)));
+const store = createStore(
+    reducer,
+    initialStore,
+    composeWithDevTools(applyMiddleware(...middleware))
+);
 
 export default store;
