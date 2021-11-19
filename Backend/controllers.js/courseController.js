@@ -34,7 +34,7 @@ const getCourseByFastname = asyncHandler(async (req, res) => {
     }
 })
 // @desc    Creat new review
-// @route   POST /api/courses/:id/reviews
+// @route   POST /api/courses/:id/:token/reviews
 // @access  Private
 const createCourseReview = asyncHandler(async (req, res) => {
     const { rating, comment } = req.body
