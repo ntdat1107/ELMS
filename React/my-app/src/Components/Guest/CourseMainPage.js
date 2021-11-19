@@ -9,6 +9,7 @@ import "./CSS/CourseMainPage.css"
 import cPython   from "./imgs/coursePython.png"
 import cCpp  from "./imgs/courseCpp.png"
 
+import qs from 'query-string'
 
 import { NavLink } from "react-router-dom";
 
@@ -59,8 +60,7 @@ function UpperBody({course}) {
     )
 }
 
-
-function CourseMainPageTest({ match, history }) {
+function CourseMainPage({ match, history}) {
     const dispatch = useDispatch()
     const userLogin = useSelector(state => state.userLogin)
     const {userInfo} = userLogin
@@ -68,17 +68,13 @@ function CourseMainPageTest({ match, history }) {
     //     if (!userInfo) history.push('/login')
     //     // else if (!userInfo.isIns) push error not type
     // }, [history, userInfo])
-
-
     const courseDetail = useSelector(state => state.courseDetail)
     const { loading, error, course } = courseDetail
 
     useEffect(() => {
         dispatch(detailCourse(match.params.id))
     }, [dispatch])
-
     console.log(course)
-
     return (
         <div id="courseMainPage">
             <Header link="/" typeUserTemp={-1} />
@@ -132,4 +128,4 @@ function BackButton({url}) {
 }
 
 export {BackButton};
-export default CourseMainPageTest;
+export default CourseMainPage;
