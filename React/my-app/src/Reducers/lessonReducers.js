@@ -1,4 +1,4 @@
-import { LESSON_LIST_FAIL, LESSON_LIST_SUCCESS, LESSON_LIST_FAIL, LESSON_DETAIL_REQUEST, LESSON_DETAIL_SUCCESS, LESSON_DETAIL_FAIL } from "../constants/lessonConstants"
+import { LESSON_LIST_FAIL, LESSON_LIST_SUCCESS, LESSON_LIST_REQUEST, LESSON_DETAIL_REQUEST, LESSON_DETAIL_SUCCESS, LESSON_DETAIL_FAIL } from "../constants/lessonConstants"
 
 export const lessonListReducer = (state = { lessons: [] }, action) => {
     switch (action.type) {

@@ -4,11 +4,11 @@ import { LESSON_LIST_REQUEST, LESSON_LIST_SUCCESS, LESSON_LIST_FAIL,
 import axios from 'axios'
 
 
-export const listLessons = () => async (dispatch) => {
+export const listLessons = (courseFastname) => async (dispatch) => {
     try {
         dispatch({ type: LESSON_LIST_REQUEST})
 
-        const { data } = await axios.get(`/api/lesson/`)
+        const { data } = await axios.get(`/api/lessons/${courseFastname}`)
         dispatch({
             type: LESSON_LIST_SUCCESS,
             payload: data
@@ -21,11 +21,11 @@ export const listLessons = () => async (dispatch) => {
     }
 }
 
-export const detailCourse = (id) => async (dispatch) => {
+export const detailLesson = (courseFastname, courseNum) => async (dispatch) => {
     try {
         dispatch({ type: LESSON_DETAIL_REQUEST })
 
-        const { data } = await axios.get(`/api/lesson/${id}`)
+        const { data } = await axios.get(`/api/lessons/${courseFastname}/${courseNum}`)
         dispatch({
             type: LESSON_DETAIL_SUCCESS,
             payload: data

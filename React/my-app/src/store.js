@@ -7,6 +7,7 @@ import { addCourseReducer, courseDeleteReducer, enrollCourseReducer, getMyLearne
 import { myLearnerReducer } from "./Reducers/myLearnerReducers";
 import { sysInsReducer, sysLearnerReducer } from "./Reducers/adminReducers";
 import { conversationsenderReducer, conversationrcvReducer } from "./Reducers/conversationReducers";
+import {lessonListReducer, lessonDetailReducer} from "./Reducers/lessonReducers" 
 
 const reducer = combineReducers({
     courseList: courseListReducer,
@@ -26,7 +27,9 @@ const reducer = combineReducers({
     myOneCourse: myOneCourseReducer,
     enrollCourse: enrollCourseReducer,
     getMyLearnersID: getMyLearnersIDReducer,
-    courseDelete: courseDeleteReducer
+    courseDelete: courseDeleteReducer,
+    lessonList: lessonListReducer,
+    lessonDetail: lessonDetailReducer
 });
 
 const userInfoFromStorage = localStorage.getItem("userInfo") ? JSON.parse(localStorage.getItem("userInfo")) : null;
