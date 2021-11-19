@@ -14,9 +14,9 @@ function CourseView({match, history}) {
 
     const lessonDetail = useSelector(state => state.lessonDetail)
     const {loading, error, lesson} = lessonDetail 
-    console.log(lesson)
-    console.log(match.params.id)
-    console.log(match.params.token)
+    // console.log(lesson)
+    // console.log(match.params.id)
+    // console.log(match.params.token)
 
     useEffect(() => {
         dispatch(detailLesson(match.params.id, match.params.token))
@@ -25,8 +25,8 @@ function CourseView({match, history}) {
     return(
         <div id = "CV">
             <BackButton url = "/" style = {{"z-index" : "1000"}} />
-            <OutsidePage/>
-            <MainPage match={match} url = "https://www.youtube.com/watch?v=D9G1VOjN_84"/>
+            <OutsidePage match = {match}/>
+            <MainPage match={match} url={lesson.lessonUrl} description={lesson.lessonDescription}/>
         </div>
     )
 }
