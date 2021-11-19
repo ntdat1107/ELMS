@@ -4,33 +4,11 @@ import { Scrollbars } from "react-custom-scrollbars";
 import "./ListAnnouncement.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserProfile } from "../../actions/userActions";
+import { listconversationsSender, listconversationsRcv } from "../../actions/conversationActions";
 import axios from "axios";
 
 function ListAnnounceCpn({ history, Addition_Part }) {
-    /* _____________Current User_____________ */
-    const dispatch = useDispatch();
-    const userProfile = useSelector((state) => state.userProfile);
-    const { userDetail } = userProfile;
-    useEffect(() => {
-        if (!userDetail) {
-            dispatch(getUserProfile("profile"));
-        }
-    }, [dispatch, history, userDetail]);
-    console.log(userDetail && userDetail._id);
-
-    const [conversations, setConversations] = useState([]);
-    /* useEffect(() => {
-        const getConversations = async () => {
-            try {
-                const res = await axios.get("/api/conversations/sender/" + (userDetail && userDetail._id));
-                setConversations(res.data);
-            } catch (err) {
-                console.log(err);
-            }
-        };
-        getConversations();
-    }, [userDetail && userDetail._id]); */
-    /* _____________________________________________ */
+    const conversations = [];
 
     const [click, setClick] = useState(1);
 
@@ -64,7 +42,7 @@ function ListAnnounceCpn({ history, Addition_Part }) {
                     <Scrollbars>
                         {conversations.map((conversation) => {
                             return (
-                                <button className="Announcpn" id={conversation.stt} onClick={parentClick}>
+                                <button className="Announcpn" id={conversation._id} onClick={parentClick}>
                                     <p className="receiver" onClick={handleClick}>
                                         To: {conversation.receiver}
                                     </p>

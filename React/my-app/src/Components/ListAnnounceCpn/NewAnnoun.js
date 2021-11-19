@@ -39,7 +39,6 @@ function NewAnnoun({ typeUserTemp }) {
     const [click, setClick] = useState(false);
     const OpenNewAnnoun = () => setClick(true);
     const CloseNewAnnounBox = () => setClick(false);
-    console.log(click);
 
     return (
         <div className="new-announ">
