@@ -73,13 +73,13 @@ function TableManage({ heightSB, listLearner }) {
                             <div className="useInfor">
                                 <img id="userAvt" src={user.avatar} alt="UserAvt" width="200px" />
                                 <p>{`Full Name: ${user.firstName}  ${user.lastName}`}</p>
-                                <p>{`User_Id: ${user._id}`}</p>
                                 <p>{`Email: ${user.email}`}</p>
-                                <p>{`Username: ${user.accountID}`}</p>
                                 <p>{`Role: ${Role}`}</p>
+                                <p>{`User_Id: ${user._id}`}</p>
+                                <p>{`Username: ${user.accountID}`}</p>
                                 <p>BirthDay: 01/01/2001</p>
-                                <p>Favourite Programing Language: Javascript, KotLin!</p>
-                                <p>Description: I love Javascript, KotLin. I love SKT T1 too!</p>
+                                <p>Favourite Programing Language: Javascript, KotLin</p>
+                                <p>Description: I love Javascript, KotLin. My idol is Lam Thien Toan!</p>
                             </div>
                         </div>
                     </div>
