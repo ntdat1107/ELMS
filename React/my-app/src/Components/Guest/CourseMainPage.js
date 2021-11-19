@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import Header           from '../Header/header';
+import Header  from '../Header/header';
 import {CourseBoard}      from "./Explorer";
 import Scrollbars from "react-custom-scrollbars"
 import './CSS/HomePage.css'
@@ -9,11 +9,9 @@ import "./CSS/CourseMainPage.css"
 import cPython   from "./imgs/coursePython.png"
 import cCpp  from "./imgs/courseCpp.png"
 
-import qs from 'query-string'
-
 import { NavLink } from "react-router-dom";
-
 import { detailCourse } from '../../actions/courseActions';
+import { enrollNewCourse } from '../../actions/myCoursesAction';
 
 
 const courses = {
@@ -34,7 +32,18 @@ const courses = {
     }
 ]};
 
-function UpperBody({course}) { 
+function UpperBody({course, isHave, match}) { 
+
+    const dispatch = useDispatch()
+    const enrollCourse = useSelector(state => state.enrollCourseReducer)
+    const userLogin = useSelector(state => state.userLogin)
+    const {userInfo} = userLogin
+    const handleEnroll = (e) => {
+        console.log('a')
+        // e.preventDefault()
+        console.log(userInfo._id, match.params.id)
+        // dispatch(enrollNewCourse(match.params.id))
+    }
     return(
         <div id = "upperBody">
             <div id = "informationBox">
@@ -49,11 +58,10 @@ function UpperBody({course}) {
             </div>
             <div id = "imageBox">
                 <img src = {course.image} alt="img" style = {{width: "350px", height: "180px", borderRadius: "5px"}}/>
-                <button id = "enrollButton" style={{height: "50px"}}>
+                <button onClick={console.log('a')} id = "enrollButton" style={{height: "150px"}}>
                     <h3>
                         Enroll course
                     </h3>
-
                 </button>
             </div>
         </div>  
@@ -70,21 +78,25 @@ function CourseMainPage({ match, history}) {
     // }, [history, userInfo])
     const courseDetail = useSelector(state => state.courseDetail)
     const { loading, error, course } = courseDetail
-
+    const [isHave, setIsHave] = useState(false)
     useEffect(() => {
         dispatch(detailCourse(match.params.id))
     }, [dispatch])
-    console.log(course)
-    return (
-        <div id="courseMainPage">
-            <Header link="/" typeUserTemp={-1} />
-            <div id = "bodyPage">
-                <BackButton url = "/"/>
-                <UpperBody course = {course}/>
-                <LowerBody course = {course}/>
+    if (loading) return (<div id="loading">Loading</div>)
+    else if (error) return (<div id="error">ERROR</div>)
+    else{
+        // if (course.learnerList && course.learnerList.indexOf(userInfo._id) != -1) setIsHave(true)
+        return (
+            <div id="courseMainPage">
+                <Header link="/" typeUserTemp={-1} />
+                <div id = "bodyPage">
+                    <BackButton url = "/"/>
+                    <UpperBody course = {course} isHave={isHave}/>
+                    <LowerBody course = {course}/>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 

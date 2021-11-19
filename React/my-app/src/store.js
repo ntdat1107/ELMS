@@ -3,7 +3,7 @@ import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 import { courseDetailReducer, courseListReducer, courseReviewCreateReducer } from "./Reducers/courseReducers";
 import { userDetailByIDReducer, userLoginReducer, userProfileReducer, userRegisterReducer, userUpdateProfileReducer } from "./Reducers/userReducers";
-import { addCourseReducer, myCoursesReducer, myOneCourseReducer } from "./Reducers/myCoursesReducers";
+import { addCourseReducer, enrollCourseReducer, myCoursesReducer, myOneCourseReducer } from "./Reducers/myCoursesReducers";
 import { myLearnerReducer } from "./Reducers/myLearnerReducers";
 import { sysInsReducer, sysLearnerReducer } from "./Reducers/adminReducers";
 import { conversationReducer } from "./Reducers/conversationReducers";
@@ -24,6 +24,7 @@ const reducer = combineReducers({
     userDetailByID: userDetailByIDReducer,
     myOneCourse: myOneCourseReducer,
     conversationList: conversationReducer,
+    enrollCourse: enrollCourseReducer
 });
 
 const userInfoFromStorage = localStorage.getItem("userInfo") ? JSON.parse(localStorage.getItem("userInfo")) : null;
