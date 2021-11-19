@@ -47,7 +47,6 @@ const TableCourse = ({match}) => {
   
     const coursesPerPage = 12;
     const pagesVisited = pageNumber * coursesPerPage;
-    console.log(courses)
     const bigCourses = courses.slice(pagesVisited, pagesVisited + coursesPerPage);
   
     // key={index} imgSrcCourse={data.image}
@@ -61,7 +60,7 @@ const TableCourse = ({match}) => {
               nameCourse={course.name}
               authorCourse={course.authorName}
               rateScore={course.rateScore}
-              idCourse={course._id}
+              fastNameCourse={course.fastName}
           />
         </div>
       );

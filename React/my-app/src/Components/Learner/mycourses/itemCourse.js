@@ -71,7 +71,7 @@ function ItemCourse({
     authorCourse,
     imgCourse,
     rateScore,
-    idCourse,
+    fastNameCourse,
     callback = () => {}
 }) {
     return (
@@ -81,7 +81,7 @@ function ItemCourse({
                 <OpenMore />
             </div>
             <div id="nameCourse">
-                <Link className="Link-coursename" to={`/course/${idCourse}/1`}>
+                <Link className="Link-coursename" to={`/course/${fastNameCourse}/1`}>
                     <p>{nameCourse}</p>
                 </Link>
             </div>

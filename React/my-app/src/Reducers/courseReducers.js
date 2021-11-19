@@ -1,5 +1,6 @@
 import { COURSE_LIST_REQUEST, COURSE_LIST_SUCCESS, COURSE_LIST_FAIL,
     COURSE_DETAIL_REQUEST, COURSE_DETAIL_SUCCESS, COURSE_DETAIL_FAIL,
+    COURSE_DETAIL_RATE_REQUEST, COURSE_DETAIL_RATE_SUCCESS, COURSE_DETAIL_RATE_FAIL,
     COURSE_CREATE_REVIEW_REQUEST, COURSE_CREATE_REVIEW_SUCCESS, COURSE_CREATE_REVIEW_FAIL } 
     from "../constants/courseConstants"
 
@@ -37,6 +38,18 @@ export const courseDetailReducer = (state = { course: {} }, action) => {
         case COURSE_DETAIL_SUCCESS:
             return { loading: false, course: action.payload }
         case COURSE_DETAIL_FAIL:
+            return { loading: false, error: action.payload}
+        default:
+            return state
+    }
+}
+export const courseDetailRateReducer = (state = { course: {} }, action) => {
+    switch (action.type) {
+        case COURSE_DETAIL_RATE_REQUEST:
+            return { loading: true, course: {} }
+        case COURSE_DETAIL_RATE_SUCCESS:
+            return { loading: false, course: action.payload }
+        case COURSE_DETAIL_RATE_FAIL:
             return { loading: false, error: action.payload}
         default:
             return state
