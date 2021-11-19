@@ -40,8 +40,28 @@ const checkIns = asyncHandler(async (req, res, next) => {
     }
     else {
         res.status(401)
-        throw new Error('Not authorized as an instructor')
+        throw new Error('Not authorized as an Instructor')
     }
 })
 
-export { protect, checkIns }
+const checkLearner = asyncHandler(async (req, res, next) => {
+    if (req.user && req.user.isLearner) {
+        const learner = await User.findById(req.user._id)
+        const course = await Course.findOne({fastName: req.params.fastName})
+        if (course) req.course = course
+        if (learner && learner.hasCourse.indexOf(course._id) == -1) {
+            next()
+        }
+        else {
+            res.status(401)
+            throw new Error('You have enrolled this course!')
+        }
+    }
+    else {
+        res.status(401)
+        throw new Error('Not authorized as a Learner')
+    }
+})
+
+
+export { protect, checkIns, checkLearner }
