@@ -89,25 +89,22 @@ export const addNewCourse =
     }
 }
 
-export const enrollNewCourse = (id) => async (dispatch, getState) => {
+export const enrollNewCourse = (fastName) => async (dispatch, getState) => {
     try {
         dispatch({
             type: ENROLL_COURSE_REQUEST
         })
         const { userLogin: { userInfo } } = getState() 
-
         const config = {
             headers: {
                 'Content-type': 'application/json',
                 Authorization: `Bearer ${userInfo.token}`
             }
         }
-
-        const { data } = await axios.post(`/api/mycourses/enroll/${id}`, config)
+        await axios.post(`/api/mycourses/enroll/${fastName}`, config)
 
         dispatch({
-            type: ENROLL_COURSE_SUCCESS,
-            payload: data
+            type: ENROLL_COURSE_SUCCESS
         })
     } catch (error) {
         dispatch({
@@ -164,7 +161,7 @@ export const deleteCourseNow = (fastName) => async (dispatch, getState) => {
             }
         }
 
-        const { data } = await axios.delete(`/api/mycourses/${fastName}`, config)
+        await axios.delete(`/api/mycourses/${fastName}`, config)
 
         dispatch({
             type: DELETE_COURSE_SUCCESS

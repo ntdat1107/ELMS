@@ -32,18 +32,7 @@ const courses = {
     }
 ]};
 
-function UpperBody({course, isHave, match}) { 
-
-    const dispatch = useDispatch()
-    const enrollCourse = useSelector(state => state.enrollCourseReducer)
-    const userLogin = useSelector(state => state.userLogin)
-    const {userInfo} = userLogin
-    const handleEnroll = (e) => {
-        console.log('a')
-        // e.preventDefault()
-        console.log(userInfo._id, match.params.id)
-        // dispatch(enrollNewCourse(match.params.id))
-    }
+function UpperBody({course, isHave, handleEnroll}) { 
     return(
         <div id = "upperBody">
             <div id = "informationBox">
@@ -58,7 +47,7 @@ function UpperBody({course, isHave, match}) {
             </div>
             <div id = "imageBox">
                 <img src = {course.image} alt="img" style = {{width: "350px", height: "180px", borderRadius: "5px"}}/>
-                <button onClick={console.log('a')} id = "enrollButton" style={{height: "150px"}}>
+                <button onClick={handleEnroll} id = "enrollButton" style={{height: "150px"}}>
                     <h3>
                         Enroll course
                     </h3>
@@ -69,16 +58,20 @@ function UpperBody({course, isHave, match}) {
 }
 
 function CourseMainPage({ match, history}) {
+    const [isHave, setIsHave] = useState(false)
     const dispatch = useDispatch()
     const userLogin = useSelector(state => state.userLogin)
     const {userInfo} = userLogin
-    // useEffect(() => {
-    //     if (!userInfo) history.push('/login')
-    //     // else if (!userInfo.isIns) push error not type
-    // }, [history, userInfo])
+    const enrollCourse = useSelector(state => state.enrollCourse)
+    const {success} = enrollCourse
+    const handleEnroll = (e) => {
+        // console.log('a')
+        // e.preventDefault()
+        // console.log(userInfo._id, match.params.id)
+        dispatch(enrollNewCourse(match.params.id))
+    }
     const courseDetail = useSelector(state => state.courseDetail)
     const { loading, error, course } = courseDetail
-    const [isHave, setIsHave] = useState(false)
     useEffect(() => {
         dispatch(detailCourse(match.params.id))
     }, [dispatch])
@@ -91,8 +84,8 @@ function CourseMainPage({ match, history}) {
                 <Header link="/" typeUserTemp={-1} />
                 <div id = "bodyPage">
                     <BackButton url = "/"/>
-                    <UpperBody course = {course} isHave={isHave}/>
-                    <LowerBody course = {course}/>
+                    <UpperBody course = {course} isHave={isHave} handleEnroll={handleEnroll}/>
+                    <LowerBody course = {course} />
                 </div>
             </div>
         )
