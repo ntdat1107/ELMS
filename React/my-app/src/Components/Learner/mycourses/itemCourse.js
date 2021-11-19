@@ -45,9 +45,6 @@ function OpenMore() {
     )
 }
 function OpenRate({imgCourse, nameCourse, authorCourse, rateScore}) {
-    const [click, setClick] = useState(false)
-    const handleClick = () => setClick(!click);
-    const closeMenuRate = () => setClick(false);
     let star = star0
     // Choose Star Img
     if (rateScore > 0 && rateScore < 1) star = star05
@@ -62,19 +59,9 @@ function OpenRate({imgCourse, nameCourse, authorCourse, rateScore}) {
     else if (rateScore === 5) star = star5
     return (        
         <div className="rate-btn">            
-            <div id="rate" onClick={handleClick}>
-                <img src={star} alt="Img rating" style={{cursor: "pointer"}} id={click? "rateClose" : "rateOpen"}/>
+            <div id="rate">
+                <img src={star} alt="Img rating" style={{cursor: "pointer"}}/>
             </div>            
-            <ul className={click? 'nav-menu-rate active' : 'nav-menu-rate'}>
-                <div>
-                <RatingCourse 
-                    imgCourse = {imgCourse} 
-                    nameCourse = {nameCourse} 
-                    authorCourse = {authorCourse}
-                    rateScore = {rateScore}
-                /></div>
-                <div><img src={deleteIcon} alt="Delete Icon" onClick={closeMenuRate} style={{cursor: 'pointer', height: '20px', width: '20px'}} /></div>
-            </ul>
         </div>
     )
 }
