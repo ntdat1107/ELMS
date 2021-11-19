@@ -132,16 +132,6 @@
     position: relative;
 }
 
-#admincourse #courseinad #add-taskIcon .detail-box.open #below #green #plus-icon {
-    cursor: pointer;
-    position: absolute;
-    right: 10px;
-}
-
-#admincourse #courseinad #add-taskIcon .detail-box.open #below #green #plus-icon:hover {
-    box-shadow: 1px 1px 3px black;
-}
-
 #admincourse #courseinad #add-taskIcon .detail-box.open #below #name {
     display: flex;
     padding-left: 12px;
@@ -150,19 +140,10 @@
 }
 #admincourse #courseinad #add-taskIcon .detail-box.open #below #name-of {
     padding-left: 20px;
-    cursor: pointer;
 }
 
 #admincourse #courseinad #add-taskIcon .detail-box.open #below #name-of:hover {
     text-decoration-line: underline;
-}
-
-#admincourse #courseinad #add-taskIcon .detail-box.open #below #name #right-icon {
-    cursor: pointer;
-}
-
-#admincourse #courseinad #add-taskIcon .detail-box.open #below #name #right-icon:hover {
-    box-shadow: 1px 1px 3px black;
 }
 
 #admincourse #courseinad #add-taskIcon .detail-box.open #close {

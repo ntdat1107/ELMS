@@ -1,11 +1,12 @@
 #searchTable {
-    padding: 5px 5px 5px 80px;
+    padding: 5px 5px 5px 20px;
+    position: relative;
+    margin-top: 10px;
+    width: 1200px;
     height: 50px;
     border: 1px solid black;
     border-radius: 15px 15px 0px 0px;
     -webkit-right-radius: 15px 15px 0px 0px;
-    position: relative;
-    width: 1200px;
 }
 
 #searchNIC {
@@ -25,6 +26,10 @@
     top: 13px;
     right: 20px;
     cursor: pointer;
+}
+
+#searchTable label {
+    font-size: 18px;
 }
 /*______________________________*/
 
@@ -141,7 +146,7 @@
     position: relative;
     top: 20vh;
     left: 25vw;
-    background-color: rgb(240, 238, 255);
+    background-color: rgb(248, 246, 255);
     height: 70vh;
     width: 70vw;
     border-radius: 15px;

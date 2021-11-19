@@ -28,16 +28,11 @@
     font-size: 14px;
 }
 
-#table-learner #row-2 #searchTable {
-    margin-top: 10px;
-    margin-left: 280px;
-    padding-left: 40px;
+#table-learner #row-2 {
+    margin-left: 310px;
 }
+
 #table-learner #row-2 #tableinstruc {
-    margin-left: 280px;
     margin-bottom: 10px;
     height: 380px;
-}
-#table-learner #row-2 label {
-    font-size: 18px;
 }

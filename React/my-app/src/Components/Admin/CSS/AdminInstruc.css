@@ -1,51 +1,20 @@
 /*File css này dùng cho cả Manage Instructor và Learner*/
-#searchInstruc {
-    margin-top: 150px;
-    margin-left: 310px;
-    padding: 5px 5px 5px 80px;
-    width: 1200px;
-    height: 50px;
-    border: 1px solid black;
-    border-radius: 15px 15px 0px 0px;
-    -webkit-right-radius: 15px 15px 0px 0px;
-    position: relative;
-}
 
-#searchInstruc #searchNIC-label {
-    font-size: 18px;
-}
-
-#searchInstruc #searchNIC {
-    font-size: 18px;
-    margin-top: 5px;
-    margin-left: 10px;
-    margin-right: 50px;
-    size: 32px;
-    width: 250px;
-    height: 30px;
-    border-radius: 45px;
-    -webkit-border-radius: 45px;
-    padding-left: 15px;
-}
-
-#searchInstruc #searchInsIcon {
-    position: absolute;
-    top: 13px;
-    right: 20px;
-    cursor: pointer;
-}
 /*______________________________*/
 
 #admininstruc {
+    margin-top: 150px;
+    margin-left: 310px;
     background-image: url("../image/Background.png");
 }
 #adminlearner {
+    margin-top: 150px;
+    margin-left: 310px;
     background-image: url("../image/Background.png");
 }
 
 #tableinstruc {
     font-size: 20px;
-    margin-left: 310px;
     margin-bottom: 30px;
     margin-right: 23px;
     border: 1px solid black;

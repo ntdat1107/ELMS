@@ -47,7 +47,7 @@ function TableManage({ heightSB, listLearner }) {
     return (
         <div id="tableinstruc">
             <div id="titletable">
-                <p className="tt-userStt">Num</p>
+                <p className="tt-userStt">No.</p>
                 <p className="tt-email">Email</p>
                 <p className="tt-FN">First Name</p>
                 <p className="tt-LN">Last Name</p>
@@ -58,6 +58,9 @@ function TableManage({ heightSB, listLearner }) {
             <div id="contenttable">
                 <Scrollbars style={{ width: "100%", height: 400 }}>{displayUsers}</Scrollbars>
             </div>
+
+            {/* Information of User */}
+
             {users.map((user) => {
                 var Role = "";
                 if (user.isLearner) Role = "Learner";
@@ -73,10 +76,10 @@ function TableManage({ heightSB, listLearner }) {
                             <div className="useInfor">
                                 <img id="userAvt" src={user.avatar} alt="UserAvt" width="200px" />
                                 <p>{`Full Name: ${user.firstName}  ${user.lastName}`}</p>
-                                <p>{`Email: ${user.email}`}</p>
                                 <p>{`Role: ${Role}`}</p>
+                                <p>{`Email: ${user.email}`}</p>
                                 <p>{`User_Id: ${user._id}`}</p>
-                                <p>{`Username: ${user.accountID}`}</p>
+                                <p>{`Account ID (username): ${user.accountID}`}</p>
                                 <p>BirthDay: 01/01/2001</p>
                                 <p>Favourite Programing Language: Javascript, KotLin</p>
                                 <p>Description: I love Javascript, KotLin. My idol is Lam Thien Toan!</p>
@@ -85,6 +88,8 @@ function TableManage({ heightSB, listLearner }) {
                     </div>
                 );
             })}
+
+            {/* _____________________________________________________________ */}
         </div>
     );
 }

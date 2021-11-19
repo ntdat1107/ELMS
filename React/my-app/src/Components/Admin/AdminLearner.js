@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import SearchInstruc from "./SearchInstruc";
+import SearchInTable from "../TableManage/SearchInTable";
 import SideBar from "../SideBar/SideBar";
 import Header from "../Header/header";
 import TableManage from "../TableManage/TableManage";
@@ -28,7 +28,7 @@ function AdminLearner({ history }) {
                 <Header />
             </div>
             <div id="adminlearner">
-                <SearchInstruc />
+                <SearchInTable typeUserTemp={1} />
                 <TableManage listLearner={sysLearnerList} />
             </div>
         </div>

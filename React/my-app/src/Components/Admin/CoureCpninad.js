@@ -7,7 +7,7 @@ import deletecourse from "./image/deletecourse.png";
 import { Scrollbars } from "react-custom-scrollbars";
 import InforCourse from "./InforCourse";
 
-function CourseCpninad({ id, imgSrcCourse, Name, Desc, Author, Type, rateScore, totalRate, tagColor, linkName, callback = () => {} }) {
+function CourseCpninad({ id, imgSrcCourse, Name, Desc, Author, Learners, Type, rateScore, totalRate, tagColor, linkName, callback = () => {} }) {
     const [click, setClick] = useState(false);
     const [click2, setClick2] = useState(false);
     const [click3, setClick3] = useState(false);
@@ -67,7 +67,7 @@ function CourseCpninad({ id, imgSrcCourse, Name, Desc, Author, Type, rateScore, 
                     <div id="ScrollBars">
                         <Scrollbars style={{ width: 1000, height: "42vh" }}>
                             <div id="below">
-                                <InforCourse Author={Author} />
+                                <InforCourse Author={Author} Learners={Learners} />
                             </div>
                         </Scrollbars>
                     </div>

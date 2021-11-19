@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Scrollbars } from "react-custom-scrollbars";
 import CourseCpninad from "./CoureCpninad";
 import { listCourses } from "../../actions/courseActions";
-import data from "../courseForYou/data";
 import "./CSS/AdminCourse.css";
 
 function Courseinad() {
@@ -35,6 +34,7 @@ function Courseinad() {
                                     Name={data.name}
                                     Desc={data.description}
                                     Author={data.authorName}
+                                    Learners={data.learnerList}
                                     Type={data.typeCourse}
                                     rateScore={data.rateScore}
                                     totalRate={data.rateNum}
