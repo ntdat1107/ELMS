@@ -1,5 +1,6 @@
 import { COURSE_LIST_REQUEST, COURSE_LIST_SUCCESS, COURSE_LIST_FAIL,
     COURSE_DETAIL_REQUEST, COURSE_DETAIL_SUCCESS, COURSE_DETAIL_FAIL, 
+    COURSE_DETAIL_RATE_REQUEST, COURSE_DETAIL_RATE_SUCCESS, COURSE_DETAIL_RATE_FAIL, 
     COURSE_CREATE_REVIEW_REQUEST, COURSE_CREATE_REVIEW_SUCCESS, COURSE_CREATE_REVIEW_FAIL, } 
     from "../constants/courseConstants"
 import axios from 'axios'
@@ -61,6 +62,22 @@ export const detailCourse = (id) => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: COURSE_DETAIL_FAIL,
+            payload: null
+        })        
+    }
+}
+export const detailCourseRate = (id, token) => async (dispatch) => {
+    try {
+        dispatch({ type: COURSE_DETAIL_RATE_REQUEST })
+
+        const { data } = await axios.get(`/api/courses/${id}/${token}`)
+        dispatch({
+            type: COURSE_DETAIL_RATE_SUCCESS,
+            payload: data
+        })
+    } catch (error) {
+        dispatch({
+            type: COURSE_DETAIL_RATE_FAIL,
             payload: null
         })        
     }

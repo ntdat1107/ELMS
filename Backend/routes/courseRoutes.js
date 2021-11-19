@@ -9,5 +9,6 @@ router.route('/:id/reviews').post(protect, createCourseReview)
 
 
 router.route('/:id').get(getCourseByFastname)
+router.route('/:id/:token').get(getCourseByFastname)
 
 export default router
