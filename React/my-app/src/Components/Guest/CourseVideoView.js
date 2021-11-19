@@ -10,15 +10,16 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import "react-pro-sidebar/dist/css/styles.css";
 import playbutton from "./imgs/playbutton.png";
-import Rating from '@mui/material/Rating';
+import Rating from "@mui/material/Rating";
 import "./CSS/CourseVideoView.css";
 import ReactPlayer from "react-player";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import Scrollbars from "react-custom-scrollbars";
 import {
   detailCourseRate,
   createCourseReview,
 } from "../../actions/courseActions";
+import { COURSE_CREATE_REVIEW_RESET } from "../../constants/courseConstants";
 
 import Header from "../Header/header";
 import avt from "../img/cheems.png";
@@ -235,37 +236,79 @@ function NavItem3({ title, match }) {
   const closeMenu = () => setClick(false);
 
   const [rating, setRating] = useState(0);
-  const [comment, setComment] = useState("");
+  const [comment, setComment] = useState('');
 
   const dispatch = useDispatch();
 
   const courseDetailRate = useSelector((state) => state.courseDetailRate);
   const { loading, error, course } = courseDetailRate;
   if (!loading && course.ratings) console.log(course.ratings[0]);
-  let listRate = (!loading && course.ratings) ? course.ratings : []
-  const userLogin = useSelector((state) => state.userLogin);
-  const { userInfo } = userLogin;
 
   const courseReviewCreate = useSelector((state) => state.courseReviewCreate);
   const { success: successCourseReview } = courseReviewCreate;
 
   useEffect(() => {
+    if (successCourseReview) {
+      alert("Review Submitted!");
+      setRating(0);
+      setComment('');
+    }
     dispatch(detailCourseRate(match.params.id, match.params.token));
-  }, [dispatch]);
+  }, [dispatch, match, successCourseReview]);
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    dispatch(
+      createCourseReview(match.params.id, match.params.token, {
+        rating,
+        comment,
+      })
+    );
+  };
+
   return (
     <div className="nav-item-3">
       <div id="navItem">
         <h3 onClick={handleClick}>{title}</h3>
         <ul className={click ? "nav-menu-rate active" : "nav-menu-rate"}>
           <p style={{ color: "black" }}>Review</p>
-          {listRate === [] && <p>No reviews</p>}
-          {listRate.map((data) => (
-            <div key = {data._id}>
-                <p>{data.name}</p>
-                <Rating name="read-only" value={data.rating} readOnly />
-                <p>{data.comment}</p>
+          {!loading && course.ratings && course.ratings === [] && <p>No reviews</p>}
+          {!loading && course.ratings && course.ratings.map((data) => (
+            <div key={data._id}>
+              <p>{data.name}</p>
+              <Rating name="read-only" value={data.rating} readOnly />
+              <p>{data.comment}</p>
             </div>
           ))}
+          <div className="box-review">
+            <p>Write a Customer Review</p>
+            <form onSubmit={submitHandler}>
+              <label>
+                Rating
+                <select
+                  name="rating"
+                  value={rating}
+                  onChange={(e) => setRating(e.target.value)}
+                >
+                  <option value="">Select...</option>
+                  <option value="1">1 - Poor</option>
+                  <option value="2">2 - Fair</option>
+                  <option value="3">3 - Good</option>
+                  <option value="4">4 - Very Good</option>
+                  <option value="5">5 - Excellent</option>
+                </select>
+              </label>
+              <label>
+                <input
+                  type="textarea"
+                  name="comment"
+                  value={comment}
+                  onChange={(e) => setComment(e.target.value)}
+                />
+              </label>
+              <input id="btn-submit" type="submit" value="Send" />
+            </form>
+          </div>
           <button onClick={closeMenu}>Submit</button>
         </ul>
       </div>

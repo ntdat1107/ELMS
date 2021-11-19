@@ -34,11 +34,11 @@ const getCourseByFastname = asyncHandler(async (req, res) => {
     }
 })
 // @desc    Creat new review
-// @route   POST /api/courses/:id/reviews
+// @route   POST /api/courses/:id/:token/reviews
 // @access  Private
 const createCourseReview = asyncHandler(async (req, res) => {
     const { rating, comment } = req.body
-    const course = await Course.findById(req.params.id)
+    const course = await Course.findOne({fastName: `${req.params.id}`})
     const userLearner = await User.findById( req.user._id )
     if (course) {
         const alreadyReviewed = course.ratings.find(r => r.user.toString() === req.user._id.toString())

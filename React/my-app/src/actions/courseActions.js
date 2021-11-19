@@ -22,7 +22,7 @@ export const listCourses = (keyword = '') => async (dispatch) => {
         })
     }
 }
-export const createCourseReview = (courseId, review) => async (dispatch, getState) => {
+export const createCourseReview = (courseId, token, review) => async (dispatch, getState) => {
     try {
         dispatch({ type: COURSE_CREATE_REVIEW_REQUEST})
 
@@ -37,7 +37,7 @@ export const createCourseReview = (courseId, review) => async (dispatch, getStat
             },
         }
 
-        await axios.post(`/api/courses/${courseId}/reviews`, review, config)
+        await axios.post(`/api/courses/${courseId}/${token}/reviews`, review, config)
 
         dispatch({
             type: COURSE_CREATE_REVIEW_SUCCESS

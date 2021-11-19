@@ -61,18 +61,16 @@ const postInstruc = asyncHandler(async (req, res) => {
 
 //GET conversation of Sender
 const getSender = asyncHandler(async (req, res) => {
-    const conversationsender = await Conversation.find({
-        sender: req.params.senderId,
-    });
+    const conversationsender = await Conversation.find({ sender: req.params.senderId });
+
     if (conversationsender) res.status(200).json(conversationsender);
     else res.status(500).json(err);
 });
 
 //GET conversation of Receiver
 const getReceiver = asyncHandler(async (req, res) => {
-    const conversationreceivers = await Conversation.find({
-        receivers: { $in: [req.params.receiverId] },
-    });
+    const conversationreceivers = await Conversation.find({ receivers: { $in: [req.params.receiverId] } });
+
     if (conversationreceivers) res.status(200).json(conversationreceivers);
     else res.status(500).json(err);
 });

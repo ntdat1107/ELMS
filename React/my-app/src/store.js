@@ -6,7 +6,7 @@ import { userDetailByIDReducer, userLoginReducer, userProfileReducer, userRegist
 import { addCourseReducer, courseDeleteReducer, enrollCourseReducer, getMyLearnersIDReducer, myCoursesReducer, myOneCourseReducer } from "./Reducers/myCoursesReducers";
 import { myLearnerReducer } from "./Reducers/myLearnerReducers";
 import { sysInsReducer, sysLearnerReducer } from "./Reducers/adminReducers";
-import { conversationReducer } from "./Reducers/conversationReducers";
+import { conversationsenderReducer, conversationrcvReducer } from "./Reducers/conversationReducers";
 
 const reducer = combineReducers({
     courseList: courseListReducer,
@@ -24,7 +24,6 @@ const reducer = combineReducers({
     addCourse: addCourseReducer,
     userDetailByID: userDetailByIDReducer,
     myOneCourse: myOneCourseReducer,
-    conversationList: conversationReducer,
     enrollCourse: enrollCourseReducer,
     getMyLearnersID: getMyLearnersIDReducer,
     courseDelete: courseDeleteReducer
