@@ -53,7 +53,7 @@ function App() {
           <Route exact path='/admin/managelearner' component={AdminLearner}></Route>
           <Route exact path='/admin/managecourse' component={AdminCourse}></Route>
           <Route exact path='/admin/announcement' component={AdminAnnounce}></Route>
-          <Route exact path="/course/1234/" component={CourseView} ></Route>
+          <Route exact path="/course/:id/:token" component={CourseView} ></Route>
           <Route exact path="/search/" component={SearchLearnerUI} ></Route>
           <Route exact path="/learner/registerIns" component={RegisterInsUI} ></Route>
           <Route exact path='/ins/addcourse' component={AddCourseUI} />
