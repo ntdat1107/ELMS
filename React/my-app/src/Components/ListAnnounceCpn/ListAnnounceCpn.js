@@ -16,19 +16,20 @@ function ListAnnounceCpn({ history, Addition_Part }) {
             dispatch(getUserProfile("profile"));
         }
     }, [dispatch, history, userDetail]);
+    console.log(userDetail && userDetail._id);
 
     const [conversations, setConversations] = useState([]);
-    useEffect(() => {
+    /* useEffect(() => {
         const getConversations = async () => {
             try {
-                const res = await axios.get("/api/conversations/" + (userDetail && userDetail._id));
+                const res = await axios.get("/api/conversations/sender/" + (userDetail && userDetail._id));
                 setConversations(res.data);
             } catch (err) {
                 console.log(err);
             }
         };
         getConversations();
-    }, [userDetail && userDetail._id]);
+    }, [userDetail && userDetail._id]); */
     /* _____________________________________________ */
 
     const [click, setClick] = useState(1);

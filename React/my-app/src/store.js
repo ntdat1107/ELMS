@@ -1,12 +1,12 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux'
-import thunk from 'redux-thunk'
-import { composeWithDevTools } from 'redux-devtools-extension'
-import { courseDetailReducer, courseListReducer } from './Reducers/courseReducers'
-import { userDetailByIDReducer, userLoginReducer, userProfileReducer, 
-    userRegisterReducer, userUpdateProfileReducer } from './Reducers/userReducers'
-import { addCourseReducer, myCoursesReducer, myOneCourseReducer } from './Reducers/myCoursesReducers'
-import { myLearnerReducer } from './Reducers/myLearnerReducers'
-import { sysInsReducer, sysLearnerReducer } from './Reducers/adminReducers'
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import { composeWithDevTools } from "redux-devtools-extension";
+import { courseDetailReducer, courseListReducer } from "./Reducers/courseReducers";
+import { userDetailByIDReducer, userLoginReducer, userProfileReducer, userRegisterReducer, userUpdateProfileReducer } from "./Reducers/userReducers";
+import { addCourseReducer, myCoursesReducer, myOneCourseReducer } from "./Reducers/myCoursesReducers";
+import { myLearnerReducer } from "./Reducers/myLearnerReducers";
+import { sysInsReducer, sysLearnerReducer } from "./Reducers/adminReducers";
+import { conversationReducer } from "./Reducers/conversationReducers";
 
 const reducer = combineReducers({
     courseList: courseListReducer,
@@ -21,22 +21,20 @@ const reducer = combineReducers({
     sysIns: sysInsReducer,
     addCourse: addCourseReducer,
     userDetailByID: userDetailByIDReducer,
-    myOneCourse: myOneCourseReducer
-})
+    myOneCourse: myOneCourseReducer,
+    conversationList: conversationReducer,
+});
 
-const userInfoFromStorage = localStorage.getItem('userInfo') 
-                                ? JSON.parse(localStorage.getItem('userInfo')) : null
+const userInfoFromStorage = localStorage.getItem("userInfo") ? JSON.parse(localStorage.getItem("userInfo")) : null;
 
-const userProfileFromStorage = localStorage.getItem('userDetail')
-                                ? JSON.parse(localStorage.getItem('userDetail')) : null
+const userProfileFromStorage = localStorage.getItem("userDetail") ? JSON.parse(localStorage.getItem("userDetail")) : null;
 
 const initialStore = {
     userLogin: { userInfo: userInfoFromStorage },
-    userProfile: { userProfile: userProfileFromStorage}
-}
-const middleware = [thunk]
+    userProfile: { userProfile: userProfileFromStorage },
+};
+const middleware = [thunk];
 
-const store = createStore(reducer, initialStore, 
-    composeWithDevTools(applyMiddleware(...middleware)))
+const store = createStore(reducer, initialStore, composeWithDevTools(applyMiddleware(...middleware)));
 
-export default store
+export default store;
