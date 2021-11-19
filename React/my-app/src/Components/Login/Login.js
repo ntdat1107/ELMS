@@ -12,21 +12,12 @@ function Login({history}) {
 
     const showToast = () => {
         setList([{
-            id: 1,
+            id: list.length + 1,
             title: 'Error',
             description: 'Login Error! Please try again.',
             backgroundColor: '#5cb85c'
         }])
     }
-    // const showToast = msg => {
-    //     toastProperties = {
-    //         id: 1,
-    //         title: 'Error',
-    //         description: {msg},
-    //         backgroundColor: '#5cb85c'
-    //     }
-    //     setList([toastProperties]);
-    // }
 
     const dispatch = useDispatch()
     const userLogin = useSelector(state => state.userLogin)
@@ -89,7 +80,7 @@ function Login({history}) {
                         </form>
                     </div>
                 </div>
-                <ErrorToast toastList={list}/>
+                <ErrorToast toastList={list} setList={setList}/>
                 
             </div>
         </div>

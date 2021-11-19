@@ -7,7 +7,8 @@
 .Toastbutton-right{
     top: 1rem;
     right: 1rem;
-    animation: toast-in-right;
+    animation-name: toast-in-right;
+    animation-duration: 0.3s;
 }
 
 .Toastnotification{
@@ -16,7 +17,6 @@
     box-shadow: 0 0 10px #999;
     color: #000;
     opacity: 0.9;
-    transition: .3s;
 }
 
 .Toastnotification:hover{
