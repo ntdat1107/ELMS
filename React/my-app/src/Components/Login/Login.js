@@ -3,10 +3,30 @@ import './CSS/Login.css'
 import {Link } from "react-router-dom"
 import { useDispatch, useSelector } from 'react-redux'
 import { login } from '../../actions/userActions.js'
+import ErrorToast from './../ErrorToast/ErrorToast';
 
 function Login({history}) {
     const [accountID, setAccountID] = useState('')
     const [password, setPassword] = useState('')
+    const [list, setList] = useState([])
+
+    const showToast = () => {
+        setList([{
+            id: 1,
+            title: 'Error',
+            description: 'Login Error! Please try again.',
+            backgroundColor: '#5cb85c'
+        }])
+    }
+    // const showToast = msg => {
+    //     toastProperties = {
+    //         id: 1,
+    //         title: 'Error',
+    //         description: {msg},
+    //         backgroundColor: '#5cb85c'
+    //     }
+    //     setList([toastProperties]);
+    // }
 
     const dispatch = useDispatch()
     const userLogin = useSelector(state => state.userLogin)
@@ -24,6 +44,7 @@ function Login({history}) {
         e.preventDefault()
         dispatch(login(accountID, password))
     }
+
 
     return (
         <div className="Loginpage">
@@ -60,7 +81,7 @@ function Login({history}) {
                                 </Link>
                             </div>
                             <div className="btn-box">
-                                    <button type="submit" className="toggle-btn1">Log in</button>
+                                    <button type="submit" className="toggle-btn1" onClick={showToast}>Log in</button>
                                 <Link to='/signup'>
                                     <button type="button" className="toggle-btn2">Sign up</button>
                                 </Link>
@@ -68,6 +89,8 @@ function Login({history}) {
                         </form>
                     </div>
                 </div>
+                <ErrorToast toastList={list}/>
+                
             </div>
         </div>
         )
