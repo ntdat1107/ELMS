@@ -10,6 +10,7 @@ import ReactPaginate from "react-paginate";
 import { Scrollbars } from "react-custom-scrollbars"
 import ItemCourse from "./itemCourse"
 import { listCourses } from "../../../actions/courseActions";
+import { getMyCourses } from "../../../actions/myCoursesAction";
 
 const SearchBox= ({ history }) => {
     const [keyword, setKeyword] = useState('')
@@ -36,23 +37,26 @@ const SearchBox= ({ history }) => {
 const TableCourse = ({match}) => {
     const keyword = match.params.keyword
     const dispatch = useDispatch()
-    const courseList = useSelector(state => state.courseList)
-    const { loading, error, courses } = courseList
+    // const courseList = useSelector(state => state.courseList)
+    // const { loading, error, courses } = courseList
   
+    // useEffect(() => {
+    //     dispatch(listCourses(keyword))
+    // }, [dispatch, keyword])
+
+    const myCourses = useSelector(state => state.myCourses)
+    const { loading, error, myCoursesList } = myCourses
     useEffect(() => {
-        dispatch(listCourses(keyword))
-    }, [dispatch, keyword])
+        if (!myCoursesList) dispatch(getMyCourses())
+    }, [dispatch])
   
-    const [pageNumber, setPageNumber] = useState(0);
-  
+    const [pageNumber, setPageNumber] = useState(0);  
     const coursesPerPage = 12;
     const pagesVisited = pageNumber * coursesPerPage;
-    const bigCourses = courses.slice(pagesVisited, pagesVisited + coursesPerPage);
-  
     // key={index} imgSrcCourse={data.image}
     //           Name={data.name} Desc={data.description} Author={data.authorName} Type={data.typeCourse}
     //           rateScore={data.rateScore} totalRate={data.rateNum} linkName={`/course/${data.fastName}`}
-    const display = bigCourses.map((course,index) => {
+    const display = myCoursesList && myCoursesList.slice(pagesVisited, pagesVisited + coursesPerPage).map((course,index) => {
       return (
         <div id="colCourses" key={index}>
           <ItemCourse 
@@ -66,9 +70,7 @@ const TableCourse = ({match}) => {
       );
     });
   
-  
-    const pageCount = Math.ceil(courses.length / coursesPerPage);
-  
+    const pageCount = Math.ceil(myCoursesList && myCoursesList.length / coursesPerPage);
     const changePage = ({ selected }) => {
       setPageNumber(selected);
     };
