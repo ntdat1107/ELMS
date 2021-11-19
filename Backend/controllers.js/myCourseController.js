@@ -26,18 +26,17 @@ const getUserCourses = asyncHandler(async(req, res) => {
 
 
 const getLearners = asyncHandler(async(req, res) => {
-    const listLearners = await User.find({isLearner: true})
     const courseNow = await Course.findOne({fastName: req.params.fastName})
-    if (listLearners) {
+    if (courseNow) {
         let ans = []
-        for (let i=0; i<listLearners.length; i++) {
-            if (listLearners[i].hasCourse.indexOf(courseNow._id) !== -1) ans.push(listLearners[i])
+        for (let i=0; i<courseNow.learnerList.length; i++) {
+            ans.push(await User.findById(courseNow.learnerList[i]))
         }
         res.json(ans)
     }
     else {
         res.status(404)
-        throw new Error('User not found')
+        throw new Error('Course not found')
     }
 })
 
@@ -124,4 +123,15 @@ const getAllMyLearners = asyncHandler(async(req, res) => {
     res.json(isList)
 })
 
-export { getUserCourses, getLearners, createNewCourse, getMyCourse, deleteCourse, getAllMyLearners }
+const enrollCourse = asyncHandler(async(req, res) => {
+    const user = req.user
+    const course = req.course
+    user.hasCourse.push(course._id)
+    await user.save()
+    course.learnerList.push(user._id)
+    await course.save()
+    res.json({message: "Enroll success"})
+})
+
+export { getUserCourses, getLearners, createNewCourse, getMyCourse, 
+    deleteCourse, getAllMyLearners, enrollCourse }
