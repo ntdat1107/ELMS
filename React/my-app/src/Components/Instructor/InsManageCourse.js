@@ -21,7 +21,6 @@ function InsManagerCourse ({history}) {
     useEffect(() => {
         dispatch(getMyCourses())
     }, [dispatch])
-    console.log(error)
     if (loading) {
         return (
             <h1>Loading</h1>

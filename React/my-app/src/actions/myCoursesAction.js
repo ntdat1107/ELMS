@@ -57,14 +57,18 @@ export const getMyCourseByFastName = (fastName) => async(dispatch, getState) => 
     }
 }
 
-export const addCourse = ( userID, name, image, category, description, fastName ) => async (dispatch) => {
+export const addNewCourse = 
+    ( userID, name, image, category, description, fastName ) => async (dispatch, getState) => {
     try {
         dispatch({
             type: ADD_COURSE_REQUEST
         })
+        const { userLogin: { userInfo } } = getState() 
+
         const config = {
             headers: {
-                'Content-type': 'application/json'
+                'Content-type': 'application/json',
+                Authorization: `Bearer ${userInfo.token}`
             }
         }
 

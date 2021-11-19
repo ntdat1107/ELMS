@@ -22,6 +22,10 @@ const courseSchema = mongoose.Schema({
         required: true,
         ref: 'User'
     },
+    learnerList: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }],
     authorName: {
         type: String,
         required: true

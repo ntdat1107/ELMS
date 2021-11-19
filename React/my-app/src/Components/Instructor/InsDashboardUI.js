@@ -86,13 +86,23 @@ function InsDashboardUI ({history}) {
     }, [history, userInfo])
 
     const userProfile = useSelector(state => state.userProfile)
-    const {userDetail} = userProfile
+    const {loading, error, userDetail} = userProfile
     useEffect(() => {
         if (!userDetail) {
             dispatch(getUserProfile('profile'))
         }
     }, [dispatch, history, userDetail])
-    return (
+    if (loading) return (
+        <div id="loading">
+            <h1>Loading</h1>
+        </div>
+    )
+    else if (error) return (
+        <div id="error">
+            <h1>{Error}</h1>
+        </div>
+    )
+    else return (
         <div id="insdb">
             <SideBarInstructor typeUserTemp={1}/>
             <Header />

@@ -26,6 +26,7 @@ import AdminAnnounce from './Components/Admin/AdminAnnouncement';
 import CourseView from "./Components/Guest/CourseView";
 import SearchLearnerUI from './Components/Guest/LearnerSearchPage';
 import AddCourseUI from './Components/Instructor/AddCourseUI';
+import Logout from './Components/Login/Logout';
 function App() {
   return (
     <div className="App">
@@ -52,10 +53,11 @@ function App() {
           <Route exact path='/admin/managelearner' component={AdminLearner}></Route>
           <Route exact path='/admin/managecourse' component={AdminCourse}></Route>
           <Route exact path='/admin/announcement' component={AdminAnnounce}></Route>
-          <Route exact path="/course/1234/" component={CourseView} ></Route>
+          <Route exact path="/course/:id/:token" component={CourseView} ></Route>
           <Route exact path="/search/" component={SearchLearnerUI} ></Route>
           <Route exact path="/learner/registerIns" component={RegisterInsUI} ></Route>
           <Route exact path='/ins/addcourse' component={AddCourseUI} />
+          <Route exact path='/logout' component={Logout} />
           <Route exact path='/' component={HomePageUI}></Route>
         </Switch>
       </Router>
