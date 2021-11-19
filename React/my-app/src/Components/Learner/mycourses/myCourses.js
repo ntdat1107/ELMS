@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import ReactPaginate from "react-paginate";
 import { Scrollbars } from "react-custom-scrollbars"
 import ItemCourse from "./itemCourse"
-import { getMyCourses } from "../../../actions/myCoursesAction";
+import { listCourses } from "../../../actions/courseActions";
 
 const SearchBox= ({ history }) => {
     const [keyword, setKeyword] = useState('')
@@ -36,22 +36,23 @@ const SearchBox= ({ history }) => {
 const TableCourse = ({match}) => {
     const keyword = match.params.keyword
     const dispatch = useDispatch()
-    const myCourses = useSelector(state => state.myCourses)
-    const { loading, error, myCoursesList } = myCourses
+    const courseList = useSelector(state => state.courseList)
+    const { loading, error, courses } = courseList
+  
     useEffect(() => {
-        dispatch(getMyCourses(''))
-    }, [dispatch])
+        dispatch(listCourses(keyword))
+    }, [dispatch, keyword])
   
     const [pageNumber, setPageNumber] = useState(0);
   
     const coursesPerPage = 12;
     const pagesVisited = pageNumber * coursesPerPage;
-    const bigCourses = !loading && myCoursesList && myCoursesList.slice(pagesVisited, pagesVisited + coursesPerPage);
+    const bigCourses = courses.slice(pagesVisited, pagesVisited + coursesPerPage);
   
     // key={index} imgSrcCourse={data.image}
     //           Name={data.name} Desc={data.description} Author={data.authorName} Type={data.typeCourse}
     //           rateScore={data.rateScore} totalRate={data.rateNum} linkName={`/course/${data.fastName}`}
-    const display = bigCourses && bigCourses.map((course,index) => {
+    const display = bigCourses.map((course,index) => {
       return (
         <div id="colCourses" key={index}>
           <ItemCourse 
@@ -66,7 +67,7 @@ const TableCourse = ({match}) => {
     });
   
   
-    const pageCount = Math.ceil(!loading && myCoursesList && myCoursesList.length / coursesPerPage);
+    const pageCount = Math.ceil(courses.length / coursesPerPage);
   
     const changePage = ({ selected }) => {
       setPageNumber(selected);
@@ -124,7 +125,6 @@ function LnMyCourses({match, history}) {
     useEffect(() => {
         if (!userInfo || !userInfo.isLearner) history.push('/login')
     }, [history, userInfo])
-
     return (
         <div id="lnMyCoursesUI">
             <SideBar typeUserTemp={2}/>
