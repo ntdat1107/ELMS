@@ -25,7 +25,7 @@ import {
 } from "./Reducers/myCoursesReducers";
 import { myLearnerReducer } from "./Reducers/myLearnerReducers";
 import { sysInsReducer, sysLearnerReducer } from "./Reducers/adminReducers";
-import { conversationsenderReducer, conversationrcvReducer } from "./Reducers/conversationReducers";
+import { createCvsReducer, getCvsSendReducer, getCvsReceiveReducer } from "./Reducers/conversationReducers";
 import { lessonListReducer, lessonDetailReducer } from "./Reducers/lessonReducers";
 
 const reducer = combineReducers({
@@ -50,6 +50,9 @@ const reducer = combineReducers({
     courseDelete: courseDeleteReducer,
     lessonList: lessonListReducer,
     lessonDetail: lessonDetailReducer,
+    createCvs: createCvsReducer,
+    getCvsSend: getCvsSendReducer,
+    getCvsReceive: getCvsReceiveReducer
 });
 
 const userInfoFromStorage = localStorage.getItem("userInfo")

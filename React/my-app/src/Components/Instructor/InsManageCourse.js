@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux'
 import { Scrollbars } from 'react-custom-scrollbars';
-import "./CSS/InsManagerCourse.css"
+import {Link} from 'react-router-dom'
 import "./CSS/InsManagerCourse.css"
 import CourseForYouCpn from "../courseForYou/courseForYouCpn";
 import SideBar from '../SideBar/SideBar';
@@ -38,7 +38,15 @@ function InsManagerCourse ({history}) {
         <SideBar typeUserTemp={1}/>
         <Header />
         <div id="insMC">
-            <Scrollbars>
+            <div className="title-add-course">
+                <p>Do you want to create a new course?</p>
+                <Link to="/ins/addcourse">
+                    <button className="btn-add">
+                        Create
+                    </button>
+                </Link>
+            </div>
+            <Scrollbars style={{height: "73vh"}}>
                 {
                     myCoursesList && myCoursesList.map((data, index) => {
                         return (
@@ -53,5 +61,6 @@ function InsManagerCourse ({history}) {
     </div>
     )
 }
+
 
 export default InsManagerCourse;

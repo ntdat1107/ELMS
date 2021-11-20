@@ -2,17 +2,6 @@ import mongoose from "mongoose";
 
 const ConversationSchema = new mongoose.Schema(
     {
-        sender: {
-            type: mongoose.Schema.Types.ObjectId,
-            required: true,
-            ref: "User"
-        },
-        receivers: [
-            {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: "User"
-            }
-        ],
         subject: {
             type: String,
             required: true
@@ -21,8 +10,13 @@ const ConversationSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        stt: {
-            type: Number,
+        sender: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User',
+            required: true
+        },
+        receiverName: {
+            type: String,
             required: true
         }
     },

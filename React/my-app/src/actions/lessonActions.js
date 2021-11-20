@@ -16,7 +16,9 @@ export const listLessons = (courseFastname) => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: LESSON_LIST_FAIL,
-            payload: null
+            payload: error.response && error.response.data.message
+            ? error.response.data.message
+            : error.message,
         })
     }
 }
@@ -33,7 +35,9 @@ export const detailLesson = (courseFastname, courseNum) => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: LESSON_DETAIL_FAIL,
-            payload: null
+            payload: error.response && error.response.data.message
+            ? error.response.data.message
+            : error.message,
         })        
     }
 }

@@ -72,7 +72,7 @@ export const addNewCourse =
             }
         }
 
-        const { data } = await axios.post( '/api/mycourses/newcourse', { name, image, 
+        const { data } = await axios.post('/api/mycourses/newcourse', { name, image, 
             category, description, fastName }, config )
 
         dispatch({

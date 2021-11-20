@@ -1,34 +1,41 @@
-import {
-    CONVERSATION_SENDER_LIST_REQUEST,
-    CONVERSATION_SENDER_LIST_SUCCESS,
-    CONVERSATION_SENDER_LIST_FAIL,
-    CONVERSATION_RCV_LIST_REQUEST,
-    CONVERSATION_RCV_LIST_SUCCESS,
-    CONVERSATION_RCV_LIST_FAIL,
-} from "../constants/conversationConstants.js";
+import { CREATE_CVS_FAIL, CREATE_CVS_REQUEST, CREATE_CVS_SUCCESS, GET_RECEIVE_CVS_FAIL, GET_RECEIVE_CVS_REQUEST, GET_RECEIVE_CVS_SUCCESS, GET_SEND_CVS_FAIL, GET_SEND_CVS_REQUEST, GET_SEND_CVS_SUCCESS } from "../constants/conversationConstants.js";
 
-export const conversationsenderReducer = (state = { conversationsenderList: [] }, action) => {
-    switch (action.type) {
-        case CONVERSATION_SENDER_LIST_REQUEST:
-            return { loading: true, conversationList: [] };
-        case CONVERSATION_SENDER_LIST_SUCCESS:
-            return { loading: false, conversationList: action.payload };
-        case CONVERSATION_SENDER_LIST_FAIL:
-            return { loading: false, error: action.payload };
-        default:
-            return state;
-    }
-};
 
-export const conversationrcvReducer = (state = { conversationrcvList: [] }, action) => {
+export const createCvsReducer = (state = {}, action) => {
     switch (action.type) {
-        case CONVERSATION_RCV_LIST_REQUEST:
-            return { loading: true, conversationList: [] };
-        case CONVERSATION_RCV_LIST_SUCCESS:
-            return { loading: false, conversationList: action.payload };
-        case CONVERSATION_RCV_LIST_FAIL:
-            return { loading: false, error: action.payload };
+        case CREATE_CVS_REQUEST:
+            return { loading: true }
+        case CREATE_CVS_SUCCESS:
+            return { loading: false, CvsInfo: action.payload }
+        case CREATE_CVS_FAIL:
+            return { loading: false, error: action.payload }
         default:
-            return state;
+            return state
     }
-};
+}
+
+export const getCvsSendReducer = (state = {}, action) => {
+    switch (action.type) {
+        case GET_SEND_CVS_REQUEST:
+            return { loading: true }
+        case GET_SEND_CVS_SUCCESS:
+            return { loading: false, cvsSendList: action.payload }
+        case GET_SEND_CVS_FAIL:
+            return { loading: false, error: action.payload }
+        default:
+            return state
+    }
+}
+
+export const getCvsReceiveReducer = (state = {}, action) => {
+    switch (action.type) {
+        case GET_RECEIVE_CVS_REQUEST:
+            return { loading: true }
+        case GET_RECEIVE_CVS_SUCCESS:
+            return { loading: false, cvsReceiveList: action.payload }
+        case GET_RECEIVE_CVS_FAIL:
+            return { loading: false, error: action.payload }
+        default:
+            return state
+    }
+}
