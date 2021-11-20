@@ -214,7 +214,7 @@ function NavItem3({ title, match }) {
           <div style={{width: "50%", paddingLeft: "10px"}}>
             <p style={{fontSize: "20px", fontWeight: "bold"}}>List Review</p>
             <div>
-              <Scrollbars style={{height: "270px"}}>
+              <Scrollbars style={{height: "265px"}}>
               {!loading && course.ratings && course.ratings.map((data) => (
                 <div key={data._id} style={{border: "1px solid black", borderRadius: "10px", marginBottom: "5px", width: "90%"}}>
                   <p style={{fontSize: "16px", paddingLeft: "5px"}}>Name: {data.name}</p>
