@@ -147,11 +147,11 @@ function LowNavBar({ match }) {
 }
 
 function NavItem2({ title, url }) {
-  const handleClick = (props) => {
-    console.log(props);
+  const handleClick = (e) => {
+    e.preventDefault()
   };
   return (
-    <div id="navItem">
+    <div id="disabledNavItem">  
       <NavLink to={url} id="nav-link" onClick={handleClick}>
         <h3>{title}</h3>
       </NavLink>
@@ -261,7 +261,7 @@ function LowBodyBox({description}) {
     <div id="lowBodyBox">
       <Scrollbars style={{ height: 300 }}>
         <h2>Lesson description</h2>
-        <h3>{description}</h3>
+        <p> {description}</p>
       </Scrollbars>
     </div>
   );

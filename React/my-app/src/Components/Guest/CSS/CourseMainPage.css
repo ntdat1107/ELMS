@@ -38,7 +38,7 @@
     color: #fafafa;
     margin: 10px;
     cursor: context-menu;
-    font-size: 36px;
+    font-size: 32px;
 }
 
 #upperBody #informationBox h2{
@@ -125,6 +125,9 @@
 
 #lowerBody1 #infoBox h3{
     font-size: 18px;
+}
+#lowerBody1 #infoBox p{
+    font-size: 16px;
 }
 
 
