@@ -5,9 +5,6 @@ const courses = [
         image: "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg",
         category: "beginner",
         description:"The BEST Git course that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications. This course is designed for those students who do not have enough time to learn Git." ,
-        rateScore: 3.5,
-        rateNum: 100,
-        typeCourse: "Best Course",
         fastName: "git"
     },
     {
@@ -16,9 +13,6 @@ const courses = [
         image: "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg",
         category: "beginner",
         description:"The BEST Git course that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications. This course is designed for those students who do not have enough time to learn Git." ,
-        rateScore: 3.5,
-        rateNum: 100,
-        typeCourse: "New",
         fastName: "cpp"
     },
     {
@@ -27,9 +21,6 @@ const courses = [
         image: "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg",
         category: "beginner",
         description:"The BEST Git course that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications. This course is designed for those students who do not have enough time to learn Git." ,
-        rateScore: 3.5,
-        rateNum: 100,
-        typeCourse: "Hot",
         fastName: "py"
     },
     {
@@ -38,9 +29,6 @@ const courses = [
         image: "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg",
         category: "beginner",
         description:"The BEST Git course that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications. This course is designed for those students who do not have enough time to learn Git." ,
-        rateScore: 3.5,
-        rateNum: 100,
-        typeCourse: "Hot",
         fastName: "gcc-gpp"
     },
     {
@@ -49,9 +37,6 @@ const courses = [
         image: "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg",
         category: "beginner",
         description:"The BEST Kotlin that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications. This course is designed for those students who do not have enough time to learn Git." ,
-        rateScore: 3.5,
-        rateNum: 100,
-        typeCourse: "Hot",
         fastName: "kotlin"
     },
     {
@@ -60,9 +45,6 @@ const courses = [
         image: "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg",
         category: "beginner",
         description:"The BEST Kotlin that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications. This course is designed for those students who do not have enough time to learn Git." ,
-        rateScore: 3.5,
-        rateNum: 100,
-        typeCourse: "Hot",
         fastName: "haskell"
     },
     {
@@ -71,9 +53,6 @@ const courses = [
         image: "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg",
         category: "beginner",
         description:"The BEST Kotlin that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications. This course is designed for those students who do not have enough time to learn Git." ,
-        rateScore: 3.5,
-        rateNum: 100,
-        typeCourse: "Hot",
         fastName: "hellow"
     },
     {
@@ -82,9 +61,6 @@ const courses = [
         image: "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg",
         category: "beginner",
         description:"The BEST Kotlin that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications. This course is designed for those students who do not have enough time to learn Git." ,
-        rateScore: 3.5,
-        rateNum: 100,
-        typeCourse: "Hot",
         fastName: "csharp"
     },
     {
@@ -93,9 +69,6 @@ const courses = [
         image: "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg",
         category: "beginner",
         description:"The BEST Kotlin that prepares you for corporate jobs and for RHCSA, RHCE, LFCS, CLNP certifications. This course is designed for those students who do not have enough time to learn Git." ,
-        rateScore: 3.5,
-        rateNum: 100,
-        typeCourse: "Hot",
         fastName: "java"
     }
 ]

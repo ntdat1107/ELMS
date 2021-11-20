@@ -17,6 +17,6 @@ router.route('/:fastName').delete(protect, checkIns, deleteCourse)
 
 router.route('/getlearners').get(protect, getAllMyLearnersID)
 
-router.route('/enroll/:fastName').post(protect, checkLearner, enrollCourse)
+router.route('/enroll').post(enrollCourse)
 
 export default router
