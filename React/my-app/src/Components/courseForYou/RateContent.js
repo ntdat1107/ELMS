@@ -32,6 +32,7 @@ function RateContent({
 }) {
     let star = star0
     let styleType = styleN
+    let type = ""
     // Choose Star Img
     if (rateScoreCpn > 0 && rateScoreCpn < 1) star = star05
     else if (rateScoreCpn === 1) star = star1
@@ -44,15 +45,13 @@ function RateContent({
     else if (rateScoreCpn > 4 && rateScoreCpn < 5) star = star45
     else if (rateScoreCpn === 5) star = star5
     // Choose Style
-    if (TypeCpn) {
-        if (TypeCpn.toUpperCase() === "Hot".toUpperCase()) styleType = styleH
-        else if (TypeCpn.toUpperCase() === "Best course".toUpperCase()) styleType = styleBC
-        else if (TypeCpn.toUpperCase() === "New".toUpperCase()) styleType = styleN
-    }
+    if (totalRateCpn >= 3 && rateScoreCpn > 4) {styleType = styleH; type = "Hot"}
+    else if (totalRateCpn >= 10 && rateScoreCpn > 4.5) {styleType = styleBC; type = "Best Course"}
+    else {styleType = styleN; type = "New"}
     return (
         <div id="rateContent">
-            <div id="p1" style={styleType}><p>{TypeCpn}</p></div>
-            {rateScoreCpn != 0 && <div id="p2"><p>{rateScoreCpn} </p></div> }
+            <div id="p1" style={styleType}><p>{type}</p></div>
+            {rateScoreCpn != 0 && <div id="p2"><p>{Math.round(rateScoreCpn * 100) / 100} </p></div> }
             {rateScoreCpn != 0 && <div id="p3"><img src= {star} alt="star"></img></div>}
             {totalRateCpn != 0 && <div id="p4"><p>({totalRateCpn})</p></div>}
         </div>

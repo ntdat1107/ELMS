@@ -12,25 +12,40 @@ function CourseForYou() {
     useEffect(() => {
         dispatch(listCourses())
     }, [dispatch])
-    const display = courses.map((data, index) => {
-        return(
-            <CourseForYouCpn key={index} imgSrcCourse={data.image}
-            Name={data.name} Desc={data.description} Author={data.authorName} Type={data.typeCourse}
-            rateScore={data.rateScore} totalRate={data.rateNum} linkName={`/course/${data.fastName}`}/>
+
+    if (loading) {
+        return (
+            <h1>Loading</h1>
         )
-    });
-    return (
-        <div id="coursesCFY">
-            <Link className="Link-coursename" to="/search">
-                <p id="titleCFY">Courses For You</p>
-            </Link>
-            <div id="listCoursesCFY">
-                <Scrollbars>
-                    {display}
-                </Scrollbars>
+    }
+    else if (error) {
+        return (
+            <div id="err">
+                <h1>ERROR</h1>
             </div>
-        </div>
-    )
+        )
+    }
+    else {
+        return (
+            <div id="coursesCFY">
+                <Link className="Link-coursename" to="/search">
+                    <p id="titleCFY">Courses For You</p>
+                </Link>
+                <div id="listCoursesCFY">
+                    <Scrollbars>
+                        {
+                            courses && courses.map((data, index) => {
+                            return(
+                                <CourseForYouCpn key={index} imgSrcCourse={data.image}
+                                Name={data.name} Desc={data.description} Author={data.authorName} Type={data.typeCourse}
+                                rateScore={data.rateScore} totalRate={data.rateNum} linkName={`/course/${data.fastName}`}/>
+                            )
+                        })}
+                    </Scrollbars>
+                </div>
+            </div>
+        )
+    }
 }
 
 export default CourseForYou

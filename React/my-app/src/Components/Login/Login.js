@@ -66,7 +66,6 @@ function Login({history}) {
                                 required></input>
                             </div> 
                             <div className="remember">
-                                <label id = "checkbox"> <input type="checkbox"></input> Remember me</label>
                                 <Link to='/forgotpass'>
                                     Forgot password?
                                 </Link>

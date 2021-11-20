@@ -2,7 +2,11 @@ import asyncHandler from "express-async-handler";
 import Course from "../models/courseModel.js";
 import User from "../models/userModel.js";
 import generateToken from "../utils/generateToken.js";
+import path from 'path'
+import fs from 'fs'
 
+
+const __dirname = path.resolve()
 // @desc    Auth user & get token
 // @route   POST /api/users/login
 // @access  Public
@@ -196,7 +200,7 @@ const getUserByID = asyncHandler(async (req, res) => {
 
 const deleteUserByID = asyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id);
-
+    fs.unlinkSync(path.join(__dirname, user.avatar))
     if (user) {
         await user.remove();
         res.json({ message: "User removed" });
