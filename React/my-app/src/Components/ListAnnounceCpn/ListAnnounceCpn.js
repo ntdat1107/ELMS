@@ -44,6 +44,22 @@ function ListAnnounceCpn({ history, Addition_Part }) {
             setClick(e.target.parentElement.id);
         }
     }
+    /* ____________________________________________________________________ */
+
+    const [receivebox, setReceivebox] = useState(1);
+    const [sendbox, setSendbox] = useState(0);
+
+    function openreceive() {
+        setReceivebox(1);
+        setSendbox(0);
+    }
+
+    function opensend() {
+        setReceivebox(0);
+        setSendbox(1);
+    }
+
+    /* ____________________________________________________________________ */
 
     if (loading || loading1) {
         return <h1>Loading</h1>;
@@ -58,31 +74,41 @@ function ListAnnounceCpn({ history, Addition_Part }) {
             <div id="Announ-wholeblock">
                 {Addition_Part}
                 <div id="listAnnoun">
-                    <div id="searchAnnoun">
-                        <input
-                            id="inputAnnoun"
-                            type="text"
-                            name="Name:"
-                            placeholder="Search ..."
-                        ></input>
-                        <img src={searchImg} alt="SearchIconImage" id="searchAnnounIcon" />
+                    <div id="pickRange">
+                        <div id="receiveRange" onClick={openreceive}>
+                            Receive
+                        </div>
+                        <div id="sendRange" onClick={opensend}>
+                            Send
+                        </div>
                     </div>
 
                     <ConverList
-                        cvsList={cvsSendList}
+                        classN={receivebox ? "receive-box open" : "receive-box"}
+                        cvsList={cvsReceiveList}
+                        header="Receive"
                         parentClick={parentClick}
                         handleClick={handleClick}
                     />
-
                     <ConverList
-                        cvsList={cvsReceiveList}
+                        classN={sendbox ? "send-box open" : "send-box"}
+                        cvsList={cvsSendList}
+                        header="Send"
                         parentClick={parentClick}
                         handleClick={handleClick}
                     />
                 </div>
 
-                <ContentCvs cvsList={cvsSendList} click={click} />
-                <ContentCvs cvsList={cvsReceiveList} click={click} />
+                <ContentCvs
+                    classN={receivebox ? "receive-box open" : "receive-box"}
+                    cvsList={cvsReceiveList}
+                    click={click}
+                />
+                <ContentCvs
+                    classN={sendbox ? "send-box open" : "send-box"}
+                    cvsList={cvsSendList}
+                    click={click}
+                />
             </div>
         );
 }

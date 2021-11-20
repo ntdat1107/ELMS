@@ -11,38 +11,31 @@
 }
 
 /*_____________SearchBar______________*/
-#Announ-wholeblock #searchAnnoun {
-    position: relative;
-    width: 90%;
-    height: 100%;
+#Announ-wholeblock #pickRange {
     margin-top: 4%;
-    margin-left: 2%;
-    padding-left: 20px;
-    height: 7%;
+    margin-left: 65px;
+    font-size: 18px;
+    display: flex;
+    text-align: center;
 }
 
-#Announ-wholeblock #inputAnnoun {
-    size: 32;
-    width: 100%;
-    height: 100%;
-    padding-left: 15px;
-    border-radius: 45px;
-    -webkit-border-radius: 45px;
-    border-color: 1px solid black;
+#Announ-wholeblock #pickRange div {
+    padding: 5px;
+    border: 1px solid black;
+    width: 100px;
 }
 
-#Announ-wholeblock #searchAnnounIcon {
-    position: absolute;
-    top: 20%;
-    right: 5%;
+#Announ-wholeblock #pickRange div:hover {
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
 }
+
 /*_________________________________*/
 
 /*___________Left Block___________*/
 
 #Announ-wholeblock #listAnnoun {
-    width: 27%;
+    width: 330px;
     height: 95%;
     text-align: center;
     background-color: white;
@@ -51,6 +44,7 @@
     margin-bottom: 1%;
     border-radius: 5px;
     -webkit-border-radius: 5px;
+    position: relative;
 }
 
 #Announ-wholeblock #listAnnoun #sublistAnnoun {
@@ -58,6 +52,22 @@
     text-align: center;
     width: 98%;
     height: 85%;
+}
+
+#Announ-wholeblock .receive-box.open {
+    display: block;
+}
+
+#Announ-wholeblock .receive-box {
+    display: none;
+}
+
+#Announ-wholeblock .send-box.open {
+    display: block;
+}
+
+#Announ-wholeblock .send-box {
+    display: none;
 }
 
 #Announ-wholeblock .Announcpn {

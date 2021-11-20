@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 
-function ConverList({ cvsList, parentClick, handleClick }) {
+function ConverList({ cvsList, parentClick, handleClick, classN, header }) {
     const [click, setClick] = useState(1);
 
     return (
-        <div id="sublistAnnoun">
-            <Scrollbars>
+        <div id="sublistAnnoun" className={classN}>
+            <p>{header}</p>
+            <Scrollbars width="100%">
                 {cvsList &&
                     cvsList.map((conversation) => {
                         return (

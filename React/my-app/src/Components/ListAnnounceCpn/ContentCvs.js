@@ -1,8 +1,8 @@
 import React from "react";
 
-function ContentCvs({ cvsList, click }) {
+function ContentCvs({ cvsList, click, classN }) {
     return (
-        <div id="content-block">
+        <div id="content-block" className={classN}>
             {cvsList &&
                 cvsList.map((conversation) => {
                     return (
