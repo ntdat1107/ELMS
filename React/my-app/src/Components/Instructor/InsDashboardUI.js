@@ -114,7 +114,7 @@ function InsDashboardUI ({history}) {
     else return (
         <div id="insdb">
             <SideBar typeUserTemp={1}/>
-            <Header />
+            <Header history={history}/>
             <div id="col1">
                 <About />
                 <Statistic learnerCount={myLearnerList? myLearnerList.length : 0} videoCount="20" 
