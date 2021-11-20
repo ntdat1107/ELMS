@@ -6,8 +6,8 @@ import courses from './data/Courses.js'
 import lessons from './data/Lessons.js'
 import User from './models/userModel.js'
 import Course from './models/courseModel.js'
-import Enroll from './models/enrollModel.js'
 import Lesson from './models/lessonModel.js'
+import Conversation from './models/conversationModel.js'
 import connectDB from './config/db.js'
 
 dotenv.config()
@@ -50,7 +50,6 @@ const importData = async () => {
 
 const destroyData = async () => {
     try {
-        await Enroll.deleteMany()
         await User.deleteMany()
         await Course.deleteMany()
         await Lesson.deleteMany()
