@@ -9,8 +9,10 @@ const CourseItem = course => (
         
             <img src = {course.imgSrc} alt ={course.title}/>
             <div id = "informationSB" >
-                <NavLink to="/course/git" activeClassName="InactiveLink" id = "navLink">
+                <NavLink to={`/course/${course.courseFastname}`} activeClassName="InactiveLink" id = "navLink">
                     <h3 id = "courseName">{course.title}</h3>
+                </NavLink>
+                <NavLink to={`/search/${course.subtitle}`} activeClassName="InactiveLink" id = "navLink">
                     <h3 id = "courseIns">{course.subtitle}</h3>
                 </NavLink>
             </div>
@@ -32,6 +34,7 @@ function CourseBoard({courses}) {
                         title = {course.title}
                         imgSrc = {course.imgSrc}   
                         subtitle = {course.subtitle}
+                        courseFastname = {course.courseFastname}
                     />
                 ))}
             </ul>
@@ -45,14 +48,16 @@ const courses = {
     {
         "id": 1,
         "title": "Django Full Course",
-        "subtitle": "Lana del Rey",
-        "imgSrc": cPython
+        "subtitle": "Long",
+        "imgSrc": cPython,
+        "courseFastname": "py"
     },
     {
         "id": 2,
         "title": "React Full Course",
-        "subtitle": "Adele",
-        "imgSrc": cReact
+        "subtitle": "Dat",
+        "imgSrc": cReact,
+        "courseFastname": "git"
     }
 ]}
 
@@ -62,14 +67,16 @@ const courses2 = {
     {
         "id": 1,
         "title": "Django Full Course",
-        "subtitle": "Lana del Rey",
-        "imgSrc": cPython
+        "subtitle": "Long",
+        "imgSrc": cPython,
+        "courseFastname": "py"
     },
     {
         "id": 2,
         "title": "React Full Course",
-        "subtitle": "Adele",
-        "imgSrc": cReact
+        "subtitle": "Dat",
+        "imgSrc": cReact,
+        "courseFastname": "py"
     }
 ]}
 
