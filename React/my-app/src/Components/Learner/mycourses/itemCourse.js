@@ -4,8 +4,6 @@ import share from "../img/icon/shareM.png"
 import favorite from "../img/icon/favoriteM.png"
 import archived from "../img/icon/archivedM.png"
 import {Link} from 'react-router-dom'
-import RatingCourse from '../../Rating/ratingCpn'
-import deleteIcon from '../img/icon/deleteIcon.png'
 import star05 from '../img/rateStar/star0_5.png'
 import star15 from '../img/rateStar/star1_5.png'
 import star25 from '../img/rateStar/star2_5.png'
@@ -44,8 +42,8 @@ function OpenMore() {
         </div>
     )
 }
-function OpenRate({imgCourse, nameCourse, authorCourse, rateScore}) {
-    let star = star0
+function OpenRate({rateScore}) {
+    let star = star0, arr = (rateScore ? "Your rating" : "Start Course")
     // Choose Star Img
     if (rateScore > 0 && rateScore < 1) star = star05
     else if (rateScore === 1) star = star1
@@ -61,6 +59,7 @@ function OpenRate({imgCourse, nameCourse, authorCourse, rateScore}) {
         <div className="rate-btn">            
             <div id="rate">
                 <img src={star} alt="Img rating"/>
+                <p>{arr}</p>
             </div>            
         </div>
     )
@@ -89,14 +88,10 @@ function ItemCourse({
                 <p>{authorCourse} </p>
             </div>
             <div className="rateCourseMC">
-                <div id = {rateScore == 0 ? "notScore" : "hadScore"}>
+                <div id = "rateScore">
                     <OpenRate 
-                        imgCourse = {imgCourse} 
-                        nameCourse = {nameCourse} 
-                        authorCourse = {authorCourse}
                         rateScore = {rateScore}
                     />
-                    <p>Your rating</p>
                 </div>
             </div>
         </div>

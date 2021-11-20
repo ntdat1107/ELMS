@@ -7,12 +7,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { getSysLearner } from "../../actions/adminActions";
 
 function AdminLearner({ history }) {
-    const userLogin = useSelector((state) => state.userLogin);
-    const { userInfo } = userLogin;
-    useEffect(() => {
-        if (!userInfo || userInfo.isIns) history.push("/login");
-    }, [history, userInfo]);
-
     const dispatch = useDispatch();
     const sysLearner = useSelector((state) => state.sysLearner);
     const { loading, error, sysLearnerList } = sysLearner;

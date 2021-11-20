@@ -7,12 +7,6 @@ import SideBar from "../SideBar/SideBar";
 import Header from "../Header/header";
 
 function AdminCourse({ history }) {
-    const userLogin = useSelector((state) => state.userLogin);
-    const { userInfo } = userLogin;
-    useEffect(() => {
-        if (!userInfo || userInfo.isIns) history.push("/login");
-    }, [history, userInfo]);
-
     return (
         <div id="admincourse-UI">
             <div className="AdminUI">

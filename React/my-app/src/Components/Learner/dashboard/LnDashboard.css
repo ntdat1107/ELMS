@@ -161,7 +161,6 @@
 
 #lnDashboard .bar-group .value-label {
   text-anchor: end;
-  fill: yellow;
   font-weight: 900;
   font-size: 0.7em;
 }

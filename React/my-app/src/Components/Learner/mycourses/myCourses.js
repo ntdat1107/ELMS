@@ -34,68 +34,75 @@ const SearchBox= ({ history }) => {
     )
 }
 
-const TableCourse = ({match}) => {
-    const keyword = match.params.keyword
+const TableCourse = ({id}) => {
     const dispatch = useDispatch()
-    // const courseList = useSelector(state => state.courseList)
-    // const { loading, error, courses } = courseList
-  
-    // useEffect(() => {
-    //     dispatch(listCourses(keyword))
-    // }, [dispatch, keyword])
 
     const myCourses = useSelector(state => state.myCourses)
     const { loading, error, myCoursesList } = myCourses
     useEffect(() => {
         dispatch(getMyCourses())
     }, [dispatch])
-  
     const [pageNumber, setPageNumber] = useState(0);  
     const coursesPerPage = 9;
     const pagesVisited = pageNumber * coursesPerPage;
-    // key={index} imgSrcCourse={data.image}
-    //           Name={data.name} Desc={data.description} Author={data.authorName} Type={data.typeCourse}
-    //           rateScore={data.rateScore} totalRate={data.rateNum} linkName={`/course/${data.fastName}`}
-    const display = myCoursesList && myCoursesList.slice(pagesVisited, pagesVisited + coursesPerPage).map((course,index) => {
-      return (
-        <div id="colCourses" key={index}>
-          <ItemCourse 
-              imgCourse={course.image}
-              nameCourse={course.name}
-              authorCourse={course.authorName}
-              rateScore={course.rateScore}
-              fastNameCourse={course.fastName}
-          />
-        </div>
-      );
-    });
-  
-    const pageCount = Math.ceil(myCoursesList && myCoursesList.length / coursesPerPage);
-    const changePage = ({ selected }) => {
-      setPageNumber(selected);
-    };
-  
-    return (
-        <div id="tableCourses">
-            <Scrollbars id="scrollbars">
-            {display}
-            </Scrollbars>
-            <ReactPaginate
-                previousLabel={"Prev"}
-                nextLabel={"Next"}
-                pageCount={pageCount}
-                onPageChange={changePage}
-                containerClassName={"paginationBttns"}
-                previousLinkClassName={"previousBttn"}
-                nextLinkClassName={"nextBttn"}
-                disabledClassName={"paginationDisabled"}
-                activeClassName={"paginationActive"}
-            />
-        </div>
-    );
+    if (loading) {
+        return (
+            <h1>Loading</h1>
+        )
+    }
+    else if (error) {
+        return (
+            <div id="err">
+                <h1>ERROR</h1>
+            </div>
+        )
+    }
+    else {
+        const pageCount = Math.ceil(myCoursesList && myCoursesList.length / coursesPerPage);
+        const changePage = ({ selected }) => {
+        setPageNumber(selected);
+        };
+    
+        return (
+            <div id="tableCourses">
+                <Scrollbars id="scrollbars">
+                {
+                    myCoursesList && myCoursesList.slice(pagesVisited, pagesVisited + coursesPerPage).map((course,index) => {
+                        var rateScore = 0;
+                        for(let j = 0; j < course.ratings.length; j++) {
+                            if(course.ratings[j].user === id) rateScore = course.ratings[j].rating;
+                        }
+                        return (
+                        <div id="colCourses" key={index}>
+                            <ItemCourse 
+                                imgCourse={course.image}
+                                nameCourse={course.name}
+                                authorCourse={course.authorName}
+                                rateScore={rateScore}
+                                fastNameCourse={course.fastName}
+                            />
+                        </div>
+                        );
+                    })
+                }
+                </Scrollbars>
+                <ReactPaginate
+                    previousLabel={"Prev"}
+                    nextLabel={"Next"}
+                    pageCount={pageCount}
+                    onPageChange={changePage}
+                    containerClassName={"paginationBttns"}
+                    previousLinkClassName={"previousBttn"}
+                    nextLinkClassName={"nextBttn"}
+                    disabledClassName={"paginationDisabled"}
+                    activeClassName={"paginationActive"}
+                />
+            </div>
+        );
+    }
   }
 
-function ContentMyCourses({match}) {
+function ContentMyCourses({match, id}) {
     return (
         <div id = "myCourses">
             <div className="titleMC"><p>My Courses</p></div>
@@ -115,7 +122,7 @@ function ContentMyCourses({match}) {
                 </div>
             </div>
             <div id="listCourseMC">
-                <TableCourse match={match} />
+                <TableCourse match={match} id={id}/>
             </div>
         </div>
     )
@@ -124,6 +131,7 @@ function ContentMyCourses({match}) {
 function LnMyCourses({match, history}) {
     const userLogin = useSelector(state => state.userLogin)
     const {userInfo} = userLogin
+    console.log(userInfo._id)
     useEffect(() => {
         if (!userInfo || !userInfo.isLearner) history.push('/login')
     }, [history, userInfo])
@@ -133,7 +141,7 @@ function LnMyCourses({match, history}) {
             <Header linkAvt="/learner/manageprofile" link="/learner/dashboard" srcImg={avatarLn} name="Lâm Thành Dương" gmail="lamduong11201@gmail.com" type="Learner"
             idName="information" typeUserTemp={2}/>
             <div id="lnMyCourses">
-                <ContentMyCourses match={match} />
+                <ContentMyCourses match={match} id={userInfo._id} />
             </div>
         </div>
     )

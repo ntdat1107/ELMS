@@ -8,13 +8,12 @@ import InforUser from "./InforUser";
 import { deleteUserNow } from "../../actions/userActions";
 import "./TableManage.css";
 
-function TableManage({ heightSB, listLearner }) {
+function TableManage({ heightSB, listLearner, history }) {
     const users = listLearner;
 
     const dispatch = useDispatch();
     const userDelete = useSelector((state) => state.userDelete);
     const { success: successDelete } = userDelete;
-    useEffect(() => {}, [dispatch, successDelete]);
 
     /* Set Click For More Information Box */
     const [click1, setClick1] = useState(0);
@@ -40,6 +39,8 @@ function TableManage({ heightSB, listLearner }) {
         if (window.confirm("Are you sure that you want to delete this user"))
             dispatch(deleteUserNow(e.target.id));
     }
+
+    useEffect(() => {}, [history, successDelete]);
 
     /* ________________________________________________________________ */
 
