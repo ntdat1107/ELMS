@@ -18,7 +18,9 @@ export const listCourses = (keyword = '') => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: COURSE_LIST_FAIL,
-            payload: null
+            payload: error.response && error.response.data.message
+            ? error.response.data.message
+            : error.message,
         })
     }
 }
@@ -45,7 +47,9 @@ export const createCourseReview = (courseId, token, review) => async (dispatch, 
     } catch (error) {
         dispatch({
             type: COURSE_CREATE_REVIEW_FAIL,
-            payload: null
+            payload: error.response && error.response.data.message
+            ? error.response.data.message
+            : error.message,
         })
     }
 }
@@ -80,7 +84,9 @@ export const detailCourseRate = (id, token) => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: COURSE_DETAIL_RATE_FAIL,
-            payload: null
+            payload: error.response && error.response.data.message
+            ? error.response.data.message
+            : error.message,
         })        
     }
 }
