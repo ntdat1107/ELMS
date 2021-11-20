@@ -167,7 +167,7 @@ display: flex;
 margin-left:20px;
 background-color: #ffffff;
 width: 782px;
-height: 335px;
+height: 420px;
 position: relative;
 }
 #lnMyCourses #myCourses #colCourses {
@@ -271,7 +271,7 @@ height: 30px;
 
 
 /* OpenMore */
-#lnMyCourses #myCourses .nav-menu {
+/* #lnMyCourses #myCourses .nav-menu {
     display: none;
     flex-direction: column;
     width: 200px;
@@ -299,18 +299,19 @@ height: 30px;
     z-index: 1;
     margin-left: 0px;
     box-shadow: 1px 3px 3px grey;
-}
+} */
 
 
 /* Scroll Bar */
 #lnMyCourses #myCourses #scrollbars {
-    height: 335px;
+    height: 420px;
     width: 782px;
     display: flex;
 }
 /* Search Box */ 
 #lnMyCourses #myCourses .searchMyCourse{
     margin-left: 210px;
+    margin-bottom: 10px;
 }
 #lnMyCourses #myCourses .searchMyCourse #btn-1{
     width: 350px;

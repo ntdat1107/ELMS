@@ -115,10 +115,9 @@ function ContentMyCourses({match, id}) {
             <div className="titleMC"><p>My Courses</p></div>
             <div id="typeCourse">
                 <div id="allCourses"><p>All Courses</p></div>
-                <div id="archived"><p>Archived</p></div>
                 <Route render={({ history })=> <SearchBox history={history} />} />
             </div>
-            <div id="labelSortFilter">
+            {/* <div id="labelSortFilter">
                 <div id="sort"><p>Sort by</p></div>
                 <div id="filter"><p>Filter by</p></div>
             </div>
@@ -127,7 +126,7 @@ function ContentMyCourses({match, id}) {
                 <div id = "buttonReset">
                 <p>Reset</p>
                 </div>
-            </div>
+            </div> */}
             <div id="listCourseMC">
                 <TableCourse match={match} id={id}/>
             </div>
