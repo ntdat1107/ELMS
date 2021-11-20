@@ -38,7 +38,7 @@ function UpperBody({course, isHave, handleEnroll}) {
         <div id = "upperBody">
             <div id = "informationBox">
                 <h1>{course.name}</h1>
-                <p>{course.description}</p>
+                <p id = "desc">{course.description}</p>
                 <h2>{course.authorName}</h2>
                 <RateContent TypeCpn={course.typeCourse} rateScoreCpn={course.rateScore} totalRateCpn={course.rateNum}/>
 
@@ -46,7 +46,7 @@ function UpperBody({course, isHave, handleEnroll}) {
             </div>
             <div id = "imageBox">
                 <img src = {course.image} alt="img" style = {{width: "350px", height: "180px", borderRadius: "5px"}}/>
-                <button onClick={(e) => handleEnroll(e)} id = "enrollButton" style={{height: "40px"}}>
+                <button onClick={(e) => handleEnroll(e)} id = "enrollButton">
                     <h3>
                         Enroll course
                     </h3>
