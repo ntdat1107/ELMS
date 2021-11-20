@@ -187,7 +187,6 @@
 }
 .nav-item-3 .nav-menu-rate.active {
     display:block;
-    margin-top: 45px;
     background: red;
     left: 0;
     opacity: 1;
