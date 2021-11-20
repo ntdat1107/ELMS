@@ -1,45 +1,32 @@
 import axios from "axios";
-import {
-    CONVERSATION_SENDER_LIST_REQUEST,
-    CONVERSATION_SENDER_LIST_SUCCESS,
-    CONVERSATION_SENDER_LIST_FAIL,
-    CONVERSATION_RCV_LIST_REQUEST,
-    CONVERSATION_RCV_LIST_SUCCESS,
-    CONVERSATION_RCV_LIST_FAIL,
-} from "../constants/conversationConstants.js";
+import { CREATE_CVS_FAIL, CREATE_CVS_REQUEST, CREATE_CVS_SUCCESS } from "../constants/conversationConstants.js";
 
-export const listconversationsSender = (id) => async (dispatch) => {
+
+export const createNewCvs = (subject, content, fastName) => async(dispatch, getState) => {
     try {
-        dispatch({ type: CONVERSATION_SENDER_LIST_REQUEST });
-
-        const { data } = await axios.get(`/api/conversations/sender/${id}`);
-
         dispatch({
-            type: CONVERSATION_SENDER_LIST_SUCCESS,
-            payload: data,
-        });
+            type: CREATE_CVS_REQUEST
+        })
+        const { userLogin: { userInfo } } = getState() 
+
+        const config = {
+            headers: {
+                'Content-type': 'application/json',
+                Authorization: `Bearer ${userInfo.token}`
+            }
+        }
+        const { data } = await axios.post(`/api/conversations/create/${fastName}`, 
+            { subject, content }, config)
+        dispatch({
+            type: CREATE_CVS_SUCCESS,
+            payload: data
+        })
     } catch (error) {
         dispatch({
-            type: CONVERSATION_SENDER_LIST_FAIL,
-            payload: error.response && error.response.data.message ? error.response.data.message : error.message,
-        });
+            type: CREATE_CVS_FAIL,
+            payload: error.response && error.response.data.message
+            ? error.response.data.message
+            : error.message,
+        })
     }
-};
-
-export const listconversationsRcv = (id) => async (dispatch) => {
-    try {
-        dispatch({ type: CONVERSATION_RCV_LIST_REQUEST });
-
-        const { data } = await axios.get(`/api/conversations/rcv/${id}`);
-
-        dispatch({
-            type: CONVERSATION_RCV_LIST_SUCCESS,
-            payload: data,
-        });
-    } catch (error) {
-        dispatch({
-            type: CONVERSATION_RCV_LIST_FAIL,
-            payload: error.response && error.response.data.message ? error.response.data.message : error.message,
-        });
-    }
-};
+}

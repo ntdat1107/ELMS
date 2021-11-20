@@ -1,19 +1,15 @@
-// import express from "express";
-// import { protect } from "../middleware/authMiddleware.js";
-// import { postLearner, postInstruc, getSender, getReceiver } from "../controllers.js/conversationController.js";
+import express from "express";
+import { createConversation, getReceiveList, 
+        getSendList } from "../controllers.js/conversationController.js";
+import { protect } from "../middleware/authMiddleware.js";
 
-// const router = express.Router();
-
-// //new conv
+const router = express.Router();
 
 
-// router.route("/postLearner").post(protect, postLearner);
+router.route('/create/:fastName').post(protect, createConversation)
 
-// router.route("/postInstruc").post(protect, postInstruc);
+router.route('/getsend').get(protect, getSendList)
 
-// //get conv of a user
+router.route('/getreceive').get(protect, getReceiveList)
 
-// router.route("/sender/:id").get(getSender);
-// router.route("/receivers/:id").get(getReceiver);
-
-// export default router;
+export default router;
