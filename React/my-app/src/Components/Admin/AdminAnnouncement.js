@@ -9,11 +9,6 @@ import Header from "../Header/header";
 import AnnounData from "./FakedataforAnnoun";
 
 function AdminAnnounce({ history }) {
-    const userLogin = useSelector((state) => state.userLogin);
-    const { userInfo } = userLogin;
-    useEffect(() => {
-        if (!userInfo || userInfo.isIns) history.push("/login");
-    }, [history, userInfo]);
     return (
         <div id="adminannounce-UI">
             <div className="AdminUI">
@@ -30,7 +25,10 @@ function AdminAnnounce({ history }) {
                 />
             </div>
             <div id="adminannounce">
-                <ListAnnounceCpn Addition_Part={<NewAnnoun typeUserTemp={0} />} FakeData={AnnounData} />
+                <ListAnnounceCpn
+                    Addition_Part={<NewAnnoun typeUserTemp={0} />}
+                    FakeData={AnnounData}
+                />
             </div>
         </div>
     );

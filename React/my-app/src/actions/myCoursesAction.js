@@ -93,7 +93,7 @@ export const addNewCourse =
     }
 }
 
-export const enrollNewCourse = (id, fastName) => async (dispatch, getState) => {
+export const enrollNewCourse = (id, fastName) => async (dispatch) => {
     try {
         dispatch({
             type: ENROLL_COURSE_REQUEST

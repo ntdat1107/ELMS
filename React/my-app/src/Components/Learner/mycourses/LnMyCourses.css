@@ -215,6 +215,7 @@ position: relative;
 #lnMyCourses #myCourses .itemCourse .rateCourseMC {
 box-sizing: border-box;
 width: 240px;
+height: 30px;
 }
 
 /* Background Course */
@@ -262,13 +263,12 @@ color: white;
 background-color: #1E5C5F;
 }
 /* Rate Score Course */
-#lnMyCourses #myCourses .rateCourseMC #notScore {
-display: none;
-}
-#lnMyCourses #myCourses .rateCourseMC #hadScore {
+
+#lnMyCourses #myCourses .rateCourseMC #rateScore {
 padding-left: 10px;
 height: 30px;
 }
+
 
 /* OpenMore */
 #lnMyCourses #myCourses .nav-menu {

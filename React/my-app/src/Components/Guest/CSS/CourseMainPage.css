@@ -27,7 +27,7 @@
     cursor: context-menu;
 }
 
-#upperBody #informationBox p{
+#upperBody #informationBox #desc{
     color: #fafafa;
     margin: 10px;
     cursor: context-menu;
@@ -202,4 +202,8 @@
   
 #backButton .button:hover { /* Green */
     color: white;
+}
+
+#upperBody #rateContent{
+    margin-left: 10px;
 }
