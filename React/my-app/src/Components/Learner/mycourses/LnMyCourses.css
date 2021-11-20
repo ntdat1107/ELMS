@@ -95,7 +95,7 @@ font-size: 40px;
 display: flex;
 margin-left: 20px;
 margin-top: 15px;
-height: 30px;
+height: 40px;
 }
 
 #lnMyCourses #myCourses #typeCourse #allCourses {
@@ -108,7 +108,7 @@ width: 80px;
 text-align: center;
 }
 #lnMyCourses #myCourses #typeCourse #allCourses p {
-padding: 5px 0px;
+padding: 10px 0px;
 }
 #lnMyCourses #myCourses #typeCourse #archived {
 background-color: #316668;
@@ -167,7 +167,7 @@ display: flex;
 margin-left:20px;
 background-color: #ffffff;
 width: 782px;
-height: 420px;
+height: 410px;
 position: relative;
 }
 #lnMyCourses #myCourses #colCourses {
@@ -304,17 +304,17 @@ height: 30px;
 
 /* Scroll Bar */
 #lnMyCourses #myCourses #scrollbars {
-    height: 420px;
+    height: 410px;
     width: 782px;
     display: flex;
 }
 /* Search Box */ 
 #lnMyCourses #myCourses .searchMyCourse{
-    margin-left: 210px;
+    margin-left: 150px;
     margin-bottom: 10px;
 }
 #lnMyCourses #myCourses .searchMyCourse #btn-1{
-    width: 350px;
+    width: 500px;
     height: 30px;
     border-radius: 15px 0px 0px 15px;
     font-size: 12px;
