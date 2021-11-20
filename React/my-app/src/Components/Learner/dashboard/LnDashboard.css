@@ -104,7 +104,8 @@
   }
 #lnDashboard #calendar {
     height: 300px;
-    width: 320px;
+    width: 350px;
+    padding-right: 30px;
 }
 #lnDashboard #WSH{
     background-color:#00816ede;
@@ -149,7 +150,7 @@
 }
 
 /* Chart */
-#lnDashboard .title {
+/* #lnDashboard .title {
   font-size: 1.4em;
   font-weight: 300;
 }
@@ -169,12 +170,12 @@
   transition: opacity 0.3s;
 }
 
-/* Fade bars when the chart is hovered */
+
 #lnDashboard .container:hover .bar-group {
   opacity: 0.3;
 }
 
-/* But don't fade the hovered bar... */
+
 #lnDashboard .container .bar-group:hover {
   opacity: 1;
 }
@@ -186,4 +187,4 @@
 
 #lnDashboard .container .bar-group:hover .value-label {
   font-size: 10px;
-}
+} */
