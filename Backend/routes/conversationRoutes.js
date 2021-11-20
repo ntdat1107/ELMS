@@ -1,21 +1,19 @@
-import asyncHandler from "express-async-handler";
-import express from "express";
-import Conversation from "../models/conversationModel.js";
-import User from "../models/userModel.js";
-import { protect } from "../middleware/authMiddleware.js";
-import { postLearner, postInstruc, getSender, getReceiver } from "../controllers.js/conversationController.js";
+// import express from "express";
+// import { protect } from "../middleware/authMiddleware.js";
+// import { postLearner, postInstruc, getSender, getReceiver } from "../controllers.js/conversationController.js";
 
-const router = express.Router();
+// const router = express.Router();
 
-//new conv
+// //new conv
 
-router.route("/postLearner").post(protect, postLearner);
 
-router.route("/postInstruc").post(protect, postInstruc);
+// router.route("/postLearner").post(protect, postLearner);
 
-//get conv of a user
+// router.route("/postInstruc").post(protect, postInstruc);
 
-router.route("/sender/:senderId").get(getSender);
-router.route("/rcv/:receiverId").get(getReceiver);
+// //get conv of a user
 
-export default router;
+// router.route("/sender/:id").get(getSender);
+// router.route("/receivers/:id").get(getReceiver);
+
+// export default router;

@@ -5,7 +5,7 @@ import users from './data/Users.js'
 import courses from './data/Courses.js'
 import User from './models/userModel.js'
 import Course from './models/courseModel.js'
-import Enroll from './models/enrollModel.js'
+import Conversation from './models/conversationModel.js'
 import connectDB from './config/db.js'
 
 dotenv.config()
@@ -14,10 +14,9 @@ connectDB()
 
 const importData = async () => {
     try {
-        await Enroll.deleteMany()
         await User.deleteMany()
         await Course.deleteMany()
-        
+        await Conversation.deleteMany()
         const createUsers = await User.insertMany(users[0])
 
         const adminUser = createUsers[0]._id

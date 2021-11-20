@@ -5,27 +5,26 @@ const ConversationSchema = new mongoose.Schema(
         sender: {
             type: mongoose.Schema.Types.ObjectId,
             required: true,
-            ref: "User",
+            ref: "User"
         },
         receivers: [
             {
                 type: mongoose.Schema.Types.ObjectId,
-                required: true,
-                ref: "User",
-            },
+                ref: "User"
+            }
         ],
         subject: {
             type: String,
-            required: true,
+            required: true
         },
         content: {
             type: String,
-            required: true,
+            required: true
         },
         stt: {
             type: Number,
-            required: true,
-        },
+            required: true
+        }
     },
     { timestamps: true }
 );

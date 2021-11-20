@@ -64,7 +64,7 @@ function CourseMainPage({ match, history}) {
     const {userInfo} = userLogin
     const enrollCourse = useSelector(state => state.enrollCourse)
     const {success} = enrollCourse
-    const handleEnroll = (e) => {
+    const handleEnroll = () => {
         // console.log('a')
         // e.preventDefault()
         // console.log(userInfo._id, match.params.id)

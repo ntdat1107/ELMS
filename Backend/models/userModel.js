@@ -64,6 +64,14 @@ const userSchema = mongoose.Schema({
     hasCourse: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Course'
+    }],
+    sendList: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Conversation'
+    }],
+    receiveList: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Conversation'
     }]
 }, {
     timestamps: true
