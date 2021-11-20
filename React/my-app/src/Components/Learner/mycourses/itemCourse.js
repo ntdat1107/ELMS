@@ -1,8 +1,4 @@
-import React, {useState} from 'react'
-import moreImg from "../img/icon/more.png"
-import share from "../img/icon/shareM.png"
-import favorite from "../img/icon/favoriteM.png"
-import archived from "../img/icon/archivedM.png"
+import React from 'react'
 import {Link} from 'react-router-dom'
 import star05 from '../img/rateStar/star0_5.png'
 import star15 from '../img/rateStar/star1_5.png'
@@ -15,33 +11,33 @@ import star3 from '../img/rateStar/star3.png'
 import star4 from '../img/rateStar/star4.png'
 import star5 from '../img/rateStar/star5.png'
 import star0 from '../img/rateStar/star0.png'
-function OpenMore() {
-    const [click, setClick] = useState(false)
-    const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
+// function OpenMore() {
+//     const [click, setClick] = useState(false)
+//     const handleClick = () => setClick(!click);
+//     const closeMobileMenu = () => setClick(false);
     
-    return (        
-        <div className="more-btn" style={{position: 'absolute'}}>            
-            <div id="more" onClick={handleClick}>
-                <img style={{cursor: 'pointer'}} src={moreImg} alt="MoreImage" className="moreImg" id={click? "moreClose" : "moreOpen"}/>
-            </div>            
-            <ul className={click? 'nav-menu active' : 'nav-menu'}>
-                <li style={{cursor: 'pointer'}} className="nav-item" onClick={closeMobileMenu}>
-                    <img src={share} alt="ShareImg" width="15px" height="15px"></img>
-                    <p>Share</p>
-                </li>
-                <li style={{cursor: 'pointer'}} className="nav-item" onClick={closeMobileMenu}>
-                    <img src={favorite} alt="FavoriteImg" width="15px" height="15px"></img>
-                    <p>Favorite</p>
-                </li>
-                <li style={{cursor: 'pointer'}} className="nav-item" onClick={closeMobileMenu}>
-                    <img src={archived} alt="ArchivedImg" width="15px" height="15px"></img>
-                    <p>Archived</p>
-                </li>
-            </ul>
-        </div>
-    )
-}
+//     return (        
+//         <div className="more-btn" style={{position: 'absolute'}}>            
+//             <div id="more" onClick={handleClick}>
+//                 <img style={{cursor: 'pointer'}} src={moreImg} alt="MoreImage" className="moreImg" id={click? "moreClose" : "moreOpen"}/>
+//             </div>            
+//             <ul className={click? 'nav-menu active' : 'nav-menu'}>
+//                 <li style={{cursor: 'pointer'}} className="nav-item" onClick={closeMobileMenu}>
+//                     <img src={share} alt="ShareImg" width="15px" height="15px"></img>
+//                     <p>Share</p>
+//                 </li>
+//                 <li style={{cursor: 'pointer'}} className="nav-item" onClick={closeMobileMenu}>
+//                     <img src={favorite} alt="FavoriteImg" width="15px" height="15px"></img>
+//                     <p>Favorite</p>
+//                 </li>
+//                 <li style={{cursor: 'pointer'}} className="nav-item" onClick={closeMobileMenu}>
+//                     <img src={archived} alt="ArchivedImg" width="15px" height="15px"></img>
+//                     <p>Archived</p>
+//                 </li>
+//             </ul>
+//         </div>
+//     )
+// }
 function OpenRate({rateScore}) {
     let star = star0, arr = (rateScore ? "Your rating" : "Start Course")
     // Choose Star Img
@@ -77,7 +73,7 @@ function ItemCourse({
         <div className="itemCourse" >
             <div className="imgCourse" style={{overflow: "hidden"}}>
                 <img src={imgCourse} alt = "Course Img" style={{borderBottom: "1px solid #000", width: "240px"}}></img>
-                <OpenMore />
+                {/* <OpenMore /> */}
             </div>
             <div id="nameCourse">
                 <Link className="Link-coursename" to={`/course/${fastNameCourse}/1`}>

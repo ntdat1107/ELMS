@@ -16,7 +16,7 @@ function HomePageUI({history}) {
     }, [history, userInfo])
     return (
         <div>
-            <Header/>
+            <Header history={history}/>
             <SideBarGuest/>
             <MainBody/>
         </div>

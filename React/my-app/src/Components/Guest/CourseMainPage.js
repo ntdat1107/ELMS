@@ -14,6 +14,7 @@ import { Link, NavLink } from "react-router-dom";
 import { detailCourse } from '../../actions/courseActions';
 import { enrollNewCourse } from '../../actions/myCoursesAction';
 import RateContent from '../courseForYou/RateContent';
+import Loading from '../Loading/Loading';
 
 const courses = {
     "name": "Similar Courses",
@@ -83,7 +84,7 @@ function CourseMainPage({ match, history}) {
     useEffect(() => {
         dispatch(detailCourse(match.params.id))
     }, [dispatch])
-    if (loading) return (<div id="loading">Loading</div>)
+    if (loading) return <Loading/>
     else if (error) return (<div id="error">ERROR</div>)
     else{
         let isHave = false
