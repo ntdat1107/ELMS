@@ -5,6 +5,7 @@ import Header from "../Header/header";
 import TableManage from "../TableManage/TableManage";
 import { useSelector, useDispatch } from "react-redux";
 import { getSysLearner } from "../../actions/adminActions";
+import Loading from "../Loading/Loading";
 
 function AdminLearner({ history }) {
     const dispatch = useDispatch();
@@ -14,19 +15,28 @@ function AdminLearner({ history }) {
     useEffect(() => {
         dispatch(getSysLearner());
     }, [dispatch]);
-
-    return (
-        <div id="adminlearner-UI">
-            <div className="AdminUI">
+    if (loading)
+        return (
+            <div id="loadingInsTable">
                 <SideBar typeUserTemp={0} />
-                <Header />
+                <Header history={history} />
+                <Loading />
             </div>
-            <div id="adminlearner">
-                <SearchInTable typeUserTemp={1} />
-                <TableManage listLearner={sysLearnerList} />
+        );
+    else if (error) return <div id="errorInsTable">ERROR</div>;
+    else
+        return (
+            <div id="adminlearner-UI">
+                <div className="AdminUI">
+                    <SideBar typeUserTemp={0} />
+                    <Header history={history} />
+                </div>
+                <div id="adminlearner">
+                    <SearchInTable typeUserTemp={1} />
+                    <TableManage listLearner={sysLearnerList} />
+                </div>
             </div>
-        </div>
-    );
+        );
 }
 
 export default AdminLearner;

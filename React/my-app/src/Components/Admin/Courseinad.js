@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Scrollbars } from "react-custom-scrollbars";
 import CourseCpninad from "./CoureCpninad";
 import { listCourses } from "../../actions/courseActions";
+import Loading from "../Loading/Loading";
 import "./CSS/AdminCourse.css";
 
 function Courseinad() {
@@ -14,7 +15,11 @@ function Courseinad() {
         dispatch(listCourses());
     }, [dispatch]);
     if (loading) {
-        return <h1>Loading</h1>;
+        return (
+            <div>
+                <Loading />
+            </div>
+        );
     } else if (error) {
         return (
             <div id="err">
