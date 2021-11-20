@@ -80,14 +80,16 @@ const courses = {
         "title": "C++",
         "subtitle": "50+ courses",
         "imgSrc": cCpp,
-        "link" : "%Cpp%all%course"
+        "link" : "%Cpp%all%course",
+        "courseFastname" : "C++"
     },
     {    
         "id": 2,
         "title": "Python",
         "subtitle": "20+ courses",
         "imgSrc": cPython,
-        "link" : "%Cpp%all%course"
+        "link" : "%Cpp%all%course",
+        "courseFastname" : "python"
     },
     {
         "id": 3,
@@ -95,6 +97,7 @@ const courses = {
         "subtitle": "10+ courses",
         "imgSrc": cUIUX,
         "link" : "%Cpp%all%course",
+        "courseFastname" : "UI"
     },
     {
         "id": 4,
@@ -102,6 +105,7 @@ const courses = {
         "subtitle": "10+ courses",
         "imgSrc": cReact,
         "link" : "%Cpp%all%course",
+        "courseFastname" : "React"
     } 
 ]}
 
@@ -115,6 +119,7 @@ const courses2 = {
         "subtitle": "12 courses",
         "imgSrc": dolores,
         "link" : "%Cpp%all%course",
+        "courseFastname" : "Dolores"
     },
     {
         "id": 2,
@@ -122,20 +127,23 @@ const courses2 = {
         "subtitle": "5 courses",
         "imgSrc": hannah,
         "link" : "%Cpp%all%course",
+        "courseFastname" : "Hannah",
     },
     {
         "id": 3,
-        "title": "Doja Cat",
+        "title": "Dat",
         "subtitle": "9 courses",
         "imgSrc": doja,
         "link" : "%Cpp%all%course",
+        "courseFastname" : "Dat"
     },
     {
         "id": 4,
-        "title": "Remus Lupin",
+        "title": "Maiduck Long",
         "subtitle": "7 courses",
         "imgSrc": lupin,
-        "link" : "%Cpp%all%course"
+        "link" : "%Cpp%all%course",
+        "courseFastname" : "Long"
     }
 ]}
 
@@ -158,7 +166,7 @@ const CourseItem = course => (
             <h3>{course.subtitle}</h3>
         </div>
         {course.displayButton && <button id = "viewButton">
-                <NavLink activeClassName="ActiveLink" to = "/search" id = "navLink">
+                <NavLink activeClassName="ActiveLink" to = {`/search/${course.courseFastname}`} id = "navLink">
                     <h3>
                         view
                     </h3>
@@ -176,7 +184,9 @@ function CourseBoard({courses}) {
         <div id = "courseBoard">
             <div id = "boardHeader"> 
                 <h1>{courses.name}</h1>
-                <button><p>view all</p></button>
+                <NavLink activeClassName="ActiveLink" to = {`/search`} id = "navLink">
+                    <button><p>view all</p></button>
+                </NavLink>
             </div>
             <Scrollbars style={{ width: 410, height: 300 }}>
             <ul>
@@ -187,6 +197,7 @@ function CourseBoard({courses}) {
                         imgSrc = {course.imgSrc}   
                         subtitle = {course.subtitle}
                         displayButton = {courses.displayButton}
+                        courseFastname = {course.courseFastname}
                     />
                 ))}
             </ul>

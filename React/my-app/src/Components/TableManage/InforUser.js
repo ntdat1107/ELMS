@@ -11,7 +11,7 @@ function InforUser({ user, click1, closeBox, Role }) {
                         X
                     </p>
                     <div className="useInfor">
-                        <img id="userAvt" src={user.avatar} alt="UserAvt" width="200px" />
+                        <img id="userAvt" src={user.avatar} alt="UserAvt" height="140px" />
                         <p>{`Full Name: ${user.firstName}  ${user.lastName}`}</p>
                         <p>{`Role: ${Role}`}</p>
                         <p>{`Email: ${user.email}`}</p>

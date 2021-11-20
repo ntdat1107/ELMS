@@ -108,9 +108,10 @@
 #insdb #mycourse {
     border: 2px solid #3FBB8C;
     width: 350px;
-    height: 225px;
+    height: 400px;
     border-radius: 20px;
     margin-top: 10px;
+    margin-left: 20px;
 }
 
 #insdb #mycourse #head {
@@ -150,12 +151,17 @@
     font-weight: bold;
 }
 #insdb #head #my-c-viewall {
-    padding-right: 20px;
+    padding: 0 15px;
     float: right;
     text-align: center;
-    color: #160E4D;
+    border-radius: 15px;
+    background-color: #FC6B57;
+    color: #fff;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
+}
+#insdb #head #my-c-viewall:hover {
+    background-color: #a01d0c;
 }
 
 #insdb  .container .title {
@@ -220,4 +226,12 @@
     width: 350px;
     height: 400px;
     margin-top: -400px;
+}
+#insdb #col2{
+    margin-right: 0px;
+    margin-left: 70px;
+}
+#insdb #col2 .react-calendar{
+    margin-left: 10px;
+    margin-right: 0px;
 }
