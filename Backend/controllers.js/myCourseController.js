@@ -130,8 +130,9 @@ const getAllMyLearnersID = asyncHandler(async(req, res) => {
 })
 
 const enrollCourse = asyncHandler(async(req, res) => {
-    const user = req.user
-    const course = req.course
+    const { id, fastName } = req.body
+    const user = await User.findById(id)
+    const course = await Course.findOne({fastName: fastName})
     user.hasCourse.push(course._id)
     await user.save()
     course.learnerList.push(user._id)

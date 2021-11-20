@@ -47,7 +47,7 @@ const TableCourse = ({match}) => {
     const myCourses = useSelector(state => state.myCourses)
     const { loading, error, myCoursesList } = myCourses
     useEffect(() => {
-        if (!myCoursesList) dispatch(getMyCourses())
+        dispatch(getMyCourses())
     }, [dispatch])
   
     const [pageNumber, setPageNumber] = useState(0);  
