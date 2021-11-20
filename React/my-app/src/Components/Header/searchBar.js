@@ -21,10 +21,10 @@ function SearchBar ({
         }
     }
     return (
-        <form onSubmit = {submitHandler}>
+        <form onSubmit = {submitHandler} style={{display: 'flex'}}>
             <input id="Input" type="text" name={name} onChange = {(e) => setQuery(e.target.value)}  placeholder={searchType} ></input>
-            <button type = "submit" className="Link-coursename" >
-                <img src={searchImg} alt="SearchIconImage" id="searchIcon" />
+            <button type = "submit" className="Link-coursename" id="search-btn">
+                <img src={searchImg} alt="SearchIconImage" id="search-icon" />
             </button>
         </form>
     )

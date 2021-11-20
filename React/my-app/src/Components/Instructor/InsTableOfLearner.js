@@ -7,6 +7,7 @@ import SearchInTable from '../TableManage/SearchInTable';
 import TableManage from '../TableManage/TableManage';
 import { useSelector, useDispatch } from 'react-redux'
 import { getMyLearner } from '../../actions/myLearnerAction';
+import Loading from '../Loading/Loading';
 
 
 function TableOfLearner({history, match}) {
@@ -27,7 +28,19 @@ function TableOfLearner({history, match}) {
         dispatch(getMyLearner(match.params.fastName))
     }, [dispatch])
 
-    return (
+    if (loading) return (
+        <div id="loadingInsTable">
+            <SideBar typeUserTemp={1}/>
+            <Header history={history}/>
+            <Loading />
+        </div>
+    )
+    else if (error) return (
+        <div id="errorInsTable">
+            ERROR
+        </div>
+    )
+    else return (
         <div id="managelearner">
             <SideBar typeUserTemp={1}/>
             <Header history={history}/>

@@ -110,7 +110,7 @@
 
 
 /* Bell Message */
-#Header #bellMessage {
+/* #Header #bellMessage {
     display: flex;
 }
 #Header #bellMessage #bell {
@@ -128,7 +128,7 @@
 }
 #Header #bellMessage #message .messageImg {
     margin: 7.5px;
-}
+} */
 
 
 
@@ -178,7 +178,7 @@
     transition: all 0.5s ease;    
 }
 /* Notication */
-#Header .HasNoti #numOfNoti {
+/* #Header .HasNoti #numOfNoti {
     width: 15px;
     height: 15px;
     background-color: red;
@@ -257,7 +257,8 @@
 }
 
 /* Notification */
-#Header #message-btn #nav-item-ms {
+
+/* #Header #message-btn #nav-item-ms {
     width: 350px;
     height: 340px;
 }
@@ -312,10 +313,17 @@
 }
 #Header #listContentNoti-ms p{
     width: 300px;
+} */
+
+#Header #search-btn{
+    border: none;
+    margin-left: -30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 22px;
+    width: 22px;
+    background-color:white;
 }
-
-
-
 
 
 /* Guest */

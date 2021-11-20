@@ -70,7 +70,6 @@ const TableCourse = ({id, match}) => {
         else arr = myCoursesList
         const pageCount = Math.ceil(arr&&arr.length / coursesPerPage);
         const changePage = ({ selected }) => {setPageNumber(selected)};
-    
         return (
             <div id="tableCourses">
                 <Scrollbars id="scrollbars">
