@@ -16,20 +16,23 @@ function NewAnnoun({ typeUserTemp }) {
     const OpenNewAnnoun = () => setClick(true);
     const CloseNewAnnounBox = () => setClick(false);
 
-    var subject, content;
+    var subject, content, coursefastname;
     var check = document.getElementsByName("tick-box");
     var instructors, learners;
 
     const SendAnnoun = () => {
         setClick(false);
-        if (check[0].checked) instructors = "toInstructors";
-        if (check[1].checked) learners = "toLearners";
         subject = document.getElementById("subject").value;
         content = document.getElementById("content").value;
+        coursefastname = document.getElementById("coursefastname").value;
         console.log(subject);
+        if (typeUserTemp != 1) {
+            if (check[0].checked) dispatch(createNewCvs(subject, content, "toInstructors"));
+            if (check[1].checked) dispatch(createNewCvs(subject, content, "toLearners"));
+        }
 
-        if (check[0].checked) dispatch(createNewCvs(subject, content, "toInstructors"));
-        if (check[1].checked) dispatch(createNewCvs(subject, content, "toLearners"));
+        if (typeUserTemp == 1)
+            if (coursefastname) dispatch(createNewCvs(subject, content, coursefastname));
     };
 
     return (
@@ -62,14 +65,18 @@ function NewAnnoun({ typeUserTemp }) {
                         {typeUserTemp == 1 && (
                             <div id="tick-box-top">
                                 <div id="tick-box-top-inside">
-                                    <input type="radio" value="All my learners" /> All my learners
+                                    <input
+                                        type="text"
+                                        id="coursefastname"
+                                        placeholder="Enter Fastname of Course..."
+                                    />
                                 </div>
                             </div>
                         )}
                     </form>
-                    <input type="text" id="subject" />
+                    <input type="text" id="subject" placeholder="Subject" />
                     <div className="text-editor">
-                        <input type="text" id="content" />
+                        <input type="text" id="content" placeholder="Content" />
                     </div>
 
                     <p id="close-button" onClick={CloseNewAnnounBox}>
