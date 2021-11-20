@@ -5,6 +5,7 @@ import "./CSS/CourseVideoView.css";
 import MainPage from "./CourseVideoView";
 import { OutsidePage } from "./CourseVideoView";
 import { BackButton } from './CourseMainPage'
+import Loading from '../Loading/Loading';
 
 
 
@@ -24,7 +25,13 @@ function CourseView({match, history}) {
     useEffect(() => {
         dispatch(detailLesson(match.params.id, match.params.token))
     }, [dispatch, match])
-
+    if (loading) return (
+    <div id = "CV">  
+        <Loading/>
+        <BackButton url = "/" style = {{"z-index" : "1000"}} />
+        <OutsidePage match = {match} history = {history}/>
+    </div>)
+    else
     return(
         <div id = "CV">
             <BackButton url = "/" style = {{"z-index" : "1000"}} />

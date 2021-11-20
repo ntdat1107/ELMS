@@ -23,6 +23,7 @@ import { COURSE_CREATE_REVIEW_RESET } from "../../constants/courseConstants";
 
 import Header from "../Header/header";
 import { listLessons } from '../../actions/lessonActions';
+import Loading from "../Loading/Loading";
 
 function MainPage({ url, match , description}) {
   return (
@@ -33,7 +34,7 @@ function MainPage({ url, match , description}) {
   );
 }
 
-function OutsidePage({match}) {
+function OutsidePage({match, history}) {
   const dispatch = useDispatch()
   const lessonList = useSelector(state => state.lessonList)
   const {loading, error, lessons} = lessonList
@@ -47,6 +48,7 @@ function OutsidePage({match}) {
     <div id="outsidePage">
       <Header
         typeUserTemp={2}
+        history ={history}
       />
       <RightSideBar lessons = {lessons}/>
     </div>

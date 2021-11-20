@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { listCourses, listCoursesQuery } from "../../actions/courseActions";
 
 import CourseForYouCpn from "../courseForYou/courseForYouCpn";
+import Loading from "../Loading/Loading";
 
 function SearchMainPage({match}) {
     const query = match.params.token
@@ -22,8 +23,10 @@ function SearchMainPage({match}) {
         else dispatch(listCoursesQuery(query))
     }, [dispatch, query])
     console.log(courses)
-
-    return(
+    if (loading) return (
+        <Loading/>
+    )
+    else return(
         <div id = "searchResultWrapper" >
             <DropDownBar/>
             <SearchResult className = "cfySearch" courses = {courses}/>
