@@ -4,8 +4,6 @@ import share from "../img/icon/shareM.png"
 import favorite from "../img/icon/favoriteM.png"
 import archived from "../img/icon/archivedM.png"
 import {Link} from 'react-router-dom'
-import RatingCourse from '../../Rating/ratingCpn'
-import deleteIcon from '../img/icon/deleteIcon.png'
 import star05 from '../img/rateStar/star0_5.png'
 import star15 from '../img/rateStar/star1_5.png'
 import star25 from '../img/rateStar/star2_5.png'
@@ -94,7 +92,6 @@ function ItemCourse({
                     <OpenRate 
                         rateScore = {rateScore}
                     />
-                    {/* {rateScore && <p>Your rating</p>} */}
                 </div>
             </div>
         </div>
