@@ -59,7 +59,7 @@ export const getSendCvs = () => async(dispatch, getState) => {
     }
 }
 
-export const getSendCvs = () => async(dispatch, getState) => {
+export const getReceiveCvs = () => async(dispatch, getState) => {
     try {
         dispatch({
             type: GET_RECEIVE_CVS_REQUEST
