@@ -3,9 +3,11 @@ import dotenv from 'dotenv'
 import colors from 'colors'
 import users from './data/Users.js'
 import courses from './data/Courses.js'
+import lessons from './data/Lessons.js'
 import User from './models/userModel.js'
 import Course from './models/courseModel.js'
-import Conversation from './models/conversationModel.js'
+import Enroll from './models/enrollModel.js'
+import Lesson from './models/lessonModel.js'
 import connectDB from './config/db.js'
 
 dotenv.config()
@@ -17,6 +19,8 @@ const importData = async () => {
         await User.deleteMany()
         await Course.deleteMany()
         await Conversation.deleteMany()
+        await Lesson.deleteMany()
+        
         const createUsers = await User.insertMany(users[0])
 
         const adminUser = createUsers[0]._id
@@ -34,6 +38,7 @@ const importData = async () => {
         })
         sampleUser = sampleUser.slice(1, users.length)
         await User.insertMany(sampleUser)
+        await Lesson.insertMany(lessons)
         console.log(`Data imported!!`.green.inverse)
         process.exit()
 
@@ -48,6 +53,7 @@ const destroyData = async () => {
         await Enroll.deleteMany()
         await User.deleteMany()
         await Course.deleteMany()
+        await Lesson.deleteMany()
         
         console.log(`Data destroyed!!`.red.inverse)
         process.exit()

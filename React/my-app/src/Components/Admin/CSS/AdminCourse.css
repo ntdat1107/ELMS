@@ -1,7 +1,7 @@
 #admincourse {
-    margin-top: 120px;
-    margin-left: 300px;
-    width: 100%;
+    margin-top: 20vh;
+    margin-left: 18vw;
+    width: 80vw;
     position: relative;
 }
 
@@ -35,7 +35,7 @@
 
     width: 100%;
 }
-#admincourse #courseContent #Desc p{
+#admincourse #courseContent #Desc p {
     width: 100%;
     padding: 2px;
 }
@@ -43,45 +43,6 @@
     color: rgba(196, 196, 196, 1);
     font-size: 16px;
 }
-
-/* ------RateContent-------- */
-/* #admincourse #rateContent {
-    display: flex;
-    margin-top: 5px;
-}
-#admincourse #rateContent #p1 {
-    width: 90px;
-    height: 30px;
-    font-size: 14px;
-    text-align: center;
-}
-
-#admincourse #rateContent #p1 p {
-    margin-top: 5px;
-}
-#admincourse #rateContent #p2 {
-    color: rgba(255, 217, 2, 0.7);
-    height: 30px;
-    width: 30px;
-    font-size: 14px;
-    text-align: center;
-    margin-left: 10px;
-}
-#admincourse #rateContent #p2 p {
-    margin-top: 5px;
-}
-
-#admincourse #rateContent #p4 {
-    color: rgba(196, 196, 196, 1);
-    height: 30px;
-    width: 60px;
-    font-size: 14px;
-    text-align: center;
-    margin-left: 10px;
-}
-#admincourse #rateContent #p4 p {
-    margin-top: 5px;
-} */
 
 /* ------Task-------- */
 
@@ -171,16 +132,6 @@
     position: relative;
 }
 
-#admincourse #courseinad #add-taskIcon .detail-box.open #below #green #plus-icon {
-    cursor: pointer;
-    position: absolute;
-    right: 10px;
-}
-
-#admincourse #courseinad #add-taskIcon .detail-box.open #below #green #plus-icon:hover {
-    box-shadow: 1px 1px 3px black;
-}
-
 #admincourse #courseinad #add-taskIcon .detail-box.open #below #name {
     display: flex;
     padding-left: 12px;
@@ -189,19 +140,10 @@
 }
 #admincourse #courseinad #add-taskIcon .detail-box.open #below #name-of {
     padding-left: 20px;
-    cursor: pointer;
 }
 
 #admincourse #courseinad #add-taskIcon .detail-box.open #below #name-of:hover {
     text-decoration-line: underline;
-}
-
-#admincourse #courseinad #add-taskIcon .detail-box.open #below #name #right-icon {
-    cursor: pointer;
-}
-
-#admincourse #courseinad #add-taskIcon .detail-box.open #below #name #right-icon:hover {
-    box-shadow: 1px 1px 3px black;
 }
 
 #admincourse #courseinad #add-taskIcon .detail-box.open #close {

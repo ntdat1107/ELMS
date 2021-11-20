@@ -43,9 +43,9 @@ function Information({
 }) {
   return (
       <div id="information">            
-          <div id="avatar" style ={{ height: "60px"}}>
+          <div id="avatar" style ={{ height: "70px"}}>
               <Link to={linkAvt}>
-                  <img src={srcImg} alt="AvatarImage" width="60" height="60"/>
+                  <img src={srcImg} alt="AvatarImage" width="70" height="70"/>
               </Link>
           </div>
           <ul id="inform">

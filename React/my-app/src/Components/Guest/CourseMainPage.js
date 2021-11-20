@@ -13,7 +13,6 @@ import { NavLink } from "react-router-dom";
 import { detailCourse } from '../../actions/courseActions';
 import { enrollNewCourse } from '../../actions/myCoursesAction';
 
-
 const courses = {
     "name": "Similar Courses",
     "displayButton": false,
