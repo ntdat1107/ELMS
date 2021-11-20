@@ -110,7 +110,7 @@
 
 
 /* Bell Message */
-#Header #bellMessage {
+/* #Header #bellMessage {
     display: flex;
 }
 #Header #bellMessage #bell {
@@ -128,7 +128,7 @@
 }
 #Header #bellMessage #message .messageImg {
     margin: 7.5px;
-}
+} */
 
 
 

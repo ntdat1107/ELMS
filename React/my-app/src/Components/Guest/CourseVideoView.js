@@ -221,7 +221,10 @@ function NavItem3({ title, match }) {
                   <div style={{display: "flex"}}>
                   <p style={{fontSize: "16px", paddingLeft: "5px"}}>Score: </p> <Rating name="read-only" value={data.rating} readOnly />
                   </div>
-                  <p style={{fontSize: "16px", paddingLeft: "5px", paddingBottom: "5px"}}>Comment: {data.comment}</p>
+                  <p style={{fontSize: "16px", paddingLeft: "5px", paddingBottom: "5px",
+                    height: "25px", whiteSpace: "nowrap", overflow: "hidden",
+                    textOverflow: "ellipsis", width:"475px"
+                  }}>Comment: {data.comment}</p>
                 </div>
               ))}
               </Scrollbars>
