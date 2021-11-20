@@ -40,9 +40,7 @@
     margin-left: 50px;
     display: inline-block;
 }
-#Header #arrow img {
-    margin-left: 20px;
-}
+
 #avatar img {
     display: inline-block;
     margin-right: 20px;
@@ -52,7 +50,8 @@
     cursor: pointer;
 }
 #Header #arrow img {
-    margin-top: 20px;
+    padding-top: 25px;
+    padding-left: 5px;
     cursor: pointer;
 }
 #Header #arrowClose {
@@ -69,25 +68,43 @@
     display: flex;
     border: 1px solid black;
     padding: 5px;
-    width: 375px;
+    width: 345px;
 }
 #information #inform {
     margin-right: 10px;
 }
-
-#information h3 {
+#information #name{
+    width: 180px;
+    height: 30px;
+}
+#information #name h3 {
     color: black;
     cursor: pointer;
     font-size: 20px;
+    width: 180px;
+    height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0px;
+}
+#information #gmail{
+    width: 180px;
+    height: 20px;
 }
 #information p {
     font-size: 14px;
+    width: 180px;
+    height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0px;
 }
 
 #information #linkName {
     text-decoration: none;
 }
-
 
 
 /* Bell Message */
