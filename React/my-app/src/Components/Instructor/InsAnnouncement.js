@@ -18,7 +18,7 @@ function InsAnnouncement({history}) {
     return (
         <div id="ins-announce-ui">
             <SideBar typeUserTemp={1}/>
-            <Header />
+            <Header history={history} />
             <div id="ins-announce">
                 <ListAnnounceCpn Addition_Part={<NewAnnoun typeUserTemp={1}/>} FakeData={AnnounData} />
             </div>

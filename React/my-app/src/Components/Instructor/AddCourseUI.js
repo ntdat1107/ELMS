@@ -11,6 +11,7 @@ function AddCourseUI({history}) {
     useEffect(() => {
         if (!userInfo || !userInfo.isIns) history.push('/login')
     }, [history, userInfo])
+    const [image, setImage] = useState("https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg")
     const [name, setName] = useState('')
     const [category, setCategory] = useState('')
     const [desc, setDesc] = useState('')
@@ -23,7 +24,6 @@ function AddCourseUI({history}) {
             history.push(`/ins/managecourse/${fastName}`)
         }
     }, [courseInfo])
-    let image= "https://i.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg"
     const handleSubmit = (e) => {
         e.preventDefault()
         dispatch(addNewCourse(name, image, category, desc, fastName))
@@ -32,14 +32,20 @@ function AddCourseUI({history}) {
     return (
         <div className="InAddCourseUI">
             <SideBar typeUserTemp={1}/>
-            <Header />
+            <Header history={history}/>
             <div className="InAddCourse">
+                <input type="text" onChange={(e) => setImage(e.target.value)}/>
+                <img src={image} width="150px" height="auto" />
                 <div style={{width: "700px", paddingLeft: "20px", paddingTop: "20px"}}>
                     <form>
                         <label for="Name">Name Course</label>
                         <input type='text' id="Name" placeholder="Input name of course"  required onChange={(e) => setName(e.target.value)}></input>
                         <label for="Category">Category</label>
-                        <input type='text' id="Category" placeholder="" required onChange={(e) => setCategory(e.target.value)}></input>
+                        <select type='selector' id="Category" placeholder="" required onChange={(e) => setCategory(e.target.value)}>
+                            <option value="Beginner" label="Beginner"></option>
+                            <option value="Advanced" label="Advanced"></option>
+                            <option value="Master" label="Master"></option>
+                        </select>
                         <label for="PathName">Path Name</label>
                         <input type='text' id="PathName" placeholder="Input pathname of course" required onChange={(e) => setFastName(e.target.value)}></input>
                         <label for="Desc">Description</label>

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import CourseForYouCpn from '../courseForYou/courseForYouCpn';
 import './CSS/InnerCourse.css'
 import Scrollbars from 'react-custom-scrollbars';
-import MyCourse from './MyCourse'
+import Loading from '../Loading/Loading'
 import Header from '../Header/header'
 import SideBar from '../SideBar/SideBar';
 import plus from './imgSrc/plus.png'
@@ -88,8 +88,10 @@ function InnerCourse({ match, history }) {
 
     if (loading) {
         return (
-            <div id="loading">
-                <h1>LOADING</h1>
+            <div className="handleLoading">
+                <SideBar typeUserTemp={1} />
+                <Header history={history}/>
+                <Loading />
             </div>
         )
     }
@@ -97,7 +99,7 @@ function InnerCourse({ match, history }) {
         return (
             <div id="err">
             <SideBar typeUserTemp={1}/>
-            <Header />
+            <Header history={history} />
                 <h1 style = {{marginTop: "350px", marginLeft: "500px", borderRadius: "5px"}}>{error}</h1>
             </div>
         )
@@ -105,7 +107,7 @@ function InnerCourse({ match, history }) {
     else return (
         <div id="inner-course-UI">
             <SideBar typeUserTemp={1}/>
-            <Header />
+            <Header history={history} />
             <div id="inner-course">
             <div id="row-1">
                 <CourseForYouCpn 

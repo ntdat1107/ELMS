@@ -15,8 +15,7 @@ function LnManageProfile({history}) {
     return (
         <div id="lnManageProfileUI">
             <SideBar typeUserTemp={2}/>
-            <Header linkAvt="/learner/manageprofile" link="/learner/dashboard" srcImg={avatarLn} name="Lâm Thành Dương" gmail="lamduong11201@gmail.com" type="Learner"
-            idName="information" typeUserTemp={2}/>
+            <Header history = {history}/>
             <div id="lnManageProfile">
                 <ProfileCpn srcImage={avtProfile} name="LAM THANH DUONG" />
             </div>

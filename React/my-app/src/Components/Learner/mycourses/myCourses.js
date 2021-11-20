@@ -34,8 +34,9 @@ const SearchBox= ({ history }) => {
     )
 }
 
-const TableCourse = ({id}) => {
+const TableCourse = ({id, match}) => {
     const dispatch = useDispatch()
+    const keyword = match.params.keyword;
 
     const myCourses = useSelector(state => state.myCourses)
     const { loading, error, myCoursesList } = myCourses
@@ -58,16 +59,23 @@ const TableCourse = ({id}) => {
         )
     }
     else {
-        const pageCount = Math.ceil(myCoursesList && myCoursesList.length / coursesPerPage);
-        const changePage = ({ selected }) => {
-        setPageNumber(selected);
-        };
+        let arr = []
+        if(keyword) {
+            let filter = keyword.toUpperCase()
+            for(let i = 0; i < myCoursesList.length; i++)
+            {
+                if(myCoursesList[i].name.toUpperCase().indexOf(filter) > -1) arr.push(myCoursesList[i])
+            }
+        }
+        else arr = myCoursesList
+        const pageCount = Math.ceil(arr&&arr.length / coursesPerPage);
+        const changePage = ({ selected }) => {setPageNumber(selected)};
     
         return (
             <div id="tableCourses">
                 <Scrollbars id="scrollbars">
                 {
-                    myCoursesList && myCoursesList.slice(pagesVisited, pagesVisited + coursesPerPage).map((course,index) => {
+                    arr&&arr.slice(pagesVisited, pagesVisited + coursesPerPage).map((course,index) => {
                         var rateScore = 0;
                         for(let j = 0; j < course.ratings.length; j++) {
                             if(course.ratings[j].user === id) rateScore = course.ratings[j].rating;
@@ -131,15 +139,14 @@ function ContentMyCourses({match, id}) {
 function LnMyCourses({match, history}) {
     const userLogin = useSelector(state => state.userLogin)
     const {userInfo} = userLogin
-    console.log(userInfo._id)
+
     useEffect(() => {
         if (!userInfo || !userInfo.isLearner) history.push('/login')
     }, [history, userInfo])
     return (
         <div id="lnMyCoursesUI">
             <SideBar typeUserTemp={2}/>
-            <Header linkAvt="/learner/manageprofile" link="/learner/dashboard" srcImg={avatarLn} name="Lâm Thành Dương" gmail="lamduong11201@gmail.com" type="Learner"
-            idName="information" typeUserTemp={2}/>
+            <Header  history = {history}/>
             <div id="lnMyCourses">
                 <ContentMyCourses match={match} id={userInfo._id} />
             </div>

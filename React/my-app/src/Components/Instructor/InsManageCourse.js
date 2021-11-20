@@ -6,6 +6,7 @@ import "./CSS/InsManagerCourse.css"
 import CourseForYouCpn from "../courseForYou/courseForYouCpn";
 import SideBar from '../SideBar/SideBar';
 import Header from '../Header/header'
+import Loading from '../Loading/Loading'
 import { getMyCourses } from "../../actions/myCoursesAction";
 function InsManagerCourse ({history}) {
     const dispatch = useDispatch()
@@ -24,7 +25,11 @@ function InsManagerCourse ({history}) {
     }, [dispatch])
     if (loading) {
         return (
-            <h1>Loading</h1>
+            <div className="handleLoading">
+                <SideBar typeUserTemp={1} />
+                <Header history={history} />
+                <Loading />
+            </div>
         )
     }
     else if (error) {
@@ -37,7 +42,9 @@ function InsManagerCourse ({history}) {
     else return (
     <div id="insMC-UI">
         <SideBar typeUserTemp={1}/>
-        <Header />
+        <Header 
+            history = {history}
+        />
         <div id="insMC">
             <div className="title-add-course">
                 <p>Do you want to create a new course?</p>

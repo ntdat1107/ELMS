@@ -168,8 +168,6 @@ function ProfileCpn({
                         value={phoneNumber}
                         onChange={(e) => {handleChange(); setPhoneNumber(e.target.value)}}/>
                     </div>
-                </div>
-                <div id="row-4">
                     <div id="city">
                         <label className="label-pf" for="input-city">City</label>
                         <input className="input-tag-pf" type="text"  id="input-city" 
@@ -191,12 +189,24 @@ function ProfileCpn({
                         </select>
                     </div>
                 </div>
-                <div id="row-5">
+                <div id="row-4">
                     <div id="description">
                         <label className="label-pf" for="input-des">Description</label>
                         <textarea className="input-tag-pf" type="text" id="input-des" 
                         value={description}
                         onChange={(e) => {handleChange(); setDescription(e.target.value)}}/>
+                    </div>
+                </div>
+                <div id="row-5">
+                    <div id="pass">
+                        <label className="label-pf" htmlFor="newpass">Password</label>
+                        <input type="password" className="input-tag-pf" id="newpass" 
+                        onChange={(e) => {handleChange(); setPassword(e.target.value)}}/>
+                    </div>
+                    <div id="passconfirm">
+                        <label className="label-pf" htmlFor="newpassconfirm">Confirm password</label>
+                        <input type="password" className="input-tag-pf" id="newpassconfirm"
+                        onChange={(e) => {handleChange(); setPasswordConfirm(e.target.value)}}/>
                     </div>
                 </div>
                 <div id="row-6">
