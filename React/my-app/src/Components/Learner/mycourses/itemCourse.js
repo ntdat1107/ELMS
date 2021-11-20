@@ -60,7 +60,7 @@ function OpenRate({imgCourse, nameCourse, authorCourse, rateScore}) {
     return (        
         <div className="rate-btn">            
             <div id="rate">
-                <img src={star} alt="Img rating" style={{cursor: "pointer"}}/>
+                <img src={star} alt="Img rating"/>
             </div>            
         </div>
     )
@@ -96,7 +96,7 @@ function ItemCourse({
                         authorCourse = {authorCourse}
                         rateScore = {rateScore}
                     />
-                    <p style={{cursor: "pointer"}}>Your rating</p>
+                    <p>Your rating</p>
                 </div>
             </div>
         </div>

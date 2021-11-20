@@ -203,6 +203,7 @@ padding-left: 10px;
 width: 240px;
 height:30px;
 position: relative;
+cursor: pointer;
 }
 #lnMyCourses #myCourses .itemCourse #authorCourse {
 box-sizing: border-box;

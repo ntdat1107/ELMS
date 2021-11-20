@@ -182,7 +182,6 @@ function NavItem3({ title, match }) {
 
   const courseDetailRate = useSelector((state) => state.courseDetailRate);
   const { loading, error, course } = courseDetailRate;
-  if (!loading && course.ratings) console.log(course.ratings[0]);
 
   const courseReviewCreate = useSelector((state) => state.courseReviewCreate);
   const { success: successCourseReview } = courseReviewCreate;
@@ -208,27 +207,37 @@ function NavItem3({ title, match }) {
 
   return (
     <div className="nav-item-3">
-      <div id="navItem">
+      <div id="navItemReview">
         <h3 onClick={handleClick}>{title}</h3>
         <ul className={click ? "nav-menu-rate active" : "nav-menu-rate"}>
-          <p style={{ color: "black" }}>Review</p>
-          {!loading && course.ratings && course.ratings === [] && <p>No reviews</p>}
-          {!loading && course.ratings && course.ratings.map((data) => (
-            <div key={data._id}>
-              <p>{data.name}</p>
-              <Rating name="read-only" value={data.rating} readOnly />
-              <p>{data.comment}</p>
+          <div style={{width: "50%", paddingLeft: "10px"}}>
+            <p style={{fontSize: "20px", fontWeight: "bold"}}>List Review</p>
+            <div>
+              <Scrollbars style={{height: "270px"}}>
+              {!loading && course.ratings && course.ratings === [] && <p style={{fontSize: "16px"}}>No reviews</p>}
+              {!loading && course.ratings && course.ratings.map((data) => (
+                <div key={data._id}>
+                  <p style={{fontSize: "16px"}}>Name: {data.name}</p>
+                  <div style={{display: "flex"}}>
+                  <p style={{fontSize: "16px"}}>Score: </p> <Rating name="read-only" value={data.rating} readOnly />
+                  </div>
+                  <p style={{fontSize: "16px"}}>Comment: {data.comment}</p>
+                </div>
+              ))}
+              </Scrollbars>
             </div>
-          ))}
-          <div className="box-review">
-            <p>Write a Customer Review</p>
-            <form onSubmit={submitHandler}>
-              <label>
-                Rating
+          </div>
+          <div className="box-review" style={{width: "45%"}}>
+            <p style={{fontSize: "20px", fontWeight: "bold"}}>Write a Customer Review</p>
+            <form onSubmit={submitHandler} >
+              <label style={{display: "block"}}>
                 <select
                   name="rating"
                   value={rating}
                   onChange={(e) => setRating(e.target.value)}
+                  style={{height:"50px", width:"450px", margin: "10px 0px",
+                  borderRadius: "4px"
+                }}
                 >
                   <option value="">Select...</option>
                   <option value="1">1 - Poor</option>
@@ -237,19 +246,22 @@ function NavItem3({ title, match }) {
                   <option value="4">4 - Very Good</option>
                   <option value="5">5 - Excellent</option>
                 </select>
-              </label>
-              <label>
-                <input
-                  type="textarea"
+                <br/>
+                <textarea
                   name="comment"
+                  type="text"
                   value={comment}
                   onChange={(e) => setComment(e.target.value)}
+                  style={{height:"150px", width:"450px", margin: "0px 0px 5px",
+                  borderRadius: "4px", paddingLeft: "10px", paddingTop: "10px"}}
                 />
               </label>
               <input id="btn-submit" type="submit" value="Send" />
             </form>
           </div>
-          <button onClick={closeMenu}>Submit</button>
+          <button onClick={closeMenu} style={{width: "5%", height: "55px", border: "none"
+          , backgroundColor: "white"
+        }}>X</button>
         </ul>
       </div>
     </div>
