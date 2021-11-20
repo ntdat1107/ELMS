@@ -3,8 +3,9 @@ import './CSS/InsDashboard.css'
 import DbCalendar from "../Calendar/DbCalendar";
 import Statistic from "./Statistic";
 import MyCourse from "./MyCourse";
-import SideBarInstructor from '../SideBar/SideBar';
+import SideBar from '../SideBar/SideBar';
 import Header from '../Header/header'
+import Loading from '../Loading/Loading'
 import {Link} from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserProfile } from "../../actions/userActions";
@@ -99,8 +100,10 @@ function InsDashboardUI ({history}) {
         if (!myLearnerList) dispatch(getMyLearnerID())
     }, [dispatch, history, myLearnerList])
     if (loading || loadingLearner) return (
-        <div id="loading">
-            <h1>Loading</h1>
+        <div className="handleLoading">
+            <SideBar typeUserTemp={1} />
+            <Header />
+            <Loading />
         </div>
     )
     else if (error || errorLearner) return (
@@ -110,7 +113,7 @@ function InsDashboardUI ({history}) {
     )
     else return (
         <div id="insdb">
-            <SideBarInstructor typeUserTemp={1}/>
+            <SideBar typeUserTemp={1}/>
             <Header />
             <div id="col1">
                 <About />

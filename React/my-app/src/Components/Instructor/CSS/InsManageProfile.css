@@ -61,7 +61,7 @@
     margin-top: 10px;
     margin-left: 100px;
 }
-#insMP #MP #row-1, #insMP #row-2, #insMP #row-4{
+#insMP #MP #row-1, #insMP #row-2, #insMP #row-3, #insMP #row-4, #insMP #row-5{
     display: flex;
 }
 #insMP #MP #row-2, #insMP #row-3, #insMP #row-4, #insMP #row-5 {
@@ -113,15 +113,18 @@
 #insMP #MP #input-number, #insMP #input-city {
     width: 300px;
 }
-#insMP #MP #col2 #country {
-    margin-left: 75px;
+#insMP #MP #col2 #city, #insMP #MP #col2 #country {
+    margin-left: 25px;
 }
 #insMP #MP #input-des {
     width: 600px;
     height: 75px;
 }
+#insMP #MP #row-5 #passconfirm {
+    margin-left: 25px;
+}
 #insMP #MP #row-6 {
-    margin-top: 25px;
+    margin-top: 30px;
     margin-left: 200px;
 }
 #insMP #MP #row-6 button {
