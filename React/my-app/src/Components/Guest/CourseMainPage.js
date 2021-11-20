@@ -5,6 +5,7 @@ import {CourseBoard}      from "./Explorer";
 import Scrollbars from "react-custom-scrollbars"
 import './CSS/HomePage.css'
 import "./CSS/CourseMainPage.css"
+import "../courseForYou/courseForYou.css"
 
 import cPython   from "./imgs/coursePython.png"
 import cCpp  from "./imgs/courseCpp.png"
@@ -12,6 +13,7 @@ import cCpp  from "./imgs/courseCpp.png"
 import { NavLink } from "react-router-dom";
 import { detailCourse } from '../../actions/courseActions';
 import { enrollNewCourse } from '../../actions/myCoursesAction';
+import RateContent from '../courseForYou/RateContent';
 
 const courses = {
     "name": "Similar Courses",
@@ -38,10 +40,8 @@ function UpperBody({course, isHave, handleEnroll}) {
                 <h1>{course.name}</h1>
                 <p>{course.description}</p>
                 <h2>{course.authorName}</h2>
-                <div id="rate">
-                    <p id="score">{course.rateScore} </p>
-                    <div id = "numRate"><p>{course.rateNum}</p></div>
-                </div>
+                <RateContent TypeCpn={course.typeCourse} rateScoreCpn={course.rateScore} totalRateCpn={course.rateNum}/>
+
                 
             </div>
             <div id = "imageBox">
@@ -103,8 +103,9 @@ function LowerBody({course}) {
                         </h2>
                         <p>
                             {course.name}
+                        </p>
+                        <p>  
                             {course.authorName}
-                            {/* {course.overview} */}
                         </p>
                     </div>  
                 </Scrollbars>

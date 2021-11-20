@@ -11,7 +11,6 @@ import Login from './Components/Login/Login';
 import Signup from './Components/Login/SignUp';
 import ForgotPass from './Components/Login/ForgotPass';
 import Policy from './Components/Login/Policy';
-import SearchGuestUI from './Components/Guest/SearchGuest';
 import CourseMainPage from './Components/Guest/CourseMainPage';
 import LnDashboard from './Components/Learner/dashboard/dashboard';
 import RegisterInsUI from './Components/Learner/registerIns/registerToIns';

@@ -10,13 +10,16 @@ import { BackButton } from './CourseMainPage'
 
 function CourseView({match, history}) {
     const dispatch = useDispatch()
-    const userLogin = useSelector(state => state.userLogin)
-
     const lessonDetail = useSelector(state => state.lessonDetail)
     const {loading, error, lesson} = lessonDetail 
     // console.log(lesson)
     // console.log(match.params.id)
     // console.log(match.params.token)
+    const userLogin = useSelector(state => state.userLogin)
+    const {userInfo} = userLogin
+    useEffect(() => {
+        if (!userInfo || !userInfo.isIns || !userInfo.isLearner) history.push('/login')
+    }, [history, dispatch])
 
     useEffect(() => {
         dispatch(detailLesson(match.params.id, match.params.token))
