@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addNewCourse } from '../../actions/myCoursesAction'
-
+import SideBarInstructor from '../SideBar/SideBar';
+import Header from '../Header/header'
+import './CSS/AddCourseUI.css'
 function AddCourseUI({history}) {
     const dispatch = useDispatch()
     const userLogin = useSelector(state => state.userLogin)
@@ -26,14 +28,24 @@ function AddCourseUI({history}) {
     }
 
     return (
-        <div>
-            <form>
-            <input placeholder="Name" required onChange={(e) => setName(e.target.value)}></input>
-            <input placeholder="Category" required onChange={(e) => setCategory(e.target.value)}></input>
-            <input placeholder="Desc" required onChange={(e) => setDesc(e.target.value)}></input>
-            <input placeholder="FastName" required onChange={(e) => setFastName(e.target.value)}></input>
-            <button type="submit" onClick={handleSubmit}>Add</button>
-            </form>
+        <div className="InAddCourseUI">
+            <SideBarInstructor typeUserTemp={1}/>
+            <Header />
+            <div className="InAddCourse">
+                <div style={{width: "700px", paddingLeft: "20px", paddingTop: "20px"}}>
+                    <form>
+                        <label for="Name">Name Course</label>
+                        <input type='text' id="Name" placeholder=""  required onChange={(e) => setName(e.target.value)}></input>
+                        <label for="Category">Category</label>
+                        <input type='text' id="Category" placeholder="" required onChange={(e) => setCategory(e.target.value)}></input>
+                        <label for="PathName">Path Name</label>
+                        <input type='text' id="PathName" placeholder="" required onChange={(e) => setFastName(e.target.value)}></input>
+                        <label for="Desc">Description</label>
+                        <input type='text' id="Desc" placeholder="" required onChange={(e) => setDesc(e.target.value)}></input>
+                        <button type="submit" onClick={handleSubmit}>Add</button>
+                    </form>
+                </div>
+            </div>
         </div>
     )
 }

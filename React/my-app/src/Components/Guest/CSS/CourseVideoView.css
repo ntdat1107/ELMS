@@ -60,10 +60,16 @@
     font-size: 26px;
     margin: 10px;
 }
+#lowBody #lowBodyBox h3{
+    font-size: 18px;
+    margin-left: 10px;
+}
+
 
 #lowBody #lowBodyBox p{
     font-size: 16px;
     margin: 5px;
+    margin-left: 10px;
     padding-right: 40px;
 }
 
@@ -138,7 +144,7 @@
     color: #263238;
   }
   
-#CV #backButton .button:hover { /* Green */
+#CV #backButton .button:hover {
     color: white;
 }
 
@@ -157,8 +163,21 @@
 #navItem :hover {
     color: aqua;
     border-bottom:5px solid #fafafa;
-
 }
+
+#lowBody #lowNavBar #disabledNavItem h3{
+    padding: 10px;
+    font-size: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+#disabledNavItem #nav-link {
+    text-decoration: none;
+    color: #99A799;
+}
+
+
 /* Rating */
 .nav-item-3 .nav-menu-rate {
     display: none;
