@@ -22,12 +22,6 @@ function SearchUI({match, history}) {
 
     console.log(isGuest)
     console.log(1)
-
-
-    // useEffect(() => {
-    //     if (!userInfo) history.push('/login')
-    //     // else if (!userInfo.isIns) push error not type
-    // }, [history, userInfo])
     const sideBar = (isGuest) =>  {
         if (isGuest == true) {
             return (

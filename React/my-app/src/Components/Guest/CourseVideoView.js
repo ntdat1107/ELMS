@@ -23,6 +23,7 @@ import { COURSE_CREATE_REVIEW_RESET } from "../../constants/courseConstants";
 
 import Header from "../Header/header";
 import { listLessons } from '../../actions/lessonActions';
+import Loading from "../Loading/Loading";
 
 function MainPage({ url, match , description}) {
   return (
@@ -33,7 +34,7 @@ function MainPage({ url, match , description}) {
   );
 }
 
-function OutsidePage({match}) {
+function OutsidePage({match, history}) {
   const dispatch = useDispatch()
   const lessonList = useSelector(state => state.lessonList)
   const {loading, error, lessons} = lessonList
@@ -47,6 +48,7 @@ function OutsidePage({match}) {
     <div id="outsidePage">
       <Header
         typeUserTemp={2}
+        history ={history}
       />
       <RightSideBar lessons = {lessons}/>
     </div>
@@ -214,7 +216,7 @@ function NavItem3({ title, match }) {
           <div style={{width: "50%", paddingLeft: "10px"}}>
             <p style={{fontSize: "20px", fontWeight: "bold"}}>List Review</p>
             <div>
-              <Scrollbars style={{height: "270px"}}>
+              <Scrollbars style={{height: "265px"}}>
               {!loading && course.ratings && course.ratings.map((data) => (
                 <div key={data._id} style={{border: "1px solid black", borderRadius: "10px", marginBottom: "5px", width: "90%"}}>
                   <p style={{fontSize: "16px", paddingLeft: "5px"}}>Name: {data.name}</p>
