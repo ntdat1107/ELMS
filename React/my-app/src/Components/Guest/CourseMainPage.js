@@ -77,7 +77,9 @@ function CourseMainPage({ match, history}) {
         // if (course.learnerList && course.learnerList.indexOf(userInfo._id) != -1) setIsHave(true)
         return (
             <div id="courseMainPage">
-                <Header link="/" typeUserTemp={-1} />
+                <Header link="/" typeUserTemp={-1} 
+                history = {history}
+                />
                 <div id = "bodyPage">
                     <BackButton url = "/"/>
                     <UpperBody course = {course} isHave={isHave} handleEnroll={handleEnroll}/>

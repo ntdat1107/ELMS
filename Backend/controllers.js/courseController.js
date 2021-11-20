@@ -69,9 +69,35 @@ const createCourseReview = asyncHandler(async (req, res) => {
     }
 })
 
+const getCourseByQuery = asyncHandler(async(req, res) => {
+    const query = {};
+
+
+    if (req.query.search) {
+        query.name = {
+            $regex: req.query.search,
+            $options: 'i'
+        },
+        query.authorName = {
+            $regex: req.query.search,
+            $options: 'i'
+        }
+
+    }
+
+    try {
+        let courses = await Course.find({$or:[{name: query.name},{authorName:query.authorName}]})
+        res.json(courses)
+    } catch (error) {
+        res.status(500).send("Error to find course")
+    }
+
+})
+
 
 export {
     getCourse,
     getCourseByFastname,
     createCourseReview,
+    getCourseByQuery
 }

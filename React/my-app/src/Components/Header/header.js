@@ -116,7 +116,7 @@ function Header({history}) {
         <Link to={linkLogo}>
           <img src={Logo} alt="AppLogo" id="Logo"></img>
         </Link>    
-        <SearchBar searchImg = {searchIcon} id="SearchBar" name="Search" searchType="Search for anything" />
+        <SearchBar searchImg = {searchIcon} id="SearchBar" name="Search" searchType="Search for anything" history = {history}/>
         { userInfo && <BellMessage /> }
         { userInfo && userDetail && <Information linkAvt={linkProfile} srcImg={userDetail.avatar} name={userDetail.firstName + ' ' + userDetail.lastName} gmail={userDetail.email} type={typeU} idName={userDetail.accountID}/>}
         { !userInfo && <AuthBtn />}

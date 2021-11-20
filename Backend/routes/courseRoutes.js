@@ -1,10 +1,13 @@
 import express from "express";
-import { getCourse, getCourseByFastname, createCourseReview } from "../controllers.js/courseController.js";
+import { getCourse, getCourseByFastname, createCourseReview, getCourseByQuery } from "../controllers.js/courseController.js";
 import { protect } from "../middleware/authMiddleware.js";
 const router = express.Router()
 
 
 router.route('/').get(getCourse)
+router.route('/search/').get(getCourseByQuery)
+
+
 router.route('/:id/:token/reviews').post(protect, createCourseReview)
 
 
