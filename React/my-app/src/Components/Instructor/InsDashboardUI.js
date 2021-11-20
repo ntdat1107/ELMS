@@ -88,11 +88,11 @@ function InsDashboardUI ({history}) {
 
     const userProfile = useSelector(state => state.userProfile)
     const {loading, error, userDetail} = userProfile
-    // useEffect(() => {
-    //     if (!userDetail) {
-    //         dispatch(getUserProfile('profile'))
-    //     }
-    // }, [dispatch, history, userDetail])
+    useEffect(() => {
+        if (!userDetail) {
+            dispatch(getUserProfile('profile'))
+        }
+    }, [dispatch, history, userDetail])
     const getMyLearnersID = useSelector(state => state.getMyLearnersID)
     const { loadingLearner, errorLearner, myLearnerList } = getMyLearnersID
     useEffect(() => {

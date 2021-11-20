@@ -46,7 +46,7 @@ function UpperBody({course, isHave, handleEnroll}) {
             </div>
             <div id = "imageBox">
                 <img src = {course.image} alt="img" style = {{width: "350px", height: "180px", borderRadius: "5px"}}/>
-                <button onClick={handleEnroll} id = "enrollButton" style={{height: "50px"}}>
+                <button onClick={(e) => handleEnroll(e)} id = "enrollButton" style={{height: "40px"}}>
                     <h3>
                         Enroll course
                     </h3>
@@ -63,11 +63,10 @@ function CourseMainPage({ match, history}) {
     const {userInfo} = userLogin
     const enrollCourse = useSelector(state => state.enrollCourse)
     const {success} = enrollCourse
-    const handleEnroll = () => {
+    const handleEnroll = (e) => {
         // console.log('a')
         // e.preventDefault()
-        // console.log(userInfo._id, match.params.id)
-        dispatch(enrollNewCourse(match.params.id))
+        dispatch(enrollNewCourse(userInfo._id, match.params.id))
     }
     const courseDetail = useSelector(state => state.courseDetail)
     const { loading, error, course } = courseDetail
