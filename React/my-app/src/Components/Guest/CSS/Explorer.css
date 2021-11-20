@@ -1,7 +1,7 @@
 #mainBody {
     padding-left: 10px;
     margin-left: 350px;
-    margin-top: 120px;
+    margin-top: 140px;
     display: block;
 
 }
@@ -124,16 +124,19 @@
 #courseItem #viewButton {
     margin-top: auto;
     margin-bottom: auto;
+    margin-right: 20px;
     display: block;
     height: 30px;
-    width: 60px;
+    width: 100px;
     border-radius: 30px;
     background-color: #FC6858;
-    border: 1px solid #FC6858;
+    border: 1px solid #000000;
     font-weight: 100;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     cursor: pointer;
+    padding-left: auto;
+    padding-right: auto;
 }
 #courseItem #viewButton #navLink {
     text-decoration: none;

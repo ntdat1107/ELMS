@@ -5,6 +5,7 @@ import Header from "../Header/header";
 import TableManage from "../TableManage/TableManage";
 import { useSelector, useDispatch } from "react-redux";
 import { getSysIns } from "../../actions/adminActions";
+import Loading from "../Loading/Loading";
 import "./CSS/AdminInstruc.css";
 
 function AdminInstruc({ history }) {
@@ -15,21 +16,28 @@ function AdminInstruc({ history }) {
     useEffect(() => {
         dispatch(getSysIns());
     }, [dispatch]);
-
-    return (
-        <div id="admininstruc-UI">
-            <div className="AdminUI">
+    if (loading)
+        return (
+            <div id="loadingInsTable">
                 <SideBar typeUserTemp={0} />
-                <Header 
-                history = {history}
-                />
+                <Header history={history} />
+                <Loading />
             </div>
-            <div id="admininstruc">
-                <SearchInTable typeUserTemp={1} />
-                <TableManage listLearner={sysInsList} />
+        );
+    else if (error) return <div id="errorInsTable">ERROR</div>;
+    else
+        return (
+            <div id="admininstruc-UI">
+                <div className="AdminUI">
+                    <SideBar typeUserTemp={0} />
+                    <Header history={history} />
+                </div>
+                <div id="admininstruc">
+                    <SearchInTable typeUserTemp={1} />
+                    <TableManage listLearner={sysInsList} />
+                </div>
             </div>
-        </div>
-    );
+        );
 }
 
 export default AdminInstruc;

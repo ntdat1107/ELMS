@@ -1,6 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
 import "./CSS/AdminCourse.css";
 import Courseinad from "./Courseinad";
 import SideBar from "../SideBar/SideBar";
@@ -11,7 +9,7 @@ function AdminCourse({ history }) {
         <div id="admincourse-UI">
             <div className="AdminUI">
                 <SideBar typeUserTemp={0} />
-                <Header />
+                <Header history={history} />
             </div>
             <div id="admincourse">
                 <Courseinad />

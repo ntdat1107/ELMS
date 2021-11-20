@@ -1,8 +1,8 @@
 import express from "express";
-
+import { protect } from "../middleware/authMiddleware.js";
 const router = express.Router()
 
-import { getLesson, getLessonsByFastname, getLessonsByFastnameAndId } from "../controllers.js/lessonController.js"
+import { createNewLesson, getLesson, getLessonsByFastname, getLessonsByFastnameAndId } from "../controllers.js/lessonController.js"
 
 // @desc Fetch all lessons
 // @route GET /api/lessons
@@ -14,4 +14,7 @@ router.route('/').get(getLesson)
 // @access Public
 router.route('/:id').get(getLessonsByFastname)
 router.route('/:id/:token').get(getLessonsByFastnameAndId)
+
+router.route('/').post(protect, createNewLesson)
+
 export default router
