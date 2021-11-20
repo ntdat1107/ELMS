@@ -38,7 +38,7 @@ function UpperBody({course, isHave, handleEnroll}) {
         <div id = "upperBody">
             <div id = "informationBox">
                 <h1>{course.name}</h1>
-                <p>{course.description}</p>
+                <p id = "desc">{course.description}</p>
                 <h2>{course.authorName}</h2>
                 <RateContent TypeCpn={course.typeCourse} rateScoreCpn={course.rateScore} totalRateCpn={course.rateNum}/>
 
