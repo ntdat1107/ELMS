@@ -4,6 +4,7 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import CourseForYouCpn from "../../courseForYou/courseForYouCpn";
 import { Link } from "react-router-dom"
 import { listCourses } from "../../../actions/courseActions";
+import Loading from '../../Loading/Loading'
 function CourseForYou() {
     const dispatch = useDispatch()
     const courseList = useSelector(state => state.courseList)
@@ -15,7 +16,7 @@ function CourseForYou() {
 
     if (loading) {
         return (
-            <h1>Loading</h1>
+            <Loading />
         )
     }
     else if (error) {

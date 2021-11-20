@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import ReactPaginate from "react-paginate";
 import { Scrollbars } from "react-custom-scrollbars"
 import ItemCourse from "./itemCourse"
-import { listCourses } from "../../../actions/courseActions";
+import Loading from '../../Loading/Loading';
 import { getMyCourses } from "../../../actions/myCoursesAction";
 
 const SearchBox= ({ history }) => {
@@ -47,7 +47,7 @@ const TableCourse = ({id}) => {
     const pagesVisited = pageNumber * coursesPerPage;
     if (loading) {
         return (
-            <h1>Loading</h1>
+            <Loading />
         )
     }
     else if (error) {
