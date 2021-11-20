@@ -151,12 +151,17 @@
     font-weight: bold;
 }
 #insdb #head #my-c-viewall {
-    padding-right: 20px;
+    padding: 0 15px;
     float: right;
     text-align: center;
-    color: #160E4D;
+    border-radius: 15px;
+    background-color: #FC6B57;
+    color: #fff;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
+}
+#insdb #head #my-c-viewall:hover {
+    background-color: #a01d0c;
 }
 
 #insdb  .container .title {

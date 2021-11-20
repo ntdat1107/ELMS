@@ -24,25 +24,41 @@ function MyCourse({
                 <Link to={"/ins/managecourse/inner"} style={{color: "black"}}>
                     <div id="first-c">
                         <img src={python} alt="ImgCourse" height={heightSize} width={widthSize}/>
-                        <p>Python for beginners</p>
+                        <p style={{fontSize: "24px", height: "50px", whiteSpace: "nowrap", overflow: "hidden",
+                            textOverflow: "ellipsis", width:"245px"
+                        }}>
+                            Python for beginners
+                        </p>
                     </div>
                 </Link>
                 <Link to={"/ins/managecourse/inner"}style={{color: "black"}}>
                     <div id="second-c">
                         <img src={JS} alt="ImgCourse" height={heightSize} width={widthSize} />
-                        <p>Javascript</p>
+                        <p style={{fontSize: "24px", height: "50px", whiteSpace: "nowrap", overflow: "hidden",
+                            textOverflow: "ellipsis", width:"245px"
+                        }}>
+                            Javascript
+                        </p>
                     </div>
                 </Link>
                 <Link to={"/ins/managecourse/inner"}style={{color: "black"}}>
                     <div id="second-c">
                         <img src={cpp} alt="ImgCourse" height={heightSize} width={widthSize} />
-                        <p>C++ for beginners</p>
+                        <p style={{fontSize: "24px", height: "50px", whiteSpace: "nowrap", overflow: "hidden",
+                            textOverflow: "ellipsis", width:"245px"
+                        }}>
+                            C++ for beginners
+                        </p>
                     </div>
                 </Link>
                 <Link to={"/ins/managecourse/inner"}style={{color: "black"}}>
                     <div id="second-c">
                         <img src={html} alt="ImgCourse" height={heightSize} width={widthSize} />
-                        <p>HTML for advanced</p>
+                        <p style={{fontSize: "24px", height: "50px", whiteSpace: "nowrap", overflow: "hidden",
+                            textOverflow: "ellipsis", width:"245px"
+                        }}>
+                            HTML for advanced
+                        </p>
                     </div>
                 </Link>
             </div>
