@@ -146,8 +146,7 @@ function LnMyCourses({match, history}) {
     return (
         <div id="lnMyCoursesUI">
             <SideBar typeUserTemp={2}/>
-            <Header linkAvt="/learner/manageprofile" link="/learner/dashboard" srcImg={avatarLn} name="Lâm Thành Dương" gmail="lamduong11201@gmail.com" type="Learner"
-            idName="information" typeUserTemp={2}/>
+            <Header  history = {history}/>
             <div id="lnMyCourses">
                 <ContentMyCourses match={match} id={userInfo._id} />
             </div>
