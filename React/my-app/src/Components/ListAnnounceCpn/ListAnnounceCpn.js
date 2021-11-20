@@ -73,9 +73,16 @@ function ListAnnounceCpn({ history, Addition_Part }) {
                         parentClick={parentClick}
                         handleClick={handleClick}
                     />
+
+                    <ConverList
+                        cvsList={cvsReceiveList}
+                        parentClick={parentClick}
+                        handleClick={handleClick}
+                    />
                 </div>
 
                 <ContentCvs cvsList={cvsSendList} click={click} />
+                <ContentCvs cvsList={cvsReceiveList} click={click} />
             </div>
         );
 }
