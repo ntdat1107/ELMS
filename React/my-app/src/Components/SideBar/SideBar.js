@@ -46,7 +46,7 @@ function SideBar({ typeUserTemp }) {
                     nameSideBar: "Explorer",
                     h: "32",
                     w: "40",
-                    linkName: "/ins/explorer",
+                    linkName: "/search",
                 },
                 {
                     idName: "manageCourse",
