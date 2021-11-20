@@ -1,20 +1,29 @@
 #lnManageProfile #MP{
     display: flex;
-    margin-top: 130px;
-    margin-left: 325px;
+    position: absolute;
+    margin-top: 125px;
+    margin-left: 300px;
     box-sizing: border-box;
-    width: 1190px;
-    height: 575px;
+    width: 1200px;
+    height: 580px;
     background-color: #EFFAF8;
     border-radius: 20px;
     border: black 1px solid;
 }
 
+#lnManageProfile #MP #container input {
+    display: none;
+}
+#lnManageProfile #MP #container .camera-btn {
+    display: inline-block;
+    cursor: pointer;
+}
 #lnManageProfile #MP .avatarChange #big-avt {
     display: inline-block;
     border-radius:50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
+    object-fit: cover;
 }
 
 #lnManageProfile #MP .avatarChange #container #change-avt {
@@ -22,9 +31,8 @@
 }
 
 #lnManageProfile #MP .avatarChange #container {
-    cursor: pointer;
     position: relative;
-    margin-top: -50px;
+    margin-top: -40px;
     margin-left: 100px;
     width: 45px;
     height: 45px;
@@ -39,7 +47,7 @@
 }
 #lnManageProfile #MP .avatarChange #nameUser {
     position: relative;
-    font-size: 25px;
+    font-size: 30px;
     line-height: 60px;
     margin-left: -40px;
 }
@@ -47,13 +55,13 @@
 
 /* ------Text input------ */
 #lnManageProfile #MP #col1 {
-    margin-left: 25px;
+    margin-left: 50px;
 }
 #lnManageProfile #MP #col2 {
     margin-top: 10px;
     margin-left: 80px;
 }
-#lnManageProfile #MP #row-1, #lnManageProfile #row-2, #lnManageProfile #row-4{
+#lnManageProfile #MP #row-1, #lnManageProfile #row-2, #lnManageProfile #row-3, #lnManageProfile #row-4, #lnManageProfile #row-5{
     display: flex;
 }
 #lnManageProfile #MP #row-2, #lnManageProfile #row-3, #lnManageProfile #row-4, #lnManageProfile #row-5 {
@@ -97,23 +105,26 @@
     width: 450px;
 }
 #lnManageProfile #MP #col2 #b-day {
-    margin-left: 75px;
+    margin-left: 65px;
 }
 #lnManageProfile #MP #input-birthday {
     width: 215px;
 }
 #lnManageProfile #MP #input-number, #lnManageProfile #input-city {
-    width: 300px;
+    width: 270px;
 }
-#lnManageProfile #MP #col2 #country {
-    margin-left: 75px;
+#lnManageProfile #MP #col2 #city, #lnManageProfile #MP #col2 #country {
+    margin-left: 25px;
 }
 #lnManageProfile #MP #input-des {
     width: 600px;
     height: 75px;
 }
+#lnManageProfile #MP #row-5 #passconfirm {
+    margin-left: 25px;
+}
 #lnManageProfile #MP #row-6 {
-    margin-top: 25px;
+    margin-top: 30px;
     margin-left: 200px;
 }
 #lnManageProfile #MP #row-6 button {
