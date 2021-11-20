@@ -1,8 +1,4 @@
-import React, {useState} from 'react'
-import moreImg from "../img/icon/more.png"
-import share from "../img/icon/shareM.png"
-import favorite from "../img/icon/favoriteM.png"
-import archived from "../img/icon/archivedM.png"
+import React from 'react'
 import {Link} from 'react-router-dom'
 import star05 from '../img/rateStar/star0_5.png'
 import star15 from '../img/rateStar/star1_5.png'

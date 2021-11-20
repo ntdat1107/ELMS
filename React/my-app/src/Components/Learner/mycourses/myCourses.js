@@ -1,8 +1,6 @@
 import Header from '../../Header/header';
 import SideBar       from '../../SideBar/SideBar';
-import avatarLn from '../../img/avtLn.png'
 import {Route} from "react-router-dom";
-import DropList from "./dropListCourse"
 import "./LnMyCourses.css"
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux'
