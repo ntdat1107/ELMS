@@ -11,11 +11,19 @@
     border: black 1px solid;
 }
 
+#insMP #MP #container input {
+    display: none;
+}
+#insMP #MP #container .camera-btn {
+    display: inline-block;
+    cursor: pointer;
+}
 #insMP #MP .avatarChange #big-avt {
     display: inline-block;
     border-radius:50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
+    object-fit: cover;
 }
 
 #insMP #MP .avatarChange #container #change-avt {
@@ -23,9 +31,8 @@
 }
 
 #insMP #MP .avatarChange #container {
-    cursor: pointer;
     position: relative;
-    margin-top: -50px;
+    margin-top: -40px;
     margin-left: 100px;
     width: 45px;
     height: 45px;

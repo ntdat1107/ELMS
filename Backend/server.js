@@ -1,4 +1,5 @@
 import express from "express";
+import path from 'path'
 import dotenv from "dotenv";
 import colors from "colors";
 import connectDB from "./config/db.js";
@@ -7,6 +8,7 @@ import userRoutes from "./routes/userRoutes.js";
 import myCourseRoutes from "./routes/myCourseRoute.js";
 import conversationRoutes from "./routes/conversationRoutes.js";
 import lessonRoutes from "./routes/lessonRoutes.js"
+import uploadRoutes from "./routes/uploadRoutes.js"
 import { errorHandle, notFound } from "./middleware/errorMiddleware.js";
 
 dotenv.config();
@@ -26,6 +28,11 @@ app.use("/api/users", userRoutes);
 app.use("/api/mycourses", myCourseRoutes);
 app.use("/api/conversations", conversationRoutes);
 app.use("/api/lessons", lessonRoutes)
+app.use("/api/upload", uploadRoutes)
+
+const __dirname = path.resolve()
+app.use("/uploads", express.static(path.join(__dirname, '/uploads')))
+
 app.use(notFound);
 app.use(errorHandle);
 

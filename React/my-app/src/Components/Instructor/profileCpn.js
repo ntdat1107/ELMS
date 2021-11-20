@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import camera from "./imgSrc/camera.png"
+import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserProfile, updateUserProfile } from '../../actions/userActions'
 
@@ -12,6 +13,7 @@ function ProfileCpn({
     const handleChange = () => setChange(true)
     const saved = () => setChange(false)
     
+    const [uploading, setUploading] = useState(false)
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
@@ -21,7 +23,7 @@ function ProfileCpn({
     const [city, setCity] = useState('')
     const [country, setCoutry] = useState('other')
     const [sex, setSex] = useState('other')
-    const [avatar, setAvatar] = useState('')
+    const [avatar, setAvatar] = useState("https://st.quantrimang.com/photos/image/072015/22/avatar.jpg")
     const [description, setDescription] = useState('')
     const [phoneNumber, setPhoneNumber] = useState('')
 
@@ -51,13 +53,35 @@ function ProfileCpn({
             setEmail(userDetail.email)
             setBirthDay(userDetail.birthDay ? userDetail.birthDay.split('T')[0] : null)
             setAvatar(userDetail.avatar)
-            setSex(userDetail.sex)
-            setCoutry(userDetail.country)
-            setCity(userDetail.city)
-            setDescription(userDetail.description)
-            setPhoneNumber(userDetail.phoneNumber)
+            setSex(userDetail.sex ? userDetail.sex : 'other')
+            setCoutry(userDetail.country ? userDetail.country : 'other')
+            setCity(userDetail.city ? userDetail.city : '')
+            setDescription(userDetail.description ? userDetail.description : '')
+            setPhoneNumber(userDetail.phoneNumber ? userDetail.phoneNumber : '')
         }
     }, [dispatch, history, userDetail])
+
+    const uploadFileHandle = async (e) => {
+        const file = e.target.files[0]
+        const formData = new FormData()
+        formData.append('image', file)
+        setUploading(true)
+        console.log(formData)
+        try {
+            const config = {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            }
+            const { data } = await axios.post('/api/upload', formData, config)
+            console.log(data)
+            setAvatar(data)
+            setUploading(false)
+        } catch (error) {
+            console.error(error)
+            setUploading(false)
+        }
+    }
     const saveHandle = (e) => {
         e.preventDefault()
         if (password !== passwordConfirm) {
@@ -85,9 +109,14 @@ function ProfileCpn({
         <div id="MP">
             <div id="col1">
                 <div className="avatarChange">
-                    <img id="big-avt" src={srcImage} alt="Avatar" width="150px" height="auto" />
+                    <img id="big-avt" src={avatar} alt="Avatar" height="150px" width="150px" />
                     <div id="container">
-                        <img id="change-avt" src={camera} alt="button" width="30px" height="30px"/>
+                        <label className="camera-btn">
+                            <input type={"file"} id="avatar" name="avatar" accept="image/png, image/jpeg, image/jpg"
+                            onChange={(e) => {handleChange(); uploadFileHandle(e)}}></input>
+                            {uploading && <p>LOADING</p>}
+                            <img id="change-avt" src={camera} alt="button" width="30px" height="30px"/>
+                        </label>
                     </div>
                     <p id="nameUser">{name}</p>
                 </div>
