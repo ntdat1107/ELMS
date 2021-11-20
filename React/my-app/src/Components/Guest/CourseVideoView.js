@@ -191,6 +191,7 @@ function NavItem3({ title, match }) {
       alert("Review Submitted!");
       setRating(0);
       setComment('');
+      dispatch({type: COURSE_CREATE_REVIEW_RESET})
     }
     dispatch(detailCourseRate(match.params.id, match.params.token));
   }, [dispatch, match, successCourseReview]);

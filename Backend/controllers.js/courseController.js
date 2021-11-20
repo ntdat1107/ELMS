@@ -51,7 +51,7 @@ const createCourseReview = asyncHandler(async (req, res) => {
             rating: Number(rating),
             comment,
             user: userLearner._id,
-            name: userLearner.lastName
+            name: userLearner.firstName + ' ' + userLearner.lastName
         })
 
         course.ratings.push(review)
