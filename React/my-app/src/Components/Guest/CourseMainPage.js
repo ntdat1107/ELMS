@@ -10,7 +10,7 @@ import "../courseForYou/courseForYou.css"
 import cPython   from "./imgs/coursePython.png"
 import cCpp  from "./imgs/courseCpp.png"
 
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { detailCourse } from '../../actions/courseActions';
 import { enrollNewCourse } from '../../actions/myCoursesAction';
 import RateContent from '../courseForYou/RateContent';
@@ -33,7 +33,10 @@ const courses = {
     }
 ]};
 
-function UpperBody({course, isHave, handleEnroll}) { 
+function UpperBody({course, isHave, isIns, handleEnroll, history}) { 
+    let linkPath
+    if (isIns) linkPath = `/ins/managecourse/${course.fastName}`
+    else linkPath = `/course/${course.fastName}/1`
     return(
         <div id = "upperBody">
             <div id = "informationBox">
@@ -44,18 +47,20 @@ function UpperBody({course, isHave, handleEnroll}) {
             </div>
             <div id = "imageBox">
                 <img src = {course.image} alt="img" style = {{width: "350px", height: "180px", borderRadius: "5px"}}/>
-                {   !isHave?
+                {   !isHave && !isIns?
                     <button onClick={(e) => handleEnroll(e)} id = "enrollButton">
                         <h3>
                             Enroll course
                         </h3>
                     </button>
                     :
-                    <button id = "enrollButton">
-                        <h3>
-                            Go inside
-                        </h3>
-                    </button>
+                    <Link to={linkPath}>
+                        <button id = "enrollButton">
+                            <h3>
+                                Go inside
+                            </h3>
+                        </button>
+                    </Link>
                 }
             </div>
         </div>  
@@ -88,7 +93,7 @@ function CourseMainPage({ match, history}) {
                 />
                 <div id = "bodyPage">
                     <BackButton url = "/"/>
-                    <UpperBody course = {course} isHave={isHave} handleEnroll={handleEnroll}/>
+                    <UpperBody course = {course} isHave={isHave} isIns={userInfo.isIns} handleEnroll={handleEnroll}/>
                     <LowerBody course = {course} />
                 </div>
             </div>
