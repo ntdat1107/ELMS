@@ -72,6 +72,7 @@ function NewAnnoun({ typeUserTemp }) {
                             </div>
                         )}
                     </form>
+
                     <input type="text" id="subject" placeholder="Subject" />
                     <div className="text-editor">
                         <input type="text" id="content" placeholder="Content" />

@@ -1,14 +1,10 @@
-#lnAnnouncements p {
-    margin-top: 500px;
-    margin-left: 500px;
-}
 #lnAnnouncements #wholeblock {
     position: relative;
     display: flex;
     margin-top: 140px;
     margin-left: 325px;
     width: 1190px;
-    background-color: #58BAAB;
+    background-color: #58baab;
     border-radius: 15px;
     -webkit-border-radius: 15px;
     height: 560px;
@@ -60,7 +56,6 @@
 #lnAnnouncements #listAnnoun #sublistAnnoun {
     margin-top: 2%;
     text-align: center;
-    height: 460px;
 }
 
 #lnAnnouncements .Announcpn {
@@ -72,7 +67,7 @@
     margin: 8px;
     padding-left: 10px;
     border-radius: 15px;
-    -webkit-border-radius: 15px; 
+    -webkit-border-radius: 15px;
     line-height: 25px;
     position: relative;
     cursor: pointer;
@@ -84,7 +79,7 @@
     box-shadow: 3px 3px 5px grey;
 }
 
-#lnAnnouncements .Announcpn  p {
+#lnAnnouncements .Announcpn p {
     color: black;
     padding: 2px 0px 2px 10px;
     white-space: nowrap;
@@ -157,7 +152,7 @@
 
 #lnAnnouncements #content-block #inside-content-block #subject-inside {
     font-size: 30px;
-    color: #160E4D;
+    color: #160e4d;
     padding-left: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #898989;
@@ -173,9 +168,8 @@
 #lnAnnouncements #content-block #inside-content-block #time-inside {
     position: absolute;
     top: 30px;
-    right: 15px
+    right: 15px;
 }
-
 
 #lnAnnouncements .choose {
     display: none;
@@ -193,7 +187,10 @@
     top: 460px;
     z-index: 1;
 }
-#lnAnnouncements #moreOption #iconReadAnnoun, #iconFlagAnnoun, #iconClear, #iconNoReadAnnoun{
+#lnAnnouncements #moreOption #iconReadAnnoun,
+#iconFlagAnnoun,
+#iconClear,
+#iconNoReadAnnoun {
     cursor: pointer;
     margin-left: 20px;
     margin-top: 10px;
@@ -211,7 +208,9 @@
     padding-top: 2.5px;
 }
 
-#lnAnnouncements #moreOption #iconClear:hover, #iconNoReadAnnoun:hover, #iconFlagAnnoun:hover{
+#lnAnnouncements #moreOption #iconClear:hover,
+#iconNoReadAnnoun:hover,
+#iconFlagAnnoun:hover {
     cursor: pointer;
     height: 40px;
     width: 40px;
@@ -221,4 +220,3 @@
     padding-left: 2.5px;
     padding-top: 2.5px;
 }
-

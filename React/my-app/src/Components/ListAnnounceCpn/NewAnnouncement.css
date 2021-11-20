@@ -44,7 +44,6 @@
     position: relative;
     left: 450px;
     bottom: 610px;
-    text-align: center;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     box-shadow: 2px 2px 2px black;
@@ -66,7 +65,7 @@
 }
 
 .new-announ #New-Announ-Box #tick-box {
-    margin-left: 30px;
+    margin-left: 25px;
     margin-bottom: 20px;
     font-size: 20px;
     text-align: left;
@@ -76,26 +75,11 @@
     display: flex;
 }
 
-.new-announ #New-Announ-Box #tick-box #tick-box-top #tick-box-top-inside {
-    margin: 10px 40px 10px 5px;
-}
-
-.new-announ #New-Announ-Box #tick-box #tick-box-bottom {
-    margin: 0px 0px 5px 5px;
-    display: flex;
-}
-
-.new-announ #New-Announ-Box #tick-box #tick-box-bottom #hihaho {
-    margin-right: 20px;
-}
-
-.new-announ #New-Announ-Box #tick-box #tick-box-bottom #input-receiver {
-    width: 725px;
-    border: 0px solid;
-    font-size: 18px;
-    padding-left: 10px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
+#Announ-wholeblock #coursefastname {
+    margin-top: 10px;
+    font-size: 23px;
+    width: 750px;
+    height: 30px;
 }
 
 .new-announ #New-Announ-Box #send-button {
@@ -110,13 +94,27 @@
 }
 
 /*     Text Editor     */
+
+.new-announ #New-Announ-Box #subject {
+    font-size: 20px;
+    margin-left: 25px;
+    margin-bottom: 30px;
+    width: 850px;
+}
+
 .new-announ #New-Announ-Box .text-editor {
     background-color: white;
+    margin-left: 25px;
     width: 850px;
-    height: 385px;
+    height: 350px;
     border: 1px solid black;
     padding: 10px 20px 0px 20px;
     list-style: none;
-    text-align: center;
     display: inline-block;
+}
+
+.new-announ #New-Announ-Box #content {
+    font-size: 20px;
+    border: 0px solid black;
+    width: 800px;
 }
