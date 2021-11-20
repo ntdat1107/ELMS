@@ -7,6 +7,7 @@ import manageProfile from "../img/profile.png";
 import myCourses from "../img/myCourses.png";
 import manageIns from "../img/manageIns.png";
 import manageLn from "../img/manageLn.png";
+import inExplorer from "../img/explorer.png";
 import footer from "../img/footer.png";
 import { NavLink } from "react-router-dom";
 
@@ -37,6 +38,15 @@ function SideBar({ typeUserTemp }) {
                     h: "32",
                     w: "40",
                     linkName: "/ins/dashboard",
+                },
+                {
+                    idName: "explorer",
+                    srcImg: inExplorer,
+                    altName: "ExplorerImage",
+                    nameSideBar: "Explorer",
+                    h: "32",
+                    w: "40",
+                    linkName: "/ins/explorer",
                 },
                 {
                     idName: "manageCourse",

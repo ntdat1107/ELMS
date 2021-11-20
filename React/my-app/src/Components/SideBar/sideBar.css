@@ -11,6 +11,9 @@
 #SubSideBar button:hover #dashboard {
     content: url("../img/dashboardHover.png");
 }
+#SubSideBar button:hover #explorer {
+    content: url("../img/explorerHover.png");
+}
 
 #SubSideBar button:hover #manageCourse {
     content: url("../img/manageCourseHover.png");
@@ -51,6 +54,9 @@
 }
 #SubSideBar .ActiveLink #dashboard {
     content: url("../img/dashboardHover.png");
+}
+#SubSideBar .ActiveLink #explorer {
+    content: url("../img/explorerHover.png");
 }
 #SubSideBar .ActiveLink #manageCourse {
     content: url("../img/manageCourseHover.png");
@@ -107,6 +113,9 @@ li {
     background-color: #f4f4f4;
 }
 #SubSideBar #dashboard {
+    margin-top: 5px;
+}
+#SubSideBar #explorer {
     margin-top: 5px;
 }
 #SubSideBar #profile {
