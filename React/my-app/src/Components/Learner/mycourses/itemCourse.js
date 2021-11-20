@@ -44,8 +44,8 @@ function OpenMore() {
         </div>
     )
 }
-function OpenRate({imgCourse, nameCourse, authorCourse, rateScore}) {
-    let star = star0
+function OpenRate({rateScore}) {
+    let star = star0, arr = (rateScore ? "Your rating" : "Start Course")
     // Choose Star Img
     if (rateScore > 0 && rateScore < 1) star = star05
     else if (rateScore === 1) star = star1
@@ -61,6 +61,7 @@ function OpenRate({imgCourse, nameCourse, authorCourse, rateScore}) {
         <div className="rate-btn">            
             <div id="rate">
                 <img src={star} alt="Img rating"/>
+                <p>{arr}</p>
             </div>            
         </div>
     )
@@ -89,14 +90,11 @@ function ItemCourse({
                 <p>{authorCourse} </p>
             </div>
             <div className="rateCourseMC">
-                <div id = {rateScore == 0 ? "notScore" : "hadScore"}>
+                <div id = "rateScore">
                     <OpenRate 
-                        imgCourse = {imgCourse} 
-                        nameCourse = {nameCourse} 
-                        authorCourse = {authorCourse}
                         rateScore = {rateScore}
                     />
-                    <p>Your rating</p>
+                    {/* {rateScore && <p>Your rating</p>} */}
                 </div>
             </div>
         </div>

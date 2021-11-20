@@ -1,4 +1,5 @@
 import React from 'react'
+import star0 from '../Learner/img/rateStar/star0.png'
 import star05 from '../Learner/img/rateStar/star0_5.png'
 import star15 from '../Learner/img/rateStar/star1_5.png'
 import star25 from '../Learner/img/rateStar/star2_5.png'
@@ -9,7 +10,6 @@ import star2 from '../Learner/img/rateStar/star2.png'
 import star3 from '../Learner/img/rateStar/star3.png'
 import star4 from '../Learner/img/rateStar/star4.png'
 import star5 from '../Learner/img/rateStar/star5.png'
-import star0 from '../Learner/img/rateStar/star0.png'
 
 
 const styleBC = {
