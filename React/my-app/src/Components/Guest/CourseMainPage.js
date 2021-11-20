@@ -46,7 +46,7 @@ function UpperBody({course, isHave, handleEnroll}) {
             </div>
             <div id = "imageBox">
                 <img src = {course.image} alt="img" style = {{width: "350px", height: "180px", borderRadius: "5px"}}/>
-                <button onClick={(e) => handleEnroll(e)} id = "enrollButton" style={{height: "40px"}}>
+                <button onClick={(e) => handleEnroll(e)} id = "enrollButton">
                     <h3>
                         Enroll course
                     </h3>
