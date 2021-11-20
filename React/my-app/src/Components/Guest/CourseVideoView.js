@@ -214,7 +214,7 @@ function NavItem3({ title, match }) {
             <p style={{fontSize: "20px", fontWeight: "bold"}}>List Review</p>
             <div>
               <Scrollbars style={{height: "270px"}}>
-              {!loading && course.ratings && course.ratings === [] && <p style={{fontSize: "16px"}}>No reviews</p>}
+              {!loading && course.ratings === [] && <p style={{fontSize: "16px"}}>No reviews</p>}
               {!loading && course.ratings && course.ratings.map((data) => (
                 <div key={data._id}>
                   <p style={{fontSize: "16px"}}>Name: {data.name}</p>
@@ -260,7 +260,7 @@ function NavItem3({ title, match }) {
             </form>
           </div>
           <button onClick={closeMenu} style={{width: "5%", height: "55px", border: "none"
-          , backgroundColor: "white"
+          , backgroundColor: "white", cursor: "pointer"
         }}>X</button>
         </ul>
       </div>
