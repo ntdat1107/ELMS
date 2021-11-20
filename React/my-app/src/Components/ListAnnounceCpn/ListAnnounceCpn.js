@@ -5,6 +5,7 @@ import "./ListAnnouncement.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserProfile } from "../../actions/userActions";
 import { getSendCvs, getReceiveCvs } from "../../actions/conversationActions";
+import Loading from "../Loading/Loading";
 import ConverList from "./ConverList";
 import ContentCvs from "./ContentCvs";
 
@@ -62,7 +63,11 @@ function ListAnnounceCpn({ history, Addition_Part }) {
     /* ____________________________________________________________________ */
 
     if (loading || loading1) {
-        return <h1>Loading</h1>;
+        return (
+            <div>
+                <Loading />
+            </div>
+        );
     } else if (error || error1) {
         return (
             <div id="err">

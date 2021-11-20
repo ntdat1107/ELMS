@@ -83,6 +83,7 @@ function TableManage({ heightSB, listLearner, history }) {
             </div>
         );
     });
+
     return (
         <div id="tableinstruc">
             <div id="titletable">
