@@ -5,11 +5,12 @@ import "./ListAnnouncement.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserProfile } from "../../actions/userActions";
 import { getSendCvs, getReceiveCvs } from "../../actions/conversationActions";
-import axios from "axios";
+import ConverList from "./ConverList";
+import ContentCvs from "./ContentCvs";
 
 function ListAnnounceCpn({ history, Addition_Part }) {
     const dispatch = useDispatch();
-
+    /* _____________________________________ */
     const getCvsSend = useSelector((state) => state.getCvsSend);
     const { loading, error, cvsSendList } = getCvsSend;
 
@@ -24,9 +25,6 @@ function ListAnnounceCpn({ history, Addition_Part }) {
         if (!cvsReceiveList) dispatch(getReceiveCvs());
     }, [dispatch, history, cvsReceiveList]);
 
-    const conversations = [];
-
-    if (!loading) console.log(cvsSendList && cvsSendList);
     /* ____________________________________________________________________ */
     const [click, setClick] = useState(1);
 
@@ -70,54 +68,14 @@ function ListAnnounceCpn({ history, Addition_Part }) {
                         <img src={searchImg} alt="SearchIconImage" id="searchAnnounIcon" />
                     </div>
 
-                    <div id="sublistAnnoun">
-                        <Scrollbars>
-                            {conversations.map((conversation) => {
-                                return (
-                                    <button
-                                        className="Announcpn"
-                                        id={conversation._id}
-                                        onClick={parentClick}
-                                    >
-                                        <p className="receiver" onClick={handleClick}>
-                                            To: {conversation.receiver}
-                                        </p>
-                                        <p className="subject" onClick={handleClick}>
-                                            Subject: {conversation.subject}
-                                        </p>
-                                        <p className="content" onClick={handleClick}>
-                                            {conversation.content}
-                                        </p>
-                                        <p className="time" onClick={handleClick}>
-                                            {conversation.time}
-                                        </p>
-                                    </button>
-                                );
-                            })}
-                        </Scrollbars>
-                    </div>
+                    <ConverList
+                        cvsList={cvsSendList}
+                        parentClick={parentClick}
+                        handleClick={handleClick}
+                    />
                 </div>
 
-                <div id="content-block">
-                    {conversations.map((conversation) => {
-                        return (
-                            <div
-                                id={conversation._id}
-                                className={click == conversation._id ? "choose active" : "choose"}
-                            >
-                                <div id="sender-receiver">
-                                    <p>From: {conversation.sender}</p>
-                                    <p>To: {conversation.receiver}</p>
-                                </div>
-                                <div id="inside-content-block">
-                                    <p id="subject-inside">{conversation.subject}</p>
-                                    <p id="content-inside">{conversation.content}</p>
-                                    <p id="time-inside">{conversation.time}</p>
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
+                <ContentCvs cvsList={cvsSendList} click={click} />
             </div>
         );
 }
