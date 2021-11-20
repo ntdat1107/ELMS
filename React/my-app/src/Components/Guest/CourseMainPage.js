@@ -33,7 +33,8 @@ const courses = {
     }
 ]};
 
-function UpperBody({course, isHave, isIns, handleEnroll, history}) { 
+function UpperBody({userInfo, course, isHave, isIns, handleEnroll}) { 
+    const [enrolled, setEnrolled] = useState(isHave)
     let linkPath
     if (isIns) linkPath = `/ins/managecourse/${course.fastName}`
     else linkPath = `/course/${course.fastName}/1`
@@ -47,8 +48,8 @@ function UpperBody({course, isHave, isIns, handleEnroll, history}) {
             </div>
             <div id = "imageBox">
                 <img src = {course.image} alt="img" style = {{width: "350px", height: "180px", borderRadius: "5px"}}/>
-                {   !isHave && !isIns?
-                    <button onClick={(e) => handleEnroll(e)} id = "enrollButton">
+                {   !enrolled ?
+                    <button onClick={(e) => {handleEnroll(e); setEnrolled(true)}} id = "enrollButton">
                         <h3>
                             Enroll course
                         </h3>
@@ -74,7 +75,8 @@ function CourseMainPage({ match, history}) {
     const enrollCourse = useSelector(state => state.enrollCourse)
     const {success} = enrollCourse
     const handleEnroll = (e) => {
-        dispatch(enrollNewCourse(userInfo._id, match.params.id))
+        if (!userInfo) history.push('/login')
+        else dispatch(enrollNewCourse(userInfo._id, match.params.id))
     }
     const courseDetail = useSelector(state => state.courseDetail)
     const { loading, error, course } = courseDetail
@@ -85,7 +87,7 @@ function CourseMainPage({ match, history}) {
     else if (error) return (<div id="error">ERROR</div>)
     else{
         let isHave = false
-        if (course.learnerList && course.learnerList.indexOf(userInfo._id) != -1) isHave = true
+        if (course.learnerList && userInfo && course.learnerList.indexOf(userInfo._id) != -1) isHave = true
         return (
             <div id="courseMainPage">
                 <Header link="/" typeUserTemp={-1} 
@@ -93,7 +95,7 @@ function CourseMainPage({ match, history}) {
                 />
                 <div id = "bodyPage">
                     <BackButton url = "/"/>
-                    <UpperBody course = {course} isHave={isHave} isIns={userInfo.isIns} handleEnroll={handleEnroll}/>
+                    <UpperBody userInfo = {userInfo} course = {course} isHave={isHave} isIns={userInfo? userInfo.isIns: false} handleEnroll={handleEnroll}/>
                     <LowerBody course = {course} />
                 </div>
             </div>

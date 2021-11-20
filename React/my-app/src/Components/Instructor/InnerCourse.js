@@ -124,10 +124,11 @@ function InnerCourse({ match, history }) {
             <div id="row-2">
                 <div id="col-1">
                     <Scrollbars>
-                        <CourseSection nameSection="Tutorial" isDefault={true} />
-                        <CourseSection nameSection="Note" isDefault={true} />
-                        <CourseSection nameSection="Quiz" isDefault={true} />
-                        <CourseSection nameSection="Video" isDefault={false} />
+                        <div id="title-name">
+                            <p className="name-section-cpn">Lesson List</p>
+                            <Link id="linkToVideoDetail" to={`ins/managecourse/${match.params.fastName}`}>View lesson detail</Link>
+                            <Link id="linkToAddNewVideo" to={`ins/managecourse/${match.params.fastName}/addlesson`}>Add new lesson</Link>
+                        </div>
                     </Scrollbars>
                 </div>
                 <div id="col-2">
