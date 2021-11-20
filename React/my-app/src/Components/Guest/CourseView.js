@@ -18,7 +18,7 @@ function CourseView({match, history}) {
     const userLogin = useSelector(state => state.userLogin)
     const {userInfo} = userLogin
     useEffect(() => {
-        if (!userInfo || !userInfo.isIns || !userInfo.isLearner) history.push('/login')
+        if (!userInfo || !userInfo.isIns && !userInfo.isLearner) history.push('/login')
     }, [history, dispatch])
 
     useEffect(() => {
