@@ -52,7 +52,7 @@ function Login({history}) {
                     <div id="welcome">Welcome back!</div>
                     
                     <div >                    
-                        <form onSubmit={submitHandler} className="form">
+                        <form className="form">
                             <div className = "inp">
                                 <span>Username</span>
                                 <input className = "impBx" type="text" 
@@ -72,7 +72,7 @@ function Login({history}) {
                                 </Link>
                             </div>
                             <div className="btn-box">
-                                    <button type="submit" className="toggle-btn1" onClick={showToast}>Log in</button>
+                                    <button type="submit" className="toggle-btn1" onClick={(e)=> {showToast(); submitHandler(e)}}>Log in</button>
                                 <Link to='/signup'>
                                     <button type="button" className="toggle-btn2">Sign up</button>
                                 </Link>
@@ -80,7 +80,7 @@ function Login({history}) {
                         </form>
                     </div>
                 </div>
-                <ErrorToast toastList={list} setList={setList}/>
+                { error && <ErrorToast toastList={list} setList={setList}/> }
                 
             </div>
         </div>
