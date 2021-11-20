@@ -30,7 +30,7 @@ function TableOfLearner({history, match}) {
     return (
         <div id="managelearner">
             <SideBar typeUserTemp={1}/>
-            <Header/>
+            <Header history={history}/>
         <div id="table-learner">
             <div id="row-1">
                 

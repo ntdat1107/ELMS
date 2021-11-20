@@ -32,7 +32,7 @@ function AddCourseUI({history}) {
     return (
         <div className="InAddCourseUI">
             <SideBar typeUserTemp={1}/>
-            <Header />
+            <Header history={history}/>
             <div className="InAddCourse">
                 <input type="text" onChange={(e) => setImage(e.target.value)}/>
                 <img src={image} width="150px" height="auto" />

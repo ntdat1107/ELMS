@@ -102,7 +102,7 @@ function InsDashboardUI ({history}) {
     if (loading || loadingLearner) return (
         <div className="handleLoading">
             <SideBar typeUserTemp={1} />
-            <Header />
+            <Header history={history} />
             <Loading />
         </div>
     )

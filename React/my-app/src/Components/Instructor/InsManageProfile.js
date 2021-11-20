@@ -18,7 +18,7 @@ function InsManageProfile({history}) {
     return (
         <div id="insMP-UI">
             <SideBar typeUserTemp={1}/>
-            <Header/>
+            <Header history={history}/>
             <div id="insMP">
                 <ProfileCpn srcImage={avtCheems} name="Ngọ Tiến Đạt" />
             </div>

@@ -27,7 +27,7 @@ function InsManagerCourse ({history}) {
         return (
             <div className="handleLoading">
                 <SideBar typeUserTemp={1} />
-                <Header />
+                <Header history={history} />
                 <Loading />
             </div>
         )
