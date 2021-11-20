@@ -68,14 +68,11 @@ const TableCourse = ({id, match}) => {
             }
         }
         else arr = myCoursesList
-        arr = []
         const pageCount = Math.ceil(arr&&arr.length / coursesPerPage);
         const changePage = ({ selected }) => {setPageNumber(selected)};
-        console.log(arr === [])
         return (
             <div id="tableCourses">
                 <Scrollbars id="scrollbars">
-                {!arr && <p style={{fontSize: "40px"}}>No course</p> }
                 {
                     arr&&arr.slice(pagesVisited, pagesVisited + coursesPerPage).map((course,index) => {
                         var rateScore = 0;

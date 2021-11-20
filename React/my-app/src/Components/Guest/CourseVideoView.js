@@ -215,14 +215,13 @@ function NavItem3({ title, match }) {
             <p style={{fontSize: "20px", fontWeight: "bold"}}>List Review</p>
             <div>
               <Scrollbars style={{height: "270px"}}>
-              {!loading && course.ratings === [] && <p style={{fontSize: "16px"}}>No reviews</p>}
               {!loading && course.ratings && course.ratings.map((data) => (
-                <div key={data._id}>
-                  <p style={{fontSize: "16px"}}>Name: {data.name}</p>
+                <div key={data._id} style={{border: "1px solid black", borderRadius: "10px", marginBottom: "5px", width: "90%"}}>
+                  <p style={{fontSize: "16px", paddingLeft: "5px"}}>Name: {data.name}</p>
                   <div style={{display: "flex"}}>
-                  <p style={{fontSize: "16px"}}>Score: </p> <Rating name="read-only" value={data.rating} readOnly />
+                  <p style={{fontSize: "16px", paddingLeft: "5px"}}>Score: </p> <Rating name="read-only" value={data.rating} readOnly />
                   </div>
-                  <p style={{fontSize: "16px"}}>Comment: {data.comment}</p>
+                  <p style={{fontSize: "16px", paddingLeft: "5px", paddingBottom: "5px"}}>Comment: {data.comment}</p>
                 </div>
               ))}
               </Scrollbars>
