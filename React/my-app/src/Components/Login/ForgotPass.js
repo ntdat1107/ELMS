@@ -7,7 +7,6 @@ function ForgotPass() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(email)
     }
 
     return (
