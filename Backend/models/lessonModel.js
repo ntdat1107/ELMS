@@ -3,8 +3,7 @@ import mongoose from "mongoose";
 const lessonSchema = mongoose.Schema({
     courseFastname: {
         type: String,
-        required: true,
-        ref: 'Course'
+        required: true
     },  
     lessonName: {
         type: String,

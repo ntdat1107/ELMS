@@ -1,9 +1,9 @@
-import expressAsyncHandler from "express-async-handler";
+import asyncHandler from "express-async-handler";
 import Lesson from "../models/lessonModel.js"
 
 
 
-const getLesson = expressAsyncHandler(async(req, res) => {
+const getLesson = asyncHandler(async(req, res) => {
     const keyword = req.query.keyword ? {
         name: {
             $regex: req.query.keyword,
@@ -14,7 +14,7 @@ const getLesson = expressAsyncHandler(async(req, res) => {
     res.json(courses)
 })
 
-const getLessonsByFastname = expressAsyncHandler(async (req, res) => {
+const getLessonsByFastname = asyncHandler(async (req, res) => {
     const lessons = await Lesson.find({courseFastname: `${req.params.id}`})
     if (lessons) {
         res.json(lessons)
@@ -25,8 +25,9 @@ const getLessonsByFastname = expressAsyncHandler(async (req, res) => {
     }
 })
 
-const getLessonsByFastnameAndId = expressAsyncHandler(async (req, res) => {
-    const lessons = await Lesson.findOne({courseFastname: `${req.params.id}`, lessonNumber: `${req.params.token}`})
+const getLessonsByFastnameAndId = asyncHandler(async (req, res) => {
+    const lessons = await Lesson.findOne
+    ({courseFastname: `${req.params.id}`, lessonNumber: `${req.params.token}`})
     // const lesson = await lessons.find({lessonNumber: `${req.params.token}`})
     if (lessons) {
         res.json(lessons)
@@ -37,9 +38,15 @@ const getLessonsByFastnameAndId = expressAsyncHandler(async (req, res) => {
     }
 })
 
+const createNewLesson = asyncHandler(async (req, res) => {
+    const { courseFastname, lessonName, lessonNumber, 
+        lessonDescription, lessonDuration, lessonUrl } = req.body
+    
+})
 
 export {
     getLesson,
     getLessonsByFastname,
-    getLessonsByFastnameAndId
+    getLessonsByFastnameAndId,
+    createNewLesson
 }

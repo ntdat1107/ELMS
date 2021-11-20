@@ -1,7 +1,7 @@
 import express from "express";
 import { createNewCourse, deleteCourse, enrollCourse, getAllMyLearnersID, 
     getLearners, getMyCourse, getUserCourses } from "../controllers.js/myCourseController.js";
-import { checkIns, checkLearner, protect } from "../middleware/authMiddleware.js";
+import { checkIns, protect } from "../middleware/authMiddleware.js";
 const router = express.Router()
 
 
