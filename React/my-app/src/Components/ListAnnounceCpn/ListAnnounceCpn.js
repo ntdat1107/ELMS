@@ -15,7 +15,7 @@ function ListAnnounceCpn({ history, Addition_Part }) {
     const { loading, error, cvsSendList } = getCvsSend;
 
     const getCvsReceive = useSelector((state) => state.getCvsReceive);
-    const { loading1, error1, cvsReceiveList } = getCvsReceive;
+    const { loading: loading1, error: error1, cvsReceiveList } = getCvsReceive;
 
     useEffect(() => {
         if (!cvsSendList) dispatch(getSendCvs());

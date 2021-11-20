@@ -16,23 +16,21 @@ function NewAnnoun({ typeUserTemp }) {
     const OpenNewAnnoun = () => setClick(true);
     const CloseNewAnnounBox = () => setClick(false);
 
-    var subject, content, coursefastname;
-    var check = document.getElementsByName("tick-box");
-    var instructors, learners;
-
     const SendAnnoun = () => {
         setClick(false);
-        subject = document.getElementById("subject").value;
-        content = document.getElementById("content").value;
-        coursefastname = document.getElementById("coursefastname").value;
-        console.log(subject);
-        if (typeUserTemp != 1) {
+        var subject = document.getElementById("subject").value;
+        var content = document.getElementById("content").value;
+
+        if (typeUserTemp == 0) {
+            var check = document.getElementById("tick-box");
             if (check[0].checked) dispatch(createNewCvs(subject, content, "toInstructors"));
             if (check[1].checked) dispatch(createNewCvs(subject, content, "toLearners"));
         }
+        if (typeUserTemp == 1) {
+            var coursefastname = document.getElementById("coursefastname").value;
 
-        if (typeUserTemp == 1)
             if (coursefastname) dispatch(createNewCvs(subject, content, coursefastname));
+        }
     };
 
     return (
