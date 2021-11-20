@@ -42,7 +42,9 @@ function InsManagerCourse ({history}) {
     else return (
     <div id="insMC-UI">
         <SideBar typeUserTemp={1}/>
-        <Header />
+        <Header 
+            history = {history}
+        />
         <div id="insMC">
             <div className="title-add-course">
                 <p>Do you want to create a new course?</p>

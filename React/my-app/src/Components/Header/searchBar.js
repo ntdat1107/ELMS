@@ -1,18 +1,32 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+
 function SearchBar ({
     name,
     searchType,
     searchImg,
-    callback = () => {},
+    history,
+    callback = () => {}
 }) {
+    const [query, setQuery] = useState('')
+
+    const submitHandler = (e) => {
+        console.log(query)
+        e.preventDefault()
+        if(query.trim()) {
+            history.push(`/search/${query}`)
+            console.log(`/search/${query}`)
+        } else {
+            history.push(`/search`)
+            console.log(`/search`)
+        }
+    }
     return (
-        <div>
-            <input id="Input" type="text" name={name} placeholder={searchType}></input>
-            <Link className="Link-coursename" to="/search/">
+        <form onSubmit = {submitHandler}>
+            <input id="Input" type="text" name={name} onChange = {(e) => setQuery(e.target.value)}  placeholder={searchType} ></input>
+            <button type = "submit" className="Link-coursename" >
                 <img src={searchImg} alt="SearchIconImage" id="searchIcon" />
-            </Link>
-        </div>
+            </button>
+        </form>
     )
 }
 

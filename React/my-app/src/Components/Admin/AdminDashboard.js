@@ -22,6 +22,7 @@ function AdminDashboard({ history }) {
                     type="Admin"
                     idName="informationInstructor"
                     typeUserTemp={0}
+                    history = {history}
                 />
             </div>
             <div id="admindashboard">

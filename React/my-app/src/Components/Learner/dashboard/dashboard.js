@@ -94,7 +94,7 @@ function LnDashboard({ history }) {
         <div id="lnDashBoardUI">
             <SideBar typeUserTemp={2}/>
             <Header linkAvt="/learner/manageprofile" link="/learner/dashboard" srcImg={avatatLn} name="Lâm Thành Dương" gmail="lamduong11201@gmail.com" type="Learner"
-            idName="information" typeUserTemp={2}/>
+            idName="information" typeUserTemp={2} history = {history}/>
             <div id="lnDashboard">
                 <div id="about_CFY">
                     <About />

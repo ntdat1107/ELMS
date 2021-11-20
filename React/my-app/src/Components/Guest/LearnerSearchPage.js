@@ -8,7 +8,6 @@ import './CSS/HomePage.css'
 
 import './CSS/Search.css'
 import SideBarGuest from './SideBarGuest';
-import { func } from 'prop-types';
 
 
 
@@ -46,8 +45,9 @@ function SearchUI({match, history}) {
             <Header 
                 link="/" 
                 typeUserTemp={typeUsr}
+                history = {history}
             />
-            <SearchMainPage/>
+            <SearchMainPage match= {match}/>
             {isGuest}&&
         </div>
     )

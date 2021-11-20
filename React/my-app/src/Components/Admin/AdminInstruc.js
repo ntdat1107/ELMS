@@ -20,7 +20,9 @@ function AdminInstruc({ history }) {
         <div id="admininstruc-UI">
             <div className="AdminUI">
                 <SideBar typeUserTemp={0} />
-                <Header />
+                <Header 
+                history = {history}
+                />
             </div>
             <div id="admininstruc">
                 <SearchInTable typeUserTemp={1} />
