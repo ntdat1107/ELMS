@@ -52,7 +52,7 @@ function RateContent({
     return (
         <div id="rateContent">
             <div id="p1" style={styleType}><p>{TypeCpn}</p></div>
-            {rateScoreCpn != 0 && <div id="p2"><p>{rateScoreCpn} </p></div> }
+            {rateScoreCpn != 0 && <div id="p2"><p>{Math.round(rateScoreCpn * 100) / 100} </p></div> }
             {rateScoreCpn != 0 && <div id="p3"><img src= {star} alt="star"></img></div>}
             {totalRateCpn != 0 && <div id="p4"><p>({totalRateCpn})</p></div>}
         </div>
