@@ -55,9 +55,12 @@
 /* -----------CourseContent---------- */
  #courseContent #Name{
     font-weight: bold;
-    overflow: hidden;
-    text-overflow: ellipsis;
     font-size: 14px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+    height: 26px;
 }
  #courseContent #Desc{
     font-size: 14px;
@@ -66,12 +69,15 @@
     overflow: hidden;
     display: -webkit-box;
     height: 40px;
-    width: 410px;
 }
  #courseContent #Author{
     color: rgba(196,196,196,1);
     font-size: 14px;
-    height: 25px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+    height: 24px;
 }
 /* ----------courseCFY--------- */
  #courseCFY {

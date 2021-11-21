@@ -77,13 +77,17 @@
 #searchResultWrapper #courseContent #Name{
     font-weight: bold;
     font-size: 14px;
+    height: 20px;
+    width: 500px;
 }
 #searchResultWrapper #courseContent #Desc{
     font-size: 14px;
+    width: 500px;
 }
 #searchResultWrapper #courseContent #Author{
     color: rgba(196,196,196,1);
     font-size: 14px;
+    width: 500px;
 }
 /* ----------courseCFY--------- */
 #searchResultWrapper #courseCFY {

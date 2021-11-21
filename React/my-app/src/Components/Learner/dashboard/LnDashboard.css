@@ -148,6 +148,10 @@
   margin-top: 0px;
   height: 350px;
 }
+#lnDashboard #courseContent #Name{
+  height: 20px;
+}
+
 
 /* Chart */
 /* #lnDashboard .title {

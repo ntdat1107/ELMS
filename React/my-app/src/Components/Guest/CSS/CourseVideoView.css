@@ -168,7 +168,9 @@
 
 #navItem :hover {
     color: aqua;
-    border-bottom:5px solid #fafafa;
+}
+#navItemReview h3:hover {
+    color: aqua;
 }
 
 #lowBody #lowNavBar #disabledNavItem h3{

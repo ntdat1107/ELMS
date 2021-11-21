@@ -81,7 +81,7 @@ function ItemCourse({
                 </Link>
             </div>
             <div id="authorCourse">
-                <p>{authorCourse} </p>
+                <p>{authorCourse}</p>
             </div>
             <div className="rateCourseMC">
                 <div id = "rateScore">

@@ -31,6 +31,19 @@ const SearchBox= ({ history }) => {
       </form>
     )
 }
+const AllCourse= ({ history }) => {
+    const submitHandler = (e) => {
+        e.preventDefault()
+        history.push('/learner/mycourses')
+
+    }
+
+    return(
+        <form onSubmit={submitHandler}>
+        <input id="allCourses" type="submit" value="All Courses" />
+      </form>
+    )
+}
 
 const TableCourse = ({id, match}) => {
     const dispatch = useDispatch()
@@ -72,7 +85,7 @@ const TableCourse = ({id, match}) => {
             <div id="tableCourses">
                 <Scrollbars id="scrollbars">
                 {
-                    arr&&arr.slice(pagesVisited, pagesVisited + coursesPerPage).map((course,index) => {
+                    arr && arr.slice(pagesVisited, pagesVisited + coursesPerPage).map((course,index) => {
                         var rateScore = 0;
                         for(let j = 0; j < course.ratings.length; j++) {
                             if(course.ratings[j].user === id) rateScore = course.ratings[j].rating;
@@ -112,19 +125,9 @@ function ContentMyCourses({match, id}) {
         <div id = "myCourses">
             <div className="titleMC"><p>My Courses</p></div>
             <div id="typeCourse">
-                <div id="allCourses"><p>All Courses</p></div>
+                <Route render={({ history })=> <AllCourse history={history} />} />
                 <Route render={({ history })=> <SearchBox history={history} />} />
             </div>
-            {/* <div id="labelSortFilter">
-                <div id="sort"><p>Sort by</p></div>
-                <div id="filter"><p>Filter by</p></div>
-            </div>
-            <div id="filterBar">
-                <DropList />
-                <div id = "buttonReset">
-                <p>Reset</p>
-                </div>
-            </div> */}
             <div id="listCourseMC">
                 <TableCourse match={match} id={id}/>
             </div>

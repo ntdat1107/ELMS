@@ -1,334 +1,295 @@
 #lnMyCourses #myCourses {
-background-image: url("../img/background/mc_bg.png");
-width: 1170px;
-height: 570px;
-background-size: cover;
-margin-top: 140px;
-margin-left: 325px;
+  background-image: url("../img/background/mc_bg.png");
+  width: 1170px;
+  height: 570px;
+  background-size: cover;
+  margin-top: 140px;
+  margin-left: 325px;
 }
 /* Dropbar */
-#lnMyCourses #myCourses #DropdownBar{
-position: relative;
-padding-left: 10px;
+#lnMyCourses #myCourses #DropdownBar {
+  position: relative;
+  padding-left: 10px;
 }
-#lnMyCourses #myCourses .dd-wrapper .dd-header-title{
-margin:2px 10px;
-margin-right:20px;
-font-weight:bold;
+#lnMyCourses #myCourses .dd-wrapper .dd-header-title {
+  margin: 2px 10px;
+  margin-right: 20px;
+  font-weight: bold;
 }
 html {
-font-family: 'Nunito Sans', sans-serif;
-font-size: 8px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 8px;
 }
 #lnMyCourses #myCourses .Dropdowns {
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--webkit-box-orient: vertical;
--webkit-box-direction: normal;
-    -ms-flex-direction: column;
-        flex-direction: column;
--webkit-box-align: center;
-    -ms-flex-align: center;
-        align-items: center;
-margin:10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 10px;
 }
 
-#lnMyCourses #myCourses .dd-wrapper{
-width: 180px;
-height: 30px;
-font-size: 12px;
+#lnMyCourses #myCourses .dd-wrapper {
+  width: 180px;
+  height: 30px;
+  font-size: 12px;
 }
-
 
 #lnMyCourses #myCourses .Dropdowns h3:nth-of-type(2) {
-margin-top: 50px;
+  margin-top: 50px;
 }
 #lnMyCourses #myCourses .Dropdowns p {
-margin-bottom: 50px;
-font-size: 2.4rem;
+  margin-bottom: 50px;
+  font-size: 2.4rem;
 }
 
 #lnMyCourses #myCourses #DropdownBar {
-display: flex;
+  display: flex;
 }
 #lnMyCourses #myCourses .dd-wrapper .dd-header span {
-display: flex;
-margin-right: 10px;
+  display: flex;
+  margin-right: 10px;
 }
 #lnMyCourses #myCourses .dd-wrapper .dd-header {
-display: flex;
-height: 30px;
+  display: flex;
+  height: 30px;
 }
 
 #lnMyCourses #myCourses .dd-wrapper .dd-list .dd-scroll-list {
-overflow-y:hidden;
-max-height:215px;
-padding:15px 0;
+  overflow-y: hidden;
+  max-height: 215px;
+  padding: 15px 0;
 }
-#lnMyCourses #myCourses .dd-wrapper .dd-list .dd-scroll-list .dd-list-item:hover{
-background-color:#1E5C5F;
-color:white
+#lnMyCourses
+  #myCourses
+  .dd-wrapper
+  .dd-list
+  .dd-scroll-list
+  .dd-list-item:hover {
+  background-color: #1e5c5f;
+  color: white;
 }
-#lnMyCourses #myCourses #DropdownBar #sortBy p{
-font-size: 10px;
+#lnMyCourses #myCourses #DropdownBar #sortBy p {
+  font-size: 10px;
 }
-#lnMyCourses #myCourses .dd-wrapper .dd-header{
-display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;
-align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;
-position:relative;border:1px solid #dfdfdf;border-radius:3px;background-color:white;line-height:38px;cursor:default;cursor:pointer;
-color: #1E5C5F;
+#lnMyCourses #myCourses .dd-wrapper .dd-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  border: 1px solid #dfdfdf;
+  border-radius: 3px;
+  background-color: white;
+  line-height: 38px;
+  cursor: default;
+  cursor: pointer;
+  color: #1e5c5f;
 }
 /* TitleMC */
 #lnMyCourses #myCourses .titleMC {
-color: #fff;
-font-weight: bold;
-position: relative;
-padding-top: 15px;
-margin-left: 20px;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+  padding-top: 15px;
+  margin-left: 20px;
 }
-#lnMyCourses #myCourses .titleMC p{
-font-size: 40px;
+#lnMyCourses #myCourses .titleMC p {
+  font-size: 40px;
 }
 /* Type Course */
 #lnMyCourses #myCourses #typeCourse {
-display: flex;
-margin-left: 20px;
-margin-top: 15px;
-height: 40px;
+  display: flex;
+  margin-left: 20px;
+  margin-top: 15px;
+  height: 40px;
 }
 
 #lnMyCourses #myCourses #typeCourse #allCourses {
-background-color: #316668;
-color: #fff;
-font-size: 12px;
-font-weight: bold;
-border-bottom: 4px solid #fff;
-width: 80px;
-text-align: center;
+  background-color: #316668;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: 4px solid #fff;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-radius: 0px;
+  cursor: pointer;
 }
 #lnMyCourses #myCourses #typeCourse #allCourses p {
-padding: 10px 0px;
+  padding: 10px 0px;
 }
-#lnMyCourses #myCourses #typeCourse #archived {
-background-color: #316668;
-color: #fff;
-font-size: 12px;
-font-weight: bold;
-width: 80px;
-text-align: center;
-}
-#lnMyCourses #myCourses #typeCourse #archived p {
-padding: 5px 0px;
-}
-/* Label Sort Filter */
-#lnMyCourses #myCourses #labelSortFilter{
-display: flex;
-}
-#lnMyCourses #myCourses #sort, #filter {
-color: white;
-font-size: 12px;
-font-weight: bold;
-width: 80px;
-text-align: left;
-}
-#lnMyCourses #myCourses #sort {
-margin-left:20px;
-}
-#lnMyCourses #myCourses #filter {
-margin-left: 120px;
-}
-#lnMyCourses #myCourses #labelSortFilter {
-margin-top: 10px;
-}
-/* Filter Bar */
-#lnMyCourses #myCourses #buttonReset {
-color: white;
-font-size: 12px;
-font-weight: bold;
-width: 40px;
-text-align: left;
-margin-left: 10px;
-height: 50px;
-}
-#lnMyCourses #myCourses #buttonReset p{
-height: 50px;
-margin-top: 16px;
-}
-#lnMyCourses #myCourses #filterBar {
-display: flex;
-}
+
+
+
 /* List Course */
-.Link-coursename{
-    text-decoration: none;
-    color: #000;
+.Link-coursename {
+  text-decoration: none;
+  color: #000;
 }
 #lnMyCourses #myCourses #tableCourses {
-margin-left:20px;
-background-color: #ffffff;
-width: 782px;
-height: 410px;
-position: relative;
+  margin-left: 20px;
+  background-color: #ffffff;
+  width: 782px;
+  height: 410px;
+  position: relative;
 }
 #lnMyCourses #myCourses #colCourses {
-display: inline-block;
-margin: 10px;
-width: 240px;
+  display: inline-block;
+  margin: 10px;
+  width: 240px;
 }
 #lnMyCourses #myCourses .itemCourse {
-margin-right:15px;
-width: 240px;
-height: 220px;
-border: 1px solid #000;
-box-sizing: border-box;
-background-color: #fff;
+  margin-right: 15px;
+  width: 240px;
+  height: 220px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  background-color: #fff;
 }
 #lnMyCourses #myCourses .itemCourse #bgCourse {
-width: 238px;
-box-sizing: border-box;
-height: 120px;
+  width: 238px;
+  box-sizing: border-box;
+  height: 120px;
 }
 #lnMyCourses #myCourses .itemCourse #more {
-position: relative;
-top: -130px;
-left:200px;
-width: 32.4px;
+  position: relative;
+  top: -130px;
+  left: 200px;
+  width: 32.4px;
 }
 
 #lnMyCourses #myCourses .itemCourse #nameCourse {
-font-size: 12px;
-font-weight: bold;
-box-sizing: border-box;
-padding-left: 10px;
-width: 240px;
-height:30px;
-position: relative;
-cursor: pointer;
+  font-weight: bold;
+  box-sizing: border-box;
+  padding-left: 10px;
+  width: 240px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+}
+#lnMyCourses #myCourses .itemCourse #nameCourse p {
+  width: 225px;
+  height: 30px;
+  font-size: 12px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
 }
 #lnMyCourses #myCourses .itemCourse #authorCourse {
-box-sizing: border-box;
-width: 240px;
-padding-left: 10px;
-height: 20px;
-position: relative;
+  box-sizing: border-box;
+  width: 240px;
+  padding-left: 10px;
+  height: 20px;
+  position: relative;
+}
+#lnMyCourses #myCourses .itemCourse #authorCourse p {
+  width: 225px;
+  height: 20px;
+  font-size: 12px;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
 }
 #lnMyCourses #myCourses .itemCourse .rateCourseMC {
-box-sizing: border-box;
-width: 240px;
-height: 30px;
+  box-sizing: border-box;
+  width: 240px;
+  height: 30px;
 }
 
 /* Background Course */
 
 /* pagination */
 #lnMyCourses #myCourses .paginationBttns {
-width: 100%;
-height: 40px;
-list-style: none;
-display: flex;
-justify-content: center;
-margin-top: 10px;
-font-size: 14px;
+  width: 100%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 #lnMyCourses #myCourses .paginationBttns .previousBttn {
-    -webkit-border-radius: 10px 0px 0px 10px;
-    border-radius: 10px 0px 0px 10px;
+  -webkit-border-radius: 10px 0px 0px 10px;
+  border-radius: 10px 0px 0px 10px;
 }
 #lnMyCourses #myCourses .paginationBttns .nextBttn {
-    -webkit-border-radius: 0px 10px 10px 0px;
-    border-radius: 0px 10px 10px 0px;
+  -webkit-border-radius: 0px 10px 10px 0px;
+  border-radius: 0px 10px 10px 0px;
 }
 
 #lnMyCourses #myCourses .paginationBttns a {
-padding:3px 5px 3px 5px;
-border: 1px solid black;
-color: black;
-cursor: pointer;
+  padding: 3px 5px 3px 5px;
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
 }
 
-
 #lnMyCourses #myCourses .paginationBttns a:hover {
-color: white;
-background-color: #1E5C5F;
+  color: white;
+  background-color: #1e5c5f;
 }
 
 #lnMyCourses #myCourses .paginationActive a {
-color: white;
-background-color: #1E5C5F;
+  color: white;
+  background-color: #1e5c5f;
 }
 
 #lnMyCourses #myCourses .paginationDisabled a {
-color: white;
-background-color: #1E5C5F;
+  color: white;
+  background-color: #1e5c5f;
 }
 /* Rate Score Course */
 
 #lnMyCourses #myCourses .rateCourseMC #rateScore {
-padding-left: 10px;
-height: 30px;
+  padding-left: 10px;
+  height: 30px;
 }
-
-
-/* OpenMore */
-/* #lnMyCourses #myCourses .nav-menu {
-    display: none;
-    flex-direction: column;
-    width: 200px;
-    height: 170px;
-    position: absolute;
-    border:1px solid #c4c4c4;
-}
-
-#lnMyCourses #myCourses .nav-item {
-    height: 30px;
-    font-size: 14px;
-    display: flex;
-    margin-top: 20px;
-    margin-left: 20px;
-}
-#lnMyCourses #myCourses .nav-item p{
-    margin-left: 20px;
-}
-#lnMyCourses #myCourses #colCourses .nav-menu.active {
-    display:block;
-    background: white;
-    opacity: 1;
-    transition: all 0.5s ease;
-    margin-top: -163px;
-    z-index: 1;
-    margin-left: 0px;
-    box-shadow: 1px 3px 3px grey;
-} */
-
 
 /* Scroll Bar */
 #lnMyCourses #myCourses #scrollbars {
-    height: 410px;
-    width: 782px;
-    display: flex;
+  height: 410px;
+  width: 782px;
+  display: flex;
 }
-/* Search Box */ 
-#lnMyCourses #myCourses .searchMyCourse{
-    margin-left: 150px;
-    margin-bottom: 10px;
+/* Search Box */
+#lnMyCourses #myCourses .searchMyCourse {
+  margin-left: 150px;
+  margin-bottom: 10px;
 }
-#lnMyCourses #myCourses .searchMyCourse #btn-1{
-    width: 500px;
-    height: 30px;
-    border-radius: 15px 0px 0px 15px;
-    font-size: 12px;
-    border: 1px solid black;
-    color: black;
-    padding-left: 10px;
+#lnMyCourses #myCourses .searchMyCourse #btn-1 {
+  width: 500px;
+  height: 30px;
+  border-radius: 15px 0px 0px 15px;
+  font-size: 12px;
+  border: 1px solid black;
+  color: black;
+  padding-left: 10px;
 }
-#lnMyCourses #myCourses .searchMyCourse #btn-2{
-    height: 30px;
-    width: 50px;
-    border-radius: 0px 15px 15px 0px;
-    font-size: 12px;
-    border: 1px solid black;
-    background-color: #316668;
-    color:#fff;
-    cursor: pointer;
+#lnMyCourses #myCourses .searchMyCourse #btn-2 {
+  height: 30px;
+  width: 50px;
+  border-radius: 0px 15px 15px 0px;
+  font-size: 12px;
+  border: 1px solid black;
+  background-color: #316668;
+  color: #fff;
+  cursor: pointer;
 }

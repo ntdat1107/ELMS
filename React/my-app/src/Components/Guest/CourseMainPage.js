@@ -56,7 +56,7 @@ function UpperBody({userInfo, course, isHave, isIns, handleEnroll}) {
                         </h3>
                     </button>
                     :
-                    <Link to={linkPath}>
+                    <Link to={linkPath} style = {{textDecoration: "none"}}>
                         <button id = "enrollButton">
                             <h3>
                                 Go inside
