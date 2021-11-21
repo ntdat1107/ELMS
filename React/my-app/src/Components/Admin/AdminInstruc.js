@@ -10,6 +10,13 @@ import "./CSS/AdminInstruc.css";
 
 function AdminInstruc({ history }) {
     const dispatch = useDispatch();
+
+    const userLogin = useSelector((state) => state.userLogin);
+    const { userInfo } = userLogin;
+    useEffect(() => {
+        if (!userInfo || !userInfo.isAdmin) history.push("/login");
+    }, [history, userInfo]);
+
     const sysIns = useSelector((state) => state.sysIns);
     const { loading, error, sysInsList } = sysIns;
 

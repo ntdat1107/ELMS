@@ -9,6 +9,13 @@ import Loading from "../Loading/Loading";
 
 function AdminLearner({ history }) {
     const dispatch = useDispatch();
+
+    const userLogin = useSelector((state) => state.userLogin);
+    const { userInfo } = userLogin;
+    useEffect(() => {
+        if (!userInfo || !userInfo.isAdmin) history.push("/login");
+    }, [history, userInfo]);
+
     const sysLearner = useSelector((state) => state.sysLearner);
     const { loading, error, sysLearnerList } = sysLearner;
 

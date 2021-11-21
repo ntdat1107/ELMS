@@ -9,6 +9,12 @@ import cheems from "../img/cheems.png";
 import Header from "../Header/header";
 
 function AdminDashboard({ history }) {
+    const userLogin = useSelector((state) => state.userLogin);
+    const { userInfo } = userLogin;
+    useEffect(() => {
+        if (!userInfo || !userInfo.isAdmin) history.push("/login");
+    }, [history, userInfo]);
+
     return (
         <div id="admindashboard-UI">
             <div className="AdminUI">
