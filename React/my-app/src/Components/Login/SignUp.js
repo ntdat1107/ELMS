@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from 'react-redux'
 import { register } from '../../actions/userActions';
+import ErrorToast from '../ErrorToast/ErrorToast';
 
 function Signup({history}) {
     const [firstName, setFirstName] = useState('')
@@ -27,6 +28,17 @@ function Signup({history}) {
     const dispatch = useDispatch()
     const userLogin = useSelector(state => state.userLogin)
     const { loading, error, userInfo } = userLogin
+    const [list, setList] = useState([])
+    const [msgerror, setError] = useState(false)
+
+    const showToast = () => {
+        setList([{
+            id: list.length + 1,
+            title: 'Error',
+            description: 'Login Error! Please try again.',
+            backgroundColor: '#5cb85c'
+        }])
+    }
 
     useEffect(() => {
         if (userInfo) {
@@ -50,6 +62,8 @@ function Signup({history}) {
         e.preventDefault()
         if (password !== confirmPassword) {
             //Handle this!
+            setError(true)
+            
         } else {
             dispatch(register( firstName, lastName, email, 
                 accountID, password, isLearner, isIns ))
@@ -69,7 +83,7 @@ function Signup({history}) {
                     </div>
                     <h3 id="Signupwelcome">Create account</h3>
 
-                    <form className="Signupform">
+                    <form className="Signupform" onSubmit={submitHandler}>
 
                         <div id = "name">
                             <input className="Signupinp" id="nameinp1" type="text" 
@@ -115,7 +129,7 @@ function Signup({history}) {
                             Privacy Policy
                         </Link>
                     </div>
-                    <button type="submit" onClick={submitHandler} className="Signuptoggle-btn1">Sign up</button>
+                    <button type="submit" className="Signuptoggle-btn1" onClick={()=> showToast()}>Sign up</button>
                     <label id="direct-to-login-label" for="direct-to-login"></label>
                     <Link to='/login'>
                         <button type="submit" id="direct-to-login" className="Signuptoggle-btn1">Login</button>
@@ -124,6 +138,7 @@ function Signup({history}) {
 
             </div>
         </div>
+        { msgerror && <ErrorToast toastList={list} setList={setList}/> }
     </div>
     )
 }

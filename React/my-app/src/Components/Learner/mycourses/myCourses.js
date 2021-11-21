@@ -9,6 +9,7 @@ import { Scrollbars } from "react-custom-scrollbars"
 import ItemCourse from "./itemCourse"
 import Loading from '../../Loading/Loading';
 import { getMyCourses } from "../../../actions/myCoursesAction";
+import ErrorMsg from '../../Error/ErrorMsg';
 
 const SearchBox= ({ history }) => {
     const [keyword, setKeyword] = useState('')
@@ -64,9 +65,7 @@ const TableCourse = ({id, match}) => {
     }
     else if (error) {
         return (
-            <div id="err">
-                <h1>ERROR</h1>
-            </div>
+            <ErrorMsg msg="Something went wrong!"/>
         )
     }
     else {
