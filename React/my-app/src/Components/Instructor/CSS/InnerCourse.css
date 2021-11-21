@@ -10,7 +10,12 @@
 }
 
 
-
+#inner-course #row-1 #rateContent {
+    margin-top: 0px;
+}
+#inner-course #Category {
+    padding-top: 3px !important;
+}
 
 #inner-course #row-1 #rateContent #p2 {
     font-size: 14px;
