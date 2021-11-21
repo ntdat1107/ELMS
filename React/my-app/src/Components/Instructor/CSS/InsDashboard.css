@@ -6,6 +6,26 @@
     outline-offset: 15px;
     text-shadow: 1px 1px 2px #427388; 
 }
+#insdb #mycourse #zero-course {
+    font-size: 22px;
+    padding-top: 20px;
+    display: inline-block;
+    padding-left: 10px;
+    text-align: center;
+}
+#insdb #mycourse #zero-course img {
+    margin-top: 20px;
+}
+#insdb #mycourse #zero-course button {
+    width: 100px;
+    height: 40px;
+    background-color: #FC6B57;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+}
 #insdb #titleFun {
     color: #f4f4f4;
     text-align: left;
@@ -133,9 +153,6 @@
     padding-top: 15px;
 }
 #insdb #my-c-list #first-c {
-    display: inline-block;
-}
-#insdb #my-c-list #second-c {
     display: inline-block;
     padding-top: 20px;
 }

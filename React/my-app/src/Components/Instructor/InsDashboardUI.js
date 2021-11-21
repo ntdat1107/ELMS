@@ -9,7 +9,7 @@ import Loading from '../Loading/Loading'
 import {Link} from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserProfile } from "../../actions/userActions";
-import { getMyLearnerID } from "../../actions/myCoursesAction";
+import { getMyCourses, getMyLearnerID } from "../../actions/myCoursesAction";
 import dashBoard from './imgSrc/dashBoard.png'
 import ErrorMsg from '../Error/ErrorMsg'
 
@@ -47,18 +47,25 @@ function InsDashboardUI ({history}) {
     useEffect(() => {
         if (!myLearnerList) dispatch(getMyLearnerID())
     }, [dispatch, history, myLearnerList])
-    if (loading || loadingLearner) return (
+
+    const myCourses = useSelector(state => state.myCourses)
+    const { loading:loadingListCourse, error:errorListCourse, myCoursesList } = myCourses
+    useEffect(() => {
+        dispatch(getMyCourses())
+    }, [dispatch])
+
+    if (loading || loadingLearner || loadingListCourse) return (
         <div className="handleLoading">
             <SideBar typeUserTemp={1} />
             <Header history={history} />
             <Loading />
         </div>
     )
-    else if (error || errorLearner) return (
+    else if (error || errorLearner || errorListCourse) return (
         <div id="error">
             <SideBar typeUserTemp={1} />
             <Header history={history} />        
-            <ErrorMsg msg={error ? error.message : errorLearner.message} />
+            <ErrorMsg msg={error ? error.message : errorLearner? errorLearner.message : errorListCourse.message} />
         </div>
     )
     else return (
@@ -70,7 +77,7 @@ function InsDashboardUI ({history}) {
                 <div style={{display:'flex'}}>
                 <Statistic learnerCount={myLearnerList? myLearnerList.length : 0} videoCount="20" 
                 courseCount={userDetail? userDetail.hasCourse.length : 0}/>
-                 <MyCourse titleName="My courses" heightSize="60px" widthSize="60px"/>
+                <MyCourse titleName="My courses" heightSize="60px" widthSize="60px" listCourse={myCoursesList}/>
                 </div>
             </div>
             <div id="col2">
