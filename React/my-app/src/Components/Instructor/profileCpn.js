@@ -35,7 +35,7 @@ function ProfileCpn({
         setList([{
             id: list.length + 1,
             title: 'Error',
-            description: 'Login Error! Please try again.',
+            description: 'Confirm password doesnot match, please try again.',
             backgroundColor: '#5cb85c'
         }])
     }
