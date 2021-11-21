@@ -1,37 +1,13 @@
-.InAddCourse {
+.insAddLesson {
     width: 1150px;
     height: 550px;
     margin-top: 125px;
     margin-left: 325px;
 }
-.InAddCourseUI #containerAddCourse {
-    display: flex;
-} 
-.InAddCourseUI #containerAddCourse #image-ctn {
-    margin-top: 125px;
-    display: inline-block;
-    align-items: center;
-}
-.InAddCourse label{
+.insAddLesson label{
     font-size: 20px;
 }
-.InAddCourse select {
-    height: 60px;
-}
-#image-ctn img {
-    align-items: center;
-    display: inline-block;
-}
-#image-ctn input[type="text"] {
-    width: 100%;
-    padding: 12px 20px;
-    margin:  10px 0px;
-    display: inline-block;
-    box-sizing: border-box;
-}
-
-.InAddCourse input[type="text"],
-.InAddCourse select {
+.insAddLesson input[type="text"]{
     width: 100%;
     padding: 12px 20px;
     margin:  10px 0px;
@@ -40,7 +16,7 @@
     border-radius: 4px;
     box-sizing: border-box;
 }
-.InAddCourse button[type=submit] {
+.insAddLesson button[type=submit] {
     width: 100%;
     background-color: #295e2b;
     color: white;
@@ -50,7 +26,7 @@
     border-radius: 4px;
     cursor: pointer;
 }
-.InAddCourse #Desc{
+.insAddLesson #Desc{
     width: 100%;
     padding: 12px 20px;
     margin:  10px 0px;
@@ -60,6 +36,6 @@
     box-sizing: border-box;
     height: 150px;
 }
-.InAddCourse button[type=submit]:hover {
+.insAddLesson button[type=submit]:hover {
     background-color: #183619;
 }

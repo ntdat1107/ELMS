@@ -47,13 +47,13 @@ function AddCourseUI({history}) {
                         <input type='text' id="PathName" placeholder="Input pathname of course" required onChange={(e) => setFastName(e.target.value)}></input>
                         <label for="Desc">Description</label>
                         <textarea type='text' id="Desc" placeholder="Input your description of course" required onChange={(e) => setDesc(e.target.value)} />
-                    </form>
                         <button type="submit" onClick={handleSubmit}>Add</button>
+                    </form>
                 </div>
                 <div id="image-ctn">
-                    <img src={image} width="250px" height="auto" />
                     <label for="Image-url">Path Name</label>
                     <input type="text" id="Image-url" onChange={(e) => setImage(e.target.value)}/>
+                    <img src={image} width="150px" height="auto" />
                 </div>
             </div>
         </div>

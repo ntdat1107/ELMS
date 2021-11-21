@@ -27,6 +27,7 @@ import CourseView from "./Components/Guest/CourseView"
 import SearchLearnerUI from './Components/Guest/LearnerSearchPage'
 import AddCourseUI from './Components/Instructor/AddCourseUI'
 import Logout from './Components/Login/Logout'
+import AddLessonUI from './Components/Instructor/AddLessonUI';
 function App() {
   return (
     <div className="App">
@@ -36,8 +37,10 @@ function App() {
           <Route exact path='/ins/manageprofile' component={InsManageProfile}></Route>
           <Route exact path='/ins/managecourse' component={InsManagerCourse}></Route>
           <Route exact path='/ins/managecourse/:id' component={InnerCourse}></Route>
-          <Route exact path='/ins/announcement' component={InsAnnouncement}></Route>
           <Route exact path='/ins/managecourse/:fastName/manage_my_learners' component={TableOfLearner}></Route>
+          <Route exact path='/ins/managecourse/:fastName/addlesson' component={AddLessonUI} />
+          <Route exact path='/ins/addcourse' component={AddCourseUI} />
+          <Route exact path='/ins/announcement' component={InsAnnouncement}></Route>
           <Route exact path='/login' component={Login}></Route>
           <Route exact path='/signup' component={Signup}></Route>
           <Route exact path='/forgotpass' component={ForgotPass}></Route>
@@ -57,7 +60,6 @@ function App() {
           <Route exact path="/search/" component={SearchLearnerUI} ></Route>
           <Route exact path='/search/:token' component={SearchLearnerUI} ></Route>
           <Route exact path="/learner/registerIns" component={RegisterInsUI} ></Route>
-          <Route exact path='/ins/addcourse' component={AddCourseUI} />
           <Route exact path='/logout' component={Logout} />
           <Route exact path='/' component={HomePageUI}></Route>
           <Route component={Page404} />

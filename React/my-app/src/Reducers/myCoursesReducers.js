@@ -41,7 +41,7 @@ export const addCourseReducer = (state = {}, action) => {
         case ADD_COURSE_REQUEST:
             return { loading: true }
         case ADD_COURSE_SUCCESS:
-            return { loading: false, courseInfo: action.payload }
+            return { loading: false, success: true }
         case ADD_COURSE_FAIL:
             return { loading: false, error: action.payload }
         default:

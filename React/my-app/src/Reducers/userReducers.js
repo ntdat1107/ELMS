@@ -19,6 +19,9 @@ import {
     DELETE_USER_REQUEST,
     DELETE_USER_SUCCESS,
     DELETE_USER_FAIL,
+    KICK_USER_REQUEST,
+    KICK_USER_SUCCESS,
+    KICK_USER_FAIL,
 } from "../constants/userConstants.js";
 
 export const userLoginReducer = (state = {}, action) => {
@@ -108,3 +111,16 @@ export const userDeleteReducer = (state = {}, action) => {
             return state;
     }
 };
+
+export const kickLearnerReducer = (state = {}, action) => {
+    switch (action.type) {
+        case KICK_USER_REQUEST:
+            return { loading: true }
+        case KICK_USER_SUCCESS:
+            return { loading: false, success: true }
+        case KICK_USER_FAIL:
+            return { loading: false, error: action.payload }
+        default:
+            return state
+    }
+}

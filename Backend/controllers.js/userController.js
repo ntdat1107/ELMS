@@ -2,11 +2,8 @@ import asyncHandler from "express-async-handler";
 import Course from "../models/courseModel.js";
 import User from "../models/userModel.js";
 import generateToken from "../utils/generateToken.js";
-import path from 'path'
-import fs from 'fs'
 
 
-const __dirname = path.resolve()
 // @desc    Auth user & get token
 // @route   POST /api/users/login
 // @access  Public
@@ -64,6 +61,10 @@ const getUserProfile = asyncHandler(async (req, res) => {
 const updateUserProfile = asyncHandler(async (req, res) => {
     const user = await User.findById(req.user._id);
     if (user) {
+        if (user.email == req.body.email) {
+            res.status(401)
+            throw new Error("Email already existed")
+        }
         user.firstName = req.body.firstName || user.firstName;
         user.lastName = req.body.lastName || user.lastName;
         user.email = req.body.email || user.email;
@@ -199,9 +200,27 @@ const getUserByID = asyncHandler(async (req, res) => {
 });
 
 const deleteUserByID = asyncHandler(async (req, res) => {
+    const userList = await User.find({})
     const user = await User.findById(req.params.id);
-    fs.unlinkSync(path.join(__dirname, user.avatar))
     if (user) {
+        if (user.isIns) {
+            for (let i = 0; i < user.hasCourse.length; i++) {
+                const course = await Course.findById(user.hasCourse[i])
+                for (let j=0; j<userList.length; j++) {
+                    userList[j].hasCourse = userList[j].hasCourse.
+                    filter(item => !item.equals(course._id))
+                    await userList[j].save
+                }
+                await course.remove()
+            }
+        }
+        else if (user.isLearner) {
+            for (let i = 0; i < user.hasCourse.length; i++) {
+                const course = await Course.findById(user.hasCourse[i])
+                course.learnerList = course.learnerList.filter(item => !item.equals(user._id))
+                await course.save()
+            }
+        }
         await user.remove();
         res.json({ message: "User removed" });
     } else {
@@ -209,6 +228,23 @@ const deleteUserByID = asyncHandler(async (req, res) => {
         throw new Error("User not found");
     }
 });
+
+const deleteLearnerByIDandFastName = asyncHandler(async(req, res) => {
+    const course = await Course.findOne({fastName: req.params.fastName})
+    const learner = await User.findById(req.params.id)
+
+    if (course && learner) {
+        course.learnerList = course.learnerList.filter(item => !item.equals(learner._id))
+        await course.save()
+        learner.hasCourse = learner.hasCourse.filter(item => !item.equals(course._id))
+        await learner.save()
+        res.json({ message: "User has been kicked"})
+    }
+    else {
+        res.status(201)
+        throw new Error("User or Course not found!")
+    }
+})
 
 export {
     authUser,
@@ -220,4 +256,5 @@ export {
     getInsUserList,
     getUserByID,
     deleteUserByID,
+    deleteLearnerByIDandFastName
 };

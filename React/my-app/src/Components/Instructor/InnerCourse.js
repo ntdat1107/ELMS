@@ -83,6 +83,8 @@ function InnerCourse({ match, history }) {
 
 
     const deleteHandle = (e) => {
+        e.stopPropagation();
+        if (window.confirm("Are you sure that you want to delete this course"))
         dispatch(deleteCourseNow(match.params.id))
     }
 

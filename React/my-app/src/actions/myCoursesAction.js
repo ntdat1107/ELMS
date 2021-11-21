@@ -76,12 +76,11 @@ export const addNewCourse =
             }
         }
 
-        const { data } = await axios.post('/api/mycourses/newcourse', { name, image, 
+        await axios.post('/api/mycourses/newcourse', { name, image, 
             category, description, fastName }, config )
 
         dispatch({
-            type: ADD_COURSE_SUCCESS,
-            payload: data
+            type: ADD_COURSE_SUCCESS
         })
     } catch (error) {
         dispatch({
@@ -98,7 +97,12 @@ export const enrollNewCourse = (id, fastName) => async (dispatch) => {
         dispatch({
             type: ENROLL_COURSE_REQUEST
         })
-        await axios.post(`/api/mycourses/enroll`, { id, fastName })
+        const config = {
+            headers: {
+                "Content-type": "application/json",
+            },
+        }
+        await axios.post(`/api/mycourses/enroll`, { id, fastName }, config)
 
         dispatch({
             type: ENROLL_COURSE_SUCCESS
@@ -114,31 +118,6 @@ export const enrollNewCourse = (id, fastName) => async (dispatch) => {
     }
 }
 
-// export const enrollNewCourse = (fastName) => async (dispatch, getState) => {
-//     try {
-//         dispatch({
-//             type: ENROLL_COURSE_REQUEST
-//         })
-//         const { userLogin: { userInfo } } = getState() 
-//         const config = {
-//             headers: {
-//                 Authorization: `Bearer ${userInfo.token}`
-//             }
-//         }
-//         await axios.post(`/api/mycourses/enroll/${fastName}`, config)
-
-//         dispatch({
-//             type: ENROLL_COURSE_SUCCESS
-//         })
-//     } catch (error) {
-//         dispatch({
-//             type: ENROLL_COURSE_FAIL,
-//             payload: error.response && error.response.data.message
-//             ? error.response.data.message
-//             : error.message,
-//         })
-//     }
-// }
 
 export const getMyLearnerID = () => async (dispatch, getState) => {
     try {

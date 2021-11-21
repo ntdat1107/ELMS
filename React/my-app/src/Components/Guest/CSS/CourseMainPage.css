@@ -7,6 +7,10 @@
     display: flex;
 }
 
+#upperBody .linkToInside {
+    text-decoration: none;
+}
+
 #upperBody {
     display: flex;
     margin-left: 40px;

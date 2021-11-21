@@ -1,3 +1,4 @@
+import e from "express";
 import asyncHandler from "express-async-handler";
 import Lesson from "../models/lessonModel.js"
 
@@ -39,9 +40,31 @@ const getLessonsByFastnameAndId = asyncHandler(async (req, res) => {
 })
 
 const createNewLesson = asyncHandler(async (req, res) => {
-    const { courseFastname, lessonName, lessonNumber, 
-        lessonDescription, lessonDuration, lessonUrl } = req.body
-    
+    const { lessonName, lessonDescription, lessonUrl } = req.body
+    let lessons = await Lesson.find({})
+    lessons = lessons.filter(item => item.courseFastname == req.params.fastName)
+    const len = lessons.length + 1
+    const lessonExist = await Lesson.findOne({courseFastname: req.params.fastName, 
+        lessonNumber: len})
+    if (lessonExist) {
+        res.status(400).json('Lesson Number is existed in this course!!')
+    }
+    else {
+        const lesson = await Lesson.create({
+            courseFastname: req.params.fastName,
+            lessonName,
+            lessonNumber: len,
+            lessonDescription,
+            lessonUrl
+        })
+        if (lesson) {
+            await lesson.save()
+            res.status(201).json(lesson)
+        }
+        else {
+            res.status(400).json("Invalid data")
+        }
+    }
 })
 
 export {

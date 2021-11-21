@@ -11,7 +11,8 @@ const lessonSchema = mongoose.Schema({
     },
     lessonNumber: {
         type: Number,
-        required: true
+        required: true,
+        default: 0,
     },
     lessonDescription: {
         type: String,
@@ -19,7 +20,8 @@ const lessonSchema = mongoose.Schema({
     },
     lessonDuration: {
         type: Number,
-        required: true
+        required: true,
+        default: 0
     },
     lessonUrl: {
         type: String,

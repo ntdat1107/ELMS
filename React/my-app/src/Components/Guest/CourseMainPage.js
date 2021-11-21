@@ -15,6 +15,7 @@ import { detailCourse } from '../../actions/courseActions';
 import { enrollNewCourse } from '../../actions/myCoursesAction';
 import RateContent from '../courseForYou/RateContent';
 import Loading from '../Loading/Loading';
+import { disable } from 'colors';
 
 const courses = {
     "name": "Similar Courses",
@@ -34,11 +35,12 @@ const courses = {
     }
 ]};
 
-function UpperBody({userInfo, course, isHave, isIns, handleEnroll}) { 
+function UpperBody({course, isHave, isIns, handleEnroll}) { 
     const [enrolled, setEnrolled] = useState(isHave)
-    let linkPath
-    if (isIns) linkPath = `/ins/managecourse/${course.fastName}`
-    else linkPath = `/course/${course.fastName}/1`
+    const handleSet = () => {
+        if (!isIns) setEnrolled(true)
+    }
+    const linkPath = `/course/${course.fastName}/1`
     return(
         <div id = "upperBody">
             <div id = "informationBox">
@@ -50,7 +52,7 @@ function UpperBody({userInfo, course, isHave, isIns, handleEnroll}) {
             <div id = "imageBox">
                 <img src = {course.image} alt="img" style = {{width: "350px", height: "180px", borderRadius: "5px"}}/>
                 {   !enrolled ?
-                    <button onClick={(e) => {handleEnroll(e); setEnrolled(true)}} id = "enrollButton">
+                    <button onClick={(e) => {handleEnroll(e); handleSet()}} id = "enrollButton" disabled={isIns}>
                         <h3>
                             Enroll course
                         </h3>
@@ -74,7 +76,7 @@ function CourseMainPage({ match, history}) {
     const userLogin = useSelector(state => state.userLogin)
     const {userInfo} = userLogin
     const enrollCourse = useSelector(state => state.enrollCourse)
-    const {success} = enrollCourse
+    const {success, error:enrollError} = enrollCourse
     const handleEnroll = (e) => {
         if (!userInfo) history.push('/login')
         else dispatch(enrollNewCourse(userInfo._id, match.params.id))
@@ -84,18 +86,24 @@ function CourseMainPage({ match, history}) {
     useEffect(() => {
         dispatch(detailCourse(match.params.id))
     }, [dispatch])
-    if (loading) return <Loading/>
-    else if (error) return (<div id="error">ERROR</div>)
+    if (loading) return (
+    <div id="loadingUI">
+        <Header history={history} />
+        <Loading/>
+    </div>
+    )
+    else if (error || enrollError) return (<div id="error">ERROR</div>)
     else{
         let isHave = false
         if (course.learnerList && userInfo && course.learnerList.indexOf(userInfo._id) != -1) isHave = true
+        if (userInfo.isIns && userInfo.hasCourse.indexOf(course._id) != -1) isHave = true
         return (
             <div id="courseMainPage">
                 <Header link="/" typeUserTemp={-1} 
                 history = {history}
                 />
                 <div id = "bodyPage">
-                    <BackButton url = "/"/>
+                    <BackButton url = {`/`}/>
                     <UpperBody userInfo = {userInfo} course = {course} isHave={isHave} isIns={userInfo? userInfo.isIns: false} handleEnroll={handleEnroll}/>
                     <LowerBody course = {course} />
                 </div>

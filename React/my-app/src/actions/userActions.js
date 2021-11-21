@@ -20,6 +20,9 @@ import {
     DELETE_USER_REQUEST,
     DELETE_USER_SUCCESS,
     DELETE_USER_FAIL,
+    KICK_USER_REQUEST,
+    KICK_USER_SUCCESS,
+    KICK_USER_FAIL,
 } from "../constants/userConstants";
 import axios from "axios";
 
@@ -224,3 +227,31 @@ export const deleteUserNow = (id) => async (dispatch, getState) => {
         });
     }
 };
+
+export const kickUser = (id, fastName) => async (dispatch, getState) => {
+    try {
+        dispatch({
+            type: KICK_USER_REQUEST
+        })
+        const {
+            userLogin: { userInfo },
+        } = getState();
+
+        const config = {
+            headers: {
+                "Content-type": "application/json",
+                Authorization: `Bearer ${userInfo.token}`
+            }
+        }
+        
+        await axios.delete(`/api/users/delete/${id}/${fastName}`, config)
+        dispatch({type: KICK_USER_SUCCESS})
+    } catch (error) {
+        dispatch({
+            type: KICK_USER_FAIL,
+            payload: error.response && error.response.data.message
+            ? error.response.data.message
+            : error.message
+        })
+    }
+}

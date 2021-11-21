@@ -5,10 +5,10 @@ import remove from "../Admin/image/delete.png";
 import moreInfo from "../Admin/image/moreInfo.png";
 import DetailCpn from "./DetailCpn";
 import InforUser from "./InforUser";
-import { deleteUserNow } from "../../actions/userActions";
+import { deleteUserNow, kickUser } from "../../actions/userActions";
 import "./TableManage.css";
 
-function TableManage({ heightSB, listLearner, history }) {
+function TableManage({ userInfo, listLearner, history, match }) {
     const users = listLearner;
 
     const dispatch = useDispatch();
@@ -36,8 +36,13 @@ function TableManage({ heightSB, listLearner, history }) {
 
     function handleClick2(e) {
         e.stopPropagation();
-        if (window.confirm("Are you sure that you want to delete this user"))
+        if (userInfo && userInfo.isIns) {
+            if (window.confirm("Are you sure that you want to kick this user out of your course!!")){}
+            dispatch(kickUser(e.target.id, match.params.fastName))
+        } else {
+            if (window.confirm("Are you sure that you want to delete this user"))
             dispatch(deleteUserNow(e.target.id));
+        }
     }
 
     useEffect(() => {}, [history, successDelete]);

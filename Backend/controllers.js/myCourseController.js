@@ -132,12 +132,18 @@ const getAllMyLearnersID = asyncHandler(async(req, res) => {
 const enrollCourse = asyncHandler(async(req, res) => {
     const { id, fastName } = req.body
     const user = await User.findById(id)
-    const course = await Course.findOne({fastName: fastName})
-    user.hasCourse.push(course._id)
-    await user.save()
-    course.learnerList.push(user._id)
-    await course.save()
-    res.json({message: "Enroll success"})
+    if (user.isIns || user.isAdmin) {
+        res.status(401)
+        throw new Error('You are not a Learner')
+    }
+    else {
+        const course = await Course.findOne({fastName: fastName})
+        user.hasCourse.push(course._id)
+        await user.save()
+        course.learnerList.push(user._id)
+        await course.save()
+        res.json({message: "Enroll success"})
+    }
 })
 
 export { getUserCourses, getLearners, createNewCourse, getMyCourse, 

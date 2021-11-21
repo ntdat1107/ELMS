@@ -50,7 +50,7 @@ function TableOfLearner({history, match}) {
             </div>
             <div id="row-2">
                 <SearchInTable typeUserTemp={1}/>
-                <TableManage listLearner={learnerList}/>
+                <TableManage userInfo={userInfo} match={match} listLearner={learnerList}/>
             </div>
         </div>
         </div>

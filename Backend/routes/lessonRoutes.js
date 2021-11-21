@@ -1,5 +1,5 @@
 import express from "express";
-import { protect } from "../middleware/authMiddleware.js";
+import { checkIns, protect } from "../middleware/authMiddleware.js";
 const router = express.Router()
 
 import { createNewLesson, getLesson, getLessonsByFastname, getLessonsByFastnameAndId } from "../controllers.js/lessonController.js"
@@ -15,6 +15,6 @@ router.route('/').get(getLesson)
 router.route('/:id').get(getLessonsByFastname)
 router.route('/:id/:token').get(getLessonsByFastnameAndId)
 
-router.route('/').post(protect, createNewLesson)
+router.route('/:fastName/create').post(protect, checkIns, createNewLesson)
 
 export default router

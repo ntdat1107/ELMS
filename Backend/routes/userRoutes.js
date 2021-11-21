@@ -9,6 +9,7 @@ import {
     registerUser,
     updateUserProfile,
     deleteUserByID,
+    deleteLearnerByIDandFastName,
 } from "../controllers.js/userController.js";
 import { protect } from "../middleware/authMiddleware.js";
 
@@ -27,5 +28,7 @@ router.route("/ins").get(getInsUserList);
 router.route("/getby/:id").get(getUserByID);
 
 router.route("/delete/:id").delete(protect, deleteUserByID);
+
+router.route("/delete/:id/:fastName").delete(protect, deleteLearnerByIDandFastName)
 
 export default router;
