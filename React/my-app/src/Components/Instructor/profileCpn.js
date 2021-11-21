@@ -3,6 +3,7 @@ import camera from "./imgSrc/camera.png"
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserProfile, updateUserProfile } from '../../actions/userActions'
+import ErrorToast from './../ErrorToast/ErrorToast';
 
 function ProfileCpn({
     history,
@@ -26,6 +27,18 @@ function ProfileCpn({
     const [avatar, setAvatar] = useState("https://st.quantrimang.com/photos/image/072015/22/avatar.jpg")
     const [description, setDescription] = useState('')
     const [phoneNumber, setPhoneNumber] = useState('')
+    const [error, setError] = useState(false)
+
+    const [list, setList] = useState([])
+
+    const showToast = () => {
+        setList([{
+            id: list.length + 1,
+            title: 'Error',
+            description: 'Login Error! Please try again.',
+            backgroundColor: '#5cb85c'
+        }])
+    }
 
 
     function getCurrentDate(separator='-'){
@@ -86,10 +99,12 @@ function ProfileCpn({
         e.preventDefault()
         if (password !== passwordConfirm) {
             // Handle password do not match
+            setError(true)
         }
         else {
             dispatch(updateUserProfile({id: userDetail._id, firstName, lastName, email, avatar, city, country,
             description, sex, phoneNumber, birthDay, password}))
+            setError(false)
         }
     }
     const cancelHandle = (e) => {
@@ -220,6 +235,7 @@ function ProfileCpn({
                     </button>
                 </div>
             </div>
+            { error && <ErrorToast toastList={list} setList={setList}/> }
         </div>
     )
 }
