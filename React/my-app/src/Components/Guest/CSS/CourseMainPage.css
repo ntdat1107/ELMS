@@ -43,6 +43,9 @@
     cursor: context-menu;
     font-size: 32px;
 }
+#upperBody #informationBox #nameCourse{
+    width: 700px;
+}
 
 #upperBody #informationBox h2{
     color: #fafafa;
@@ -209,4 +212,7 @@
 
 #upperBody #rateContent{
     margin-left: 10px;
+}
+#upperBody #Category h1{
+    margin: 0px 10px;
 }

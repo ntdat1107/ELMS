@@ -4,7 +4,6 @@ import "./LnAnnouncements.css";
 import ListAnnoun from "../../ListAnnounceCpn/ListAnnounceCpn";
 import Header from "../../Header/header";
 import SideBar from "../../SideBar/SideBar";
-import DataAnnoun from "./dataForAnnoun";
 function LnAnnouncements({ history }) {
     const userLogin = useSelector((state) => state.userLogin);
     const { userInfo } = userLogin;

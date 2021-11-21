@@ -61,24 +61,70 @@ function OpenRate({rateScore}) {
     )
 }
 
+const styleBeginner = {
+    backgroundColor: "#c0c0c0",
+    color: "#4B0C0C",
+    marginLeft:"5px",
+    borderRadius: "10px",
+    width: "60px",
+    height: "20px",
+    marginTop: "5px"
+}
+const styleAdvanced = {
+    backgroundColor: "#FFD700",
+    color: "#4B0C0C",
+    marginLeft:"5px",
+    borderRadius: "10px",
+    width: "60px",
+    height: "20px",
+    marginTop: "5px"
+}
+const styleMaster = {
+    backgroundColor: "#B9F2FF",
+    color: "#4B0C0C",
+    marginLeft:"5px",
+    borderRadius: "10px",
+    width: "60px",
+    height: "20px",
+    marginTop: "5px"
+}
+
+function Category({
+    category
+}) {
+    let styleType = styleBeginner
+    let type = ""
+    // Choose Style
+    if ( category.toUpperCase() === "BEGINNER") {styleType = styleBeginner; type = "Beginner"}
+    else if (category.toUpperCase() === "ADVANCED") {styleType = styleAdvanced; type = "Advanced"}
+    else {styleType = styleMaster; type = "Master"}
+    return (
+        <div id="Category" style={styleType}>
+            <p style={{paddingTop: "3px", fontSize: "10px", fontWeight:"bold", width: "60px", textAlign: "center"}}>{type}</p>
+        </div>
+    )
+}
+
+
 function ItemCourse({
     nameCourse,
     authorCourse,
     imgCourse,
     rateScore,
     fastNameCourse,
+    category,
     callback = () => {}
 }) {
     return (
         <div className="itemCourse" >
             <div className="imgCourse" style={{overflow: "hidden"}}>
                 <img src={imgCourse} alt = "Course Img" style={{borderBottom: "1px solid #000", width: "240px"}}></img>
-                {/* <OpenMore /> */}
             </div>
             <div id="nameCourse">
                 <Link className="Link-coursename" to={`/course/${fastNameCourse}/1`}>
                     <p>{nameCourse}</p>
                 </Link>
+                <Category category = {category} />
             </div>
             <div id="authorCourse">
                 <p>{authorCourse}</p>

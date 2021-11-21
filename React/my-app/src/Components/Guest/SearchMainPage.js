@@ -39,7 +39,7 @@ function SearchResult({courses}) {
     const display = courses.map((data,index) => {
         return(             
             <CourseForYouCpn key={index} imgSrcCourse={data.image}
-            Name={data.name} Desc={data.description} Author={data.authorName} Type={data.typeCourse}
+            Name={data.name} Desc={data.description} Author={data.authorName} Type={data.typeCourse} category={data.category}
             rateScore={data.rateScore} totalRate={data.rateNum} linkName={`/course/${data.fastName}`}/>
         )
     });

@@ -97,6 +97,7 @@ const TableCourse = ({id, match}) => {
                                 authorCourse={course.authorName}
                                 rateScore={rateScore}
                                 fastNameCourse={course.fastName}
+                                category = {course.category}
                             />
                         </div>
                         );

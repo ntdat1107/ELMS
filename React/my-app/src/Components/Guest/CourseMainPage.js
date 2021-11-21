@@ -17,6 +17,41 @@ import RateContent from '../courseForYou/RateContent';
 import Loading from '../Loading/Loading';
 import { disable } from 'colors';
 
+const styleBeginner = {
+    backgroundColor: "#c0c0c0",
+    borderRadius: "10px",
+    height: "50px",
+    marginTop: "10px",
+}
+const styleAdvanced = {
+    backgroundColor: "#FFD700",
+    borderRadius: "10px",
+    height: "50px",
+    marginTop: "10px",
+}
+const styleMaster = {
+    backgroundColor: "#B9F2FF",
+    borderRadius: "10px",
+    height: "50px",
+    marginTop: "10px",
+}
+
+function Category({
+    temp
+}) {
+    let styleType = styleBeginner
+    let type = ""
+    // Choose Style
+    if (temp&& temp.toUpperCase() === "BEGINNER") {styleType = styleBeginner; type = "Beginner"}
+    else if (temp&&temp.toUpperCase() === "ADVANCED") {styleType = styleAdvanced; type = "Advanced"}
+    else {styleType = styleMaster; type = "Master"}
+    return (
+        <div id="Category" style={styleType}>
+            <h1 style={{ textAlign: "center", color: "#4B0C0C",}}>{type}</h1>
+        </div>
+    )
+}
+
 const courses = {
     "name": "Similar Courses",
     "displayButton": false,
@@ -44,7 +79,10 @@ function UpperBody({course, isHave, isIns, handleEnroll}) {
     return(
         <div id = "upperBody">
             <div id = "informationBox">
-                <h1>{course.name}</h1>
+                <div style={{display: "flex", height:"105px"}}>
+                <h1 id="nameCourse">{course.name}</h1>
+                <Category temp = {course&&course.category} />
+                </div>
                 <p id = "desc">{course.description}</p>
                 <h2>{course.authorName}</h2>
                 <RateContent TypeCpn={course.typeCourse} rateScoreCpn={course.rateScore} totalRateCpn={course.rateNum}/> 

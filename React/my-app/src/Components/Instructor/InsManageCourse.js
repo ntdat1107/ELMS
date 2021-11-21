@@ -59,7 +59,7 @@ function InsManagerCourse ({history}) {
                     myCoursesList && myCoursesList.map((data, index) => {
                         return (
                             <CourseForYouCpn key={index} imgSrcCourse={data.image}
-                            Name={data.name} Desc={data.description} Author={data.authorName} Type={data.typeCourse}
+                            Name={data.name} Desc={data.description} Author={data.authorName} Type={data.typeCourse} category={data.category}
                             rateScore={data.rateScore} totalRate={data.rateNum} linkName={`/ins/managecourse/${data.fastName}`}/>
                         )
                     })

@@ -3,7 +3,7 @@
     display: inline-block;
     margin-left: 300px;
     margin-top: 125px;
-    width: 1225px;
+    width: 1375px;
     height: 80vh;
 }
 #insMC .title-add-course .btn-add{
@@ -74,4 +74,12 @@
 #insMC #courseContent #Author{
     font-size: 16px;
     width: 500px;
+}
+#insMC #Category p{
+    padding-top: 5px !important;
+}
+#insMC #courseCFY{
+    margin: 10px 30px 10px 10px;
+    padding-left: 0px;
+    border-bottom: 1px solid #000;
 }
