@@ -260,7 +260,7 @@ export const kickUser = (id, fastName) => async (dispatch, getState) => {
 }
 
 
-export const resetPass = (inform) => async (dispatch) => {
+export const resetNewPass = (inform) => async (dispatch) => {
     try {
         dispatch({
             type: RESET_PASS_REQUEST,

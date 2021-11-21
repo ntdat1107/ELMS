@@ -2,7 +2,7 @@ import './CSS/ForgotPass.css'
 import { Link } from "react-router-dom"
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-import { resetPass } from '../../actions/userActions'
+import { resetNewPass } from '../../actions/userActions'
 import ErrorToast from './../ErrorToast/ErrorToast'
 
 function ForgotPass() {
@@ -20,13 +20,19 @@ function ForgotPass() {
             
         }
         else {
-            dispatch(resetPass({userName, email, password}))
+            dispatch(resetNewPass({userName, email, password}))
         }
     }
-
+    if (loading) return (
+        <p>Loading</p>
+    )
+    else if (error) return (
+        <p>{error.message}</p>
+    )
+    else
     return (
         <div className="ForgotPasspage">
-            <form className="ForgotPasscontainer" onSubmit={handleSubmit}>
+            <form className="ForgotPasscontainer">
                 <div id="ForgotPassheader">
                     <div id="ForgotPasstxt1">Forgot your password?</div>
                     <div id="ForgotPasstxt2">We’ll give your password</div>
