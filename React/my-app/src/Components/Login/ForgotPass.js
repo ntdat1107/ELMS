@@ -20,8 +20,8 @@ function ForgotPass() {
 
                 <input className="ForgotPassimpBx" type="email" required onChange={(e) => setEmail(e.target.value)}></input>
                 <div className="ForgotPassbtn-box">
-                    <button type="submit" className="ForgotPasstoggle-btn1">Reset</button>
                     <Link to='/login'>
+                        <button type="submit" className="ForgotPasstoggle-btn1">Reset</button>
                         <button type="button" className="ForgotPasstoggle-btn2">Cancel</button>
                     </Link>
 
