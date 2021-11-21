@@ -142,19 +142,32 @@
 }
 #insdb #mycourse #my-c-list {
     font-size: 24px;
-    padding-top: 20px;
 }
 #insdb #mycourse #my-c-list {
     display: inline-block;
     padding-left: 20px;
 }
 #insdb #my-c-list p {
-    padding-left: 20px;
+    padding-left: 10px;
     padding-top: 15px;
 }
 #insdb #my-c-list #first-c {
-    display: inline-block;
-    padding-top: 20px;
+    display: flex;
+    padding-top: 25px;
+}
+#insdb #my-c-list #first-c #nameCourse{
+    /* style={{paddingTop: "0px",fontSize: "18px", height: "50px", whiteSpace: "nowrap", overflow: "hidden",
+        textOverflow: "ellipsis", width:"200px"
+    }} */
+    padding-top: 0px;
+    font-size: 14px;
+    height: 40px;
+    width: 210px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+    color: black;
 }
 #insdb #my-c-list img {
     float: left;

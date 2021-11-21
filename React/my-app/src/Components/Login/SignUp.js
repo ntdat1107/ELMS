@@ -14,7 +14,8 @@ function Signup({history}) {
     const [confirmPassword, setConfirmPassword] = useState('')
     const [isIns, setIns] = useState(true)
     const [isLearner, setLearner] = useState(false)
-    
+    const [checkpri, setCheckpri] = useState(false)
+
     const handleIns = () => {
         setIns(true)
         setLearner(false)
@@ -60,7 +61,7 @@ function Signup({history}) {
 
     const submitHandler = (e) => {
         e.preventDefault()
-        if (!(firstName && lastName && email && accountID &&  password && confirmPassword) || (password != confirmPassword)) {
+        if (!(firstName && lastName && email && accountID &&  password && confirmPassword && checkpri) || (password != confirmPassword)) {
             //Handle this!
             setError(true)
             
@@ -125,7 +126,8 @@ function Signup({history}) {
                     </div>
 
                     <div className="Signupremember">
-                        <label id="Signupcheckbox"> <input type="checkbox"></input> Agree with policy</label>
+                        <label id="Signupcheckbox"> <input type="checkbox" 
+                        onClick={(e) => setCheckpri(e.target.value)}></input> Agree with policy</label>
                         <Link to='/policy'>
                             Privacy Policy
                         </Link>

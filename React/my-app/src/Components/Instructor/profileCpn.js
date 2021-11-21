@@ -31,16 +31,12 @@ function ProfileCpn({
     const [phoneNumber, setPhoneNumber] = useState('')
     const [msgerror, setError] = useState(false)
 
-    const [list, setList] = useState([])
-
-    const showToast = () => {
-        setList([{
-            id: list.length + 1,
-            title: 'Error',
-            description: 'Confirm password doesnot match, please try again.',
-            backgroundColor: '#5cb85c'
-        }])
-    }
+    const [list, setList] = useState([{
+        id: 1,
+        title: 'Error',
+        description: 'Confirm password doesnot match, please try again.',
+        backgroundColor: '#5cb85c'
+    }])
 
 
     function getCurrentDate(separator='-'){
