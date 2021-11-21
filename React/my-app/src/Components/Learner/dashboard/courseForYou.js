@@ -5,6 +5,7 @@ import CourseForYouCpn from "../../courseForYou/courseForYouCpn";
 import { Link } from "react-router-dom"
 import { listCourses } from "../../../actions/courseActions";
 import Loading from '../../Loading/Loading'
+import ErrorMsg from '../../Error/ErrorMsg';
 function CourseForYou() {
     const dispatch = useDispatch()
     const courseList = useSelector(state => state.courseList)
@@ -21,9 +22,7 @@ function CourseForYou() {
     }
     else if (error) {
         return (
-            <div id="err">
-                <h1>ERROR</h1>
-            </div>
+            <ErrorMsg msg="Something went wrong!"/>
         )
     }
     else {
