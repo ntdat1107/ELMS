@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import { resetNewPass } from '../../actions/userActions'
 import ErrorToast from './../ErrorToast/ErrorToast'
+import ErrorMsg from './../Error/ErrorMsg';
+import Loading from './../Loading/Loading';
 
 function ForgotPass() {
     const dispatch = useDispatch()
@@ -14,6 +16,7 @@ function ForgotPass() {
 
     const resetPass = useSelector(state => state.resetPass)
     const {loading, error, success, passwordNow} = resetPass //passwordNow is password after reset
+    //console.log(error + " ok")
     const handleSubmit = (e) => {
         e.preventDefault()
         if (password != confirmPassword) {
@@ -24,10 +27,10 @@ function ForgotPass() {
         }
     }
     if (loading) return (
-        <p>Loading</p>
-    )
+        <Loading/>
+    )   
     else if (error) return (
-        <p>{error.message}</p>
+        <ErrorMsg msg={error}/>
     )
     else
     return (
