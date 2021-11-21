@@ -46,89 +46,62 @@ const AllCourse= ({ history }) => {
     )
 }
 
-const TableCourse = ({id, match, history}) => {
-    const dispatch = useDispatch()
+const TableCourse = ({id, match, courses}) => {
     const keyword = match.params.keyword;
-
-    const myCourses = useSelector(state => state.myCourses)
-    const { loading, error, myCoursesList } = myCourses
-    useEffect(() => {
-        dispatch(getMyCourses())
-    }, [dispatch])
     const [pageNumber, setPageNumber] = useState(0);  
     const coursesPerPage = 9;
     const pagesVisited = pageNumber * coursesPerPage;
-    if (loading) {
-        return (
-            <div className="handleLoading" style={{marginTop: "-300px"}}>
-                <SideBar typeUserTemp={2} />
-                <Header history={history} />
-                <Loading />
-            </div>
-        )
-    }
-    else if (error) {
-        return (
-            <div id="err">
-                <SideBar typeUserTemp={2} style={{marginTop: "-300px"}}/>
-                <Header history={history} />
-                <ErrorMsg msg="Something went wrong!" />
-            </div>
-        )
-    }
-    else {
-        let arr = []
-        if(keyword) {
-            let filter = keyword.toUpperCase()
-            for(let i = 0; i < myCoursesList.length; i++)
-            {
-                if(myCoursesList[i].name.toUpperCase().indexOf(filter) > -1) arr.push(myCoursesList[i])
-            }
+    let arr = []
+    if(keyword) {
+        let filter = keyword.toUpperCase()
+        for(let i = 0; i < courses.length; i++)
+        {
+            if(courses[i].name.toUpperCase().indexOf(filter) > -1) arr.push(courses[i])
         }
-        else arr = myCoursesList
-        const pageCount = Math.ceil(arr&&arr.length / coursesPerPage);
-        const changePage = ({ selected }) => {setPageNumber(selected)};
-        return (
-            <div id="tableCourses">
-                <Scrollbars id="scrollbars">
-                {
-                    arr && arr.slice(pagesVisited, pagesVisited + coursesPerPage).map((course,index) => {
-                        var rateScore = 0;
-                        for(let j = 0; j < course.ratings.length; j++) {
-                            if(course.ratings[j].user === id) rateScore = course.ratings[j].rating;
-                        }
-                        return (
-                        <div id="colCourses" key={index}>
-                            <ItemCourse 
-                                imgCourse={course.image}
-                                nameCourse={course.name}
-                                authorCourse={course.authorName}
-                                rateScore={rateScore}
-                                fastNameCourse={course.fastName}
-                                category = {course.category}
-                            />
-                        </div>
-                        );
-                    })
-                }
-                </Scrollbars>
-                <ReactPaginate
-                    previousLabel={"Prev"}
-                    nextLabel={"Next"}
-                    pageCount={pageCount}
-                    onPageChange={changePage}
-                    containerClassName={"paginationBttns"}
-                    previousLinkClassName={"previousBttn"}
-                    nextLinkClassName={"nextBttn"}
-                    disabledClassName={"paginationDisabled"}
-                    activeClassName={"paginationActive"}
-                />
-            </div>
-        );
     }
-  }
+    else arr = courses
+    const pageCount = Math.ceil(arr&&arr.length / coursesPerPage);
+    const changePage = ({ selected }) => {setPageNumber(selected)};
+    return (
+        <div id="tableCourses">
+            <Scrollbars id="scrollbars">
+            {
+                arr && arr.slice(pagesVisited, pagesVisited + coursesPerPage).map((course,index) => {
+                    var rateScore = 0;
+                    for(let j = 0; j < course.ratings.length; j++) {
+                        if(course.ratings[j].user === id) rateScore = course.ratings[j].rating;
+                    }
+                    return (
+                    <div id="colCourses" key={index}>
+                        <ItemCourse 
+                            imgCourse={course.image}
+                            nameCourse={course.name}
+                            authorCourse={course.authorName}
+                            rateScore={rateScore}
+                            fastNameCourse={course.fastName}
+                            category = {course.category}
+                        />
+                    </div>
+                    );
+                })
+            }
+            </Scrollbars>
+            <ReactPaginate
+                previousLabel={"Prev"}
+                nextLabel={"Next"}
+                pageCount={pageCount}
+                onPageChange={changePage}
+                containerClassName={"paginationBttns"}
+                previousLinkClassName={"previousBttn"}
+                nextLinkClassName={"nextBttn"}
+                disabledClassName={"paginationDisabled"}
+                activeClassName={"paginationActive"}
+            />
+        </div>
+    );
+}
 
-function ContentMyCourses({match, id, history}) {
+function ContentMyCourses({match, id, history, courses}) {
     return (
         <div id = "myCourses">
             <div className="titleMC"><p>My Courses</p></div>
@@ -137,7 +110,7 @@ function ContentMyCourses({match, id, history}) {
                 <Route render={({ history })=> <SearchBox history={history} />} />
             </div>
             <div id="listCourseMC">
-                <TableCourse match={match} history={history} id={id}/>
+                <TableCourse match={match} history={history} courses={courses} id={id}/>
             </div>
         </div>
     )
@@ -150,15 +123,43 @@ function LnMyCourses({match, history}) {
     useEffect(() => {
         if (!userInfo || !userInfo.isLearner) history.push('/login')
     }, [history, userInfo])
-    return (
-        <div id="lnMyCoursesUI">
-            <SideBar typeUserTemp={2}/>
-            <Header  history = {history}/>
-            <div id="lnMyCourses">
-                <ContentMyCourses match={match} id={userInfo._id} />
+
+    const dispatch = useDispatch()
+    const myCourses = useSelector(state => state.myCourses)
+    const { loading, error, myCoursesList } = myCourses
+    useEffect(() => {
+        dispatch(getMyCourses())
+    }, [dispatch])
+
+    if (loading) {
+        return (
+            <div>
+                <SideBar typeUserTemp={2}/>
+                <Header history = {history}/>
+                <Loading />
             </div>
-        </div>
-    )
+        )
+    }
+    else if (error) {
+        return (
+            <div>
+                <SideBar typeUserTemp={2}/>
+                <Header history = {history}/>
+                <ErrorMsg msg="Something went wrong!" />
+            </div>
+        )
+    }
+    else {
+        return (
+            <div id="lnMyCoursesUI">
+                <SideBar typeUserTemp={2}/>
+                <Header  history = {history}/>
+                <div id="lnMyCourses">
+                    <ContentMyCourses match={match} history = {history} courses={myCoursesList} id={userInfo._id} />
+                </div>
+            </div>
+        )
+    }
 }
 
 export default LnMyCourses;

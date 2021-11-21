@@ -331,3 +331,22 @@ display: flex;
   color: #fff;
   cursor: pointer;
 }
+
+#lnMyCourses .Cases-error{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 20px;
+}
+
+#lnMyCourses .headerError{
+  margin-right: 2%;
+  font-size: 40px;
+}
+
+#lnMyCourses .Cases-error #msg-err {
+  color: red;
+  font-size: 32px;
+}

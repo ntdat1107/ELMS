@@ -151,44 +151,21 @@
 #lnDashboard #courseContent #Name{
   height: 20px;
 }
-
-
-/* Chart */
-/* #lnDashboard .title {
-  font-size: 1.4em;
-  font-weight: 300;
+#lnDashboard .Cases-error{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 700vw;
+  height: 300vh;
+  font-size: 20px;
 }
 
-#lnDashboard .bar-group .name-label {
-  font-size: 8px;
-  fill: #000;
+#lnDashboard.headerError{
+  margin-right: 2%;
+  font-size: 40px;
 }
 
-#lnDashboard .bar-group .value-label {
-  text-anchor: end;
-  font-weight: 900;
-  font-size: 0.7em;
+#lnDashboard.Cases-error #msg-err {
+  color: red;
+  font-size: 32px;
 }
-
-#lnDashboard .container .bar-group {
-  transition: opacity 0.3s;
-}
-
-
-#lnDashboard .container:hover .bar-group {
-  opacity: 0.3;
-}
-
-
-#lnDashboard .container .bar-group:hover {
-  opacity: 1;
-}
-
-#lnDashboard .container .bar-group:hover .name-label {
-  font-weight: bold;
-  font-size: 10px;
-}
-
-#lnDashboard .container .bar-group:hover .value-label {
-  font-size: 10px;
-} */
