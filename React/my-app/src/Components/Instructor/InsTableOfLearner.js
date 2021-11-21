@@ -40,7 +40,7 @@ function TableOfLearner({history, match}) {
         <div id="errorInsTable">
             <SideBar typeUserTemp={1}/>
             <Header history={history}/>
-            <ErrorMsg msg={error.message} />
+            <ErrorMsg msg={error} />
         </div>
     )
     else return (

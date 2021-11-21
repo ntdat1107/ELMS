@@ -65,7 +65,7 @@ function InsDashboardUI ({history}) {
         <div id="error">
             <SideBar typeUserTemp={1} />
             <Header history={history} />        
-            <ErrorMsg msg={error ? error.message : errorLearner? errorLearner.message : errorListCourse.message} />
+            <ErrorMsg msg={error ? error : errorLearner? errorLearner : errorListCourse} />
         </div>
     )
     else return (
