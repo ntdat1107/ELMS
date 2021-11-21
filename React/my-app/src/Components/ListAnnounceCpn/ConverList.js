@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 
 function ConverList({ cvsList, parentClick, handleClick, classN, header }) {
-    const [click, setClick] = useState(1);
-
     return (
         <div id="sublistAnnoun" className={classN}>
             <p>{header}</p>
             <Scrollbars width="100%">
                 {cvsList &&
                     cvsList.map((conversation) => {
+                        var time = conversation.createdAt.split("T");
                         return (
                             <button
                                 className="Announcpn"
@@ -26,7 +25,7 @@ function ConverList({ cvsList, parentClick, handleClick, classN, header }) {
                                     {conversation.content}
                                 </p>
                                 <p className="time" onClick={handleClick}>
-                                    {conversation.time}
+                                    {time[0]}
                                 </p>
                             </button>
                         );

@@ -9,7 +9,7 @@ import Loading from "../Loading/Loading";
 import ConverList from "./ConverList";
 import ContentCvs from "./ContentCvs";
 
-function ListAnnounceCpn({ history, Addition_Part }) {
+function ListAnnounceCpn({ history, Addition_Part, typeUserTemp }) {
     const dispatch = useDispatch();
     /* _____________________________________ */
     const getCvsSend = useSelector((state) => state.getCvsSend);
@@ -79,41 +79,85 @@ function ListAnnounceCpn({ history, Addition_Part }) {
             <div id="Announ-wholeblock">
                 {Addition_Part}
                 <div id="listAnnoun">
-                    <div id="pickRange">
-                        <div id="receiveRange" onClick={openreceive}>
-                            Receive
-                        </div>
-                        <div id="sendRange" onClick={opensend}>
-                            Send
-                        </div>
-                    </div>
+                    {/* _________________For Instructors_________________ */}
+                    {typeUserTemp == 1 && (
+                        <>
+                            <div id="pickRange">
+                                <div id="receiveRange" onClick={openreceive}>
+                                    Receive
+                                </div>
+                                <div id="sendRange" onClick={opensend}>
+                                    Send
+                                </div>
+                            </div>
 
-                    <ConverList
-                        classN={receivebox ? "receive-box open" : "receive-box"}
-                        cvsList={cvsReceiveList}
-                        header="Receive"
-                        parentClick={parentClick}
-                        handleClick={handleClick}
-                    />
-                    <ConverList
-                        classN={sendbox ? "send-box open" : "send-box"}
-                        cvsList={cvsSendList}
-                        header="Send"
-                        parentClick={parentClick}
-                        handleClick={handleClick}
-                    />
+                            <ConverList
+                                classN={receivebox ? "receive-box open" : "receive-box"}
+                                cvsList={cvsReceiveList}
+                                header="Receive"
+                                parentClick={parentClick}
+                                handleClick={handleClick}
+                            />
+                            <ConverList
+                                classN={sendbox ? "send-box open" : "send-box"}
+                                cvsList={cvsSendList}
+                                header="Send"
+                                parentClick={parentClick}
+                                handleClick={handleClick}
+                            />
+                        </>
+                    )}
+
+                    {/* _________________For Learners_________________ */}
+                    {typeUserTemp == 2 && (
+                        <ConverList
+                            classN={receivebox ? "receive-box open" : "receive-box"}
+                            cvsList={cvsReceiveList}
+                            header="Receive"
+                            parentClick={parentClick}
+                            handleClick={handleClick}
+                        />
+                    )}
+
+                    {/* _________________For Admin_________________ */}
+                    {typeUserTemp == 0 && (
+                        <ConverList
+                            classN={!sendbox ? "send-box open" : "send-box"}
+                            cvsList={cvsSendList}
+                            header="Send"
+                            parentClick={parentClick}
+                            handleClick={handleClick}
+                        />
+                    )}
                 </div>
 
-                <ContentCvs
-                    classN={receivebox ? "receive-box open" : "receive-box"}
-                    cvsList={cvsReceiveList}
-                    click={click}
-                />
-                <ContentCvs
-                    classN={sendbox ? "send-box open" : "send-box"}
-                    cvsList={cvsSendList}
-                    click={click}
-                />
+                {/* _________________________Content Box____________________________ */}
+                {/* ________________Content box for Ins and Learner_________________ */}
+                {typeUserTemp != 0 && (
+                    <>
+                        <ContentCvs
+                            classN={receivebox ? "receive-box open" : "receive-box"}
+                            cvsList={cvsReceiveList}
+                            click={click}
+                        />
+                        <ContentCvs
+                            classN={sendbox ? "send-box open" : "send-box"}
+                            cvsList={cvsSendList}
+                            click={click}
+                        />
+                    </>
+                )}
+
+                {/* ___________________Content box for Admin_________________ */}
+                {typeUserTemp == 0 && (
+                    <>
+                        <ContentCvs
+                            classN={!sendbox ? "send-box open" : "send-box"}
+                            cvsList={cvsSendList}
+                            click={click}
+                        />
+                    </>
+                )}
             </div>
         );
 }
