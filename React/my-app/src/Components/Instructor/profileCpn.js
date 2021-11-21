@@ -27,7 +27,7 @@ function ProfileCpn({
     const [avatar, setAvatar] = useState("https://st.quantrimang.com/photos/image/072015/22/avatar.jpg")
     const [description, setDescription] = useState('')
     const [phoneNumber, setPhoneNumber] = useState('')
-    const [error, setError] = useState(false)
+    const [msgerror, setError] = useState(false)
 
     const [list, setList] = useState([])
 
@@ -235,7 +235,7 @@ function ProfileCpn({
                     </button>
                 </div>
             </div>
-            { error && <ErrorToast toastList={list} setList={setList}/> }
+            { msgerror && <ErrorToast toastList={list} setList={setList}/> }
         </div>
     )
 }
