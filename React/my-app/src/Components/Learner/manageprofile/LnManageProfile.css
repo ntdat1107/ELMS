@@ -159,3 +159,15 @@
     outline-offset: 15px;
     text-shadow: 1px 1px 2px #427388; 
 }
+#lnManageProfile #MP #avt-url {
+    position: relative;
+    margin-top: 10px;
+    margin-left: -20px;
+    width: 200px;
+    display: block;
+    border-radius: 15px;
+    border: 1px solid;
+    height: 40px;
+    font-size: 24px;
+    padding-left: 10px;
+}
