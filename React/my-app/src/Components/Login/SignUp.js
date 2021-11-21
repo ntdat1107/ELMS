@@ -65,6 +65,7 @@ function Signup({history}) {
             setError(true)
             
         } else {
+            setError(false)
             dispatch(register( firstName, lastName, email, 
                 accountID, password, isLearner, isIns ))
         }
