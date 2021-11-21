@@ -121,7 +121,7 @@ function ProfileCpn({
         <Loading />
     )
     else if (error) return (
-        <ErrorMsg msg={error.message} />
+        <ErrorMsg msg={error} />
     )
     else return (
         <div id="MP">

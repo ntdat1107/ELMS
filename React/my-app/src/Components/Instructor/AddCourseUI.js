@@ -40,7 +40,7 @@ function AddCourseUI({history}) {
         <div id="errorUI">
             <SideBar typeUserTemp={1}/>
             <Header history={history}/>
-            <ErrorMsg msg={error.message} />
+            <ErrorMsg msg={error} />
         </div>
     )
     else return (

@@ -38,7 +38,7 @@ function InsManagerCourse ({history}) {
             <div id="err">
                 <SideBar typeUserTemp={1} />
                 <Header history={history} />
-                <ErrorMsg msg={error.message} />
+                <ErrorMsg msg={error} />
             </div>
         )
     }
