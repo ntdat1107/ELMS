@@ -5,8 +5,10 @@ import CourseForYouCpn from "../../courseForYou/courseForYouCpn";
 import { Link } from "react-router-dom"
 import { listCourses } from "../../../actions/courseActions";
 import Loading from '../../Loading/Loading'
+import Header from '../../Header/header';
+import SideBar       from '../../SideBar/SideBar';
 import ErrorMsg from '../../Error/ErrorMsg';
-function CourseForYou() {
+function CourseForYou({ history}) {
     const dispatch = useDispatch()
     const courseList = useSelector(state => state.courseList)
     const { loading, error, courses } = courseList
@@ -17,12 +19,20 @@ function CourseForYou() {
 
     if (loading) {
         return (
-            <Loading />
+            <div className="handleLoading" style={{marginTop: "-300px"}}>
+                <SideBar typeUserTemp={2} />
+                <Header history={history} />
+                <Loading />
+            </div>
         )
     }
     else if (error) {
         return (
-            <ErrorMsg msg="Something went wrong!"/>
+            <div id="err">
+                <SideBar typeUserTemp={2} style={{marginTop: "-300px"}}/>
+                <Header history={history} />
+                <ErrorMsg msg="Something went wrong!" />
+            </div>
         )
     }
     else {

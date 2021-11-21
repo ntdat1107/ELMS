@@ -36,7 +36,7 @@ function LnDashboard({ history }) {
             <div id="lnDashboard">
                 <div id="about_CFY">
                     <About />
-                    <CourseForYou />
+                    <CourseForYou history={history} />
                 </div>
                 <div id="calender-chart">
                     <div id="calendar"><Calendar /></div>

@@ -46,7 +46,7 @@ const AllCourse= ({ history }) => {
     )
 }
 
-const TableCourse = ({id, match}) => {
+const TableCourse = ({id, match, history}) => {
     const dispatch = useDispatch()
     const keyword = match.params.keyword;
 
@@ -60,12 +60,20 @@ const TableCourse = ({id, match}) => {
     const pagesVisited = pageNumber * coursesPerPage;
     if (loading) {
         return (
-            <Loading />
+            <div className="handleLoading" style={{marginTop: "-300px"}}>
+                <SideBar typeUserTemp={2} />
+                <Header history={history} />
+                <Loading />
+            </div>
         )
     }
     else if (error) {
         return (
-            <ErrorMsg msg="Something went wrong!"/>
+            <div id="err">
+                <SideBar typeUserTemp={2} style={{marginTop: "-300px"}}/>
+                <Header history={history} />
+                <ErrorMsg msg="Something went wrong!" />
+            </div>
         )
     }
     else {
@@ -120,7 +128,7 @@ const TableCourse = ({id, match}) => {
     }
   }
 
-function ContentMyCourses({match, id}) {
+function ContentMyCourses({match, id, history}) {
     return (
         <div id = "myCourses">
             <div className="titleMC"><p>My Courses</p></div>
@@ -129,7 +137,7 @@ function ContentMyCourses({match, id}) {
                 <Route render={({ history })=> <SearchBox history={history} />} />
             </div>
             <div id="listCourseMC">
-                <TableCourse match={match} id={id}/>
+                <TableCourse match={match} history={history} id={id}/>
             </div>
         </div>
     )
