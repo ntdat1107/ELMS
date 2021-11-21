@@ -53,7 +53,15 @@
 }
 #inner-course #row-2 #col-1 #title-name {
     display: flex;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #BBBBBB;
 }
+
+#inner-course #row-2 #col-1 #title-name a{
+    text-decoration: none;
+    color: black;
+}
+
 #inner-course #row-2 #col-1 p {
     font-size: 26px;
 }
@@ -109,4 +117,63 @@
 }
 #inner-course #row-2 #other-action #third-act p{
     margin-left: 35px;
+}
+
+
+#inner-course .lesson-name-list li{
+    font-size: 18px;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: auto;
+    text-align: left;
+    border-bottom: 1px solid #BBBBBB;
+    cursor: pointer;
+}
+#inner-course .lesson-name-list button {
+    display: block;
+    width: 250px;
+    border: none;
+    background-color: #FFFFFF;
+}
+
+#inner-course .lesson-name-list button :hover{
+    font-size: 18px;
+    font-weight: 600;
+    font-stretch:extra-expanded;
+}
+
+#inner-course #row-2 #col-1 #lesson-list-with-detail p{
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: auto;
+    padding-left: 10px;
+    padding-right: auto;
+    text-align: left;
+}
+
+#inner-course #lesson-list-with-detail {
+    display: flex;
+    margin-top: 10px;
+}
+#inner-course #lesson-list-with-detail #lesson-detail-info {
+    margin-left: 15px;
+    display: flex;
+}
+
+#inner-course #lesson-list-with-detail #lesson-detail-info h1 {
+    font-size: 28px;
+    font-weight: 400;
+    border-bottom: 1px solid #BBBBBB;
+    padding-bottom: 3px;
+    padding-left: 10px;
+}
+
+#inner-course #lesson-list-with-detail #lesson-detail-info h2 {
+    font-size: 22px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }

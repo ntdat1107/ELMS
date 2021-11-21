@@ -42,7 +42,6 @@ function SearchUI({match, history}) {
                 history = {history}
             />
             <SearchMainPage match= {match}/>
-            {isGuest}&&
         </div>
     )
 }

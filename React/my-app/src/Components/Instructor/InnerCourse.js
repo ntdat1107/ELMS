@@ -13,7 +13,7 @@ import manageLearner from './imgSrc/manageLearner.png'
 import { deleteCourseNow } from '../../actions/myCoursesAction.js';
 import { getMyCourseByFastName } from '../../actions/myCoursesAction.js';
 import ErrorMsg from '../Error/ErrorMsg';
-
+import { listLessons } from '../../actions/lessonActions';
 
 function CourseSection({
     nameSection,
@@ -56,6 +56,90 @@ function OtherAction({manageCourseLink, deleteHandle}) {
                     <p className="text-action">Delete course</p>
                 </div>
             </div>
+        </div>
+    )
+}
+
+function LessonListWithDetail({match, history}){
+    const dispatch = useDispatch()
+    const lessonList = useSelector(state => state.lessonList)
+
+    const {loading, error, lessons} = lessonList
+    useEffect(() => {
+        dispatch(listLessons(match.params.id))
+    }, [dispatch, match])
+
+    console.log(lessons)
+    console.log(lessons.length)
+    console.log(match.params.id)
+  
+
+    
+    const firstLesson = lessons[0]
+    
+    console.log(firstLesson)
+    
+    
+    const [lessonToShow, setLesson] = useState(firstLesson)
+
+    //====================
+    function displayList(lessons) {
+        if (lessons.length === 0) {
+            return (
+                <p className = "no-course">Course has no lesson</p>
+            )
+        }
+        else {
+            console.log("len != 0")
+            const items = lessons.map((lesson, index) => (
+                    <button onClick = {() => {setLesson(lesson)}}>
+                        <li key = {index} className = "lesson-name-item">
+                            {lesson.lessonName}
+                        </li>
+                    </button>
+                )        
+            )
+
+            return(
+                <ul className = "lesson-name-list"style = {{width: "280px"}}>
+                    {items}
+                </ul>
+            )
+        }
+
+    }
+
+    function displayDetail(lessonToShow) {
+        if (lessonToShow == null) 
+            return <p>Lesson not available</p>
+        else return( 
+            <div>
+                <h1>Lesson information</h1>
+                <h2>{lessonToShow.lessonName}</h2>
+                <p>Video URL: {lessonToShow.lessonUrl}</p>
+                <p>Description: {lessonToShow.lessonDescription}</p>
+            </div>
+        )
+    }
+    //================================== 
+    if (loading) 
+        return <Loading/>
+    else if (error)
+        return <ErrorMsg msg={error} />
+    else
+    return(
+        <div id = "lesson-list-with-detail">
+            <div id = "scroll-lesson-list" style = {{width: "280px", height: "250px"}}>
+                <Scrollbars >
+                    <div className = "lesson-list">
+                        {displayList(lessons)}  
+                    </div>
+                </Scrollbars>
+            </div>
+            <div id = "lesson-detail-info">
+                {displayDetail(lessonToShow)}
+            </div>
+        
         </div>
     )
 }
@@ -129,13 +213,12 @@ function InnerCourse({ match, history }) {
             </div>
             <div id="row-2">
                 <div id="col-1">
-                    <Scrollbars>
-                        <div id="title-name">
-                            <p className="name-section-cpn">Lesson List</p>
-                            <Link id="linkToVideoDetail" to={`/course/${match.params.id}/1`}>View lesson detail</Link>
-                            <Link id="linkToAddNewVideo" to={`/ins/managecourse/${match.params.id}/addlesson`}>Add new lesson</Link>
-                        </div>
-                    </Scrollbars>
+                    <div id="title-name">
+                        <p className="name-section-cpn">Lesson List</p>
+                        <Link id="linkToVideoDetail" to={`/course/${match.params.id}/1`}>View lesson detail</Link>
+                        <Link id="linkToAddNewVideo" to={`/ins/managecourse/${match.params.id}/addlesson`}>Add new lesson</Link>
+                    </div>
+                    <LessonListWithDetail history = {history} match = {match}/>
                 </div>
                 <div id="col-2">
                     <OtherAction deleteHandle={deleteHandle} manageCourseLink={`/ins/managecourse/${myOneCourseDetail.fastName}/manage_my_learners`}/>
