@@ -14,7 +14,7 @@ function Signup({history}) {
     const [confirmPassword, setConfirmPassword] = useState('')
     const [isIns, setIns] = useState(true)
     const [isLearner, setLearner] = useState(false)
-
+    
     const handleIns = () => {
         setIns(true)
         setLearner(false)
@@ -35,7 +35,7 @@ function Signup({history}) {
         setList([{
             id: list.length + 1,
             title: 'Error',
-            description: 'Login Error! Please try again.',
+            description: 'Signup Error! Please try again.',
             backgroundColor: '#5cb85c'
         }])
     }
@@ -60,7 +60,7 @@ function Signup({history}) {
 
     const submitHandler = (e) => {
         e.preventDefault()
-        if (password !== confirmPassword) {
+        if (!(firstName && lastName && email && accountID &&  password && confirmPassword) || (password != confirmPassword)) {
             //Handle this!
             setError(true)
             
@@ -84,7 +84,7 @@ function Signup({history}) {
                     </div>
                     <h3 id="Signupwelcome">Create account</h3>
 
-                    <form className="Signupform" onSubmit={submitHandler}>
+                    <form className="Signupform" >
 
                         <div id = "name">
                             <input className="Signupinp" id="nameinp1" type="text" 
@@ -130,7 +130,7 @@ function Signup({history}) {
                             Privacy Policy
                         </Link>
                     </div>
-                    <button type="submit" className="Signuptoggle-btn1" onClick={()=> showToast()}>Sign up</button>
+                    <button type="submit" className="Signuptoggle-btn1" onClick={(e)=> {showToast(); submitHandler(e)}}>Sign up</button>
                     <label id="direct-to-login-label" for="direct-to-login"></label>
                     <Link to='/login'>
                         <button type="submit" id="direct-to-login" className="Signuptoggle-btn1">Login</button>
