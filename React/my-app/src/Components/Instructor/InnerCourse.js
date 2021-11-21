@@ -12,6 +12,7 @@ import {Link} from "react-router-dom"
 import manageLearner from './imgSrc/manageLearner.png'
 import { deleteCourseNow } from '../../actions/myCoursesAction.js';
 import { getMyCourseByFastName } from '../../actions/myCoursesAction.js';
+import ErrorMsg from '../Error/ErrorMsg';
 
 
 function CourseSection({
@@ -87,10 +88,9 @@ function InnerCourse({ match, history }) {
         if (window.confirm("Are you sure that you want to delete this course"))
         dispatch(deleteCourseNow(match.params.id))
     }
-
     if (loading) {
         return (
-            <div className="handleLoading">
+            <div className="loadingUI">
                 <SideBar typeUserTemp={1} />
                 <Header history={history}/>
                 <Loading />
@@ -99,29 +99,33 @@ function InnerCourse({ match, history }) {
     }
     else if (error) {
         return (
-            <div id="err">
+            <div id="errorUI">
             <SideBar typeUserTemp={1}/>
             <Header history={history} />
-                <h1 style = {{marginTop: "350px", marginLeft: "500px", borderRadius: "5px"}}>{error}</h1>
+            <ErrorMsg msg={error.message} />
             </div>
         )
     }
-    else return (
+    else 
+    return (
         <div id="inner-course-UI">
             <SideBar typeUserTemp={1}/>
             <Header history={history} />
             <div id="inner-course">
             <div id="row-1">
+                { myOneCourseDetail && myOneCourseDetail.name &&
                 <CourseForYouCpn 
                     imgSrcCourse = {myOneCourseDetail.image} 
                     Name = {myOneCourseDetail.name}
                     Desc = {myOneCourseDetail.description}
                     Author = {myOneCourseDetail.authorName}
                     Type = {myOneCourseDetail.typeCourse}
+                    category = {myOneCourseDetail.category}
                     rateScore = {myOneCourseDetail.rateScore}
                     totalRate = {myOneCourseDetail.rateNum}
                     linkName = {`/ins/managecourse/${myOneCourseDetail.fastName}`}
                 />
+                }
             </div>
             <div id="row-2">
                 <div id="col-1">

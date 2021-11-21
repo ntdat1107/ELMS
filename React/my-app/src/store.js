@@ -15,6 +15,7 @@ import {
     userUpdateProfileReducer,
     userDeleteReducer,
     kickLearnerReducer,
+    resetPassReducer,
 } from "./Reducers/userReducers";
 import {
     addCourseReducer,
@@ -55,7 +56,8 @@ const reducer = combineReducers({
     getCvsSend: getCvsSendReducer,
     getCvsReceive: getCvsReceiveReducer,
     addLesson: addLessonReducer,
-    kickLearner: kickLearnerReducer
+    kickLearner: kickLearnerReducer,
+    resetPass: resetPassReducer
 });
 
 const userInfoFromStorage = localStorage.getItem("userInfo")

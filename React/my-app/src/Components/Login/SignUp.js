@@ -53,7 +53,7 @@ function Signup({history}) {
     const { userRegInfo } = userRegister
 
     useEffect(() => {
-        if (userRegInfo) {
+        if (userRegInfo && firstName) {
             history.push('/')
         }
     }, [history, userRegInfo, dispatch])

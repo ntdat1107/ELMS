@@ -3,7 +3,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addNewCourse } from '../../actions/myCoursesAction'
 import SideBar from '../SideBar/SideBar';
 import Header from '../Header/header'
+import ErrorMsg from '../Error/ErrorMsg'
 import './CSS/AddCourseUI.css'
+import Loading from '../Loading/Loading';
 function AddCourseUI({history}) {
     const dispatch = useDispatch()
     const userLogin = useSelector(state => state.userLogin)
@@ -27,8 +29,21 @@ function AddCourseUI({history}) {
         if (image == "") image ="https://quangbinhtourism.vn/wp-content/uploads/2019/06/default-image.png"
         dispatch(addNewCourse(name, image, category, desc, fastName))
     }
-
-    return (
+    if (loading) return (
+        <div id="loadingUI">
+            <SideBar typeUserTemp={1}/>
+            <Header history={history}/>
+            <Loading />
+        </div>
+    )
+    else if (error) return (
+        <div id="errorUI">
+            <SideBar typeUserTemp={1}/>
+            <Header history={history}/>
+            <ErrorMsg msg={error.message} />
+        </div>
+    )
+    else return (
         <div className="InAddCourseUI">
             <SideBar typeUserTemp={1}/>
             <Header history={history}/>

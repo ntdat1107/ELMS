@@ -23,6 +23,9 @@ import {
     KICK_USER_REQUEST,
     KICK_USER_SUCCESS,
     KICK_USER_FAIL,
+    RESET_PASS_REQUEST,
+    RESET_PASS_SUCCESS,
+    RESET_PASS_FAIL,
 } from "../constants/userConstants";
 import axios from "axios";
 
@@ -255,3 +258,32 @@ export const kickUser = (id, fastName) => async (dispatch, getState) => {
         })
     }
 }
+
+
+export const resetPass = (inform) => async (dispatch) => {
+    try {
+        dispatch({
+            type: RESET_PASS_REQUEST,
+        });
+
+        const config = {
+            headers: {
+                "Content-type": "application/json",
+            }
+        }
+        const { data } = await axios.put(`/api/users/reset`, inform, config);
+
+        dispatch({
+            type: RESET_PASS_SUCCESS,
+            payload: data,
+        });
+    } catch (error) {
+        dispatch({
+            type: RESET_PASS_FAIL,
+            payload:
+                error.response && error.response.data.message
+                    ? error.response.data.message
+                    : error.message,
+        });
+    }
+};

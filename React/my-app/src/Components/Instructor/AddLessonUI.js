@@ -4,6 +4,8 @@ import SideBar from '../SideBar/SideBar'
 import Header from '../Header/header'
 import './CSS/AddLessonUI.css'
 import { addNewLesson } from '../../actions/lessonActions'
+import Loading from '../Loading/Loading'
+import ErrorMsg from '../Error/ErrorMsg'
 
 function AddLessonUI({history, match}) {
     const dispatch = useDispatch()
@@ -26,6 +28,20 @@ function AddLessonUI({history, match}) {
     const handleLesson = () => {
         dispatch(addNewLesson(lessonName, lessonDescription, lessonUrl, match.params.fastName))
     }
+if (loading) return (
+    <div id="loadingUI">
+        <SideBar typeUserTemp={1}/>
+        <Header history={history}/>
+        <Loading />
+    </div>
+)
+else if (error) return (
+    <div id="errorUI">
+        <SideBar typeUserTemp={1}/>
+        <Header history={history}/>
+        <ErrorMsg msg={error.message} />
+    </div>
+)
 return (
     <div className="insAddLessonUI">
         <SideBar typeUserTemp={1}/>

@@ -8,12 +8,10 @@ import { useSelector } from 'react-redux'
 
 
 function InsManageProfile({history}) {
-    // Check if logged in
     const userLogin = useSelector(state => state.userLogin)
     const {userInfo} = userLogin
     useEffect(() => {
         if (!userInfo || !userInfo.isIns) history.push('/login')
-        // else if (!userInfo.isIns) push error not type
     }, [history, userInfo])
     return (
         <div id="insMP-UI">

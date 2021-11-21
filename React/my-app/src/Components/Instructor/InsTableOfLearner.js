@@ -8,6 +8,7 @@ import TableManage from '../TableManage/TableManage';
 import { useSelector, useDispatch } from 'react-redux'
 import { getMyLearner } from '../../actions/myLearnerAction';
 import Loading from '../Loading/Loading';
+import ErrorMsg from '../Error/ErrorMsg';
 
 
 function TableOfLearner({history, match}) {
@@ -37,7 +38,9 @@ function TableOfLearner({history, match}) {
     )
     else if (error) return (
         <div id="errorInsTable">
-            ERROR
+            <SideBar typeUserTemp={1}/>
+            <Header history={history}/>
+            <ErrorMsg msg={error.message} />
         </div>
     )
     else return (
@@ -45,9 +48,6 @@ function TableOfLearner({history, match}) {
             <SideBar typeUserTemp={1}/>
             <Header history={history}/>
         <div id="table-learner">
-            <div id="row-1">
-                
-            </div>
             <div id="row-2">
                 <SearchInTable typeUserTemp={1}/>
                 <TableManage userInfo={userInfo} match={match} listLearner={learnerList}/>

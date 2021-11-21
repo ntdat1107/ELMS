@@ -10,6 +10,7 @@ import {
     updateUserProfile,
     deleteUserByID,
     deleteLearnerByIDandFastName,
+    resetPass,
 } from "../controllers.js/userController.js";
 import { protect } from "../middleware/authMiddleware.js";
 
@@ -21,6 +22,8 @@ router
     .route("/profile")
     .get(protect, getUserProfile)
     .put(protect, updateUserProfile);
+
+router.route("/reset").put(resetPass)
 
 router.route("/all").get(getAllUserList);
 router.route("/learner").get(getLearnerUserList);

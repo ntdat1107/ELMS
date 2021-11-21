@@ -60,10 +60,13 @@ const getUserProfile = asyncHandler(async (req, res) => {
 // @access  Private
 const updateUserProfile = asyncHandler(async (req, res) => {
     const user = await User.findById(req.user._id);
+    const users = await User.find({})
     if (user) {
-        if (user.email == req.body.email) {
-            res.status(401)
-            throw new Error("Email already existed")
+        for (let i=0; i<users.length; i++) {
+            if (!users[i]._id.equals(req.user._id) && users[i].email == req.body.email) {
+                res.status(401)
+                throw new Error("Email duplicated")
+            }
         }
         user.firstName = req.body.firstName || user.firstName;
         user.lastName = req.body.lastName || user.lastName;
@@ -246,6 +249,19 @@ const deleteLearnerByIDandFastName = asyncHandler(async(req, res) => {
     }
 })
 
+const resetPass = asyncHandler(async(req, res) => {
+    const user = await User.findOne({accountID: req.body.userName, email: req.body.email})
+    if (user) {
+        user.password = req.body.password
+        await user.save()
+        res.status(200).json(req.body.password)
+    }
+    else {
+        res.status(401)
+        throw new Error("Username or email invalid!")
+    }
+})
+
 export {
     authUser,
     getUserProfile,
@@ -256,5 +272,6 @@ export {
     getInsUserList,
     getUserByID,
     deleteUserByID,
-    deleteLearnerByIDandFastName
+    deleteLearnerByIDandFastName,
+    resetPass
 };

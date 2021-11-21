@@ -7,6 +7,7 @@ import CourseForYouCpn from "../courseForYou/courseForYouCpn";
 import SideBar from '../SideBar/SideBar';
 import Header from '../Header/header'
 import Loading from '../Loading/Loading'
+import ErrorMsg from '../Error/ErrorMsg'
 import { getMyCourses } from "../../actions/myCoursesAction";
 function InsManagerCourse ({history}) {
     const dispatch = useDispatch()
@@ -35,7 +36,9 @@ function InsManagerCourse ({history}) {
     else if (error) {
         return (
             <div id="err">
-                <h1>ERROR</h1>
+                <SideBar typeUserTemp={1} />
+                <Header history={history} />
+                <ErrorMsg msg={error.message} />
             </div>
         )
     }
@@ -55,14 +58,16 @@ function InsManagerCourse ({history}) {
                 </Link>
             </div>
             <Scrollbars style={{height: "73vh"}}>
-                {
-                    myCoursesList && myCoursesList.map((data, index) => {
+                {   
+                    myCoursesList && myCoursesList.length > 0 ? myCoursesList.map((data, index) => {
                         return (
                             <CourseForYouCpn key={index} imgSrcCourse={data.image}
                             Name={data.name} Desc={data.description} Author={data.authorName} Type={data.typeCourse} category={data.category}
                             rateScore={data.rateScore} totalRate={data.rateNum} linkName={`/ins/managecourse/${data.fastName}`}/>
                         )
                     })
+                    :
+                    <p id="msg-create"> You do not have courses, click on CREATE button above to create a new Course</p>
                 }
             </Scrollbars>
         </div>

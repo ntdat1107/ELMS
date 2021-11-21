@@ -4,6 +4,8 @@ import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserProfile, updateUserProfile } from '../../actions/userActions'
 import ErrorToast from './../ErrorToast/ErrorToast';
+import Loading from '../Loading/Loading'
+import ErrorMsg from '../Error/ErrorMsg'
 
 function ProfileCpn({
     history,
@@ -27,7 +29,7 @@ function ProfileCpn({
     const [avatar, setAvatar] = useState("https://st.quantrimang.com/photos/image/072015/22/avatar.jpg")
     const [description, setDescription] = useState('')
     const [phoneNumber, setPhoneNumber] = useState('')
-    const [error, setError] = useState(false)
+    const [err, setError] = useState(false)
 
     const [list, setList] = useState([])
 
@@ -55,7 +57,7 @@ function ProfileCpn({
     const {userDetail} = userProfile
 
     const userUpdateProfile = useSelector(state => state.userUpdateProfile)
-    const {success} = userUpdateProfile
+    const {loading, error, success} = userUpdateProfile
     useEffect(() => {
         if (!userDetail) {
              dispatch(getUserProfile('profile'))
@@ -119,8 +121,13 @@ function ProfileCpn({
         setDescription(userDetail.description)
         setPhoneNumber(userDetail.phoneNumber)
     }
-
-    return (
+    if (loading) return (
+        <Loading />
+    )
+    else if (error) return (
+        <ErrorMsg msg={error.message} />
+    )
+    else return (
         <div id="MP">
             <div id="col1">
                 <div className="avatarChange">
@@ -133,6 +140,7 @@ function ProfileCpn({
                             <img id="change-avt" src={camera} alt="button" width="30px" height="30px"/>
                         </label>
                     </div>
+                    <input type="text" id="avt-url" placeholder="Avatar url" onChange={(e) => {handleChange();setAvatar(e.target.value)}}/>
                     <p id="nameUser">{name}</p>
                 </div>
             </div>
@@ -235,7 +243,7 @@ function ProfileCpn({
                     </button>
                 </div>
             </div>
-            { error && <ErrorToast toastList={list} setList={setList}/> }
+            { err && <ErrorToast toastList={list} setList={setList}/> }
         </div>
     )
 }

@@ -22,6 +22,9 @@ import {
     KICK_USER_REQUEST,
     KICK_USER_SUCCESS,
     KICK_USER_FAIL,
+    RESET_PASS_REQUEST,
+    RESET_PASS_SUCCESS,
+    RESET_PASS_FAIL,
 } from "../constants/userConstants.js";
 
 export const userLoginReducer = (state = {}, action) => {
@@ -122,5 +125,22 @@ export const kickLearnerReducer = (state = {}, action) => {
             return { loading: false, error: action.payload }
         default:
             return state
+    }
+}
+
+export const resetPassReducer = (state = {}, action) => {
+    switch (action.type) {
+        case RESET_PASS_REQUEST:
+            return { loading: true };
+        case RESET_PASS_SUCCESS:
+            return {
+                loading: false,
+                success: true,
+                passwordNow: action.payload,
+            };
+        case RESET_PASS_FAIL:
+            return { loading: false, error: action.payload };
+        default:
+            return state;
     }
 }

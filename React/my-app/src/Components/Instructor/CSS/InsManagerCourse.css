@@ -6,6 +6,12 @@
     width: 1375px;
     height: 80vh;
 }
+#insMC #msg-create {
+    margin-left: 10px;
+    margin-top: 25px;
+    width: 50%;
+    font-size: 32px;
+}
 #insMC .title-add-course .btn-add{
     width: 100px;
     margin: 5px 10px 5px 25px;
