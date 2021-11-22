@@ -300,7 +300,31 @@ display: flex;
   padding-left: 10px;
   height: 30px;
 }
-
+#lnMyCourses #myCourses #listEmpty{
+  height: 160px;
+  width: 782px;
+  display: flex;
+  padding-top: 125px;
+  justify-content: center;
+}
+#lnMyCourses #myCourses #listEmpty #btn-enroll{
+  background-color: #fc6b58;
+  color: #fff;
+  width: 120px;
+  height: 30px;
+  margin-top: 5px;
+  border-radius: 15px;
+}
+#lnMyCourses #myCourses #listEmpty #btn-enroll:hover{
+  background-color: #e92308;
+}
+#lnMyCourses #myCourses #listEmpty #row1{
+  font-size: 20px;
+  height: 70px;
+  text-align: center;
+  padding-top: 45px;
+  margin-left: 20px;
+}
 /* Scroll Bar */
 #lnMyCourses #myCourses #scrollbars {
   height: 410px;

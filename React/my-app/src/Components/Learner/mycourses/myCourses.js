@@ -1,6 +1,6 @@
 import Header from '../../Header/header';
 import SideBar       from '../../SideBar/SideBar';
-import {Route} from "react-router-dom";
+import {Link, Route} from "react-router-dom";
 import "./LnMyCourses.css"
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux'
@@ -10,7 +10,7 @@ import ItemCourse from "./itemCourse"
 import Loading from '../../Loading/Loading';
 import { getMyCourses } from "../../../actions/myCoursesAction";
 import ErrorMsg from '../../Error/ErrorMsg';
-
+import empty from '../img/background/empty.png'
 const SearchBox= ({ history }) => {
     const [keyword, setKeyword] = useState('')
 
@@ -52,51 +52,76 @@ const TableCourse = ({id, match, courses}) => {
     const coursesPerPage = 9;
     const pagesVisited = pageNumber * coursesPerPage;
     let arr = []
-    if(keyword) {
-        let filter = keyword.toUpperCase()
-        for(let i = 0; i < courses.length; i++)
-        {
-            if(courses[i].name.toUpperCase().indexOf(filter) > -1) arr.push(courses[i])
-        }
-    }
-    else arr = courses
+    // if(keyword) {
+    //     let filter = keyword.toUpperCase()
+    //     for(let i = 0; i < courses.length; i++)
+    //     {
+    //         if(courses[i].name.toUpperCase().indexOf(filter) > -1) arr.push(courses[i])
+    //     }
+    // }
+    // else arr = courses
+    console.log(arr.length === 0)
     const pageCount = Math.ceil(arr&&arr.length / coursesPerPage);
     const changePage = ({ selected }) => {setPageNumber(selected)};
+    const display = (data) => {
+        if(data.length === 0) {
+            return(
+                <div id="listEmpty">
+                    <img src={empty} alt="Empty Img" width="240px" height="160px" />
+                    <p id="row1">
+                    Start learning new course. <br/>  
+                    <Link to="/search" style={{textDecoration: "none"}} >
+                        <p id = "btn-enroll">
+                            Enroll Now
+                        </p> 
+                    </Link>
+                    </p>
+                </div>
+            )
+        }
+        else {
+            return(
+                <div>
+                    <Scrollbars id="scrollbars">
+                {
+                    data && data.slice(pagesVisited, pagesVisited + coursesPerPage).map((course,index) => {
+                        var rateScore = 0;
+                        for(let j = 0; j < course.ratings.length; j++) {
+                            if(course.ratings[j].user === id) rateScore = course.ratings[j].rating;
+                        }
+                        return (
+                        <div id="colCourses" key={index}>
+                            <ItemCourse 
+                                imgCourse={course.image}
+                                nameCourse={course.name}
+                                authorCourse={course.authorName}
+                                rateScore={rateScore}
+                                fastNameCourse={course.fastName}
+                                category = {course.category}
+                            />
+                        </div>
+                        );
+                    })
+                }
+                </Scrollbars>
+                <ReactPaginate
+                    previousLabel={"Prev"}
+                    nextLabel={"Next"}
+                    pageCount={pageCount}
+                    onPageChange={changePage}
+                    containerClassName={"paginationBttns"}
+                    previousLinkClassName={"previousBttn"}
+                    nextLinkClassName={"nextBttn"}
+                    disabledClassName={"paginationDisabled"}
+                    activeClassName={"paginationActive"}
+                />
+                </div>
+            )
+        }
+    }
     return (
         <div id="tableCourses">
-            <Scrollbars id="scrollbars">
-            {
-                arr && arr.slice(pagesVisited, pagesVisited + coursesPerPage).map((course,index) => {
-                    var rateScore = 0;
-                    for(let j = 0; j < course.ratings.length; j++) {
-                        if(course.ratings[j].user === id) rateScore = course.ratings[j].rating;
-                    }
-                    return (
-                    <div id="colCourses" key={index}>
-                        <ItemCourse 
-                            imgCourse={course.image}
-                            nameCourse={course.name}
-                            authorCourse={course.authorName}
-                            rateScore={rateScore}
-                            fastNameCourse={course.fastName}
-                            category = {course.category}
-                        />
-                    </div>
-                    );
-                })
-            }
-            </Scrollbars>
-            <ReactPaginate
-                previousLabel={"Prev"}
-                nextLabel={"Next"}
-                pageCount={pageCount}
-                onPageChange={changePage}
-                containerClassName={"paginationBttns"}
-                previousLinkClassName={"previousBttn"}
-                nextLinkClassName={"nextBttn"}
-                disabledClassName={"paginationDisabled"}
-                activeClassName={"paginationActive"}
-            />
+            {display(arr)}
         </div>
     );
 }
