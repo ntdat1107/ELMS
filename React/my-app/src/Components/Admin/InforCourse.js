@@ -73,7 +73,7 @@ const InforCourse = ({ history, match }) => {
                                 category={myOneCourseDetail.category}
                                 rateScore={myOneCourseDetail.rateScore}
                                 totalRate={myOneCourseDetail.rateNum}
-                                linkName={`/admin/managecourse/${myOneCourseDetail.fastName}`}
+                                linkName={`/course/${myOneCourseDetail.fastName}`}
                             />
                         )}
                     </div>
