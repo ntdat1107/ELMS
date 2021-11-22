@@ -4,21 +4,25 @@ const ConversationSchema = new mongoose.Schema(
     {
         subject: {
             type: String,
-            required: true
+            required: true,
         },
         content: {
             type: String,
-            required: true
+            required: true,
         },
         sender: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'User',
-            required: true
+            ref: "User",
+            required: true,
+        },
+        senderName: {
+            type: String,
+            required: true,
         },
         receiverName: {
             type: String,
-            required: true
-        }
+            required: true,
+        },
     },
     { timestamps: true }
 );

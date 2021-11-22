@@ -21,17 +21,14 @@ const InforCourse = ({ history, match }) => {
     const myOneCourse = useSelector((state) => state.myOneCourse);
     const { loading, error, myOneCourseDetail } = myOneCourse;
 
-    const courseDelete = useSelector((state) => state.courseDelete);
-    const { success } = courseDelete;
-
     useEffect(() => {
         if (userInfo && userInfo.isAdmin) dispatch(getMyCourseByFastName(match.params.fastName));
         else history.push("/login");
-    }, [history, dispatch, success]);
+    }, [history, dispatch]);
 
     useEffect(() => {
         if (!myOneCourseDetail) history.push("/login");
-    }, [success]);
+    }, [history]);
 
     const myLearner = useSelector((state) => state.myLearner);
     const { loading: loading1, error: error1, learnerList } = myLearner;

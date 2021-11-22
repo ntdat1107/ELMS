@@ -9,7 +9,7 @@ function Number({ sysInsList, sysLearnerList, courses }) {
     return (
         <div id="number">
             <NumofUComponent
-                linkName="/admin/instructor"
+                linkName="/admin/manageinstructor"
                 idName="numofinstruc"
                 imgid="instructoricon"
                 number={sysInsList}
@@ -20,7 +20,7 @@ function Number({ sysInsList, sysLearnerList, courses }) {
                 w="40"
             />
             <NumofUComponent
-                linkName="/admin/learner"
+                linkName="/admin/managelearner"
                 idName="numoflearner"
                 imgid="learnericon"
                 number={sysLearnerList}

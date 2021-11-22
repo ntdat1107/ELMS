@@ -8,7 +8,7 @@ import { createNewCvs } from "../../actions/conversationActions";
 function NewAnnoun({ typeUserTemp }) {
     const dispatch = useDispatch();
     const createCvs = useSelector((state) => state.createCvs);
-    const { loading, error, CvsInfo } = createCvs;
+    const { CvsInfo } = createCvs;
 
     useEffect(() => {}, [CvsInfo]);
 
