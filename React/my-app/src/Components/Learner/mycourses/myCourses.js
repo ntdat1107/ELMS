@@ -80,7 +80,8 @@ const TableCourse = ({id, match, courses}) => {
         }
         else {
             return(
-                <Scrollbars id="scrollbars">
+                <div style={{height: "410px", width: "782px"}}>
+                    <Scrollbars id="scrollbars">
                     {
                         data && data.slice(pagesVisited, pagesVisited + coursesPerPage).map((course,index) => {
                             var rateScore = 0;
@@ -101,24 +102,25 @@ const TableCourse = ({id, match, courses}) => {
                             );
                         })
                     }
-                </Scrollbars>
+                    </Scrollbars>
+                    <ReactPaginate
+                        previousLabel={"Prev"}
+                        nextLabel={"Next"}
+                        pageCount={pageCount}
+                        onPageChange={changePage}
+                        containerClassName={"paginationBttns"}
+                        previousLinkClassName={"previousBttn"}
+                        nextLinkClassName={"nextBttn"}
+                        disabledClassName={"paginationDisabled"}
+                        activeClassName={"paginationActive"}
+                    />
+                </div>
             )
         }
     }
     return (
         <div id="tableCourses">
             {display(arr)}
-            <ReactPaginate
-                previousLabel={"Prev"}
-                nextLabel={"Next"}
-                pageCount={pageCount}
-                onPageChange={changePage}
-                containerClassName={"paginationBttns"}
-                previousLinkClassName={"previousBttn"}
-                nextLinkClassName={"nextBttn"}
-                disabledClassName={"paginationDisabled"}
-                activeClassName={"paginationActive"}
-            />
         </div>
     );
 }
