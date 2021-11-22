@@ -66,6 +66,8 @@
 #Announ-wholeblock .receive-box.open {
     height: 100%;
     display: block;
+    position: absolute;
+    width: 850px;
 }
 
 #Announ-wholeblock .receive-box {
@@ -75,6 +77,8 @@
 #Announ-wholeblock .send-box.open {
     height: 100%;
     display: block;
+    position: absolute;
+    width: 850px;
 }
 
 #Announ-wholeblock .send-box {
@@ -135,7 +139,8 @@
 /*__________Right Block___________*/
 #Announ-wholeblock #content-block {
     position: relative;
-    width: 70%;
+    top: 0;
+    width: 850px;
     height: 95%;
     margin: 1% 0px 1% 1%;
 }
