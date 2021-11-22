@@ -12,15 +12,18 @@ and then run
 npm install
 ```
 to install all needed packages.
-To run the UI of the website, type the command
+Also do the same in ELSM directory then from the root
+Next, install concurrently in command promt.
 ```
-npm start
+npm install -g concurrently
 ```
-Run 
+
+Type the command
 ```
-npm build
+npm run dev
 ```
-to build the project to publish to user
+to run the project with backend services
+
 # Option 2: yarn
 First, from the root, run the command:
 ```
@@ -31,14 +34,15 @@ and then run
 yarn install
 ```
 to install all needed packages.
-To run the UI of the website, type the command
+Also do the same in ELSM directory then from the root
+Next, install concurrently in command promt.
 ```
-yarn start
+yarn install -g concurrently
 ```
-Run 
+Type the command
 ```
-yarn build
+yarn run dev
 ```
-to build the project to publish to user
+to run the project with backend services
 # Result
 ![image](https://user-images.githubusercontent.com/55391896/140615320-a3ba5506-8420-4e3c-9124-67fc32cbe509.png)
