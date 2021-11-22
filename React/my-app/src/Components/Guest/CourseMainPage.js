@@ -53,22 +53,26 @@ function Category({
 }
 
 const courses = {
-    "name": "Similar Courses",
-    "displayButton": false,
+    "name": "Our Best Instructors",
+    "displayButton": true,
     "list": [
     {
         "id": 1,
-        "title": "Transfiguration",
-        "subtitle": "Minerva McGonagall",
-        "imgSrc": cCpp
+        "title": "Long",
+        "subtitle": "2 courses",
+        "imgSrc": cCpp,
+        "link" : "%Cpp%all%course",
+        "courseFastname" : "Long"
     },
-    {
+    {    
         "id": 2,
-        "title": "History of Magic",
-        "subtitle": "Cuthbert Binns",
-        "imgSrc": cPython
+        "title": "Đạt",
+        "subtitle": "9+ courses",
+        "imgSrc": cPython,
+        "link" : "%Cpp%all%course",
+        "courseFastname" : "Đạt"
     }
-]};
+]}
 
 function UpperBody({course, isHave, isIns, handleEnroll}) { 
     const [enrolled, setEnrolled] = useState(isHave)
@@ -134,7 +138,7 @@ function CourseMainPage({ match, history}) {
     else{
         let isHave = false
         if (course.learnerList && userInfo && course.learnerList.indexOf(userInfo._id) != -1) isHave = true
-        if (userInfo.isIns && userInfo.hasCourse.indexOf(course._id) != -1) isHave = true
+        if (userInfo && userInfo.isIns && userInfo.hasCourse.indexOf(course._id) != -1) isHave = true
         return (
             <div id="courseMainPage">
                 <Header link="/" typeUserTemp={-1} 

@@ -162,7 +162,12 @@ const CourseItem = course => (
         
         <img src = {course.imgSrc} alt ={course.title}/>
         <div id = "information">
-            <h3>{course.title}</h3>
+            {!course.displayButton && 
+                <NavLink activeClassName="ActiveLink" to = {`/search/${course.courseFastname}`} id = "navLink">
+                    <h3>{course.title}</h3>
+                </NavLink>
+            }
+            {course.displayButton && <h3>{course.title}</h3>}
             <h3>{course.subtitle}</h3>
         </div>
         {course.displayButton && <button id = "viewButton">

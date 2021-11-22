@@ -47,15 +47,15 @@ const courses = {
     "list": [
     {
         "id": 1,
-        "title": "Django Full Course",
-        "subtitle": "Long",
+        "title": "Complete Python Course",
+        "subtitle": "Đạt",
         "imgSrc": cPython,
         "courseFastname": "py"
     },
     {
         "id": 2,
-        "title": "React Full Course",
-        "subtitle": "Dat",
+        "title": "Complete Git Course",
+        "subtitle": "Đạt",
         "imgSrc": cReact,
         "courseFastname": "git"
     }
@@ -66,17 +66,17 @@ const courses2 = {
     "list": [
     {
         "id": 1,
-        "title": "Django Full Course",
+        "title": "C++ Course",
         "subtitle": "Long",
         "imgSrc": cPython,
-        "courseFastname": "py"
+        "courseFastname": "cpp"
     },
     {
         "id": 2,
-        "title": "React Full Course",
-        "subtitle": "Dat",
-        "imgSrc": cReact,
-        "courseFastname": "py"
+        "title": "GCC-G++ Course",
+        "subtitle": "Long",
+            "imgSrc": cReact,
+        "courseFastname": "gcc-gpp"
     }
 ]}
 

@@ -81,12 +81,16 @@ const getCourseByQuery = asyncHandler(async(req, res) => {
         query.authorName = {
             $regex: req.query.search,
             $options: 'i'
+        },
+        query.category = {
+            $regex: req.query.search,
+            $options: 'i'
         }
 
     }
 
     try {
-        let courses = await Course.find({$or:[{name: query.name},{authorName:query.authorName}]})
+        let courses = await Course.find({$or:[{name: query.name},{authorName:query.authorName}, {category: query.category}]})
         res.json(courses)
     } catch (error) {
         res.status(500).send("Error to find course")
