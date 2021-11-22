@@ -46,140 +46,35 @@
 
 /* ------Task-------- */
 
-#admincourse #courseinad #add-taskIcon .taskIcon {
-    width: 5px;
-    height: auto;
-    position: relative;
-    left: 95%;
-    top: 120px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-#admincourse #courseinad #add-taskIcon .taskIcon:hover {
-    box-shadow: 1px 1px 5px black;
-}
-
-#admincourse #courseinad #add-taskIcon .nav-menu.active {
-    border: 1px solid black;
-    width: 180px;
-    height: 100px;
-    position: absolute;
-    display: flex;
-    left: 81%;
-    top: 65px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-}
-
-#admincourse #courseinad #add-taskIcon .nav-menu.active .nav-item {
+#CourseInformation #below {
     font-size: 20px;
-    width: 120px;
-    margin-left: 6px;
-    padding-top: 8px;
-    padding-left: 5px;
-    cursor: pointer;
+    margin-left: 260px;
+    margin-top: 300px;
 }
 
-#admincourse #courseinad #add-taskIcon .nav-menu.active .nav-item:hover {
-    box-shadow: 1px 1px 3px black;
-}
-
-#admincourse #courseinad #add-taskIcon .detail-box.open {
-    position: fixed;
-    display: block;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 3;
-}
-
-#admincourse #courseinad #add-taskIcon .detail-box.open .modal-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-#admincourse #courseinad #add-taskIcon .detail-box.open .modal-body {
-    background-color: white;
-    position: relative;
-    top: 20vh;
-    left: 25vw;
-    width: 70vw;
-    height: 65vh;
-    border: 1px solid black;
-    box-shadow: 1px 1px 15px black;
-    border-radius: 5px;
-    -webkit-border-radius: 10px;
-}
-
-#admincourse #courseinad #add-taskIcon .detail-box.open #below {
-    font-size: 20px;
-}
-
-#admincourse #courseinad #add-taskIcon .detail-box.open #below .user-in-course {
+#CourseInformation #below .user-in-course {
     border: 1px solid black;
     width: 800px;
     margin: 10px 0px 10px 50px;
 }
 
-#admincourse #courseinad #add-taskIcon .detail-box.open #below #green {
+#CourseInformation #below #green {
     background-color: #58baab;
     padding: 3px 0px 3px 12px;
     display: flex;
     position: relative;
 }
 
-#admincourse #courseinad #add-taskIcon .detail-box.open #below #name {
+#CourseInformation #below #name {
     display: flex;
     padding-left: 12px;
     margin-top: 5px;
     margin-bottom: 8px;
 }
-#admincourse #courseinad #add-taskIcon .detail-box.open #below #name-of {
+#CourseInformation #below #name-of {
     padding-left: 20px;
 }
 
-#admincourse #courseinad #add-taskIcon .detail-box.open #below #name-of:hover {
+#CourseInformation #below #name-of:hover {
     text-decoration-line: underline;
-}
-
-#admincourse #courseinad #add-taskIcon .detail-box.open #close {
-    position: absolute;
-    z-index: 1;
-    font-weight: bold;
-    font-size: 20px;
-    right: 15px;
-    top: 5px;
-    cursor: pointer;
-}
-
-#admincourse #courseinad #add-taskIcon .detail-box.open #close:hover {
-    transform: scale(1.1);
-}
-
-/*_______________________________________________________*/
-
-.detail-box {
-    display: none;
-}
-
-.detail-box.open {
-    position: relative;
-    display: block;
-}
-
-.delete-box {
-    display: none;
-}
-
-.delete-box.open {
-    display: block;
-}
-
-#add-taskIcon .task-button {
-    position: relative;
-    z-index: 1;
 }

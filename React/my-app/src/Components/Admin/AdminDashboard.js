@@ -1,12 +1,14 @@
 import React from "react";
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import "./CSS/AdminDashboard.css";
 import Number from "./NumberofUser";
 import DashboardCourseAdmin from "./DashboardCourseAdmin";
 import SideBar from "../SideBar/SideBar";
-import cheems from "../img/cheems.png";
 import Header from "../Header/header";
+import { getSysIns } from "../../actions/adminActions";
+import { listCourses } from "../../actions/courseActions";
+import { getSysLearner } from "../../actions/adminActions";
 
 function AdminDashboard({ history }) {
     const userLogin = useSelector((state) => state.userLogin);
@@ -15,6 +17,29 @@ function AdminDashboard({ history }) {
         if (!userInfo || !userInfo.isAdmin) history.push("/login");
     }, [history, userInfo]);
 
+    const dispatch = useDispatch();
+
+    const sysIns = useSelector((state) => state.sysIns);
+    const { loading, error, sysInsList } = sysIns;
+
+    useEffect(() => {
+        dispatch(getSysIns());
+    }, [dispatch]);
+
+    const sysLearner = useSelector((state) => state.sysLearner);
+    const { loading: loading1, error: error1, sysLearnerList } = sysLearner;
+
+    useEffect(() => {
+        dispatch(getSysLearner());
+    }, [dispatch]);
+
+    const courseList = useSelector((state) => state.courseList);
+    const { loading: loading2, error: error2, courses } = courseList;
+
+    useEffect(() => {
+        dispatch(listCourses());
+    }, [dispatch]);
+
     return (
         <div id="admindashboard-UI">
             <div className="AdminUI">
@@ -22,7 +47,11 @@ function AdminDashboard({ history }) {
                 <Header history={history} />
             </div>
             <div id="admindashboard">
-                <Number />
+                <Number
+                    sysInsList={sysInsList.length}
+                    sysLearnerList={sysLearnerList.length}
+                    courses={courses.length}
+                />
                 <DashboardCourseAdmin />
             </div>
         </div>

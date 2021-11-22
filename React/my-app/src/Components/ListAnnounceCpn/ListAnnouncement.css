@@ -55,7 +55,16 @@
     position: relative;
 }
 
+#Announ-wholeblock #listAnnoun #sublistAnnoun #headerAnnoun {
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    color: #160e4d;
+    text-shadow: 1px 1px 1px #160e4d;
+}
+
 #Announ-wholeblock .receive-box.open {
+    height: 100%;
     display: block;
 }
 
@@ -64,6 +73,7 @@
 }
 
 #Announ-wholeblock .send-box.open {
+    height: 100%;
     display: block;
 }
 

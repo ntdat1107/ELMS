@@ -164,19 +164,22 @@
     transform: scale(1.1);
 }
 
+#tableinstruc .modal-body #flexthis {
+    display: flex;
+}
+
 #tableinstruc .modal-body .useInfor #userAvt {
-    padding-top: 10px;
-    margin-left: calc(50% - 100px);
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left: 100px;
 }
 
 #tableinstruc .modal-body .useInfor p {
     padding-left: 100px;
     font-size: 22px;
+    font-weight: 500;
     color: #160e4d;
     line-height: 40px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 /* ______________________________________________ */

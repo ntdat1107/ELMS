@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
-import searchImg from "../img/search.png";
-import { Scrollbars } from "react-custom-scrollbars";
 import "./ListAnnouncement.css";
 import { useDispatch, useSelector } from "react-redux";
-import { getUserProfile } from "../../actions/userActions";
 import { getSendCvs, getReceiveCvs } from "../../actions/conversationActions";
 import Loading from "../Loading/Loading";
 import ConverList from "./ConverList";
@@ -94,14 +91,14 @@ function ListAnnounceCpn({ history, Addition_Part, typeUserTemp }) {
                             <ConverList
                                 classN={receivebox ? "receive-box open" : "receive-box"}
                                 cvsList={cvsReceiveList}
-                                header="Receive"
+                                header="Receive Announcement"
                                 parentClick={parentClick}
                                 handleClick={handleClick}
                             />
                             <ConverList
                                 classN={sendbox ? "send-box open" : "send-box"}
                                 cvsList={cvsSendList}
-                                header="Send"
+                                header="Send Announcement"
                                 parentClick={parentClick}
                                 handleClick={handleClick}
                             />
@@ -113,7 +110,7 @@ function ListAnnounceCpn({ history, Addition_Part, typeUserTemp }) {
                         <ConverList
                             classN={receivebox ? "receive-box open" : "receive-box"}
                             cvsList={cvsReceiveList}
-                            header="Receive"
+                            header="Receive Announcement"
                             parentClick={parentClick}
                             handleClick={handleClick}
                         />
@@ -124,7 +121,7 @@ function ListAnnounceCpn({ history, Addition_Part, typeUserTemp }) {
                         <ConverList
                             classN={!sendbox ? "send-box open" : "send-box"}
                             cvsList={cvsSendList}
-                            header="Send"
+                            header="Send Announcement"
                             parentClick={parentClick}
                             handleClick={handleClick}
                         />
@@ -133,31 +130,38 @@ function ListAnnounceCpn({ history, Addition_Part, typeUserTemp }) {
 
                 {/* _________________________Content Box____________________________ */}
                 {/* ________________Content box for Ins and Learner_________________ */}
-                {typeUserTemp != 0 && (
-                    <>
-                        <ContentCvs
-                            classN={receivebox ? "receive-box open" : "receive-box"}
-                            cvsList={cvsReceiveList}
-                            click={click}
-                        />
-                        <ContentCvs
-                            classN={sendbox ? "send-box open" : "send-box"}
-                            cvsList={cvsSendList}
-                            click={click}
-                        />
-                    </>
-                )}
+                <div id="content-block">
+                    {typeUserTemp != 0 &&
+                        cvsReceiveList &&
+                        cvsReceiveList.map((conversation) => {
+                            return (
+                                <div className={receivebox ? "receive-box open" : "receive-box"}>
+                                    <ContentCvs conversation={conversation} click={click} />
+                                </div>
+                            );
+                        })}
 
-                {/* ___________________Content box for Admin_________________ */}
-                {typeUserTemp == 0 && (
-                    <>
-                        <ContentCvs
-                            classN={!sendbox ? "send-box open" : "send-box"}
-                            cvsList={cvsSendList}
-                            click={click}
-                        />
-                    </>
-                )}
+                    {typeUserTemp != 0 &&
+                        cvsSendList &&
+                        cvsSendList.map((conversation) => {
+                            return (
+                                <div className={sendbox ? "send-box open" : "send-box"}>
+                                    <ContentCvs conversation={conversation} click={click} />
+                                </div>
+                            );
+                        })}
+
+                    {/* ___________________Content box for Admin_________________ */}
+                    {typeUserTemp == 0 &&
+                        cvsSendList &&
+                        cvsSendList.map((conversation) => {
+                            return (
+                                <div className={!sendbox ? "send-box open" : "send-box"}>
+                                    <ContentCvs conversation={conversation} click={click} />
+                                </div>
+                            );
+                        })}
+                </div>
             </div>
         );
 }

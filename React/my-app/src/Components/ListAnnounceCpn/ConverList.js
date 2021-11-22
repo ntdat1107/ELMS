@@ -4,8 +4,8 @@ import { Scrollbars } from "react-custom-scrollbars";
 function ConverList({ cvsList, parentClick, handleClick, classN, header }) {
     return (
         <div id="sublistAnnoun" className={classN}>
-            <p>{header}</p>
-            <Scrollbars width="100%">
+            <p id="headerAnnoun">{header}</p>
+            <Scrollbars id="reserve" width="100%">
                 {cvsList &&
                     cvsList.map((conversation) => {
                         var time = conversation.createdAt.split("T");
