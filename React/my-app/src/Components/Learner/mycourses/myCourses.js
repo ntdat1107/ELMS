@@ -52,16 +52,15 @@ const TableCourse = ({id, match, courses}) => {
     const coursesPerPage = 9;
     const pagesVisited = pageNumber * coursesPerPage;
     let arr = []
-    // if(keyword) {
-    //     let filter = keyword.toUpperCase()
-    //     for(let i = 0; i < courses.length; i++)
-    //     {
-    //         if(courses[i].name.toUpperCase().indexOf(filter) > -1) arr.push(courses[i])
-    //     }
-    // }
-    // else arr = courses
-    console.log(arr.length === 0)
-    const pageCount = Math.ceil(arr&&arr.length / coursesPerPage);
+    if(keyword) {
+        let filter = keyword.toUpperCase()
+        for(let i = 0; i < courses.length; i++)
+        {
+            if(courses[i].name.toUpperCase().indexOf(filter) > -1) arr.push(courses[i])
+        }
+    }
+    else arr = courses
+    const pageCount = Math.ceil( arr&&arr.length / coursesPerPage );
     const changePage = ({ selected }) => {setPageNumber(selected)};
     const display = (data) => {
         if(data.length === 0) {
@@ -81,47 +80,45 @@ const TableCourse = ({id, match, courses}) => {
         }
         else {
             return(
-                <div>
-                    <Scrollbars id="scrollbars">
-                {
-                    data && data.slice(pagesVisited, pagesVisited + coursesPerPage).map((course,index) => {
-                        var rateScore = 0;
-                        for(let j = 0; j < course.ratings.length; j++) {
-                            if(course.ratings[j].user === id) rateScore = course.ratings[j].rating;
-                        }
-                        return (
-                        <div id="colCourses" key={index}>
-                            <ItemCourse 
-                                imgCourse={course.image}
-                                nameCourse={course.name}
-                                authorCourse={course.authorName}
-                                rateScore={rateScore}
-                                fastNameCourse={course.fastName}
-                                category = {course.category}
-                            />
-                        </div>
-                        );
-                    })
-                }
+                <Scrollbars id="scrollbars">
+                    {
+                        data && data.slice(pagesVisited, pagesVisited + coursesPerPage).map((course,index) => {
+                            var rateScore = 0;
+                            for(let j = 0; j < course.ratings.length; j++) {
+                                if(course.ratings[j].user === id) rateScore = course.ratings[j].rating;
+                            }
+                            return (
+                            <div id="colCourses" key={index}>
+                                <ItemCourse 
+                                    imgCourse={course.image}
+                                    nameCourse={course.name}
+                                    authorCourse={course.authorName}
+                                    rateScore={rateScore}
+                                    fastNameCourse={course.fastName}
+                                    category = {course.category}
+                                />
+                            </div>
+                            );
+                        })
+                    }
                 </Scrollbars>
-                <ReactPaginate
-                    previousLabel={"Prev"}
-                    nextLabel={"Next"}
-                    pageCount={pageCount}
-                    onPageChange={changePage}
-                    containerClassName={"paginationBttns"}
-                    previousLinkClassName={"previousBttn"}
-                    nextLinkClassName={"nextBttn"}
-                    disabledClassName={"paginationDisabled"}
-                    activeClassName={"paginationActive"}
-                />
-                </div>
             )
         }
     }
     return (
         <div id="tableCourses">
             {display(arr)}
+            <ReactPaginate
+                previousLabel={"Prev"}
+                nextLabel={"Next"}
+                pageCount={pageCount}
+                onPageChange={changePage}
+                containerClassName={"paginationBttns"}
+                previousLinkClassName={"previousBttn"}
+                nextLinkClassName={"nextBttn"}
+                disabledClassName={"paginationDisabled"}
+                activeClassName={"paginationActive"}
+            />
         </div>
     );
 }
