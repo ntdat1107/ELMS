@@ -12,7 +12,7 @@ and then run
 npm install
 ```
 to install all needed packages.
-Also do the same in ELSM directory then from the root
+Also do the same in ELSM directory then from the root.
 Next, install concurrently in command promt.
 ```
 npm install -g concurrently
@@ -34,7 +34,7 @@ and then run
 yarn install
 ```
 to install all needed packages.
-Also do the same in ELSM directory then from the root
+Also do the same in ELSM directory then from the root.
 Next, install concurrently in command promt.
 ```
 yarn install -g concurrently
