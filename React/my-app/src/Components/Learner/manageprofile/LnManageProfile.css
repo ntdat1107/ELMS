@@ -51,6 +51,7 @@
     line-height: 60px;
     margin-left: -40px;
     width: 220px;
+    text-align: center;
 }
 
 
@@ -112,7 +113,7 @@
     width: 215px;
 }
 #lnManageProfile #MP #input-number, #lnManageProfile #input-city {
-    width: 270px;
+    width: 300px;
 }
 #lnManageProfile #MP #col2 #city, #lnManageProfile #MP #col2 #country {
     margin-left: 25px;

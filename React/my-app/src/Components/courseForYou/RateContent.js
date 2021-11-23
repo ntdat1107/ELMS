@@ -32,7 +32,7 @@ function RateContent({
 }) {
     let star = star0
     let styleType = styleN
-    let type = ""
+    let type = "New"
     // Choose Star Img
     if (rateScoreCpn > 0 && rateScoreCpn < 1) star = star05
     else if (rateScoreCpn === 1) star = star1
@@ -46,8 +46,7 @@ function RateContent({
     else if (rateScoreCpn === 5) star = star5
     // Choose Style
     if (totalRateCpn >= 3 && rateScoreCpn > 4) {styleType = styleH; type = "Hot"}
-    else if (totalRateCpn >= 10 && rateScoreCpn > 4.5) {styleType = styleBC; type = "Best Course"}
-    else {styleType = styleN; type = "New"}
+    if (totalRateCpn >= 10 && rateScoreCpn > 4.5) {styleType = styleBC; type = "Best Course"}
     return (
         <div id="rateContent">
             <div id="p1" style={styleType}><p>{type}</p></div>
