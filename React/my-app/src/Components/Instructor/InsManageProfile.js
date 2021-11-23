@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
 import "./CSS/InsManageProfile.css"
-import avtCheems from "../img/cheems.png"
 import ProfileCpn from "./profileCpn";
 import Header from '../Header/header'
 import SideBar from "../SideBar/SideBar";
@@ -18,7 +17,7 @@ function InsManageProfile({history}) {
             <SideBar typeUserTemp={1}/>
             <Header history={history}/>
             <div id="insMP">
-                <ProfileCpn srcImage={avtCheems} name="Ngọ Tiến Đạt" />
+                <ProfileCpn/>
             </div>
         </div>
     )

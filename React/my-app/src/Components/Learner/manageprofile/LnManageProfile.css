@@ -50,6 +50,7 @@
     font-size: 40px;
     line-height: 60px;
     margin-left: -40px;
+    width: 220px;
 }
 
 
@@ -59,7 +60,7 @@
 }
 #lnManageProfile #MP #col2 {
     margin-top: 10px;
-    margin-left: 60px;
+    margin-left: 100px;
 }
 #lnManageProfile #MP #row-1, #lnManageProfile #row-2, #lnManageProfile #row-3, #lnManageProfile #row-4, #lnManageProfile #row-5{
     display: flex;

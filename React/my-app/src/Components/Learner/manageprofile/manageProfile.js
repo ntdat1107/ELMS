@@ -17,7 +17,7 @@ function LnManageProfile({history}) {
             <SideBar typeUserTemp={2}/>
             <Header history = {history}/>
             <div id="lnManageProfile">
-                <ProfileCpn srcImage={avtProfile} name={userInfo.firstName + ' ' + userInfo.lastName} />
+                <ProfileCpn />
             </div>
         </div>
     )

@@ -9,8 +9,6 @@ import ErrorMsg from '../Error/ErrorMsg'
 
 function ProfileCpn({
     history,
-    srcImage,
-    name,
 }) {
     const [change, setChange] = useState(false)
     const handleChange = () => setChange(true)
