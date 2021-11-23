@@ -47,10 +47,9 @@
 }
 #lnManageProfile #MP .avatarChange #nameUser {
     position: relative;
-    font-size: 30px;
+    font-size: 40px;
     line-height: 60px;
     margin-left: -40px;
-    text-align: center;
 }
 
 
