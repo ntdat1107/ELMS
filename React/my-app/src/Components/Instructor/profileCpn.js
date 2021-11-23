@@ -137,7 +137,7 @@ function ProfileCpn({
                         </label>
                     </div>
                     <input type="text" id="avt-url" placeholder="Avatar url" onChange={(e) => {handleChange();setAvatar(e.target.value)}}/>
-                    <p id="nameUser">{name}</p>
+                    <p id="nameUser">{firstName + ' ' + lastName}</p>
                 </div>
             </div>
             <div id="col2">    

@@ -11,12 +11,13 @@ function LnManageProfile({history}) {
     useEffect(() => {
         if (!userInfo || !userInfo.isLearner) history.push('/login')
     }, [history, userInfo])
+    console.log(userInfo && userInfo.firstName)
     return (
         <div id="lnManageProfileUI">
             <SideBar typeUserTemp={2}/>
             <Header history = {history}/>
             <div id="lnManageProfile">
-                <ProfileCpn srcImage={avtProfile} name="LAM THANH DUONG" />
+                <ProfileCpn srcImage={avtProfile} name={userInfo.firstName + ' ' + userInfo.lastName} />
             </div>
         </div>
     )
