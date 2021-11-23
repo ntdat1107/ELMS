@@ -63,7 +63,7 @@ const TableCourse = ({id, match, courses}) => {
     const pageCount = Math.ceil( arr&&arr.length / coursesPerPage );
     const changePage = ({ selected }) => {setPageNumber(selected)};
     const display = (data) => {
-        if(data.length === 0) {
+        if(data && data.length === 0) {
             return(
                 <div id="listEmpty">
                     <img src={empty} alt="Empty Img" width="240px" height="160px" />
