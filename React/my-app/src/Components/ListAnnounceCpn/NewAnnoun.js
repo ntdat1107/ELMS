@@ -66,7 +66,7 @@ function NewAnnoun({ typeUserTemp }) {
                                     <input
                                         type="text"
                                         id="coursefastname"
-                                        placeholder="Enter Fastname of Course..."
+                                        placeholder="Enter Path Name of Course..."
                                     />
                                 </div>
                             </div>

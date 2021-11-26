@@ -74,6 +74,9 @@
 .new-announ #New-Announ-Box #tick-box #tick-box-top {
     display: flex;
 }
+.new-announ #New-Announ-Box #tick-box #tick-box-top #tick-box-top-inside input{
+    padding-left: 20px;
+}
 
 #Announ-wholeblock #coursefastname {
     margin-top: 10px;
