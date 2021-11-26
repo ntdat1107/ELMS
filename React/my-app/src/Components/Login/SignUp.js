@@ -55,7 +55,7 @@ function Signup({history}) {
 
     useEffect(() => {
         if (userRegInfo && firstName) {
-            history.push('/')
+            history.push('/login')
         }
     }, [history, userRegInfo, dispatch])
 
@@ -135,7 +135,7 @@ function Signup({history}) {
                     <button type="submit" className="Signuptoggle-btn1" onClick={(e)=> {showToast(); submitHandler(e)}}>Sign up</button>
                     <label id="direct-to-login-label" for="direct-to-login"></label>
                     <Link to='/login'>
-                        <button type="submit" id="direct-to-login" className="Signuptoggle-btn1">Login</button>
+                        <button type="submit" id="direct-to-login" className="Signuptoggle-btn1">Back to Login</button>
                     </Link>
                 </form>
 
