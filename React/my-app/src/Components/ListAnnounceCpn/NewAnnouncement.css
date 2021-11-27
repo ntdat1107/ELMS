@@ -74,6 +74,7 @@
 .new-announ #New-Announ-Box #tick-box #tick-box-top {
     display: flex;
     margin-top: 5px;
+    height: 30px;
 }
 
 .new-announ #New-Announ-Box #tick-box #tick-box-top-inside {
@@ -105,8 +106,9 @@
     font-size: 20px;
     padding-left: 20px;
     margin-left: 25px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     width: 850px;
+    height: 30px;
     border: 1px solid black;
 }
 
