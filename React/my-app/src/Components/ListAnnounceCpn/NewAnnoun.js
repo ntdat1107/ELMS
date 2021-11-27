@@ -4,11 +4,19 @@ import newannounbutton from "../Admin/image/NewAnnoun.png";
 import "./NewAnnouncement.css";
 import send from "../Admin/image/Send-button.png";
 import { createNewCvs } from "../../actions/conversationActions";
+import { getMyCourses } from "../../actions/myCoursesAction";
 
 function NewAnnoun({ typeUserTemp }) {
     const dispatch = useDispatch();
     const createCvs = useSelector((state) => state.createCvs);
     const { CvsInfo } = createCvs;
+
+    const myCourses = useSelector((state) => state.myCourses);
+    const { loading, error, myCoursesList } = myCourses;
+
+    useEffect(() => {
+        dispatch(getMyCourses());
+    }, [dispatch]);
 
     useEffect(() => {}, [CvsInfo]);
 
@@ -32,6 +40,14 @@ function NewAnnoun({ typeUserTemp }) {
             if (coursefastname) dispatch(createNewCvs(subject, content, coursefastname));
         }
     };
+
+    var displaychoose;
+
+    if (myCoursesList && myCoursesList.length > 0) {
+        displaychoose = myCoursesList.map((data, index) => {
+            return <option value={data.fastName}>{data.fastName}</option>;
+        });
+    }
 
     return (
         <div className="new-announ">
@@ -63,11 +79,7 @@ function NewAnnoun({ typeUserTemp }) {
                         {typeUserTemp == 1 && (
                             <div id="tick-box-top">
                                 <div id="tick-box-top-inside">
-                                    <input
-                                        type="text"
-                                        id="coursefastname"
-                                        placeholder="Enter Path Name of Course..."
-                                    />
+                                    <select id="coursefastname">{displaychoose}</select>
                                 </div>
                             </div>
                         )}
