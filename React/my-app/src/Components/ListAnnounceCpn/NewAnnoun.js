@@ -74,9 +74,7 @@ function NewAnnoun({ typeUserTemp }) {
                     </form>
 
                     <input type="text" id="subject" placeholder="Subject" />
-                    <div className="text-editor">
-                        <input type="text" id="content" placeholder="Content" />
-                    </div>
+                    <textarea className="text-editor" id="content" placeholder="Content"></textarea>
 
                     <p id="close-button" onClick={CloseNewAnnounBox}>
                         Close
