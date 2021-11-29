@@ -37,7 +37,7 @@ function TableManage({ userInfo, listLearner, history, match }) {
     function handleClick2(e) {
         e.stopPropagation();
         if (userInfo && userInfo.isIns) {
-            if (window.confirm("Are you sure that you want to kick this user out of your course!!")){}
+            if (window.confirm("Are you sure that you want to kick this user out of your course!!"))
             dispatch(kickUser(e.target.id, match.params.fastName))
         } else {
             if (window.confirm("Are you sure that you want to delete this user"))
