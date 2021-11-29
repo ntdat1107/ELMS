@@ -71,7 +71,19 @@ function ListAnnounceCpn({ history, Addition_Part, typeUserTemp }) {
                 <h1>ERROR</h1>
             </div>
         );
-    } else
+    } else {
+        var newSendList = [];
+        if (cvsSendList) {
+            newSendList = Object.values(cvsSendList);
+        }
+        newSendList.reverse();
+
+        var newReceiveList = [];
+        if (cvsSendList) {
+            newReceiveList = Object.values(cvsReceiveList);
+        }
+        newReceiveList.reverse();
+
         return (
             <div id="Announ-wholeblock">
                 {Addition_Part}
@@ -90,14 +102,14 @@ function ListAnnounceCpn({ history, Addition_Part, typeUserTemp }) {
 
                             <ConverList
                                 classN={receivebox ? "receive-box open" : "receive-box"}
-                                cvsList={cvsReceiveList}
+                                cvsList={newReceiveList}
                                 header="Receive Announcement"
                                 parentClick={parentClick}
                                 handleClick={handleClick}
                             />
                             <ConverList
                                 classN={sendbox ? "send-box open" : "send-box"}
-                                cvsList={cvsSendList}
+                                cvsList={newSendList}
                                 header="Send Announcement"
                                 parentClick={parentClick}
                                 handleClick={handleClick}
@@ -109,7 +121,7 @@ function ListAnnounceCpn({ history, Addition_Part, typeUserTemp }) {
                     {typeUserTemp == 2 && (
                         <ConverList
                             classN={receivebox ? "receive-box open" : "receive-box"}
-                            cvsList={cvsReceiveList}
+                            cvsList={newReceiveList}
                             header="Receive Announcement"
                             parentClick={parentClick}
                             handleClick={handleClick}
@@ -120,7 +132,7 @@ function ListAnnounceCpn({ history, Addition_Part, typeUserTemp }) {
                     {typeUserTemp == 0 && (
                         <ConverList
                             classN={!sendbox ? "send-box open" : "send-box"}
-                            cvsList={cvsSendList}
+                            cvsList={newSendList}
                             header="Send Announcement"
                             parentClick={parentClick}
                             handleClick={handleClick}
@@ -164,6 +176,7 @@ function ListAnnounceCpn({ history, Addition_Part, typeUserTemp }) {
                 </div>
             </div>
         );
+    }
 }
 
 export default ListAnnounceCpn;

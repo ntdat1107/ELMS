@@ -73,13 +73,17 @@
 
 .new-announ #New-Announ-Box #tick-box #tick-box-top {
     display: flex;
+    margin-top: 5px;
+    height: 30px;
 }
-.new-announ #New-Announ-Box #tick-box #tick-box-top #tick-box-top-inside input{
-    padding-left: 20px;
+
+.new-announ #New-Announ-Box #tick-box #tick-box-top-inside {
+    margin-right: 80px;
 }
 
 #Announ-wholeblock #coursefastname {
     margin-top: 10px;
+    padding-left: 20px;
     font-size: 23px;
     width: 750px;
     height: 30px;
@@ -102,23 +106,20 @@
     font-size: 20px;
     padding-left: 20px;
     margin-left: 25px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     width: 850px;
+    height: 30px;
+    border: 1px solid black;
 }
 
 .new-announ #New-Announ-Box .text-editor {
     background-color: white;
+    font-size: 20px;
     margin-left: 25px;
     width: 850px;
-    height: 370px;
+    height: 365px;
     border: 1px solid black;
     padding: 10px 20px 0px 20px;
-    list-style: none;
-    display: inline-block;
-}
-
-.new-announ #New-Announ-Box #content {
-    font-size: 20px;
-    border: 0px solid black;
-    width: 800px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+        "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
