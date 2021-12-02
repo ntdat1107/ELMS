@@ -4,7 +4,6 @@ const lessons = [
         lessonNumber: 1,
         lessonName: 'git commit',
         lessonDescription: "In this lesson, we'll learn about git commit",
-        lessonDuration: 12,
         lessonUrl: 'https://www.youtube.com/watch?v=zWOREJxiRVY',
     },
     {
@@ -12,7 +11,6 @@ const lessons = [
         lessonNumber: 2,
         lessonName: 'git push',
         lessonDescription: "In this lesson, we'll learn about git push",
-        lessonDuration: 13,
         lessonUrl: 'https://www.youtube.com/watch?v=samx2yC15Pg',
     },
     {
@@ -20,7 +18,6 @@ const lessons = [
         lessonNumber: 3,
         lessonName: 'git pull',
         lessonDescription: "In this lesson, we'll learn about git pull",
-        lessonDuration: 8,
         lessonUrl: 'https://www.youtube.com/watch?v=xtQtGKL0NCI',
     },
     {
@@ -28,7 +25,6 @@ const lessons = [
         lessonName: 'git log',
         lessonNumber: 4,
         lessonDescription: "In this lesson, we'll learn about git log",
-        lessonDuration: 6,
         lessonUrl: 'https://www.youtube.com/watch?v=5ismRwx4ebM',
     },
     {
@@ -36,7 +32,6 @@ const lessons = [
         lessonNumber: 5,
         lessonName: 'git merge',
         lessonDescription: "In this lesson, we'll learn about git merge",
-        lessonDuration: 11,
         lessonUrl: 'https://www.youtube.com/watch?v=rIaFc5MLCcs',
     },
     {
@@ -44,7 +39,6 @@ const lessons = [
         lessonNumber: 1,
         lessonName: 'C++ variables',
         lessonDescription: "In this lesson, we'll learn about C++ variables",
-        lessonDuration: 11,
         lessonUrl: 'https://www.youtube.com/watch?v=JN_SxpAujDw',
     },
     {
@@ -52,7 +46,6 @@ const lessons = [
         lessonNumber: 2,
         lessonName: 'C++ functions',
         lessonDescription: "In this lesson, we'll learn about C++ functions",
-        lessonDuration: 22,
         lessonUrl: 'https://www.youtube.com/watch?v=1JuYQgpbrW0',
     },
     {
@@ -60,7 +53,6 @@ const lessons = [
         lessonNumber: 3,
         lessonName: 'C++ array',
         lessonDescription: "In this lesson, we'll learn about C++ array",
-        lessonDuration: 18,
         lessonUrl: 'https://www.youtube.com/watch?v=zbg-SERx6Ig',
     },
     {
@@ -68,7 +60,6 @@ const lessons = [
         lessonNumber: 4,
         lessonName: 'C++ loops',
         lessonDescription: "In this lesson, we'll learn about C++ loops",
-        lessonDuration: 24,
         lessonUrl: 'https://www.youtube.com/watch?v=n7YzZ4OnXOg',
     },
     {
@@ -76,7 +67,62 @@ const lessons = [
         lessonNumber: 1,
         lessonName: 'Python introduction',
         lessonDescription: "In this lesson, we'll introduce Python language",
-        lessonDuration: 8,
+        lessonUrl: 'https://www.youtube.com/watch?v=3ybKVhCrZ18',
+    },
+    {
+        courseFastname: 'py',
+        lessonNumber: 2,
+        lessonName: 'Python introduction',
+        lessonDescription: "In this lesson, we'll introduce Python language",
+        lessonUrl: 'https://www.youtube.com/watch?v=3ybKVhCrZ18',
+    },
+    {
+        courseFastname: 'py',
+        lessonNumber: 3,
+        lessonName: 'Python introduction',
+        lessonDescription: "In this lesson, we'll introduce Python language",
+        lessonUrl: 'https://www.youtube.com/watch?v=3ybKVhCrZ18',
+    },
+    {
+        courseFastname: 'py',
+        lessonNumber: 4,
+        lessonName: 'Python introduction',
+        lessonDescription: "In this lesson, we'll introduce Python language",
+        lessonUrl: 'https://www.youtube.com/watch?v=3ybKVhCrZ18',
+    },
+    {
+        courseFastname: 'gcc-gpp',
+        lessonNumber: 1,
+        lessonName: 'Python introduction',
+        lessonDescription: "In this lesson, we'll introduce Python language",
+        lessonUrl: 'https://www.youtube.com/watch?v=3ybKVhCrZ18',
+    },
+    {
+        courseFastname: 'kotlin',
+        lessonNumber: 1,
+        lessonName: 'Python introduction',
+        lessonDescription: "In this lesson, we'll introduce Python language",
+        lessonUrl: 'https://www.youtube.com/watch?v=3ybKVhCrZ18',
+    },
+    {
+        courseFastname: 'haskell',
+        lessonNumber: 1,
+        lessonName: 'Haskell introduction',
+        lessonDescription: "In this lesson, we'll introduce Python language",
+        lessonUrl: 'https://www.youtube.com/watch?v=3ybKVhCrZ18',
+    },
+    {
+        courseFastname: 'java',
+        lessonNumber: 1,
+        lessonName: 'Java introduction',
+        lessonDescription: "In this lesson, we'll introduce Java language",
+        lessonUrl: 'https://www.youtube.com/watch?v=3ybKVhCrZ18',
+    },
+    {
+        courseFastname: 'csharp',
+        lessonNumber: 1,
+        lessonName: 'C# introduction',
+        lessonDescription: "In this lesson, we'll introduce C# language",
         lessonUrl: 'https://www.youtube.com/watch?v=3ybKVhCrZ18',
     },
 ]

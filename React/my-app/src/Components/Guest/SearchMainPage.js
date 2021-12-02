@@ -28,7 +28,7 @@ function SearchMainPage({match}) {
     )
     else return(
         <div id = "searchResultWrapper" >
-            <DropDownBar/>
+            {/* <DropDownBar/> */}
             <SearchResult className = "cfySearch" courses = {courses}/>
         </div>
     )
