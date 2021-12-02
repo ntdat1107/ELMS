@@ -6,7 +6,7 @@ import Scrollbars from 'react-custom-scrollbars';
 import Loading from '../Loading/Loading'
 import Header from '../Header/header'
 import SideBar from '../SideBar/SideBar';
-import plus from './imgSrc/plus.png'
+import edit from './imgSrc/edit.png'
 import deleteImg from './imgSrc/delete.png'
 import {Link} from "react-router-dom"
 import manageLearner from './imgSrc/manageLearner.png'
@@ -15,30 +15,8 @@ import { getMyCourseByFastName } from '../../actions/myCoursesAction.js';
 import ErrorMsg from '../Error/ErrorMsg';
 import { listLessons } from '../../actions/lessonActions';
 
-function CourseSection({
-    nameSection,
-    isDefault,
-}) {
-    return (
-        <div className="section-cpn">
-            <div id="name-section">
-                <p className="name-section-cpn">{nameSection}</p>
-                <img src={plus} alt="PlusImg" width="45px" height="45px"/>
-                {!isDefault && <img src={deleteImg} alt="deleteImg" width="35px" height="45px"/>}
-            </div>
-            <div className="subsection-contain" id="one">
-                <p className="subsection-cpn">{nameSection + " 1: Introduce"}</p>
-                <img src={deleteImg} alt="deleteImg" width="20px" height="25px"/>
-            </div>
-            <div className="subsection-contain" id="two">
-                <p className="subsection-cpn">{nameSection + " 2: Guide"}</p>
-                <img src={deleteImg} alt="deleteImg" width="20px" height="25px"/>
-            </div>
-        </div>
-    )
-}
 
-function OtherAction({manageCourseLink, deleteHandle}) {
+function OtherAction({manageCourseLink, editCourseLink, deleteHandle}) {
     return (
         <div id="other-action">
             <div id="head">
@@ -51,10 +29,17 @@ function OtherAction({manageCourseLink, deleteHandle}) {
                         <p className="text-action">Manage learner</p>
                     </div>
                 </Link>
+                <Link className="link-action" to={editCourseLink}>
+                    <div id="second-act">
+                        <img className="imgAction" src={edit} alt="editImg" height="50px" width="50px" />
+                        <p className="text-action">Edit Course</p>
+                    </div>
+                </Link>
                 <div id="third-act" onClick={deleteHandle}>
                     <img className="imgAction" src={deleteImg} alt="delimg" height="50px" width="40px" />
                     <p className="text-action">Delete course</p>
                 </div>
+                
             </div>
         </div>
     )
@@ -69,16 +54,8 @@ function LessonListWithDetail({match, history}){
         dispatch(listLessons(match.params.id))
     }, [dispatch, match])
 
-    console.log(lessons)
-    console.log(lessons.length)
-    console.log(match.params.id)
-  
-
     
     const firstLesson = lessons[0]
-    
-    console.log(firstLesson)
-    
     
     const [lessonToShow, setLesson] = useState(firstLesson)
 
@@ -90,7 +67,6 @@ function LessonListWithDetail({match, history}){
             )
         }
         else {
-            console.log("len != 0")
             const items = lessons.map((lesson, index) => (
                     <button onClick = {() => {setLesson(lesson)}}>
                         <li key = {index} className = "lesson-name-item">
@@ -221,7 +197,7 @@ function InnerCourse({ match, history }) {
                     <LessonListWithDetail history = {history} match = {match}/>
                 </div>
                 <div id="col-2">
-                    <OtherAction deleteHandle={deleteHandle} manageCourseLink={`/ins/managecourse/${myOneCourseDetail.fastName}/manage_my_learners`}/>
+                    <OtherAction deleteHandle={deleteHandle} manageCourseLink={`/ins/managecourse/${myOneCourseDetail.fastName}/manage_my_learners`} editCourseLink={`/ins/editcourse/${myOneCourseDetail.fastName}`}/>
                 </div>
             </div>
             </div>

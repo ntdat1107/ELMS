@@ -57,7 +57,7 @@ function InsManagerCourse ({history}) {
                     </button>
                 </Link>
             </div>
-            <Scrollbars style={{height: "73vh"}}>
+            <Scrollbars style={{height: "72vh"}}>
                 {   
                     myCoursesList && myCoursesList.length > 0 ? myCoursesList.map((data, index) => {
                         return (

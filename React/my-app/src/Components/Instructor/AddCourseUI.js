@@ -66,9 +66,11 @@ function AddCourseUI({history}) {
                         <button type="submit" onClick={handleSubmit}>Add</button>
                 </div>
                 <div id="image-ctn">
-                    <img src={image} width="250px" height="auto" />
-                    <label for="Image-url">Path Name</label>
-                    <input type="text" id="Image-url" onChange={(e) => setImage(e.target.value)}/>
+                    <img src={image} width="400px" height="auto" />
+                    <div id="image-input">
+                        <label for="Image-url">Image URL</label>
+                        <input type="text" id="Image-url" onChange={(e) => setImage(e.target.value)}/>
+                    </div>
                 </div>
             </div>
         </div>

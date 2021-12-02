@@ -3,7 +3,6 @@ import './header.css'
 import Logo from "../img/Logo.png";
 import { Link } from "react-router-dom"
 import searchIcon from "../img/search.png"
-import BellMessage from "./bellMessage"
 import arrow from "../img/arrow.png"
 import SearchBar from './searchBar'
 import { useDispatch, useSelector } from 'react-redux'
