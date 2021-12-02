@@ -29,7 +29,7 @@ import {
 import { myLearnerReducer } from "./Reducers/myLearnerReducers";
 import { sysInsReducer, sysLearnerReducer } from "./Reducers/adminReducers";
 import { createCvsReducer, getCvsSendReducer, getCvsReceiveReducer } from "./Reducers/conversationReducers";
-import { lessonListReducer, lessonDetailReducer, addLessonReducer } from "./Reducers/lessonReducers";
+import { lessonListReducer, lessonDetailReducer, addLessonReducer, countLessonReducer } from "./Reducers/lessonReducers";
 
 const reducer = combineReducers({
     courseList: courseListReducer,
@@ -59,7 +59,8 @@ const reducer = combineReducers({
     addLesson: addLessonReducer,
     kickLearner: kickLearnerReducer,
     resetPass: resetPassReducer,
-    updateCourse: updateCourseReducer
+    updateCourse: updateCourseReducer,
+    countLesson: countLessonReducer
 });
 
 const userInfoFromStorage = localStorage.getItem("userInfo")

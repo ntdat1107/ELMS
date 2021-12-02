@@ -12,6 +12,7 @@ import { getUserProfile } from "../../actions/userActions";
 import { getMyCourses, getMyLearnerID } from "../../actions/myCoursesAction";
 import dashBoard from './imgSrc/dashBoard.png'
 import ErrorMsg from '../Error/ErrorMsg'
+import { countNumberLesson } from "../../actions/lessonActions";
 
 function About() {    
     return (
@@ -44,17 +45,21 @@ function InsDashboardUI ({history}) {
     }, [dispatch, history, userDetail])
     const getMyLearnersID = useSelector(state => state.getMyLearnersID)
     const { loadingLearner, errorLearner, myLearnerList } = getMyLearnersID
+    const countLesson = useSelector(state => state.countLesson)
+    const { loading: loadingLesson, error: errorLesson, count } = countLesson
     useEffect(() => {
-        if (!myLearnerList) dispatch(getMyLearnerID())
-    }, [dispatch, history, myLearnerList])
-
+        dispatch(getMyLearnerID())
+    }, [dispatch, history])
+    useEffect(() => {
+        dispatch(countNumberLesson())
+    }, [dispatch, history])
     const myCourses = useSelector(state => state.myCourses)
     const { loading:loadingListCourse, error:errorListCourse, myCoursesList } = myCourses
     useEffect(() => {
         dispatch(getMyCourses())
     }, [dispatch])
 
-    if (loading || loadingLearner || loadingListCourse) return (
+    if (loading || loadingLearner || loadingListCourse || loadingLesson) return (
         <div className="handleLoading">
             <SideBar typeUserTemp={1} />
             <Header history={history} />
@@ -75,7 +80,7 @@ function InsDashboardUI ({history}) {
             <div id="col1">
                 <About />
                 <div style={{display:'flex'}}>
-                <Statistic learnerCount={myLearnerList? myLearnerList.length : 0} videoCount="20" 
+                <Statistic learnerCount={myLearnerList? myLearnerList.length : 0} videoCount = {count ? count.data : 0} 
                 courseCount={userDetail? userDetail.hasCourse.length : 0}/>
                 <MyCourse titleName="My courses" heightSize="60px" widthSize="60px" listCourse={myCoursesList}/>
                 </div>
