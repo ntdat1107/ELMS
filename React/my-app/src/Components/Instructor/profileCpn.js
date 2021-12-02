@@ -119,7 +119,7 @@ function ProfileCpn({
         <Loading />
     )
     else if (error) return (
-        <ErrorMsg msg={error} />
+        <ErrorMsg msg={error} linkBack='/ins/manageprofile' />
     )
     else return (
         <div id="MP">
