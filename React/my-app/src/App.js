@@ -14,7 +14,6 @@ import Policy from "./Components/Login/Policy";
 import Page404 from "./Components/Page404/Page404";
 import CourseMainPage from "./Components/Guest/CourseMainPage";
 import LnDashboard from "./Components/Learner/dashboard/dashboard";
-import RegisterInsUI from "./Components/Learner/registerIns/registerToIns";
 import LnMyCourses from "./Components/Learner/mycourses/myCourses";
 import LnAnnouncements from "./Components/Learner/announcement/announcements";
 import LnManageProfile from "./Components/Learner/manageprofile/manageProfile";
@@ -80,7 +79,6 @@ function App() {
                     <Route exact path="/course/:id/:token" component={CourseView}></Route>
                     <Route exact path="/search/" component={SearchLearnerUI}></Route>
                     <Route exact path="/search/:token" component={SearchLearnerUI}></Route>
-                    <Route exact path="/learner/registerIns" component={RegisterInsUI}></Route>
                     <Route exact path="/logout" component={Logout} />
                     <Route exact path="/" component={HomePageUI}></Route>
                     <Route component={Page404} />
