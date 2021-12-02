@@ -146,5 +146,36 @@ const enrollCourse = asyncHandler(async(req, res) => {
     }
 })
 
+const updateCourse = asyncHandler(async(req, res) => {
+    if (req.user && req.user.isIns) {
+        const course = await Course.findOne({fastName: req.body.fastName})
+        console.log(req.body.fastName)
+        if(course && req.user.hasCourse.indexOf(course._id) !== -1) {
+            const course = await Course.findOne({fastName: req.body.fastName})
+            if (course) {
+                course.name = req.body.name || course.name
+                course.category = req.body.category || course.category
+                course.description = req.body.description || course.description
+                course.image = req.body.image || course.image
+                await course.save()
+                res.json({message: "Update course success"})
+            }
+            else {
+                res.status(404)
+                throw new Error('Course not found')
+            }
+        }
+        else {
+            res.status(401)
+            throw new Error('This course is not existed or you are not author')
+        }
+    }
+    else {
+        res.status(401)
+        throw new Error('Not authorized as an Instructor')
+    }
+})
+
+
 export { getUserCourses, getLearners, createNewCourse, getMyCourse, 
-    deleteCourse, getAllMyLearnersID, enrollCourse }
+    deleteCourse, getAllMyLearnersID, enrollCourse, updateCourse }

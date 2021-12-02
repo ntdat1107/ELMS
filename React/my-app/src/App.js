@@ -29,6 +29,7 @@ import SearchLearnerUI from "./Components/Guest/LearnerSearchPage";
 import AddCourseUI from "./Components/Instructor/AddCourseUI";
 import Logout from "./Components/Login/Logout";
 import AddLessonUI from "./Components/Instructor/AddLessonUI";
+import EditCourse from "./Components/Instructor/EditCourse";
 
 function App() {
     return (
@@ -50,6 +51,7 @@ function App() {
                         component={AddLessonUI}
                     />
                     <Route exact path="/ins/addcourse" component={AddCourseUI} />
+                    <Route exact path="/ins/editcourse/:fastName" component={EditCourse} />
                     <Route exact path="/ins/announcement" component={InsAnnouncement}></Route>
                     <Route exact path="/login" component={Login}></Route>
                     <Route exact path="/signup" component={Signup}></Route>

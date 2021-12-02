@@ -5,7 +5,10 @@ import { ADD_COURSE_FAIL, ADD_COURSE_REQUEST, ADD_COURSE_SUCCESS,
     ENROLL_COURSE_REQUEST, ENROLL_COURSE_FAIL, ENROLL_COURSE_SUCCESS, 
     MY_LEARNER_REQUEST, MY_LEARNER_FAIL, MY_LEARNER_SUCCESS, DELETE_COURSE_REQUEST, 
     DELETE_COURSE_SUCCESS, DELETE_COURSE_FAIL, 
-    DELETE_COURSE_INFO} from '../constants/myCourseConstants'
+    DELETE_COURSE_INFO,
+    UPDATE_COURSE_REQUEST,
+    UPDATE_COURSE_SUCCESS,
+    UPDATE_COURSE_FAIL} from '../constants/myCourseConstants'
 
 export const getMyCourses = () => async(dispatch, getState) => {
     try {
@@ -183,4 +186,36 @@ export const deleteCourseNow = (fastName) => async (dispatch, getState) => {
 export const removeCourseNow = () => async (dispatch) => {
     localStorage.removeItem("courseInfo")
     dispatch({type: DELETE_COURSE_INFO})
+}
+
+export const updateCourseNow = (course) => async(dispatch, getState) => {
+    try {
+        dispatch({
+            type: UPDATE_COURSE_REQUEST
+        });
+
+        const {
+            userLogin: { userInfo }
+        } = getState()
+
+        const config = {
+            headers: {
+                "Content-type": "application/json",
+                Authorization: `Bearer ${userInfo.token}`,
+            }
+        }
+
+        await axios.put(`/api/mycourses`, course, config)
+
+        dispatch({
+            type: UPDATE_COURSE_SUCCESS
+        })
+    } catch (error) {
+        dispatch({
+            type: UPDATE_COURSE_FAIL,
+            payload: error.response && error.response.data.message
+                ? error.response.data.message
+                : error.message,
+        })
+    }
 }

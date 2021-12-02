@@ -24,6 +24,7 @@ import {
     getMyLearnersIDReducer,
     myCoursesReducer,
     myOneCourseReducer,
+    updateCourseReducer,
 } from "./Reducers/myCoursesReducers";
 import { myLearnerReducer } from "./Reducers/myLearnerReducers";
 import { sysInsReducer, sysLearnerReducer } from "./Reducers/adminReducers";
@@ -57,7 +58,8 @@ const reducer = combineReducers({
     getCvsReceive: getCvsReceiveReducer,
     addLesson: addLessonReducer,
     kickLearner: kickLearnerReducer,
-    resetPass: resetPassReducer
+    resetPass: resetPassReducer,
+    updateCourse: updateCourseReducer
 });
 
 const userInfoFromStorage = localStorage.getItem("userInfo")
