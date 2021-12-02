@@ -8,7 +8,7 @@ import InforUser from "./InforUser";
 import { deleteUserNow, kickUser } from "../../actions/userActions";
 import "./TableManage.css";
 
-function TableManage({ userInfo, listLearner, history, match }) {
+function TableManage({ userInfo, listLearner, history, match, handleClick2 }) {
     const users = listLearner;
 
     const dispatch = useDispatch();
@@ -34,7 +34,7 @@ function TableManage({ userInfo, listLearner, history, match }) {
 
     /* Set Click for Delete Confirm Box */
 
-    function handleClick2(e) {
+    /* function handleClick2(e) {
         e.stopPropagation();
         if (userInfo && userInfo.isIns) {
             if (window.confirm("Are you sure that you want to kick this user out of your course!!"))
@@ -45,7 +45,7 @@ function TableManage({ userInfo, listLearner, history, match }) {
         }
     }
 
-    useEffect(() => {}, [history, successDelete]);
+    useEffect(() => {}, [history, successDelete]); */
 
     /* ________________________________________________________________ */
 

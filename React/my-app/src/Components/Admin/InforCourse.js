@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getMyCourseByFastName } from "../../actions/myCoursesAction.js";
+import { deleteCourseNow, getMyCourseByFastName } from "../../actions/myCoursesAction.js";
 import Scrollbars from "react-custom-scrollbars";
 import CourseForYouCpn from "../courseForYou/courseForYouCpn";
 import Header from "../Header/header";
 import SideBar from "../SideBar/SideBar";
 import minus from "./image/Iconminus.png";
+import deleteImg from "../Instructor/imgSrc/delete.png";
 import instructor from "../img/manageInsHover.png";
 import learner from "../img/manageLnHover.png";
 import "./CSS/AdminCourse.css";
@@ -21,14 +22,17 @@ const InforCourse = ({ history, match }) => {
     const myOneCourse = useSelector((state) => state.myOneCourse);
     const { loading, error, myOneCourseDetail } = myOneCourse;
 
+    const courseDelete = useSelector((state) => state.courseDelete);
+    const { success } = courseDelete;
+
     useEffect(() => {
         if (userInfo && userInfo.isAdmin) dispatch(getMyCourseByFastName(match.params.fastName));
         else history.push("/login");
-    }, [history, dispatch]);
+    }, [history, dispatch, success]);
 
     useEffect(() => {
         if (!myOneCourseDetail) history.push("/login");
-    }, [history]);
+    }, [success]);
 
     const myLearner = useSelector((state) => state.myLearner);
     const { loading: loading1, error: error1, learnerList } = myLearner;
@@ -36,6 +40,13 @@ const InforCourse = ({ history, match }) => {
     useEffect(() => {
         dispatch(getMyLearner(match.params.fastName));
     }, [dispatch]);
+
+    const deleteHandle = (e) => {
+        e.stopPropagation();
+        if (window.confirm("Are you sure that you want to delete this course")) {
+            dispatch(deleteCourseNow(match.params.fastName));
+        }
+    };
 
     if (loading || loading1) {
         return (
@@ -76,6 +87,11 @@ const InforCourse = ({ history, match }) => {
                     </div>
                 </div>
 
+                <div id="deletecourse" onClick={deleteHandle}>
+                    <img className="imgdelete" src={deleteImg} alt="delimg" height="30px" />
+                    <p className="textdelete">Delete course</p>
+                </div>
+
                 <div id="below">
                     <div className="user-in-course">
                         <div id="green">
@@ -108,7 +124,7 @@ const InforCourse = ({ history, match }) => {
                             <img src={learner} alt="Learner Icon" width="30px" height="30px" />
                             <span> Learner</span>
                         </div>
-                        <Scrollbars style={{ width: 1000, height: "35vh" }}>
+                        <Scrollbars style={{ height: "35vh" }}>
                             {learnerList.map((user) => {
                                 return (
                                     <div id="name">

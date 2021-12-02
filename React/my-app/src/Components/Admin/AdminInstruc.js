@@ -8,22 +8,33 @@ import { getSysIns } from "../../actions/adminActions";
 import Loading from "../Loading/Loading";
 import ErrorMsg from "../Error/ErrorMsg";
 import "./CSS/AdminInstruc.css";
+import { deleteUserNow, kickUser } from "../../actions/userActions";
 
-function AdminInstruc({ history }) {
+function AdminInstruc({ history, match }) {
     const dispatch = useDispatch();
 
     const userLogin = useSelector((state) => state.userLogin);
     const { userInfo } = userLogin;
+    const userDelete = useSelector((state) => state.userDelete);
+    const { success: successDelete } = userDelete;
+
     useEffect(() => {
         if (!userInfo || !userInfo.isAdmin) history.push("/login");
     }, [history, userInfo]);
+
+    function handleClick2(e) {
+        e.stopPropagation();
+
+        if (window.confirm("Are you sure that you want to delete this user"))
+            dispatch(deleteUserNow(e.target.id));
+    }
 
     const sysIns = useSelector((state) => state.sysIns);
     const { loading, error, sysInsList } = sysIns;
 
     useEffect(() => {
         dispatch(getSysIns());
-    }, [dispatch]);
+    }, [history, dispatch, successDelete]);
 
     if (loading)
         return (
@@ -50,7 +61,7 @@ function AdminInstruc({ history }) {
                 </div>
                 <div id="admininstruc">
                     <SearchInTable typeUserTemp={1} />
-                    <TableManage listLearner={sysInsList} />
+                    <TableManage listLearner={sysInsList} handleClick2={handleClick2} />
                 </div>
             </div>
         );

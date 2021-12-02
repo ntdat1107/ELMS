@@ -78,3 +78,25 @@
 #CourseInformation #below #name-of:hover {
     text-decoration-line: underline;
 }
+
+#CourseInformation #deletecourse {
+    position: absolute;
+    top: 225px;
+    right: 40px;
+    line-height: 35px;
+    padding: 5px;
+    display: flex;
+    vertical-align: middle;
+}
+
+#CourseInformation #deletecourse:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#CourseInformation #deletecourse .textdelete {
+    font-size: 18px;
+    color: red;
+    font-style: italic;
+    margin-left: 10px;
+}
