@@ -85,9 +85,11 @@ function EditCourse({history, match}) {
                         <button type="submit" onClick={handleSubmit}>Add</button>
                 </div>
                 <div id="image-ctn">
-                    <img src={image} alt="courseImg" width="250px" height="auto" />
-                    <label for="Image-url">Image Url</label>
-                    <input type="text" id="Image-url" value={image} onChange={(e) => setImage(e.target.value)} />
+                    <img src={image} alt="courseImg" width="400px" height="auto" />
+                    <div id="image-input">
+                        <label for="Image-url">Image Url</label>
+                        <input type="text" id="Image-url" value={image} onChange={(e) => setImage(e.target.value)} />
+                    </div>
                 </div>
             </div>
         </div>
