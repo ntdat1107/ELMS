@@ -1,4 +1,3 @@
-import { style } from '@mui/system'
 import React, { useCallback } from 'react';
 import './Toast.css'
 
@@ -7,7 +6,7 @@ import './Toast.css'
 function ErrorToast({toastList, setList}) {
     const deleteToast = useCallback(
         (id) => {
-            const toastListItem = toastList.filter(e => e.id != id);
+            const toastListItem = toastList.filter(e => e.id !== id);
             setList(toastListItem);
         },
         [toastList, setList],

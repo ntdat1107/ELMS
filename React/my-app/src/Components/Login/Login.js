@@ -4,7 +4,7 @@ import {Link } from "react-router-dom"
 import { useDispatch, useSelector } from 'react-redux'
 import { login } from '../../actions/userActions.js'
 import ErrorToast from './../ErrorToast/ErrorToast';
-import ErrorMsg from '../Error/ErrorMsg';
+import Loading from './../Loading/Loading';
 
 function Login({history}) {
     const [accountID, setAccountID] = useState('')
@@ -37,7 +37,9 @@ function Login({history}) {
         dispatch(login(accountID, password))
     }
 
-
+    if (loading) {
+        return <Loading/>
+    }
     return (
         <div className="Loginpage">
             <div className="container">

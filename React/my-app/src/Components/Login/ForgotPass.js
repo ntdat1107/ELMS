@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { resetNewPass } from '../../actions/userActions'
 import ErrorToast from './../ErrorToast/ErrorToast'
 import Loading from './../Loading/Loading';
-import ErrorMsg from '../Error/ErrorMsg';
 
 function ForgotPass() {
     const dispatch = useDispatch()
@@ -43,7 +42,7 @@ function ForgotPass() {
         if (!(email && userName && password && confirmPassword)) {
             setShow(true)
         } else
-        if (password != confirmPassword) {
+        if (password !== confirmPassword) {
             setShow(true)
         }
         else {
