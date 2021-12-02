@@ -28,7 +28,7 @@ function Signup({history}) {
     
     const dispatch = useDispatch()
     const userLogin = useSelector(state => state.userLogin)
-    const { loading, error, userInfo } = userLogin
+    const { error, userInfo } = userLogin
     const [list, setList] = useState([])
     const [msgerror, setError] = useState(false)
 
@@ -51,8 +51,10 @@ function Signup({history}) {
 
     const userRegister = useSelector(state => state.userRegister)
 
-    const { userRegInfo } = userRegister
-
+    const { error: regError, userRegInfo } = userRegister
+    useEffect(() => {
+        console.log(regError)
+    }, [regError])
     useEffect(() => {
         if (userRegInfo && firstName) {
             history.push('/login')
@@ -142,6 +144,7 @@ function Signup({history}) {
             </div>
         </div>
         { msgerror && <ErrorToast toastList={list} setList={setList}/> }
+        { error && <ErrorToast toastList={list} setList={setList}/>}
     </div>
     )
 }
