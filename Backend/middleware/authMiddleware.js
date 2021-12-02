@@ -28,7 +28,7 @@ const protect = asyncHandler(async (req, res, next) => {
 
 const checkIns = asyncHandler(async (req, res, next) => {
     if (req.user && req.user.isAdmin) next()
-    if (req.user && req.user.isIns) {
+    else if (req.user && req.user.isIns) {
         const course = await Course.findOne({fastName: req.params.fastName})
         if(course && req.user.hasCourse.indexOf(course._id) !== -1) {
             next()

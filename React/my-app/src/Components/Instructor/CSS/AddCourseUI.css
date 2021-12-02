@@ -8,7 +8,8 @@
     display: flex;
 } 
 .InAddCourseUI #containerAddCourse #image-ctn {
-    margin-top: 125px;
+    margin-top: 175px;
+    margin-left: 75px;
     display: inline-block;
     align-items: center;
 }
@@ -18,12 +19,16 @@
 .InAddCourse select {
     height: 60px;
 }
-#image-ctn img {
+.InAddCourseUI #image-ctn label {
+    font-size: 20px;
+    padding-right: 20px;
+}
+.InAddCourseUI #image-ctn img {
     align-items: center;
     display: inline-block;
 }
-#image-ctn input[type="text"] {
-    width: 100%;
+.InAddCourseUI #image-ctn input[type="text"] {
+    width: 70%;
     padding: 12px 20px;
     margin:  10px 0px;
     display: inline-block;
