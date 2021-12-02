@@ -48,14 +48,14 @@ const courses = {
     {
         "id": 1,
         "title": "Complete Python Course",
-        "subtitle": "Đạt",
+        "subtitle": "Dat",
         "imgSrc": cPython,
         "courseFastname": "py"
     },
     {
         "id": 2,
         "title": "Complete Git Course",
-        "subtitle": "Đạt",
+        "subtitle": "Dat",
         "imgSrc": cReact,
         "courseFastname": "git"
     }
