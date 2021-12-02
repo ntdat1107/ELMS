@@ -45,7 +45,7 @@ function SearchResult({courses}) {
     });
     return (
         <div id="listCoursesCFY">
-            <Scrollbars>
+            <Scrollbars style={{overflow: "hidden"}}>
                 {display}
             </Scrollbars>
         </div>
