@@ -15,7 +15,7 @@ function LnAnnouncements({ history }) {
             <SideBar typeUserTemp={2} />
             <Header history={history} />
             <div id="lnAnnouncements">
-                <ListAnnoun typeUserTemp={2} />
+                <ListAnnoun typeUserTemp={2} history={history} />
             </div>
         </div>
     );

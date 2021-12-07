@@ -70,7 +70,7 @@ const courses = {
         "subtitle": "9+ courses",
         "imgSrc": cPython,
         "link" : "%Cpp%all%course",
-        "courseFastname" : "Đạt"
+        "courseFastname" : "Dat"
     }
 ]}
 
