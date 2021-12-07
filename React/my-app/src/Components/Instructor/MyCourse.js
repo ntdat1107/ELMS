@@ -54,7 +54,7 @@ function CourseCPN({
     fastName
 }) { 
     return(
-        <Link to ={`/ins/managercourse/${fastName}`}>
+        <Link to ={`/ins/managecourse/${fastName}`}>
             <div id="first-c">
                 <div style={{height: "61px", width: "auto", overflow: "hidden", border: "1px solid black"}}>
                     <img src={imgSrc} alt="ImgCourse" height="60px" width="auto"/>
