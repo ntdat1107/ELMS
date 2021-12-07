@@ -1,6 +1,6 @@
 import { LESSON_LIST_FAIL, LESSON_LIST_SUCCESS, LESSON_LIST_REQUEST, 
     LESSON_DETAIL_REQUEST, LESSON_DETAIL_SUCCESS, LESSON_DETAIL_FAIL, 
-    CREATE_LESSON_REQUEST, CREATE_LESSON_SUCCESS, CREATE_LESSON_FAIL } from "../constants/lessonConstants"
+    CREATE_LESSON_REQUEST, CREATE_LESSON_SUCCESS, CREATE_LESSON_FAIL, COUNT_LESSON_REQUEST, COUNT_LESSON_SUCCESS, COUNT_LESSON_FAIL } from "../constants/lessonConstants"
 
 export const lessonListReducer = (state = { lessons: [] }, action) => {
     switch (action.type) {
@@ -36,6 +36,19 @@ export const addLessonReducer = (state = {}, action) => {
         case CREATE_LESSON_SUCCESS:
             return { loading: false, success: true}
         case CREATE_LESSON_FAIL:
+            return { loading: false, error: action.payload }
+        default:
+            return state
+    }
+}
+
+export const countLessonReducer = (state = {}, action) => {
+    switch (action.type) {
+        case COUNT_LESSON_REQUEST:
+            return { loading: true }
+        case COUNT_LESSON_SUCCESS:
+            return { loading: false, count: action.payload }
+        case COUNT_LESSON_FAIL:
             return { loading: false, error: action.payload }
         default:
             return state

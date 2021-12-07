@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom";
 import cPython   from "./imgs/coursePython.png"
 import cUIUX  from "./imgs/courseUIUX.png"
 import cReact  from "./imgs/courseReactJS.png"
+import ele  from "./imgs/elearning.png"
 // import cJS  from "./imgs/courseJS.png"
 // import cAngular  from "./imgs/Doja.jpg"
 import cCpp  from "./imgs/courseCpp.png"
@@ -152,6 +153,10 @@ function LowerBody() {
         <div id = "lowerBody">
             <CourseBoard courses = {courses}/>
             <CourseBoard courses = {courses2}/>
+            <div>
+            
+            <img src={ele} style={{height:"380px",objectFit: "cover",width: "285px", marginTop: "10px", borderRadius: "10px"}}/>
+            </div>
 
         </div>
     )

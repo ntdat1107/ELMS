@@ -1,6 +1,8 @@
-import e from "express";
+import e, { response } from "express";
 import asyncHandler from "express-async-handler";
+import Course from "../models/courseModel.js";
 import Lesson from "../models/lessonModel.js"
+import User from "../models/userModel.js";
 
 
 
@@ -67,9 +69,21 @@ const createNewLesson = asyncHandler(async (req, res) => {
     }
 })
 
+const countLesson = asyncHandler(async(req, res) => {
+    const user = await User.findById(req.user._id)
+    let count = 0
+    for (let i = 0; i < user.hasCourse.length; i++) {
+        const course = await Course.findById(user.hasCourse[i])
+        const lessonList = await Lesson.find({courseFastname: course.fastName})
+        count = count + lessonList.length
+    }
+    res.json(count)
+})
+
 export {
     getLesson,
     getLessonsByFastname,
     getLessonsByFastnameAndId,
-    createNewLesson
+    createNewLesson,
+    countLesson
 }

@@ -134,7 +134,7 @@ function ForgotPass() {
                 </form>
                 <div className="ForgotPassbtn-box">
                     <button type="submit" className="ForgotPasstoggle-btn1" 
-                    onClick={(e) => {setShow(false); showToast(); handleSubmit(e); resetAll()}}>Reset</button>
+                    onClick={(e) => {setShow(false); showToast(); handleSubmit(e);}}>Reset</button>
                     <Link to='/login'>
                         <button type="button" className="ForgotPasstoggle-btn2">Go Back</button>
                     </Link>

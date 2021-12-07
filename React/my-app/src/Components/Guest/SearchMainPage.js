@@ -28,7 +28,7 @@ function SearchMainPage({match}) {
     )
     else return(
         <div id = "searchResultWrapper" >
-            <DropDownBar/>
+            {/* <DropDownBar/> */}
             <SearchResult className = "cfySearch" courses = {courses}/>
         </div>
     )
@@ -45,7 +45,7 @@ function SearchResult({courses}) {
     });
     return (
         <div id="listCoursesCFY">
-            <Scrollbars>
+            <Scrollbars style={{overflow: "hidden"}}>
                 {display}
             </Scrollbars>
         </div>

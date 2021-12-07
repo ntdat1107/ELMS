@@ -120,7 +120,6 @@ function Lesson({ lesson }) {
           </div>
           <div id="lesson-information">
             <p>{lesson.lessonName}</p>
-            <p>{lesson.lessonDuration}</p>
           </div>
         </NavLink>
       </MenuItem>
