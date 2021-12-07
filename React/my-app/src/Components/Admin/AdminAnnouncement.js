@@ -19,7 +19,11 @@ function AdminAnnounce({ history }) {
                 <Header history={history} />
             </div>
             <div id="adminannounce">
-                <ListAnnounceCpn Addition_Part={<NewAnnoun typeUserTemp={0} />} typeUserTemp={0} />
+                <ListAnnounceCpn
+                    Addition_Part={<NewAnnoun typeUserTemp={0} />}
+                    typeUserTemp={0}
+                    history={history}
+                />
             </div>
         </div>
     );

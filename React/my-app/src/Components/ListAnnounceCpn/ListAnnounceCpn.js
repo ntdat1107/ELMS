@@ -17,11 +17,11 @@ function ListAnnounceCpn({ history, Addition_Part, typeUserTemp }) {
 
     useEffect(() => {
         if (!cvsSendList) dispatch(getSendCvs());
-    }, [dispatch, history, cvsSendList]);
+    }, [dispatch]);
 
     useEffect(() => {
         if (!cvsReceiveList) dispatch(getReceiveCvs());
-    }, [dispatch, history, cvsReceiveList]);
+    }, [dispatch]);
 
     /* ____________________________________________________________________ */
     const [click, setClick] = useState(1);

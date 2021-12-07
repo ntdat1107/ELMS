@@ -18,7 +18,7 @@ function InforUser({ user, click1, closeBox, Role }) {
                                 <p>{`Full Name: ${user.firstName}  ${user.lastName}`}</p>
                                 <p>{`Role: ${Role}`}</p>
                                 <p>{`Email: ${user.email}`}</p>
-                                <p>{`User_Id: ${user._id}`}</p>
+                                <p>{`Phone Number: ${user.phoneNumber ? user.phoneNumber : ""}`}</p>
                                 <p>{`Account ID (username): ${user.accountID}`}</p>
                             </div>
                             <div>
@@ -26,7 +26,7 @@ function InforUser({ user, click1, closeBox, Role }) {
                                 <p>{`Country: ${user.country ? user.country : ""}`}</p>
                                 <p>{`City: ${user.city ? user.city : ""}`}</p>
                                 <p>{`BirthDay: ${
-                                    user.birthday ? user.birthday : "__ /__ /____"
+                                    user.birthDay ? user.birthDay.split("T")[0] : "__ /__ /____"
                                 }`}</p>
                                 <p>
                                     {`Description: ${
